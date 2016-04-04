@@ -1,9 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="domlib_document_00000384" xml:lang="en">
+<?xml version="1.0" encoding="UTF-8"?>
+<!--   please, if you use this template, remove template comments like this one before submitting the file for review
+The modelfileManuscriptNC.xml is already free of all this and might be preferred for data entry.
+You could also start from the provided TEI models in Oxygen
+-->
+<!--   guidelines are here  : https://github.com/SChAth/ScAthiop/wiki/guidelines-->
+
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MAN00000384Gadla" xml:lang="en">
+<!--   The xml ID should correspond to the one in the file and be formed of the prefix MAN, an 8 digit number and the first word of the title normalized to keyboard characters-->
+   
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title><!--please enter here the name of this manuscript--></title>
-            <author xml:id="DN"/>
+            <author xml:id="DN"/>  <!--change this value according to the abbreviations in the wiki-->
             <editor role="generalEditor" xml:id="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
@@ -17,10 +27,9 @@
                <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
                                     This file is licensed under the Creative Commons
                                     Attribution-ShareAlike 4.0. </licence>
-               
             </availability>
             
-            <date>2016-03-31+02:00</date>
+            <date><!--2016-03-31+02:00 This should be the date and time of publication--></date>
          </publicationStmt>
          <sourceDesc>
             <msDesc>
