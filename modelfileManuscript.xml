@@ -34,15 +34,18 @@ You could also start from the provided TEI models in Oxygen
          <sourceDesc>
             <msDesc>
                <msIdentifier>
-                  <settlement>
-                     <placeName corresp="domlib_institution_00000042">
-                        <geo>14.487367 39.434383</geo>Mәdrä Ruba /MR<region>Tәgray</region>
-                     </placeName>
-                  </settlement>
-                  <repository>repository name</repository>
-                  <altIdentifier>
-                     <idno>MR-023</idno>
+                  <repository corresp="INS00000030Addaqaharsi">
+                     <!--repository id taken from the authority list of institutions --></repository>
+                  <idno><!-- enter here the shelf mark of the manuscript only MR-023--></idno>
+                  <!--
+                     
+                     If there are other possible identifiers, add them with the following elements Inside msIdentifier
+                     
+                     <altIdentifier>
+                     <repository></repository> as above, and if different from the main one 
+                     <idno>XX0000</idno>
                   </altIdentifier>
+                  -->
                </msIdentifier>
                <msContents>
                   <msItemStruct>
