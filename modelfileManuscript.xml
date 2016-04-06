@@ -6,33 +6,40 @@ You could also start from the provided TEI models in Oxygen
 <!--   guidelines are here  : https://github.com/SChAth/ScAthiop/wiki/guidelines-->
 
 
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="MAN00000384Gadla" xml:lang="en">
-<!--   The xml ID should correspond to the one in the file and be formed of the prefix MAN, an 8 digit number and the first word of the title normalized to keyboard characters-->
-   
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ES15" xml:lang="en">
+   <!--   The xml ID should correspond to the one in the file and be formed by capital letters and digits only 
+   e.g.
+   * EMML2312
+    * ES15 (ethiosphere)
+    * BLadd100 (British Library)
+    * BNFabb3 (Bibliotheque nationale de France)
+   -->
+
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title><!--please enter here the name of this manuscript--></title>
-            <author xml:id="DN"/>  <!--change this value according to the abbreviations in the wiki-->
+            <editor xml:id="DN"/>
+            <!--change this value according to the abbreviations in the wiki-->
             <editor role="generalEditor" xml:id="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
             <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine
-                                multimediale Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
+               Forschungsumgebung / beta maṣāḥǝft</publisher>
             <pubPlace>Hamburg</pubPlace>
-            
+
             <availability>
-               <licence target="http://creativecommons.org/licenses/by-sa/4.0/">
-                                    This file is licensed under the Creative Commons
-                                    Attribution-ShareAlike 4.0. </licence>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
+                  licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
             </availability>
-            
+
             <date><!--2016-03-31+02:00 This should be the date and time of publication--></date>
          </publicationStmt>
          <sourceDesc>
-            <msDesc>
+            <msDesc xml:id="ms">
+
                <msIdentifier>
                   <repository corresp="INS00000030Addaqaharsi"/>
                   <idno><!-- enter here the shelf mark of the manuscript only MR-023--></idno>
@@ -46,305 +53,353 @@ You could also start from the provided TEI models in Oxygen
                   </altIdentifier>
                   -->
                </msIdentifier>
-               <msPart xml:id="p1">
-<!--                  you can enter and nest as many msPart as you wish
+               <!--                  you can enter and nest as many msPart as you wish, if you need to. a manuscript without parts can do with msDesc 
+                     
+                     The structure here does not represent any manuscript, but uses various contents as examples.
+                   
                   Contents should be listed under each msPart/msContents section distinctly-->
+
+               <!--            in this template you find msPart 1 where nesting of parts is exemplified, msPart 2 has no nesting and you can find there examples of the physical description and other parts-->
+               <msPart xml:id="p1">
+                  <!--                  how example has two main parts, and the first is composed of two subparts
+                  
+                  The first subpart of msPart 1 contains 4 main items, the second 2 main items.
+                  
+                  the third item of the first subpart of msPart 1 contains 2 subitems.
+                  
+                  That's much easier to encode than to describe...  
+                
+                  -->
                   <msIdentifier>
                      <idno>
-                     
-                  </idno>
+                        <!--                     ENTER HERE THE COMPULSARY PRIMARY IDENTIFIER-->
+                     </idno>
                   </msIdentifier>
                   <msContents>
-                     <summary>
-                     </summary>
-                     <msItem xml:id="i1">
-                        <locus >2r-43v</locus>
-                        <title type="Complete">I. Gädlä Qirqos “Vita of Cyricus”</title>
-<!--                        here you can enter the title of the section of this work -->
-                        <rubric>Two lines (the first and the
-                           third) in the incipit page (fol. 2r);&#xD; the horizontal dashes above and below
-                           Ethiopic numerals;&#xD; elements of the punctuation signs.</rubric>
-                        <incipit>
-                           <foreign xml:lang="en">And a big persecution happened in the Church of Christ…</foreign>
+                     <summary> </summary>
+                     <msItem xml:id="p1_i1">
+                        <locus from="1ra" to="2vb"/>
+                        <title type="Complete" corresp="#LIT00384Gadla"/>
+                        <!--                        here you can enter the reference to a work or the title of a section of it. you can also reference a a part of a work with its id. -->
+                        <rubric> </rubric>
+                        <incipit><!--text of incipit in the language of textLang if not otherwise specified-->
+                           <foreign xml:lang="en"><!--translation of incipit--></foreign>
                         </incipit>
-                        <explicit>
+                        <explicit><!--same as for incipit-->
                            <foreign xml:lang="en"/>
                         </explicit>
                      </msItem>
                   </msContents>
                   <msPart xml:id="p1.1">
                      <msIdentifier>
-                        <idno>
-                        </idno>
+                        <idno> </idno>
                      </msIdentifier>
                      <msContents>
-                        <msItem xml:id="p1_i5.1"  class="content">
-                           <locus from="1ra" to="2vb">fols. 1ra-2vb</locus>
-                           <title type="uniform" xml:lang="la">Index of the Statutes or Commandments (təˀəzazat) of the Apostles </title>
+                        <msItem xml:id="p1.1_i1" class="content">
+                           <!--                           this item is not a part of the manuscript but a content item-->
+                           <locus from="1ra" to="2vb"/>
+                           <title type="uniform" xml:lang="la"
+                              ><!--Title of the content part--></title>
+                           <!--                           this could also point to an id in the Text record-->
                            <textLang mainLang="gez">Ge'ez</textLang>
                         </msItem>
-                        <msItem xml:id="p1_i5.2"  class="content">
-                           <locus from="3ra" to="40vb">fols. 3ra-40vb</locus>
-                           <title type="uniform" xml:lang="la">Statutes or Commandments (təˀəzazat) of the Apostles </title>
+                        <msItem xml:id="p1.1_i2" class="content">
+                           <locus from="3ra" to="40vb"/>
+                           <title type="uniform" xml:lang="la"><!--Title of the content part-->
+                           </title>
                            <textLang mainLang="gez">Ge'ez</textLang>
                         </msItem>
-                        <msItem xml:id="p.1.1_i1">
-                           <locus></locus>
-                           <title></title>
-                           <msItem xml:id="p.1.1_i1.1">
-                              <locus></locus>
-                              <title></title>
+                        <msItem xml:id="p.1.1_i3">
+                           <locus/>
+                           <title/>
+                           <msItem xml:id="p.1.1_i3.1">
+                              <locus/>
+                              <title/>
                            </msItem>
-                           <msItem xml:id="p.1.1_i1.2">
-                              <locus></locus>
-                              <title></title>
+                           <msItem xml:id="p.1.1_i3.2">
+                              <locus/>
+                              <title/>
                            </msItem>
                         </msItem>
-                        <msItem xml:id="p.1.1_i2">
-                           <locus></locus>
-                           <title></title>
+                        <msItem xml:id="p.1.1_i4">
+                           <locus/>
+                           <title/>
                         </msItem>
                      </msContents>
                   </msPart>
                   <msPart xml:id="p1.2">
-                     <msIdentifier><idno></idno></msIdentifier>
-                     <msContents></msContents>
-                     
-                  </msPart>
-                  <msPart xml:id="p1.3">
-                     <msIdentifier><idno></idno></msIdentifier>
+                     <msIdentifier>
+                        <idno/>
+                     </msIdentifier>
                      <msContents>
                         <summary>
-                           I) Gädlä Kiros (fols. 5ra-43rb)
-                           II) Mälkəˀa Kiros (fols. 43va-50va)
-                           III) Mälkəˀa Kiros (fols. 50vb-51va)
+                           <!--                          a textual summary of the contents of this part-->
                         </summary>
                         <msItem xml:id="p1.3_i1">
                            <locus from="5ra" to="43vb"/>
-                           <rubric>Two lines (the first and the
-                              third) in the incipit page (fol. 2r);&#xD; the horizontal dashes above and below
-                              Ethiopic numerals;&#xD; elements of the punctuation signs.</rubric>
-                           <incipit>
-                              <foreign xml:lang="en">And a big persecution happened in the Church of Christ…</foreign>
-                           </incipit>
-                           <explicit>
-                              <foreign xml:lang="en"/>
-                           </explicit>
-                           <title type="uniform" corresp="LIT1468GadlaK">Gädlä Kiros</title>
-                              <textLang mainLang="gez">Ge'ez</textLang>
+                           <rubric/>
+                           <incipit> </incipit>
+                           <explicit> </explicit>
+                           <title type="uniform" corresp="LIT1468GadlaK"/>
+                           <textLang mainLang="gez">Ge'ez</textLang>
                         </msItem>
                         <msItem xml:id="p1.3_i2">
                            <locus from="43va" to="50va"/>
-                              <title type="uniform">Mälkəˀa Kiros (II)</title>
-                              <textLang mainLang="gez">Ge'ez</textLang>
+                           <title type="uniform"><!--title of non registered work--></title>
+                           <textLang mainLang="gez">Ge'ez</textLang>
                         </msItem>
                      </msContents>
                   </msPart>
+
                </msPart>
                <msPart xml:id="p2">
                   <msIdentifier>
-                     <idno></idno>
+                     <idno/>
                   </msIdentifier>
-               <msContents>
-                  <msItem>
-                     <locus >2r-43v</locus>
-                     <title type="Complete">I. Gädlä Qirqos “Vita of Cyricus”</title>
-                     <rubric>Two lines (the first and the
-                third) in the incipit page (fol. 2r);&#xD; the horizontal dashes above and below
-                Ethiopic numerals;&#xD; elements of the punctuation signs.</rubric>
-                     <incipit>
-                        <foreign xml:lang="en">And a big persecution happened in the Church of Christ…</foreign>
-                     </incipit>
-                     <explicit>
-                        <foreign xml:lang="en"/>
-                     </explicit>
+                  <msContents>
+                     <msItem xml:id="p2_i1">
+                        <locus from="43va" to="50va"/>
+                        <title type="uniform" corresp="LIT1468GadlaK"/>
+                        <rubric> </rubric>
+                        <incipit> </incipit>
+                        <explicit> </explicit>
+
+                        <!--                     This bibliography element can go in any msItem, or in all of them. it should contain references to manuscripts in the catalogue using their id
+                     ids correspond to filenames. if pointing to a specific part of a manuscript with an id, use a ptr target. for pointing to a specific page or range of page there
+                     use citedRange as in any bibliography entry
+                     -->
+                        <listBibl type="mss">
+                           <bibl corresp="EMML430"><ptr target="EMML430.xml#p.1.5_i6"/><citedRange
+                                 unit="fol" from="104r" to="112v"/></bibl>
+                           <bibl corresp="EMML615"/>
+                        </listBibl>
+
+                        <note/>
+                     </msItem>
+                     <msItem xml:id="coloph">
+                        <colophon>
+                           <locus from="49rb" n="28"
+                           /><!-- original text, e.g. በአስተሐምሞ፡ በትእዛዘ። እግዚአብሔር፡ ገበርክዎ፡ ለዝንቱ፡ ነገር ።--></colophon>
+                        <note>
+                           <!--                        in a note anything can be added. you can use ref elements to point to other parts of the document below is an example-->
+                           Written in hand <ref target="#Hc"/>, cp. also Additiones <ref
+                              target="#a1"/>, <ref target="#a4"/>, <ref target="#a8"/>, <ref
+                              target="#a10"/>, <ref target="#a12"/>. The note is written over erased
+                           punctuation sign.</note>
+                     </msItem>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <supportDesc>
+                           <support>
+                              <watermark/>
+                              <!-- omit if not present-->
+                              <material corresp="WMat01">Parchment</material>
+                              <!--enter the id of the value from the Writing Material taxonomy https://github.com/SChAth/Authority-Files/blob/master/WritingMaterial.xml
+                          -->
+                              <objectType>Codex</objectType>
+                              <!--    you can change this to Scroll or Leporello-->
+                           </support>
+                           <extent>
+                              <measure unit="leaf"><!--value in digits--></measure>
+                              <measure unit="leaf" type="blank"><!--value in digits--></measure>
+                              <measure unit="quire"><!--value in digits--></measure>
+                              <dimensions type="outer" unit="mm">
+                                 <height><!--value in mm--></height>
+                                 <width><!--value in mm--></width>
+                                 <depth><!--value in mm--></depth>
+                              </dimensions>
+                           </extent>
+                           <collation>
+                              <list>
+                                 <item xml:id="q1">
+                                    <dim unit="leaf"><!--value in digits--></dim>
+                                    <locus from="1r" to="10v"/>
+                                 </item>
+                                 <item xml:id="q2">
+                                    <dim unit="leaf"><!--value in digits--></dim>
+                                    <locus from="11r" to="20v"/>
+                                 </item>
+                                 <item xml:id="q3">
+                                    <dim unit="leaf"><!--value in digits--></dim>
+                                    <locus from="21r" to="32v"/>
+                                 </item>
+                                 <item xml:id="q4">
+                                    <dim unit="leaf"><!--value in digits--></dim>
+                                    <locus from="33r" to="42v"/>
+                                 </item>
+                                 <!--                              any more items can be added-->
+                              </list>
+                           </collation>
+                           <condition corresp="St02">deficient</condition>
+                           <!--                        value of `@corresp` is the corresponding id from the state of preservation taxonomy 
+                           https://github.com/SChAth/Authority-Files/blob/master/StatePreservation.xml
+                        -->
+                        </supportDesc>
+                        <layoutDesc>
+                           <layout corresp="#p.1.1_i1" columns="1" writtenLines="18">
+                              <!--                           if the layout refers to a specific part or item, point to it with a @corresp, oXygen will suggest values-->
+                              <dimensions unit="mm" rend="pricked ruled">
+                                 <height><!--value in mm--></height>
+                                 <width><!--value in mm--></width>
+                                 <dim type="intercolumn"><!--value in mm--></dim>
+                              </dimensions>
+                              <dimensions type="margin">
+                                 <dim type="top"><!--value in mm--></dim>
+                                 <dim type="bottom"><!--value in mm--></dim>
+                                 <dim type="right"><!--value in mm--></dim>
+                                 <dim type="left"><!--value in mm--></dim>
+                              </dimensions>
+                              <ab type="ruling" subtype="pattern"
+                                 ><!--any information on ruling patter--></ab>
+                              <ab type="pricking" subtype="pattern"
+                                 ><!--any information on pricking--></ab>
+                              <ab type="punctuation" subtype="dividers">
+                                 <!--                             this list can be used for punctuation, with locus element to point to the exact place in the manuscript.  -->
+                                 <list>
+                                    <item xml:id="div1" corresp="#p.1"
+                                       ><!--type of puntuation--></item>
+                                    <item xml:id="div2" corresp="#p.2">
+                                       <!--                                 type of punctuation below, occurrences of this item-->
+                                       <locus target="#30v" n="3"/>
+                                       <locus target="#30v" n="11"/>
+                                       <locus target="#31r" n="14"/>
+                                       <locus target="#31v" n="10"/>
+                                    </item>
+                                 </list>
+                              </ab>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                        <!--                     hands are identified with h and a number if parts are definied, you can point to those with @corresp or you can add locus
+                     value of @script should come from here
+                     https://github.com/SChAth/Authority-Files/blob/master/WritingSystem.xml
+                     -->
+                        <handNote script="Ethiopic" xml:id="h1" corresp="#p1.2 #p1.3 #a4">
+                           <ab type="script"><!--annotated description of script--></ab>
+                           <rs type="ink">Black, red</rs>
+                           <persName role="scribe" corresp="PRS1691Alib"/>
+                           <date><!--the date of the script in writing. eventually @notBefore and @notAfter can also be used--></date>
+                           <desc><!--description of the end--></desc>
+                           <ab type="rubrication"><!--use of rubrication--></ab>
+                        </handNote>
+                     </handDesc>
+                     <decoDesc>
+                        <!--each drawing should have is own decoNote with a locus and a description of the image as well as an id
+                     available types are
+                     frame
+                     miniature
                      
-                     <listBibl type="mss">
-                        <bibl corresp="EMML430"><ptr target="EMML430.xml#p.1.5_i6"/><citedRange unit="fol" from="104r" to="112v"/></bibl>
-                        <bibl corresp="EMML615"/>
-                     </listBibl>
-                    
-                     <note/>
-                  </msItem>
-                  <msItem>
-                     <title>The Ms. contains the following text:</title>
-                  </msItem>
-                  <msItem xml:id="msitem_I">
-                     <locus from="2r" to="43v"/>
-                     <title type="uniform" xml:lang="gez">Gädlä Qirqos</title>
-                     <title xml:lang="en">Vita of Cyricus</title>
-                     <textLang mainLang="gez">Ge'ez</textLang>
-                  </msItem>
-                  <msItem>
-                     <title>.</title>
-                  </msItem>
-                  <msItem xml:id="coloph">
-                     <colophon>
-                        <locus from="49rb" n="28"/>በአስተሐምሞ፡ በትእዛዘ። እግዚአብሔር፡ ገበርክዎ፡ ለዝንቱ፡ ነገር ።</colophon>
-                     <note>Written in hand <ref target="#Hc" />, cp. also Additiones <ref target="#a1"/>, <ref target="#a4"/>, <ref target="#a8"/>, <ref target="#a10"/>, <ref target="#a12"/>. 
-                        The note is written over erased punctuation sign.</note>
-                  </msItem>
-               </msContents>
-               <physDesc>
-                  <objectDesc>
-                     <supportDesc>
-                        <support>
-                           <watermark/>
-                           <material corresp="WMat01">Parchment</material>
-                           <objectType>Codex</objectType>
-                        </support>
-                        <extent>
-                           <measure unit="leaf">183</measure>
-                           <measure unit="leaf" type="blank">3</measure>
-                           <measure unit="quire">25</measure>
-                           <dimensions type="outer" unit="mm">
-                              <height>370</height>
-                              <width>270</width>
-                              <depth>115</depth>
-                           </dimensions>
-                        </extent>
-                        <collation>
-                           <list>
-                              <item xml:id="q1">
-                                 <dim unit="leaf">10</dim>
-                                 <locus from="1r" to="10v"/>
-                              </item>
-                              <item xml:id="q2">
-                                 <dim unit="leaf">10</dim>
-                                 <locus from="11r" to="20v"/>
-                              </item>
-                              <item xml:id="q3">
-                                 <dim unit="leaf">12</dim>
-                                 <locus from="21r" to="32v"/>
-                              </item>
-                              <item xml:id="q4">
-                                 <dim unit="leaf">10</dim>
-                                 <locus from="33r" to="42v"/>
-                              </item>
-                              <item xml:id="q5">
-                                 <dim unit="leaf">3</dim>
-                                 <locus from="43r" to="45v"/>
-                              </item>
-                           </list>
-                        </collation>
-                        <condition xml:id="St02">deficient</condition>
-                     </supportDesc>
-                     <layoutDesc>
-                        <layout corresp="#p.1.1_i1" columns="1" writtenLines="18">
-                           <dimensions unit="mm" rend="pricked ruled">
-                              <height>245</height>
-                              <width>210</width>
-                              <dim type="intercolumn">15</dim>
-                           </dimensions>
-                           <dimensions type="margin">
-                              <dim type="top">35</dim>
-                              <dim type="bottom">65</dim>
-                              <dim type="right">40</dim>
-                              <dim type="left">15</dim>
-                           </dimensions>
-                           <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/A.</ab>
-                           <ab type="pricking" subtype="pattern">Primary pricks are partly visible (s., e.g., fol. 37v).</ab>
-                           <ab type="punctuation" subtype="dividers">
-                           <list>
-                              <item xml:id="div1" corresp="#p.1">Colon</item>
-                              <item xml:id="div2" corresp="#p.2">Five red and black dot vertical colon. 
-                                 <locus from="30v" n="3"/>
-                                 <locus from="30v" n="11"/>
-                                 <locus from="31r" n="14"/>
-                                 <locus from="31v" n="10"/>
-                              </item>
-                           </list>
-                           </ab>
-                        </layout>
-                       </layoutDesc>
-                  </objectDesc>
-                  <handDesc>
-                     <handNote script="WS04">Ethiopic<rs type="ink">Black, red (reddish-brown)</rs>
-                        <name role="copyst"/>
-                        <date>19th century</date>
-                     </handNote>
-                     <handNote>
-                        <p>careful</p>
-                     </handNote>
-                  </handDesc>
-                  <decoDesc>
-                     <decoNote type="miniature" xml:id="min_1">
-                        <locus target="#1r"/>
-                        <desc>drawing of a cross; black ink.</desc>
-                     </decoNote>
-                     <decoNote type="frames" xml:id="frm_5">
-                        <locus target="#41r"/>
-                        <desc>wide, coloured (red and black), horizontal ornamental band over col. a-b, at the incipit of text I.-3), with three lateral pendants reaching l.6 whose the central one decorated with a cross; the horizontal band extends to the top of the page(interlaces, crosses).</desc>
-                     </decoNote>    
-                  
-                  </decoDesc>
-                  <additions>
-                     <list>
-                        <item rend="marginal">
-                        </item>
-                        <item rend="guardLeaf">
-                        </item>
-                        <item xml:id="a1">
-                           Acquisition note.
-                           <locus target="#40vb" n="30"/>
-                           <q xml:lang="gez">አጥረይክዋ፡ አነ፡ ገበረ፡ መድኅን፡ በመን{ፈ}ሰ፡ ጥበብ፡</q>
-                           <q xml:lang="en">I acquired it (this book), Gäbrä Mädḫən, through the spirit of wisdom.</q>
-                           <p/>
-                        </item>
-                        <item xml:id="a2">
-                           <locus/>
-                           <q xml:lang="gez"/>
-                           <q xml:lang="en"/>
-                           <p/>
-                        </item>
-                        <item xml:id="e1">Crude recent notes in pen and in
-                pencil throughout the manuscript, above and below the text (e.g. <locus target="#1rv #2r #4r"/> Crude drawings in
-                pencil, mixed with crude notes, on <locus target="#45r"/>.</item>
-                     </list>
-                  </additions>
-                  <bindingDesc>
-                     <binding contemporary="false" xml:id="binding">
-                        <decoNote>Wooden boards (recently) covered with
-                           reddish-brown tooled leather. </decoNote>
-                        <decoNote>Four pairs of sewing stations.</decoNote>
-                        <decoNote type="original"  corresp="OB03">partly</decoNote>
-                        <decoNote type="bindingMaterial"><material corresp="BMat05">wood</material></decoNote>
-                        <decoNote type="Endbands">
-                           <desc type="Headband"></desc>
-                           <desc type="Tailband"></desc>
+                     -->
+                        <decoNote type="miniature" xml:id="d1">
+                           <locus target="#1r"/>
+                           <desc><!--description of the image--></desc>
                         </decoNote>
-                        <decoNote type="Other">Parchment guards (possibly of the same
-                           origin as <locus target="#183"/>) were used to sew together <locus from="1" to="2"/>.</decoNote>
-                     </binding>
-                  </bindingDesc>
-               </physDesc>
-               <history>
-                  <origin>
-                     <origPlace><placeName corresp="LOC4705MayRub"/></origPlace>
-                     <origDate notBefore="1872" notAfter="1876">Mention of <persName corresp="PRS10378Yohanne">King Yoḥannәs IV</persName> (<date>1872-89</date>)
-                        on <locus target="#43r" n="8" corresp="#coloph"/>, and of <persName type="metropolitan" corresp="PRS2223Atnatewo">Metropolitan ˀabunä ˀAtnatewos</persName> (in tenure
-                        <date>1869-76</date>) on <locus target="#43r" corresp="#coloph"/>. Besides, the colophon refers to the year of
-                John the Evangelist.</origDate>
-                  </origin>
-               </history>
-               <additional>
-                  <adminInfo>
-                     <recordHist>
-                        <p>
-                        </p>
-                     </recordHist>
-                     <custodialHist>
-                        <custEvent type="restoration" corresp="Res03"/>
-                     </custodialHist>
-                  </adminInfo>
-                  <surrogates>
-                     <bibl corresp="EMML1234"/>
-                     <bibl corresp="ES4567"/>
-                  </surrogates>
-                  <listBibl>
-                     <bibl>Ms. previously unknown</bibl>
-                  </listBibl>
-               </additional>
+                        <decoNote type="frame" xml:id="d2">
+                           <locus target="#41r"/>
+                           <desc><!--description of the image--></desc>
+                        </decoNote>
+
+                     </decoDesc>
+                     <additions>
+                        <!--                     additions are listed here. if not needed, remove @rend='marginal' and @rend='guardLeaf'-->
+                        <list>
+                           <item rend="marginal"> </item>
+                           <item rend="guardLeaf"> </item>
+                           <item xml:id="a1">
+                              <!--                           each item has its own id, a description, a locus and might contain the text of the addition in as many languagues as needed-->
+                              <desc><!--description of addition--></desc>
+                              <locus target="#40vb" n="30"/>
+                              <q xml:lang="gez"><!--አጥረይክዋ፡ አነ፡ ገበረ፡ መድኅን፡ በመን{ፈ}ሰ፡ ጥበብ፡--></q>
+                              <q xml:lang="en"
+                                 ><!--I acquired it (this book), Gäbrä Mädḫən, through the spirit of wisdom.--></q>
+                              <p/>
+                           </item>
+                           <item xml:id="a2">
+                              <locus/>
+                              <q xml:lang="gez"/>
+                              <q xml:lang="en"/>
+                              <p/>
+                           </item>
+                           <item xml:id="e1">
+                              <!--                           description as the following can also occur. This is a different kind of addition and has therefore a xml:id with e-->
+                              <desc>Crude recent notes in pen and in pencil throughout the
+                                 manuscript, above and below the text (e.g. <locus
+                                    target="#1rv #2r #4r"/> Crude drawings in pencil, mixed with
+                                 crude notes, on <locus target="#45r"/>.</desc></item>
+                        </list>
+                     </additions>
+                     <bindingDesc>
+                        <binding contemporary="false" xml:id="binding">
+                           <!--                        @contemporary can take the following values
+* false
+* inapplicable
+* unknown
+* true
+* partly
+                        -->
+                           <decoNote><!--description of the binding--></decoNote>
+                           <decoNote><!--another information on binding--></decoNote>
+                           <decoNote type="bindingMaterial">
+                              <material corresp="BMat05">
+                                 <!--material from controlled list https://github.com/SChAth/Authority-Files/blob/master/BindingMaterial.xml-->
+                              </material>
+                           </decoNote>
+                           <decoNote type="Endbands">
+                              <desc type="Headband"/>
+                              <desc type="Tailband"/>
+                           </decoNote>
+                           <decoNote type="Other"
+                              ><!--any other note which must be distinct--></decoNote>
+                        </binding>
+                     </bindingDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origPlace><placeName corresp="LOC4705MayRub"/>
+                           <!--pointer to the place record--></origPlace>
+                        <origDate notBefore="1872" notAfter="1876">
+                           <!--                        a descriptive paragraph about the date of production of the manuscript, which can be annotated with references and correspondences
+                        the text below is an example-->
+                           Mention of <persName corresp="PRS10378Yohanne">King Yoḥannәs
+                              IV</persName> (<date>1872-89</date>) on <locus target="#43r" n="8"
+                              corresp="#coloph"/>, and of <persName type="metropolitan"
+                              corresp="PRS2223Atnatewo">Metropolitan ˀabunä ˀAtnatewos</persName>
+                           (in tenure <date>1869-76</date>) on <locus target="#43r"
+                              corresp="#coloph"/>. Besides, the colophon refers to the year of John
+                           the Evangelist.</origDate>
+                     </origin>
+                  </history>
+                  <additional>
+                     <adminInfo>
+                        <recordHist>
+                           <p> </p>
+                        </recordHist>
+                        <custodialHist>
+                           <custEvent type="restoration" corresp="Res03"/>
+
+                           <!--restoration from controlled list https://github.com/SChAth/Authority-Files/blob/master/Restoration.xml-->
+                        </custodialHist>
+                     </adminInfo>
+                     <surrogates>
+                        <!--                     references to surrogate manuscripts-->
+                        <bibl corresp="EMML1234"/>
+                        <bibl corresp="ES4567"/>
+                     </surrogates>
+                     <listBibl>
+                        <bibl><ptr target="Villa"/><citedRange unit="page">5-13</citedRange></bibl>
+                        <bibl><!--any bibliographic reference as in the example above. citedRange can take different unites and can be used more than once.
+                     
+                     The target should be a TAG in the [Zotero Group Bibliography EthioStudies](https://www.zotero.org/groups/ethiostudies/items). If the title you want to cite is not in the bibliography, please, add it. You need to be a member of the group to do this. If the title is there but does not have a univocal TAG, please add it.
+
+Univocal tags for project use should be namespaced, not to clash with further tagging. If you are adding a new tag use the following format:
+     bm:Abbadie1845Eth
+
+
+                     --></bibl>
+                     </listBibl>
+                  </additional>
                </msPart>
             </msDesc>
          </sourceDesc>
@@ -357,6 +412,7 @@ You could also start from the provided TEI models in Oxygen
       <profileDesc>
          <particDesc>
             <listPerson>
+<!--               references to people involved with this manuscript. replace mock values with the correct ones or omit.-->
                <person corresp="PRS2232AubertR" role="donor"/>
                <person corresp="PRS2233Audon" role="scribe"/>
                <person corresp="PRS2233Audon" role="other"/>
@@ -364,6 +420,9 @@ You could also start from the provided TEI models in Oxygen
          </particDesc>
          <textClass>
             <keywords>
+               <!--               You can either point to the [Subject Taxonomy](https://github.com/SChAth/Authority-Files/blob/master/subject.xml) 
+                  for these or enter a term with the desired keyword.
+-->
                <term corresp="Sub05"/>
                <term>Letter</term>
                <term>John</term>
@@ -376,9 +435,8 @@ You could also start from the provided TEI models in Oxygen
          </langUsage>
       </profileDesc>
       <revisionDesc>
-         <change when="2010-05-12">registered</change>
-         <change who="DN" when="2015-09-11T19:18:15.444Z">last edited</change>
-         <change who="PL" when="2016-03-31T20:04:41.009+02:00">transformed from mycore to TEI P5</change>
+<!--         in when put the date of your work. create a new change element for every working session describing what you have done-->
+         <change who="yourintials" when="2016-03-31">Created catalogue entry</change>
       </revisionDesc>
    </teiHeader>
    <sourceDoc>

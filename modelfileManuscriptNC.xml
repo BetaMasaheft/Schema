@@ -1,32 +1,295 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_ms.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_ms.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+   <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Title</title>
+            <title></title>
+            <editor/>
+            <editor role="generalEditor" xml:id="AB"/>
+            <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
-            <p>Publication Information</p>
+            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
+               Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <pubPlace>Hamburg</pubPlace>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
+                  licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+            </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>Information about the source</p>
+            <msDesc xml:id="ms">
+               <msIdentifier>
+                  <repository corresp="INS00000030Addaqaharsi"/>
+                  <idno></idno>
+               </msIdentifier>
+              <msPart xml:id="p1">
+                 <msIdentifier>
+                     <idno>
+                     </idno>
+                  </msIdentifier>
+                  <msContents>
+                     <summary> </summary>
+                     <msItem xml:id="p1_i1">
+                        <locus/>
+                        <title/>
+                        <rubric> </rubric>
+                        <incipit>
+                           <foreign xml:lang="en"></foreign>
+                        </incipit>
+                        <explicit>
+                           <foreign xml:lang="en"/>
+                        </explicit>
+                     </msItem>
+                  </msContents>
+                  <msPart xml:id="p1.1">
+                     <msIdentifier>
+                        <idno> </idno>
+                     </msIdentifier>
+                     <msContents>
+                        <msItem xml:id="p1.1_i1" class="content">
+                           <locus/>
+                           <title/>
+                           <textLang mainLang="gez">Ge'ez</textLang>
+                        </msItem>
+                        <msItem xml:id="p1.1_i2" class="content">
+                           <locus/>
+                           <title type="uniform" xml:lang="la"></title>
+                           <textLang mainLang="gez">Ge'ez</textLang>
+                        </msItem>
+                        <msItem xml:id="p.1.1_i3">
+                           <locus/>
+                           <title/>
+                           <msItem xml:id="p.1.1_i3.1">
+                              <locus/>
+                              <title/>
+                           </msItem>
+                           <msItem xml:id="p.1.1_i3.2">
+                              <locus/>
+                              <title/>
+                           </msItem>
+                        </msItem>
+                        <msItem xml:id="p.1.1_i4">
+                           <locus/>
+                           <title/>
+                        </msItem>
+                     </msContents>
+                  </msPart>
+                  <msPart xml:id="p1.2">
+                     <msIdentifier>
+                        <idno/>
+                     </msIdentifier>
+                     <msContents>
+                        <summary>
+                           
+                        </summary>
+                        <msItem xml:id="p1.3_i1">
+                           <locus/>
+                           <rubric/>
+                           <incipit> </incipit>
+                           <explicit> </explicit>
+                           <title/>
+                           <textLang mainLang="gez">Ge'ez</textLang>
+                        </msItem>
+                        <msItem xml:id="p1.3_i2">
+                           <locus/>
+                           <title/>
+                           <textLang mainLang="gez">Ge'ez</textLang>
+                        </msItem>
+                     </msContents>
+                  </msPart>
+               </msPart>
+               <msPart xml:id="p2">
+                  <msIdentifier>
+                     <idno/>
+                  </msIdentifier>
+                  <msContents>
+                     <msItem xml:id="p2_i1">
+                        <locus/>
+                        <title/>
+                        <rubric> </rubric>
+                        <incipit> </incipit>
+                        <explicit> </explicit>
+                        <listBibl type="mss">
+                           <bibl><ptr/><citedRange unit="fol"></citedRange></bibl>
+                        </listBibl>
+                        <note/>
+                     </msItem>
+                     <msItem xml:id="coloph">
+                        <colophon>
+                           <locus />
+                        </colophon>
+                        <note>
+                          </note>
+                     </msItem>
+                  </msContents>
+                  <physDesc>
+                     <objectDesc>
+                        <supportDesc>
+                           <support>
+                              <watermark/>
+                              <material corresp="WMat01">Parchment</material>
+                              <objectType>Codex</objectType></support>
+                           <extent>
+                              <measure unit="leaf"></measure>
+                              <measure unit="leaf" type="blank"></measure>
+                              <measure unit="quire"></measure>
+                              <dimensions type="outer" unit="mm">
+                                 <height></height>
+                                 <width></width>
+                                 <depth></depth>
+                              </dimensions>
+                           </extent>
+                           <collation>
+                              <list>
+                                 <item xml:id="q1">
+                                    <dim unit="leaf"></dim>
+                                    <locus/>
+                                 </item>
+                              </list>
+                           </collation>
+                           <condition corresp="St02">deficient</condition>
+                        </supportDesc>
+                        <layoutDesc>
+                           <layout columns="0" writtenLines="0">
+                              <dimensions unit="mm" rend="pricked ruled">
+                                 <height></height>
+                                 <width></width>
+                                 <dim type="intercolumn"></dim>
+                              </dimensions>
+                              <dimensions type="margin">
+                                 <dim type="top"></dim>
+                                 <dim type="bottom"></dim>
+                                 <dim type="right"></dim>
+                                 <dim type="left"></dim>
+                              </dimensions>
+                              <ab type="ruling" subtype="pattern"></ab>
+                              <ab type="pricking" subtype="pattern"></ab>
+                              <ab type="punctuation" subtype="dividers">
+                                 <list>
+                                    <item xml:id="div1"></item>
+                                    <item xml:id="div2">
+                                      <locus/>
+                                    </item>
+                                 </list>
+                              </ab>
+                           </layout>
+                        </layoutDesc>
+                     </objectDesc>
+                     <handDesc>
+                    <handNote script="Ethiopic" xml:id="h1">
+                           <ab type="script"></ab>
+                           <rs type="ink">Black, red</rs>
+                           <persName role="scribe"/>
+                           <date></date>
+                           <desc></desc>
+                           <ab type="rubrication"></ab>
+                        </handNote>
+                     </handDesc>
+                     <decoDesc>
+                    <decoNote type="miniature" xml:id="d1">
+                           <locus/>
+                           <desc></desc>
+                        </decoNote>
+                        <decoNote type="frame" xml:id="d2">
+                           <locus/>
+                           <desc></desc>
+                        </decoNote>
+                     </decoDesc>
+                     <additions>
+                        <list>
+                           <item rend="marginal"> </item>
+                           <item rend="guardLeaf"> </item>
+                           <item xml:id="a1">
+                              <desc></desc>
+                              <locus/>
+                              <q xml:lang="gez"></q>
+                              <q xml:lang="en"></q>
+                              <p/>
+                           </item>
+                           <item xml:id="e1">
+                             <desc></desc>
+                           </item>
+                        </list>
+                     </additions>
+                     <bindingDesc>
+                        <binding contemporary="false" xml:id="binding">
+                           <decoNote></decoNote>
+                           <decoNote type="bindingMaterial">
+                              <material corresp="BMat05">
+                                 </material>
+                           </decoNote>
+                           <decoNote type="Endbands">
+                              <desc type="Headband"/>
+                              <desc type="Tailband"/>
+                           </decoNote>
+                           <decoNote type="Other"></decoNote>
+                        </binding>
+                     </bindingDesc>
+                  </physDesc>
+                  <history>
+                     <origin>
+                        <origPlace><placeName/></origPlace>
+                        <origDate></origDate>
+                     </origin>
+                  </history>
+                  <additional>
+                     <adminInfo>
+                        <recordHist>
+                           <p> </p>
+                        </recordHist>
+                        <custodialHist>
+                           <custEvent type="restoration"/>
+                        </custodialHist>
+                     </adminInfo>
+                     <surrogates>
+                        <bibl/>
+                     </surrogates>
+                     <listBibl>
+                        <bibl></bibl>
+                     </listBibl>
+                  </additional>
+               </msPart>
+            </msDesc>
          </sourceDesc>
       </fileDesc>
-  </teiHeader>
-  <text>
+      <encodingDesc>
+         <projectDesc>
+            <p>Encoded according to TEI P5 Guidelines.</p>
+         </projectDesc>
+      </encodingDesc>
+      <profileDesc>
+         <particDesc>
+            <listPerson>
+               <person role="donor"/>
+               <person role="scribe"/>
+               <person role="other"/>
+            </listPerson>
+         </particDesc>
+         <textClass>
+            <keywords>
+               <term/>
+            </keywords>
+         </textClass>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="it">Italian</language>
+            <language ident="gez" corresp="Lan05">Gəˁəz</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change who="yourintials" when="2016-03-31">Created catalogue entry</change>
+      </revisionDesc>
+   </teiHeader>
+   <sourceDoc>
+      <surface>
+         <line/>
+      </surface>
+   </sourceDoc>
+   <text>
       <body>
-         <listBibl>
-	           <msDesc>
-	              <msIdentifier>
-                  <settlement>where is it</settlement>
-	                 <repository>repository name</repository>
-	                 <idno>identifier</idno>
-               </msIdentifier>
-	           </msDesc>
-         </listBibl>
+         <ab/>
       </body>
-  </text>
+   </text>
 </TEI>
