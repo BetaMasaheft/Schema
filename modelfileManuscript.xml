@@ -34,8 +34,7 @@ You could also start from the provided TEI models in Oxygen
          <sourceDesc>
             <msDesc>
                <msIdentifier>
-                  <repository corresp="INS00000030Addaqaharsi">
-                     <!--repository id taken from the authority list of institutions --></repository>
+                  <repository corresp="INS00000030Addaqaharsi"/>
                   <idno><!-- enter here the shelf mark of the manuscript only MR-023--></idno>
                   <!--
                      
@@ -47,9 +46,108 @@ You could also start from the provided TEI models in Oxygen
                   </altIdentifier>
                   -->
                </msIdentifier>
+               <msPart xml:id="p1">
+<!--                  you can enter and nest as many msPart as you wish
+                  Contents should be listed under each msPart/msContents section distinctly-->
+                  <msIdentifier>
+                     <idno>
+                     
+                  </idno>
+                  </msIdentifier>
+                  <msContents>
+                     <summary>
+                     </summary>
+                     <msItem xml:id="i1">
+                        <locus >2r-43v</locus>
+                        <title type="Complete">I. Gädlä Qirqos “Vita of Cyricus”</title>
+<!--                        here you can enter the title of the section of this work -->
+                        <rubric>Two lines (the first and the
+                           third) in the incipit page (fol. 2r);&#xD; the horizontal dashes above and below
+                           Ethiopic numerals;&#xD; elements of the punctuation signs.</rubric>
+                        <incipit>
+                           <foreign xml:lang="en">And a big persecution happened in the Church of Christ…</foreign>
+                        </incipit>
+                        <explicit>
+                           <foreign xml:lang="en"/>
+                        </explicit>
+                     </msItem>
+                  </msContents>
+                  <msPart xml:id="p1.1">
+                     <msIdentifier>
+                        <idno>
+                        </idno>
+                     </msIdentifier>
+                     <msContents>
+                        <msItem xml:id="p1_i5.1"  class="content">
+                           <locus from="1ra" to="2vb">fols. 1ra-2vb</locus>
+                           <title type="uniform" xml:lang="la">Index of the Statutes or Commandments (təˀəzazat) of the Apostles </title>
+                           <textLang mainLang="gez">Ge'ez</textLang>
+                        </msItem>
+                        <msItem xml:id="p1_i5.2"  class="content">
+                           <locus from="3ra" to="40vb">fols. 3ra-40vb</locus>
+                           <title type="uniform" xml:lang="la">Statutes or Commandments (təˀəzazat) of the Apostles </title>
+                           <textLang mainLang="gez">Ge'ez</textLang>
+                        </msItem>
+                        <msItem xml:id="p.1.1_i1">
+                           <locus></locus>
+                           <title></title>
+                           <msItem xml:id="p.1.1_i1.1">
+                              <locus></locus>
+                              <title></title>
+                           </msItem>
+                           <msItem xml:id="p.1.1_i1.2">
+                              <locus></locus>
+                              <title></title>
+                           </msItem>
+                        </msItem>
+                        <msItem xml:id="p.1.1_i2">
+                           <locus></locus>
+                           <title></title>
+                        </msItem>
+                     </msContents>
+                  </msPart>
+                  <msPart xml:id="p1.2">
+                     <msIdentifier><idno></idno></msIdentifier>
+                     <msContents></msContents>
+                     
+                  </msPart>
+                  <msPart xml:id="p1.3">
+                     <msIdentifier><idno></idno></msIdentifier>
+                     <msContents>
+                        <summary>
+                           I) Gädlä Kiros (fols. 5ra-43rb)
+                           II) Mälkəˀa Kiros (fols. 43va-50va)
+                           III) Mälkəˀa Kiros (fols. 50vb-51va)
+                        </summary>
+                        <msItem xml:id="p1.3_i1">
+                           <locus from="5ra" to="43vb"/>
+                           <rubric>Two lines (the first and the
+                              third) in the incipit page (fol. 2r);&#xD; the horizontal dashes above and below
+                              Ethiopic numerals;&#xD; elements of the punctuation signs.</rubric>
+                           <incipit>
+                              <foreign xml:lang="en">And a big persecution happened in the Church of Christ…</foreign>
+                           </incipit>
+                           <explicit>
+                              <foreign xml:lang="en"/>
+                           </explicit>
+                           <title type="uniform" corresp="LIT1468GadlaK">Gädlä Kiros</title>
+                              <textLang mainLang="gez">Ge'ez</textLang>
+                        </msItem>
+                        <msItem xml:id="p1.3_i2">
+                           <locus from="43va" to="50va"/>
+                              <title type="uniform">Mälkəˀa Kiros (II)</title>
+                              <textLang mainLang="gez">Ge'ez</textLang>
+                        </msItem>
+                     </msContents>
+                  </msPart>
+               </msPart>
+               <msPart xml:id="p2">
+                  <msIdentifier>
+                     <idno></idno>
+                  </msIdentifier>
                <msContents>
-                  <msItemStruct>
-                     <locus from="2r" to="43v">2r-43v</locus>
+                  <msItem>
+                     <locus >2r-43v</locus>
                      <title type="Complete">I. Gädlä Qirqos “Vita of Cyricus”</title>
                      <rubric>Two lines (the first and the
                 third) in the incipit page (fol. 2r);&#xD; the horizontal dashes above and below
@@ -60,171 +158,105 @@ You could also start from the provided TEI models in Oxygen
                      <explicit>
                         <foreign xml:lang="en"/>
                      </explicit>
+                     
                      <listBibl type="mss">
-                        <bibl>EMML no. 430 (1922/32), fols. 104r-112v: “Combat of St. Cyriacus [Gadla Qirqos]”</bibl>
-                        <bibl>(EMML II, 150; Church of the nativity, quarter of Lǝdäta, Addis Abäba).</bibl>
-                        <bibl>EMML no. 615 (1966),</bibl>
-                        <bibl>fols. 3r-42v: “Combat of St. Cyriacus [Gadla Qirqos]”</bibl>
-                        <bibl>(EMML II, 364; Church of Qirqos, quarter of Boleʾ, Addis Abäba).</bibl>
-                        <bibl>EMML no. 1934 (late 19th or early 20th cent.), fols. 29r-46r: “Martyrdom [gadl wa-semʿ] of Cyriacus and his Mother Julitta”</bibl>
-                        <bibl>(EMML V, 420; Monastery of Ḥayq Ǝsṭifanos, Ambassäl, Wallo).</bibl>
-                        <bibl>EMML no. 2514 (1382/88), fols. 126r-133r (in the “Gädlä Samaʿtat”): “Martyrdom of Cyriacus and his mother, Julitta, [Qirqos wa-emmu Iyyaluṭā]</bibl>
-                        <bibl>(EMML VII, 10; Church of Astit Kidana Mǝḥrät, Ankobärr, Shoa).</bibl>
-                        <bibl>EMML no. 3469 (19th cent.),</bibl>
-                        <bibl>fols. 2r-20r: “Martyrdom [Gadl wa-semʿ] of Cyriacus and his mother Julitta”;</bibl>
-                        <bibl>fols. 42r-61v: “Martyrdom [Gadl wa-samāʿt] of Cyriacus and his mother Julitta”;</bibl>
-                        <bibl>(EMML VIII, 283-284; Church of Šäwa Meda Qirqos, Gubbalafto, Yağğu, Wallo).</bibl>
-                        <bibl>EMML no. 4816 (1951/2),</bibl>
-                        <bibl>fols. 15v-59r: “Text of the Martyrdom”</bibl>
-                        <bibl>(EMML X, 324; Church of Däse Mädḫane ʿAläm, Wallo).</bibl>
-                        <bibl>Éthiopien 134 (15th cent.),</bibl>
-                        <bibl>fol. 28: “Martyre de S. Cyr et sa mère Julitta et des onze mille trente-quatre autres martyrs qui suoffrirent du temps du Tribun Alexandre”</bibl>
-                        <bibl>(ZotBNat 202).</bibl>
-                        <bibl>Éthiopien 339 = Griaule 35 (1932),</bibl>
-                        <bibl>fols. 1ra-28vb: “Martyre de l`enfant Cyriaques (Qirqos) et sa mère Juliette (ʾIyalouṭâ)”</bibl>
-                        <bibl>(GrébGriaule II, 3-9).</bibl>
-                        <bibl>Orient. 686 (1755/69),</bibl>
-                        <bibl>fol. 128r (in “Acts of Saints and Martyrs”): “Quiricus, or Cyriacus, and Julitta, ቂርቆስ፡ ወእሙ፡ ኢየሉጣ፡ (16th of Ṭӗr)”</bibl>
-                        <bibl>(WrBriMus 167, no. 257).</bibl>
-                        <bibl>Orient. 687/688 (18th cent.),</bibl>
-                        <bibl>fol. 200r (in “Acts of Saints and Martyrs”): “Quiricus, or Cyriacus, and Julitta (15th of Ṭӗr)”</bibl>
-                        <bibl>(WrBriMus 169, no. 258).</bibl>
-                        <bibl>Orient. 692 (15th cent.),</bibl>
-                        <bibl>fol. 84r (in “Acts of Saints and Martyrs”): “Martyrdom of Quiricus, or Cyriacus, and Julitta, ቂርቆስ፡ ወእሙ፡ ኢየሉጣ፡ (15th of Ṭӗr)”</bibl>
-                        <bibl>(WrBriMus 165, no. 256).</bibl>
-                        <bibl>Orient. 720 (1775/76),</bibl>
-                        <bibl>fols. 1r-109v: “The acts of Quiricus, or Cyriacus, ቂርቆስ፡, and Julitta, ኢየሉጣ”</bibl>
-                        <bibl>(WrBriMus 194, no. 297)</bibl>
-                        <bibl>Ṭanasee 121 = Daga Ǝsṭifanos 10 (18th cent.),</bibl>
-                        <bibl>fols. 218r-227r (“Gädlä Samaʿtat”): “ቂርቆስ፡ und seine Mutter ኢየሉጣ፡”</bibl>
-                        <bibl>(SixTana III, 93, no. 10).</bibl>
-                        <bibl>Ṭanasee 177 = Daga Ǝsṭifanos 66 (14th/15th cent.),</bibl>
-                        <bibl>fols. 57ra-80vb “Vita und Zeugnis des hl. Kyriakos und seiner Mutter Julietta (äthiop.: Iyaluṭā)”</bibl>
-                        <bibl>(SixTana III, 235).</bibl>
+                        <bibl corresp="EMML430"><ptr target="EMML430.xml#p.1.5_i6"/><citedRange unit="fol" from="104r" to="112v"/></bibl>
+                        <bibl corresp="EMML615"/>
                      </listBibl>
-                     <listBibl type="text">
-                        <bibl>
-                           <bibl>BHG 111-12.</bibl>
-                           <bibl> BHO 193-95.</bibl>
-                           <bibl> BudSaint II, 1130-31.</bibl>
-                           <bibl> ColSyn
-                            IX, 106-11. </bibl>
-                           <bibl> A. Dillmann, “Über die apokryphen Märtyrergeschichten
-                            des Cyriacus mit Julitta und des Georgius”, Sitzungsberichte der
-                            königlich preussischen Akademie der Wissenschaften zu Berlin. 28. April.
-                            Sitzung der philosophisch-historischen Classe, Berlin 1887, 339-56.</bibl>
-                           <bibl>
-                            EAE IV, “Qirqos”.</bibl>
-                           <bibl> G. Fiaccadori, “Nuova iscrizione Greca da Aksum”,
-                            Parola del Passato 62, 2007, 70-76.</bibl>
-                           <bibl> J. Habbi, “Ciriaco (Quiryaqos)
-                            e Giulietta (Yolete)”, in: EncSan 491.</bibl>
-                           <bibl> T. Orlandi, “Cyriacus and
-                            Julitta, Saints”, in: CE III, 671.</bibl>
-                           <bibl> E. Sengal, “Poemetto amarico in
-                            onore di San Quirico”, Studi Etiopici raccolti da C. Conti Rossini, Roma
-                            1954 (= RSE 4, 1944-1945 [1946]), 41-58.</bibl>
-                        </bibl>
-                     </listBibl>
+                    
                      <note/>
-                  </msItemStruct>
+                  </msItem>
                   <msItem>
                      <title>The Ms. contains the following text:</title>
                   </msItem>
                   <msItem xml:id="msitem_I">
-                     <locus from="2r" to="43v">fols. 2r-43v</locus>
-                     <title type="uniform" xml:lang="la">Gädlä Qirqos “Vita of Cyricus” </title>
+                     <locus from="2r" to="43v"/>
+                     <title type="uniform" xml:lang="gez">Gädlä Qirqos</title>
+                     <title xml:lang="en">Vita of Cyricus</title>
                      <textLang mainLang="gez">Ge'ez</textLang>
                   </msItem>
                   <msItem>
                      <title>.</title>
                   </msItem>
-                  <msItem>
-                     <title>Additio 1; colophon.</title>
-                  </msItem>
-                  <msItem>
+                  <msItem xml:id="coloph">
                      <colophon>
-                        <locus/>justify;"&gt;Fol. 43r, l.13: መጽሐፈ፡ ገድሉ፡ ለቅዱስ፡ ቂርቆስ፡ ሰማዕት፡ ወእሙ፡ ኢየሉጣ፡ ዘሰሐሥሕሌ፡ ወ[ሐ]ብፀሊም፡ ዘተጽሕፈት፡ [ዘመ]ነ፡ ዮሐንስ፡ ወንጌላዊ፡ ወንጉሥነ፡ ዮሐንስ፡ ወጳጳጳስነ[sic]፡ አትናቴዎስ። [fol. 43v]ወለዓለመ፡ ዓለም። ታቦቱ፡ ካህናቱ፡ ዘመስጥሕ፡ ወጸሃፊሃ፡ አቡነ፡ ወልደ፡ ሙሴ።</colophon>
+                        <locus from="49rb" n="28"/>በአስተሐምሞ፡ በትእዛዘ። እግዚአብሔር፡ ገበርክዎ፡ ለዝንቱ፡ ነገር ።</colophon>
+                     <note>Written in hand <ref target="#Hc" />, cp. also Additiones <ref target="#a1"/>, <ref target="#a4"/>, <ref target="#a8"/>, <ref target="#a10"/>, <ref target="#a12"/>. 
+                        The note is written over erased punctuation sign.</note>
                   </msItem>
                </msContents>
                <physDesc>
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <material xml:id="WMat01">Parchment</material>
+                           <watermark/>
+                           <material corresp="WMat01">Parchment</material>
+                           <objectType>Codex</objectType>
                         </support>
-                        <extent>Made of 45.0 folios,
-                                                of which 3.0
-                                                blank, in 5.0 quires. 
-                                                <dimensions type="outer">
-                              <height unit="cm">18.0</height>
-                              <width unit="cm">12.5</width>
-                              <depth unit="cm">4.5</depth>
+                        <extent>
+                           <measure unit="leaf">183</measure>
+                           <measure unit="leaf" type="blank">3</measure>
+                           <measure unit="quire">25</measure>
+                           <dimensions type="outer" unit="mm">
+                              <height>370</height>
+                              <width>270</width>
+                              <depth>115</depth>
                            </dimensions>
                         </extent>
-                        <foliation>I(10/fols. 1r-10v) – II(10/fols.
-                11r-20v) – III(12/fols. 21r-32v) – IV(10/fols. 33r-42v) – V(3/fols.
-                43r-45v).</foliation>
-                        <condition>
-                           <rs type="statPreserv" xml:id="St02">deficient</rs>
-                        </condition>
+                        <collation>
+                           <list>
+                              <item xml:id="q1">
+                                 <dim unit="leaf">10</dim>
+                                 <locus from="1r" to="10v"/>
+                              </item>
+                              <item xml:id="q2">
+                                 <dim unit="leaf">10</dim>
+                                 <locus from="11r" to="20v"/>
+                              </item>
+                              <item xml:id="q3">
+                                 <dim unit="leaf">12</dim>
+                                 <locus from="21r" to="32v"/>
+                              </item>
+                              <item xml:id="q4">
+                                 <dim unit="leaf">10</dim>
+                                 <locus from="33r" to="42v"/>
+                              </item>
+                              <item xml:id="q5">
+                                 <dim unit="leaf">3</dim>
+                                 <locus from="43r" to="45v"/>
+                              </item>
+                           </list>
+                        </collation>
+                        <condition xml:id="St02">deficient</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout columns="1" writtenLines="18">
-                           <dimensions>
-                              <height unit="cm">13.0</height>
-                              <width unit="cm">7.8</width>
-                              <dim type="intercolumn"/>
+                        <layout corresp="#p.1.1_i1" columns="1" writtenLines="18">
+                           <dimensions unit="mm" rend="pricked ruled">
+                              <height>245</height>
+                              <width>210</width>
+                              <dim type="intercolumn">15</dim>
                            </dimensions>
                            <dimensions type="margin">
-                              <dim type="top">1.7</dim>
-                              <dim type="bottom">2.8</dim>
-                              <dim type="right">1.7</dim>
-                              <dim type="left">1.2</dim>
-                              <dim type="intercolumn"/>
+                              <dim type="top">35</dim>
+                              <dim type="bottom">65</dim>
+                              <dim type="right">40</dim>
+                              <dim type="left">15</dim>
                            </dimensions>
-                           <p>
-                              <locus/>
-                           </p>
-                           <p>Pricking and ruling are visible.</p>
-                           <p> Ruling pattern: 1A-1A/0-0/0-0/A.</p>
-                           <p>
-                    Primary pricks are partly visible (s., e.g., fol. 37v).</p>
-                           <p> Ruling pricks are
-                    partly visible.</p>
-                           <p> Structural pricks are partly visible (s., e.g., fols. 21v,
-                    22r).</p>
-                           <p> The upper line is written above the ruling.</p>
-                           <p> The bottom line is
-                    written above the ruling.</p>
-                        </layout>
-                        <layout>
-                           <ab type="punctuation" subtype="Executed">Executed: not quite regularly;</ab>
-                        </layout>
-                        <layout>
-                           <ab type="punctuation" subtype=" Usage">Usage: not always logical.</ab>
-                        </layout>
-                        <layout>
-                           <ab type="punctuation">Dividers:</ab>
-                        </layout>
-                        <layout>
-                           <ab type="punctuation">I.Colon.</ab>
-                        </layout>
-                        <layout>
-                           <ab type="punctuation">II. Five red and black dot vertical colon (e.g. fols.: 30v, ls. 3, 11; 31r (l.14); 31v (l.10);</ab>
-                        </layout>
-                        <layout>
-                           <ab type="punctuation">four dot asterisk (e.g. fols.: 20v, l.4; 40v, l.14; 43v, ls. 1, 3);</ab>
-                        </layout>
-                        <layout>
-                           <ab type="punctuation">nine dot asterisk (used throughout the text).</ab>
-                        </layout>
-                        <layout>
-                           <ab type="cruces">
-                              <locus/>
+                           <ab type="ruling" subtype="pattern">Ruling pattern: 1A-1A/0-0/0-0/A.</ab>
+                           <ab type="pricking" subtype="pattern">Primary pricks are partly visible (s., e.g., fol. 37v).</ab>
+                           <ab type="punctuation" subtype="dividers">
+                           <list>
+                              <item xml:id="div1" corresp="#p.1">Colon</item>
+                              <item xml:id="div2" corresp="#p.2">Five red and black dot vertical colon. 
+                                 <locus from="30v" n="3"/>
+                                 <locus from="30v" n="11"/>
+                                 <locus from="31r" n="14"/>
+                                 <locus from="31v" n="10"/>
+                              </item>
+                           </list>
                            </ab>
                         </layout>
-                     </layoutDesc>
+                       </layoutDesc>
                   </objectDesc>
                   <handDesc>
                      <handNote script="WS04">Ethiopic<rs type="ink">Black, red (reddish-brown)</rs>
@@ -236,38 +268,62 @@ You could also start from the provided TEI models in Oxygen
                      </handNote>
                   </handDesc>
                   <decoDesc>
-                     <decoNote type="frames" xml:id="frm_1">Chains of black and red dots and nine dot asterisks in between (esp. fol. 2r).</decoNote>
-                     <decoNote type="frames" xml:id="frm_2">Ḥaräg 1: fol. 43r.</decoNote>
-                     <decoNote type="frames" xml:id="frm_3">- Fol. 43r: simple, narrow, uncolored (black), horizontal ornamental band separating the text and the colophon (geometric motifs).</decoNote>
+                     <decoNote type="miniature" xml:id="min_1">
+                        <locus target="#1r"/>
+                        <desc>drawing of a cross; black ink.</desc>
+                     </decoNote>
+                     <decoNote type="frames" xml:id="frm_5">
+                        <locus target="#41r"/>
+                        <desc>wide, coloured (red and black), horizontal ornamental band over col. a-b, at the incipit of text I.-3), with three lateral pendants reaching l.6 whose the central one decorated with a cross; the horizontal band extends to the top of the page(interlaces, crosses).</desc>
+                     </decoNote>    
+                  
                   </decoDesc>
                   <additions>
                      <list>
-                        <item xml:id="addition_1">
+                        <item rend="marginal">
+                        </item>
+                        <item rend="guardLeaf">
+                        </item>
+                        <item xml:id="a1">
+                           Acquisition note.
+                           <locus target="#40vb" n="30"/>
+                           <q xml:lang="gez">አጥረይክዋ፡ አነ፡ ገበረ፡ መድኅን፡ በመን{ፈ}ሰ፡ ጥበብ፡</q>
+                           <q xml:lang="en">I acquired it (this book), Gäbrä Mädḫən, through the spirit of wisdom.</q>
+                           <p/>
+                        </item>
+                        <item xml:id="a2">
                            <locus/>
                            <q xml:lang="gez"/>
                            <q xml:lang="en"/>
                            <p/>
                         </item>
-                        <item xml:id="extra_1">- Crude recent notes in pen and in
-                pencil throughout the manuscript, above and below the text (e.g. fols.: 1rv; 2r; 4r;
-                4v; 7r; 9v; 13v; 15v; 16r; 25v; 33v; 38v; 43rv; 44rv; 45rv).&#xD; Crude drawings in
-                pencil, mixed with crude notes, on fol. 45rv.</item>
+                        <item xml:id="e1">Crude recent notes in pen and in
+                pencil throughout the manuscript, above and below the text (e.g. <locus target="#1rv #2r #4r"/> Crude drawings in
+                pencil, mixed with crude notes, on <locus target="#45r"/>.</item>
                      </list>
                   </additions>
                   <bindingDesc>
-                     <p>Two wooden boards;&#xD; two pairs of
-                sewing stations.<rs type="original" xml:id="OB03">partly</rs>
-                        <material xml:id="BMat05">wood</material>
-                     </p>
-                     <p/>
+                     <binding contemporary="false" xml:id="binding">
+                        <decoNote>Wooden boards (recently) covered with
+                           reddish-brown tooled leather. </decoNote>
+                        <decoNote>Four pairs of sewing stations.</decoNote>
+                        <decoNote type="original"  corresp="OB03">partly</decoNote>
+                        <decoNote type="bindingMaterial"><material corresp="BMat05">wood</material></decoNote>
+                        <decoNote type="Endbands">
+                           <desc type="Headband"></desc>
+                           <desc type="Tailband"></desc>
+                        </decoNote>
+                        <decoNote type="Other">Parchment guards (possibly of the same
+                           origin as <locus target="#183"/>) were used to sew together <locus from="1" to="2"/>.</decoNote>
+                     </binding>
                   </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origPlace>Mәdrä Ruba /MR</origPlace>
-                     <origDate notBefore="1872" notAfter="1876">Mention of King Yoḥannәs IV (1872-89)
-                on fol. 43r, l.18 (s. colophon), and of Metropolitan ˀabunä ˀAtnatewos (in tenure
-                1869-76) on fol. 43r(s. the colophon). Besides, the colophon refers to the year of
+                     <origPlace><placeName corresp="LOC4705MayRub"/></origPlace>
+                     <origDate notBefore="1872" notAfter="1876">Mention of <persName corresp="PRS10378Yohanne">King Yoḥannәs IV</persName> (<date>1872-89</date>)
+                        on <locus target="#43r" n="8" corresp="#coloph"/>, and of <persName type="metropolitan" corresp="PRS2223Atnatewo">Metropolitan ˀabunä ˀAtnatewos</persName> (in tenure
+                        <date>1869-76</date>) on <locus target="#43r" corresp="#coloph"/>. Besides, the colophon refers to the year of
                 John the Evangelist.</origDate>
                   </origin>
                </history>
@@ -275,19 +331,21 @@ You could also start from the provided TEI models in Oxygen
                   <adminInfo>
                      <recordHist>
                         <p>
-                           <note>1.0</note>
                         </p>
                      </recordHist>
                      <custodialHist>
-                        <p>
-                           <rs type="restorations" xml:id="Res03">none</rs>
-                        </p>
+                        <custEvent type="restoration" corresp="Res03"/>
                      </custodialHist>
                   </adminInfo>
+                  <surrogates>
+                     <bibl corresp="EMML1234"/>
+                     <bibl corresp="ES4567"/>
+                  </surrogates>
                   <listBibl>
                      <bibl>Ms. previously unknown</bibl>
                   </listBibl>
                </additional>
+               </msPart>
             </msDesc>
          </sourceDesc>
       </fileDesc>
@@ -299,33 +357,28 @@ You could also start from the provided TEI models in Oxygen
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person><!--donor-->
-                  <p/>
-               </person>
-               <person><!--copyst-->
-                  <p/>
-               </person>
-               <person><!--other-->
-                  <p/>
-               </person>
+               <person corresp="PRS2232AubertR" role="donor"/>
+               <person corresp="PRS2233Audon" role="scribe"/>
+               <person corresp="PRS2233Audon" role="other"/>
             </listPerson>
          </particDesc>
          <textClass>
             <keywords>
-               <term xml:id="Sub05">Hagiography</term>
+               <term corresp="Sub05"/>
+               <term>Letter</term>
+               <term>John</term>
             </keywords>
          </textClass>
          <langUsage>
-            <language ident="en">Inglese</language>
-            <language ident="it">Italiano</language>
-            <language ident="gez" xml:id="Lan05">Gəˁəz</language>
+            <language ident="en">English</language>
+            <language ident="it">Italian</language>
+            <language ident="gez" corresp="Lan05">Gəˁəz</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>
          <change when="2010-05-12">registered</change>
-         <change who="VPisani" when="2011-02-22T17:20:28.870Z">created</change>
-         <change who="EGusarova" when="2014-04-14T14:26:34.786Z">last edited</change>
-         <change who="PietroLiuzzo" when="2016-03-31T20:04:41.009+02:00">transformed from mycore to TEI P5</change>
+         <change who="DN" when="2015-09-11T19:18:15.444Z">last edited</change>
+         <change who="PL" when="2016-03-31T20:04:41.009+02:00">transformed from mycore to TEI P5</change>
       </revisionDesc>
    </teiHeader>
    <sourceDoc>
