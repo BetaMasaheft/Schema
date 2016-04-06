@@ -53,6 +53,7 @@
                <persName>
                   <forename><!--enter here the first name, you can enter more than one--></forename>
                   <surname><!--here goes the surname--></surname>
+                  <addName><!--any other type of name which is not one of the above--></addName>
                </persName>
                <persName type="alt"><!--in case this person was known with other names, you can enter one of this element with type=alt for each--></persName>
                <nationality>   </nationality>

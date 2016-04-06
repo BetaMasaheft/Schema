@@ -22,6 +22,7 @@
             <msDesc xml:id="ms">
                <msIdentifier>
                   <repository corresp="INS00000030Addaqaharsi"/>
+                  <collection></collection>
                   <idno></idno>
                </msIdentifier>
               <msPart xml:id="p1">
@@ -181,7 +182,7 @@
                      <handDesc>
                     <handNote script="Ethiopic" xml:id="h1">
                            <ab type="script"></ab>
-                           <rs type="ink">Black, red</rs>
+                           <seg type="ink">Black, red</seg>
                            <persName role="scribe"/>
                            <date></date>
                            <desc></desc>

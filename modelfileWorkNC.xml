@@ -8,6 +8,7 @@
                 </title>
                 <title xml:lang="en"></title>
                 <title xml:lang="gez" type="alt"></title>
+                <title type="normalized" xml:lang="gez"></title>
                 <author><persName/></author>
             </titleStmt>
             <publicationStmt>

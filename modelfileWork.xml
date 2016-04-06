@@ -9,6 +9,8 @@
                 </title>
                 
                 <title xml:lang="en"><!--the title of the work in english--></title>
+                <title xml:lang="gez" type="alt"><!--a different title of the work--></title>
+                <title type="normalized" xml:lang="gez"><!--the title of the work normalized--></title>
                 <author><persName corresp="PRS11111aaaa"/><!--reference to the person file of the author--></author>
             </titleStmt>
             <publicationStmt>

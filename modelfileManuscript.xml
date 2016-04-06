@@ -42,6 +42,7 @@ You could also start from the provided TEI models in Oxygen
 
                <msIdentifier>
                   <repository corresp="INS00000030Addaqaharsi"/>
+                  <collection></collection>
                   <idno><!-- enter here the shelf mark of the manuscript only MR-023--></idno>
                   <!--
                      
@@ -279,7 +280,7 @@ You could also start from the provided TEI models in Oxygen
                      -->
                         <handNote script="Ethiopic" xml:id="h1" corresp="#p1.2 #p1.3 #a4">
                            <ab type="script"><!--annotated description of script--></ab>
-                           <rs type="ink">Black, red</rs>
+                           <seg type="ink">Black, red</seg>
                            <persName role="scribe" corresp="PRS1691Alib"/>
                            <date><!--the date of the script in writing. eventually @notBefore and @notAfter can also be used--></date>
                            <desc><!--description of the end--></desc>
