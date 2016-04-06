@@ -1,0 +1,504 @@
+<?xml version="1.0"?>
+<?oxygen RNGSchema="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="xml"?>
+
+<div xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en"
+    xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+      <schemaSpec ident="tei-betamesaheft" docLang="en" prefix="tei_" start="TEI" xml:lang="en">
+                
+          <!--       MODULES USED BY THE Beta maṣāḥǝft: Manuscripts of Ethiopia and Eritrea SCHEMA       -->
+                <moduleRef key="core"/>
+                <moduleRef key="tei"/>
+                <moduleRef key="header" except="appInfo"/>
+                <moduleRef key="textstructure" except="argument byline closer div1 div2 div3 div4 div5 div6 div7 imprimatur
+                    opener postscript salute signed titlePage titlePart trailer"/>
+                <moduleRef key="transcr" except="damageSpan restore"/>
+                <moduleRef key="verse" except="caesura metDecl metSym rhyme"/>
+                <moduleRef key="analysis" except="cl span spanGrp"/>
+                <moduleRef key="certainty" except="respons"/>
+                <moduleRef key="gaiji" except="char charName unicodeName"/>
+                <moduleRef key="linking" except="alt altGrp joinGrp timeline when"/>
+                <moduleRef key="msdescription"/>
+                <moduleRef key="namesdates" except="affiliation age climate education faith geoFeat langKnowledge
+                    langKnown nameLink nationality occupation population relationGrp residence sex socecStatus terrain trait"/>
+                <moduleRef key="textcrit" except="lacunaEnd lacunaStart listWit witDetail witEnd witStart witness"/>
+                <moduleRef key="figures" except="cell formula row table"/>
+                <moduleRef key="spoken" except="broadcast equipment incident kinesic pause recording recordingStmt
+                    scriptStmt shift u vocal writing"/>
+                <moduleRef key="corpus" except="activity channel constitution derivation domain factuality interaction locale
+                    preparedness purpose setting textDesc"/>
+          
+          
+          <!--  adds value partly to binding/@contemporary-->
+               <elementSpec ident="binding" mode="change" module="msdescription">
+                   <attList>
+                     <attDef ident="contemporary" mode="replace">
+                         <valList type="closed">
+                             <valItem ident="partly"/>
+                             <valItem ident="true"/>
+                             <valItem ident="false"/>
+                             <valItem ident="unknown"/>
+                         </valList>
+                     </attDef>  
+                       
+                   </attList>
+               </elementSpec>
+         
+<!--         suggest values for @type in origDate-->
+          <elementSpec ident="origDate" mode="change" module="msdescription">
+              <attList>
+                  <!--    adds list of values to origDate/@type-->
+                  <attDef ident="type" mode="change">
+                      <valList type="open">
+                          <valItem ident="editor"/>
+                          <valItem ident="mss"/>
+                          <valItem ident="literature"/>
+                      </valList>
+                  </attDef>
+                      <attDef ident="evidence" mode="replace" usage="opt">
+                          <datatype maxOccurs="6">
+                              <rng:ref name="data.word"/>
+                          </datatype>
+                          <valList type="semi">
+                              <valItem ident="lettering">
+                                  <desc>Text dated palaeographically</desc>
+                              </valItem>
+                              <valItem ident="nomenclature">
+                                  <desc>Text dated by nomenclature or onomastics</desc>
+                              </valItem>
+                              <valItem ident="prosopography">
+                                  <desc>Text dated by known persons named or implied within it</desc>
+                              </valItem>
+                              <valItem ident="reign">
+                                  <desc>Text dated by the reign of a ruler</desc>
+                              </valItem>
+                              <valItem ident="titulature">
+                                  <desc>Text dated by the use of official titles</desc>
+                              </valItem>
+                              <valItem ident="internal-date">
+                                  <desc>Text dated by explicit internal date</desc>
+                              </valItem>
+                              <valItem ident="context">
+                                  <desc>Archaeological, epigraphic, iconographic or other context of the text support</desc>
+                              </valItem>
+                          </valList>
+                      </attDef>
+              </attList>
+          </elementSpec>
+          
+<!--          add the value fol to citedRange/@unit-->
+          <elementSpec ident="citedRange" mode="change" module="core">
+              <attList>
+                  <attDef ident="unit" mode="change">
+                      <valList type="open">
+                          <valItem ident="fol"/>
+                      </valList>
+                  </attDef>  
+                  
+              </attList>
+          </elementSpec>
+          
+          <elementSpec ident="condition" mode="change" module="msdescription">
+              <attList>
+                  <attDef ident="corresp" mode="change" usage="req">
+                      <valList type="closed">
+                          <valItem ident="deficient"/>
+                          <valItem ident="good"/>
+                          <valItem ident="intact"/>
+                          <valItem ident="other"/>
+                      </valList>
+                  </attDef>  
+                  
+              </attList>
+          </elementSpec>
+          
+          <elementSpec ident="language" mode="change" module="header">
+              <attList>
+                  <attDef ident="corresp" mode="change" usage="req">
+                      <valList type="closed">
+                          <valItem ident="Amharic"/>
+                          <valItem ident="Arabic"/>
+                          <valItem ident="Armenian"/>
+                          <valItem ident="Coptic"/>
+                          <valItem ident="Georgian"/>
+                          <valItem ident="Greek"/>
+                          <valItem ident="Gəˁəz"/>
+                          <valItem ident="Hebrew"/>
+                          <valItem ident="other"/>
+                          <valItem ident="Persian"/>
+                          <valItem ident="Syriac"/>
+                          <valItem ident="Turkish"/>
+                      </valList>
+                  </attDef>  
+                  
+              </attList>
+          </elementSpec>
+          
+<!--          allow usage of a closed list of types for ref-->
+          <elementSpec ident="ref" mode="change" module="core">
+              <attList>
+                  <attDef ident="type" mode="change" usage="opt">
+                      <valList type="closed">
+                          <valItem ident="mspart"/>
+                          <valItem ident="author"/>
+                          <valItem ident="place"/>
+                          <valItem ident="item"/>
+                          <valItem ident="hand"/>
+                          <valItem ident="quire"/>
+                      </valList>
+                  </attDef>  
+                  
+              </attList>
+          </elementSpec>
+          
+<!--          suggest use in title of type complete or incomplete-->
+          <elementSpec ident="title" mode="change" module="core">
+              <attList>
+                  <attDef ident="type" mode="change" usage="opt">
+                      <valList type="open">
+                          <valItem ident="complete"/>
+                          <valItem ident="incomplete"/>
+                      </valList>
+                  </attDef>
+              </attList>
+          </elementSpec>
+                
+<!--                constrain use of type in listBibl and suggest values-->
+          <elementSpec ident="listBibl" mode="change" module="core">
+              <attList>
+                  <attDef ident="type" mode="change" usage="req">
+                      <valList type="open">
+                          <valItem ident="mss"/>
+                          <valItem ident="editions"/>
+                          <valItem ident="text"/>
+                          <valItem ident="otherLanguages"/>
+                      </valList>
+                  </attDef>
+              </attList>
+          </elementSpec>
+          
+          <!--          allow use in dimension of rend pricked and ruled
+          more values can be added, and up to 6 can be entered in the attribute
+          -->
+          <elementSpec ident="dimensions" mode="change" module="msdescription">
+              <attList>
+                  <attDef ident="rend" mode="replace" usage="opt">
+                       <datatype maxOccurs="6">
+                              <rng:ref name="data.word"/>
+                          </datatype>
+                      <valList type="semi">
+                          <valItem ident="pricked"/>
+                          <valItem ident="ruled"/>
+                      </valList>
+                  </attDef>
+              </attList>
+          </elementSpec>
+          
+<!--          suggests values for dim/@unit and dim/@type-->
+          <elementSpec ident="dim" mode="change" module="msdescription">
+              <attList>
+                  <attDef ident="unit" mode="replace" usage="opt">
+                      <valList type="closed">
+                          <valItem ident="mm"/>
+                          <valItem ident="leaf"/>
+                          <valItem ident="quire"/>
+                      </valList>
+                  </attDef>
+                  <attDef ident="type" mode="replace" usage="opt">
+                      <valList type="closed">
+                          <valItem ident="intercolumn"/>
+                          <valItem ident="top"/>
+                          <valItem ident="bottom"/>
+                          <valItem ident="right"/>
+                          <valItem ident="left"/>
+                          <valItem ident="outer"/>
+                          <valItem ident="margin"/>
+                      </valList>
+                  </attDef>
+              </attList>
+          </elementSpec>
+          
+          <!--          suggests values for ab/@type and ab/@subtype-->
+          <elementSpec ident="ab" mode="change" module="linking">
+              <constraintSpec scheme="isoschematron" ident="ab">
+                  <constraint>
+                      <sch:rule context="tei:ab[ancestor::tei:layout]">
+                          <sch:report test="not(@type or @subtype)">ab in layout should always have a type and optionally a subtype</sch:report>
+                      </sch:rule>
+                  </constraint>
+              </constraintSpec>
+              <attList>
+                  <attDef ident="type" mode="replace" usage="opt">
+                      <valList type="open">
+                          <valItem ident="ruling"/>
+                          <valItem ident="pricking"/>
+                          <valItem ident="punctuation"/>
+                          <valItem ident="cruces"/>
+                          <valItem ident="CruxAnsata"/>
+                          <valItem ident="ChiRho"/>
+                      </valList>
+                  </attDef>
+                  <attDef ident="subtype" mode="replace" usage="opt">
+                      <valList type="open">
+                          <valItem ident="pattern"/>
+                          <valItem ident="usage"/>
+                          <valItem ident="executed"/>
+                          <valItem ident="dividers"/>
+                      </valList>
+                  </attDef>
+              </attList>
+          </elementSpec>
+          
+<!--          suggest values for decoNote/@type-->
+          <elementSpec ident="decoNote" mode="change" module="msdescription">
+              <constraintSpec scheme="isoschematron" ident="decoNote">
+                  <constraint>
+                      <sch:rule context="tei:decoNote">
+                          <sch:report test="not(child::tei:locus)">decoNote must contain a locus to indicate the position of the feature</sch:report>
+                      </sch:rule>
+                  </constraint>
+              </constraintSpec>
+              <attList>
+                  <attDef ident="xml:id" mode="change" usage="req"/>
+                  <attDef ident="type" mode="change" usage="opt">
+                      <valList type="open">
+                          <valItem ident="frame"/>
+                          <valItem ident="miniature"/>
+                      </valList>
+                  </attDef>
+                  <attDef ident="rend" mode="change" usage="opt">
+                      <valList type="open">
+                          <valItem ident="damaged"/>
+                          <valItem ident="intact"/>
+                      </valList>
+                  </attDef>
+              </attList>
+          </elementSpec>
+          
+          <elementSpec ident="custEvent" mode="change" module="msdescription">
+              <attList>
+                  <attDef ident="subtype" mode="change" usage="req">
+                      <valList type="closed">
+                          <valItem ident="ancient"/>
+                          <valItem ident="modern"/>
+                          <valItem ident="none"/>
+                      </valList>
+                  </attDef>
+              </attList>
+          </elementSpec>
+          
+          <!--          suggest values for person/@role-->
+          <elementSpec ident="person" mode="change" module="namesdates">
+              <attList>
+                  <attDef ident="type" mode="change" usage="opt">
+                      <valList type="open">
+                          <valItem ident="scribe"/>
+                          <valItem ident="donor"/>
+                          <valItem ident="other"/>
+                      </valList>
+                  </attDef>
+              </attList>
+          </elementSpec>
+          
+          
+<!--          require @xml:id-->
+          <elementSpec ident="msPart" mode="change" module="msdescription">
+              <attList>
+                  <attDef ident="xml:id" mode="change" usage="req"/>
+              </attList>
+          </elementSpec>
+          
+          <elementSpec ident="msItem" mode="change" module="msdescription">
+              <attList>
+                  <attDef ident="xml:id" mode="change" usage="req"/>
+              </attList>
+          </elementSpec>
+          
+          
+          <elementSpec ident="handNote" mode="change" module="msdescription">
+              <attList>
+                  <attDef ident="xml:id" mode="change" usage="req"/>
+                  <attDef ident="script" mode="change" usage="req">
+                      <valList type="closed">
+                          <valItem ident="Arabic"/>
+                          <valItem ident="Cyrillic"/>
+                          <valItem ident="Ethiopic"/>
+                          <valItem ident="Georgian"/>
+                          <valItem ident="Latin"/>
+                          <valItem ident="other"/>
+                          <valItem ident="Syriac"/>
+                      </valList>
+                  </attDef>
+              </attList>
+          </elementSpec>
+          
+          <elementSpec ident="editor" mode="change" module="core">
+              <attList>
+                  <attDef ident="corresp" mode="change" usage="req">
+                      <valList type="open">
+                          <valItem ident="AB"/>
+                          <valItem ident="ES"/>
+                          <valItem ident="DN"/>
+                          <valItem ident="MV"/>
+                      </valList>
+                  </attDef>
+                  <attDef ident="role" mode="change" usage="opt">
+                      <valList type="open">
+                          <valItem ident="generalEditor"></valItem>
+                      </valList>
+                  </attDef>
+              </attList>
+          </elementSpec>
+          
+          <elementSpec ident="addition" mode="change" module="msdescription">
+              <attList>
+                  <attDef ident="xml:id" mode="change" usage="req"/>
+              </attList>
+          </elementSpec>
+          
+<!--          require @corresp-->
+          <elementSpec ident="persName" mode="change" module="msdescription">
+              <attList>
+                  <attDef ident="corresp" mode="change" usage="req"/>
+              </attList>
+          </elementSpec>
+          
+          
+          <elementSpec ident="placeName" mode="change" module="msdescription">
+              <attList>
+                  <attDef ident="corresp" mode="change" usage="req"/>
+              </attList>
+          </elementSpec>
+          
+          
+          <elementSpec ident="title" mode="change" module="msdescription">
+              <attList>
+                  <attDef ident="corresp" mode="change" usage="rec"/>
+                  
+                  <attDef ident="type" mode="change" usage="opt">
+                      <valList type="open">
+                          <valItem ident="normalized"/>
+                      </valList>
+                  </attDef>
+                  
+              </attList>
+          </elementSpec>
+          
+          
+          <elementSpec ident="material" mode="change" module="msdescription">
+              <attList>
+                  <attDef ident="corresp" mode="change" usage="req">
+                      <valList type="closed">
+                          <valItem ident="wood"/>
+                          <valItem ident="papyrus"/>
+                          <valItem ident="cardboard"/>
+                          <valItem ident="leather"/>
+                          <valItem ident="metal"/>
+                          <valItem ident="paper"/>
+                          <valItem ident="textile"/>
+                          <valItem ident="other"/>
+                          <valItem ident="parchment"/>
+                      </valList>
+                  </attDef>
+                  
+              </attList>
+          </elementSpec>
+<!-- constraining values of div/@type -->
+                <elementSpec ident="div" mode="change" module="textstructure">
+                    <attList>
+                        <attDef ident="type" mode="replace" usage="req">
+                            <valList type="closed">
+                                <valItem ident="apparatus">
+                                    <desc>to contain apparatus criticus or textual notes</desc>
+                                </valItem>
+                                <valItem ident="bibliography">
+                                    <desc>to contain bibliographical information, previous
+                                        publications, etc.</desc>
+                                </valItem>
+                                <valItem ident="commentary">
+                                    <desc>to contain all editorial commentary,
+                                        historical/prosopographical discussion, etc.</desc>
+                                </valItem>
+                                <valItem ident="edition">
+                                    <desc>to contain the text of the edition itself; may include
+                                        multiple text-parts</desc>
+                                </valItem>
+                                <valItem ident="textpart">
+                                    <desc>used to divide a div[type=edition] into multiple parts
+                                        (fragments, columns, faces, etc.)</desc>
+                                </valItem>
+                                <valItem ident="translation">
+                                    <desc>to contain a translation of the text into one or more
+                                        modern languages</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                
+         
+<!--         tests-->
+                
+          <elementSpec ident="origin" module="msdescription" mode="change">
+              <!--             testing for origDate in origin-->
+              <constraintSpec scheme="isoschematron" ident="origin">
+                  <constraint>
+                      <sch:rule context="tei:origin">
+                          <sch:report test="not(child::tei:origDate)">At least one date must be specified, preferably with a type to indicate the origin of it and evidence</sch:report>
+                      </sch:rule>
+                  </constraint>
+              </constraintSpec>
+          </elementSpec>
+                
+          <elementSpec ident="locus" module="msdescription" mode="change">
+              <!--  checks that locus has @target or @from-->
+              <constraintSpec scheme="isoschematron" ident="locus">
+                  <constraint>
+                      <sch:rule context="tei:locus">
+                          <sch:report test="not(@target or @from)">locus must have either an exact reference to a page with @target or a range indicated with @from and @to.</sch:report>
+                      </sch:rule>
+                  </constraint>
+              </constraintSpec>
+          </elementSpec>   
+          
+          <elementSpec ident="item" module="msdescription" mode="change">
+              <!--  checks that item in collation has @xml:id-->
+              <constraintSpec scheme="isoschematron" ident="item">
+                  <constraint>
+                      <sch:rule context="tei:item[ancestor::collation]">
+                          <sch:report test="not(@xml:id)">items in collation must have an @xml:id</sch:report>
+                      </sch:rule>
+                  </constraint>
+              </constraintSpec>
+          </elementSpec> 
+                
+     
+                
+                
+                <classSpec type="atts" ident="att.dimensions" mode="change">
+                    <attList>
+                        <attDef ident="precision" mode="replace">
+                            <valList type="closed">
+                                <valItem ident="low"/>
+                                <valItem ident="medium"/>
+                                <valItem ident="high"/>
+                            </valList>
+                        </attDef>
+                        
+                    </attList>
+                </classSpec>
+                
+                <classSpec type="atts" ident="att.responsibility" mode="change">
+                    <attList>
+                        <attDef ident="cert" mode="replace">
+                            <valList type="closed">
+                                <valItem ident="low"/>
+                                <valItem ident="high"/>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </classSpec>
+          
+            </schemaSpec>
+</div>
+
