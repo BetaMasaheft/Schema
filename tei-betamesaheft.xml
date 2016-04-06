@@ -28,7 +28,7 @@
                 <moduleRef key="corpus" except="activity channel constitution derivation domain factuality interaction locale
                     preparedness purpose setting textDesc"/>
           
-          
+<!--          LISTS OF VALUES FOR ATTRIBUTES-->
           <!--  adds value partly to binding/@contemporary-->
                <elementSpec ident="binding" mode="change" module="msdescription">
                    <attList>
@@ -40,8 +40,7 @@
                              <valItem ident="unknown"/>
                          </valList>
                      </attDef>  
-                       
-                   </attList>
+                       </attList>
                </elementSpec>
          
 <!--         suggest values for @type in origDate-->
@@ -56,6 +55,7 @@
                       </valList>
                   </attDef>
                       <attDef ident="evidence" mode="replace" usage="opt">
+<!--                          inherited from EpiDoc, could be useful-->
                           <datatype maxOccurs="6">
                               <rng:ref name="data.word"/>
                           </datatype>
@@ -94,7 +94,6 @@
                           <valItem ident="fol"/>
                       </valList>
                   </attDef>  
-                  
               </attList>
           </elementSpec>
           
@@ -116,6 +115,7 @@
               <attList>
                   <attDef ident="key" mode="change" usage="req">
                       <valList type="closed">
+<!--                          list coming from myCore-->
                           <valItem ident="Apocrypha"/>
                           <valItem ident="Pseudoepigrapha"/>
                           <valItem ident="New Testament"/>
@@ -156,6 +156,8 @@
               <attList>
                   <attDef ident="key" mode="change" usage="opt">
                       <valList type="closed">
+                          
+                          <!--                          list coming from myCore-->
                           <valItem ident="Amharic"/>
                           <valItem ident="Arabic"/>
                           <valItem ident="Armenian"/>
@@ -285,6 +287,8 @@
               <attList>
                   <attDef ident="type" mode="replace" usage="opt">
                       <valList type="open">
+                          
+                          <!--                          list coming from myCore-->
                           <valItem ident="history"/>
                           <valItem ident="description"/>
                           <valItem ident="ruling"/>
@@ -389,6 +393,8 @@
                   <attDef ident="xml:id" mode="change" usage="req"/>
                   <attDef ident="script" mode="change" usage="req">
                       <valList type="closed">
+                          
+                          <!--                          list coming from myCore-->
                           <valItem ident="Arabic"/>
                           <valItem ident="Cyrillic"/>
                           <valItem ident="Ethiopic"/>
@@ -447,6 +453,7 @@
                   <attDef ident="type" mode="change" usage="opt">
                       <valList type="open">
                           <valItem ident="normalized"/>
+                          <valItem ident="alt"/>
                       </valList>
                   </attDef>
                   
@@ -458,6 +465,8 @@
               <attList>
                   <attDef ident="key" mode="change" usage="req">
                       <valList type="closed">
+                          
+                          <!--                          list coming from myCore-->
                           <valItem ident="wood"/>
                           <valItem ident="papyrus"/>
                           <valItem ident="cardboard"/>
@@ -496,7 +505,7 @@
               </attList>
           </elementSpec>
           
-          <!-- constraining values of div/@type -->
+          <!-- constraining values of div/@type  inherited from EpiDoc-->
                 <elementSpec ident="div" mode="change" module="textstructure">
                     <attList>
                         <attDef ident="type" mode="replace" usage="req">
@@ -530,7 +539,7 @@
                 </elementSpec>
                 
          
-<!--         tests-->
+<!--         TESTS ONLY -->
                 
           <elementSpec ident="origin" module="msdescription" mode="change">
               <!--             testing for origDate in origin-->

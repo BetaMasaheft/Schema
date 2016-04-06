@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2016-04-06T22:30:04Z. .  
+Schema generated from ODD source 2016-04-06T22:39:59Z. .  
 --><!----><define name="tei_macro.paraContent">
       <zeroOrMore>
          <choice>
