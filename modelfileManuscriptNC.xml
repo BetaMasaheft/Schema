@@ -5,7 +5,7 @@
          <titleStmt>
             <title></title>
             <editor/>
-            <editor role="generalEditor" xml:id="AB"/>
+            <editor role="generalEditor" corresp="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -141,6 +141,7 @@
                                  <depth></depth>
                               </dimensions>
                            </extent>
+                           <foliation></foliation>
                            <collation>
                               <list>
                                  <item xml:id="q1">

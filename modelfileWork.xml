@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT1001Homili">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                
+                <title xml:lang="gez"><!--the title of the work in english-->
+                <date><!--date of work--></date>
+                </title>
+                
+                <title xml:lang="en"><!--the title of the work in english--></title>
+                <author><persName corresp="PRS11111aaaa"/><!--reference to the person file of the author--></author>
+            </titleStmt>
+            <publicationStmt>
+                <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
+                <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
+                    Forschungsumgebung / beta maṣāḥǝft</publisher>
+                <pubPlace>Hamburg</pubPlace>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
+                        licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>A digital born TEI file</p>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="en">English</language>
+                <language ident="ar">Arabic</language>
+                <language ident="it">Italian</language>
+                <language ident="gez">Gəˁəz</language>
+            </langUsage>
+        </profileDesc>
+        <revisionDesc>
+            <change who="yourintials" when="2016-03-31">Created work</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <body>
+        <div type="bibliography">
+            <listBibl type="editions">
+<!--                list bibliographic references to editions of this work-->
+                <bibl></bibl>
+            </listBibl>
+            <listBibl type="text">
+                <!--                list bibliographic references to secondary literatyre about this work-->
+                <bibl></bibl>
+            </listBibl>
+            <listBibl type="otherLanguages">
+                <!--                list manuscripts with this work in other languages-->
+                <bibl></bibl>
+            </listBibl>
+        </div>
+            <div type="edition">
+                <ab></ab>
+            </div>
+        </body>
+    </text>
+</TEI>

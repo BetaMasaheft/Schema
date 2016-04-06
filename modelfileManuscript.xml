@@ -19,9 +19,9 @@ You could also start from the provided TEI models in Oxygen
       <fileDesc>
          <titleStmt>
             <title><!--please enter here the name of this manuscript--></title>
-            <editor xml:id="DN"/>
+            <editor corresp="DN"/>
             <!--change this value according to the abbreviations in the wiki-->
-            <editor role="generalEditor" xml:id="AB"/>
+            <editor role="generalEditor" corresp="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -210,6 +210,7 @@ You could also start from the provided TEI models in Oxygen
                                  <depth><!--value in mm--></depth>
                               </dimensions>
                            </extent>
+                           <foliation><!--description of the numbering system--></foliation>
                            <collation>
                               <list>
                                  <item xml:id="q1">
