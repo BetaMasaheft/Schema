@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model
+href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"
+?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title></title>
             <editor/>
-            <editor role="generalEditor" corresp="AB"/>
+            <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -85,7 +89,7 @@
                         <summary>
                            
                         </summary>
-                        <msItem xml:id="p1.3_i1">
+                        <msItem xml:id="d1">
                            <locus/>
                            <rubric/>
                            <incipit> </incipit>
@@ -130,7 +134,7 @@
                         <supportDesc>
                            <support>
                               <watermark/>
-                              <material corresp="WMat01">Parchment</material>
+                              <material key="Parchment"/>
                               <objectType>Codex</objectType></support>
                            <extent>
                               <measure unit="leaf"></measure>
@@ -151,7 +155,7 @@
                                  </item>
                               </list>
                            </collation>
-                           <condition corresp="St02">deficient</condition>
+                           <condition key="deficient"/>
                         </supportDesc>
                         <layoutDesc>
                            <layout columns="0" writtenLines="0">
@@ -166,7 +170,7 @@
                                  <dim type="right"></dim>
                                  <dim type="left"></dim>
                               </dimensions>
-                              <ab type="ruling" subtype="pattern"></ab>
+                              <ab></ab>
                               <ab type="pricking" subtype="pattern"></ab>
                               <ab type="punctuation" subtype="dividers">
                                  <list>
@@ -180,7 +184,7 @@
                         </layoutDesc>
                      </objectDesc>
                      <handDesc>
-                    <handNote script="Ethiopic" xml:id="h1">
+                    <handNote script="Ethiopic">
                            <ab type="script"></ab>
                            <seg type="ink">Black, red</seg>
                            <persName role="scribe"/>
@@ -226,14 +230,14 @@
                               <desc type="Headband"/>
                               <desc type="Tailband"/>
                            </decoNote>
-                           <decoNote type="Other"></decoNote>
+                           <decoNote type="Other">
+                              <locus></locus></decoNote>
                         </binding>
                      </bindingDesc>
                   </physDesc>
                   <history>
                      <origin>
                         <origPlace><placeName/></origPlace>
-                        <origDate></origDate>
                      </origin>
                   </history>
                   <additional>
@@ -242,7 +246,7 @@
                            <p> </p>
                         </recordHist>
                         <custodialHist>
-                           <custEvent type="restoration"/>
+                           <custEvent type="restoration" subtype="ancient"/>
                         </custodialHist>
                      </adminInfo>
                      <surrogates>
@@ -271,7 +275,7 @@
          </particDesc>
          <textClass>
             <keywords>
-               <term/>
+               <term key="Bible"/>
             </keywords>
          </textClass>
          <langUsage>

@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model
+href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"
+?>
 <!--   please, if you use this template, remove template comments like this one before submitting the file for review
 The modelfileManuscriptNC.xml is already free of all this and might be preferred for data entry.
 You could also start from the provided TEI models in Oxygen
@@ -19,9 +23,9 @@ You could also start from the provided TEI models in Oxygen
       <fileDesc>
          <titleStmt>
             <title><!--please enter here the name of this manuscript--></title>
-            <editor corresp="DN"/>
+            <editor key="DN"/>
             <!--change this value according to the abbreviations in the wiki-->
-            <editor role="generalEditor" corresp="AB"/>
+            <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -195,7 +199,7 @@ You could also start from the provided TEI models in Oxygen
                            <support>
                               <watermark/>
                               <!-- omit if not present-->
-                              <material corresp="WMat01">Parchment</material>
+                              <material key="Parchment"/>
                               <!--enter the id of the value from the Writing Material taxonomy https://github.com/SChAth/Authority-Files/blob/master/WritingMaterial.xml
                           -->
                               <objectType>Codex</objectType>
@@ -233,7 +237,7 @@ You could also start from the provided TEI models in Oxygen
                                  <!--                              any more items can be added-->
                               </list>
                            </collation>
-                           <condition corresp="St02">deficient</condition>
+                           <condition key="deficient"/>
                            <!--                        value of `@corresp` is the corresponding id from the state of preservation taxonomy 
                            https://github.com/SChAth/Authority-Files/blob/master/StatePreservation.xml
                         -->
@@ -344,9 +348,9 @@ You could also start from the provided TEI models in Oxygen
                            <decoNote><!--description of the binding--></decoNote>
                            <decoNote><!--another information on binding--></decoNote>
                            <decoNote type="bindingMaterial">
-                              <material corresp="BMat05">
+                              <material key="wood"/>
                                  <!--material from controlled list https://github.com/SChAth/Authority-Files/blob/master/BindingMaterial.xml-->
-                              </material>
+                              
                            </decoNote>
                            <decoNote type="Endbands">
                               <desc type="Headband"/>
@@ -379,7 +383,7 @@ You could also start from the provided TEI models in Oxygen
                            <p> </p>
                         </recordHist>
                         <custodialHist>
-                           <custEvent type="restoration" corresp="Res03"/>
+                           <custEvent type="restoration" subtype="modern"/>
 
                            <!--restoration from controlled list https://github.com/SChAth/Authority-Files/blob/master/Restoration.xml-->
                         </custodialHist>
@@ -425,7 +429,7 @@ Univocal tags for project use should be namespaced, not to clash with further ta
                <!--               You can either point to the [Subject Taxonomy](https://github.com/SChAth/Authority-Files/blob/master/subject.xml) 
                   for these or enter a term with the desired keyword.
 -->
-               <term corresp="Sub05"/>
+               <term key="Apocrypha"/>
                <term>Letter</term>
                <term>John</term>
             </keywords>
@@ -433,7 +437,7 @@ Univocal tags for project use should be namespaced, not to clash with further ta
          <langUsage>
             <language ident="en">English</language>
             <language ident="it">Italian</language>
-            <language ident="gez" corresp="Lan05">Gəˁəz</language>
+            <language ident="gez">Gəˁəz</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>

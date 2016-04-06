@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<?xml-model
+href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"
+?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="INS00000030Addaqaharsi">
    <!--   CHANGE THE ID TO CORRESPOND TO THE FILENAME and the identifier for this Institution-->
    <teiHeader>
@@ -6,7 +10,7 @@
          <titleStmt>
             <title><!--type here the primary name of the Institution--></title>
             <editor corresp="DN"/>  <!--change this value according to the abbreviations in the wiki-->
-            <editor role="generalEditor" corresp="AB"/>
+            <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>

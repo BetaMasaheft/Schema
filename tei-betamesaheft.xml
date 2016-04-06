@@ -100,12 +100,52 @@
           
           <elementSpec ident="condition" mode="change" module="msdescription">
               <attList>
-                  <attDef ident="corresp" mode="change" usage="req">
+                  <attDef ident="key" mode="change" usage="req">
                       <valList type="closed">
                           <valItem ident="deficient"/>
                           <valItem ident="good"/>
                           <valItem ident="intact"/>
                           <valItem ident="other"/>
+                      </valList>
+                  </attDef>  
+                  
+              </attList>
+          </elementSpec>
+          
+          <elementSpec ident="term" mode="change" module="msdescription">
+              <attList>
+                  <attDef ident="key" mode="change" usage="req">
+                      <valList type="closed">
+                          <valItem ident="Apocrypha"/>
+                          <valItem ident="Pseudoepigrapha"/>
+                          <valItem ident="New Testament"/>
+                          <valItem ident="Old Testament"/>
+                          <valItem ident="Bible"/>
+                          <valItem ident="Biography"/>
+                          <valItem ident="Canon law"/>
+                          <valItem ident="Christian literature"/>
+                          <valItem ident="Hagiography"/>
+                          <valItem ident="History and Historiography"/>
+                          <valItem ident="Homily"/>
+                          <valItem ident="Islamic literature"/>
+                          <valItem ident="Koran"/>
+                          <valItem ident="Legal document"/>
+                          <valItem ident="Liturgy"/>
+                          <valItem ident="Chants"/>
+                          <valItem ident="Lectionary"/>
+                          <valItem ident="Missal"/>
+                          <valItem ident="Rituals and Rites"/>
+                          <valItem ident="Missal"/>
+                          <valItem ident="Magic"/>
+                          <valItem ident="Medicine"/>
+                          <valItem ident="Miscellanea"/>
+                          <valItem ident="Monastic literature"/>
+                          <valItem ident="Natural sciences"/>
+                          <valItem ident="other"/>
+                          <valItem ident="Poetry"/>
+                          <valItem ident="Prayers"/>
+                          <valItem ident="Religion"/>
+                          <valItem ident="Theology"/>
                       </valList>
                   </attDef>  
                   
@@ -194,6 +234,18 @@
               </attList>
           </elementSpec>
           
+          <elementSpec ident="desc" mode="change" module="msdescription">
+              <attList>
+                  <attDef ident="type" mode="replace" usage="opt">
+                      <valList type="open">
+                          <valItem ident="foundation"/>
+                          <valItem ident="Headband"/>
+                          <valItem ident="Tailband"/>
+                      </valList>
+                  </attDef>
+              </attList>
+          </elementSpec>
+          
 <!--          suggests values for dim/@unit and dim/@type-->
           <elementSpec ident="dim" mode="change" module="msdescription">
               <attList>
@@ -225,11 +277,16 @@
                       <sch:rule context="tei:ab[ancestor::tei:layout]">
                           <sch:report test="not(@type or @subtype)">ab in layout should always have a type and optionally a subtype</sch:report>
                       </sch:rule>
+                      <sch:rule context="tei:ab[ancestor::tei:note]">
+                          <sch:report test="not(@type='history') or not(@type='description') ">ab in note is used in listPlace for institutions and should always have a @type='history' or 'description'</sch:report>
+                      </sch:rule>
                   </constraint>
               </constraintSpec>
               <attList>
                   <attDef ident="type" mode="replace" usage="opt">
                       <valList type="open">
+                          <valItem ident="history"/>
+                          <valItem ident="description"/>
                           <valItem ident="ruling"/>
                           <valItem ident="pricking"/>
                           <valItem ident="punctuation"/>
@@ -321,6 +378,13 @@
           </elementSpec>
           
           <elementSpec ident="handNote" mode="change" module="msdescription">
+              <constraintSpec scheme="isoschematron" ident="handNote">
+                  <constraint>
+                      <sch:rule context="tei:persName[ancestor::tei:handNote]">
+                          <sch:report test="not(@role='scribe')">persName in handNote must have a @role='scribe'</sch:report>
+                      </sch:rule>
+                  </constraint>
+              </constraintSpec>
               <attList>
                   <attDef ident="xml:id" mode="change" usage="req"/>
                   <attDef ident="script" mode="change" usage="req">
@@ -339,7 +403,7 @@
           
           <elementSpec ident="editor" mode="change" module="core">
               <attList>
-                  <attDef ident="corresp" mode="change" usage="req">
+                  <attDef ident="key" mode="change" usage="req">
                       <valList type="open">
                           <valItem ident="AB"/>
                           <valItem ident="ES"/>
@@ -392,7 +456,7 @@
           
           <elementSpec ident="material" mode="change" module="msdescription">
               <attList>
-                  <attDef ident="corresp" mode="change" usage="req">
+                  <attDef ident="key" mode="change" usage="req">
                       <valList type="closed">
                           <valItem ident="wood"/>
                           <valItem ident="papyrus"/>
@@ -408,7 +472,31 @@
                   
               </attList>
           </elementSpec>
-<!-- constraining values of div/@type -->
+
+          <elementSpec ident="relation" mode="change" module="namesdates">
+              <attList>
+                  <attDef ident="name" mode="change" usage="req">
+                      <valList type="closed">
+                          <valItem ident="daughterOf"/>
+                          <valItem ident="sonOf"/>
+                          <valItem ident="fatherOf"/>
+                          <valItem ident="motherOf"/>
+                          <valItem ident="grandfatherOf"/>
+                          <valItem ident="grandmotherOf"/>
+                          <valItem ident="brotherOf"/>
+                          <valItem ident="sisterOf"/>
+                          <valItem ident="wifeOf"/>
+                          <valItem ident="husbandOf"/>
+                          <valItem ident="contains"/>
+                          <valItem ident="nearBy"/>
+                          <valItem ident="partOf"/>
+                      </valList>
+                  </attDef>
+                  
+              </attList>
+          </elementSpec>
+          
+          <!-- constraining values of div/@type -->
                 <elementSpec ident="div" mode="change" module="textstructure">
                     <attList>
                         <attDef ident="type" mode="replace" usage="req">
@@ -454,6 +542,24 @@
                   </constraint>
               </constraintSpec>
           </elementSpec>
+          
+          <elementSpec ident="date" module="core" mode="change">
+              <!--             testing for origDate in origin-->
+              <constraintSpec scheme="isoschematron" ident="date">
+                  <constraint>
+                      <sch:rule context="tei:date[ancestor::place[@subtype='institution']]">
+                          <sch:report test="not(@type='foundation')">Attribute @type='foundation' is require for date into a note about an institution.</sch:report>
+                      </sch:rule>
+                  </constraint>
+              </constraintSpec>
+              <attList>
+                  <attDef ident="type" usage="opt" mode="change">
+                      <valList type="open">
+                          <valItem ident="foundation"/>
+                      </valList>
+                  </attDef>
+              </attList>
+          </elementSpec>
                 
           <elementSpec ident="locus" module="msdescription" mode="change">
               <!--  checks that locus has @target or @from-->
@@ -475,6 +581,14 @@
                       </sch:rule>
                   </constraint>
               </constraintSpec>
+              <attList>
+                  <attDef ident="rend" mode="change" usage="opt">
+                      <valList type="open">
+                          <valItem ident="marginal"/>
+                          <valItem ident="guardLeaf"/>
+                      </valList>
+                  </attDef>
+              </attList>
           </elementSpec> 
                 
      
