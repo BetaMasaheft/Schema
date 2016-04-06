@@ -314,6 +314,11 @@
               </attList>
           </elementSpec>
           
+          <elementSpec ident="TEI" mode="change" module="textstructure">
+              <attList>
+                  <attDef ident="xml:id" mode="change" usage="req"/>
+              </attList>
+          </elementSpec>
           
           <elementSpec ident="handNote" mode="change" module="msdescription">
               <attList>

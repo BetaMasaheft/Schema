@@ -8,7 +8,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-04-06T21:37:37Z. .  
+# Schema generated from ODD source 2016-04-06T21:40:05Z. .  
 
 #
 tei_macro.paraContent =
@@ -4477,8 +4477,30 @@ tei_TEI =
          prefix = "rng"
          uri = "http://relaxng.org/ns/structure/1.0"
        ],
-    tei_att.global.attributes,
+    tei_att.global.attribute.n,
+    tei_att.global.attribute.xmllang,
+    tei_att.global.attribute.xmlbase,
+    tei_att.global.attribute.xmlspace,
+    tei_att.global.rendition.attribute.rend,
+    tei_att.global.rendition.attribute.style,
+    tei_att.global.rendition.attribute.rendition,
+    tei_att.global.linking.attribute.corresp,
+    tei_att.global.linking.attribute.synch,
+    tei_att.global.linking.attribute.sameAs,
+    tei_att.global.linking.attribute.copyOf,
+    tei_att.global.linking.attribute.next,
+    tei_att.global.linking.attribute.prev,
+    tei_att.global.linking.attribute.exclude,
+    tei_att.global.linking.attribute.select,
+    tei_att.global.analytic.attribute.ana,
+    tei_att.global.facs.attribute.facs,
+    tei_att.global.change.attribute.change,
+    tei_att.global.responsibility.attribute.cert,
+    tei_att.global.responsibility.attribute.resp,
     tei_att.typed.attributes,
+    
+    ## (identifier) provides a unique identifier for the element bearing the attribute.
+    attribute xml:id { xsd:ID },
     
     ## specifies the major version number of the TEI Guidelines against which this document is valid.
     attribute version {
