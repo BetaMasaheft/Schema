@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_ms.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_ms.rng" type="application/xml"
-	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?oxygen RNGSchema="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" type="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model
+href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"
+?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LOC1006Abagas">
    <!--   CHANGE THE ID TO CORRESPOND TO THE FILENAME and the identifier for this Place-->
    <teiHeader>

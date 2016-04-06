@@ -114,7 +114,7 @@
           
           <elementSpec ident="language" mode="change" module="header">
               <attList>
-                  <attDef ident="corresp" mode="change" usage="req">
+                  <attDef ident="key" mode="change" usage="opt">
                       <valList type="closed">
                           <valItem ident="Amharic"/>
                           <valItem ident="Arabic"/>
