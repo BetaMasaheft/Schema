@@ -8,7 +8,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-04-07T17:15:50Z. .  
+# Schema generated from ODD source 2016-04-07T17:18:40Z. .  
 
 #
 tei_macro.paraContent =
@@ -7480,60 +7480,11 @@ tei_persName =
       list { xsd:anyURI+ }
     },
     
-    ##
+    ## may be used to specify further information about the entity referenced by this name in the form of a set of whitespace-separated values, for example the occupation of a person, or the status of a place.
     attribute role {
-      
-      ##
-      "scribe"
-      | 
-        ##
-        "donor"
-      | 
-        ##
-        "author"
-      | 
-        ##
-        "translator"
-      | 
-        ##
-        "binder"
-      | 
-        ##
-        "parchmentMaker"
-      | 
-        ##
-        "owner"
-      | 
-        ##
-        "patron"
-    }?,
-    
-    ##
-    attribute role {
-      
-      ##
-      "scribe"
-      | 
-        ##
-        "donor"
-      | 
-        ##
-        "author"
-      | 
-        ##
-        "translator"
-      | 
-        ##
-        "binder"
-      | 
-        ##
-        "parchmentMaker"
-      | 
-        ##
-        "owner"
-      | 
-        ##
-        "patron"
+      list {
+        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      }
     }?,
     empty
   }

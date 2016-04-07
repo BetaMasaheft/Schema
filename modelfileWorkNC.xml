@@ -17,7 +17,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
-                <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
+                <publisher>Die Schriftkultur<ref target="http://www.example.de"></ref> des christlichen Äthiopiens: Eine multimediale
                     Forschungsumgebung / beta maṣāḥǝft</publisher>
                 <pubPlace>Hamburg</pubPlace>
                 <availability>
@@ -27,6 +27,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             </publicationStmt>
             <sourceDesc>
                 <p>A digital born TEI file</p>
+                <listWit></listWit>
             </sourceDesc>
         </fileDesc>
         <profileDesc>

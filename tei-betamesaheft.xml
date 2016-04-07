@@ -488,7 +488,7 @@
           <elementSpec ident="persName" mode="change" module="msdescription">
               <attList>
                   <attDef ident="corresp" mode="change" usage="req"/>
-                  <attDef ident="role">
+                  <attDef ident="role" mode="change" usage="opt">
                       <valList type="closed">
                           <valItem ident="scribe"/>
                           <valItem ident="donor"/>
