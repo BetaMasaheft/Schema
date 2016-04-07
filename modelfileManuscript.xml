@@ -184,7 +184,6 @@ You could also start from the provided TEI models in Oxygen
                            <bibl corresp="EMML430"><ptr target="EMML430.xml#p.1.5_i6"/><citedRange
                                  unit="fol" from="104r" to="112v"/></bibl>
                            <bibl corresp="EMML615"/>
-                           <bibl type="external" corresp="EMML564"><ptr target="http://emml.org/564"></ptr></bibl>
                         </listBibl>
 
                         <note/>
@@ -279,7 +278,7 @@ You could also start from the provided TEI models in Oxygen
                                        ><!--type of puntuation--></item>
                                     <item xml:id="div2" corresp="#p.2">
                                        <!--  type of punctuation below, occurrences of this item-->
-                                       <locus target="#30v" n="3"/>
+                                       <locus target="#30v" n="3" facs="f62"/>
                                        <locus target="#30v" n="11"/>
                                        <locus target="#31r" n="14"/>
                                        <locus target="#31v" n="10"/>

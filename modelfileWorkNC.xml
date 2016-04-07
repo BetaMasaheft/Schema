@@ -28,8 +28,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <sourceDesc>
                 <listWit>
                     <witness cert="low" corresp="EMML1234"/>
-                    <witness type="external" facs="http://archivesetmanuscrits.bnf.fr/ead.html?id=FRBNFEAD000091073" corresp="BNFEAD000091073"/>
-                    <witness type="external" corresp="EMML"/>
+                    <witness corresp="BNFEAD000091073"/>
+                    <witness corresp="EMML"/>
                     <listWit>
                         <witness corresp="ES123"/>
                         <witness corresp="BL8910">

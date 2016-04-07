@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model
+href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+schematypens="http://relaxng.org/ns/structure/1.0"
+?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en"><!--ADD XML:ID-->
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title ref="http://example/EMML"><!--TITLE--></title><!-- make sure to add a proper stable url of where this resource is-->
+            <!--<editor/>-->
+            <editor role="generalEditor" key="AB"/>
+            <funder>Akademie der Wissenschaften in Hamburg</funder>
+         </titleStmt>
+         <publicationStmt>
+            <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
+            <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
+               Forschungsumgebung / beta maṣāḥǝft</publisher>
+            <pubPlace>Hamburg</pubPlace>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
+                  licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+            </availability>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc xml:id="ms">
+                  <msIdentifier>
+                      <idno/><!-- mss identifier and link to online resource-->
+                  </msIdentifier>
+                  <history>
+                     <origin>
+                        <origPlace><!--<placeName/>--></origPlace>
+                         <origDate/><!--date of the manuscript-->
+                     </origin>
+                  </history>
+                  <additional>
+                     <adminInfo>
+                        <recordHist>
+                           <source>
+                              <listBibl type="catalogue">
+                                 <bibl><!--reference to the catalogue--></bibl>
+                              </listBibl>
+                           </source>
+                        </recordHist>
+                        </adminInfo>
+                     <listBibl type="secondary">
+                        <bibl></bibl>
+                     </listBibl>
+                  </additional>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <p>Encoded according to TEI P5 Guidelines.</p>
+         </projectDesc>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en">English</language>
+            <language ident="it">Italian</language>
+            <language ident="gez" corresp="Lan05">Gəˁəz</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change who="yourintials" when="2016-03-31">Created catalogue entry</change>
+      </revisionDesc>
+   </teiHeader>
+   <sourceDoc>
+      <surface>
+         <line/>
+      </surface>
+   </sourceDoc>
+   <text>
+      <body>
+         <ab/>
+      </body>
+   </text>
+</TEI>
