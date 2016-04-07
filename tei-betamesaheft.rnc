@@ -8,7 +8,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-04-07T17:18:40Z. .  
+# Schema generated from ODD source 2016-04-07T19:35:02Z. .  
 
 #
 tei_macro.paraContent =
@@ -3296,7 +3296,7 @@ tei_bibl =
            "               "
            sch:report [
              test = "not(@corresp)"
-             'bibl in a mss list of references must always contain a @corresp pointing to a project xml:id of a mnuascript or to an external resource (in which case you need to add a @type="external")'
+             'bibl in a mss list of references must always contain a @corresp pointing to a project xml:id of a manuscript or to an external resource (in which case you need to add a @type="external")'
            ]
            "\x{a}" ~
            "            "
@@ -6883,7 +6883,25 @@ tei_condition =
   
   ## contains a description of the physical condition of the manuscript. [10.7.1.5. Condition]
   element condition {
-    tei_macro.specialPara, tei_att.global.attributes, empty
+    tei_macro.specialPara,
+    tei_att.global.attributes,
+    
+    ##
+    attribute key {
+      
+      ##
+      "deficient"
+      | 
+        ##
+        "good"
+      | 
+        ##
+        "intact"
+      | 
+        ##
+        "other"
+    },
+    empty
   }
 tei_layoutDesc =
   
@@ -8308,9 +8326,53 @@ tei_witness =
   
   ## contains either a description of a single witness referred to within the critical apparatus, or a list of witnesses which is to be referred to by a single sigil. [12.1. The Apparatus Entry, Readings, and Witnesses]
   element witness {
-    tei_macro.limitedContent,
+    tei_macro.limitedContent
+    >> sch:pattern [
+         id = "tei-betamesaheft-witness-witness-constraint-21"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:witness"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(@corresp)"
+             'witness must always contain a @corresp pointing to a project xml:id of a manuscript or to an external resource (in which case you need to add a @type="external")'
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ]
+    >> sch:pattern [
+         id = "tei-betamesaheft-witness-witness-constraint-22"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context =
+             "tei:witness[ancestor::tei:listBibl[@type='mss']][@type='external']"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(tei:ptr[@target])"
+             'bibl in a mss list of references with a @type="external" must contain a pointer with @target cointaing a full uri to the resource'
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
     tei_att.global.attributes,
     tei_att.sortable.attributes,
+    
+    ##
+    attribute type {
+      
+      ##
+      "external"
+    }?,
     empty
   }
 tei_variantEncoding =
@@ -8344,7 +8406,7 @@ tei_variantEncoding =
     }
     >> sch:pattern [
          id =
-           "tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-21"
+           "tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-23"
          "\x{a}" ~
          "            "
          sch:rule [

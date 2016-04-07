@@ -89,7 +89,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <summary>
                            
                         </summary>
-                        <msItem xml:id="d1">
+                        <msItem xml:id="i1">
                            <locus/>
                            <rubric/>
                            <incipit> </incipit>
@@ -184,17 +184,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </layoutDesc>
                      </objectDesc>
                      <handDesc>
-                    <handNote script="Ethiopic">
+                    <handNote xml:id="h1" script="Ethiopic">
                            <ab type="script"></ab>
                            <seg type="ink">Black, red</seg>
-                           <persName role="scribe"/>
+                           <persName corresp="PRS00000" role="scribe"/>
                            <date></date>
                            <desc></desc>
                            <ab type="rubrication"></ab>
                         </handNote>
                      </handDesc>
                      <decoDesc>
-                    <decoNote type="miniature" xml:id="d1">
+                    <decoNote type="miniature" xml:id="d0">
                            <locus/>
                            <desc></desc>
                         </decoNote>
@@ -221,29 +221,33 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      </additions>
                      <bindingDesc>
                         <binding contemporary="false" xml:id="binding">
-                           <decoNote></decoNote>
-                           <decoNote type="bindingMaterial">
-                              <material corresp="BMat05">
+                           <decoNote xml:id="b0"></decoNote>
+                           <decoNote xml:id="b1" type="bindingMaterial">
+                              <material key="Wood">
                                  </material>
                            </decoNote>
-                           <decoNote type="Endbands">
+                           <decoNote xml:id="b2" type="Endbands">
                               <desc type="Headband"/>
                               <desc type="Tailband"/>
                            </decoNote>
-                           <decoNote type="Other">
+                           <decoNote xml:id="b3" type="Other">
                               <locus></locus></decoNote>
                         </binding>
                      </bindingDesc>
                   </physDesc>
                   <history>
                      <origin>
-                        <origPlace><placeName/></origPlace>
+                        <origPlace><placeName corresp="PRS2222222"/></origPlace>
                      </origin>
                   </history>
                   <additional>
                      <adminInfo>
                         <recordHist>
-                           <p> </p>
+                           <source>
+                              <listBibl type="catalogue">
+                                 <bibl></bibl>
+                              </listBibl>
+                           </source>
                         </recordHist>
                         <custodialHist>
                            <custEvent type="restoration" subtype="ancient"/>
@@ -252,7 +256,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <surrogates>
                         <bibl/>
                      </surrogates>
-                     <listBibl>
+                     <listBibl type="secondary">
                         <bibl></bibl>
                      </listBibl>
                   </additional>

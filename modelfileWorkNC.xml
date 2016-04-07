@@ -13,7 +13,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 <title xml:lang="en"></title>
                 <title xml:lang="gez" type="alt"></title>
                 <title type="normalized" xml:lang="gez"></title>
-                <author><persName/></author>
+                <author><persName role="translator" corresp="#PRS1001Homili"/></author>
             </titleStmt>
             <publicationStmt>
                 <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
@@ -26,10 +26,23 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 </availability>
             </publicationStmt>
             <sourceDesc>
-                <p>A digital born TEI file</p>
-                <listWit></listWit>
+                <listWit>
+                    <witness cert="low" corresp="EMML1234"/>
+                    <witness type="external" facs="http://archivesetmanuscrits.bnf.fr/ead.html?id=FRBNFEAD000091073" corresp="BNFEAD000091073"/>
+                    <witness type="external" corresp="EMML"/>
+                    <listWit>
+                        <witness corresp="ES123"/>
+                        <witness corresp="BL8910">
+                            this manuscript was donated by<persName corresp="PRS123124trhas"/>, at <placeName corresp="LOC21321asa"/> and is a copy of <ref corresp="EMML2" type="mss"/>
+                        </witness>
+                    </listWit>
+                </listWit>
             </sourceDesc>
+            
         </fileDesc>
+        <encodingDesc>
+                <p>A digital born TEI file</p>
+            </encodingDesc>
         <profileDesc>
             <langUsage>
                 <language ident="en">English</language>

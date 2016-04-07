@@ -43,11 +43,11 @@ You could also start from the provided TEI models in Oxygen
          </publicationStmt>
          <sourceDesc>
             <msDesc xml:id="ms">
-
+               
                <msIdentifier>
                   <repository corresp="INS00000030Addaqaharsi"/>
                   <collection></collection>
-                  <idno><!-- enter here the shelf mark of the manuscript only MR-023--></idno>
+                  <idno ><!-- enter here the shelf mark of the manuscript only MR-023--></idno>
                   <!--
                      
                      If there are other possible identifiers, add them with the following elements Inside msIdentifier
@@ -57,14 +57,18 @@ You could also start from the provided TEI models in Oxygen
                      <idno>XX0000</idno>
                   </altIdentifier>
                   -->
+                 
                </msIdentifier>
-               <!--                  you can enter and nest as many msPart as you wish, if you need to. a manuscript without parts can do with msDesc 
+               <!--                  you can enter and nest as many msPart as you wish, if you need to. 
+                  a manuscript without parts can do with msDesc 
                      
                      The structure here does not represent any manuscript, but uses various contents as examples.
                    
                   Contents should be listed under each msPart/msContents section distinctly-->
 
-               <!--            in this template you find msPart 1 where nesting of parts is exemplified, msPart 2 has no nesting and you can find there examples of the physical description and other parts-->
+               <!--            in this template you find msPart 1 where nesting of parts is exemplified, msPart 2 has no 
+                  nesting and you can find there examples of the physical description and other parts-->
+               
                <msPart xml:id="p1">
                   <!--                  how example has two main parts, and the first is composed of two subparts
                   
@@ -85,7 +89,8 @@ You could also start from the provided TEI models in Oxygen
                      <msItem xml:id="p1_i1">
                         <locus from="1ra" to="2vb"/>
                         <title type="Complete" corresp="#LIT00384Gadla"/>
-                        <!--                        here you can enter the reference to a work or the title of a section of it. you can also reference a a part of a work with its id. -->
+                        <!--                        here you can enter the reference to a work or the title of a section of it. 
+                           you can also reference a a part of a work with its id. -->
                         <rubric> </rubric>
                         <incipit><!--text of incipit in the language of textLang if not otherwise specified-->
                            <foreign xml:lang="en"><!--translation of incipit--></foreign>
@@ -169,8 +174,10 @@ You could also start from the provided TEI models in Oxygen
                         <incipit> </incipit>
                         <explicit> </explicit>
 
-                        <!--                     This bibliography element can go in any msItem, or in all of them. it should contain references to manuscripts in the catalogue using their id
-                     ids correspond to filenames. if pointing to a specific part of a manuscript with an id, use a ptr target. for pointing to a specific page or range of page there
+                        <!--                     This bibliography element can go in any msItem, or in all of them. 
+                           it should contain references to manuscripts in the catalogue using their id
+                     ids correspond to filenames. if pointing to a specific part of a manuscript with an id, use a ptr target. 
+                     for pointing to a specific page or range of page there
                      use citedRange as in any bibliography entry
                      -->
                         <listBibl type="mss">
@@ -187,7 +194,8 @@ You could also start from the provided TEI models in Oxygen
                            <locus from="49rb" n="28"
                            /><!-- original text, e.g. በአስተሐምሞ፡ በትእዛዘ። እግዚአብሔር፡ ገበርክዎ፡ ለዝንቱ፡ ነገር ።--></colophon>
                         <note>
-                           <!--                        in a note anything can be added. you can use ref elements to point to other parts of the document below is an example-->
+                           <!--                        in a note anything can be added. 
+                              you can use ref elements to point to other parts of the document below is an example-->
                            Written in hand <ref target="#Hc"/>, cp. also Additiones <ref
                               target="#a1"/>, <ref target="#a4"/>, <ref target="#a8"/>, <ref
                               target="#a10"/>, <ref target="#a12"/>. The note is written over erased
@@ -201,7 +209,8 @@ You could also start from the provided TEI models in Oxygen
                               <watermark/>
                               <!-- omit if not present-->
                               <material key="Parchment"/>
-                              <!--enter the id of the value from the Writing Material taxonomy https://github.com/SChAth/Authority-Files/blob/master/WritingMaterial.xml
+                              <!--enter the id of the value from the Writing Material taxonomy 
+                                 https://github.com/SChAth/Authority-Files/blob/master/WritingMaterial.xml
                           -->
                               <objectType>Codex</objectType>
                               <!--    you can change this to Scroll or Leporello-->
@@ -239,13 +248,14 @@ You could also start from the provided TEI models in Oxygen
                               </list>
                            </collation>
                            <condition key="deficient"/>
-                           <!--                        value of `@corresp` is the corresponding id from the state of preservation taxonomy 
+                           <!--value of `@corresp` is the corresponding id from the state of preservation taxonomy 
                            https://github.com/SChAth/Authority-Files/blob/master/StatePreservation.xml
                         -->
                         </supportDesc>
                         <layoutDesc>
                            <layout corresp="#p.1.1_i1" columns="1" writtenLines="18">
-                              <!--                           if the layout refers to a specific part or item, point to it with a @corresp, oXygen will suggest values-->
+                              <!--  if the layout refers to a specific part or item, 
+                                 point to it with a @corresp, oXygen will suggest values-->
                               <dimensions unit="mm" rend="pricked ruled">
                                  <height><!--value in mm--></height>
                                  <width><!--value in mm--></width>
@@ -262,12 +272,13 @@ You could also start from the provided TEI models in Oxygen
                               <ab type="pricking" subtype="pattern"
                                  ><!--any information on pricking--></ab>
                               <ab type="punctuation" subtype="dividers">
-                                 <!--                             this list can be used for punctuation, with locus element to point to the exact place in the manuscript.  -->
+                                 <!--  this list can be used for punctuation, 
+                                    with locus element to point to the exact place in the manuscript.  -->
                                  <list>
                                     <item xml:id="div1" corresp="#p.1"
                                        ><!--type of puntuation--></item>
                                     <item xml:id="div2" corresp="#p.2">
-                                       <!--                                 type of punctuation below, occurrences of this item-->
+                                       <!--  type of punctuation below, occurrences of this item-->
                                        <locus target="#30v" n="3"/>
                                        <locus target="#30v" n="11"/>
                                        <locus target="#31r" n="14"/>
@@ -279,7 +290,8 @@ You could also start from the provided TEI models in Oxygen
                         </layoutDesc>
                      </objectDesc>
                      <handDesc>
-                        <!--                     hands are identified with h and a number if parts are definied, you can point to those with @corresp or you can add locus
+                        <!--  hands are identified with h and a number if parts are definied, 
+                           you can point to those with @corresp or you can add locus
                      value of @script should come from here
                      https://github.com/SChAth/Authority-Files/blob/master/WritingSystem.xml
                      -->
@@ -287,7 +299,8 @@ You could also start from the provided TEI models in Oxygen
                            <ab type="script"><!--annotated description of script--></ab>
                            <seg type="ink">Black, red</seg>
                            <persName role="scribe" corresp="PRS1691Alib"/>
-                           <date><!--the date of the script in writing. eventually @notBefore and @notAfter can also be used--></date>
+                           <date><!--the date of the script in writing. eventually 
+                              @notBefore and @notAfter can also be used--></date>
                            <desc><!--description of the end--></desc>
                            <ab type="rubrication"><!--use of rubrication--></ab>
                         </handNote>
@@ -315,7 +328,8 @@ You could also start from the provided TEI models in Oxygen
                            <item rend="marginal"> </item>
                            <item rend="guardLeaf"> </item>
                            <item xml:id="a1">
-                              <!--                           each item has its own id, a description, a locus and might contain the text of the addition in as many languagues as needed-->
+                              <!-- each item has its own id, a description, a locus and 
+                                 might contain the text of the addition in as many languagues as needed-->
                               <desc><!--description of addition--></desc>
                               <locus target="#40vb" n="30"/>
                               <q xml:lang="gez"><!--አጥረይክዋ፡ አነ፡ ገበረ፡ መድኅን፡ በመን{ፈ}ሰ፡ ጥበብ፡--></q>
@@ -330,7 +344,8 @@ You could also start from the provided TEI models in Oxygen
                               <p/>
                            </item>
                            <item xml:id="e1">
-                              <!--                           description as the following can also occur. This is a different kind of addition and has therefore a xml:id with e-->
+                              <!-- description as the following can also occur. 
+                                 This is a different kind of addition and has therefore a xml:id with e-->
                               <desc>Crude recent notes in pen and in pencil throughout the
                                  manuscript, above and below the text (e.g. <locus
                                     target="#1rv #2r #4r"/> Crude drawings in pencil, mixed with
@@ -339,25 +354,25 @@ You could also start from the provided TEI models in Oxygen
                      </additions>
                      <bindingDesc>
                         <binding contemporary="false" xml:id="binding">
-                           <!--                        @contemporary can take the following values
+                           <!--  @contemporary can take the following values
 * false
 * inapplicable
 * unknown
 * true
 * partly
                         -->
-                           <decoNote><!--description of the binding--></decoNote>
-                           <decoNote><!--another information on binding--></decoNote>
-                           <decoNote type="bindingMaterial">
+                           <decoNote  xml:id="b0"><!--description of the binding--></decoNote>
+                           <decoNote xml:id="b1"><!--another information on binding--></decoNote>
+                           <decoNote  xml:id="b2" type="bindingMaterial">
                               <material key="wood"/>
                                  <!--material from controlled list https://github.com/SChAth/Authority-Files/blob/master/BindingMaterial.xml-->
                               
                            </decoNote>
-                           <decoNote type="Endbands">
+                           <decoNote  xml:id="b3" type="Endbands">
                               <desc type="Headband"/>
                               <desc type="Tailband"/>
                            </decoNote>
-                           <decoNote type="Other"
+                           <decoNote  xml:id="b4" type="Other"
                               ><!--any other note which must be distinct--></decoNote>
                         </binding>
                      </bindingDesc>
@@ -367,7 +382,8 @@ You could also start from the provided TEI models in Oxygen
                         <origPlace><placeName corresp="LOC4705MayRub"/>
                            <!--pointer to the place record--></origPlace>
                         <origDate notBefore="1872" notAfter="1876">
-                           <!--                        a descriptive paragraph about the date of production of the manuscript, which can be annotated with references and correspondences
+                           <!--                        a descriptive paragraph about the date of production of the manuscript, 
+                              which can be annotated with references and correspondences
                         the text below is an example-->
                            Mention of <persName corresp="PRS10378Yohanne">King Yoḥannәs
                               IV</persName> (<date>1872-89</date>) on <locus target="#43r" n="8"
@@ -381,7 +397,12 @@ You could also start from the provided TEI models in Oxygen
                   <additional>
                      <adminInfo>
                         <recordHist>
-                           <p> </p>
+                           <source>
+                              <listBibl type="catalogue">
+                                 <bibl><!--HERE THE CATALOGUE RECORDS WHERE THE data was recorded--></bibl>
+                                 <bibl><ptr target="EMML"/><citedRange unit="volume">V</citedRange><citedRange unit="page">354-356</citedRange></bibl>
+                              </listBibl>
+                           </source>
                         </recordHist>
                         <custodialHist>
                            <custEvent type="restoration" subtype="modern"/>
@@ -394,16 +415,12 @@ You could also start from the provided TEI models in Oxygen
                         <bibl corresp="EMML1234"/>
                         <bibl corresp="ES4567"/>
                      </surrogates>
-                     <listBibl>
-                        <bibl><ptr target="Villa"/><citedRange unit="page">5-13</citedRange></bibl>
+                     <listBibl type="secondary">
+                        <bibl><ptr target="R6732452"/><citedRange unit="page">5-13</citedRange></bibl>
                         <bibl><!--any bibliographic reference as in the example above. citedRange can take different unites and can be used more than once.
                      
-                     The target should be a TAG in the [Zotero Group Bibliography EthioStudies](https://www.zotero.org/groups/ethiostudies/items). If the title you want to cite is not in the bibliography, please, add it. You need to be a member of the group to do this. If the title is there but does not have a univocal TAG, please add it.
-
-Univocal tags for project use should be namespaced, not to clash with further tagging. If you are adding a new tag use the following format:
-     bm:Abbadie1845Eth
-
-
+                     The target should use the item Key in the [Zotero Group Bibliography EthioStudies](https://www.zotero.org/groups/ethiostudies/items).
+                    
                      --></bibl>
                      </listBibl>
                   </additional>

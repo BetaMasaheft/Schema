@@ -99,7 +99,7 @@
           
           <elementSpec ident="condition" mode="change" module="msdescription">
               <attList>
-                  <attDef ident="key" mode="change" usage="req">
+                  <attDef ident="key" mode="add" usage="req">
                       <valList type="closed">
                           <valItem ident="deficient"/>
                           <valItem ident="good"/>
@@ -221,6 +221,7 @@
                           <valItem ident="item"/>
                           <valItem ident="hand"/>
                           <valItem ident="quire"/>
+                          <valItem ident="mss"/>
                       </valList>
                   </attDef>  
                   
@@ -245,6 +246,7 @@
                   <attDef ident="type" mode="change" usage="req">
                       <valList type="closed">
                           <valItem ident="mss"/>
+                          <valItem ident="catalogue"/>
                           <valItem ident="editions"/>
                           <valItem ident="text"/>
                           <valItem ident="otherLanguages"/>
@@ -259,13 +261,33 @@
               <constraintSpec scheme="isoschematron" ident="bibl">
                   <constraint>
                       <sch:rule context="tei:bibl[ancestor::tei:listBibl[@type='mss']]">
-                          <sch:report test="not(@corresp)">bibl in a mss list of references must always contain a @corresp pointing to a project xml:id of a mnuascript or to an external resource (in which case you need to add a @type="external")</sch:report>
+                          <sch:report test="not(@corresp)">bibl in a mss list of references must always contain a @corresp pointing to a project xml:id of a manuscript or to an external resource (in which case you need to add a @type="external")</sch:report>
                       </sch:rule>
                       <sch:rule context="tei:bibl[ancestor::tei:listBibl[@type='mss']][@type='external']">
                           <sch:report test="not(tei:ptr[@target])">bibl in a mss list of references with a @type="external" must contain a pointer with @target cointaing a full uri to the resource</sch:report>
                       </sch:rule>
                   </constraint>
               </constraintSpec>
+          </elementSpec>
+          
+          <elementSpec ident="witness" mode="change" module="textcrit">
+              <constraintSpec scheme="isoschematron" ident="witness">
+                  <constraint>
+                      <sch:rule context="tei:witness">
+                          <sch:report test="not(@corresp)">witness must always contain a @corresp pointing to a project xml:id of a manuscript or to an external resource (in which case you need to add a @type="external")</sch:report>
+                      </sch:rule>
+                      <sch:rule context="tei:witness[ancestor::tei:listBibl[@type='mss']][@type='external']">
+                          <sch:report test="not(tei:ptr[@target])">bibl in a mss list of references with a @type="external" must contain a pointer with @target cointaing a full uri to the resource</sch:report>
+                      </sch:rule>
+                  </constraint>
+              </constraintSpec>
+              <attList>
+                  <attDef ident="type" mode="add" usage="opt">
+                      <valList type="closed">
+                          <valItem ident="external"/>
+                      </valList>
+                  </attDef>
+              </attList>
           </elementSpec>
           
           <!--          allow use in dimension of rend pricked and ruled
