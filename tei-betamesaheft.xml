@@ -19,9 +19,9 @@
                 <moduleRef key="gaiji" except="char charName unicodeName"/>
                 <moduleRef key="linking" except="alt altGrp joinGrp timeline when"/>
                 <moduleRef key="msdescription"/>
-                <moduleRef key="namesdates" except="affiliation age climate education faith geoFeat langKnowledge
-                    langKnown nameLink nationality occupation population relationGrp residence sex socecStatus terrain trait"/>
-                <moduleRef key="textcrit" except="lacunaEnd lacunaStart listWit witDetail witEnd witStart witness"/>
+                <moduleRef key="namesdates" except="climate education geoFeat langKnowledge
+                    langKnown nameLink population socecStatus terrain trait"/>
+                <moduleRef key="textcrit" except="lacunaEnd lacunaStart witDetail witEnd witStart"/>
                 <moduleRef key="figures" except="cell formula row table"/>
                 <moduleRef key="spoken" except="broadcast equipment incident kinesic pause recording recordingStmt
                     scriptStmt shift u vocal writing"/>
@@ -154,22 +154,49 @@
           
           <elementSpec ident="language" mode="change" module="header">
               <attList>
-                  <attDef ident="key" mode="change" usage="opt">
+                  <attDef ident="ident" mode="change" usage="opt">
                       <valList type="closed">
                           
-                          <!--                          list coming from myCore-->
-                          <valItem ident="Amharic"/>
-                          <valItem ident="Arabic"/>
-                          <valItem ident="Armenian"/>
-                          <valItem ident="Coptic"/>
-                          <valItem ident="Georgian"/>
-                          <valItem ident="Greek"/>
-                          <valItem ident="Gəˁəz"/>
-                          <valItem ident="Hebrew"/>
-                          <valItem ident="other"/>
-                          <valItem ident="Persian"/>
-                          <valItem ident="Syriac"/>
-                          <valItem ident="Turkish"/>
+                          <!--  modified  list of languages coming from myCore-->
+                          <valItem ident="am">
+                              <desc>Amharic</desc>
+                          </valItem>
+                          <valItem ident="ar">
+                              <desc>Arabic</desc>
+                          </valItem>
+                          <valItem ident="hy">
+                              <desc>Armenian</desc>
+                          </valItem>
+                          <valItem ident="cop">
+                              <desc>Coptic</desc>
+                          </valItem>
+                          <valItem ident="geo">
+                              <desc>Georgian</desc>
+                          </valItem>
+                          <valItem ident="grc">
+                              <desc>Greek</desc>
+                          </valItem>
+                          <valItem ident="gez">
+                              <desc>Gəˁəz</desc>
+                          </valItem>
+                          <valItem ident="he">
+                              <desc>Hebrew</desc>
+                          </valItem>
+                          <valItem ident="fa">
+                              <desc>Persian</desc>
+                          </valItem>
+                          <valItem ident="syr">
+                              <desc>Syriac</desc>
+                          </valItem>
+                          <valItem ident="tu">
+                              <desc>Turkish</desc>
+                          </valItem>
+                          <valItem ident="ti">
+                              <desc>Tigrinya</desc>
+                          </valItem>
+                          <valItem ident="en">
+                              <desc>English</desc>
+                          </valItem>
                       </valList>
                   </attDef>  
                   
@@ -178,6 +205,13 @@
           
 <!--          allow usage of a closed list of types for ref-->
           <elementSpec ident="ref" mode="change" module="core">
+              <constraintSpec scheme="isoschematron" ident="ref">
+                  <constraint>
+                      <sch:rule context="tei:ref">
+                          <sch:report test="not(@target or @corresp)">ref must be used with either a @corresp pointing to a project xml:id or a @target pointing to a an external url</sch:report>
+                      </sch:rule>
+                  </constraint>
+              </constraintSpec>
               <attList>
                   <attDef ident="type" mode="change" usage="opt">
                       <valList type="closed">
@@ -209,14 +243,29 @@
           <elementSpec ident="listBibl" mode="change" module="core">
               <attList>
                   <attDef ident="type" mode="change" usage="req">
-                      <valList type="open">
+                      <valList type="closed">
                           <valItem ident="mss"/>
                           <valItem ident="editions"/>
                           <valItem ident="text"/>
                           <valItem ident="otherLanguages"/>
+                          <valItem ident="translation"/>
+                          <valItem ident="secondary"/>
                       </valList>
                   </attDef>
               </attList>
+          </elementSpec>
+          
+          <elementSpec ident="bibl" mode="change" module="core">
+              <constraintSpec scheme="isoschematron" ident="bibl">
+                  <constraint>
+                      <sch:rule context="tei:bibl[ancestor::tei:listBibl[@type='mss']]">
+                          <sch:report test="not(@corresp)">bibl in a mss list of references must always contain a @corresp pointing to a project xml:id of a mnuascript or to an external resource (in which case you need to add a @type="external")</sch:report>
+                      </sch:rule>
+                      <sch:rule context="tei:bibl[ancestor::tei:listBibl[@type='mss']][@type='external']">
+                          <sch:report test="not(tei:ptr[@target])">bibl in a mss list of references with a @type="external" must contain a pointer with @target cointaing a full uri to the resource</sch:report>
+                      </sch:rule>
+                  </constraint>
+              </constraintSpec>
           </elementSpec>
           
           <!--          allow use in dimension of rend pricked and ruled
@@ -256,6 +305,7 @@
                           <valItem ident="mm"/>
                           <valItem ident="leaf"/>
                           <valItem ident="quire"/>
+                          <valItem ident="page"/>
                       </valList>
                   </attDef>
                   <attDef ident="type" mode="replace" usage="opt">
@@ -325,6 +375,8 @@
                       <valList type="open">
                           <valItem ident="frame"/>
                           <valItem ident="miniature"/>
+                          <valItem ident="punctuation"/>
+                          <valItem ident="drawing"/>
                       </valList>
                   </attDef>
                   <attDef ident="rend" mode="change" usage="opt">
@@ -402,6 +454,7 @@
                           <valItem ident="Latin"/>
                           <valItem ident="other"/>
                           <valItem ident="Syriac"/>
+                          <valItem ident="Coptic"/>
                       </valList>
                   </attDef>
               </attList>
@@ -435,6 +488,18 @@
           <elementSpec ident="persName" mode="change" module="msdescription">
               <attList>
                   <attDef ident="corresp" mode="change" usage="req"/>
+                  <attDef ident="role">
+                      <valList type="closed">
+                          <valItem ident="scribe"/>
+                          <valItem ident="donor"/>
+                          <valItem ident="author"/>
+                          <valItem ident="translator"/>
+                          <valItem ident="binder"/>
+                          <valItem ident="parchmentMaker"/>
+                          <valItem ident="owner"/>
+                          <valItem ident="patron"/>
+                      </valList>
+                  </attDef>
               </attList>
           </elementSpec>
           
@@ -496,6 +561,14 @@
                           <valItem ident="sisterOf"/>
                           <valItem ident="wifeOf"/>
                           <valItem ident="husbandOf"/>
+                          <valItem ident="motherInLawOf"/>
+                          <valItem ident="fatherInLawOf"/>
+                          <valItem ident="sonInLawOf"/>
+                          <valItem ident="brotherInLawOf"/>
+                          <valItem ident="sisterInLawOf"/>
+                          <valItem ident="daugtherInLawOf"/>
+                          <valItem ident="nephew"/>
+                          <valItem ident="niece"/>
                           <valItem ident="contains"/>
                           <valItem ident="nearBy"/>
                           <valItem ident="partOf"/>

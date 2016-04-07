@@ -8,7 +8,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-04-06T22:39:43Z. .  
+# Schema generated from ODD source 2016-04-07T17:15:50Z. .  
 
 #
 tei_macro.paraContent =
@@ -1562,6 +1562,7 @@ tei_model.listLike =
   | tei_listPlace
   | tei_listNym
   | tei_listApp
+  | tei_listWit
 tei_model.listLike_alternation =
   tei_list
   | tei_listOrg
@@ -1570,6 +1571,7 @@ tei_model.listLike_alternation =
   | tei_listPlace
   | tei_listNym
   | tei_listApp
+  | tei_listWit
 tei_model.listLike_sequence =
   tei_list,
   tei_listOrg,
@@ -1577,7 +1579,8 @@ tei_model.listLike_sequence =
   tei_listPerson,
   tei_listPlace,
   tei_listNym,
-  tei_listApp
+  tei_listApp,
+  tei_listWit
 tei_model.listLike_sequenceOptional =
   tei_list?,
   tei_listOrg?,
@@ -1585,7 +1588,8 @@ tei_model.listLike_sequenceOptional =
   tei_listPerson?,
   tei_listPlace?,
   tei_listNym?,
-  tei_listApp?
+  tei_listApp?,
+  tei_listWit?
 tei_model.listLike_sequenceOptionalRepeatable =
   tei_list*,
   tei_listOrg*,
@@ -1593,7 +1597,8 @@ tei_model.listLike_sequenceOptionalRepeatable =
   tei_listPerson*,
   tei_listPlace*,
   tei_listNym*,
-  tei_listApp*
+  tei_listApp*,
+  tei_listWit*
 tei_model.listLike_sequenceRepeatable =
   tei_list+,
   tei_listOrg+,
@@ -1601,7 +1606,8 @@ tei_model.listLike_sequenceRepeatable =
   tei_listPerson+,
   tei_listPlace+,
   tei_listNym+,
-  tei_listApp+
+  tei_listApp+,
+  tei_listWit+
 tei_model.noteLike = tei_note
 tei_model.lLike = tei_l
 tei_model.lLike_alternation = tei_l
@@ -1631,7 +1637,17 @@ tei_model.divPart =
   | tei_lg
   | tei_sp
   | tei_model.divPart.spoken
-tei_model.persStateLike = tei_persName | tei_floruit | tei_state
+tei_model.persStateLike =
+  tei_persName
+  | tei_affiliation
+  | tei_age
+  | tei_faith
+  | tei_floruit
+  | tei_nationality
+  | tei_occupation
+  | tei_residence
+  | tei_sex
+  | tei_state
 tei_model.personLike = tei_org | tei_person | tei_personGrp
 tei_model.personPart =
   tei_model.biblLike
@@ -1807,13 +1823,16 @@ tei_model.choicePart =
 tei_model.imprintPart =
   tei_publisher | tei_biblScope | tei_pubPlace | tei_distributor
 tei_model.catDescPart = notAllowed
-tei_model.addressLike = tei_email | tei_address
-tei_model.addressLike_alternation = tei_email | tei_address
-tei_model.addressLike_sequence = tei_email, tei_address
-tei_model.addressLike_sequenceOptional = tei_email?, tei_address?
+tei_model.addressLike = tei_email | tei_address | tei_affiliation
+tei_model.addressLike_alternation =
+  tei_email | tei_address | tei_affiliation
+tei_model.addressLike_sequence = tei_email, tei_address, tei_affiliation
+tei_model.addressLike_sequenceOptional =
+  tei_email?, tei_address?, tei_affiliation?
 tei_model.addressLike_sequenceOptionalRepeatable =
-  tei_email*, tei_address*
-tei_model.addressLike_sequenceRepeatable = tei_email+, tei_address+
+  tei_email*, tei_address*, tei_affiliation*
+tei_model.addressLike_sequenceRepeatable =
+  tei_email+, tei_address+, tei_affiliation+
 tei_model.nameLike =
   tei_model.nameLike.agent
   | tei_model.offsetLike
@@ -2649,7 +2668,25 @@ tei_ref =
   element ref {
     tei_macro.paraContent
     >> sch:pattern [
-         id = "tei-betamesaheft-ref-refAtts-constraint-8"
+         id = "tei-betamesaheft-ref-ref-constraint-10"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:ref"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(@target or @corresp)"
+             "ref must be used with either a @corresp pointing to a project xml:id or a @target pointing to a an external url"
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ]
+    >> sch:pattern [
+         id = "tei-betamesaheft-ref-refAtts-constraint-9"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -2695,7 +2732,7 @@ tei_list =
      (tei_model.divBottom, tei_model.global*)*)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-list-gloss-list-must-have-labels-constraint-10"
+           "tei-betamesaheft-list-gloss-list-must-have-labels-constraint-11"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -2744,7 +2781,7 @@ tei_item =
   element item {
     tei_macro.specialPara
     >> sch:pattern [
-         id = "tei-betamesaheft-item-item-constraint-11"
+         id = "tei-betamesaheft-item-item-constraint-12"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3240,15 +3277,52 @@ tei_bibl =
   
   ## (bibliographic citation) contains a loosely-structured bibliographic citation of which the sub-components may or may not be explicitly tagged. [3.11.1. Methods of Encoding Bibliographic References and Lists of References 2.2.7. The Source Description 15.3.2. Declarable Elements]
   element bibl {
-    (text
-     | tei_model.gLike
-     | tei_model.highlighted
-     | tei_model.pPart.data
-     | tei_model.pPart.edit
-     | tei_model.segLike
-     | tei_model.ptrLike
-     | tei_model.biblPart
-     | tei_model.global)*,
+    ((text
+      | tei_model.gLike
+      | tei_model.highlighted
+      | tei_model.pPart.data
+      | tei_model.pPart.edit
+      | tei_model.segLike
+      | tei_model.ptrLike
+      | tei_model.biblPart
+      | tei_model.global)*)
+    >> sch:pattern [
+         id = "tei-betamesaheft-bibl-bibl-constraint-13"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:bibl[ancestor::tei:listBibl[@type='mss']]"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(@corresp)"
+             'bibl in a mss list of references must always contain a @corresp pointing to a project xml:id of a mnuascript or to an external resource (in which case you need to add a @type="external")'
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ]
+    >> sch:pattern [
+         id = "tei-betamesaheft-bibl-bibl-constraint-14"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context =
+             "tei:bibl[ancestor::tei:listBibl[@type='mss']][@type='external']"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(tei:ptr[@target])"
+             'bibl in a mss list of references with a @type="external" must contain a pointer with @target cointaing a full uri to the resource'
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
     tei_att.global.attributes,
     tei_att.declarable.attributes,
     tei_att.typed.attributes,
@@ -3269,7 +3343,7 @@ tei_biblStruct =
       | tei_citedRange)*)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-biblStruct-deprecate-altIdentifier-child-constraint-10"
+           "tei-betamesaheft-biblStruct-deprecate-altIdentifier-child-constraint-13"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3319,7 +3393,7 @@ tei_relatedItem =
     ((tei_model.biblLike | tei_model.ptrLike)?)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-relatedItem-targetorcontent1-constraint-11"
+           "tei-betamesaheft-relatedItem-targetorcontent1-constraint-14"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3378,7 +3452,7 @@ tei_l =
       | tei_model.global)*)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-l-abstractModel-structure-l-constraint-12"
+           "tei-betamesaheft-l-abstractModel-structure-l-constraint-15"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3441,7 +3515,7 @@ tei_lg =
        ]
     >> sch:pattern [
          id =
-           "tei-betamesaheft-lg-abstractModel-structure-l-constraint-13"
+           "tei-betamesaheft-lg-abstractModel-structure-l-constraint-16"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3903,7 +3977,7 @@ tei_quotation =
     (tei_model.pLike*)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-quotation-quotationContents-constraint-14"
+           "tei-betamesaheft-quotation-quotationContents-constraint-17"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4222,7 +4296,7 @@ tei_handNote =
   element handNote {
     tei_macro.specialPara
     >> sch:pattern [
-         id = "tei-betamesaheft-handNote-handNote-constraint-12"
+         id = "tei-betamesaheft-handNote-handNote-constraint-15"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4314,7 +4388,7 @@ tei_language =
       | (
          ##
          "")
-    },
+    }?,
     
     ## specifies the approximate percentage (by volume) of the text which uses this language.
     attribute usage { xsd:nonNegativeInteger }?,
@@ -4611,7 +4685,7 @@ tei_div =
       (tei_model.divBottom, tei_model.global*)*)?)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-div-abstractModel-structure-l-constraint-16"
+           "tei-betamesaheft-div-abstractModel-structure-l-constraint-19"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4632,7 +4706,7 @@ tei_div =
        ]
     >> sch:pattern [
          id =
-           "tei-betamesaheft-div-abstractModel-structure-p-constraint-17"
+           "tei-betamesaheft-div-abstractModel-structure-p-constraint-20"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -5369,7 +5443,7 @@ tei_s =
   element s {
     tei_macro.phraseSeq
     >> sch:pattern [
-         id = "tei-betamesaheft-s-noNestedS-constraint-18"
+         id = "tei-betamesaheft-s-noNestedS-constraint-21"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -5777,7 +5851,7 @@ tei_ab =
   element ab {
     tei_macro.paraContent
     >> sch:pattern [
-         id = "tei-betamesaheft-ab-ab-constraint-13"
+         id = "tei-betamesaheft-ab-ab-constraint-16"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -5795,7 +5869,7 @@ tei_ab =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-ab-ab-constraint-14"
+         id = "tei-betamesaheft-ab-ab-constraint-17"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -5814,7 +5888,7 @@ tei_ab =
        ]
     >> sch:pattern [
          id =
-           "tei-betamesaheft-ab-abstractModel-structure-p-constraint-21"
+           "tei-betamesaheft-ab-abstractModel-structure-p-constraint-24"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -5836,7 +5910,7 @@ tei_ab =
        ]
     >> sch:pattern [
          id =
-           "tei-betamesaheft-ab-abstractModel-structure-l-constraint-22"
+           "tei-betamesaheft-ab-abstractModel-structure-l-constraint-25"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -5977,7 +6051,7 @@ tei_dimensions =
   element dimensions {
     ((tei_dim | tei_model.dimLike)*)
     >> sch:pattern [
-         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-23"
+         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-26"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -5999,7 +6073,7 @@ tei_dimensions =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-24"
+         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-27"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6021,7 +6095,7 @@ tei_dimensions =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-25"
+         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-28"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6173,6 +6247,9 @@ tei_dim =
       | 
         ##
         "quire"
+      | 
+        ##
+        "page"
     }?,
     empty
   }
@@ -6215,7 +6292,7 @@ tei_locus =
   element locus {
     tei_macro.xtext
     >> sch:pattern [
-         id = "tei-betamesaheft-locus-locus-constraint-15"
+         id = "tei-betamesaheft-locus-locus-constraint-18"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6504,7 +6581,7 @@ tei_msIdentifier =
       tei_idno?),
      (tei_msName | tei_altIdentifier)*)
     >> sch:pattern [
-         id = "tei-betamesaheft-msIdentifier-msId_minimal-constraint-27"
+         id = "tei-betamesaheft-msIdentifier-msId_minimal-constraint-30"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6886,7 +6963,7 @@ tei_decoNote =
   element decoNote {
     tei_macro.specialPara
     >> sch:pattern [
-         id = "tei-betamesaheft-decoNote-decoNote-constraint-16"
+         id = "tei-betamesaheft-decoNote-decoNote-constraint-19"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7033,7 +7110,7 @@ tei_origin =
   element origin {
     tei_macro.specialPara
     >> sch:pattern [
-         id = "tei-betamesaheft-origin-origin-constraint-17"
+         id = "tei-betamesaheft-origin-origin-constraint-20"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7151,7 +7228,7 @@ tei_msPart =
          tei_msPart*)))
     >> sch:pattern [
          id =
-           "tei-betamesaheft-msPart-deprecate-altIdentifier-child-constraint-30"
+           "tei-betamesaheft-msPart-deprecate-altIdentifier-child-constraint-33"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7391,13 +7468,73 @@ tei_persName =
     tei_att.global.responsibility.attribute.resp,
     tei_att.datable.attributes,
     tei_att.editLike.attributes,
-    tei_att.personal.attributes,
+    tei_att.personal.attribute.full,
+    tei_att.personal.attribute.sort,
+    tei_att.naming.attribute.nymRef,
+    tei_att.canonical.attribute.key,
+    tei_att.canonical.attribute.ref,
     tei_att.typed.attributes,
     
     ## (corresponds) points to elements that correspond to the current element in some way.
     attribute corresp {
       list { xsd:anyURI+ }
     },
+    
+    ##
+    attribute role {
+      
+      ##
+      "scribe"
+      | 
+        ##
+        "donor"
+      | 
+        ##
+        "author"
+      | 
+        ##
+        "translator"
+      | 
+        ##
+        "binder"
+      | 
+        ##
+        "parchmentMaker"
+      | 
+        ##
+        "owner"
+      | 
+        ##
+        "patron"
+    }?,
+    
+    ##
+    attribute role {
+      
+      ##
+      "scribe"
+      | 
+        ##
+        "donor"
+      | 
+        ##
+        "author"
+      | 
+        ##
+        "translator"
+      | 
+        ##
+        "binder"
+      | 
+        ##
+        "parchmentMaker"
+      | 
+        ##
+        "owner"
+      | 
+        ##
+        "patron"
+    }?,
     empty
   }
 tei_surname =
@@ -7577,6 +7714,30 @@ tei_geogFeat =
     tei_att.typed.attributes,
     empty
   }
+tei_affiliation =
+  
+  ## contains an informal description of a person's present or past affiliation with some organization, for example an employer or sponsor. [15.2.2. The Participant Description]
+  element affiliation {
+    tei_macro.phraseSeq,
+    tei_att.global.attributes,
+    tei_att.editLike.attributes,
+    tei_att.datable.attributes,
+    tei_att.naming.attributes,
+    empty
+  }
+tei_age =
+  
+  ## specifies the age of a person. [13.3.2.1. Personal Characteristics]
+  element age {
+    tei_macro.phraseSeq.limited,
+    tei_att.global.attributes,
+    tei_att.editLike.attributes,
+    tei_att.datable.attributes,
+    
+    ## supplies a numeric code representing the age or age group
+    attribute value { xsd:nonNegativeInteger }?,
+    empty
+  }
 tei_birth =
   
   ## contains information about a person's birth, such as its date and place. [15.2.2. The Participant Description]
@@ -7619,6 +7780,17 @@ tei_event =
     
     ## indicates the location of an event by pointing to a place element
     attribute where { xsd:anyURI }?,
+    empty
+  }
+tei_faith =
+  
+  ## specifies the faith, religion, or belief set of a person. [13.3.2.1. Personal Characteristics]
+  element faith {
+    tei_macro.phraseSeq,
+    tei_att.global.attributes,
+    tei_att.editLike.attributes,
+    tei_att.datable.attributes,
+    tei_att.canonical.attributes,
     empty
   }
 tei_floruit =
@@ -7705,6 +7877,34 @@ tei_location =
     tei_att.typed.attributes,
     tei_att.datable.attributes,
     tei_att.editLike.attributes,
+    empty
+  }
+tei_nationality =
+  
+  ## contains an informal description of a person's present or past nationality or citizenship. [15.2.2. The Participant Description]
+  element nationality {
+    tei_macro.phraseSeq,
+    tei_att.global.attributes,
+    tei_att.datable.attributes,
+    tei_att.editLike.attributes,
+    tei_att.naming.attributes,
+    empty
+  }
+tei_occupation =
+  
+  ## contains an informal description of a person's trade, profession or occupation. [15.2.2. The Participant Description]
+  element occupation {
+    tei_macro.phraseSeq,
+    tei_att.global.attributes,
+    tei_att.datable.attributes,
+    tei_att.editLike.attributes,
+    tei_att.naming.attributes,
+    
+    ## indicates the classification system or taxonomy in use, for example by supplying the identifier of a taxonomy element, or pointing to some other resource.
+    attribute scheme { xsd:anyURI }?,
+    
+    ## identifies an occupation code defined within the classification system or taxonomy defined by the scheme attribute.
+    attribute code { xsd:anyURI }?,
     empty
   }
 tei_org =
@@ -7854,7 +8054,7 @@ tei_relation =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-relation-activemutual-constraint-31"
+         id = "tei-betamesaheft-relation-activemutual-constraint-34"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7873,7 +8073,7 @@ tei_relation =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-relation-activepassive-constraint-32"
+         id = "tei-betamesaheft-relation-activepassive-constraint-35"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7917,6 +8117,34 @@ tei_relation =
     ## identifies the passive participants in a non-mutual relationship.
     attribute passive {
       list { xsd:anyURI+ }
+    }?,
+    empty
+  }
+tei_residence =
+  
+  ## describes a person's present or past places of residence. [15.2.2. The Participant Description]
+  element residence {
+    tei_macro.phraseSeq,
+    tei_att.global.attributes,
+    tei_att.datable.attributes,
+    tei_att.editLike.attributes,
+    tei_att.naming.attributes,
+    empty
+  }
+tei_sex =
+  
+  ## specifies the sex of a person. [13.3.2.1. Personal Characteristics]
+  element sex {
+    tei_macro.phraseSeq,
+    tei_att.global.attributes,
+    tei_att.editLike.attributes,
+    tei_att.datable.attributes,
+    
+    ## supplies a coded value for sex
+    attribute value {
+      list {
+        xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }+
+      }
     }?,
     empty
   }
@@ -8116,6 +8344,24 @@ tei_wit =
     tei_att.rdgPart.attributes,
     empty
   }
+tei_listWit =
+  
+  ## (witness list) lists definitions for all the witnesses referred to by a critical apparatus, optionally grouped hierarchically. [12.1. The Apparatus Entry, Readings, and Witnesses]
+  element listWit {
+    (tei_model.headLike?, (tei_witness | tei_listWit)+),
+    tei_att.global.attributes,
+    tei_att.sortable.attributes,
+    empty
+  }
+tei_witness =
+  
+  ## contains either a description of a single witness referred to within the critical apparatus, or a list of witnesses which is to be referred to by a single sigil. [12.1. The Apparatus Entry, Readings, and Witnesses]
+  element witness {
+    tei_macro.limitedContent,
+    tei_att.global.attributes,
+    tei_att.sortable.attributes,
+    empty
+  }
 tei_variantEncoding =
   
   ## declares the method used to encode text-critical variants. [12.1.1. The Apparatus Entry]
@@ -8147,7 +8393,7 @@ tei_variantEncoding =
     }
     >> sch:pattern [
          id =
-           "tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-18"
+           "tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-21"
          "\x{a}" ~
          "            "
          sch:rule [

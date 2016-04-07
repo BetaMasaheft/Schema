@@ -177,6 +177,7 @@ You could also start from the provided TEI models in Oxygen
                            <bibl corresp="EMML430"><ptr target="EMML430.xml#p.1.5_i6"/><citedRange
                                  unit="fol" from="104r" to="112v"/></bibl>
                            <bibl corresp="EMML615"/>
+                           <bibl type="external" corresp="EMML564"><ptr target="http://emml.org/564"></ptr></bibl>
                         </listBibl>
 
                         <note/>
