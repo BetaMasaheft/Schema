@@ -1,9 +1,32 @@
 <?xml version="1.0"?>
 <?oxygen RNGSchema="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="xml"?>
-
-<div xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en"
-    xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:xi="http://www.w3.org/2001/XInclude"
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en"
+    xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:rng="http://relaxng.org/ns/structure/1.0"
     xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Beta maṣāḥǝft schema</title>
+                <author xml:id="ES">Eugenia Sokolinski</author>
+                <author xml:id="PL">Pietro Liuzzo</author>
+            </titleStmt>
+            <publicationStmt>
+                <p>Released under GNU GPL 3.0</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>created electronically</p>
+            </sourceDesc>
+        </fileDesc>
+        <revisionDesc>
+            <change who="PL" when="2016-04-08">generated first version of the ODD from requirements</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <divGen type="toc"/>
+        </front>
+        <body>
       <schemaSpec ident="tei-betamesaheft" docLang="en" prefix="tei_" start="TEI" xml:lang="en">
                 
           <!--       MODULES USED BY THE Beta maṣāḥǝft: Manuscripts of Ethiopia and Eritrea SCHEMA       -->
@@ -723,5 +746,7 @@
                 </classSpec>
           
             </schemaSpec>
-</div>
+        </body>
+    </text>
+</TEI>
 
