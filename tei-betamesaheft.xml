@@ -70,7 +70,7 @@
           <elementSpec ident="origDate" mode="change" module="msdescription">
               <attList>
                   <!--    adds list of values to origDate/@type-->
-                  <attDef ident="type" mode="change">
+                  <attDef ident="type" mode="replace">
                       <valList type="open">
                           <valItem ident="editor"/>
                           <valItem ident="mss"/>
@@ -112,7 +112,7 @@
 <!--          add the value fol to citedRange/@unit-->
           <elementSpec ident="citedRange" mode="change" module="core">
               <attList>
-                  <attDef ident="unit" mode="change">
+                  <attDef ident="unit" mode="add">
                       <valList type="open">
                           <valItem ident="fol"/>
                       </valList>
@@ -122,7 +122,7 @@
           
           <elementSpec ident="condition" mode="change" module="msdescription">
               <attList>
-                  <attDef ident="key" mode="add" usage="req">
+                  <attDef ident="key" mode="replace" usage="req">
                       <valList type="closed">
                           <valItem ident="deficient"/>
                           <valItem ident="good"/>
@@ -136,7 +136,7 @@
           
           <elementSpec ident="term" mode="change" module="msdescription">
               <attList>
-                  <attDef ident="key" mode="change" usage="req">
+                  <attDef ident="key" mode="replace" usage="req">
                       <valList type="closed">
 <!--                          list coming from myCore-->
                           <valItem ident="Apocrypha"/>
@@ -177,7 +177,7 @@
           
           <elementSpec ident="language" mode="change" module="header">
               <attList>
-                  <attDef ident="ident" mode="change" usage="opt">
+                  <attDef ident="ident" mode="replace" usage="opt">
                       <valList type="closed">
                           
                           <!--  modified  list of languages coming from myCore-->
@@ -236,7 +236,7 @@
                   </constraint>
               </constraintSpec>
               <attList>
-                  <attDef ident="type" mode="change" usage="opt">
+                  <attDef ident="type" mode="replace" usage="opt">
                       <valList type="closed">
                           <valItem ident="mspart"/>
                           <valItem ident="author"/>
@@ -254,10 +254,13 @@
 <!--          suggest use in title of type complete or incomplete-->
           <elementSpec ident="title" mode="change" module="core">
               <attList>
-                  <attDef ident="type" mode="change" usage="opt">
+                  <attDef ident="corresp" mode="change" usage="rec"/>
+                  <attDef ident="type" mode="replace" usage="opt">
                       <valList type="open">
                           <valItem ident="complete"/>
                           <valItem ident="incomplete"/>
+                          <valItem ident="normalized"/>
+                          <valItem ident="alt"/>
                       </valList>
                   </attDef>
               </attList>
@@ -266,7 +269,7 @@
 <!--                constrain use of type in listBibl and suggest values-->
           <elementSpec ident="listBibl" mode="change" module="core">
               <attList>
-                  <attDef ident="type" mode="change" usage="req">
+                  <attDef ident="type" mode="replace" usage="req">
                       <valList type="closed">
                           <valItem ident="mss"/>
                           <valItem ident="catalogue"/>
@@ -416,7 +419,7 @@
               </constraintSpec>
               <attList>
                   <attDef ident="xml:id" mode="change" usage="req"/>
-                  <attDef ident="type" mode="change" usage="opt">
+                  <attDef ident="type" mode="replace" usage="opt">
                       <valList type="open">
                           <valItem ident="frame"/>
                           <valItem ident="miniature"/>
@@ -424,7 +427,7 @@
                           <valItem ident="drawing"/>
                       </valList>
                   </attDef>
-                  <attDef ident="rend" mode="change" usage="opt">
+                  <attDef ident="rend" mode="replace" usage="opt">
                       <valList type="open">
                           <valItem ident="damaged"/>
                           <valItem ident="intact"/>
@@ -435,7 +438,7 @@
           
           <elementSpec ident="custEvent" mode="change" module="msdescription">
               <attList>
-                  <attDef ident="subtype" mode="change" usage="req">
+                  <attDef ident="subtype" mode="replace" usage="req">
                       <valList type="closed">
                           <valItem ident="ancient"/>
                           <valItem ident="modern"/>
@@ -448,7 +451,7 @@
           <!--          suggest values for person/@role-->
           <elementSpec ident="person" mode="change" module="namesdates">
               <attList>
-                  <attDef ident="type" mode="change" usage="opt">
+                  <attDef ident="type" mode="replace" usage="opt">
                       <valList type="open">
                           <valItem ident="scribe"/>
                           <valItem ident="donor"/>
@@ -488,7 +491,7 @@
               </constraintSpec>
               <attList>
                   <attDef ident="xml:id" mode="change" usage="req"/>
-                  <attDef ident="script" mode="change" usage="req">
+                  <attDef ident="script" mode="replace" usage="req">
                       <valList type="closed">
                           
                           <!--                          list coming from myCore-->
@@ -507,7 +510,7 @@
           
           <elementSpec ident="editor" mode="change" module="core">
               <attList>
-                  <attDef ident="key" mode="change" usage="req">
+                  <attDef ident="key" mode="replace" usage="req">
                       <valList type="open">
                           <valItem ident="AB"/>
                           <valItem ident="ES"/>
@@ -515,7 +518,7 @@
                           <valItem ident="MV"/>
                       </valList>
                   </attDef>
-                  <attDef ident="role" mode="change" usage="opt">
+                  <attDef ident="role" mode="replace" usage="opt">
                       <valList type="open">
                           <valItem ident="generalEditor"></valItem>
                       </valList>
@@ -533,7 +536,7 @@
           <elementSpec ident="persName" mode="change" module="msdescription">
               <attList>
                   <attDef ident="corresp" mode="change" usage="req"/>
-                  <attDef ident="role" mode="change" usage="opt">
+                  <attDef ident="role" mode="replace" usage="opt">
                       <valList type="closed">
                           <valItem ident="scribe"/>
                           <valItem ident="donor"/>
@@ -556,24 +559,12 @@
           </elementSpec>
           
           
-          <elementSpec ident="title" mode="change" module="msdescription">
-              <attList>
-                  <attDef ident="corresp" mode="change" usage="rec"/>
-                  
-                  <attDef ident="type" mode="change" usage="opt">
-                      <valList type="open">
-                          <valItem ident="normalized"/>
-                          <valItem ident="alt"/>
-                      </valList>
-                  </attDef>
-                  
-              </attList>
-          </elementSpec>
+      
           
           
           <elementSpec ident="material" mode="change" module="msdescription">
               <attList>
-                  <attDef ident="key" mode="change" usage="req">
+                  <attDef ident="key" mode="replace" usage="req">
                       <valList type="closed">
                           
                           <!--                          list coming from myCore-->
@@ -594,7 +585,7 @@
 
           <elementSpec ident="relation" mode="change" module="namesdates">
               <attList>
-                  <attDef ident="name" mode="change" usage="req">
+                  <attDef ident="name" mode="replace" usage="req">
                       <valList type="closed">
                           <valItem ident="daughterOf"/>
                           <valItem ident="sonOf"/>
@@ -709,7 +700,7 @@
                   </constraint>
               </constraintSpec>
               <attList>
-                  <attDef ident="rend" mode="change" usage="opt">
+                  <attDef ident="rend" mode="replace" usage="opt">
                       <valList type="open">
                           <valItem ident="marginal"/>
                           <valItem ident="guardLeaf"/>
