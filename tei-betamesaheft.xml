@@ -248,6 +248,7 @@
                           <valItem ident="hand"/>
                           <valItem ident="quire"/>
                           <valItem ident="mss"/>
+                          <valItem ident="work"/>
                       </valList>
                   </attDef>  
                   

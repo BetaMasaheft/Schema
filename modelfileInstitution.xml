@@ -9,7 +9,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       <fileDesc>
          <titleStmt>
             <title><!--type here the primary name of the Institution--></title>
-            <editor corresp="DN"/>  <!--change this value according to the abbreviations in the wiki-->
+            <editor key="DN"/>  <!--change this value according to the abbreviations in the wiki-->
             <editor role="generalEditor" key="AB"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
