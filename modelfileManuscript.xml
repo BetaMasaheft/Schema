@@ -462,11 +462,6 @@ You could also start from the provided TEI models in Oxygen
          <change who="yourintials" when="2016-03-31">Created catalogue entry</change>
       </revisionDesc>
    </teiHeader>
-   <sourceDoc>
-      <surface>
-         <line/>
-      </surface>
-   </sourceDoc>
    <text>
       <body>
          <ab/>

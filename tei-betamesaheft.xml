@@ -112,7 +112,7 @@
 <!--          add the value fol to citedRange/@unit-->
           <elementSpec ident="citedRange" mode="change" module="core">
               <attList>
-                  <attDef ident="unit" mode="add">
+                  <attDef ident="unit" mode="change">
                       <valList type="open">
                           <valItem ident="fol"/>
                       </valList>
@@ -204,6 +204,9 @@
                           </valItem>
                           <valItem ident="he">
                               <desc>Hebrew</desc>
+                          </valItem>
+                          <valItem ident="it">
+                              <desc>Italian</desc>
                           </valItem>
                           <valItem ident="fa">
                               <desc>Persian</desc>
@@ -511,7 +514,7 @@
           <elementSpec ident="editor" mode="change" module="core">
               <attList>
                   <attDef ident="key" mode="replace" usage="req">
-                      <valList type="open">
+                      <valList type="closed">
                           <valItem ident="AB"/>
                           <valItem ident="ES"/>
                           <valItem ident="DN"/>

@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model
-href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
+href="tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en"><!--ADD XML:ID-->
+<?xml-model href="tei-betamesaheft.rng" 
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="addAnIdHere"><!--ADD XML:ID-->
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title ref="http://example/EMML"><!--TITLE--></title><!-- make sure to add a proper stable url of where this resource is-->
             <!--<editor/>-->
-            <editor role="generalEditor" key="AB"/>
+            <editor key="AB" role="generalEditor"/>
             <funder>Akademie der Wissenschaften in Hamburg</funder>
          </titleStmt>
          <publicationStmt>
@@ -25,7 +27,8 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <sourceDesc>
             <msDesc xml:id="ms">
                   <msIdentifier>
-                      <idno/><!-- mss identifier and link to online resource-->
+                     <repository></repository>
+                      <idno>mm</idno><!-- mss identifier and link to online resource-->
                   </msIdentifier>
                   <history>
                      <origin>
@@ -59,6 +62,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <langUsage>
             <language ident="en">English</language>
             <language ident="it">Italian</language>
+            <language ident="syr"></language>
             <language ident="gez" corresp="Lan05">Gəˁəz</language>
          </langUsage>
       </profileDesc>
@@ -66,11 +70,6 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <change who="yourintials" when="2016-03-31">Created catalogue entry</change>
       </revisionDesc>
    </teiHeader>
-   <sourceDoc>
-      <surface>
-         <line/>
-      </surface>
-   </sourceDoc>
    <text>
       <body>
          <ab/>
