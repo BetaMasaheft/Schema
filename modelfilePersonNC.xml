@@ -63,7 +63,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             </person>
             
             <listRelation>
-               <relation name="aValue"/>
+               <relation name="brotherInLawOf"/>
             </listRelation>
             
          </listPerson>

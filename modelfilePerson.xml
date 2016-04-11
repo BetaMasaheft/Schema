@@ -77,6 +77,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
             <listRelation>
 <!--               If some relation is known, than use one relation element for each. Alter or Remove the mock example below if not needed!!-->
+               <relation name=""></relation>
                <relation name="fatherOf" active="#PRS1009Abakaraz" passive="#PRS1000Abakaraz #PRS1020Abakaraz"/>
                   <relation name="husbandOf" active="#PRS1009Abakaraz" passive="#PRS1030Abakaraz"/>
 <!--               possible relations are
@@ -91,6 +92,7 @@ brotherOf
 sisterOf
 wifeOf
 husbandOf
+etc. as in contextual menu
                -->
             </listRelation>
             

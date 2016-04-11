@@ -84,7 +84,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 <!--                     this block contains the information about the library and can contain references to the manuscripts.-->
                      25 Mss.; 10 Mss. photographed: <ref target="ES888">AQM-001</ref> "Vita of Mamas";<ref target="ES888"> AQM-002</ref> "Vita of Mamas" ...</ab>
                </note>
-               <listBibl>
+               <listBibl type="text">
 <!--                  any related bibliography can go here following the standard project rules for bibliography-->
                   <bibl></bibl>
                </listBibl>
