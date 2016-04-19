@@ -46,7 +46,9 @@ You could also start from the provided TEI models in Oxygen
                
                <msIdentifier>
                   <repository corresp="INS00000030Addaqaharsi"/>
-                  <collection></collection>
+                  <collection>
+                     
+                  </collection>
                   <idno ><!-- enter here the shelf mark of the manuscript only MR-023--></idno>
                   <!--
                      
@@ -91,7 +93,7 @@ You could also start from the provided TEI models in Oxygen
                         <title type="Complete" corresp="#LIT00384Gadla"/>
                         <!--                        here you can enter the reference to a work or the title of a section of it. 
                            you can also reference a a part of a work with its id. -->
-                        <rubric> </rubric>
+                        <rubric></rubric>
                         <incipit><!--text of incipit in the language of textLang if not otherwise specified-->
                            <foreign xml:lang="en"><!--translation of incipit--></foreign>
                         </incipit>
@@ -207,7 +209,7 @@ You could also start from the provided TEI models in Oxygen
                            <support>
                               <watermark/>
                               <!-- omit if not present-->
-                              <material key="Parchment"/>
+                              <material key="parchment"/>
                               <!--enter the id of the value from the Writing Material taxonomy 
                                  https://github.com/SChAth/Authority-Files/blob/master/WritingMaterial.xml
                           -->
