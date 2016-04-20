@@ -10,7 +10,7 @@ You could also start from the provided TEI models in Oxygen
 <!--   guidelines are here  : https://github.com/SChAth/ScAthiop/wiki/guidelines-->
 
 
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ES15" xml:lang="en">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="ES15" xml:lang="en" type="mss">
    <!--   The xml ID should correspond to the one in the file and be formed by capital letters and digits only 
    e.g.
    * EMML2312

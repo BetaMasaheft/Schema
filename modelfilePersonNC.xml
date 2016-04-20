@@ -3,7 +3,7 @@
 href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="PRS00000xxxxxx" xml:lang="en" type="pers">
    <teiHeader>
       <fileDesc>
          <titleStmt>

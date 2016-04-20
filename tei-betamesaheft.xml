@@ -109,7 +109,7 @@
               </attList>
           </elementSpec>
           
-<!--          add the value fol to citedRange/@unit-->
+<!--        add the value fol to citedRange/@unit-->
           <elementSpec ident="citedRange" mode="change" module="core">
               <attList>
                   <attDef ident="unit" mode="change">
@@ -120,6 +120,7 @@
               </attList>
           </elementSpec>
           
+<!--          controlled values for condition-->
           <elementSpec ident="condition" mode="change" module="msdescription">
               <attList>
                   <attDef ident="key" mode="replace" usage="req">
@@ -134,6 +135,7 @@
               </attList>
           </elementSpec>
           
+<!--          controlled values for subject typology -->
           <elementSpec ident="term" mode="change" module="msdescription">
               <attList>
                   <attDef ident="key" mode="replace" usage="req">
@@ -175,6 +177,8 @@
               </attList>
           </elementSpec>
           
+          
+<!--          controlled values for language usage-->
           <elementSpec ident="language" mode="change" module="header">
               <attList>
                   <attDef ident="ident" mode="replace" usage="opt">
@@ -255,7 +259,7 @@
               </attList>
           </elementSpec>
           
-<!--          suggest use in title of type complete or incomplete-->
+<!--          suggest use in title of type complete, incomplete, normalized or alternative-->
           <elementSpec ident="title" mode="change" module="core">
               <attList>
                   <attDef ident="corresp" mode="change" usage="rec"/>
@@ -287,6 +291,7 @@
               </attList>
           </elementSpec>
           
+<!--          test the content of manuscript list to be as described in guidelines and point to mss ids-->
           <elementSpec ident="bibl" mode="change" module="core">
               <constraintSpec scheme="isoschematron" ident="bibl">
                   <constraint>
@@ -300,6 +305,7 @@
               </constraintSpec>
           </elementSpec>
           
+          <!--          test the content of witnesses list to be as described in guidelines and point to mss ids-->
           <elementSpec ident="witness" mode="change" module="textcrit">
               <constraintSpec scheme="isoschematron" ident="witness">
                   <constraint>
@@ -311,6 +317,7 @@
                       </sch:rule>
                   </constraint>
               </constraintSpec>
+<!--              this optional value points to a manuscript not in BetMes catalogue-->
               <attList>
                   <attDef ident="type" mode="add" usage="opt">
                       <valList type="closed">
@@ -337,6 +344,7 @@
               </attList>
           </elementSpec>
           
+<!--          desc typologies tailband. should be ONLY for binding desc-->
           <elementSpec ident="desc" mode="change" module="msdescription">
               <attList>
                   <attDef ident="type" mode="replace" usage="opt">
@@ -452,19 +460,6 @@
               </attList>
           </elementSpec>
           
-          <!--          suggest values for person/@role-->
-          <elementSpec ident="person" mode="change" module="namesdates">
-              <attList>
-                  <attDef ident="type" mode="replace" usage="opt">
-                      <valList type="open">
-                          <valItem ident="scribe"/>
-                          <valItem ident="donor"/>
-                          <valItem ident="other"/>
-                      </valList>
-                  </attDef>
-              </attList>
-          </elementSpec>
-          
           
 <!--          require @xml:id-->
           <elementSpec ident="msPart" mode="change" module="msdescription">
@@ -479,12 +474,7 @@
               </attList>
           </elementSpec>
           
-          <elementSpec ident="TEI" mode="change" module="textstructure">
-              <attList>
-                  <attDef ident="xml:id" mode="change" usage="req"/>
-              </attList>
-          </elementSpec>
-          
+<!--          controlled values for SCRIPT-->
           <elementSpec ident="handNote" mode="change" module="msdescription">
               <constraintSpec scheme="isoschematron" ident="handNote">
                   <constraint>
@@ -516,10 +506,11 @@
               <attList>
                   <attDef ident="key" mode="replace" usage="req">
                       <valList type="closed">
-                          <valItem ident="AB"/>
-                          <valItem ident="ES"/>
-                          <valItem ident="DN"/>
-                          <valItem ident="MV"/>
+                          <valItem ident="AB"/> <!--Alessandro-->
+                          <valItem ident="ES"/> <!--Eugenia-->
+                          <valItem ident="DN"/> <!--Denis-->
+                          <valItem ident="MV"/> <!--Massimo-->
+                          <valItem ident="SG"/> <!--Solomon-->
                       </valList>
                   </attDef>
                   <attDef ident="role" mode="replace" usage="opt">
@@ -536,10 +527,18 @@
               </attList>
           </elementSpec>
           
-<!--          require @corresp-->
+<!--          recomend @corresp in persName and test that is always there in mss and work-->
           <elementSpec ident="persName" mode="change" module="msdescription">
+              <constraintSpec scheme="isoschematron" ident="persName">
+                  <constraint>
+                      <sch:rule context="tei:persName[ancestor::tei:TEI[@type='mss|place|ins|work']]">
+                          <sch:report test="not(@corresp)">A persName  in a mss, place or work description should always 
+                              contain an attribute @corresp pointing to the relevant record</sch:report>
+                      </sch:rule>
+                  </constraint>
+              </constraintSpec>
               <attList>
-                  <attDef ident="corresp" mode="change" usage="req"/>
+                  <attDef ident="corresp" mode="change" usage="rec"/>
                   <attDef ident="role" mode="replace" usage="opt">
                       <valList type="closed">
                           <valItem ident="scribe"/>
@@ -557,15 +556,23 @@
           
           
           <elementSpec ident="placeName" mode="change" module="msdescription">
+              <constraintSpec scheme="isoschematron" ident="placeName">
+                  <constraint>
+                      <sch:rule context="tei:placeName[ancestor::tei:TEI[@type='mss|pers|work']]">
+                          <sch:report test="not(@corresp)">A placeName  in a mss, person or work description should always 
+                              contain an attribute @corresp pointing to the relevant record</sch:report>
+                      </sch:rule>
+                  </constraint>
+              </constraintSpec>
               <attList>
-                  <attDef ident="corresp" mode="change" usage="req"/>
+                  <attDef ident="corresp" mode="change" usage="rec"/>
               </attList>
           </elementSpec>
           
           
       
           
-          
+<!--          controlled values for material-->
           <elementSpec ident="material" mode="change" module="msdescription">
               <attList>
                   <attDef ident="key" mode="replace" usage="req">
@@ -587,6 +594,9 @@
               </attList>
           </elementSpec>
 
+
+<!--controlled values for relation
+          between people, places, works-->
           <elementSpec ident="relation" mode="change" module="namesdates">
               <attList>
                   <attDef ident="name" mode="replace" usage="req">
@@ -653,7 +663,46 @@
                 
          
 <!--         TESTS ONLY -->
-                
+          
+          <elementSpec ident="TEI" module="textstructure" mode="change">
+              <!--             testing for origDate in origin-->
+              <constraintSpec scheme="isoschematron" ident="TEI">
+                  <constraint>
+                      <sch:rule context="tei:TEI">
+                          <sch:report test="not(@type)">Each record must have a type with one of the values suggested.</sch:report>
+                      </sch:rule>
+                  </constraint>
+              </constraintSpec>
+              <attList>
+                  <attDef ident="xml:id" mode="change" usage="req"/>
+                  
+                  <attDef ident="name" mode="replace" usage="req">
+                      <valList type="closed">
+                          <valItem ident="mss">
+                              <desc>Description of a Manuscript</desc>
+                          </valItem>
+                          <valItem ident="pers">
+                              
+                              <desc>Description of a Person</desc>
+                          </valItem>
+                          <valItem ident="place">
+                              
+                              <desc>Description of a generic place</desc>
+                          </valItem>
+                          <valItem ident="ins">
+                              
+                              <desc>Description of an institution where manuscripts are preserved</desc>
+                          </valItem>
+                          <valItem ident="work">
+                              
+                              <desc>Description of a recognizable literary or documentary work at any given granularity</desc>
+                          </valItem>
+                      </valList>
+                  </attDef>
+                  
+              </attList>
+          </elementSpec>
+          
           <elementSpec ident="origin" module="msdescription" mode="change">
               <!--             testing for origDate in origin-->
               <constraintSpec scheme="isoschematron" ident="origin">

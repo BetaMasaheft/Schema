@@ -3,7 +3,7 @@
 href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="INS00000030Addaqaharsi">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="INS00000030Addaqaharsi" type="ins">
    <!--   CHANGE THE ID TO CORRESPOND TO THE FILENAME and the identifier for this Institution-->
    <teiHeader>
       <fileDesc>
