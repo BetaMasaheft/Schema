@@ -3,7 +3,7 @@
 href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" 
 schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
-<?xml-model href="tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:id="LIT1001Homili"  xml:lang="en" type="work">
     <teiHeader>
@@ -14,9 +14,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 <date><!--date of work--></date>
                 </title>
                 
-                <title xml:lang="en"><!--the title of the work in english--></title>
-                <title xml:lang="gez" type="alt"><!--a different title of the work--></title>
-                <title type="normalized" xml:lang="gez"><!--the title of the work normalized--></title>
+                <title xml:lang="en" corresp="#t1"><!--the title of the work in english--></title>
+                <title xml:lang="gez" xml:id="t2"><!--a different title of the work--></title>
+                <title type="normalized" xml:lang="gez" corresp="#t1"><!--the title of the work normalized--></title>
                 <author><persName corresp="PRS11111aaaa"/><!--reference to the person file of the author--></author>
             </titleStmt>
             <publicationStmt>

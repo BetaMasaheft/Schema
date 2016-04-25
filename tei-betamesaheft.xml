@@ -621,7 +621,7 @@
                           <valItem ident="patron"/>
                       </valList>
                   </attDef>
-                  <attDef ident="type" mode="add">
+                  <attDef ident="type" mode="change">
                       <valList>
                           <valItem ident="normalized"/>
                       </valList>
@@ -641,7 +641,7 @@
               </constraintSpec>
               <attList>
                   <attDef ident="corresp" mode="change" usage="rec"/>
-                  <attDef ident="type" mode="add">
+                  <attDef ident="type" mode="change">
                       <valList>
                           <valItem ident="normalized"/>
                       </valList>
