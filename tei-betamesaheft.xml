@@ -301,6 +301,7 @@
                           <valItem ident="otherLanguages"/>
                           <valItem ident="translation"/>
                           <valItem ident="secondary"/>
+                          <valItem ident="relations"/>
                       </valList>
                   </attDef>
               </attList>
