@@ -269,6 +269,12 @@
                               for the titles in other languages translating each of the given titles. 
                               Format of the id should be like t1 t2, etc.</sch:report>
                       </sch:rule>
+                      <sch:rule context="tei:title[ancestor::tei:TEI[@type='work']]/@xml:id">
+                          <sch:report test="not(matches(.,'t\d+'))">
+                              Titles of works must have ids starting with the letter 't' followed by a 
+                              progressive number, e.g. t1, t2, t3
+                          </sch:report>
+                      </sch:rule>
                   </constraint>
               </constraintSpec>
               <attList>
@@ -339,10 +345,15 @@
               <constraintSpec scheme="isoschematron" ident="bibl">
                   <constraint>
                       <sch:rule context="tei:bibl[ancestor::tei:listBibl[@type='mss']]">
-                          <sch:report test="not(@corresp)">bibl in a mss list of references must always contain a @corresp pointing to a project xml:id of a manuscript or to an external resource (in which case you need to add a @type="external")</sch:report>
+                          <sch:report test="not(@corresp)">bibl in a mss list of references 
+                              must always contain a @corresp pointing to a project xml:id of 
+                              a manuscript or to an external resource (in which case you need 
+                              to add a @type="external")</sch:report>
                       </sch:rule>
                       <sch:rule context="tei:bibl[ancestor::tei:listBibl[@type='mss']][@type='external']">
-                          <sch:report test="not(tei:ptr[@target])">bibl in a mss list of references with a @type="external" must contain a pointer with @target cointaing a full uri to the resource</sch:report>
+                          <sch:report test="not(tei:ptr[@target])">bibl in a mss list of references with 
+                              a @type="external" must contain a pointer with @target cointaing a 
+                              full uri to the resource</sch:report>
                       </sch:rule>
                   </constraint>
               </constraintSpec>
@@ -353,10 +364,15 @@
               <constraintSpec scheme="isoschematron" ident="witness">
                   <constraint>
                       <sch:rule context="tei:witness">
-                          <sch:report test="not(@corresp)">witness must always contain a @corresp pointing to a project xml:id of a manuscript or to an external resource (in which case you need to add a @type="external")</sch:report>
+                          <sch:report test="not(@corresp)">witness must always contain 
+                              a @corresp pointing to a project xml:id of a manuscript or 
+                              to an external resource (in which case you need to add 
+                              a @type="external")</sch:report>
                       </sch:rule>
                       <sch:rule context="tei:witness[ancestor::tei:listBibl[@type='mss']][@type='external']">
-                          <sch:report test="not(tei:ptr[@target])">bibl in a mss list of references with a @type="external" must contain a pointer with @target cointaing a full uri to the resource</sch:report>
+                          <sch:report test="not(tei:ptr[@target])">bibl in a mss list 
+                              of references with a @type="external" must contain a
+                              pointer with @target cointaing a full uri to the resource</sch:report>
                       </sch:rule>
                   </constraint>
               </constraintSpec>
@@ -435,6 +451,12 @@
                       <sch:rule context="tei:ab[ancestor::tei:note]">
                           <sch:report test="not(@type='history') or not(@type='description') ">ab in note is used in listPlace for institutions and should always have a @type='history' or 'description'</sch:report>
                       </sch:rule>
+                      <sch:rule context="tei:ab[@subtype='dividers']/@xml:id">
+                          <sch:report test="not(matches(.,'div\d+'))">
+                              Dividers must have ids starting with 'div' followed by a 
+                              progressive number, e.g. div1, div2, div3
+                          </sch:report>
+                      </sch:rule>
                   </constraint>
               </constraintSpec>
               <attList>
@@ -467,8 +489,20 @@
           <elementSpec ident="decoNote" mode="change" module="msdescription">
               <constraintSpec scheme="isoschematron" ident="decoNote">
                   <constraint>
-                      <sch:rule context="tei:decoNote">
+                      <sch:rule context="tei:decoNote[not(ancestor::tei:bindingDesc)]">
                           <sch:report test="not(child::tei:locus)">decoNote must contain a locus to indicate the position of the feature</sch:report>
+                      </sch:rule>
+                      <sch:rule context="tei:decoNote[not(ancestor::tei:bindingDesc)]/@xml:id">
+                          <sch:report test="not(matches(.,'d\d+'))">
+                              DecoNotes must have ids starting with the letter 'd' followed by a 
+                              progressive number, e.g. d1, d2, d3
+                          </sch:report>
+                      </sch:rule>
+                      <sch:rule context="tei:decoNote[ancestor::tei:bindingDesc]/@xml:id">
+                          <sch:report test="not(matches(.,'b\d+'))">
+                              DecoNotes in Binding Description must have ids starting with the letter 'b' followed by a 
+                              progressive number, e.g. b1, b2, b3
+                          </sch:report>
                       </sch:rule>
                   </constraint>
               </constraintSpec>
@@ -506,12 +540,48 @@
           
 <!--          require @xml:id-->
           <elementSpec ident="msPart" mode="change" module="msdescription">
+              <constraintSpec scheme="isoschematron" ident="msPart">
+                  <constraint>
+                      <sch:rule context="tei:msPart/@xml:id">
+                          <sch:report test="not(matches(.,'p\d+'))">
+                              Manuscript parts ids must start with the letter 'p' followed by a 
+                              progressive number, e.g. p1, p1.3, p1.1_i1.1
+                              </sch:report>
+                          <sch:report test="matches(.,'(_.*){2}')">
+                              The Underscore is used in ids to mark a nesting of differnt ids, especially items in parts.
+                              there should thus be only one of them as a maximum. 
+                              If you have parts into parts or items into items, please use a full stop. 
+                              p1.2_i3.4 is e.g. the subitem 4 of item 3 in subpart 2 of part 1.
+                          </sch:report>
+                      </sch:rule>
+                  </constraint>
+              </constraintSpec>
               <attList>
                   <attDef ident="xml:id" mode="change" usage="req"/>
               </attList>
           </elementSpec>
           
           <elementSpec ident="msItem" mode="change" module="msdescription">
+              <constraintSpec scheme="isoschematron" ident="msItem">
+                  <constraint>
+                      <sch:rule context="tei:msItem/@xml:id">
+                          <sch:report test="not(matches(.,'_i\d+') or matches(.,'coloph'))">
+                              Content Items in Manuscript parts must have ids starting with the 
+                              reference to the part in which they are contained, 
+                              then underscore and the letter 'i' followed by a 
+                              progressive number, e.g. p1.1_i1.1, p1.1_i2.
+                              The only exception is colophon which takes an id 
+                              colophon followed by a number, e.g. coloph1, coloph2.
+                          </sch:report>
+                          <sch:report test="matches(.,'(_.*){2}')">
+                              The Underscore is used in ids to mark a nesting of differnt ids, especially items in parts.
+                              there should thus be only one of them as a maximum. 
+                              If you have parts into parts or items into items, please use a full stop. 
+                              p1.2_i3.4 is e.g. the subitem 4 of item 3 in subpart 2 of part 1.
+                          </sch:report>
+                      </sch:rule>
+                  </constraint>
+              </constraintSpec>
               <attList>
                   <attDef ident="xml:id" mode="change" usage="req"/>
               </attList>
@@ -521,8 +591,11 @@
           <elementSpec ident="handNote" mode="change" module="msdescription">
               <constraintSpec scheme="isoschematron" ident="handNote">
                   <constraint>
-                      <sch:rule context="tei:persName[ancestor::tei:handNote]">
-                          <sch:report test="not(@role='scribe')">persName in handNote must have a @role='scribe'</sch:report>
+                      <sch:rule context="tei:handNote/@xml:id">
+                          <sch:report test="not(matches(.,'h\d+'))">
+                              HandNotes must have ids starting with the letter 'h' followed by a 
+                              progressive number, e.g. h1, h2, h3
+                          </sch:report>
                       </sch:rule>
                   </constraint>
               </constraintSpec>
@@ -581,6 +654,17 @@
           </elementSpec>
           
           <elementSpec ident="addition" mode="change" module="msdescription">
+              <constraintSpec scheme="isoschematron" ident="addition">
+                  <constraint>
+                      <sch:rule context="tei:addition/@xml:id">
+                          <sch:report test="not(matches(.,'a\d+'') or matches(.,'e\d+''))">
+                              Additions must have ids starting with the letter 'a' followed by a 
+                              progressive number, e.g. a1, a2, a3. In case of other 
+                              contents (varia) use an id starting with 'e.
+                          </sch:report>
+                      </sch:rule>
+                  </constraint>
+              </constraintSpec>
               <attList>
                   <attDef ident="xml:id" mode="change" usage="req"/>
               </attList>
@@ -842,7 +926,17 @@
                   </constraint>
               </constraintSpec>
               <attList>
-                  <attDef ident="xml:id" mode="change" usage="req"/>
+                  <attDef ident="xml:id" mode="change" usage="req">
+                      <desc>For Manuscripts e.g.
+                          EMML2312
+                          ES15 (ethiosphere)
+                          BLadd100 (British Library, fondo, numero)
+                          BNFabb3 (Bibliotheque nationale de France, fondo, numero)
+                          Works = LIT1001Homili (LIT + incremental number + first world of title)
+                          Places = LOC2969Ensala (LOC + incremental number + first world of place name)
+                          People = PRS1001AbbaTam (PRS + incremental number + first world of name)
+                          Institutions = INS0030Addaqaharsi (INS + 4 digit number + first world of name)</desc>
+                  </attDef>
                   
                   <attDef ident="type" mode="replace" usage="req">
                       <valList type="closed">
@@ -930,8 +1024,15 @@
               <!--  checks that item in collation has @xml:id-->
               <constraintSpec scheme="isoschematron" ident="item">
                   <constraint>
-                      <sch:rule context="tei:item[ancestor::collation]">
+                      <sch:rule context="tei:item[ancestor::tei:collation]">
                           <sch:report test="not(@xml:id)">items in collation must have an @xml:id</sch:report>
+                      </sch:rule>
+                      <sch:rule context="tei:item[ancestor::tei:collation]/@xml:id">
+                          <sch:report test="not(matches(.,'q\d+'))">
+                              Items in Collation must have ids starting with the letter 'q' followed by a 
+                              progressive number, e.g. q1, q2, q3
+                          </sch:report>
+                          
                       </sch:rule>
                   </constraint>
               </constraintSpec>

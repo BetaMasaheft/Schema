@@ -8,7 +8,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-04-25T10:11:41Z. .
+# Schema generated from ODD source 2016-04-25T15:09:40Z. .
 # TEI Edition: Version 3.0.0. Last updated on
 #	29th March 2016, revision 89ba24e
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -2903,12 +2903,33 @@ tei_item =
          "\x{a}" ~
          "            "
          sch:rule [
-           context = "tei:item[ancestor::collation]"
+           context = "tei:item[ancestor::tei:collation]"
            "\x{a}" ~
            "               "
            sch:report [
              test = "not(@xml:id)"
              "items in collation must have an @xml:id"
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ]
+    >> sch:pattern [
+         id = "tei-betamesaheft-item-item-constraint-13"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:item[ancestor::tei:collation]/@xml:id"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(matches(.,'q\d+'))"
+             "\x{a}" ~
+             "                              Items in Collation must have ids starting with the letter 'q' followed by a \x{a}" ~
+             "                              progressive number, e.g. q1, q2, q3\x{a}" ~
+             "                          "
            ]
            "\x{a}" ~
            "            "
@@ -3266,7 +3287,7 @@ tei_title =
   element title {
     tei_macro.paraContent
     >> sch:pattern [
-         id = "tei-betamesaheft-title-title-constraint-13"
+         id = "tei-betamesaheft-title-title-constraint-14"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3279,6 +3300,28 @@ tei_title =
              "                              an @xml:id which identifies alternative titles and @corresp \x{a}" ~
              "                              for the titles in other languages translating each of the given titles. \x{a}" ~
              "                              Format of the id should be like t1 t2, etc."
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ]
+    >> sch:pattern [
+         id = "tei-betamesaheft-title-title-constraint-15"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context =
+             "tei:title[ancestor::tei:TEI[@type='work']]/@xml:id"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(matches(.,'t\d+'))"
+             "\x{a}" ~
+             "                              Titles of works must have ids starting with the letter 't' followed by a \x{a}" ~
+             "                              progressive number, e.g. t1, t2, t3\x{a}" ~
+             "                          "
            ]
            "\x{a}" ~
            "            "
@@ -3434,7 +3477,7 @@ tei_bibl =
       | tei_model.biblPart
       | tei_model.global)*)
     >> sch:pattern [
-         id = "tei-betamesaheft-bibl-bibl-constraint-14"
+         id = "tei-betamesaheft-bibl-bibl-constraint-16"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3443,7 +3486,10 @@ tei_bibl =
            "               "
            sch:report [
              test = "not(@corresp)"
-             'bibl in a mss list of references must always contain a @corresp pointing to a project xml:id of a manuscript or to an external resource (in which case you need to add a @type="external")'
+             "bibl in a mss list of references \x{a}" ~
+             "                              must always contain a @corresp pointing to a project xml:id of \x{a}" ~
+             "                              a manuscript or to an external resource (in which case you need \x{a}" ~
+             '                              to add a @type="external")'
            ]
            "\x{a}" ~
            "            "
@@ -3452,7 +3498,7 @@ tei_bibl =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-bibl-bibl-constraint-15"
+         id = "tei-betamesaheft-bibl-bibl-constraint-17"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3462,7 +3508,9 @@ tei_bibl =
            "               "
            sch:report [
              test = "not(tei:ptr[@target])"
-             'bibl in a mss list of references with a @type="external" must contain a pointer with @target cointaing a full uri to the resource'
+             "bibl in a mss list of references with \x{a}" ~
+             '                              a @type="external" must contain a pointer with @target cointaing a \x{a}' ~
+             "                              full uri to the resource"
            ]
            "\x{a}" ~
            "            "
@@ -3490,7 +3538,7 @@ tei_biblStruct =
       | tei_citedRange)*)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-biblStruct-deprecate-altIdentifier-child-constraint-14"
+           "tei-betamesaheft-biblStruct-deprecate-altIdentifier-child-constraint-16"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3560,7 +3608,7 @@ tei_relatedItem =
     ((tei_model.biblLike | tei_model.ptrLike)?)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-relatedItem-targetorcontent1-constraint-15"
+           "tei-betamesaheft-relatedItem-targetorcontent1-constraint-17"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3619,7 +3667,7 @@ tei_l =
       | tei_model.global)*)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-l-abstractModel-structure-l-constraint-16"
+           "tei-betamesaheft-l-abstractModel-structure-l-constraint-18"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3682,7 +3730,7 @@ tei_lg =
        ]
     >> sch:pattern [
          id =
-           "tei-betamesaheft-lg-abstractModel-structure-l-constraint-17"
+           "tei-betamesaheft-lg-abstractModel-structure-l-constraint-19"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4144,7 +4192,7 @@ tei_quotation =
     (tei_model.pLike*)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-quotation-quotationContents-constraint-18"
+           "tei-betamesaheft-quotation-quotationContents-constraint-20"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4463,16 +4511,19 @@ tei_handNote =
   element handNote {
     tei_macro.specialPara
     >> sch:pattern [
-         id = "tei-betamesaheft-handNote-handNote-constraint-16"
+         id = "tei-betamesaheft-handNote-handNote-constraint-18"
          "\x{a}" ~
          "            "
          sch:rule [
-           context = "tei:persName[ancestor::tei:handNote]"
+           context = "tei:handNote/@xml:id"
            "\x{a}" ~
            "               "
            sch:report [
-             test = "not(@role='scribe')"
-             "persName in handNote must have a @role='scribe'"
+             test = "not(matches(.,'h\d+'))"
+             "\x{a}" ~
+             "                              HandNotes must have ids starting with the letter 'h' followed by a \x{a}" ~
+             "                              progressive number, e.g. h1, h2, h3\x{a}" ~
+             "                          "
            ]
            "\x{a}" ~
            "            "
@@ -4840,7 +4891,7 @@ tei_TEI =
   element TEI {
     (tei_teiHeader, tei_model.resourceLike+)
     >> sch:pattern [
-         id = "tei-betamesaheft-TEI-TEI-constraint-17"
+         id = "tei-betamesaheft-TEI-TEI-constraint-19"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4885,7 +4936,7 @@ tei_TEI =
     tei_att.global.responsibility.attribute.resp,
     tei_att.typed.attribute.subtype,
     
-    ## (identifier) provides a unique identifier for the element bearing the attribute.
+    ## (identifier) For Manuscripts e.g. EMML2312 ES15 (ethiosphere) BLadd100 (British Library, fondo, numero) BNFabb3 (Bibliotheque nationale de France, fondo, numero) Works = LIT1001Homili (LIT + incremental number + first world of title) Places = LOC2969Ensala (LOC + incremental number + first world of place name) People = PRS1001AbbaTam (PRS + incremental number + first world of name) Institutions = INS0030Addaqaharsi (INS + 4 digit number + first world of name)
     attribute xml:id { xsd:ID },
     
     ##
@@ -4988,7 +5039,7 @@ tei_div =
       (tei_model.divBottom, tei_model.global*)*)?)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-div-abstractModel-structure-l-constraint-21"
+           "tei-betamesaheft-div-abstractModel-structure-l-constraint-23"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -5009,7 +5060,7 @@ tei_div =
        ]
     >> sch:pattern [
          id =
-           "tei-betamesaheft-div-abstractModel-structure-p-constraint-22"
+           "tei-betamesaheft-div-abstractModel-structure-p-constraint-24"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -5746,7 +5797,7 @@ tei_s =
   element s {
     tei_macro.phraseSeq
     >> sch:pattern [
-         id = "tei-betamesaheft-s-noNestedS-constraint-23"
+         id = "tei-betamesaheft-s-noNestedS-constraint-25"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6154,7 +6205,7 @@ tei_ab =
   element ab {
     tei_macro.paraContent
     >> sch:pattern [
-         id = "tei-betamesaheft-ab-ab-constraint-18"
+         id = "tei-betamesaheft-ab-ab-constraint-20"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6172,7 +6223,7 @@ tei_ab =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-ab-ab-constraint-19"
+         id = "tei-betamesaheft-ab-ab-constraint-21"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6190,8 +6241,29 @@ tei_ab =
          "         "
        ]
     >> sch:pattern [
+         id = "tei-betamesaheft-ab-ab-constraint-22"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:ab[@subtype='dividers']/@xml:id"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(matches(.,'div\d+'))"
+             "\x{a}" ~
+             "                              Dividers must have ids starting with 'div' followed by a \x{a}" ~
+             "                              progressive number, e.g. div1, div2, div3\x{a}" ~
+             "                          "
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ]
+    >> sch:pattern [
          id =
-           "tei-betamesaheft-ab-abstractModel-structure-p-constraint-26"
+           "tei-betamesaheft-ab-abstractModel-structure-p-constraint-29"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6213,7 +6285,7 @@ tei_ab =
        ]
     >> sch:pattern [
          id =
-           "tei-betamesaheft-ab-abstractModel-structure-l-constraint-27"
+           "tei-betamesaheft-ab-abstractModel-structure-l-constraint-30"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6354,7 +6426,7 @@ tei_dimensions =
   element dimensions {
     ((tei_dim | tei_model.dimLike)*)
     >> sch:pattern [
-         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-28"
+         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-31"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6376,7 +6448,7 @@ tei_dimensions =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-29"
+         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-32"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6398,7 +6470,7 @@ tei_dimensions =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-30"
+         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-33"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6607,7 +6679,7 @@ tei_locus =
   element locus {
     tei_macro.xtext
     >> sch:pattern [
-         id = "tei-betamesaheft-locus-locus-constraint-20"
+         id = "tei-betamesaheft-locus-locus-constraint-23"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6923,7 +6995,7 @@ tei_msIdentifier =
       tei_idno?),
      (tei_msName | tei_altIdentifier)*)
     >> sch:pattern [
-         id = "tei-betamesaheft-msIdentifier-msId_minimal-constraint-32"
+         id = "tei-betamesaheft-msIdentifier-msId_minimal-constraint-35"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7068,7 +7140,43 @@ tei_msItem =
      (tei_model.pLike+
       | (tei_model.titlepagePart
          | tei_model.msItemPart
-         | tei_model.global)+)),
+         | tei_model.global)+))
+    >> sch:pattern [
+         id = "tei-betamesaheft-msItem-msItem-constraint-24"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:msItem/@xml:id"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(matches(.,'_i\d+') or matches(.,'coloph'))"
+             "\x{a}" ~
+             "                              Content Items in Manuscript parts must have ids starting with the \x{a}" ~
+             "                              reference to the part in which they are contained, \x{a}" ~
+             "                              then underscore and the letter 'i' followed by a \x{a}" ~
+             "                              progressive number, e.g. p1.1_i1.1, p1.1_i2.\x{a}" ~
+             "                              The only exception is colophon which takes an id \x{a}" ~
+             "                              colophon followed by a number, e.g. coloph1, coloph2.\x{a}" ~
+             "                          "
+           ]
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "matches(.,'(_.*){2}')"
+             "\x{a}" ~
+             "                              The Underscore is used in ids to mark a nesting of differnt ids, especially items in parts.\x{a}" ~
+             "                              there should thus be only one of them as a maximum. \x{a}" ~
+             "                              If you have parts into parts or items into items, please use a full stop. \x{a}" ~
+             "                              p1.2_i3.4 is e.g. the subitem 4 of item 3 in subpart 2 of part 1.\x{a}" ~
+             "                          "
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
     tei_att.global.attribute.n,
     tei_att.global.attribute.xmllang,
     tei_att.global.attribute.xmlbase,
@@ -7323,16 +7431,59 @@ tei_decoNote =
   element decoNote {
     tei_macro.specialPara
     >> sch:pattern [
-         id = "tei-betamesaheft-decoNote-decoNote-constraint-21"
+         id = "tei-betamesaheft-decoNote-decoNote-constraint-25"
          "\x{a}" ~
          "            "
          sch:rule [
-           context = "tei:decoNote"
+           context = "tei:decoNote[not(ancestor::tei:bindingDesc)]"
            "\x{a}" ~
            "               "
            sch:report [
              test = "not(child::tei:locus)"
              "decoNote must contain a locus to indicate the position of the feature"
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ]
+    >> sch:pattern [
+         id = "tei-betamesaheft-decoNote-decoNote-constraint-26"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context =
+             "tei:decoNote[not(ancestor::tei:bindingDesc)]/@xml:id"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(matches(.,'d\d+'))"
+             "\x{a}" ~
+             "                              DecoNotes must have ids starting with the letter 'd' followed by a \x{a}" ~
+             "                              progressive number, e.g. d1, d2, d3\x{a}" ~
+             "                          "
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ]
+    >> sch:pattern [
+         id = "tei-betamesaheft-decoNote-decoNote-constraint-27"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:decoNote[ancestor::tei:bindingDesc]/@xml:id"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(matches(.,'b\d+'))"
+             "\x{a}" ~
+             "                              DecoNotes in Binding Description must have ids starting with the letter 'b' followed by a \x{a}" ~
+             "                              progressive number, e.g. b1, b2, b3\x{a}" ~
+             "                          "
            ]
            "\x{a}" ~
            "            "
@@ -7466,7 +7617,7 @@ tei_origin =
   element origin {
     tei_macro.specialPara
     >> sch:pattern [
-         id = "tei-betamesaheft-origin-origin-constraint-22"
+         id = "tei-betamesaheft-origin-origin-constraint-28"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7591,8 +7742,40 @@ tei_msPart =
          tei_additional?,
          tei_msPart*)))
     >> sch:pattern [
+         id = "tei-betamesaheft-msPart-msPart-constraint-29"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:msPart/@xml:id"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(matches(.,'p\d+'))"
+             "\x{a}" ~
+             "                              Manuscript parts ids must start with the letter 'p' followed by a \x{a}" ~
+             "                              progressive number, e.g. p1, p1.3, p1.1_i1.1\x{a}" ~
+             "                              "
+           ]
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "matches(.,'(_.*){2}')"
+             "\x{a}" ~
+             "                              The Underscore is used in ids to mark a nesting of differnt ids, especially items in parts.\x{a}" ~
+             "                              there should thus be only one of them as a maximum. \x{a}" ~
+             "                              If you have parts into parts or items into items, please use a full stop. \x{a}" ~
+             "                              p1.2_i3.4 is e.g. the subitem 4 of item 3 in subpart 2 of part 1.\x{a}" ~
+             "                          "
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ]
+    >> sch:pattern [
          id =
-           "tei-betamesaheft-msPart-deprecate-altIdentifier-child-constraint-35"
+           "tei-betamesaheft-msPart-deprecate-altIdentifier-child-constraint-44"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7811,7 +7994,7 @@ tei_persName =
   element persName {
     tei_macro.phraseSeq
     >> sch:pattern [
-         id = "tei-betamesaheft-persName-persName-constraint-23"
+         id = "tei-betamesaheft-persName-persName-constraint-30"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7973,7 +8156,7 @@ tei_placeName =
   element placeName {
     tei_macro.phraseSeq
     >> sch:pattern [
-         id = "tei-betamesaheft-placeName-placeName-constraint-24"
+         id = "tei-betamesaheft-placeName-placeName-constraint-31"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -8214,7 +8397,7 @@ tei_geo =
   element geo {
     text
     >> sch:pattern [
-         id = "tei-betamesaheft-geo-geo-constraint-25"
+         id = "tei-betamesaheft-geo-geo-constraint-32"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -8515,7 +8698,7 @@ tei_relation =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-relation-activemutual-constraint-39"
+         id = "tei-betamesaheft-relation-activemutual-constraint-48"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -8534,7 +8717,7 @@ tei_relation =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-relation-activepassive-constraint-40"
+         id = "tei-betamesaheft-relation-activepassive-constraint-49"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -9146,7 +9329,7 @@ tei_witness =
   element witness {
     tei_macro.limitedContent
     >> sch:pattern [
-         id = "tei-betamesaheft-witness-witness-constraint-26"
+         id = "tei-betamesaheft-witness-witness-constraint-33"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -9155,7 +9338,10 @@ tei_witness =
            "               "
            sch:report [
              test = "not(@corresp)"
-             'witness must always contain a @corresp pointing to a project xml:id of a manuscript or to an external resource (in which case you need to add a @type="external")'
+             "witness must always contain \x{a}" ~
+             "                              a @corresp pointing to a project xml:id of a manuscript or \x{a}" ~
+             "                              to an external resource (in which case you need to add \x{a}" ~
+             '                              a @type="external")'
            ]
            "\x{a}" ~
            "            "
@@ -9164,7 +9350,7 @@ tei_witness =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-witness-witness-constraint-27"
+         id = "tei-betamesaheft-witness-witness-constraint-34"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -9174,7 +9360,9 @@ tei_witness =
            "               "
            sch:report [
              test = "not(tei:ptr[@target])"
-             'bibl in a mss list of references with a @type="external" must contain a pointer with @target cointaing a full uri to the resource'
+             "bibl in a mss list \x{a}" ~
+             '                              of references with a @type="external" must contain a\x{a}' ~
+             "                              pointer with @target cointaing a full uri to the resource"
            ]
            "\x{a}" ~
            "            "
@@ -9224,7 +9412,7 @@ tei_variantEncoding =
     }
     >> sch:pattern [
          id =
-           "tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-28"
+           "tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-35"
          "\x{a}" ~
          "            "
          sch:rule [
