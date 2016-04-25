@@ -43,9 +43,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       </profileDesc>
       <revisionDesc>
 <!--         if you are creating a record, remove this change elements and add the one describing your work-->
-         <change who="Pietro Liuzzo" when="2016-03-21T16:59:56.911+01:00"> Created file from
+         <change who="PL" when="2016-03-21T16:59:56.911+01:00"> Created file from
             google spreadsheet </change>
-         <change who="Eugenia Sokolinski" when="2016-02-09-12:00">CREATED: place</change>
+         <change who="ES" when="2016-02-09-12:00">CREATED: place</change>
       </revisionDesc>
    </teiHeader>
    <text>
@@ -79,22 +79,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             
             <listRelation>
 <!--               If some relation is known, than use one relation element for each. Alter or Remove the mock example below if not needed!!-->
-               <relation name=""></relation>
-               <relation name="fatherOf" active="#PRS1009Abakaraz" passive="#PRS1000Abakaraz #PRS1020Abakaraz"/>
-                  <relation name="husbandOf" active="#PRS1009Abakaraz" passive="#PRS1030Abakaraz"/>
-<!--               possible relations are
-               
-daughterOf
-sonOf
-fatherOf
-motherOf
-grandfatherOf
-grandmotherOf
-brotherOf
-sisterOf
-wifeOf
-husbandOf
-etc. as in contextual menu
+               <relation name="snap:GrandsonOf"/>
+               <relation name="bm:brotherInLawOf" active="#PRS1009Abakaraz" passive="#PRS1000Abakaraz #PRS1020Abakaraz"/>
+                  <relation name="snap:AuntOf" active="#PRS1009Abakaraz" passive="#PRS1030Abakaraz"/>
+<!--               possible relations are those of the SNAP ontology 
                -->
             </listRelation>
             

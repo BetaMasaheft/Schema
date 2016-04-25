@@ -34,7 +34,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
            <msContents>
                 <summary>
                 </summary>
-                <msItem xml:id="i1">
+                <msItem xml:id="ms_i1">
                   <locus target="#00"/>
                   <rubric/>
                   <incipit> </incipit>
@@ -43,6 +43,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   <textLang mainLang="gez">Ge'ez</textLang>
                   <listBibl type="mss">
                     <bibl corresp="#ENTERID"><ptr/><citedRange unit="fol"></citedRange></bibl>
+                  <relation name="saws:contains" active="ENTERID" passive="ES9876">
+                    <desc></desc>
+                  </relation>
                   </listBibl>
                   <note/>
                 </msItem>
@@ -116,7 +119,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 <handNote xml:id="h1" script="Ethiopic">
                   <ab type="script"></ab>
                   <seg type="ink">Black, red</seg>
-                  <persName role="scribe"/>
+                  <persName role="scribe" corresp="PRS9999nome"/>
                   <date></date>
                   <desc></desc>
                   <ab type="rubrication"></ab>
@@ -160,12 +163,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                     <desc type="Tailband"/>
                   </decoNote>
                   <decoNote xml:id="b3" type="Other">
-                    <locus></locus></decoNote>
+                    </decoNote>
                 </binding>
               </bindingDesc>
             </physDesc>
             <history>
               <origin>
+                <origDate></origDate>
                 <origPlace><placeName corresp="PRS2222222"/></origPlace>
               </origin>
             </history>

@@ -138,7 +138,7 @@
 <!--          controlled values for subject typology -->
           <elementSpec ident="term" mode="change" module="msdescription">
               <attList>
-                  <attDef ident="key" mode="replace" usage="req">
+                  <attDef ident="key" mode="replace" usage="rec">
                       <valList type="closed">
 <!--                          list coming from myCore-->
                           <valItem ident="Apocrypha"/>
@@ -449,7 +449,7 @@
                           <sch:report test="not(@type or @subtype)">ab in layout should always have a type and optionally a subtype</sch:report>
                       </sch:rule>
                       <sch:rule context="tei:ab[ancestor::tei:note]">
-                          <sch:report test="not(@type='history') or not(@type='description') ">ab in note is used in listPlace for institutions and should always have a @type='history' or 'description'</sch:report>
+                          <sch:report test="not(@type)">ab in note is used in listPlace for institutions and should always have a @type='history' or 'description'</sch:report>
                       </sch:rule>
                       <sch:rule context="tei:ab[@subtype='dividers']/@xml:id">
                           <sch:report test="not(matches(.,'div\d+'))">
@@ -647,6 +647,7 @@
                           <valItem ident="DN"/> <!--Denis-->
                           <valItem ident="MV"/> <!--Massimo-->
                           <valItem ident="SG"/> <!--Solomon-->
+                          <valItem ident="PL"/> <!--Pietro-->
                       </valList>
                   </attDef>
                   <attDef ident="when" mode="replace" usage="req"/>
@@ -874,6 +875,77 @@
                           <valItem ident="snap:SonOf"/>
                           <valItem ident="snap:StepFamilyRelationship"/>
                           <valItem ident="snap:UncleOf"/>
+<!--                          list INCOMPLETE! -->
+                          <valItem ident="saws:AbstractManuscriptText"/>
+                          <valItem ident="saws:F15_Complex_Work"/>
+                          <valItem ident="saws:F16_Container_Work"/>
+                          <valItem ident="saws:F17_Aggregation_Work"/>
+                          <valItem ident="saws:CLP57_should_have_number_of_parts"/>
+                          <valItem ident="saws:P57_has_number_of_parts"/>
+                          <valItem ident="saws:CLP45_should_consist_of"/>
+                          <valItem ident="saws:CLP45i_should_be_incorporated_in"/>
+                          <valItem ident="saws:CLP46_should_be_composed_of"/>
+                          <valItem ident="saws:CLP46i_may_form_part_of"/>
+                          <valItem ident="saws:CLR6_should_carry"/>
+                          <valItem ident="saws:CLR6i_should_be_carried_by"/>
+                          <valItem ident="saws:commentMadeBy"/>
+                          <valItem ident="saws:contains"/>
+                          <valItem ident="saws:containsTextInLanguage"/>
+                          <valItem ident="saws:decorationAddedBy"/>
+                          <valItem ident="saws:fallsWithin"/>
+                          <valItem ident="saws:follows"/>
+                          <valItem ident="saws:formsPartOf"/>
+                          <valItem ident="saws:hasAncestor"/>
+                          <valItem ident="saws:hasChild"/>
+                          <valItem ident="saws:hasComment"/>
+                          <valItem ident="saws:hasComponent"/>
+                          <valItem ident="saws:hasDescendant"/>
+                          <valItem ident="saws:hasMember"/>
+                          <valItem ident="saws:hasOwned"/>
+                          <valItem ident="saws:hasParent"/>
+                          <valItem ident="saws:hasPart"/>
+                          <valItem ident="saws:hasUsed"/>
+                          <valItem ident="saws:hasWritten"/>
+                          <valItem ident="saws:isAncestorOf"/>
+                          <valItem ident="saws:isAttributedAuthorOf"/>
+                          <valItem ident="saws:isAttributedToAuthor"/>
+                          <valItem ident="saws:isChildOf"/>
+                          <valItem ident="saws:isCloseRenderingOf"/>
+                          <valItem ident="saws:isCloseTranslationOf"/>
+                          <valItem ident="saws:isCommentOn"/>
+                          <valItem ident="saws:isComponentOf"/>
+                          <valItem ident="saws:isDescendantOf"/>
+                          <valItem ident="saws:isDifferentTo"/>
+                          <valItem ident="saws:isDirectCopyOf"/>
+                          <valItem ident="saws:isDirectTranslationOf"/>
+                          <valItem ident="saws:isInSameFamilyAs"/>
+                          <valItem ident="saws:isLongerTranslationOf"/>
+                          <valItem ident="saws:isLongerVersionOf"/>
+                          <valItem ident="saws:isLooseRenderingOf"/>
+                          <valItem ident="saws:isLooseTranslationOf"/>
+                          <valItem ident="saws:isMemberOf"/>
+                          <valItem ident="saws:isNotPresentIn"/>
+                          <valItem ident="saws:isOlderThan"/>
+                          <valItem ident="saws:isParentOf"/>
+                          <valItem ident="saws:isReferencedBy"/>
+                          <valItem ident="saws:isRelatedTo"/>
+                          <valItem ident="saws:isSequentiallySameAs"/>
+                          <valItem ident="saws:isSequentiallySimilarTo"/>
+                          <valItem ident="saws:isShorterTranslationOf"/>
+                          <valItem ident="saws:isShorterVersionOf"/>
+                          <valItem ident="saws:isSiblingOf"/>
+                          <valItem ident="saws:isSourceFor"/>
+                          <valItem ident="saws:isSubSequenceOf"/>
+                          <valItem ident="saws:isTransliterationOf"/>
+                          <valItem ident="saws:isTwinOf"/>
+                          <valItem ident="saws:isUnrelatedTo"/>
+                          <valItem ident="saws:isVariantOf"/>
+                          <valItem ident="saws:isVariantTranslationOf"/>
+                          <valItem ident="saws:isVerbatimOf"/>
+                          <valItem ident="saws:isVerbatimTranslationOf"/>
+                          <valItem ident="saws:isVersionInAnotherLanguageOf"/>
+                          <valItem ident="saws:isVersionOf"/>
+                          <valItem ident="saws:isYoungerThan"/>
                       </valList>
                   </attDef>
                   
@@ -981,7 +1053,7 @@
               <constraintSpec scheme="isoschematron" ident="geo">
                   <constraint>
                       <sch:rule context="tei:geo">
-                          <sch:report test="matches(.,'\-?\d{1,2}\.\d{3,6}\s\-?\d{1,2}\.\d{3,6}')">
+                          <sch:report test="not(matches(.,'\-?\d{1,2}\.\d{3,6}\s\-?\d{1,2}\.\d{3,6}'))">
                               Coordinates should be written as decimal degrees separated 
                               by a single space e.g. "14.165289 39.447665" latitude first. 
                           </sch:report>
@@ -1077,4 +1149,3 @@
         </body>
     </text>
 </TEI>
-

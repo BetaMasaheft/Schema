@@ -8,7 +8,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-04-25T15:09:40Z. .
+# Schema generated from ODD source 2016-04-25T15:59:56Z. .
 # TEI Edition: Version 3.0.0. Last updated on
 #	29th March 2016, revision 89ba24e
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -2410,7 +2410,7 @@ tei_term =
       | 
         ##
         "Theology"
-    },
+    }?,
     empty
   }
 tei_sic =
@@ -4843,6 +4843,9 @@ tei_change =
       | 
         ##
         "SG"
+      | 
+        ##
+        "PL"
     },
     
     ##
@@ -6231,7 +6234,7 @@ tei_ab =
            "\x{a}" ~
            "               "
            sch:report [
-             test = "not(@type='history') or not(@type='description') "
+             test = "not(@type)"
              "ab in note is used in listPlace for institutions and should always have a @type='history' or 'description'"
            ]
            "\x{a}" ~
@@ -8406,7 +8409,7 @@ tei_geo =
            "               "
            sch:report [
              test =
-               "matches(.,'\-?\d{1,2}\.\d{3,6}\s\-?\d{1,2}\.\d{3,6}')"
+               "not(matches(.,'\-?\d{1,2}\.\d{3,6}\s\-?\d{1,2}\.\d{3,6}'))"
              "\x{a}" ~
              "                              Coordinates should be written as decimal degrees separated \x{a}" ~
              '                              by a single space e.g. "14.165289 39.447665" latitude first. \x{a}' ~
@@ -9072,6 +9075,216 @@ tei_relation =
       | 
         ##
         "snap:UncleOf"
+      | 
+        ##
+        "saws:AbstractManuscriptText"
+      | 
+        ##
+        "saws:F15_Complex_Work"
+      | 
+        ##
+        "saws:F16_Container_Work"
+      | 
+        ##
+        "saws:F17_Aggregation_Work"
+      | 
+        ##
+        "saws:CLP57_should_have_number_of_parts"
+      | 
+        ##
+        "saws:P57_has_number_of_parts"
+      | 
+        ##
+        "saws:CLP45_should_consist_of"
+      | 
+        ##
+        "saws:CLP45i_should_be_incorporated_in"
+      | 
+        ##
+        "saws:CLP46_should_be_composed_of"
+      | 
+        ##
+        "saws:CLP46i_may_form_part_of"
+      | 
+        ##
+        "saws:CLR6_should_carry"
+      | 
+        ##
+        "saws:CLR6i_should_be_carried_by"
+      | 
+        ##
+        "saws:commentMadeBy"
+      | 
+        ##
+        "saws:contains"
+      | 
+        ##
+        "saws:containsTextInLanguage"
+      | 
+        ##
+        "saws:decorationAddedBy"
+      | 
+        ##
+        "saws:fallsWithin"
+      | 
+        ##
+        "saws:follows"
+      | 
+        ##
+        "saws:formsPartOf"
+      | 
+        ##
+        "saws:hasAncestor"
+      | 
+        ##
+        "saws:hasChild"
+      | 
+        ##
+        "saws:hasComment"
+      | 
+        ##
+        "saws:hasComponent"
+      | 
+        ##
+        "saws:hasDescendant"
+      | 
+        ##
+        "saws:hasMember"
+      | 
+        ##
+        "saws:hasOwned"
+      | 
+        ##
+        "saws:hasParent"
+      | 
+        ##
+        "saws:hasPart"
+      | 
+        ##
+        "saws:hasUsed"
+      | 
+        ##
+        "saws:hasWritten"
+      | 
+        ##
+        "saws:isAncestorOf"
+      | 
+        ##
+        "saws:isAttributedAuthorOf"
+      | 
+        ##
+        "saws:isAttributedToAuthor"
+      | 
+        ##
+        "saws:isChildOf"
+      | 
+        ##
+        "saws:isCloseRenderingOf"
+      | 
+        ##
+        "saws:isCloseTranslationOf"
+      | 
+        ##
+        "saws:isCommentOn"
+      | 
+        ##
+        "saws:isComponentOf"
+      | 
+        ##
+        "saws:isDescendantOf"
+      | 
+        ##
+        "saws:isDifferentTo"
+      | 
+        ##
+        "saws:isDirectCopyOf"
+      | 
+        ##
+        "saws:isDirectTranslationOf"
+      | 
+        ##
+        "saws:isInSameFamilyAs"
+      | 
+        ##
+        "saws:isLongerTranslationOf"
+      | 
+        ##
+        "saws:isLongerVersionOf"
+      | 
+        ##
+        "saws:isLooseRenderingOf"
+      | 
+        ##
+        "saws:isLooseTranslationOf"
+      | 
+        ##
+        "saws:isMemberOf"
+      | 
+        ##
+        "saws:isNotPresentIn"
+      | 
+        ##
+        "saws:isOlderThan"
+      | 
+        ##
+        "saws:isParentOf"
+      | 
+        ##
+        "saws:isReferencedBy"
+      | 
+        ##
+        "saws:isRelatedTo"
+      | 
+        ##
+        "saws:isSequentiallySameAs"
+      | 
+        ##
+        "saws:isSequentiallySimilarTo"
+      | 
+        ##
+        "saws:isShorterTranslationOf"
+      | 
+        ##
+        "saws:isShorterVersionOf"
+      | 
+        ##
+        "saws:isSiblingOf"
+      | 
+        ##
+        "saws:isSourceFor"
+      | 
+        ##
+        "saws:isSubSequenceOf"
+      | 
+        ##
+        "saws:isTransliterationOf"
+      | 
+        ##
+        "saws:isTwinOf"
+      | 
+        ##
+        "saws:isUnrelatedTo"
+      | 
+        ##
+        "saws:isVariantOf"
+      | 
+        ##
+        "saws:isVariantTranslationOf"
+      | 
+        ##
+        "saws:isVerbatimOf"
+      | 
+        ##
+        "saws:isVerbatimTranslationOf"
+      | 
+        ##
+        "saws:isVersionInAnotherLanguageOf"
+      | 
+        ##
+        "saws:isVersionOf"
+      | 
+        ##
+        "saws:isYoungerThan"
     },
     (
      ## identifies the active participants in a non-mutual relationship, or all the participants in a mutual one.
