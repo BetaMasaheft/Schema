@@ -10,7 +10,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
         <fileDesc>
             <titleStmt>
                 
-                <title xml:lang="gez"><!--the title of the work in english-->
+                <title xml:lang="gez" xml:id="t1"><!--the title of the work in Geez-->
                 <date><!--date of work--></date>
                 </title>
                 

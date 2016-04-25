@@ -588,7 +588,7 @@
           
           <elementSpec ident="height" mode="change" module="msdescription">
               <attList>
-                  <attDef ident="unit" mode="add">
+                  <attDef ident="unit" mode="replace">
                       <valList type="open">
                           <valItem ident="m"/>
                       </valList>

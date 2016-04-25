@@ -8,7 +8,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-04-25T09:50:42Z. .
+# Schema generated from ODD source 2016-04-25T10:01:55Z. .
 # TEI Edition: Version 3.0.0. Last updated on
 #	29th March 2016, revision 89ba24e
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -6571,10 +6571,6 @@ tei_height =
     tei_att.ranging.attribute.min,
     tei_att.ranging.attribute.max,
     tei_att.ranging.attribute.confidence,
-    
-    ## 
-    ## Sample values include: 1] m
-    attribute unit { text }?,
     
     ## 
     ## Sample values include: 1] m
