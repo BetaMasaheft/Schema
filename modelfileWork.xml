@@ -81,11 +81,18 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <listBibl type="otherLanguages">
                 <!--                list manuscripts with this work in other languages-->
                 <bibl></bibl>
+                
+
+            </listBibl>
+            <listBibl type="relations">
+                <bibl></bibl>
                 <relation name="syriaca:share-a-title" mutual="#LIT1001Homili #LIT1002title"/>
             </listBibl>
         </div>
             <div type="edition">
-                <ab></ab>
+                <ab>
+                    
+                </ab>
             </div>
         </body>
     </text>
