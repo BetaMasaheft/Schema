@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2016-04-11T22:01:43Z. .
+Schema generated from ODD source 2016-04-25T09:50:23Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -5061,6 +5061,8 @@ Sample values include: 1] generalEditor</a:documentation>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>MV</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>SG</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </choice>
          </attribute>
          <empty/>
@@ -5114,6 +5116,18 @@ Sample values include: 1] generalEditor</a:documentation>
       <element name="title">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a title for any kind of work. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.5. The Series Statement]</a:documentation>
          <ref name="tei_macro.paraContent"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei-betamesaheft-title-title-constraint-13">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="tei:title[ancestor::tei:TEI[@type='work']]">
+               <sch:report test="not(@xml:id or @corresp)">title in work must always have 
+                              an @xml:id which identifies alternative titles and @corresp 
+                              for the titles in other languages translating each of the given titles. 
+                              Format of the id should be like t1 t2, etc.</sch:report>
+            </sch:rule>
+         </pattern>
          <ref name="tei_att.global.attribute.xmlid"/>
          <ref name="tei_att.global.attribute.n"/>
          <ref name="tei_att.global.attribute.xmllang"/>
@@ -5149,7 +5163,7 @@ Sample values include: 1] generalEditor</a:documentation>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] complete; 2] incomplete; 3] normalized; 4] alt</a:documentation>
+Sample values include: 1] complete; 2] incomplete; 3] normalized</a:documentation>
                <text/>
             </attribute>
          </optional>
@@ -5302,7 +5316,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-bibl-bibl-constraint-13">
+                  id="tei-betamesaheft-bibl-bibl-constraint-14">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5311,7 +5325,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-bibl-bibl-constraint-14">
+                  id="tei-betamesaheft-bibl-bibl-constraint-15">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5360,7 +5374,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-biblStruct-deprecate-altIdentifier-child-constraint-13">
+                  id="tei-betamesaheft-biblStruct-deprecate-altIdentifier-child-constraint-14">
             <rule context="tei:biblStruct">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -5433,7 +5447,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
             </choice>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-relatedItem-targetorcontent1-constraint-14">
+                  id="tei-betamesaheft-relatedItem-targetorcontent1-constraint-15">
             <rule context="tei:relatedItem">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -5477,7 +5491,7 @@ relatedItem element must be empty</sch:report>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-l-abstractModel-structure-l-constraint-15">
+                  id="tei-betamesaheft-l-abstractModel-structure-l-constraint-16">
             <rule context="tei:l">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5546,7 +5560,7 @@ relatedItem element must be empty</sch:report>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-lg-abstractModel-structure-l-constraint-16">
+                  id="tei-betamesaheft-lg-abstractModel-structure-l-constraint-17">
             <rule context="tei:lg">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6273,7 +6287,7 @@ Sample values include: 1] text; 2] corpus</a:documentation>
             <ref name="tei_model.pLike"/>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-quotation-quotationContents-constraint-17">
+                  id="tei-betamesaheft-quotation-quotationContents-constraint-18">
             <rule context="tei:quotation">
                <report xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -6728,7 +6742,7 @@ Suggested values include: 1] WGS84(World Geodetic System) ; 2] MGRS(Military Gri
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(note on hand) describes a particular style or hand distinguished within a manuscript. [10.7.2. Writing, Decoration, and Other Notations]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-handNote-handNote-constraint-15">
+                  id="tei-betamesaheft-handNote-handNote-constraint-16">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -7077,11 +7091,46 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
       <element name="change">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documents a change or set of changes made during the production of a source document, or during the revision of an electronic file. [2.6. The Revision Description 2.4.1. Creation 11.7. Identifying Changes and Revisions]</a:documentation>
          <ref name="tei_macro.specialPara"/>
-         <ref name="tei_att.ascribed.attributes"/>
-         <ref name="tei_att.datable.attributes"/>
+         <ref name="tei_att.datable.attribute.calendar"/>
+         <ref name="tei_att.datable.attribute.period"/>
+         <ref name="tei_att.datable.w3c.attribute.notBefore"/>
+         <ref name="tei_att.datable.w3c.attribute.notAfter"/>
+         <ref name="tei_att.datable.w3c.attribute.from"/>
+         <ref name="tei_att.datable.w3c.attribute.to"/>
+         <ref name="tei_att.datable.iso.attribute.when-iso"/>
+         <ref name="tei_att.datable.iso.attribute.notBefore-iso"/>
+         <ref name="tei_att.datable.iso.attribute.notAfter-iso"/>
+         <ref name="tei_att.datable.iso.attribute.from-iso"/>
+         <ref name="tei_att.datable.iso.attribute.to-iso"/>
+         <ref name="tei_att.datable.custom.attribute.when-custom"/>
+         <ref name="tei_att.datable.custom.attribute.notBefore-custom"/>
+         <ref name="tei_att.datable.custom.attribute.notAfter-custom"/>
+         <ref name="tei_att.datable.custom.attribute.from-custom"/>
+         <ref name="tei_att.datable.custom.attribute.to-custom"/>
+         <ref name="tei_att.datable.custom.attribute.datingPoint"/>
+         <ref name="tei_att.datable.custom.attribute.datingMethod"/>
          <ref name="tei_att.docStatus.attributes"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attributes"/>
+         <attribute name="who">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <choice>
+               <value>AB</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>ES</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>DN</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>MV</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>SG</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
+         <attribute name="when">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <text/>
+         </attribute>
          <optional>
             <attribute name="target">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">points to one or more elements that belong to this change.</a:documentation>
@@ -7145,6 +7194,15 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                <ref name="tei_model.resourceLike"/>
             </oneOrMore>
          </group>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei-betamesaheft-TEI-TEI-constraint-17">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="tei:TEI">
+               <sch:report test="not(@type)">Each record must have a type with one of the values suggested.</sch:report>
+            </sch:rule>
+         </pattern>
          <ns xmlns="http://purl.oclc.org/dsdl/schematron"
              prefix="tei"
              uri="http://www.tei-c.org/ns/1.0"/>
@@ -7174,10 +7232,25 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
          <ref name="tei_att.global.change.attribute.change"/>
          <ref name="tei_att.global.responsibility.attribute.cert"/>
          <ref name="tei_att.global.responsibility.attribute.resp"/>
-         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.typed.attribute.subtype"/>
          <attribute name="xml:id">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) provides a unique identifier for the element bearing the attribute.</a:documentation>
             <data type="ID"/>
+         </attribute>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <choice>
+               <value>mss</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Description of a Manuscript</a:documentation>
+               <value>pers</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Description of a Person</a:documentation>
+               <value>place</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Description of a generic place</a:documentation>
+               <value>ins</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Description of an institution where manuscripts are preserved</a:documentation>
+               <value>work</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Description of a recognizable literary or documentary work at any given granularity</a:documentation>
+            </choice>
          </attribute>
          <optional>
             <attribute name="version">
@@ -7544,7 +7617,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
             </optional>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-div-abstractModel-structure-l-constraint-19">
+                  id="tei-betamesaheft-div-abstractModel-structure-l-constraint-21">
             <rule context="tei:div">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7554,7 +7627,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-div-abstractModel-structure-p-constraint-20">
+                  id="tei-betamesaheft-div-abstractModel-structure-p-constraint-22">
             <rule context="tei:div">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -8587,7 +8660,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(s-unit) contains a sentence-like division of a text. [17.1. Linguistic Segment Categories 8.4.1. Segmentation]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-s-noNestedS-constraint-21">
+                  id="tei-betamesaheft-s-noNestedS-constraint-23">
             <rule context="tei:s">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9153,7 +9226,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(anonymous block) contains any arbitrary component-level unit of text, acting as an anonymous container for phrase or inter level elements analogous to, but without the semantic baggage of, a paragraph. [16.3. Blocks, Segments, and Anchors]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ab-ab-constraint-16">
+                  id="tei-betamesaheft-ab-ab-constraint-18">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9162,7 +9235,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ab-ab-constraint-17">
+                  id="tei-betamesaheft-ab-ab-constraint-19">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9171,7 +9244,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ab-abstractModel-structure-p-constraint-24">
+                  id="tei-betamesaheft-ab-abstractModel-structure-p-constraint-26">
             <rule context="tei:ab">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9181,7 +9254,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ab-abstractModel-structure-l-constraint-25">
+                  id="tei-betamesaheft-ab-abstractModel-structure-l-constraint-27">
             <rule context="tei:ab">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9358,7 +9431,7 @@ You must supply at least two values for @target on <name/>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-26">
+                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-28">
             <rule context="tei:dimensions">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9368,7 +9441,7 @@ The element <name/> may appear once only
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-27">
+                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-29">
             <rule context="tei:dimensions">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9378,7 +9451,7 @@ The element <name/> may appear once only
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-28">
+                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-30">
             <rule context="tei:dimensions">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9539,7 +9612,29 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a measurement measured along the axis at right angles to the bottom of the written surface, i.e. parallel to the spine for a codex or book. [10.3.4. Dimensions]</a:documentation>
          <ref name="tei_macro.xtext"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.dimensions.attributes"/>
+         <ref name="tei_att.dimensions.attribute.precision"/>
+         <ref name="tei_att.dimensions.attribute.quantity"/>
+         <ref name="tei_att.dimensions.attribute.extent"/>
+         <ref name="tei_att.dimensions.attribute.scope"/>
+         <ref name="tei_att.ranging.attribute.atLeast"/>
+         <ref name="tei_att.ranging.attribute.atMost"/>
+         <ref name="tei_att.ranging.attribute.min"/>
+         <ref name="tei_att.ranging.attribute.max"/>
+         <ref name="tei_att.ranging.attribute.confidence"/>
+         <optional>
+            <attribute name="unit">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+Sample values include: 1] m</a:documentation>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="unit">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+Sample values include: 1] m</a:documentation>
+               <text/>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
@@ -9574,7 +9669,7 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines a location within a manuscript or manuscript part, usually as a (possibly discontinuous) sequence of folio references. [10.3.5. References to Locations within a Manuscript]</a:documentation>
          <ref name="tei_macro.xtext"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-locus-locus-constraint-18">
+                  id="tei-betamesaheft-locus-locus-constraint-20">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9925,7 +10020,7 @@ Sample values include: 1] editor; 2] mss; 3] literature</a:documentation>
       
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-msIdentifier-msId_minimal-constraint-30">
+                  id="tei-betamesaheft-msIdentifier-msId_minimal-constraint-32">
             <rule context="tei:msIdentifier">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -10681,7 +10776,7 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(note on decoration) contains a note describing either a decorative component of a manuscript, or a fairly homogenous class of such components. [10.7.3. Bindings, Seals, and Additional Material]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-decoNote-decoNote-constraint-19">
+                  id="tei-betamesaheft-decoNote-decoNote-constraint-21">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -10900,7 +10995,7 @@ Sample values include: 1] frame; 2] miniature; 3] punctuation; 4] drawing</a:doc
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains any descriptive or other information concerning the origin of a manuscript or manuscript part. [10.8. History]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-origin-origin-constraint-20">
+                  id="tei-betamesaheft-origin-origin-constraint-22">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11101,7 +11196,7 @@ Sample values include: 1] frame; 2] miniature; 3] punctuation; 4] drawing</a:doc
             </choice>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-msPart-deprecate-altIdentifier-child-constraint-33">
+                  id="tei-betamesaheft-msPart-deprecate-altIdentifier-child-constraint-35">
             <rule context="tei:msPart">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -11466,6 +11561,16 @@ Sample values include: 1] frame; 2] miniature; 3] punctuation; 4] drawing</a:doc
       <element name="persName">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(personal name) contains a proper noun or proper-noun phrase referring to a person, possibly including one or more of the person's forenames, surnames, honorifics, added names, etc. [13.2.1. Personal Names]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei-betamesaheft-persName-persName-constraint-23">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="tei:persName[ancestor::tei:TEI[@type='mss' or @type='place' or @type='ins' or @type='work']]">
+               <sch:report test="not(@corresp)">A persName  in a mss, place or work description should always 
+                              contain an attribute @corresp pointing to the relevant record</sch:report>
+            </sch:rule>
+         </pattern>
          <ref name="tei_att.global.attribute.xmlid"/>
          <ref name="tei_att.global.attribute.n"/>
          <ref name="tei_att.global.attribute.xmllang"/>
@@ -11493,15 +11598,17 @@ Sample values include: 1] frame; 2] miniature; 3] punctuation; 4] drawing</a:doc
          <ref name="tei_att.naming.attribute.nymRef"/>
          <ref name="tei_att.canonical.attribute.key"/>
          <ref name="tei_att.canonical.attribute.ref"/>
-         <ref name="tei_att.typed.attributes"/>
-         <attribute name="corresp">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(corresponds) points to elements that correspond to the current element in some way.</a:documentation>
-            <list>
-               <oneOrMore>
-                  <data type="anyURI"/>
-               </oneOrMore>
-            </list>
-         </attribute>
+         <ref name="tei_att.typed.attribute.subtype"/>
+         <optional>
+            <attribute name="corresp">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(corresponds) points to elements that correspond to the current element in some way.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI"/>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
          <optional>
             <attribute name="role">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -11523,6 +11630,18 @@ Sample values include: 1] frame; 2] miniature; 3] punctuation; 4] drawing</a:doc
                   <value>patron</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
             </attribute>
          </optional>
          <empty/>
@@ -11574,7 +11693,22 @@ Sample values include: 1] frame; 2] miniature; 3] punctuation; 4] drawing</a:doc
          <ref name="tei_macro.phraseSeq"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.personal.attributes"/>
-         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.typed.attribute.subtype"/>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <choice>
+               <value>function</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>title</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>office</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>rank</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>other</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -11582,6 +11716,16 @@ Sample values include: 1] frame; 2] miniature; 3] punctuation; 4] drawing</a:doc
       <element name="placeName">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains an absolute or relative place name. [13.2.3. Place Names]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei-betamesaheft-placeName-placeName-constraint-24">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="tei:placeName[ancestor::tei:TEI[@type='mss' or @type='pers' or @type='work']]">
+               <sch:report test="not(@corresp)">A placeName  in a mss, person or work description should always 
+                              contain an attribute @corresp pointing to the relevant record</sch:report>
+            </sch:rule>
+         </pattern>
          <ref name="tei_att.datable.attributes"/>
          <ref name="tei_att.editLike.attributes"/>
          <ref name="tei_att.global.attribute.xmlid"/>
@@ -11605,15 +11749,29 @@ Sample values include: 1] frame; 2] miniature; 3] punctuation; 4] drawing</a:doc
          <ref name="tei_att.global.responsibility.attribute.cert"/>
          <ref name="tei_att.global.responsibility.attribute.resp"/>
          <ref name="tei_att.personal.attributes"/>
-         <ref name="tei_att.typed.attributes"/>
-         <attribute name="corresp">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(corresponds) points to elements that correspond to the current element in some way.</a:documentation>
-            <list>
-               <oneOrMore>
-                  <data type="anyURI"/>
-               </oneOrMore>
-            </list>
-         </attribute>
+         <ref name="tei_att.typed.attribute.subtype"/>
+         <optional>
+            <attribute name="corresp">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(corresponds) points to elements that correspond to the current element in some way.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI"/>
+                  </oneOrMore>
+               </list>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
@@ -11838,6 +11996,18 @@ Sample values include: 1] frame; 2] miniature; 3] punctuation; 4] drawing</a:doc
       <element name="geo">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(geographical coordinates) contains any expression of a set of geographic coordinates, representing a point, line, or area on the surface of the earth in some notation. [13.3.4.1. Varieties of Location]</a:documentation>
          <text/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei-betamesaheft-geo-geo-constraint-25">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="tei:geo">
+               <sch:report test="matches(.,'\-?\d{1,2}\.\d{3,6}\s\-?\d{1,2}\.\d{3,6}')">
+                              Coordinates should be written as decimal degrees separated 
+                              by a single space e.g. "14.165289 39.447665" latitude first. 
+                          </sch:report>
+            </sch:rule>
+         </pattern>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.declaring.attributes"/>
          <empty/>
@@ -12016,6 +12186,29 @@ Sample values include: 1] frame; 2] miniature; 3] punctuation; 4] drawing</a:doc
          <ref name="tei_att.datable.attributes"/>
          <ref name="tei_att.editLike.attributes"/>
          <ref name="tei_att.naming.attributes"/>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <choice>
+               <value>ruler</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>military</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>academic</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>political</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>literary</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>ecclesiastic</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>medical</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>art</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>other</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
          <optional>
             <attribute name="scheme">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the classification system or taxonomy in use, for example by supplying the identifier of a taxonomy element, or pointing to some other resource.</a:documentation>
@@ -12126,26 +12319,23 @@ Sample values include: 1] frame; 2] miniature; 3] punctuation; 4] drawing</a:doc
       <element name="person">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">provides information about an identifiable individual, for example a participant in a language interaction, or a person referred to in a historical source. [13.3.2. The Person Element 15.2.2. The Participant Description]</a:documentation>
          <choice>
+      
             <oneOrMore>
                <ref name="tei_model.pLike"/>
             </oneOrMore>
+      
+      
             <zeroOrMore>
                <choice>
                   <ref name="tei_model.personPart"/>
                   <ref name="tei_model.global"/>
                </choice>
             </zeroOrMore>
+      
          </choice>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.editLike.attributes"/>
          <ref name="tei_att.sortable.attributes"/>
-         <optional>
-            <attribute name="type">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] scribe; 2] donor; 3] other</a:documentation>
-               <text/>
-            </attribute>
-         </optional>
          <optional>
             <attribute name="role">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies a primary role or classification for the person.</a:documentation>
@@ -12313,7 +12503,7 @@ Sample values include: 1] scribe; 2] donor; 3] other</a:documentation>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-relation-activemutual-constraint-34">
+                  id="tei-betamesaheft-relation-activemutual-constraint-39">
             <rule context="tei:relation">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12322,7 +12512,7 @@ Sample values include: 1] scribe; 2] donor; 3] other</a:documentation>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-relation-activepassive-constraint-35">
+                  id="tei-betamesaheft-relation-activepassive-constraint-40">
             <rule context="tei:relation">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12340,47 +12530,223 @@ Sample values include: 1] scribe; 2] donor; 3] other</a:documentation>
          <attribute name="name">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             <choice>
-               <value>daughterOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>sonOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>fatherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>motherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>grandfatherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>grandmotherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>brotherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>sisterOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>wifeOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>husbandOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>motherInLawOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>fatherInLawOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>sonInLawOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>brotherInLawOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>sisterInLawOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>daugtherInLawOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>nephew</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>niece</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>contains</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>nearBy</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>partOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:DaughterOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:ChildOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:BrotherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>bm:wifeOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>bm:husbandOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>bm:motherInLawOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>bm:fatherInLawOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>bm:sonInLawOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>bm:brotherInLawOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>bm:sisterInLawOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>bm:daugtherInLawOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>syriaca:different-from</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>syriaca:has-literary-connection-to-place</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>syriaca:has-relation-to-place</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>syriaca:possibly-identical</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>syriaca:share-a-name</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>syriaca:share-a-title</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:SeriousIntimateRelationshipWith</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:SiblingOfParentOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:SeriousIntimateRelationshipWith</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:AllianceWith</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:CasualIntimateRelationshipWith</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:ChildOfSiblingOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:EmnityFor</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:FriendshipFor</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:Group</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:HereditaryFamilyOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:IntimateRelationshipWith</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:KinOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:AncestorOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:AuntOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:CousinOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:ClaimedFamilyRelationship</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:ExtendedFamilyOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:ExtendedHouseholdOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:FamilyOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:FatherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:FosterFamilyRelationship</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:FreedmanOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:FreedSlaveOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:FreedwomanOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:FriendshipFor</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:GrandchildOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:GranddaughterOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:GrandfatherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:GrandmotherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:GrandparentOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:GrandsonOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:GreatGrandfatherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:GreatGrandmotherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:GreatGrandparentOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:HalfFamilyRelationship</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:HereditaryFamilyOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:HouseholdOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:HouseSlaveOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:InLawFamilyRelationship</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:IntimateRelationshipWith</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:KinOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:LegallyRecognisedRelationshipWithExtendedFamilyOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:ExtendedHouseholdOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:FamilyOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:FatherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:FosterFamilyRelationship</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:FreedmanOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:FreedSlaveOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:FreedwomanOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:FriendshipFor</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:GrandchildOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:GranddaughterOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:GrandfatherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:GrandmotherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:GrandparentOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:GrandsonOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:GreatGrandfatherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:GreatGrandmotherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:GreatGrandparentOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:HalfFamilyRelationship</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:HereditaryFamilyOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:HouseholdOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:HouseSlaveOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:InLawFamilyRelationship</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:IntimateRelationshipWith</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:KinOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:LegallyRecognisedRelationshipWith</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:MaternalFamilyRelationship</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:ProfessionalRelationshipMaternalFamilyRelationship</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:MotherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:NephewOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:NieceOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:ParentOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:PaternalFamilyRelationship</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:ProfessionalRelationship</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:SeriousIntimateRelationshipWith</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:SiblingOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:SiblingOfParentOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:SisterOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:SlaveOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:SonOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:StepFamilyRelationship</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:UncleOfSeriousIntimateRelationshipWith</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:SiblingOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:SiblingOfParentOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:SlaveOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:SonOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:StepFamilyRelationship</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:UncleOf</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </choice>
          </attribute>
@@ -12866,7 +13232,7 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains either a description of a single witness referred to within the critical apparatus, or a list of witnesses which is to be referred to by a single sigil. [12.1. The Apparatus Entry, Readings, and Witnesses]</a:documentation>
          <ref name="tei_macro.limitedContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-witness-witness-constraint-21">
+                  id="tei-betamesaheft-witness-witness-constraint-26">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12875,7 +13241,7 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-witness-witness-constraint-22">
+                  id="tei-betamesaheft-witness-witness-constraint-27">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12923,7 +13289,7 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
             </choice>
          </attribute>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-23">
+                  id="tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-28">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"

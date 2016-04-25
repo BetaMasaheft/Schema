@@ -3,7 +3,7 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en"
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:rng="http://relaxng.org/ns/structure/1.0"
-    xmlns:sch="http://purl.oclc.org/dsdl/schematron">
+    xmlns:sch="http://purl.oclc.org/dsdl/schematron"> 
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -261,6 +261,16 @@
           
 <!--          suggest use in title of type complete, incomplete, normalized or alternative-->
           <elementSpec ident="title" mode="change" module="core">
+              <constraintSpec scheme="isoschematron" ident="title">
+                  <constraint>
+                      <sch:rule context="tei:title[ancestor::tei:TEI[@type='work']]">
+                          <sch:report test="not(@xml:id or @corresp)">title in work must always have 
+                              an @xml:id which identifies alternative titles and @corresp 
+                              for the titles in other languages translating each of the given titles. 
+                              Format of the id should be like t1 t2, etc.</sch:report>
+                      </sch:rule>
+                  </constraint>
+              </constraintSpec>
               <attList>
                   <attDef ident="corresp" mode="change" usage="rec"/>
                   <attDef ident="type" mode="replace" usage="opt">
@@ -268,7 +278,6 @@
                           <valItem ident="complete"/>
                           <valItem ident="incomplete"/>
                           <valItem ident="normalized"/>
-                          <valItem ident="alt"/>
                       </valList>
                   </attDef>
               </attList>
@@ -286,6 +295,40 @@
                           <valItem ident="otherLanguages"/>
                           <valItem ident="translation"/>
                           <valItem ident="secondary"/>
+                      </valList>
+                  </attDef>
+              </attList>
+          </elementSpec>
+          
+          <!--                constrain use of type in occupation and suggest values-->
+          <elementSpec ident="occupation" mode="change" module="namesdates">
+              <attList>
+                  <attDef ident="type" mode="replace" usage="req">
+                      <valList type="closed">
+                          <valItem ident="ruler"/>
+                          <valItem ident="military"/>
+                          <valItem ident="academic"/>
+                          <valItem ident="political"/>
+                          <valItem ident="literary"/>
+                          <valItem ident="ecclesiastic"/>
+                          <valItem ident="medical"/>
+                          <valItem ident="art"/>
+                          <valItem ident="other"/>
+                      </valList>
+                  </attDef>
+              </attList>
+          </elementSpec>
+          
+          <!--                constrain use of type in roleName and suggest values-->
+          <elementSpec ident="roleName" mode="change" module="namesdates">
+              <attList>
+                  <attDef ident="type" mode="replace" usage="req">
+                      <valList type="closed">
+                          <valItem ident="function"/>
+                          <valItem ident="title"/>
+                          <valItem ident="office"/>
+                          <valItem ident="rank"/>
+                          <valItem ident="other"/>
                       </valList>
                   </attDef>
               </attList>
@@ -521,17 +564,44 @@
               </attList>
           </elementSpec>
           
+          <elementSpec ident="change" mode="change" module="header">
+            
+              <attList>
+                  <attDef ident="who" mode="replace" usage="req">
+                      <valList type="closed">
+                          <valItem ident="AB"/> <!--Alessandro-->
+                          <valItem ident="ES"/> <!--Eugenia-->
+                          <valItem ident="DN"/> <!--Denis-->
+                          <valItem ident="MV"/> <!--Massimo-->
+                          <valItem ident="SG"/> <!--Solomon-->
+                      </valList>
+                  </attDef>
+                  <attDef ident="when" mode="replace" usage="req"/>
+              </attList>
+          </elementSpec>
+          
           <elementSpec ident="addition" mode="change" module="msdescription">
               <attList>
                   <attDef ident="xml:id" mode="change" usage="req"/>
               </attList>
           </elementSpec>
           
+          <elementSpec ident="height" mode="change" module="msdescription">
+              <attList>
+                  <attDef ident="unit" mode="add">
+                      <valList type="open">
+                          <valItem ident="m"/>
+                      </valList>
+                  </attDef>
+              </attList>
+          </elementSpec>
+          
+          
 <!--          recomend @corresp in persName and test that is always there in mss and work-->
           <elementSpec ident="persName" mode="change" module="msdescription">
               <constraintSpec scheme="isoschematron" ident="persName">
                   <constraint>
-                      <sch:rule context="tei:persName[ancestor::tei:TEI[@type='mss|place|ins|work']]">
+                      <sch:rule context="tei:persName[ancestor::tei:TEI[@type='mss' or @type='place' or @type='ins' or @type='work']]">
                           <sch:report test="not(@corresp)">A persName  in a mss, place or work description should always 
                               contain an attribute @corresp pointing to the relevant record</sch:report>
                       </sch:rule>
@@ -551,6 +621,11 @@
                           <valItem ident="patron"/>
                       </valList>
                   </attDef>
+                  <attDef ident="type" mode="add">
+                      <valList>
+                          <valItem ident="normalized"/>
+                      </valList>
+                  </attDef>
               </attList>
           </elementSpec>
           
@@ -558,7 +633,7 @@
           <elementSpec ident="placeName" mode="change" module="msdescription">
               <constraintSpec scheme="isoschematron" ident="placeName">
                   <constraint>
-                      <sch:rule context="tei:placeName[ancestor::tei:TEI[@type='mss|pers|work']]">
+                      <sch:rule context="tei:placeName[ancestor::tei:TEI[@type='mss' or @type='pers' or @type='work']]">
                           <sch:report test="not(@corresp)">A placeName  in a mss, person or work description should always 
                               contain an attribute @corresp pointing to the relevant record</sch:report>
                       </sch:rule>
@@ -566,6 +641,11 @@
               </constraintSpec>
               <attList>
                   <attDef ident="corresp" mode="change" usage="rec"/>
+                  <attDef ident="type" mode="add">
+                      <valList>
+                          <valItem ident="normalized"/>
+                      </valList>
+                  </attDef>
               </attList>
           </elementSpec>
           
@@ -601,27 +681,115 @@
               <attList>
                   <attDef ident="name" mode="replace" usage="req">
                       <valList type="closed">
-                          <valItem ident="daughterOf"/>
-                          <valItem ident="sonOf"/>
-                          <valItem ident="fatherOf"/>
-                          <valItem ident="motherOf"/>
-                          <valItem ident="grandfatherOf"/>
-                          <valItem ident="grandmotherOf"/>
-                          <valItem ident="brotherOf"/>
-                          <valItem ident="sisterOf"/>
-                          <valItem ident="wifeOf"/>
-                          <valItem ident="husbandOf"/>
-                          <valItem ident="motherInLawOf"/>
-                          <valItem ident="fatherInLawOf"/>
-                          <valItem ident="sonInLawOf"/>
-                          <valItem ident="brotherInLawOf"/>
-                          <valItem ident="sisterInLawOf"/>
-                          <valItem ident="daugtherInLawOf"/>
-                          <valItem ident="nephew"/>
-                          <valItem ident="niece"/>
                           <valItem ident="contains"/>
                           <valItem ident="nearBy"/>
                           <valItem ident="partOf"/>
+                          <valItem ident="snap:DaughterOf"/>
+                          <valItem ident="snap:ChildOf"/>
+                          <valItem ident="snap:BrotherOf"/>
+                          <valItem ident="bm:wifeOf"/>
+                          <valItem ident="bm:husbandOf"/>
+                          <valItem ident="bm:motherInLawOf"/>
+                          <valItem ident="bm:fatherInLawOf"/>
+                          <valItem ident="bm:sonInLawOf"/>
+                          <valItem ident="bm:brotherInLawOf"/>
+                          <valItem ident="bm:sisterInLawOf"/>
+                          <valItem ident="bm:daugtherInLawOf"/>
+                          <valItem ident="syriaca:different-from"/>
+                          <valItem ident="syriaca:has-literary-connection-to-place"/>	
+                          <valItem ident="syriaca:has-relation-to-place"/>
+                          <valItem ident="syriaca:possibly-identical"/>
+                          <valItem ident="syriaca:share-a-name"/>
+                          <valItem ident="syriaca:share-a-title"/>
+                          <valItem ident="snap:SeriousIntimateRelationshipWith"/>
+                          <valItem ident="snap:SiblingOfParentOf"/>
+                          <valItem ident="snap:SeriousIntimateRelationshipWith"/>
+                          <valItem ident="snap:AllianceWith"/>
+                          <valItem ident="snap:CasualIntimateRelationshipWith"/>
+                          <valItem ident="snap:ChildOfSiblingOf"/>
+                          <valItem ident="snap:EmnityFor"/>
+                          <valItem ident="snap:FriendshipFor"/>
+                          <valItem ident="snap:Group"/>
+                          <valItem ident="snap:HereditaryFamilyOf"/>
+                          <valItem ident="snap:IntimateRelationshipWith"/>
+                          <valItem ident="snap:KinOf"/>
+                          <valItem ident="snap:AncestorOf"/>
+                          <valItem ident="snap:AuntOf"/>
+                          <valItem ident="snap:CousinOf"/>
+                          <valItem ident="snap:ClaimedFamilyRelationship"/>
+                          <valItem ident="snap:ExtendedFamilyOf"/>
+                          <valItem ident="snap:ExtendedHouseholdOf"/>
+                          <valItem ident="snap:FamilyOf"/>
+                          <valItem ident="snap:FatherOf"/>
+                          <valItem ident="snap:FosterFamilyRelationship"/>
+                          <valItem ident="snap:FreedmanOf"/>
+                          <valItem ident="snap:FreedSlaveOf"/>
+                          <valItem ident="snap:FreedwomanOf"/>
+                          <valItem ident="snap:FriendshipFor"/>
+                          <valItem ident="snap:GrandchildOf"/>
+                          <valItem ident="snap:GranddaughterOf"/>
+                          <valItem ident="snap:GrandfatherOf"/>
+                          <valItem ident="snap:GrandmotherOf"/>
+                          <valItem ident="snap:GrandparentOf"/>
+                          <valItem ident="snap:GrandsonOf"/>
+                          <valItem ident="snap:GreatGrandfatherOf"/>
+                          <valItem ident="snap:GreatGrandmotherOf"/>
+                          <valItem ident="snap:GreatGrandparentOf"/>
+                          <valItem ident="snap:HalfFamilyRelationship"/>
+                          <valItem ident="snap:HereditaryFamilyOf"/>
+                          <valItem ident="snap:HouseholdOf"/>
+                          <valItem ident="snap:HouseSlaveOf"/>
+                          <valItem ident="snap:InLawFamilyRelationship"/>
+                          <valItem ident="snap:IntimateRelationshipWith"/>
+                          <valItem ident="snap:KinOf"/>
+                          <valItem ident="snap:LegallyRecognisedRelationshipWithExtendedFamilyOf"/>
+                          <valItem ident="snap:ExtendedHouseholdOf"/>
+                          <valItem ident="snap:FamilyOf"/>
+                          <valItem ident="snap:FatherOf"/>
+                          <valItem ident="snap:FosterFamilyRelationship"/>
+                          <valItem ident="snap:FreedmanOf"/>
+                          <valItem ident="snap:FreedSlaveOf"/>
+                          <valItem ident="snap:FreedwomanOf"/>
+                          <valItem ident="snap:FriendshipFor"/>
+                          <valItem ident="snap:GrandchildOf"/>
+                          <valItem ident="snap:GranddaughterOf"/>
+                          <valItem ident="snap:GrandfatherOf"/>
+                          <valItem ident="snap:GrandmotherOf"/>
+                          <valItem ident="snap:GrandparentOf"/>
+                          <valItem ident="snap:GrandsonOf"/>
+                          <valItem ident="snap:GreatGrandfatherOf"/>
+                          <valItem ident="snap:GreatGrandmotherOf"/>
+                          <valItem ident="snap:GreatGrandparentOf"/>
+                          <valItem ident="snap:HalfFamilyRelationship"/>
+                          <valItem ident="snap:HereditaryFamilyOf"/>
+                          <valItem ident="snap:HouseholdOf"/>
+                          <valItem ident="snap:HouseSlaveOf"/>
+                          <valItem ident="snap:InLawFamilyRelationship"/>
+                          <valItem ident="snap:IntimateRelationshipWith"/>
+                          <valItem ident="snap:KinOf"/>
+                          <valItem ident="snap:LegallyRecognisedRelationshipWith"/>
+                          <valItem ident="snap:MaternalFamilyRelationship"/>
+                          <valItem ident="snap:ProfessionalRelationshipMaternalFamilyRelationship"/>
+                          <valItem ident="snap:MotherOf"/>
+                          <valItem ident="snap:NephewOf"/>
+                          <valItem ident="snap:NieceOf"/>
+                          <valItem ident="snap:ParentOf"/>
+                          <valItem ident="snap:PaternalFamilyRelationship"/>
+                          <valItem ident="snap:ProfessionalRelationship"/>
+                          <valItem ident="snap:SeriousIntimateRelationshipWith"/>
+                          <valItem ident="snap:SiblingOf"/>
+                          <valItem ident="snap:SiblingOfParentOf"/>
+                          <valItem ident="snap:SisterOf"/>
+                          <valItem ident="snap:SlaveOf"/>
+                          <valItem ident="snap:SonOf"/>
+                          <valItem ident="snap:StepFamilyRelationship"/>
+                          <valItem ident="snap:UncleOfSeriousIntimateRelationshipWith"/>
+                          <valItem ident="snap:SiblingOf"/>
+                          <valItem ident="snap:SiblingOfParentOf"/>
+                          <valItem ident="snap:SlaveOf"/>
+                          <valItem ident="snap:SonOf"/>
+                          <valItem ident="snap:StepFamilyRelationship"/>
+                          <valItem ident="snap:UncleOf"/>
                       </valList>
                   </attDef>
                   
@@ -676,7 +844,7 @@
               <attList>
                   <attDef ident="xml:id" mode="change" usage="req"/>
                   
-                  <attDef ident="name" mode="replace" usage="req">
+                  <attDef ident="type" mode="replace" usage="req">
                       <valList type="closed">
                           <valItem ident="mss">
                               <desc>Description of a Manuscript</desc>
@@ -713,6 +881,21 @@
                   </constraint>
               </constraintSpec>
           </elementSpec>
+          
+          <elementSpec ident="geo" module="namesdates" mode="change">
+              <!--             testing for origDate in origin-->
+              <constraintSpec scheme="isoschematron" ident="geo">
+                  <constraint>
+                      <sch:rule context="tei:geo">
+                          <sch:report test="matches(.,'\-?\d{1,2}\.\d{3,6}\s\-?\d{1,2}\.\d{3,6}')">
+                              Coordinates should be written as decimal degrees separated 
+                              by a single space e.g. "14.165289 39.447665" latitude first. 
+                          </sch:report>
+                      </sch:rule>
+                  </constraint>
+              </constraintSpec>
+          </elementSpec>
+          
           
           <elementSpec ident="date" module="core" mode="change">
               <!--             testing for origDate in origin-->

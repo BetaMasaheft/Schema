@@ -8,7 +8,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-04-11T22:01:29Z. .
+# Schema generated from ODD source 2016-04-25T09:50:42Z. .
 # TEI Edition: Version 3.0.0. Last updated on
 #	29th March 2016, revision 89ba24e
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -3234,6 +3234,9 @@ tei_editor =
       | 
         ##
         "MV"
+      | 
+        ##
+        "SG"
     },
     empty
   }
@@ -3261,7 +3264,28 @@ tei_title =
   
   ## contains a title for any kind of work. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.5. The Series Statement]
   element title {
-    tei_macro.paraContent,
+    tei_macro.paraContent
+    >> sch:pattern [
+         id = "tei-betamesaheft-title-title-constraint-13"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:title[ancestor::tei:TEI[@type='work']]"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(@xml:id or @corresp)"
+             "title in work must always have \x{a}" ~
+             "                              an @xml:id which identifies alternative titles and @corresp \x{a}" ~
+             "                              for the titles in other languages translating each of the given titles. \x{a}" ~
+             "                              Format of the id should be like t1 t2, etc."
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
     tei_att.global.attribute.xmlid,
     tei_att.global.attribute.n,
     tei_att.global.attribute.xmllang,
@@ -3291,7 +3315,7 @@ tei_title =
     }?,
     
     ## 
-    ## Sample values include: 1] complete; 2] incomplete; 3] normalized; 4] alt
+    ## Sample values include: 1] complete; 2] incomplete; 3] normalized
     attribute type { text }?,
     
     ## indicates the bibliographic level for a title, that is, whether it identifies an article, book, journal, series, or unpublished material.
@@ -3410,7 +3434,7 @@ tei_bibl =
       | tei_model.biblPart
       | tei_model.global)*)
     >> sch:pattern [
-         id = "tei-betamesaheft-bibl-bibl-constraint-13"
+         id = "tei-betamesaheft-bibl-bibl-constraint-14"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3428,7 +3452,7 @@ tei_bibl =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-bibl-bibl-constraint-14"
+         id = "tei-betamesaheft-bibl-bibl-constraint-15"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3466,7 +3490,7 @@ tei_biblStruct =
       | tei_citedRange)*)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-biblStruct-deprecate-altIdentifier-child-constraint-13"
+           "tei-betamesaheft-biblStruct-deprecate-altIdentifier-child-constraint-14"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3536,7 +3560,7 @@ tei_relatedItem =
     ((tei_model.biblLike | tei_model.ptrLike)?)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-relatedItem-targetorcontent1-constraint-14"
+           "tei-betamesaheft-relatedItem-targetorcontent1-constraint-15"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3595,7 +3619,7 @@ tei_l =
       | tei_model.global)*)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-l-abstractModel-structure-l-constraint-15"
+           "tei-betamesaheft-l-abstractModel-structure-l-constraint-16"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3658,7 +3682,7 @@ tei_lg =
        ]
     >> sch:pattern [
          id =
-           "tei-betamesaheft-lg-abstractModel-structure-l-constraint-16"
+           "tei-betamesaheft-lg-abstractModel-structure-l-constraint-17"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4120,7 +4144,7 @@ tei_quotation =
     (tei_model.pLike*)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-quotation-quotationContents-constraint-17"
+           "tei-betamesaheft-quotation-quotationContents-constraint-18"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4439,7 +4463,7 @@ tei_handNote =
   element handNote {
     tei_macro.specialPara
     >> sch:pattern [
-         id = "tei-betamesaheft-handNote-handNote-constraint-15"
+         id = "tei-betamesaheft-handNote-handNote-constraint-16"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4729,11 +4753,49 @@ tei_change =
   ## documents a change or set of changes made during the production of a source document, or during the revision of an electronic file. [2.6. The Revision Description 2.4.1. Creation 11.7. Identifying Changes and Revisions]
   element change {
     tei_macro.specialPara,
-    tei_att.ascribed.attributes,
-    tei_att.datable.attributes,
+    tei_att.datable.attribute.calendar,
+    tei_att.datable.attribute.period,
+    tei_att.datable.w3c.attribute.notBefore,
+    tei_att.datable.w3c.attribute.notAfter,
+    tei_att.datable.w3c.attribute.from,
+    tei_att.datable.w3c.attribute.to,
+    tei_att.datable.iso.attribute.when-iso,
+    tei_att.datable.iso.attribute.notBefore-iso,
+    tei_att.datable.iso.attribute.notAfter-iso,
+    tei_att.datable.iso.attribute.from-iso,
+    tei_att.datable.iso.attribute.to-iso,
+    tei_att.datable.custom.attribute.when-custom,
+    tei_att.datable.custom.attribute.notBefore-custom,
+    tei_att.datable.custom.attribute.notAfter-custom,
+    tei_att.datable.custom.attribute.from-custom,
+    tei_att.datable.custom.attribute.to-custom,
+    tei_att.datable.custom.attribute.datingPoint,
+    tei_att.datable.custom.attribute.datingMethod,
     tei_att.docStatus.attributes,
     tei_att.global.attributes,
     tei_att.typed.attributes,
+    
+    ##
+    attribute who {
+      
+      ##
+      "AB"
+      | 
+        ##
+        "ES"
+      | 
+        ##
+        "DN"
+      | 
+        ##
+        "MV"
+      | 
+        ##
+        "SG"
+    },
+    
+    ##
+    attribute when { text },
     
     ## points to one or more elements that belong to this change.
     attribute target {
@@ -4777,6 +4839,24 @@ tei_TEI =
   ## (TEI document) contains a single TEI-conformant document, combining a single TEI header with one or more members of the model.resourceLike class. Multiple TEI elements may be combined to form a teiCorpus element. [4. Default Text Structure 15.1. Varieties of Composite Text]
   element TEI {
     (tei_teiHeader, tei_model.resourceLike+)
+    >> sch:pattern [
+         id = "tei-betamesaheft-TEI-TEI-constraint-17"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:TEI"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(@type)"
+             "Each record must have a type with one of the values suggested."
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ]
     >> sch:ns [ prefix = "tei" uri = "http://www.tei-c.org/ns/1.0" ]
     >> sch:ns [ prefix = "xs" uri = "http://www.w3.org/2001/XMLSchema" ]
     >> sch:ns [
@@ -4803,10 +4883,29 @@ tei_TEI =
     tei_att.global.change.attribute.change,
     tei_att.global.responsibility.attribute.cert,
     tei_att.global.responsibility.attribute.resp,
-    tei_att.typed.attributes,
+    tei_att.typed.attribute.subtype,
     
     ## (identifier) provides a unique identifier for the element bearing the attribute.
     attribute xml:id { xsd:ID },
+    
+    ##
+    attribute type {
+      
+      ## Description of a Manuscript
+      "mss"
+      | 
+        ## Description of a Person
+        "pers"
+      | 
+        ## Description of a generic place
+        "place"
+      | 
+        ## Description of an institution where manuscripts are preserved
+        "ins"
+      | 
+        ## Description of a recognizable literary or documentary work at any given granularity
+        "work"
+    },
     
     ## specifies the major version number of the TEI Guidelines against which this document is valid.
     attribute version {
@@ -4889,7 +4988,7 @@ tei_div =
       (tei_model.divBottom, tei_model.global*)*)?)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-div-abstractModel-structure-l-constraint-19"
+           "tei-betamesaheft-div-abstractModel-structure-l-constraint-21"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4910,7 +5009,7 @@ tei_div =
        ]
     >> sch:pattern [
          id =
-           "tei-betamesaheft-div-abstractModel-structure-p-constraint-20"
+           "tei-betamesaheft-div-abstractModel-structure-p-constraint-22"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -5647,7 +5746,7 @@ tei_s =
   element s {
     tei_macro.phraseSeq
     >> sch:pattern [
-         id = "tei-betamesaheft-s-noNestedS-constraint-21"
+         id = "tei-betamesaheft-s-noNestedS-constraint-23"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6055,7 +6154,7 @@ tei_ab =
   element ab {
     tei_macro.paraContent
     >> sch:pattern [
-         id = "tei-betamesaheft-ab-ab-constraint-16"
+         id = "tei-betamesaheft-ab-ab-constraint-18"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6073,7 +6172,7 @@ tei_ab =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-ab-ab-constraint-17"
+         id = "tei-betamesaheft-ab-ab-constraint-19"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6092,7 +6191,7 @@ tei_ab =
        ]
     >> sch:pattern [
          id =
-           "tei-betamesaheft-ab-abstractModel-structure-p-constraint-24"
+           "tei-betamesaheft-ab-abstractModel-structure-p-constraint-26"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6114,7 +6213,7 @@ tei_ab =
        ]
     >> sch:pattern [
          id =
-           "tei-betamesaheft-ab-abstractModel-structure-l-constraint-25"
+           "tei-betamesaheft-ab-abstractModel-structure-l-constraint-27"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6255,7 +6354,7 @@ tei_dimensions =
   element dimensions {
     ((tei_dim | tei_model.dimLike)*)
     >> sch:pattern [
-         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-26"
+         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-28"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6277,7 +6376,7 @@ tei_dimensions =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-27"
+         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-29"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6299,7 +6398,7 @@ tei_dimensions =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-28"
+         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-30"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6463,7 +6562,23 @@ tei_height =
   element height {
     tei_macro.xtext,
     tei_att.global.attributes,
-    tei_att.dimensions.attributes,
+    tei_att.dimensions.attribute.precision,
+    tei_att.dimensions.attribute.quantity,
+    tei_att.dimensions.attribute.extent,
+    tei_att.dimensions.attribute.scope,
+    tei_att.ranging.attribute.atLeast,
+    tei_att.ranging.attribute.atMost,
+    tei_att.ranging.attribute.min,
+    tei_att.ranging.attribute.max,
+    tei_att.ranging.attribute.confidence,
+    
+    ## 
+    ## Sample values include: 1] m
+    attribute unit { text }?,
+    
+    ## 
+    ## Sample values include: 1] m
+    attribute unit { text }?,
     empty
   }
 tei_depth =
@@ -6496,7 +6611,7 @@ tei_locus =
   element locus {
     tei_macro.xtext
     >> sch:pattern [
-         id = "tei-betamesaheft-locus-locus-constraint-18"
+         id = "tei-betamesaheft-locus-locus-constraint-20"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6812,7 +6927,7 @@ tei_msIdentifier =
       tei_idno?),
      (tei_msName | tei_altIdentifier)*)
     >> sch:pattern [
-         id = "tei-betamesaheft-msIdentifier-msId_minimal-constraint-30"
+         id = "tei-betamesaheft-msIdentifier-msId_minimal-constraint-32"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7212,7 +7327,7 @@ tei_decoNote =
   element decoNote {
     tei_macro.specialPara
     >> sch:pattern [
-         id = "tei-betamesaheft-decoNote-decoNote-constraint-19"
+         id = "tei-betamesaheft-decoNote-decoNote-constraint-21"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7355,7 +7470,7 @@ tei_origin =
   element origin {
     tei_macro.specialPara
     >> sch:pattern [
-         id = "tei-betamesaheft-origin-origin-constraint-20"
+         id = "tei-betamesaheft-origin-origin-constraint-22"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7481,7 +7596,7 @@ tei_msPart =
          tei_msPart*)))
     >> sch:pattern [
          id =
-           "tei-betamesaheft-msPart-deprecate-altIdentifier-child-constraint-33"
+           "tei-betamesaheft-msPart-deprecate-altIdentifier-child-constraint-35"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7698,7 +7813,27 @@ tei_persName =
   
   ## (personal name) contains a proper noun or proper-noun phrase referring to a person, possibly including one or more of the person's forenames, surnames, honorifics, added names, etc. [13.2.1. Personal Names]
   element persName {
-    tei_macro.phraseSeq,
+    tei_macro.phraseSeq
+    >> sch:pattern [
+         id = "tei-betamesaheft-persName-persName-constraint-23"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context =
+             "tei:persName[ancestor::tei:TEI[@type='mss' or @type='place' or @type='ins' or @type='work']]"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(@corresp)"
+             "A persName  in a mss, place or work description should always \x{a}" ~
+             "                              contain an attribute @corresp pointing to the relevant record"
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
     tei_att.global.attribute.xmlid,
     tei_att.global.attribute.n,
     tei_att.global.attribute.xmllang,
@@ -7726,12 +7861,12 @@ tei_persName =
     tei_att.naming.attribute.nymRef,
     tei_att.canonical.attribute.key,
     tei_att.canonical.attribute.ref,
-    tei_att.typed.attributes,
+    tei_att.typed.attribute.subtype,
     
     ## (corresponds) points to elements that correspond to the current element in some way.
     attribute corresp {
       list { xsd:anyURI+ }
-    },
+    }?,
     
     ##
     attribute role {
@@ -7760,6 +7895,12 @@ tei_persName =
         ##
         "patron"
     }?,
+    
+    ##
+    attribute type { text }?,
+    
+    ##
+    attribute type { text }?,
     empty
   }
 tei_surname =
@@ -7809,14 +7950,53 @@ tei_roleName =
     tei_macro.phraseSeq,
     tei_att.global.attributes,
     tei_att.personal.attributes,
-    tei_att.typed.attributes,
+    tei_att.typed.attribute.subtype,
+    
+    ##
+    attribute type {
+      
+      ##
+      "function"
+      | 
+        ##
+        "title"
+      | 
+        ##
+        "office"
+      | 
+        ##
+        "rank"
+      | 
+        ##
+        "other"
+    },
     empty
   }
 tei_placeName =
   
   ## contains an absolute or relative place name. [13.2.3. Place Names]
   element placeName {
-    tei_macro.phraseSeq,
+    tei_macro.phraseSeq
+    >> sch:pattern [
+         id = "tei-betamesaheft-placeName-placeName-constraint-24"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context =
+             "tei:placeName[ancestor::tei:TEI[@type='mss' or @type='pers' or @type='work']]"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(@corresp)"
+             "A placeName  in a mss, person or work description should always \x{a}" ~
+             "                              contain an attribute @corresp pointing to the relevant record"
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
     tei_att.datable.attributes,
     tei_att.editLike.attributes,
     tei_att.global.attribute.xmlid,
@@ -7840,12 +8020,18 @@ tei_placeName =
     tei_att.global.responsibility.attribute.cert,
     tei_att.global.responsibility.attribute.resp,
     tei_att.personal.attributes,
-    tei_att.typed.attributes,
+    tei_att.typed.attribute.subtype,
     
     ## (corresponds) points to elements that correspond to the current element in some way.
     attribute corresp {
       list { xsd:anyURI+ }
-    },
+    }?,
+    
+    ##
+    attribute type { text }?,
+    
+    ##
+    attribute type { text }?,
     empty
   }
 tei_bloc =
@@ -8032,7 +8218,32 @@ tei_geo =
   
   ## (geographical coordinates) contains any expression of a set of geographic coordinates, representing a point, line, or area on the surface of the earth in some notation. [13.3.4.1. Varieties of Location]
   element geo {
-    text, tei_att.global.attributes, tei_att.declaring.attributes, empty
+    text
+    >> sch:pattern [
+         id = "tei-betamesaheft-geo-geo-constraint-25"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:geo"
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test =
+               "matches(.,'\-?\d{1,2}\.\d{3,6}\s\-?\d{1,2}\.\d{3,6}')"
+             "\x{a}" ~
+             "                              Coordinates should be written as decimal degrees separated \x{a}" ~
+             '                              by a single space e.g. "14.165289 39.447665" latitude first. \x{a}' ~
+             "                          "
+           ]
+           "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ],
+    tei_att.global.attributes,
+    tei_att.declaring.attributes,
+    empty
   }
 tei_listOrg =
   
@@ -8125,6 +8336,37 @@ tei_occupation =
     tei_att.editLike.attributes,
     tei_att.naming.attributes,
     
+    ##
+    attribute type {
+      
+      ##
+      "ruler"
+      | 
+        ##
+        "military"
+      | 
+        ##
+        "academic"
+      | 
+        ##
+        "political"
+      | 
+        ##
+        "literary"
+      | 
+        ##
+        "ecclesiastic"
+      | 
+        ##
+        "medical"
+      | 
+        ##
+        "art"
+      | 
+        ##
+        "other"
+    },
+    
     ## indicates the classification system or taxonomy in use, for example by supplying the identifier of a taxonomy element, or pointing to some other resource.
     attribute scheme { xsd:anyURI }?,
     
@@ -8180,10 +8422,6 @@ tei_person =
     tei_att.global.attributes,
     tei_att.editLike.attributes,
     tei_att.sortable.attributes,
-    
-    ## 
-    ## Sample values include: 1] scribe; 2] donor; 3] other
-    attribute type { text }?,
     
     ## specifies a primary role or classification for the person.
     attribute role {
@@ -8283,7 +8521,7 @@ tei_relation =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-relation-activemutual-constraint-34"
+         id = "tei-betamesaheft-relation-activemutual-constraint-39"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -8302,7 +8540,7 @@ tei_relation =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-relation-activepassive-constraint-35"
+         id = "tei-betamesaheft-relation-activepassive-constraint-40"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -8332,67 +8570,331 @@ tei_relation =
     attribute name {
       
       ##
-      "daughterOf"
-      | 
-        ##
-        "sonOf"
-      | 
-        ##
-        "fatherOf"
-      | 
-        ##
-        "motherOf"
-      | 
-        ##
-        "grandfatherOf"
-      | 
-        ##
-        "grandmotherOf"
-      | 
-        ##
-        "brotherOf"
-      | 
-        ##
-        "sisterOf"
-      | 
-        ##
-        "wifeOf"
-      | 
-        ##
-        "husbandOf"
-      | 
-        ##
-        "motherInLawOf"
-      | 
-        ##
-        "fatherInLawOf"
-      | 
-        ##
-        "sonInLawOf"
-      | 
-        ##
-        "brotherInLawOf"
-      | 
-        ##
-        "sisterInLawOf"
-      | 
-        ##
-        "daugtherInLawOf"
-      | 
-        ##
-        "nephew"
-      | 
-        ##
-        "niece"
-      | 
-        ##
-        "contains"
+      "contains"
       | 
         ##
         "nearBy"
       | 
         ##
         "partOf"
+      | 
+        ##
+        "snap:DaughterOf"
+      | 
+        ##
+        "snap:ChildOf"
+      | 
+        ##
+        "snap:BrotherOf"
+      | 
+        ##
+        "bm:wifeOf"
+      | 
+        ##
+        "bm:husbandOf"
+      | 
+        ##
+        "bm:motherInLawOf"
+      | 
+        ##
+        "bm:fatherInLawOf"
+      | 
+        ##
+        "bm:sonInLawOf"
+      | 
+        ##
+        "bm:brotherInLawOf"
+      | 
+        ##
+        "bm:sisterInLawOf"
+      | 
+        ##
+        "bm:daugtherInLawOf"
+      | 
+        ##
+        "syriaca:different-from"
+      | 
+        ##
+        "syriaca:has-literary-connection-to-place"
+      | 
+        ##
+        "syriaca:has-relation-to-place"
+      | 
+        ##
+        "syriaca:possibly-identical"
+      | 
+        ##
+        "syriaca:share-a-name"
+      | 
+        ##
+        "syriaca:share-a-title"
+      | 
+        ##
+        "snap:SeriousIntimateRelationshipWith"
+      | 
+        ##
+        "snap:SiblingOfParentOf"
+      | 
+        ##
+        "snap:SeriousIntimateRelationshipWith"
+      | 
+        ##
+        "snap:AllianceWith"
+      | 
+        ##
+        "snap:CasualIntimateRelationshipWith"
+      | 
+        ##
+        "snap:ChildOfSiblingOf"
+      | 
+        ##
+        "snap:EmnityFor"
+      | 
+        ##
+        "snap:FriendshipFor"
+      | 
+        ##
+        "snap:Group"
+      | 
+        ##
+        "snap:HereditaryFamilyOf"
+      | 
+        ##
+        "snap:IntimateRelationshipWith"
+      | 
+        ##
+        "snap:KinOf"
+      | 
+        ##
+        "snap:AncestorOf"
+      | 
+        ##
+        "snap:AuntOf"
+      | 
+        ##
+        "snap:CousinOf"
+      | 
+        ##
+        "snap:ClaimedFamilyRelationship"
+      | 
+        ##
+        "snap:ExtendedFamilyOf"
+      | 
+        ##
+        "snap:ExtendedHouseholdOf"
+      | 
+        ##
+        "snap:FamilyOf"
+      | 
+        ##
+        "snap:FatherOf"
+      | 
+        ##
+        "snap:FosterFamilyRelationship"
+      | 
+        ##
+        "snap:FreedmanOf"
+      | 
+        ##
+        "snap:FreedSlaveOf"
+      | 
+        ##
+        "snap:FreedwomanOf"
+      | 
+        ##
+        "snap:FriendshipFor"
+      | 
+        ##
+        "snap:GrandchildOf"
+      | 
+        ##
+        "snap:GranddaughterOf"
+      | 
+        ##
+        "snap:GrandfatherOf"
+      | 
+        ##
+        "snap:GrandmotherOf"
+      | 
+        ##
+        "snap:GrandparentOf"
+      | 
+        ##
+        "snap:GrandsonOf"
+      | 
+        ##
+        "snap:GreatGrandfatherOf"
+      | 
+        ##
+        "snap:GreatGrandmotherOf"
+      | 
+        ##
+        "snap:GreatGrandparentOf"
+      | 
+        ##
+        "snap:HalfFamilyRelationship"
+      | 
+        ##
+        "snap:HereditaryFamilyOf"
+      | 
+        ##
+        "snap:HouseholdOf"
+      | 
+        ##
+        "snap:HouseSlaveOf"
+      | 
+        ##
+        "snap:InLawFamilyRelationship"
+      | 
+        ##
+        "snap:IntimateRelationshipWith"
+      | 
+        ##
+        "snap:KinOf"
+      | 
+        ##
+        "snap:LegallyRecognisedRelationshipWithExtendedFamilyOf"
+      | 
+        ##
+        "snap:ExtendedHouseholdOf"
+      | 
+        ##
+        "snap:FamilyOf"
+      | 
+        ##
+        "snap:FatherOf"
+      | 
+        ##
+        "snap:FosterFamilyRelationship"
+      | 
+        ##
+        "snap:FreedmanOf"
+      | 
+        ##
+        "snap:FreedSlaveOf"
+      | 
+        ##
+        "snap:FreedwomanOf"
+      | 
+        ##
+        "snap:FriendshipFor"
+      | 
+        ##
+        "snap:GrandchildOf"
+      | 
+        ##
+        "snap:GranddaughterOf"
+      | 
+        ##
+        "snap:GrandfatherOf"
+      | 
+        ##
+        "snap:GrandmotherOf"
+      | 
+        ##
+        "snap:GrandparentOf"
+      | 
+        ##
+        "snap:GrandsonOf"
+      | 
+        ##
+        "snap:GreatGrandfatherOf"
+      | 
+        ##
+        "snap:GreatGrandmotherOf"
+      | 
+        ##
+        "snap:GreatGrandparentOf"
+      | 
+        ##
+        "snap:HalfFamilyRelationship"
+      | 
+        ##
+        "snap:HereditaryFamilyOf"
+      | 
+        ##
+        "snap:HouseholdOf"
+      | 
+        ##
+        "snap:HouseSlaveOf"
+      | 
+        ##
+        "snap:InLawFamilyRelationship"
+      | 
+        ##
+        "snap:IntimateRelationshipWith"
+      | 
+        ##
+        "snap:KinOf"
+      | 
+        ##
+        "snap:LegallyRecognisedRelationshipWith"
+      | 
+        ##
+        "snap:MaternalFamilyRelationship"
+      | 
+        ##
+        "snap:ProfessionalRelationshipMaternalFamilyRelationship"
+      | 
+        ##
+        "snap:MotherOf"
+      | 
+        ##
+        "snap:NephewOf"
+      | 
+        ##
+        "snap:NieceOf"
+      | 
+        ##
+        "snap:ParentOf"
+      | 
+        ##
+        "snap:PaternalFamilyRelationship"
+      | 
+        ##
+        "snap:ProfessionalRelationship"
+      | 
+        ##
+        "snap:SeriousIntimateRelationshipWith"
+      | 
+        ##
+        "snap:SiblingOf"
+      | 
+        ##
+        "snap:SiblingOfParentOf"
+      | 
+        ##
+        "snap:SisterOf"
+      | 
+        ##
+        "snap:SlaveOf"
+      | 
+        ##
+        "snap:SonOf"
+      | 
+        ##
+        "snap:StepFamilyRelationship"
+      | 
+        ##
+        "snap:UncleOfSeriousIntimateRelationshipWith"
+      | 
+        ##
+        "snap:SiblingOf"
+      | 
+        ##
+        "snap:SiblingOfParentOf"
+      | 
+        ##
+        "snap:SlaveOf"
+      | 
+        ##
+        "snap:SonOf"
+      | 
+        ##
+        "snap:StepFamilyRelationship"
+      | 
+        ##
+        "snap:UncleOf"
     },
     (
      ## identifies the active participants in a non-mutual relationship, or all the participants in a mutual one.
@@ -8650,7 +9152,7 @@ tei_witness =
   element witness {
     tei_macro.limitedContent
     >> sch:pattern [
-         id = "tei-betamesaheft-witness-witness-constraint-21"
+         id = "tei-betamesaheft-witness-witness-constraint-26"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -8668,7 +9170,7 @@ tei_witness =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-witness-witness-constraint-22"
+         id = "tei-betamesaheft-witness-witness-constraint-27"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -8728,7 +9230,7 @@ tei_variantEncoding =
     }
     >> sch:pattern [
          id =
-           "tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-23"
+           "tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-28"
          "\x{a}" ~
          "            "
          sch:rule [
