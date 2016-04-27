@@ -8,7 +8,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-04-25T16:22:57Z. .
+# Schema generated from ODD source 2016-04-27T10:02:19Z. .
 # TEI Edition: Version 3.0.0. Last updated on
 #	29th March 2016, revision 89ba24e
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -2322,16 +2322,19 @@ tei_term =
     attribute key {
       
       ##
-      "Apocrypha"
+      "Apocrypha/Pseudoepigrapha"
+      | 
+        ##
+        "Apocrypha"
       | 
         ##
         "Pseudoepigrapha"
       | 
         ##
-        "New Testament"
+        "NewTestament"
       | 
         ##
-        "Old Testament"
+        "OldTestament"
       | 
         ##
         "Bible"
@@ -2340,28 +2343,28 @@ tei_term =
         "Biography"
       | 
         ##
-        "Canon law"
+        "CanonLaw"
       | 
         ##
-        "Christian literature"
+        "ChristianLiterature"
       | 
         ##
         "Hagiography"
       | 
         ##
-        "History and Historiography"
+        "HistoryAndHistoriography"
       | 
         ##
         "Homily"
       | 
         ##
-        "Islamic literature"
+        "IslamicLiterature"
       | 
         ##
         "Koran"
       | 
         ##
-        "Legal document"
+        "LegalDocument"
       | 
         ##
         "Liturgy"
@@ -2376,7 +2379,7 @@ tei_term =
         "Missal"
       | 
         ##
-        "Rituals and Rites"
+        "RitualsAndRites"
       | 
         ##
         "Missal"
@@ -2391,13 +2394,13 @@ tei_term =
         "Miscellanea"
       | 
         ##
-        "Monastic literature"
+        "MonasticLiterature"
       | 
         ##
-        "Natural sciences"
+        "NaturalSciences"
       | 
         ##
-        "other"
+        "Other"
       | 
         ##
         "Poetry"
@@ -4849,6 +4852,39 @@ tei_change =
       | 
         ##
         "PL"
+      | 
+        ##
+        "SH"
+      | 
+        ##
+        "EG"
+      | 
+        ##
+        "MK"
+      | 
+        ##
+        "VP"
+      | 
+        ##
+        "SA"
+      | 
+        ##
+        "VR"
+      | 
+        ##
+        "AA"
+      | 
+        ##
+        "SD"
+      | 
+        ##
+        "IR"
+      | 
+        ##
+        "IF"
+      | 
+        ##
+        "MB"
     },
     
     ##
@@ -6316,7 +6352,7 @@ tei_ab =
     tei_att.written.attributes,
     
     ## 
-    ## Sample values include: 1] history; 2] description; 3] ruling; 4] pricking; 5] punctuation; 6] cruces; 7] CruxAnsata; 8] ChiRho
+    ## Sample values include: 1] history; 2] description; 3] ruling; 4] pricking; 5] punctuation; 6] cruces; 7] CruxAnsata; 8] ChiRho; 9] coronis
     attribute type { text }?,
     
     ## 

@@ -141,32 +141,33 @@
                   <attDef ident="key" mode="replace" usage="rec">
                       <valList type="closed">
 <!--                          list coming from myCore-->
+                          <valItem ident="Apocrypha/Pseudoepigrapha"/> <!--mycore-->
                           <valItem ident="Apocrypha"/>
                           <valItem ident="Pseudoepigrapha"/>
-                          <valItem ident="New Testament"/>
-                          <valItem ident="Old Testament"/>
+                          <valItem ident="NewTestament"/>
+                          <valItem ident="OldTestament"/>
                           <valItem ident="Bible"/>
                           <valItem ident="Biography"/>
-                          <valItem ident="Canon law"/>
-                          <valItem ident="Christian literature"/>
+                          <valItem ident="CanonLaw"/>
+                          <valItem ident="ChristianLiterature"/>
                           <valItem ident="Hagiography"/>
-                          <valItem ident="History and Historiography"/>
+                          <valItem ident="HistoryAndHistoriography"/>
                           <valItem ident="Homily"/>
-                          <valItem ident="Islamic literature"/>
+                          <valItem ident="IslamicLiterature"/>
                           <valItem ident="Koran"/>
-                          <valItem ident="Legal document"/>
+                          <valItem ident="LegalDocument"/>
                           <valItem ident="Liturgy"/>
                           <valItem ident="Chants"/>
                           <valItem ident="Lectionary"/>
                           <valItem ident="Missal"/>
-                          <valItem ident="Rituals and Rites"/>
+                          <valItem ident="RitualsAndRites"/>
                           <valItem ident="Missal"/>
                           <valItem ident="Magic"/>
                           <valItem ident="Medicine"/>
                           <valItem ident="Miscellanea"/>
-                          <valItem ident="Monastic literature"/>
-                          <valItem ident="Natural sciences"/>
-                          <valItem ident="other"/>
+                          <valItem ident="MonasticLiterature"/>
+                          <valItem ident="NaturalSciences"/>
+                          <valItem ident="Other"/>
                           <valItem ident="Poetry"/>
                           <valItem ident="Prayers"/>
                           <valItem ident="Religion"/>
@@ -473,6 +474,7 @@
                           <valItem ident="cruces"/>
                           <valItem ident="CruxAnsata"/>
                           <valItem ident="ChiRho"/>
+                          <valItem ident="coronis"/>
                       </valList>
                   </attDef>
                   <attDef ident="subtype" mode="replace" usage="opt">
@@ -649,6 +651,17 @@
                           <valItem ident="MV"/> <!--Massimo-->
                           <valItem ident="SG"/> <!--Solomon-->
                           <valItem ident="PL"/> <!--Pietro-->
+                          <valItem ident="SH"/><!--SHummel-->
+                          <valItem ident="EG"/><!--EGusarova-->
+                          <valItem ident="MK"/><!--MKrzyzanowska-->
+                          <valItem ident="VP"/><!--VPisani-->
+                          <valItem ident="SA"/><!--SAncel-->
+                          <valItem ident="VR"/><!--VRoth-->
+                          <valItem ident="AA"/><!--AAdugna-->
+                          <valItem ident="SD"/><!--SDege-->
+                          <valItem ident="IR"/><!--IRoticiani-->
+                          <valItem ident="IF"/><!--IFridman-->
+                          <valItem ident="MB"/><!--MBulakh-->
                       </valList>
                   </attDef>
                   <attDef ident="when" mode="replace" usage="req"/>

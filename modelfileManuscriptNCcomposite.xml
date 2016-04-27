@@ -147,7 +147,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                  <width></width>
                                  <depth></depth>
                               </dimensions>
-                           </extent>
+                              </extent>
                            <foliation></foliation>
                            <collation>
                               <list>
@@ -172,7 +172,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                                  <dim type="right"></dim>
                                  <dim type="left"></dim>
                               </dimensions>
-                              <ab></ab>
+                              <ab type="ruling"></ab>
                               <ab type="pricking" subtype="pattern"></ab>
                               <ab type="punctuation" subtype="dividers">
                                  <list>
@@ -239,7 +239,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                   </physDesc>
                   <history>
                      <origin>
-                        <origPlace><placeName corresp="PRS2222222"/></origPlace>
+                        <origPlace><placeName corresp="LOC2222222"/></origPlace>
                      </origin>
                   </history>
                   <additional>
@@ -274,10 +274,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       <profileDesc>
          <particDesc>
             <listPerson>
-               <person role="donor"/>
-               <person role="scribe"/>
-               <person role="other"/>
-            </listPerson>
+               <person><persName role="donor" corresp="PRS00000"></persName></person>
+               <person><persName role="scribe" corresp="PRS00000"></persName></person>
+               <person><persName corresp="PRS00000"></persName></person>
+               </listPerson>
          </particDesc>
          <textClass>
             <keywords>
