@@ -63,7 +63,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <language ident="en">English</language>
             <language ident="it">Italian</language>
             <language ident="syr"></language>
-            <language ident="gez" corresp="Lan05">Gəˁəz</language>
+            <language ident="gez" corresp="Lan05">Gəʿəz</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>

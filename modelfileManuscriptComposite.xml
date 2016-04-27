@@ -458,7 +458,7 @@ You could also start from the provided TEI models in Oxygen
          <langUsage>
             <language ident="en">English</language>
             <language ident="it">Italian</language>
-            <language ident="gez">Gəˁəz</language>
+            <language ident="gez">Gəʿəz</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>

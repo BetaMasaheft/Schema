@@ -36,7 +36,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 <language ident="en">English</language>
                 <language ident="ar">Arabic</language>
                 <language ident="it">Italiano</language>
-                <language ident="gez">Gəˁəz</language>
+                <language ident="gez">Gəʿəz</language>
             </langUsage>
         </profileDesc>
         <revisionDesc>

@@ -38,7 +38,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
             <language ident="it">Italiano</language>
-            <language ident="gez">Gəˁəz</language>
+            <language ident="gez">Gəʿəz</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>
@@ -71,7 +71,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 <!--                  Account of the foundation of the institution   
                         I leave this as an example. note that the description can be fully marked up with reference to other entities.-->
                      Accodring to local tradition, the founder was <persName corresp="PRS99999mamas">ˀabunä Mamas</persName> 
-                     (from the time of <persName corresp="PRS12831AdmaS">King ˁAmdä Ṣəyon</persName> I, r. 1314-44).</desc>
+                     (from the time of <persName corresp="PRS12831AdmaS">King ʿAmdä Ṣəyon</persName> I, r. 1314-44).</desc>
                   
                   <ab type="history">
 <!--                     Account of the history of the institution 
