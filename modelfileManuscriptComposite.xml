@@ -388,7 +388,7 @@ You could also start from the provided TEI models in Oxygen
                            <!--                        a descriptive paragraph about the date of production of the manuscript, 
                               which can be annotated with references and correspondences
                         the text below is an example-->
-                           Mention of <persName corresp="PRS10378Yohanne">King Yoḥannәs
+                           Mention of <persName corresp="PRS10378Yohanne">King Yoḥannəs
                               IV</persName> (<date>1872-89</date>) on <locus target="#43r" n="8"
                               corresp="#coloph"/>, and of <persName type="metropolitan"
                               corresp="PRS2223Atnatewo">Metropolitan ˀabunä ˀAtnatewos</persName>
