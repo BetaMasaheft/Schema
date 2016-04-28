@@ -279,11 +279,11 @@
                   </constraint>
               </constraintSpec>
               <attList>
-                  <attDef ident="evidence" mode="add">
+                  <attDef ident="evidence" mode="add" usage="opt"
+                      >
                       <datatype maxOccurs="6">
                           <rng:ref name="data.word"/>
                       </datatype>
-                      <defaultVal>conjecture</defaultVal>
                      
                   </attDef>
                   <attDef ident="corresp" mode="change" usage="rec"/>

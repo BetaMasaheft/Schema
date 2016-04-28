@@ -8,7 +8,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-04-28T12:15:03Z. .
+# Schema generated from ODD source 2016-04-28T14:14:43Z. .
 # TEI Edition: Version 3.0.0. Last updated on
 #	29th March 2016, revision 89ba24e
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -3363,6 +3363,18 @@ tei_title =
     ## 
     ## Sample values include: 1] complete; 2] incomplete; 3] normalized
     attribute type { text }?,
+    
+    ##
+    attribute evidence {
+      list {
+        tei_data.word,
+        tei_data.word?,
+        tei_data.word?,
+        tei_data.word?,
+        tei_data.word?,
+        tei_data.word?
+      }
+    }?,
     
     ## indicates the bibliographic level for a title, that is, whether it identifies an article, book, journal, series, or unpublished material.
     attribute level {
