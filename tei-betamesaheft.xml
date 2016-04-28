@@ -327,6 +327,94 @@
               </attList>
           </elementSpec>
           
+<!--          specifies values for faith element, limiting number of values to 2 for "further specification"-->
+          <elementSpec ident="faith" mode="change" module="namesdates">
+              <attList>
+                  <attDef ident="type" mode="replace" usage="req">
+                      <datatype maxOccurs="3">
+                          <rng:ref name="data.word"/>
+                      </datatype>
+                      <valList type="closed">
+                          <valItem ident="EOTC"/>
+                          <valItem ident="Christianity"/>
+                          <valItem ident="Catholicism"/>
+                          <valItem ident="Protestantism"/>
+                          <valItem ident="Anglican"/>
+                          <valItem ident="Coptic"/>
+                          <valItem ident="Orthodox"/>
+                          <valItem ident="Syriac"/>
+                          <valItem ident="Greek"/>
+                          <valItem ident="Russian"/>
+                          <valItem ident="Armenian"/>
+                          <valItem ident="Islam"/>
+                          <valItem ident="Sunni"/>
+                          <valItem ident="Shia"/>
+                          <valItem ident="Judaism"/>
+                          <valItem ident="Ethiopian"/>
+                          <valItem ident="Traditional"/>
+                          <valItem ident="Aksumite"/>
+                          <valItem ident="Oromo"/>
+                          <valItem ident="Gurage"/>
+                          <valItem ident="Church"/>
+                          <valItem ident="notSpecified"/>
+                      </valList>
+                  </attDef>
+              </attList>
+          </elementSpec>
+          
+          <!--          specifies values for faith element, limiting number of values to 2 for "further specification"-->
+          <elementSpec ident="nationality" mode="change" module="namesdates">
+              <attList>
+                  <attDef ident="type" mode="replace" usage="req">
+                      <datatype maxOccurs="2">
+                          <rng:ref name="data.word"/>
+                      </datatype>
+                      <valList type="closed">
+                          <valItem ident="Ethiopia"/>
+                          <valItem ident="Aksumite"/>
+                          <valItem ident="post-Aksumite"/>
+                          <valItem ident="post-1991"/>
+                          <valItem ident="Eritrea"/>
+                          <valItem ident="Harar"/>
+                          <valItem ident="Oromo"/>
+                          <valItem ident="Adal"/>
+                          <valItem ident="ByzantineEmpire"/>
+                          <valItem ident="OttomanEmpire"/>
+                          <valItem ident="Turkey"/>
+                          <valItem ident="Syria"/>
+                          <valItem ident="Somalia"/>
+                          <valItem ident="Djibouti"/>
+                          <valItem ident="Sudan"/>
+                          <valItem ident="AncientEgypt"/>
+                          <valItem ident="Egypt"/>
+                          <valItem ident="Coptic"/>
+                          <valItem ident="Armenia"/>
+                          <valItem ident="Italy"/>
+                          <valItem ident="France"/>
+                          <valItem ident="Germany"/>
+                          <valItem ident="Russia/USSR"/>
+                          <valItem ident="Belgium"/>
+                          <valItem ident="Netherlands"/>
+                          <valItem ident="Greece"/>
+                          <valItem ident="India"/>
+                          <valItem ident="Israel/Palestine"/>
+                          <valItem ident="Yemen"/>
+                          <valItem ident="Nubia"/>
+                          <valItem ident="Portugal"/>
+                          <valItem ident="Spain"/>
+                          <valItem ident="Sweden"/>
+                          <valItem ident="Denmark"/>
+                          <valItem ident="USA"/>
+                          <valItem ident="Vatican"/>
+                          <valItem ident="Iran/Persia"/>
+                          <valItem ident="notSpecified"/>
+                          <valItem ident="Poland"/>
+                          <valItem ident="Canada"/>
+                          </valList>
+                  </attDef>
+              </attList>
+          </elementSpec>
+          
           <!--                constrain use of type in roleName and suggest values-->
           <elementSpec ident="roleName" mode="change" module="namesdates">
               <attList>
@@ -451,13 +539,16 @@
                           <sch:report test="not(@type or @subtype)">ab in layout should always have a type and optionally a subtype</sch:report>
                       </sch:rule>
                       <sch:rule context="tei:ab[ancestor::tei:note]">
-                          <sch:report test="not(@type)">ab in note is used in listPlace for institutions and should always have a @type='history' or 'description'</sch:report>
+                          <sch:report test="not(@type)">ab in note is used in listPlace for institutions and should always have a @type equal to 'history' or 'description'. @type equal to 'appellation' can be used to list a series of ways in which a place is called. </sch:report>
                       </sch:rule>
                       <sch:rule context="tei:ab[@subtype='dividers']/@xml:id">
                           <sch:report test="not(matches(.,'div\d+'))">
                               Dividers must have ids starting with 'div' followed by a 
                               progressive number, e.g. div1, div2, div3
                           </sch:report>
+                      </sch:rule>
+                      <sch:rule context="tei:ab[ancestor::tei:note][@type='appellation']">
+                          <sch:report test="not(tei:list/tei:item)">an ab[@type='appellation'] must contain a list.</sch:report>
                       </sch:rule>
                   </constraint>
               </constraintSpec>
@@ -749,6 +840,103 @@
           </elementSpec>
           
           
+          
+          
+          
+          <!--          controlled values for place Type-->
+          <elementSpec ident="place" mode="change" module="msdescription">
+              <attList>
+                  <attDef ident="type" mode="replace" usage="rec">
+                      <datatype maxOccurs="6">
+                          <rng:ref name="data.word"/>
+                      </datatype>
+                      <valList type="closed">
+                          <valItem ident="ṭabiya"/>
+                          <valItem ident="dabr"/>
+                          <valItem ident="gadam"/>
+                          <valItem ident="gaṭar"/>
+                          <valItem ident="waradā"/>
+                          <valItem ident="settlement"/>
+                          <valItem ident="archaeologicalSite"/>
+                          <valItem ident="shrine"/>
+                          <valItem ident="town"/>
+                          <valItem ident="region"/>
+                          <valItem ident="monastery"/>
+                          <valItem ident="church"/>
+                          <valItem ident="lake"/>
+                          <valItem ident="area"/>
+                          <valItem ident="river"/>
+                          <valItem ident="mountain"/>
+                          <valItem ident="mosque"/>
+                          <valItem ident="district"/>
+                          <valItem ident="valley"/>
+                          <valItem ident="state"/>
+                          <valItem ident="port"/>
+                          <valItem ident="religiousSite"/>
+                          <valItem ident="zone"/>
+                          <valItem ident="country"/>
+                          <valItem ident="gulf"/>
+                          <valItem ident="qušat"/>
+                          <valItem ident="pass"/>
+                          <valItem ident="island"/>
+                          <valItem ident="cataract"/>
+                          <valItem ident="kingdom"/>
+                          <valItem ident="fort"/>
+                          <valItem ident="spring"/>
+                          <valItem ident="plateau"/>
+                          <valItem ident="forest"/>
+                          <valItem ident="administrativeUnit"/>
+                          <valItem ident="gulf"/>
+                          <valItem ident="emirate"/>
+                          <valItem ident="station"/>
+                          <valItem ident="plain"/>
+                          <valItem ident="rockSite"/>
+                          <valItem ident="strait"/>
+                          <valItem ident="volcano"/>
+                          <valItem ident="city"/>
+                          <valItem ident="falls"/>
+                          <valItem ident="ambā"/>
+                          <valItem ident="sultanate"/>
+                          <valItem ident="sea"/>
+                          <valItem ident="cape"/>
+                          <valItem ident="chapel"/>
+                          <valItem ident="zoba"/>
+                          <valItem ident="wādī"/>
+                          <valItem ident="dam"/>
+                          <valItem ident="quarter"/>
+                          <valItem ident="well"/>
+                          <valItem ident="awraǧǧā"/>
+                          <valItem ident="site"/>
+                          <valItem ident="katamā"/>
+                          <valItem ident="port"/>
+                          <valItem ident="oasis"/>
+                          <valItem ident="river"/>
+                          <valItem ident="cape"/>
+                          <valItem ident="gorge"/>
+                          <valItem ident="cave"/>
+                          <valItem ident="strait"/>
+                          <valItem ident="station"/>
+                          <valItem ident="post"/>
+                          <valItem ident="market"/>
+                          <valItem ident="temple"/>
+                          <valItem ident="planet"/>
+                          <valItem ident="fort"/>
+                          <valItem ident="farm"/>
+                          <valItem ident="desert"/>
+                          <valItem ident="cave"/>
+                          <valItem ident="gulf"/>
+                          <valItem ident="qabale"/>
+                          <valItem ident="peninsula"/>
+                          <valItem ident="castle"/>
+                          <valItem ident="bay"/>
+                          
+                          
+                          
+                      </valList>
+                  </attDef>
+                  
+              </attList>
+          </elementSpec>
       
           
 <!--          controlled values for material-->
