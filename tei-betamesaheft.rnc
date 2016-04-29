@@ -8,7 +8,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-04-28T14:14:43Z. .
+# Schema generated from ODD source 2016-04-29T10:05:59Z. .
 # TEI Edition: Version 3.0.0. Last updated on
 #	29th March 2016, revision 89ba24e
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -2287,9 +2287,129 @@ tei_desc =
     tei_att.translatable.attributes,
     tei_att.typed.attribute.subtype,
     
-    ## 
-    ## Sample values include: 1] foundation; 2] Headband; 3] Tailband
-    attribute type { text }?,
+    ##
+    attribute type {
+      
+      ## for use in place or institution record
+      "foundation"
+      | 
+        ## for use in binding description
+        "Headband"
+      | 
+        ## for use in binding description
+        "Tailband"
+      | 
+        ## 1. the book belongs to an individual, 2. the book belongs to an institution
+        "Donation"
+      | 
+        ## 1. the book belongs to an individual, 2. the book belongs to an institution
+        "Ownership"
+      | 
+        ##
+        "Purchase"
+      | 
+        ##
+        "Acquisition"
+      | 
+        ## to AM
+        "Admonition"
+      | 
+        ##
+        "LandGrant"
+      | 
+        ##
+        "FoundationCharter"
+      | 
+        ##
+        "Genealogy"
+      | 
+        ##
+        "scribeSignature"
+      | 
+        ##
+        "shortSupplication"
+      | 
+        ##
+        "subscription"
+      | 
+        ##
+        "Doxology"
+      | 
+        ## to the brethren/ to commemorate __ / to celebrate __ / to learn the religion __ etc./ on the importance of commemorating __/ on what is useful for the soul), Invocation against __/ against those who __ (not very much different from condemnation, s. below
+        "Exhortation"
+      | 
+        ##
+        "Inventory"
+      | 
+        ##
+        "Transaction"
+      | 
+        ## (Scribe’s) note on commencing the work
+        "commencing"
+      | 
+        ## Note on ordering of the copying
+        "Order"
+      | 
+        ## Note on commissioning of the writing
+        "Commission"
+      | 
+        ## (Scribe’s) note on completing the writing 
+        "completion"
+      | 
+        ## (Scribe’s) note on assigning of land 
+        "assigning"
+      | 
+        ## (Scribe’s) note on bequeathing 
+        "bequeathing"
+      | 
+        ##
+        "reconciliation"
+      | 
+        ##
+        "litigation"
+      | 
+        ##
+        "transaction"
+      | 
+        ##
+        "distribution"
+      | 
+        ## “Record” can be used for a note of a documentary, official character
+        "record"
+      | 
+        ## (Scribe’s) entreat to God for help during ...
+        "entreat"
+      | 
+        ##
+        "unclear"
+      | 
+        ## List of guarantors, Record concerning guarantors
+        "guarantors"
+      | 
+        ## Commemorative notice on __ (mainly for the Synaxarion)
+        "commemorative"
+      | 
+        ## Condemnation of those who __ (e.g., “who stole the book”)
+        "condemnation"
+      | 
+        ## (Protective) prayer
+        "prayer"
+      | 
+        ##
+        "Qǝne-poem"
+      | 
+        ##
+        "Sälam-poem"
+      | 
+        ##
+        "ˁArke-poem"
+      | 
+        ## hardly discernible, of the owning institution, of the church….
+        "stamp"
+      | 
+        ##
+        "calendaric"
+    }?,
     empty
   }
 tei_gloss =
@@ -2546,7 +2666,12 @@ tei_name =
     tei_att.personal.attributes,
     tei_att.datable.attributes,
     tei_att.editLike.attributes,
-    tei_att.typed.attributes,
+    tei_att.typed.attribute.subtype,
+    
+    ## characterizes the element in some sense, using any convenient classification scheme or typology.
+    attribute type {
+      xsd:token { pattern = "(\p{L}|\p{N}|\p{P}|\p{S})+" }
+    }?,
     empty
   }
 tei_rs =
@@ -2669,7 +2794,9 @@ tei_date =
            "               "
            sch:report [
              test = "not(@type='foundation')"
-             "Attribute @type='foundation' is require for date into a note about an institution."
+             "Attribute\x{a}" ~
+             "                                    @type='foundation' is require for date into a note about an\x{a}" ~
+             "                                    institution."
            ]
            "\x{a}" ~
            "            "
@@ -2775,7 +2902,9 @@ tei_ref =
            "               "
            sch:report [
              test = "not(@target or @corresp)"
-             "ref must be used with either a @corresp pointing to a project xml:id or a @target pointing to a an external url"
+             "ref must be used with\x{a}" ~
+             "                                    either a @corresp pointing to a project xml:id or a @target\x{a}" ~
+             "                                    pointing to a an external url"
            ]
            "\x{a}" ~
            "            "
@@ -2911,7 +3040,8 @@ tei_item =
            "               "
            sch:report [
              test = "not(@xml:id)"
-             "items in collation must have an @xml:id"
+             "items in collation must have an\x{a}" ~
+             "                                    @xml:id"
            ]
            "\x{a}" ~
            "            "
@@ -2929,10 +3059,9 @@ tei_item =
            "               "
            sch:report [
              test = "not(matches(.,'q\d+'))"
-             "\x{a}" ~
-             "                              Items in Collation must have ids starting with the letter 'q' followed by a \x{a}" ~
-             "                              progressive number, e.g. q1, q2, q3\x{a}" ~
-             "                          "
+             " Items in Collation must\x{a}" ~
+             "                                    have ids starting with the letter 'q' followed by a progressive\x{a}" ~
+             "                                    number, e.g. q1, q2, q3 "
            ]
            "\x{a}" ~
            "            "
@@ -3299,10 +3428,11 @@ tei_title =
            "               "
            sch:report [
              test = "not(@xml:id or @corresp)"
-             "title in work must always have \x{a}" ~
-             "                              an @xml:id which identifies alternative titles and @corresp \x{a}" ~
-             "                              for the titles in other languages translating each of the given titles. \x{a}" ~
-             "                              Format of the id should be like t1 t2, etc."
+             "title in work must\x{a}" ~
+             "                                    always have an @xml:id which identifies alternative titles and\x{a}" ~
+             "                                    @corresp for the titles in other languages translating each of\x{a}" ~
+             "                                    the given titles. Format of the id should be like t1 t2,\x{a}" ~
+             "                                    etc."
            ]
            "\x{a}" ~
            "            "
@@ -3321,10 +3451,9 @@ tei_title =
            "               "
            sch:report [
              test = "not(matches(.,'t\d+'))"
-             "\x{a}" ~
-             "                              Titles of works must have ids starting with the letter 't' followed by a \x{a}" ~
-             "                              progressive number, e.g. t1, t2, t3\x{a}" ~
-             "                          "
+             " Titles of works must have\x{a}" ~
+             "                                    ids starting with the letter 't' followed by a progressive\x{a}" ~
+             "                                    number, e.g. t1, t2, t3 "
            ]
            "\x{a}" ~
            "            "
@@ -3501,10 +3630,10 @@ tei_bibl =
            "               "
            sch:report [
              test = "not(@corresp)"
-             "bibl in a mss list of references \x{a}" ~
-             "                              must always contain a @corresp pointing to a project xml:id of \x{a}" ~
-             "                              a manuscript or to an external resource (in which case you need \x{a}" ~
-             '                              to add a @type="external")'
+             "bibl in a mss list of references\x{a}" ~
+             "                                    must always contain a @corresp pointing to a project xml:id of a\x{a}" ~
+             "                                    manuscript or to an external resource (in which case you need to\x{a}" ~
+             '                                    add a @type="external")'
            ]
            "\x{a}" ~
            "            "
@@ -3523,9 +3652,9 @@ tei_bibl =
            "               "
            sch:report [
              test = "not(tei:ptr[@target])"
-             "bibl in a mss list of references with \x{a}" ~
-             '                              a @type="external" must contain a pointer with @target cointaing a \x{a}' ~
-             "                              full uri to the resource"
+             "bibl in a mss list of\x{a}" ~
+             '                                    references with a @type="external" must contain a pointer with\x{a}' ~
+             "                                    @target cointaing a full uri to the resource"
            ]
            "\x{a}" ~
            "            "
@@ -4538,10 +4667,9 @@ tei_handNote =
            "               "
            sch:report [
              test = "not(matches(.,'h\d+'))"
-             "\x{a}" ~
-             "                              HandNotes must have ids starting with the letter 'h' followed by a \x{a}" ~
-             "                              progressive number, e.g. h1, h2, h3\x{a}" ~
-             "                          "
+             " HandNotes must have ids\x{a}" ~
+             "                                    starting with the letter 'h' followed by a progressive number,\x{a}" ~
+             "                                    e.g. h1, h2, h3 "
            ]
            "\x{a}" ~
            "            "
@@ -4954,7 +5082,8 @@ tei_TEI =
            "               "
            sch:report [
              test = "not(@type)"
-             "Each record must have a type with one of the values suggested."
+             "Each record must have a type with one\x{a}" ~
+             "                                    of the values suggested."
            ]
            "\x{a}" ~
            "            "
@@ -6268,7 +6397,8 @@ tei_ab =
            "               "
            sch:report [
              test = "not(@type or @subtype)"
-             "ab in layout should always have a type and optionally a subtype"
+             "ab in layout should always\x{a}" ~
+             "                                    have a type and optionally a subtype"
            ]
            "\x{a}" ~
            "            "
@@ -6286,7 +6416,10 @@ tei_ab =
            "               "
            sch:report [
              test = "not(@type)"
-             "ab in note is used in listPlace for institutions and should always have a @type equal to 'history' or 'description'. @type equal to 'appellation' can be used to list a series of ways in which a place is called. "
+             "ab in note is used in listPlace for\x{a}" ~
+             "                                    institutions and should always have a @type equal to 'history'\x{a}" ~
+             "                                    or 'description'. @type equal to 'appellation' can be used to\x{a}" ~
+             "                                    list a series of ways in which a place is called. "
            ]
            "\x{a}" ~
            "            "
@@ -6304,10 +6437,9 @@ tei_ab =
            "               "
            sch:report [
              test = "not(matches(.,'div\d+'))"
-             "\x{a}" ~
-             "                              Dividers must have ids starting with 'div' followed by a \x{a}" ~
-             "                              progressive number, e.g. div1, div2, div3\x{a}" ~
-             "                          "
+             " Dividers must have ids\x{a}" ~
+             "                                    starting with 'div' followed by a progressive number, e.g. div1,\x{a}" ~
+             "                                    div2, div3 "
            ]
            "\x{a}" ~
            "            "
@@ -6325,7 +6457,8 @@ tei_ab =
            "               "
            sch:report [
              test = "not(tei:list/tei:item)"
-             "an ab[@type='appellation'] must contain a list."
+             "an ab[@type='appellation']\x{a}" ~
+             "                                    must contain a list."
            ]
            "\x{a}" ~
            "            "
@@ -6382,7 +6515,7 @@ tei_ab =
     tei_att.written.attributes,
     
     ## 
-    ## Sample values include: 1] history; 2] description; 3] ruling; 4] pricking; 5] punctuation; 6] cruces; 7] CruxAnsata; 8] ChiRho; 9] coronis
+    ## Sample values include: 1] history; 2] description; 3] appellation; 4] ruling; 5] pricking; 6] punctuation; 7] cruces; 8] CruxAnsata; 9] ChiRho; 10] coronis
     attribute type { text }?,
     
     ## 
@@ -6760,7 +6893,9 @@ tei_locus =
            "               "
            sch:report [
              test = "not(@target or @from)"
-             "locus must have either an exact reference to a page with @target or a range indicated with @from and @to."
+             "locus must have either an\x{a}" ~
+             "                                    exact reference to a page with @target or a range indicated with\x{a}" ~
+             "                                    @from and @to."
            ]
            "\x{a}" ~
            "            "
@@ -7224,24 +7359,23 @@ tei_msItem =
            sch:report [
              test = "not(matches(.,'_i\d+') or matches(.,'coloph'))"
              "\x{a}" ~
-             "                              Content Items in Manuscript parts must have ids starting with the \x{a}" ~
-             "                              reference to the part in which they are contained, \x{a}" ~
-             "                              then underscore and the letter 'i' followed by a \x{a}" ~
-             "                              progressive number, e.g. p1.1_i1.1, p1.1_i2.\x{a}" ~
-             "                              The only exception is colophon which takes an id \x{a}" ~
-             "                              colophon followed by a number, e.g. coloph1, coloph2.\x{a}" ~
-             "                          "
+             "                                    Content Items in Manuscript parts must have ids starting with\x{a}" ~
+             "                                    the reference to the part in which they are contained, then\x{a}" ~
+             "                                    underscore and the letter 'i' followed by a progressive number,\x{a}" ~
+             "                                    e.g. p1.1_i1.1, p1.1_i2. The only exception is colophon which\x{a}" ~
+             "                                    takes an id colophon followed by a number, e.g. coloph1,\x{a}" ~
+             "                                    coloph2. "
            ]
            "\x{a}" ~
            "               "
            sch:report [
              test = "matches(.,'(_.*){2}')"
-             "\x{a}" ~
-             "                              The Underscore is used in ids to mark a nesting of differnt ids, especially items in parts.\x{a}" ~
-             "                              there should thus be only one of them as a maximum. \x{a}" ~
-             "                              If you have parts into parts or items into items, please use a full stop. \x{a}" ~
-             "                              p1.2_i3.4 is e.g. the subitem 4 of item 3 in subpart 2 of part 1.\x{a}" ~
-             "                          "
+             " The Underscore is used in\x{a}" ~
+             "                                    ids to mark a nesting of differnt ids, especially items in\x{a}" ~
+             "                                    parts. there should thus be only one of them as a maximum. If\x{a}" ~
+             "                                    you have parts into parts or items into items, please use a full\x{a}" ~
+             "                                    stop. p1.2_i3.4 is e.g. the subitem 4 of item 3 in subpart 2 of\x{a}" ~
+             "                                    part 1. "
            ]
            "\x{a}" ~
            "            "
@@ -7512,7 +7646,8 @@ tei_decoNote =
            "               "
            sch:report [
              test = "not(child::tei:locus)"
-             "decoNote must contain a locus to indicate the position of the feature"
+             "decoNote must contain a\x{a}" ~
+             "                                    locus to indicate the position of the feature"
            ]
            "\x{a}" ~
            "            "
@@ -7531,10 +7666,9 @@ tei_decoNote =
            "               "
            sch:report [
              test = "not(matches(.,'d\d+'))"
-             "\x{a}" ~
-             "                              DecoNotes must have ids starting with the letter 'd' followed by a \x{a}" ~
-             "                              progressive number, e.g. d1, d2, d3\x{a}" ~
-             "                          "
+             " DecoNotes must have ids\x{a}" ~
+             "                                    starting with the letter 'd' followed by a progressive number,\x{a}" ~
+             "                                    e.g. d1, d2, d3 "
            ]
            "\x{a}" ~
            "            "
@@ -7552,10 +7686,9 @@ tei_decoNote =
            "               "
            sch:report [
              test = "not(matches(.,'b\d+'))"
-             "\x{a}" ~
-             "                              DecoNotes in Binding Description must have ids starting with the letter 'b' followed by a \x{a}" ~
-             "                              progressive number, e.g. b1, b2, b3\x{a}" ~
-             "                          "
+             " DecoNotes in Binding\x{a}" ~
+             "                                    Description must have ids starting with the letter 'b' followed\x{a}" ~
+             "                                    by a progressive number, e.g. b1, b2, b3 "
            ]
            "\x{a}" ~
            "            "
@@ -7698,7 +7831,9 @@ tei_origin =
            "               "
            sch:report [
              test = "not(child::tei:origDate)"
-             "At least one date must be specified, preferably with a type to indicate the origin of it and evidence"
+             "At least one date must\x{a}" ~
+             "                                    be specified, preferably with a type to indicate the origin of\x{a}" ~
+             "                                    it and evidence"
            ]
            "\x{a}" ~
            "            "
@@ -7823,21 +7958,20 @@ tei_msPart =
            "               "
            sch:report [
              test = "not(matches(.,'p\d+'))"
-             "\x{a}" ~
-             "                              Manuscript parts ids must start with the letter 'p' followed by a \x{a}" ~
-             "                              progressive number, e.g. p1, p1.3, p1.1_i1.1\x{a}" ~
-             "                              "
+             " Manuscript parts ids must\x{a}" ~
+             "                                    start with the letter 'p' followed by a progressive number, e.g.\x{a}" ~
+             "                                    p1, p1.3, p1.1_i1.1 "
            ]
            "\x{a}" ~
            "               "
            sch:report [
              test = "matches(.,'(_.*){2}')"
-             "\x{a}" ~
-             "                              The Underscore is used in ids to mark a nesting of differnt ids, especially items in parts.\x{a}" ~
-             "                              there should thus be only one of them as a maximum. \x{a}" ~
-             "                              If you have parts into parts or items into items, please use a full stop. \x{a}" ~
-             "                              p1.2_i3.4 is e.g. the subitem 4 of item 3 in subpart 2 of part 1.\x{a}" ~
-             "                          "
+             " The Underscore is used in\x{a}" ~
+             "                                    ids to mark a nesting of differnt ids, especially items in\x{a}" ~
+             "                                    parts. there should thus be only one of them as a maximum. If\x{a}" ~
+             "                                    you have parts into parts or items into items, please use a full\x{a}" ~
+             "                                    stop. p1.2_i3.4 is e.g. the subitem 4 of item 3 in subpart 2 of\x{a}" ~
+             "                                    part 1. "
            ]
            "\x{a}" ~
            "            "
@@ -8076,8 +8210,9 @@ tei_persName =
            "               "
            sch:report [
              test = "not(@corresp)"
-             "A persName  in a mss, place or work description should always \x{a}" ~
-             "                              contain an attribute @corresp pointing to the relevant record"
+             "A persName in a mss, place or work\x{a}" ~
+             "                                    description should always contain an attribute @corresp pointing\x{a}" ~
+             "                                    to the relevant record"
            ]
            "\x{a}" ~
            "            "
@@ -8238,8 +8373,9 @@ tei_placeName =
            "               "
            sch:report [
              test = "not(@corresp)"
-             "A placeName  in a mss, person or work description should always \x{a}" ~
-             "                              contain an attribute @corresp pointing to the relevant record"
+             "A placeName in a mss, person or\x{a}" ~
+             "                                    work description should always contain an attribute @corresp\x{a}" ~
+             "                                    pointing to the relevant record"
            ]
            "\x{a}" ~
            "            "
@@ -8683,10 +8819,9 @@ tei_geo =
            sch:report [
              test =
                "not(matches(.,'\-?\d{1,2}\.\d{3,6}\s\-?\d{1,2}\.\d{3,6}'))"
-             "\x{a}" ~
-             "                              Coordinates should be written as decimal degrees separated \x{a}" ~
-             '                              by a single space e.g. "14.165289 39.447665" latitude first. \x{a}' ~
-             "                          "
+             " Coordinates should be written as decimal degrees separated by\x{a}" ~
+             '                                    a single space e.g. "14.165289 39.447665" latitude first.\x{a}' ~
+             "                                "
            ]
            "\x{a}" ~
            "            "
@@ -11480,10 +11615,10 @@ tei_witness =
            "               "
            sch:report [
              test = "not(@corresp)"
-             "witness must always contain \x{a}" ~
-             "                              a @corresp pointing to a project xml:id of a manuscript or \x{a}" ~
-             "                              to an external resource (in which case you need to add \x{a}" ~
-             '                              a @type="external")'
+             "witness must always contain a\x{a}" ~
+             "                                    @corresp pointing to a project xml:id of a manuscript or to an\x{a}" ~
+             "                                    external resource (in which case you need to add a\x{a}" ~
+             '                                    @type="external")'
            ]
            "\x{a}" ~
            "            "
@@ -11502,9 +11637,9 @@ tei_witness =
            "               "
            sch:report [
              test = "not(tei:ptr[@target])"
-             "bibl in a mss list \x{a}" ~
-             '                              of references with a @type="external" must contain a\x{a}' ~
-             "                              pointer with @target cointaing a full uri to the resource"
+             "bibl in a mss list of\x{a}" ~
+             '                                    references with a @type="external" must contain a pointer with\x{a}' ~
+             "                                    @target cointaing a full uri to the resource"
            ]
            "\x{a}" ~
            "            "
