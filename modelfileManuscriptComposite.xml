@@ -47,11 +47,11 @@ You could also start from the provided TEI models in Oxygen
             <msDesc xml:id="ms">
                
                <msIdentifier>
-                  <repository corresp="INS00000030Addaqaharsi"/>
-                  <collection>
-                     
-                  </collection>
-                  <idno ><!-- enter here the shelf mark of the manuscript only MR-023--></idno>
+                  
+                     <repository corresp="INS0002BAV">Biblioteca Apostolica Vaticana</repository>
+                     <collection>Aethiopici</collection>
+                     <idno>Vat. Aeth. 1</idno>
+                  
                   <!--
                      
                      If there are other possible identifiers, add them with the following elements Inside msIdentifier
@@ -89,7 +89,7 @@ You could also start from the provided TEI models in Oxygen
                      </idno>
                   </msIdentifier>
                   <msContents>
-                     <summary> </summary>
+                     <summary> <!--                          a textual summary of the contents of this part--> </summary>
                      <msItem xml:id="p1_i1">
                         <locus from="1ra" to="2vb"/>
                         <title type="Complete" corresp="#LIT00384Gadla"/>
@@ -102,70 +102,52 @@ You could also start from the provided TEI models in Oxygen
                         <explicit><!--same as for incipit-->
                            <foreign xml:lang="en"/>
                         </explicit>
+                        <!--                     This bibliography element can go in any msItem, or in all of them. 
+                           it should contain references to manuscripts in the catalogue using their id
+                     ids correspond to filenames. if pointing to a specific part of a manuscript with an id, use a ptr target. 
+                     for pointing to a specific page or range of page there
+                     use citedRange as in any bibliography entry
+                     -->
+                        <listBibl type="mss">
+                           <bibl corresp="EMML430"><ptr target="EMML430.xml#p.1.5_i6"/><citedRange
+                              unit="fol" from="104r" to="112v"/></bibl>
+                           <bibl corresp="EMML615"/>
+                        </listBibl>
+                        
+                        <note/>
                      </msItem>
+                     
+                     <msItem xml:id="p1_i2">
+                        <locus from="3ra" to="6vb"/>
+                        <title type="Complete" corresp="#LIT00384Gadla"/>
+
+                        <rubric></rubric>
+                        <incipit>
+                           <foreign xml:lang="en"></foreign>
+                        </incipit>
+                        <explicit>
+                           <foreign xml:lang="en"/>
+                        </explicit>
+
+                        <listBibl type="mss">
+                           <bibl corresp="EMML430"><ptr target="EMML430.xml#p.1.5_i6"/><citedRange
+                              unit="fol" from="104r" to="112v"/></bibl>
+                           <bibl corresp="EMML615"/>
+                        </listBibl>
+                        
+                        <note/>
+                     </msItem>
+                     
                   </msContents>
-                  <msPart xml:id="p1.1">
-                     <msIdentifier>
-                        <idno> </idno>
-                     </msIdentifier>
-                     <msContents>
-                        <msItem xml:id="p1.1_i1" class="content">
-                           <!--                           this item is not a part of the manuscript but a content item-->
-                           <locus from="1ra" to="2vb"/>
-                           <title type="uniform" xml:lang="la"
-                              ><!--Title of the content part--></title>
-                           <!--                           this could also point to an id in the Text record-->
-                           <textLang mainLang="gez">Ge'ez</textLang>
-                        </msItem>
-                        <msItem xml:id="p1.1_i2" class="content">
-                           <locus from="3ra" to="40vb"/>
-                           <title type="uniform" xml:lang="la"><!--Title of the content part-->
-                           </title>
-                           <textLang mainLang="gez">Ge'ez</textLang>
-                        </msItem>
-                        <msItem xml:id="p.1.1_i3">
-                           <locus/>
-                           <title/>
-                           <msItem xml:id="p.1.1_i3.1">
-                              <locus/>
-                              <title/>
-                           </msItem>
-                           <msItem xml:id="p.1.1_i3.2">
-                              <locus/>
-                              <title/>
-                           </msItem>
-                        </msItem>
-                        <msItem xml:id="p.1.1_i4">
-                           <locus/>
-                           <title/>
-                        </msItem>
-                     </msContents>
-                  </msPart>
-                  <msPart xml:id="p1.2">
-                     <msIdentifier>
-                        <idno/>
-                     </msIdentifier>
-                     <msContents>
-                        <summary>
-                           <!--                          a textual summary of the contents of this part-->
-                        </summary>
-                        <msItem xml:id="p1.3_i1">
-                           <locus from="5ra" to="43vb"/>
-                           <rubric/>
-                           <incipit> </incipit>
-                           <explicit> </explicit>
-                           <title type="uniform" corresp="LIT1468GadlaK"/>
-                           <textLang mainLang="gez">Ge'ez</textLang>
-                        </msItem>
-                        <msItem xml:id="p1.3_i2">
-                           <locus from="43va" to="50va"/>
-                           <title type="uniform"><!--title of non registered work--></title>
-                           <textLang mainLang="gez">Ge'ez</textLang>
-                        </msItem>
-                     </msContents>
-                  </msPart>
+
+                  <physDesc>
+                     <!--insert here physical description for the mspart if it applies to one part alone - use the template provided for mspart2 below-->
+                  </physDesc>
+
 
                </msPart>
+               
+               
                <msPart xml:id="p2">
                   <msIdentifier>
                      <idno/>
@@ -178,12 +160,6 @@ You could also start from the provided TEI models in Oxygen
                         <incipit> </incipit>
                         <explicit> </explicit>
 
-                        <!--                     This bibliography element can go in any msItem, or in all of them. 
-                           it should contain references to manuscripts in the catalogue using their id
-                     ids correspond to filenames. if pointing to a specific part of a manuscript with an id, use a ptr target. 
-                     for pointing to a specific page or range of page there
-                     use citedRange as in any bibliography entry
-                     -->
                         <listBibl type="mss">
                            <bibl corresp="EMML430"><ptr target="EMML430.xml#p.1.5_i6"/><citedRange
                                  unit="fol" from="104r" to="112v"/></bibl>
@@ -205,7 +181,9 @@ You could also start from the provided TEI models in Oxygen
                            punctuation sign.</note>
                      </msItem>
                   </msContents>
+                  
                   <physDesc>
+                     <!-- this is the physical description for mspart2-->
                      <objectDesc>
                         <supportDesc>
                            <support>
@@ -341,7 +319,7 @@ You could also start from the provided TEI models in Oxygen
                               <p/>
                            </item>
                            <item xml:id="a2">
-                              <locus/>
+                              <locus from="109v"/>
                               <q xml:lang="gez"/>
                               <q xml:lang="en"/>
                               <p/>
@@ -428,6 +406,9 @@ You could also start from the provided TEI models in Oxygen
                      </listBibl>
                   </additional>
                </msPart>
+               
+               
+               
             </msDesc>
          </sourceDesc>
       </fileDesc>
@@ -463,7 +444,7 @@ You could also start from the provided TEI models in Oxygen
       </profileDesc>
       <revisionDesc>
 <!--         in when put the date of your work. create a new change element for every working session describing what you have done-->
-         <change who="yourintials" when="2016-03-31">Created catalogue entry</change>
+         <change who="PL" when="2016-03-31">Created catalogue entry</change>
       </revisionDesc>
    </teiHeader>
    <text>
