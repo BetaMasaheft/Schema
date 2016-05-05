@@ -8,7 +8,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-04-29T10:05:59Z. .
+# Schema generated from ODD source 2016-05-05T13:24:59Z. .
 # TEI Edition: Version 3.0.0. Last updated on
 #	29th March 2016, revision 89ba24e
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -2300,16 +2300,16 @@ tei_desc =
         "Tailband"
       | 
         ## 1. the book belongs to an individual, 2. the book belongs to an institution
-        "Donation"
+        "DonationNote"
       | 
         ## 1. the book belongs to an individual, 2. the book belongs to an institution
-        "Ownership"
+        "OwnershipNote"
       | 
         ##
-        "Purchase"
+        "PurchaseNote"
       | 
         ##
-        "Acquisition"
+        "AcquisitionNote"
       | 
         ## to AM
         "Admonition"
@@ -2324,10 +2324,10 @@ tei_desc =
         "Genealogy"
       | 
         ##
-        "scribeSignature"
+        "scribalSignature"
       | 
         ##
-        "shortSupplication"
+        "Supplication"
       | 
         ##
         "subscription"
@@ -2339,76 +2339,85 @@ tei_desc =
         "Exhortation"
       | 
         ##
+        "Invocation"
+      | 
+        ##
         "Inventory"
       | 
         ##
-        "Transaction"
+        "TransactionNote"
       | 
         ## (Scribe’s) note on commencing the work
-        "commencing"
+        "ScribalNoteCommencing"
       | 
         ## Note on ordering of the copying
-        "Order"
+        "ScribalNoteOrdering"
       | 
         ## Note on commissioning of the writing
-        "Commission"
+        "ScribalNoteCommissioning"
       | 
         ## (Scribe’s) note on completing the writing 
-        "completion"
+        "ScribalNoteCompleting"
       | 
         ## (Scribe’s) note on assigning of land 
-        "assigning"
+        "ScribalNoteAssigningLang"
       | 
         ## (Scribe’s) note on bequeathing 
-        "bequeathing"
+        "ScribalNoteBequeathing"
       | 
         ##
-        "reconciliation"
+        "RecordReconciliation"
       | 
         ##
-        "litigation"
+        "RecordLitigation"
       | 
         ##
-        "transaction"
+        "RecordTransaction"
       | 
         ##
-        "distribution"
+        "RecordDistribution"
+      | 
+        ##
+        "RecordGuarantors"
       | 
         ## “Record” can be used for a note of a documentary, official character
-        "record"
+        "Record"
       | 
         ## (Scribe’s) entreat to God for help during ...
-        "entreat"
+        "ScribalSupplication"
       | 
         ##
-        "unclear"
+        "Unclear"
       | 
         ## List of guarantors, Record concerning guarantors
-        "guarantors"
+        "GuarantorsList"
       | 
         ## Commemorative notice on __ (mainly for the Synaxarion)
-        "commemorative"
+        "CommemorativeNote"
       | 
         ## Condemnation of those who __ (e.g., “who stole the book”)
-        "condemnation"
+        "Condemnation"
       | 
         ## (Protective) prayer
-        "prayer"
+        "ProtectivePrayer"
       | 
         ##
-        "Qǝne-poem"
+        "Poem"
       | 
         ##
-        "Sälam-poem"
+        "PoemQǝne"
       | 
         ##
-        "ˁArke-poem"
+        "PoemSalam"
+      | 
+        ##
+        "PoemArke"
       | 
         ## hardly discernible, of the owning institution, of the church….
-        "stamp"
+        "StampExlibris"
       | 
         ##
-        "calendaric"
+        "CalendaricNote"
     }?,
     empty
   }
@@ -8280,6 +8289,9 @@ tei_persName =
       | 
         ##
         "patron"
+      | 
+        ##
+        "tabot"
     }?,
     
     ## characterizes the element in some sense, using any convenient classification scheme or typology.
@@ -10874,6 +10886,9 @@ tei_relation =
         "syriaca:share-a-title"
       | 
         ##
+        "syriaca:born-at"
+      | 
+        ##
         "snap:SeriousIntimateRelationshipWith"
       | 
         ##
@@ -11139,6 +11154,9 @@ tei_relation =
       | 
         ##
         "snap:UncleOf"
+      | 
+        ##
+        "saws:saws:P129i_is_subject_of"
       | 
         ##
         "saws:AbstractManuscriptText"

@@ -1136,6 +1136,7 @@
                                 <valItem ident="syriaca:possibly-identical"/>
                                 <valItem ident="syriaca:share-a-name"/>
                                 <valItem ident="syriaca:share-a-title"/>
+                                <valItem ident="syriaca:born-at"/>
                                 <valItem ident="snap:SeriousIntimateRelationshipWith"/>
                                 <valItem ident="snap:SiblingOfParentOf"/>
                                 <valItem ident="snap:SeriousIntimateRelationshipWith"/>
@@ -1228,6 +1229,7 @@
                                 <valItem ident="snap:StepFamilyRelationship"/>
                                 <valItem ident="snap:UncleOf"/>
                                 <!--                          list INCOMPLETE! -->
+                                <valItem ident="saws:saws:P129i_is_subject_of"/>
                                 <valItem ident="saws:AbstractManuscriptText"/>
                                 <valItem ident="saws:F15_Complex_Work"/>
                                 <valItem ident="saws:F16_Container_Work"/>

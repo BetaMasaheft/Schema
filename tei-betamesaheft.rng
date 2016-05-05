@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2016-04-29T10:05:47Z. .
+Schema generated from ODD source 2016-05-05T13:24:46Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -3921,13 +3921,13 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description</a:documentation>
                   <value>Tailband</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description</a:documentation>
-                  <value>Donation</value>
+                  <value>DonationNote</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1. the book belongs to an individual, 2. the book belongs to an institution</a:documentation>
-                  <value>Ownership</value>
+                  <value>OwnershipNote</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1. the book belongs to an individual, 2. the book belongs to an institution</a:documentation>
-                  <value>Purchase</value>
+                  <value>PurchaseNote</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>Acquisition</value>
+                  <value>AcquisitionNote</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>Admonition</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to AM</a:documentation>
@@ -3937,9 +3937,9 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>Genealogy</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>scribeSignature</value>
+                  <value>scribalSignature</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>shortSupplication</value>
+                  <value>Supplication</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>subscription</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -3947,53 +3947,59 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>Exhortation</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to the brethren/ to commemorate __ / to celebrate __ / to learn the religion __ etc./ on the importance of commemorating __/ on what is useful for the soul), Invocation against __/ against those who __ (not very much different from condemnation, s. below</a:documentation>
+                  <value>Invocation</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>Inventory</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>Transaction</value>
+                  <value>TransactionNote</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>commencing</value>
+                  <value>ScribalNoteCommencing</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Scribe’s) note on commencing the work</a:documentation>
-                  <value>Order</value>
+                  <value>ScribalNoteOrdering</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Note on ordering of the copying</a:documentation>
-                  <value>Commission</value>
+                  <value>ScribalNoteCommissioning</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Note on commissioning of the writing</a:documentation>
-                  <value>completion</value>
+                  <value>ScribalNoteCompleting</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Scribe’s) note on completing the writing </a:documentation>
-                  <value>assigning</value>
+                  <value>ScribalNoteAssigningLang</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Scribe’s) note on assigning of land </a:documentation>
-                  <value>bequeathing</value>
+                  <value>ScribalNoteBequeathing</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Scribe’s) note on bequeathing </a:documentation>
-                  <value>reconciliation</value>
+                  <value>RecordReconciliation</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>litigation</value>
+                  <value>RecordLitigation</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>transaction</value>
+                  <value>RecordTransaction</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>distribution</value>
+                  <value>RecordDistribution</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>record</value>
+                  <value>RecordGuarantors</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>Record</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">“Record” can be used for a note of a documentary, official character</a:documentation>
-                  <value>entreat</value>
+                  <value>ScribalSupplication</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Scribe’s) entreat to God for help during ...</a:documentation>
-                  <value>unclear</value>
+                  <value>Unclear</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>guarantors</value>
+                  <value>GuarantorsList</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">List of guarantors, Record concerning guarantors</a:documentation>
-                  <value>commemorative</value>
+                  <value>CommemorativeNote</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Commemorative notice on __ (mainly for the Synaxarion)</a:documentation>
-                  <value>condemnation</value>
+                  <value>Condemnation</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Condemnation of those who __ (e.g., “who stole the book”)</a:documentation>
-                  <value>prayer</value>
+                  <value>ProtectivePrayer</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Protective) prayer</a:documentation>
-                  <value>Qǝne-poem</value>
+                  <value>Poem</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>Sälam-poem</value>
+                  <value>PoemQǝne</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>ˁArke-poem</value>
+                  <value>PoemSalam</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>stamp</value>
+                  <value>PoemArke</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>StampExlibris</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">hardly discernible, of the owning institution, of the church….</a:documentation>
-                  <value>calendaric</value>
+                  <value>CalendaricNote</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                </choice>
             </attribute>
@@ -11890,6 +11896,8 @@ Sample values include: 1] frame; 2] miniature; 3] punctuation; 4] drawing</a:doc
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>patron</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>tabot</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                </choice>
             </attribute>
          </optional>
@@ -14094,6 +14102,8 @@ Sample values include: 1] frame; 2] miniature; 3] punctuation; 4] drawing</a:doc
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>syriaca:share-a-title</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>syriaca:born-at</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>snap:SeriousIntimateRelationshipWith</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>snap:SiblingOfParentOf</value>
@@ -14271,6 +14281,8 @@ Sample values include: 1] frame; 2] miniature; 3] punctuation; 4] drawing</a:doc
                <value>snap:StepFamilyRelationship</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>snap:UncleOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>saws:saws:P129i_is_subject_of</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>saws:AbstractManuscriptText</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
