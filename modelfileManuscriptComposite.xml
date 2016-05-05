@@ -16,7 +16,7 @@ You could also start from the provided TEI models in Oxygen
    <!--   The xml ID should correspond to the one in the file and be formed by capital letters and digits only 
    e.g.
    * EMML2312
-    * ES15 (ethiosphere)
+    * ES15 (Ethio-SPaRe)
     * BLadd100 (British Library)
     * BNFabb3 (Bibliotheque nationale de France)
    -->

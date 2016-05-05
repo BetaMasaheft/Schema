@@ -1354,7 +1354,7 @@
                     </constraintSpec>
                     <attList>
                         <attDef ident="xml:id" mode="change" usage="req">
-                            <desc>For Manuscripts e.g. EMML2312 ES15 (ethiosphere) BLadd100 (British
+                            <desc>For Manuscripts e.g. EMML2312 ES15 (Ethio-SPaRe) BLadd100 (British
                                 Library, fondo, numero) BNFabb3 (Bibliotheque nationale de France,
                                 fondo, numero) Works = LIT1001Homili (LIT + incremental number +
                                 first world of title) Places = LOC2969Ensala (LOC + incremental
