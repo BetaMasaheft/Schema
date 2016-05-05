@@ -520,24 +520,24 @@
                                 </valItem>
                                 <valItem ident="Headband"><desc>for use in binding description</desc></valItem>
                                 <valItem ident="Tailband"><desc>for use in binding description</desc></valItem>
-                                 <valItem ident="Donation">
+                                 <valItem ident="DonationNote">
                                         <desc>1. the book belongs to an individual, 2. the book belongs
                                             to an institution</desc>
                                     </valItem>
-                                    <valItem ident="Ownership">
+                                    <valItem ident="OwnershipNote">
                                         <desc>1. the book belongs to an individual, 2. the book belongs
                                             to an institution</desc>
                                     </valItem>
-                                    <valItem ident="Purchase"/>
-                                    <valItem ident="Acquisition"/>
+                                <valItem ident="PurchaseNote"/>
+                                <valItem ident="AcquisitionNote"/>
                                     <valItem ident="Admonition">
                                         <desc>to AM</desc>
                                     </valItem>
                                     <valItem ident="LandGrant"/>
                                     <valItem ident="FoundationCharter"/>
                                     <valItem ident="Genealogy"/>
-                                    <valItem ident="scribeSignature"/>
-                                    <valItem ident="shortSupplication"/>
+                                    <valItem ident="scribalSignature"/>
+                                    <valItem ident="Supplication"/>
                                     <valItem ident="subscription"/>
                                     <valItem ident="Doxology"/>
                                     <valItem ident="Exhortation">
@@ -547,60 +547,63 @@
                                             Invocation against __/ against those who __ (not very much
                                             different from condemnation, s. below</desc>
                                     </valItem>
+                                <valItem ident="Invocation"/>
                                     <valItem ident="Inventory"/>
-                                    <valItem ident="Transaction"/>
-                                    <valItem ident="commencing">
+                                    <valItem ident="TransactionNote"/>
+                                    <valItem ident="ScribalNoteCommencing">
                                         <desc>(Scribe’s) note on commencing the work</desc>
                                     </valItem>
-                                    <valItem ident="Order">
+                                    <valItem ident="ScribalNoteOrdering">
                                         <desc>Note on ordering of the copying</desc>
                                     </valItem>
-                                    <valItem ident="Commission">
+                                <valItem ident="ScribalNoteCommissioning">
                                         <desc>Note on commissioning of the writing</desc>
                                     </valItem>
-                                    <valItem ident="completion">
+                                <valItem ident="ScribalNoteCompleting">
                                         <desc> (Scribe’s) note on completing the writing </desc>
                                     </valItem>
-                                    <valItem ident="assigning">
+                                <valItem ident="ScribalNoteAssigningLang">
                                         <desc> (Scribe’s) note on assigning of land </desc>
                                     </valItem>
-                                    <valItem ident="bequeathing">
+                                <valItem ident="ScribalNoteBequeathing">
                                         <desc> (Scribe’s) note on bequeathing </desc>
                                     </valItem>
-                                    <valItem ident="reconciliation"/>
-                                    <valItem ident="litigation"/>
-                                    <valItem ident="transaction"/>
-                                    <valItem ident="distribution"/>
-                                    <valItem ident="record">
+                                <valItem ident="RecordReconciliation"/>
+                                <valItem ident="RecordLitigation"/>
+                                <valItem ident="RecordTransaction"/>
+                                <valItem ident="RecordDistribution"/>
+                                <valItem ident="RecordGuarantors"/>
+                                    <valItem ident="Record">
                                         <desc>“Record” can be used for a note of a documentary, official
                                             character</desc>
                                     </valItem>
-                                    <valItem ident="entreat">
+                                    <valItem ident="ScribalSupplication">
                                         <desc>(Scribe’s) entreat to God for help during ...</desc>
                                     </valItem>
-                                    <valItem ident="unclear"/>
-                                    <valItem ident="guarantors">
+                                    <valItem ident="Unclear"/>
+                                    <valItem ident="GuarantorsList">
                                         <desc> List of guarantors, Record concerning guarantors</desc>
                                     </valItem>
-                                    <valItem ident="commemorative">
+                                    <valItem ident="CommemorativeNote">
                                         <desc>Commemorative notice on __ (mainly for the
                                             Synaxarion)</desc>
                                     </valItem>
-                                    <valItem ident="condemnation">
+                                    <valItem ident="Condemnation">
                                         <desc>Condemnation of those who __ (e.g., “who stole the
                                             book”)</desc>
                                     </valItem>
-                                    <valItem ident="prayer">
+                                    <valItem ident="ProtectivePrayer">
                                         <desc>(Protective) prayer</desc>
                                     </valItem>
-                                    <valItem ident="Qǝne-poem"/>
-                                    <valItem ident="Sälam-poem"/>
-                                    <valItem ident="ˁArke-poem"/>
-                                    <valItem ident="stamp">
+                                <valItem ident="Poem"/>
+                                    <valItem ident="PoemQǝne"/>
+                                    <valItem ident="PoemSalam"/>
+                                    <valItem ident="PoemArke"/>
+                                    <valItem ident="StampExlibris">
                                         <desc>hardly discernible, of the owning institution, of the
                                             church….</desc>
                                     </valItem>
-                                    <valItem ident="calendaric"/>
+                                    <valItem ident="CalendaricNote"/>
                             </valList>
                         </attDef>
                     </attList>
