@@ -936,6 +936,7 @@
                                 <valItem ident="parchmentMaker"/>
                                 <valItem ident="owner"/>
                                 <valItem ident="patron"/>
+                                <valItem ident="tabot"/>
                             </valList>
                         </attDef>
                         <attDef ident="type" mode="change">
