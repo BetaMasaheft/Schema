@@ -43,9 +43,9 @@ schematypens="http://relaxng.org/ns/structure/1.0"
       </profileDesc>
       <revisionDesc>
 <!--         if you are creating a record, remove this change elements and add the one describing your work-->
-         <change who="PL" when="2016-03-21T16:59:56.911+01:00"> Created file from
+         <change who="PL" when="2016-03-21"> Created file from
             google spreadsheet </change>
-         <change who="ES" when="2016-02-09-12:00">CREATED: place</change>
+         <change who="ES" when="2016-02-09">CREATED: place</change>
       </revisionDesc>
    </teiHeader>
    <text>

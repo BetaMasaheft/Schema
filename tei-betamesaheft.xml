@@ -654,6 +654,7 @@
                                             church….</desc>
                                     </valItem>
                                     <valItem ident="CalendaricNote"/>
+                                <valItem ident="Excerpt"/>
                             </valList>
                         </attDef>
                     </attList>
@@ -935,10 +936,10 @@
                     </attList>
                 </elementSpec>
 
-                <elementSpec ident="addition" mode="change" module="msdescription">
+                <elementSpec ident="additions" mode="change" module="msdescription">
                     <constraintSpec scheme="isoschematron" ident="addition">
                         <constraint>
-                            <sch:rule context="tei:addition/@xml:id">
+                            <sch:rule context="tei:addition/te:list/tei:item/@xml:id">
                                 <sch:report test="not(matches(.,'a\d+'') or matches(.,'e\d+''))">
                                     Additions must have ids starting with the letter 'a' followed by
                                     a progressive number, e.g. a1, a2, a3. In case of other contents
