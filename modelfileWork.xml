@@ -56,6 +56,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <p>A digital born TEI file</p>
         </encodingDesc>
         <profileDesc>
+            <creation when="1555-06-23"><!--enter here info about the creation of this work. use @when for precise dates, @notBefore @notAfter for ranges-->
+            </creation>
+            <abstract>
+                <p>
+<!--               short summary of contents-->
+                </p>
+            </abstract>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="ar">Arabic</language>
@@ -90,9 +97,26 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             </listBibl>
         </div>
             <div type="edition">
-                <ab>
-                    
-                </ab>
+                <div type="edition">
+                    <div type="textpart" subtype="book" n="1">
+                        <div type="textpart" subtype="chapter" n="1">
+                            <milestone unit="section" n="1"/>
+                            <milestone unit="para"/>
+                            <milestone unit="section" n="2"/>
+                        </div>
+                        <div type="textpart" subtype="chapter" n="2">
+                            <milestone unit="section" n="1"/>
+                            <milestone unit="para"/>
+                            
+                        </div>
+                    </div>
+                    <div type="textpart" subtype="book" n="2">
+                        <div type="textpart" subtype="chapter" n="1">
+                            <milestone unit="section" n="1"/>
+                            <milestone unit="para"/>
+                        </div>
+                    </div>
+                </div>
             </div>
         </body>
     </text>

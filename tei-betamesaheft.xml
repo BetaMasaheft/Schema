@@ -72,6 +72,14 @@
 
                 <!--         suggest values for @type in origDate-->
                 <elementSpec ident="origDate" mode="change" module="msdescription">
+                    <constraintSpec scheme="isoschematron" ident="origDate">
+                        <constraint>
+                            <sch:rule context="tei:origDate">
+                                <sch:report test="@notBefore = @notAfter">For an exact date, please use @when.</sch:report>
+                            </sch:rule>
+                           
+                        </constraint>
+                    </constraintSpec>
                     <attList>
                         <!--    adds list of values to origDate/@type-->
                         <attDef ident="type" mode="replace">
@@ -117,6 +125,19 @@
 
                 <!--        add the value fol to citedRange/@unit-->
                 <elementSpec ident="citedRange" mode="change" module="core">
+                    <constraintSpec scheme="isoschematron" ident="citedRange">
+                        <constraint>
+                            <sch:rule context="tei:citedRange">
+                                <sch:report test="@from or @to">Please, don't use @from and @to in citedRange, wirte the range into the element</sch:report>
+                            </sch:rule>
+                            <sch:rule
+                                context="tei:citedRange">
+                                <sch:report test="not(text())">An Empty citedRange is not allowed, remove it if you don't need it or
+                                    please enter the page range, unit number according to need and use @unit to specifiy the type of range.
+                                Multiple citedRange are allowed.</sch:report>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
                     <attList>
                         <attDef ident="unit" mode="change">
                             <valList type="open">
@@ -269,6 +290,18 @@
                     </attList>
                 </elementSpec>
 
+<!--add evidence to creation-->
+                <elementSpec ident="creation" mode="change" module="core">
+                    <attList>
+                        <attDef ident="evidence" mode="add" usage="opt">
+                            <datatype maxOccurs="6">
+                                <rng:ref name="data.word"/>
+                            </datatype>
+                            
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                
                 <!--          suggest use in title of type complete, incomplete, normalized or alternative-->
                 <elementSpec ident="title" mode="change" module="core">
                     <constraintSpec scheme="isoschematron" ident="title">
@@ -454,6 +487,17 @@
                                     must always contain a @corresp pointing to a project xml:id of a
                                     manuscript or to an external resource (in which case you need to
                                     add a @type="external")</sch:report>
+                                <sch:report test="contains(@corresp, 'bm:')">we use bibl[@corresp] 
+                                    for similar or related manuscript. to point to an external bibliographic reference, 
+                                    please use the appropriate listBibl and a bibl with a ptr[@target] 
+                                    containing the tag you are trying to use here.</sch:report>
+                            </sch:rule>
+                            <sch:rule context="tei:bibl[not(ancestor::tei:listBibl[@type='mss'])]">
+                                <sch:report test="@corresp">@corresp in a bibl is only allowed for listBibl[@type='mss']</sch:report>
+                                  </sch:rule>
+                            <sch:rule context="tei:bibl[not(ancestor::tei:listBibl[@type='mss' or @type='relations'])]">
+                                <sch:report test="not(contains(tei:ptr/@target, 'bm:'))">The unique tag in Zotero to be used in this pointers should be namespaced.
+                                    Please make sure that the tag in zotero begins with bm: and copy it here exactely as it is, without spaces.</sch:report>
                             </sch:rule>
                             <sch:rule
                                 context="tei:bibl[ancestor::tei:listBibl[@type='mss']][@type='external']">
@@ -474,6 +518,12 @@
                                     @corresp pointing to a project xml:id of a manuscript or to an
                                     external resource (in which case you need to add a
                                     @type="external")</sch:report>
+                                <sch:report test="contains(@corresp, 'bm:')">Please, don't point to bibliography items for 
+                                    witnesses as it is unlikely that the edition of the text is based on secondary literature. use @corresp to 
+                                    point to the id of a manuscript. If the record does not exist, consider 
+                                    creating it as a minimss using the provided models and guidelines. 
+                                    If you point to an external digital reproduction, use @facs and enter the permalink to the main view. 
+                                    You will still need to create a minimss if the record does not exist.</sch:report>
                             </sch:rule>
                             <sch:rule
                                 context="tei:witness[ancestor::tei:listBibl[@type='mss']][@type='external']">
@@ -1113,6 +1163,16 @@
                 <!--controlled values for relation
           between people, places, works-->
                 <elementSpec ident="relation" mode="change" module="namesdates">
+                    <constraintSpec scheme="isoschematron" ident="relation">
+                        <constraint>
+                            <sch:rule
+                                context="tei:relation">
+                                <sch:report test="not(parent::tei:listRelation or parent::tei:listBibl[@type='relations'])">
+                                    a relation element is only allowed within a listRelation (for places, institution, person and groups) or in a listBibl[@type='relations'] in manuscripts and works
+                                </sch:report>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
                     <attList>
                         <attDef ident="name" mode="replace" usage="req">
                             <valList type="closed">
@@ -1336,6 +1396,16 @@
                                 </valItem>
                             </valList>
                         </attDef>
+                        <attDef ident="subtype" mode="replace" usage="opt">
+                            <valList type="closed">
+                                <valItem ident="book">
+                                    <desc>this container is for a book and may contain chapters</desc>
+                                </valItem>
+                                <valItem ident="chapter">
+                                    <desc>this container is for a chapter and may contain sections</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
                     </attList>
                 </elementSpec>
 
@@ -1479,9 +1549,6 @@
                         </attDef>
                     </attList>
                 </elementSpec>
-
-
-
 
                 <classSpec type="atts" ident="att.dimensions" mode="change">
                     <attList>

@@ -62,6 +62,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         </desc>
                         
                         <ab type="history"></ab>
+                        <ab type="tabot"><measure/></ab>
                         
                         <ab type="description"></ab>
                     </note>
@@ -69,7 +70,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         <bibl></bibl>
                     </listBibl>
                 </place>
-                <relation/>
+                <listRelation><relation><desc></desc></relation></listRelation>
             </listPlace>
         </body>
     </text>

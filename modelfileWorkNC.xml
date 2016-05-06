@@ -46,6 +46,12 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                 <p>A digital born TEI file</p>
             </encodingDesc>
         <profileDesc>
+            <creation></creation>
+            <abstract>
+                <p>
+                   
+                </p>
+            </abstract>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="ar">Arabic</language>
@@ -54,7 +60,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="yourintials" when="2016-03-31">Created work</change>
+            <change who="AB" when="2016-03-31">Created work</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -71,10 +77,44 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             </listBibl>
         </div>
             <div type="edition">
-                <ab></ab>
+                   <div type="textpart" subtype="book" n="1">
+                        <div type="textpart" subtype="chapter" n="1">
+                            <milestone unit="section" n="1"/>
+                            <milestone unit="para"/>
+                            <milestone unit="section" n="2"/>
+                        </div>
+                        <div type="textpart" subtype="chapter" n="2">
+                            <milestone unit="section" n="1"/>
+                            <milestone unit="para"/>
+                            
+                        </div>
+                    </div>
+                    <div type="textpart" subtype="book" n="2">
+                        <div type="textpart" subtype="chapter" n="1">
+                            <milestone unit="section" n="1"/>
+                            <milestone unit="para"/>
+                        </div>
+                    </div>
             </div>
             <div type="translation" xml:lang="en">
-                <ab></ab>
+                   <div type="textpart" subtype="book" n="1">
+                        <div type="textpart" subtype="chapter" n="1">
+                            <milestone unit="section" n="1"/>
+                            <milestone unit="para"/>
+                            <milestone unit="section" n="2"/>
+                        </div>
+                        <div type="textpart" subtype="chapter" n="2">
+                            <milestone unit="section" n="1"/>
+                            <milestone unit="para"/>
+                            
+                        </div>
+                    </div>
+                    <div type="textpart" subtype="book" n="2">
+                        <div type="textpart" subtype="chapter" n="1">
+                            <milestone unit="section" n="1"/>
+                            <milestone unit="para"/>
+                        </div>
+                    </div>
             </div>
         </body>
     </text>
