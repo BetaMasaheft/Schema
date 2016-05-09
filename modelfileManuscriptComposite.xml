@@ -315,7 +315,7 @@ You could also start from the provided TEI models in Oxygen
                               <locus target="#40vb" n="30"/>
                               <q xml:lang="gez"><!--አጥረይክዋ፡ አነ፡ ገበረ፡ መድኅን፡ በመን{ፈ}ሰ፡ ጥበብ፡--></q>
                               <q xml:lang="en"
-                                 ><!--I acquired it (this book), Gäbrä Mädḫən, through the spirit of wisdom.--></q>
+                                 ><!--I acquired it (this book), Gäbrä Mädḫǝn, through the spirit of wisdom.--></q>
                               <p/>
                            </item>
                            <item xml:id="a2">
@@ -366,7 +366,7 @@ You could also start from the provided TEI models in Oxygen
                            <!--                        a descriptive paragraph about the date of production of the manuscript, 
                               which can be annotated with references and correspondences
                         the text below is an example-->
-                           Mention of <persName corresp="PRS10378Yohanne">King Yoḥannəs
+                           Mention of <persName corresp="PRS10378Yohanne">King Yoḥannǝs
                               IV</persName> (<date>1872-89</date>) on <locus target="#43r" n="8"
                               corresp="#coloph"/>, and of <persName type="metropolitan"
                               corresp="PRS2223Atnatewo">Metropolitan ˀabunä ˀAtnatewos</persName>
@@ -439,7 +439,7 @@ You could also start from the provided TEI models in Oxygen
          <langUsage>
             <language ident="en">English</language>
             <language ident="it">Italian</language>
-            <language ident="gez">Gəʿəz</language>
+            <language ident="gez">Gǝʿǝz</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>

@@ -287,7 +287,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
          <langUsage>
             <language ident="en">English</language>
             <language ident="it">Italian</language>
-            <language ident="gez" corresp="Lan05">Gəʿəz</language>
+            <language ident="gez" corresp="Lan05">Gǝʿǝz</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>

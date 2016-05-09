@@ -38,7 +38,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <language ident="en">English</language>
             <language ident="ar">Arabic</language>
             <language ident="it">Italiano</language>
-            <language ident="gez">Gəʿəz</language>
+            <language ident="gez">Gǝʿǝz</language>
          </langUsage>
       </profileDesc>
       <revisionDesc>
@@ -74,7 +74,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                         I leave this as an example. note that the description can be fully marked up with reference to other entities.-->
                      Accodring to local tradition, the founder was <persName corresp="PRS99999mamas"
                         >ˀabunä Mamas</persName> (from the time of <persName corresp="PRS12831AdmaS"
-                        >King ʿAmdä Ṣəyon</persName> I, r. 1314-44).</desc>
+                        >King ʿAmdä Ṣǝyon</persName> I, r. 1314-44).</desc>
                   <ab type="history">
                      <!--                     Account of the history of the institution 
                      
@@ -82,7 +82,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      Gätär. According to the <ref type="work" target="LIT1231Vita">Vita of saint
                         Bä-ṣälotä Mikaˀel of Däbrä Gol</ref> (ˀAmhara), he was exiled to <placeName
                         corresp="#LOC9999Gulo">Gulo Mäkäda</placeName> and died at
-                        <placeName>Gwədgwəde</placeName>, which seems to have been a name of the
+                        <placeName>Gwǝdgwǝde</placeName>, which seems to have been a name of the
                      area around ˀAgärhǝse. Local tradition remembers him and confirms that his
                      burial place is in the vicinity.</ab>
                   <ab type="tabot">
