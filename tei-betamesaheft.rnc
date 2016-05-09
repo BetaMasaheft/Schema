@@ -8,7 +8,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-05-09T13:34:29Z. .
+# Schema generated from ODD source 2016-05-09T14:56:36Z. .
 # TEI Edition: Version 3.0.0. Last updated on
 #	29th March 2016, revision 89ba24e
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -2930,13 +2930,25 @@ tei_ref =
              "                            or to a resource external to the project use @target."
            ]
            "\x{a}" ~
+           "            "
+         ]
+         "\x{a}" ~
+         "         "
+       ]
+    >> sch:pattern [
+         id = "tei-betamesaheft-ref-ref-constraint-11"
+         "\x{a}" ~
+         "            "
+         sch:rule [
+           context = "tei:ref[@target]"
+           "\x{a}" ~
            "               "
            sch:report [
              test =
                "not(starts-with(@target, '#') or starts-with(@target, 'http://'))"
              "Please use \x{a}" ~
-             "                                @target if you need to point to something into the current file (e.g. #h1)\x{a}" ~
-             "                                or to point to a resource external to the project (http://www.example.com). if you need to point to a mss, use @corresp"
+             "                                    @target if you need to point to something into the current file (e.g. #h1)\x{a}" ~
+             "                                    or to point to a resource external to the project (http://www.example.com). if you need to point to a mss, use @corresp"
            ]
            "\x{a}" ~
            "            "
@@ -3014,7 +3026,7 @@ tei_list =
      (tei_model.divBottom, tei_model.global*)*)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-list-gloss-list-must-have-labels-constraint-11"
+           "tei-betamesaheft-list-gloss-list-must-have-labels-constraint-12"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3063,7 +3075,7 @@ tei_item =
   element item {
     tei_macro.specialPara
     >> sch:pattern [
-         id = "tei-betamesaheft-item-item-constraint-12"
+         id = "tei-betamesaheft-item-item-constraint-13"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3082,7 +3094,7 @@ tei_item =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-item-item-constraint-13"
+         id = "tei-betamesaheft-item-item-constraint-14"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3102,7 +3114,7 @@ tei_item =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-item-item-constraint-14"
+         id = "tei-betamesaheft-item-item-constraint-15"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3122,7 +3134,7 @@ tei_item =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-item-item-constraint-15"
+         id = "tei-betamesaheft-item-item-constraint-16"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3493,7 +3505,7 @@ tei_title =
   element title {
     tei_macro.paraContent
     >> sch:pattern [
-         id = "tei-betamesaheft-title-title-constraint-16"
+         id = "tei-betamesaheft-title-title-constraint-17"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3515,7 +3527,7 @@ tei_title =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-title-title-constraint-17"
+         id = "tei-betamesaheft-title-title-constraint-18"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3640,7 +3652,7 @@ tei_citedRange =
   element citedRange {
     tei_macro.phraseSeq
     >> sch:pattern [
-         id = "tei-betamesaheft-citedRange-citedRange-constraint-18"
+         id = "tei-betamesaheft-citedRange-citedRange-constraint-19"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3658,7 +3670,7 @@ tei_citedRange =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-citedRange-citedRange-constraint-19"
+         id = "tei-betamesaheft-citedRange-citedRange-constraint-20"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3733,7 +3745,7 @@ tei_bibl =
       | tei_model.biblPart
       | tei_model.global)*)
     >> sch:pattern [
-         id = "tei-betamesaheft-bibl-bibl-constraint-20"
+         id = "tei-betamesaheft-bibl-bibl-constraint-21"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3763,7 +3775,7 @@ tei_bibl =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-bibl-bibl-constraint-21"
+         id = "tei-betamesaheft-bibl-bibl-constraint-22"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3782,7 +3794,7 @@ tei_bibl =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-bibl-bibl-constraint-22"
+         id = "tei-betamesaheft-bibl-bibl-constraint-23"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3802,7 +3814,7 @@ tei_bibl =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-bibl-bibl-constraint-23"
+         id = "tei-betamesaheft-bibl-bibl-constraint-24"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4818,7 +4830,7 @@ tei_handNote =
   element handNote {
     tei_macro.specialPara
     >> sch:pattern [
-         id = "tei-betamesaheft-handNote-handNote-constraint-24"
+         id = "tei-betamesaheft-handNote-handNote-constraint-25"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -5245,7 +5257,7 @@ tei_TEI =
   element TEI {
     (tei_teiHeader, tei_model.resourceLike+)
     >> sch:pattern [
-         id = "tei-betamesaheft-TEI-TEI-constraint-25"
+         id = "tei-betamesaheft-TEI-TEI-constraint-26"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6569,7 +6581,7 @@ tei_ab =
   element ab {
     tei_macro.paraContent
     >> sch:pattern [
-         id = "tei-betamesaheft-ab-ab-constraint-26"
+         id = "tei-betamesaheft-ab-ab-constraint-27"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6588,7 +6600,7 @@ tei_ab =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-ab-ab-constraint-27"
+         id = "tei-betamesaheft-ab-ab-constraint-28"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6609,7 +6621,7 @@ tei_ab =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-ab-ab-constraint-28"
+         id = "tei-betamesaheft-ab-ab-constraint-29"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6629,7 +6641,7 @@ tei_ab =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-ab-ab-constraint-29"
+         id = "tei-betamesaheft-ab-ab-constraint-30"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7065,7 +7077,7 @@ tei_locus =
   element locus {
     tei_macro.xtext
     >> sch:pattern [
-         id = "tei-betamesaheft-locus-locus-constraint-30"
+         id = "tei-betamesaheft-locus-locus-constraint-31"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7167,7 +7179,7 @@ tei_origDate =
   element origDate {
     ((text | tei_model.gLike | tei_model.phrase | tei_model.global)*)
     >> sch:pattern [
-         id = "tei-betamesaheft-origDate-origDate-constraint-31"
+         id = "tei-betamesaheft-origDate-origDate-constraint-32"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7548,7 +7560,7 @@ tei_msItem =
          | tei_model.msItemPart
          | tei_model.global)+))
     >> sch:pattern [
-         id = "tei-betamesaheft-msItem-msItem-constraint-32"
+         id = "tei-betamesaheft-msItem-msItem-constraint-33"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7836,7 +7848,7 @@ tei_decoNote =
   element decoNote {
     tei_macro.specialPara
     >> sch:pattern [
-         id = "tei-betamesaheft-decoNote-decoNote-constraint-33"
+         id = "tei-betamesaheft-decoNote-decoNote-constraint-34"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7855,7 +7867,7 @@ tei_decoNote =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-decoNote-decoNote-constraint-34"
+         id = "tei-betamesaheft-decoNote-decoNote-constraint-35"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7876,7 +7888,7 @@ tei_decoNote =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-decoNote-decoNote-constraint-35"
+         id = "tei-betamesaheft-decoNote-decoNote-constraint-36"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -8021,7 +8033,7 @@ tei_origin =
   element origin {
     tei_macro.specialPara
     >> sch:pattern [
-         id = "tei-betamesaheft-origin-origin-constraint-36"
+         id = "tei-betamesaheft-origin-origin-constraint-37"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -8148,7 +8160,7 @@ tei_msPart =
          tei_additional?,
          tei_msPart*)))
     >> sch:pattern [
-         id = "tei-betamesaheft-msPart-msPart-constraint-37"
+         id = "tei-betamesaheft-msPart-msPart-constraint-38"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -8399,7 +8411,7 @@ tei_persName =
   element persName {
     tei_macro.phraseSeq
     >> sch:pattern [
-         id = "tei-betamesaheft-persName-persName-constraint-38"
+         id = "tei-betamesaheft-persName-persName-constraint-39"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -8565,7 +8577,7 @@ tei_placeName =
   element placeName {
     tei_macro.phraseSeq
     >> sch:pattern [
-         id = "tei-betamesaheft-placeName-placeName-constraint-39"
+         id = "tei-betamesaheft-placeName-placeName-constraint-40"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -9011,7 +9023,7 @@ tei_geo =
   element geo {
     text
     >> sch:pattern [
-         id = "tei-betamesaheft-geo-geo-constraint-40"
+         id = "tei-betamesaheft-geo-geo-constraint-41"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -10949,7 +10961,7 @@ tei_relation =
   element relation {
     (tei_desc?)
     >> sch:pattern [
-         id = "tei-betamesaheft-relation-relation-constraint-41"
+         id = "tei-betamesaheft-relation-relation-constraint-42"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -11835,7 +11847,7 @@ tei_witness =
   element witness {
     tei_macro.limitedContent
     >> sch:pattern [
-         id = "tei-betamesaheft-witness-witness-constraint-42"
+         id = "tei-betamesaheft-witness-witness-constraint-43"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -11867,7 +11879,7 @@ tei_witness =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-witness-witness-constraint-43"
+         id = "tei-betamesaheft-witness-witness-constraint-44"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -11929,7 +11941,7 @@ tei_variantEncoding =
     }
     >> sch:pattern [
          id =
-           "tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-44"
+           "tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-45"
          "\x{a}" ~
          "            "
          sch:rule [

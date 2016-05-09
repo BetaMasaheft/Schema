@@ -275,10 +275,13 @@
                             assigning also a @type. if you need to point to something into the current file 
                             or to a resource external to the project use @target.</sch:report>
                             
-                            <sch:report test="not(starts-with(@target, '#') or starts-with(@target, 'http://'))">Please use 
-                                @target if you need to point to something into the current file (e.g. #h1)
-                                or to point to a resource external to the project (http://www.example.com). if you need to point to a mss, use @corresp</sch:report>
                        </sch:rule> 
+                            <sch:rule  context="tei:ref[@target]">
+                                
+                                <sch:report test="not(starts-with(@target, '#') or starts-with(@target, 'http://'))">Please use 
+                                    @target if you need to point to something into the current file (e.g. #h1)
+                                    or to point to a resource external to the project (http://www.example.com). if you need to point to a mss, use @corresp</sch:report>
+                            </sch:rule>
                         </constraint>
                     </constraintSpec>
                     <attList>
