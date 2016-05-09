@@ -8,7 +8,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-05-07T15:19:27Z. .
+# Schema generated from ODD source 2016-05-09T13:34:29Z. .
 # TEI Edition: Version 3.0.0. Last updated on
 #	29th March 2016, revision 89ba24e
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -2421,6 +2421,9 @@ tei_desc =
       | 
         ##
         "Excerpt"
+      | 
+        ##
+        "Letter"
     }?,
     empty
   }
@@ -2916,7 +2919,24 @@ tei_ref =
              test = "not(@target or @corresp)"
              "ref must be used with\x{a}" ~
              "                                    either a @corresp pointing to a project xml:id or a @target\x{a}" ~
-             "                                    pointing to a an external url"
+             "                                    pointing to a an internal id"
+           ]
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test = "not(@type) and @corresp"
+             "Please use @correps only for external entities, \x{a}" ~
+             "                            assigning also a @type. if you need to point to something into the current file \x{a}" ~
+             "                            or to a resource external to the project use @target."
+           ]
+           "\x{a}" ~
+           "               "
+           sch:report [
+             test =
+               "not(starts-with(@target, '#') or starts-with(@target, 'http://'))"
+             "Please use \x{a}" ~
+             "                                @target if you need to point to something into the current file (e.g. #h1)\x{a}" ~
+             "                                or to point to a resource external to the project (http://www.example.com). if you need to point to a mss, use @corresp"
            ]
            "\x{a}" ~
            "            "
@@ -2925,7 +2945,7 @@ tei_ref =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-ref-refAtts-constraint-9"
+         id = "tei-betamesaheft-ref-refAtts-constraint-11"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3822,7 +3842,7 @@ tei_biblStruct =
       | tei_citedRange)*)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-biblStruct-deprecate-altIdentifier-child-constraint-23"
+           "tei-betamesaheft-biblStruct-deprecate-altIdentifier-child-constraint-25"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3895,7 +3915,7 @@ tei_relatedItem =
     ((tei_model.biblLike | tei_model.ptrLike)?)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-relatedItem-targetorcontent1-constraint-24"
+           "tei-betamesaheft-relatedItem-targetorcontent1-constraint-26"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -3954,7 +3974,7 @@ tei_l =
       | tei_model.global)*)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-l-abstractModel-structure-l-constraint-25"
+           "tei-betamesaheft-l-abstractModel-structure-l-constraint-27"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4017,7 +4037,7 @@ tei_lg =
        ]
     >> sch:pattern [
          id =
-           "tei-betamesaheft-lg-abstractModel-structure-l-constraint-26"
+           "tei-betamesaheft-lg-abstractModel-structure-l-constraint-28"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -4479,7 +4499,7 @@ tei_quotation =
     (tei_model.pLike*)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-quotation-quotationContents-constraint-27"
+           "tei-betamesaheft-quotation-quotationContents-constraint-29"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -5374,7 +5394,7 @@ tei_div =
       (tei_model.divBottom, tei_model.global*)*)?)
     >> sch:pattern [
          id =
-           "tei-betamesaheft-div-abstractModel-structure-l-constraint-30"
+           "tei-betamesaheft-div-abstractModel-structure-l-constraint-32"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -5395,7 +5415,7 @@ tei_div =
        ]
     >> sch:pattern [
          id =
-           "tei-betamesaheft-div-abstractModel-structure-p-constraint-31"
+           "tei-betamesaheft-div-abstractModel-structure-p-constraint-33"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6141,7 +6161,7 @@ tei_s =
   element s {
     tei_macro.phraseSeq
     >> sch:pattern [
-         id = "tei-betamesaheft-s-noNestedS-constraint-32"
+         id = "tei-betamesaheft-s-noNestedS-constraint-34"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6629,7 +6649,7 @@ tei_ab =
        ]
     >> sch:pattern [
          id =
-           "tei-betamesaheft-ab-abstractModel-structure-p-constraint-37"
+           "tei-betamesaheft-ab-abstractModel-structure-p-constraint-39"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6651,7 +6671,7 @@ tei_ab =
        ]
     >> sch:pattern [
          id =
-           "tei-betamesaheft-ab-abstractModel-structure-l-constraint-38"
+           "tei-betamesaheft-ab-abstractModel-structure-l-constraint-40"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6792,7 +6812,7 @@ tei_dimensions =
   element dimensions {
     ((tei_dim | tei_model.dimLike)*)
     >> sch:pattern [
-         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-39"
+         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-41"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6814,7 +6834,7 @@ tei_dimensions =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-40"
+         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-42"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -6836,7 +6856,7 @@ tei_dimensions =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-41"
+         id = "tei-betamesaheft-dimensions-duplicateDim-constraint-43"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -7381,7 +7401,7 @@ tei_msIdentifier =
       tei_idno?),
      (tei_msName | tei_altIdentifier)*)
     >> sch:pattern [
-         id = "tei-betamesaheft-msIdentifier-msId_minimal-constraint-44"
+         id = "tei-betamesaheft-msIdentifier-msId_minimal-constraint-46"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -8160,7 +8180,7 @@ tei_msPart =
        ]
     >> sch:pattern [
          id =
-           "tei-betamesaheft-msPart-deprecate-altIdentifier-child-constraint-53"
+           "tei-betamesaheft-msPart-deprecate-altIdentifier-child-constraint-55"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -10968,7 +10988,7 @@ tei_relation =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-relation-activemutual-constraint-58"
+         id = "tei-betamesaheft-relation-activemutual-constraint-60"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -10987,7 +11007,7 @@ tei_relation =
          "         "
        ]
     >> sch:pattern [
-         id = "tei-betamesaheft-relation-activepassive-constraint-59"
+         id = "tei-betamesaheft-relation-activepassive-constraint-61"
          "\x{a}" ~
          "            "
          sch:rule [
@@ -11347,10 +11367,10 @@ tei_relation =
         "snap:UncleOf"
       | 
         ##
-        "saws:saws:P129i_is_subject_of"
+        "saws:AbstractManuscriptText"
       | 
         ##
-        "saws:AbstractManuscriptText"
+        "saws:P129i_is_subject_of"
       | 
         ##
         "saws:F15_Complex_Work"

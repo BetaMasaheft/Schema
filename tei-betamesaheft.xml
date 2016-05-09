@@ -269,8 +269,16 @@
                             <sch:rule context="tei:ref">
                                 <sch:report test="not(@target or @corresp)">ref must be used with
                                     either a @corresp pointing to a project xml:id or a @target
-                                    pointing to a an external url</sch:report>
-                            </sch:rule>
+                                    pointing to a an internal id</sch:report>
+                            
+                            <sch:report test="not(@type) and @corresp">Please use @correps only for external entities, 
+                            assigning also a @type. if you need to point to something into the current file 
+                            or to a resource external to the project use @target.</sch:report>
+                            
+                            <sch:report test="not(starts-with(@target, '#') or starts-with(@target, 'http://'))">Please use 
+                                @target if you need to point to something into the current file (e.g. #h1)
+                                or to point to a resource external to the project (http://www.example.com). if you need to point to a mss, use @corresp</sch:report>
+                       </sch:rule> 
                         </constraint>
                     </constraintSpec>
                     <attList>
@@ -655,6 +663,7 @@
                                     </valItem>
                                     <valItem ident="CalendaricNote"/>
                                 <valItem ident="Excerpt"/>
+                                <valItem ident="Letter"/>
                             </valList>
                         </attDef>
                     </attList>
@@ -1293,8 +1302,8 @@
                                 <valItem ident="snap:StepFamilyRelationship"/>
                                 <valItem ident="snap:UncleOf"/>
                                 <!--                          list INCOMPLETE! -->
-                                <valItem ident="saws:saws:P129i_is_subject_of"/>
                                 <valItem ident="saws:AbstractManuscriptText"/>
+                                <valItem ident="saws:P129i_is_subject_of"/>
                                 <valItem ident="saws:F15_Complex_Work"/>
                                 <valItem ident="saws:F16_Container_Work"/>
                                 <valItem ident="saws:F17_Aggregation_Work"/>
