@@ -73,17 +73,17 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                      <!--                  Account of the foundation of the institution   
                         I leave this as an example. note that the description can be fully marked up with reference to other entities.-->
                      Accodring to local tradition, the founder was <persName corresp="PRS99999mamas"
-                        >ˀabunä Mamas</persName> (from the time of <persName corresp="PRS12831AdmaS"
+                        >ʾabunä Mamas</persName> (from the time of <persName corresp="PRS12831AdmaS"
                         >King ʿAmdä Ṣǝyon</persName> I, r. 1314-44).</desc>
                   <ab type="history">
                      <!--                     Account of the history of the institution 
                      
                      Also this should be removed and substituted with a description of the new institution beeing registered-->
                      Gätär. According to the <ref type="work" target="LIT1231Vita">Vita of saint
-                        Bä-ṣälotä Mikaˀel of Däbrä Gol</ref> (ˀAmhara), he was exiled to <placeName
+                        Bä-ṣälotä Mikaʾel of Däbrä Gol</ref> (ʾAmhara), he was exiled to <placeName
                         corresp="#LOC9999Gulo">Gulo Mäkäda</placeName> and died at
                         <placeName>Gwǝdgwǝde</placeName>, which seems to have been a name of the
-                     area around ˀAgärhǝse. Local tradition remembers him and confirms that his
+                     area around ʾAgärhǝse. Local tradition remembers him and confirms that his
                      burial place is in the vicinity.</ab>
                   <ab type="tabot">
                      <measure quantity="4"/>
