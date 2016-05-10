@@ -295,6 +295,12 @@
                                 <valItem ident="quire"/>
                                 <valItem ident="mss"/>
                                 <valItem ident="work"/>
+                                <valItem ident="ins"/>
+                                <valItem ident="pers"/>
+                                <valItem ident="title"/>
+                                <valItem ident="deco"/>
+                                <valItem ident="group"/>
+                                <valItem ident="binding"/>
                             </valList>
                         </attDef>
 
@@ -1143,6 +1149,9 @@
                                 <valItem ident="peninsula"/>
                                 <valItem ident="castle"/>
                                 <valItem ident="bay"/>
+                                <valItem ident="academicInstitution"/>
+                                <valItem ident="Library"/>
+                                <valItem ident="Musuem"/>
 
 
 
