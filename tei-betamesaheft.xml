@@ -603,9 +603,9 @@
                                     <valItem ident="LandGrant"/>
                                     <valItem ident="FoundationCharter"/>
                                     <valItem ident="Genealogy"/>
-                                    <valItem ident="scribalSignature"/>
+                                    <valItem ident="ScribalSignature"/>
                                     <valItem ident="Supplication"/>
-                                    <valItem ident="subscription"/>
+                                    <valItem ident="Subscription"/>
                                     <valItem ident="Doxology"/>
                                     <valItem ident="Exhortation">
                                         <desc>to the brethren/ to commemorate __ / to celebrate __ / to
@@ -1481,6 +1481,14 @@
 
                                     <desc>Description of a recognizable literary or documentary work
                                         at any given granularity</desc>
+                                </valItem>
+                                <valItem ident="nar">
+                                    
+                                    <desc>Description of a Narrative Unit, independent of the Work or textual unit to which it is part. This includes document types, e.g. used to classify additiones to a manuscript.</desc>
+                                </valItem>
+                                <valItem ident="auth">
+                                    
+                                    <desc>Description of a concept used as authority list (faith, art element)</desc>
                                 </valItem>
                             </valList>
                         </attDef>

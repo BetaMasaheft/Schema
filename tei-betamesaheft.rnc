@@ -8,7 +8,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-05-10T09:46:37Z. .
+# Schema generated from ODD source 2016-05-11T16:44:48Z. .
 # TEI Edition: Version 3.0.0. Last updated on
 #	29th March 2016, revision 89ba24e
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -2324,13 +2324,13 @@ tei_desc =
         "Genealogy"
       | 
         ##
-        "scribalSignature"
+        "ScribalSignature"
       | 
         ##
         "Supplication"
       | 
         ##
-        "subscription"
+        "Subscription"
       | 
         ##
         "Doxology"
@@ -4992,7 +4992,7 @@ tei_language =
         ## Greek
         "grc"
       | 
-        ## Gəʿəz
+        ## Gǝʿǝz
         "gez"
       | 
         ## Hebrew
@@ -5341,6 +5341,12 @@ tei_TEI =
       | 
         ## Description of a recognizable literary or documentary work at any given granularity
         "work"
+      | 
+        ## Description of a Narrative Unit, independent of the Work or textual unit to which it is part. This includes document types, e.g. used to classify additiones to a manuscript.
+        "nar"
+      | 
+        ## Description of a concept used as authority list (faith, art element)
+        "auth"
     },
     
     ## specifies the major version number of the TEI Guidelines against which this document is valid.

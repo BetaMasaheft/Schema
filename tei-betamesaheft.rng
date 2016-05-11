@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2016-05-10T09:46:57Z. .
+Schema generated from ODD source 2016-05-11T16:44:32Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -3937,11 +3937,11 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>Genealogy</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>scribalSignature</value>
+                  <value>ScribalSignature</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>Supplication</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>subscription</value>
+                  <value>Subscription</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>Doxology</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -7552,6 +7552,10 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Description of an institution where manuscripts are preserved</a:documentation>
                <value>work</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Description of a recognizable literary or documentary work at any given granularity</a:documentation>
+               <value>nar</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Description of a Narrative Unit, independent of the Work or textual unit to which it is part. This includes document types, e.g. used to classify additiones to a manuscript.</a:documentation>
+               <value>auth</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Description of a concept used as authority list (faith, art element)</a:documentation>
             </choice>
          </attribute>
          <optional>
