@@ -52,6 +52,10 @@ schematypens="http://relaxng.org/ns/structure/1.0"
                    
                 </p>
             </abstract>
+            <textClass>
+                <keywords>
+                    <term key=""/></keywords>
+            </textClass>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="ar">Arabic</language>

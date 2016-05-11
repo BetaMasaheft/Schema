@@ -63,6 +63,11 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 <!--               short summary of contents-->
                 </p>
             </abstract>
+            <textClass>
+                <keywords>
+                    <term key="Apocrypha"><!--select a value from the list, and enter as many terms as you want--></term>
+                </keywords>
+            </textClass>
             <langUsage>
                 <language ident="en">English</language>
                 <language ident="ar">Arabic</language>
@@ -74,6 +79,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             <change who="AB" when="${date(yyyy-MM-dd)}">Created work</change>
         </revisionDesc>
     </teiHeader>
+    
     <text>
         <body>
         <div type="bibliography">
