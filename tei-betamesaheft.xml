@@ -91,7 +91,6 @@
                                 <valItem ident="composition"/>
                                 <valItem ident="translation"/>
                                 <valItem ident="revision"/>
-                                <valItem ident="recension"/>
                             </valList>
                         </attDef>
                         <attDef ident="evidence" mode="replace" usage="opt">
@@ -785,8 +784,13 @@
                         <attDef ident="xml:id" mode="change" usage="req"/>
                         <attDef ident="type" mode="replace" usage="opt">
                             <valList type="open">
-                                <valItem ident="frame"/>
+                                <valItem ident="frame">
+                                    <desc>an ornament around the page</desc>
+                                </valItem>
                                 <valItem ident="miniature"/>
+                                <valItem ident="band">
+                                    <desc>ornamental band is above the page</desc>
+                                </valItem>
                                 <valItem ident="punctuation"/>
                                 <valItem ident="drawing"/>
                             </valList>
