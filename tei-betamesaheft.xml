@@ -677,6 +677,8 @@
                                     <valItem ident="CalendaricNote"/>
                                 <valItem ident="Excerpt"/>
                                 <valItem ident="Letter"/>
+                                <valItem ident="MagicFormula"/>
+                                <valItem ident="MagicText"/>
                             </valList>
                         </attDef>
                     </attList>
