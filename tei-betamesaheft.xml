@@ -87,6 +87,11 @@
                                 <valItem ident="editor"/>
                                 <valItem ident="mss"/>
                                 <valItem ident="literature"/>
+                                <valItem ident="foundation"/>
+                                <valItem ident="composition"/>
+                                <valItem ident="translation"/>
+                                <valItem ident="revision"/>
+                                <valItem ident="recension"/>
                             </valList>
                         </attDef>
                         <attDef ident="evidence" mode="replace" usage="opt">
@@ -1201,12 +1206,13 @@
                     <attList>
                         <attDef ident="name" mode="replace" usage="req">
                             <valList type="closed">
-                                <valItem ident="contains"/>
-                                <valItem ident="nearBy"/>
-                                <valItem ident="partOf"/>
-                                <valItem ident="snap:DaughterOf"/>
-                                <valItem ident="snap:ChildOf"/>
-                                <valItem ident="snap:BrotherOf"/>
+                                <valItem ident="dcterms:hasPart"/>
+                                <valItem ident="gn:nearBy"/>
+                                <valItem ident="gn:locatedIn"/>
+                                <valItem ident="dcterms:isPartOf"/>
+                                <valItem ident="lawd:hasAttestation"/>
+                                
+                                
                                 <valItem ident="bm:wifeOf"/>
                                 <valItem ident="bm:husbandOf"/>
                                 <valItem ident="bm:motherInLawOf"/>
@@ -1215,6 +1221,8 @@
                                 <valItem ident="bm:brotherInLawOf"/>
                                 <valItem ident="bm:sisterInLawOf"/>
                                 <valItem ident="bm:daugtherInLawOf"/>
+                                <valItem ident="bm:hasTabot"/>
+                                
                                 <valItem ident="syriaca:different-from"/>
                                 <valItem ident="syriaca:has-literary-connection-to-place"/>
                                 <valItem ident="syriaca:has-relation-to-place"/>
@@ -1222,6 +1230,11 @@
                                 <valItem ident="syriaca:share-a-name"/>
                                 <valItem ident="syriaca:share-a-title"/>
                                 <valItem ident="syriaca:born-at"/>
+                                
+                                
+                                <valItem ident="snap:DaughterOf"/>
+                                <valItem ident="snap:ChildOf"/>
+                                <valItem ident="snap:BrotherOf"/>
                                 <valItem ident="snap:SeriousIntimateRelationshipWith"/>
                                 <valItem ident="snap:SiblingOfParentOf"/>
                                 <valItem ident="snap:SeriousIntimateRelationshipWith"/>
@@ -1313,6 +1326,8 @@
                                 <valItem ident="snap:SonOf"/>
                                 <valItem ident="snap:StepFamilyRelationship"/>
                                 <valItem ident="snap:UncleOf"/>
+                                
+                                
                                 <!--                          list INCOMPLETE! -->
                                 <valItem ident="saws:AbstractManuscriptText"/>
                                 <valItem ident="saws:P129i_is_subject_of"/>
@@ -1385,6 +1400,8 @@
                                 <valItem ident="saws:isVersionInAnotherLanguageOf"/>
                                 <valItem ident="saws:isVersionOf"/>
                                 <valItem ident="saws:isYoungerThan"/>
+                                
+                                
                             </valList>
                         </attDef>
 
@@ -1540,6 +1557,10 @@
                         <attDef ident="type" usage="opt" mode="change">
                             <valList type="open">
                                 <valItem ident="foundation"/>
+                                <valItem ident="composition"/>
+                                <valItem ident="translation"/>
+                                <valItem ident="revision"/>
+                                <valItem ident="recension"/>
                             </valList>
                         </attDef>
                     </attList>

@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2016-05-11T16:44:32Z. .
+Schema generated from ODD source 2016-05-12T09:48:10Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -10255,7 +10255,7 @@ Suggested values include: 1] lettering; 2] nomenclature; 3] prosopography; 4] re
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] editor; 2] mss; 3] literature</a:documentation>
+Sample values include: 1] editor; 2] mss; 3] literature; 4] foundation; 5] composition; 6] translation; 7] revision; 8] recension</a:documentation>
                <text/>
             </attribute>
          </optional>
@@ -14251,17 +14251,15 @@ Sample values include: 1] frame; 2] miniature; 3] punctuation; 4] drawing</a:doc
          <attribute name="name">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             <choice>
-               <value>contains</value>
+               <value>dcterms:hasPart</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>nearBy</value>
+               <value>gn:nearBy</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>partOf</value>
+               <value>gn:locatedIn</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>snap:DaughterOf</value>
+               <value>dcterms:isPartOf</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>snap:ChildOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>snap:BrotherOf</value>
+               <value>lawd:hasAttestation</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>bm:wifeOf</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -14279,6 +14277,8 @@ Sample values include: 1] frame; 2] miniature; 3] punctuation; 4] drawing</a:doc
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>bm:daugtherInLawOf</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>bm:hasTabot</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>syriaca:different-from</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>syriaca:has-literary-connection-to-place</value>
@@ -14292,6 +14292,12 @@ Sample values include: 1] frame; 2] miniature; 3] punctuation; 4] drawing</a:doc
                <value>syriaca:share-a-title</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>syriaca:born-at</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:DaughterOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:ChildOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>snap:BrotherOf</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>snap:SeriousIntimateRelationshipWith</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>

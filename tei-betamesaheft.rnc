@@ -8,7 +8,7 @@ namespace teix = "http://www.tei-c.org/ns/Examples"
 namespace xi = "http://www.w3.org/2001/XInclude"
 namespace xlink = "http://www.w3.org/1999/xlink"
 
-# Schema generated from ODD source 2016-05-11T16:44:48Z. .
+# Schema generated from ODD source 2016-05-12T09:48:23Z. .
 # TEI Edition: Version 3.0.0. Last updated on
 #	29th March 2016, revision 89ba24e
 # TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -7376,7 +7376,7 @@ tei_origDate =
     }?,
     
     ## 
-    ## Sample values include: 1] editor; 2] mss; 3] literature
+    ## Sample values include: 1] editor; 2] mss; 3] literature; 4] foundation; 5] composition; 6] translation; 7] revision; 8] recension
     attribute type { text }?,
     empty
   }
@@ -11127,22 +11127,19 @@ tei_relation =
     attribute name {
       
       ##
-      "contains"
+      "dcterms:hasPart"
       | 
         ##
-        "nearBy"
+        "gn:nearBy"
       | 
         ##
-        "partOf"
+        "gn:locatedIn"
       | 
         ##
-        "snap:DaughterOf"
+        "dcterms:isPartOf"
       | 
         ##
-        "snap:ChildOf"
-      | 
-        ##
-        "snap:BrotherOf"
+        "lawd:hasAttestation"
       | 
         ##
         "bm:wifeOf"
@@ -11169,6 +11166,9 @@ tei_relation =
         "bm:daugtherInLawOf"
       | 
         ##
+        "bm:hasTabot"
+      | 
+        ##
         "syriaca:different-from"
       | 
         ##
@@ -11188,6 +11188,15 @@ tei_relation =
       | 
         ##
         "syriaca:born-at"
+      | 
+        ##
+        "snap:DaughterOf"
+      | 
+        ##
+        "snap:ChildOf"
+      | 
+        ##
+        "snap:BrotherOf"
       | 
         ##
         "snap:SeriousIntimateRelationshipWith"
