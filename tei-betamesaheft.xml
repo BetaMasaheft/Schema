@@ -1161,8 +1161,8 @@
                                 <valItem ident="castle"/>
                                 <valItem ident="bay"/>
                                 <valItem ident="academicInstitution"/>
-                                <valItem ident="Library"/>
-                                <valItem ident="Musuem"/>
+                                <valItem ident="library"/>
+                                <valItem ident="museum"/>
 
 
 
