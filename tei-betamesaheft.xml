@@ -230,7 +230,7 @@
                                 <valItem ident="cop">
                                     <desc>Coptic</desc>
                                 </valItem>
-                                <valItem ident="geo">
+                                <valItem ident="ka">
                                     <desc>Georgian</desc>
                                 </valItem>
                                 <valItem ident="grc">
@@ -258,6 +258,9 @@
                                     <desc>Tigrinya</desc>
                                 </valItem>
                                 <valItem ident="en">
+                                    <desc>English</desc>
+                                </valItem>
+                                <valItem ident="la">
                                     <desc>English</desc>
                                 </valItem>
                             </valList>
@@ -601,6 +604,7 @@
                                     </valItem>
                                 <valItem ident="PurchaseNote"/>
                                 <valItem ident="AcquisitionNote"/>
+                                <valItem ident="ReceiptNote"/>
                                     <valItem ident="Admonition">
                                         <desc>to AM</desc>
                                     </valItem>
@@ -1189,6 +1193,7 @@
                                 <valItem ident="textile"/>
                                 <valItem ident="other"/>
                                 <valItem ident="parchment"/>
+                                <valItem ident="silk"/>
                             </valList>
                         </attDef>
 
