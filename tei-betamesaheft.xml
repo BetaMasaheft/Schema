@@ -230,8 +230,14 @@
                                 <valItem ident="cop">
                                     <desc>Coptic</desc>
                                 </valItem>
-                                <valItem ident="ka">
+                                <valItem ident="geo">
                                     <desc>Georgian</desc>
+                                </valItem>
+                                <valItem ident="la">
+                                    <desc>Latin</desc>
+                                </valItem>
+                                <valItem ident="fr">
+                                    <desc>French</desc>
                                 </valItem>
                                 <valItem ident="grc">
                                     <desc>Greek</desc>
