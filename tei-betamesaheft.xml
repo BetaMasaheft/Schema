@@ -914,6 +914,8 @@
                                 <!--Massimo-->
                                 <valItem ident="SG"/>
                                 <!--Solomon-->
+                                <valItem ident="DR"/>
+                                <!--Dorothea-->
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -935,6 +937,8 @@
                                 <!--Eugenia-->
                                 <valItem ident="DN"/>
                                 <!--Denis-->
+                                <valItem ident="DR"/>
+                                <!--Dorothea-->
                                 <valItem ident="MV"/>
                                 <!--Massimo-->
                                 <valItem ident="SG"/>
