@@ -1209,6 +1209,18 @@
 
                     </attList>
                 </elementSpec>
+                
+                <!--          controlled values for note type commemoration in person records of Saints-->
+                <elementSpec ident="note" mode="change" module="core">
+                    <attList>
+                        <attDef ident="type" mode="replace" usage="opt">
+                            <valList type="closed">
+                                <valItem ident="commemoration"/>
+                            </valList>
+                        </attDef>
+                        
+                    </attList>
+                </elementSpec>
 
 
                 <!--controlled values for relation
@@ -1576,12 +1588,22 @@
                     </constraintSpec>
                     <attList>
                         <attDef ident="type" usage="opt" mode="change">
+                            <datatype maxOccurs="3">
+                                <rng:ref name="data.word"/>
+                            </datatype>
                             <valList type="open">
                                 <valItem ident="foundation"/>
                                 <valItem ident="composition"/>
                                 <valItem ident="translation"/>
                                 <valItem ident="revision"/>
                                 <valItem ident="recension"/>
+                                <valItem ident="diesNatalis"/>
+                                <valItem ident="birth"/>
+                                <valItem ident="ascension"/>
+                                <valItem ident="death"/>
+                                <valItem ident="repeated">
+                                    <desc>If the commemoration is repeated, please add this value as well in type</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                     </attList>
