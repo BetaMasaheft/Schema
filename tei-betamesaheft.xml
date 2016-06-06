@@ -314,6 +314,7 @@
                                 <valItem ident="deco"/>
                                 <valItem ident="group"/>
                                 <valItem ident="binding"/>
+                                <valItem ident="authFile"/>
                             </valList>
                         </attDef>
 
