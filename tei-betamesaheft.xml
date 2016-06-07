@@ -364,6 +364,12 @@
                                 <valItem ident="complete"/>
                                 <valItem ident="incomplete"/>
                                 <valItem ident="normalized"/>
+                                <valItem ident="supplied">
+                                    <desc>syriaca.org: an existing print catalogue provides a descriptive title</desc>
+                                </valItem>
+                                <valItem ident="uniform">
+                                    <desc>syriaca.org: a title for such work established by the editor or cataloguer</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                     </attList>
@@ -806,6 +812,26 @@
                                 </valItem>
                                 <valItem ident="punctuation"/>
                                 <valItem ident="drawing"/>
+                                <valItem ident="border"/>
+                                <valItem ident="diagram"/>
+                                <valItem ident="frieze"/>
+                                <valItem ident="illustration"/>
+                                <valItem ident="initial"/>
+                                <valItem ident="map"/>
+                                <valItem ident="marginal"/>
+                                <valItem ident="mixed"/>
+                                <valItem ident="other"/>
+                                <valItem ident="ornamentation"/>
+                                <valItem ident="paratext"/>
+                                <valItem ident="printmark"/>
+                                <valItem ident="publishmark"/>
+                                <valItem ident="rubrication"/>
+                                <valItem ident="secondary"/>
+                                <valItem ident="tooling"/>
+                                <valItem ident=" unspecified"/>
+                                <valItem ident="unwan"/>
+                                <valItem ident="vignette"/>
+                                
                             </valList>
                         </attDef>
                         <attDef ident="rend" mode="replace" usage="opt">
