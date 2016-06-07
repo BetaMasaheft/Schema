@@ -338,9 +338,9 @@
                     <constraintSpec scheme="isoschematron" ident="title">
                         <constraint>
                             <sch:rule context="tei:title[ancestor::tei:TEI[@type='work']]">
-                                <sch:report test="not(@xml:id or @corresp)">title in work must
+                                <sch:report test="not(@xml:id or @ref)">title in work must
                                     always have an @xml:id which identifies alternative titles and
-                                    @corresp for the titles in other languages translating each of
+                                    @ref for the titles in other languages translating each of
                                     the given titles. Format of the id should be like t1 t2,
                                     etc.</sch:report>
                             </sch:rule>
@@ -358,7 +358,7 @@
                             </datatype>
 
                         </attDef>
-                        <attDef ident="corresp" mode="change" usage="rec"/>
+                        <attDef ident="ref" mode="change" usage="rec"/>
                         <attDef ident="type" mode="replace" usage="opt">
                             <valList type="open">
                                 <valItem ident="complete"/>
@@ -778,6 +778,31 @@
                         </attDef>
                     </attList>
                 </elementSpec>
+                
+<!--              values for seg in handNote  -->
+                <elementSpec ident="seg" mode="change" module="linking">
+                    <constraintSpec scheme="isoschematron" ident="seg">
+                        <constraint>
+                            <sch:rule context="tei:ab[ancestor::tei:handNote]">
+                                <sch:report test="not(@type or @subtype)">seg in layout should always
+                                    have a type</sch:report>
+                            </sch:rule>
+                           
+                        </constraint>
+                    </constraintSpec>
+                    <attList>
+                        <attDef ident="type" mode="replace" usage="req">
+                            <valList type="closed">
+                                
+                                <valItem ident="script"/>
+                                <valItem ident="ink"/>
+                                <valItem ident="rubrication"/>
+                               
+                            </valList>
+                        </attDef>
+                       
+                    </attList>
+                </elementSpec>
 
                 <!--          suggest values for decoNote/@type-->
                 <elementSpec ident="decoNote" mode="change" module="msdescription">
@@ -882,19 +907,32 @@
                     <constraintSpec scheme="isoschematron" ident="msItem">
                         <constraint>
                             <sch:rule context="tei:msItem/@xml:id">
-                                <sch:report test="not(matches(.,'_i\d+') or matches(.,'coloph'))">
+                                <sch:report test="not(matches(.,'_i\d+'))">
                                     Content Items in Manuscript parts must have ids starting with
                                     the reference to the part in which they are contained, then
                                     underscore and the letter 'i' followed by a progressive number,
-                                    e.g. p1.1_i1.1, p1.1_i2. The only exception is colophon which
-                                    takes an id colophon followed by a number, e.g. coloph1,
-                                    coloph2. </sch:report>
+                                    e.g. p1.1_i1.1, p1.1_i2. </sch:report>
                                 <sch:report test="matches(.,'(_.*){2}')"> The Underscore is used in
                                     ids to mark a nesting of differnt ids, especially items in
                                     parts. there should thus be only one of them as a maximum. If
                                     you have parts into parts or items into items, please use a full
                                     stop. p1.2_i3.4 is e.g. the subitem 4 of item 3 in subpart 2 of
                                     part 1. </sch:report>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                    <attList>
+                        <attDef ident="xml:id" mode="change" usage="req"/>
+                    </attList>
+                </elementSpec>
+                
+                <elementSpec ident="colophon" mode="change" module="msdescription">
+                    <constraintSpec scheme="isoschematron" ident="colophon">
+                        <constraint>
+                            <sch:rule context="tei:colophon/@xml:id">
+                                <sch:report test="not(matches(.,'coloph\d+'))">
+                                    Colophon in Manuscript items must have ids starting with
+                                    coloph. </sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
@@ -1042,14 +1080,14 @@
                         <constraint>
                             <sch:rule
                                 context="tei:persName[ancestor::tei:TEI[@type='mss' or @type='place' or @type='ins' or @type='work']]">
-                                <sch:report test="not(@corresp)">A persName in a mss, place or work
-                                    description should always contain an attribute @corresp pointing
+                                <sch:report test="not(@ref)">A persName in a mss, place or work
+                                    description should always contain an attribute @ref pointing
                                     to the relevant record</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
                     <attList>
-                        <attDef ident="corresp" mode="change" usage="rec"/>
+                        <attDef ident="ref" mode="change" usage="rec"/>
                         <attDef ident="role" mode="replace" usage="opt">
                             <valList type="closed">
                                 <valItem ident="scribe"/>
@@ -1092,14 +1130,14 @@
                         <constraint>
                             <sch:rule
                                 context="tei:placeName[ancestor::tei:TEI[@type='mss' or @type='pers' or @type='work']]">
-                                <sch:report test="not(@corresp)">A placeName in a mss, person or
-                                    work description should always contain an attribute @corresp
+                                <sch:report test="not(@ref)">A placeName in a mss, person or
+                                    work description should always contain an attribute @ref
                                     pointing to the relevant record</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
                     <attList>
-                        <attDef ident="corresp" mode="change" usage="rec"/>
+                        <attDef ident="ref" mode="change" usage="rec"/>
                         <attDef ident="type" mode="change">
                             <valList>
                                 <valItem ident="normalized"/>
@@ -1237,12 +1275,31 @@
                     </attList>
                 </elementSpec>
                 
+                <!--          controlled values for objectDesc @form -->
+                <elementSpec ident="objectDesc" mode="change" module="msdescription">
+                    <attList>
+                        <attDef ident="form" mode="replace" usage="req">
+                            <valList type="closed">
+                                
+                                <!--                          list coming from myCore-->
+                                <valItem ident="Codex"/>
+                                <valItem ident="Scroll"/>
+                                <valItem ident="Leporello"/>
+                                <valItem ident="Leaf"/>
+                                <valItem ident="Other"/>
+                            </valList>
+                        </attDef>
+                        
+                    </attList>
+                </elementSpec>
+                
                 <!--          controlled values for note type commemoration in person records of Saints-->
                 <elementSpec ident="note" mode="change" module="core">
                     <attList>
                         <attDef ident="type" mode="replace" usage="opt">
                             <valList type="closed">
                                 <valItem ident="commemoration"/>
+                                <valItem ident="liturgical"/>
                             </valList>
                         </attDef>
                         

@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2016-06-02T13:47:01Z. .
+Schema generated from ODD source 2016-06-07T15:02:28Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -4886,6 +4886,8 @@ Sample values include: 1] marginal; 2] guardLeaf</a:documentation>
                <choice>
                   <value>commemoration</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>liturgical</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                </choice>
             </attribute>
          </optional>
@@ -5314,9 +5316,9 @@ Sample values include: 1] generalEditor</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:title[ancestor::tei:TEI[@type='work']]">
-               <sch:report test="not(@xml:id or @corresp)">title in work must
+               <sch:report test="not(@xml:id or @ref)">title in work must
                                     always have an @xml:id which identifies alternative titles and
-                                    @corresp for the titles in other languages translating each of
+                                    @ref for the titles in other languages translating each of
                                     the given titles. Format of the id should be like t1 t2,
                                     etc.</sch:report>
             </sch:rule>
@@ -5332,31 +5334,12 @@ Sample values include: 1] generalEditor</a:documentation>
                                     number, e.g. t1, t2, t3 </sch:report>
             </sch:rule>
          </pattern>
-         <ref name="tei_att.global.attribute.xmlid"/>
-         <ref name="tei_att.global.attribute.n"/>
-         <ref name="tei_att.global.attribute.xmllang"/>
-         <ref name="tei_att.global.attribute.xmlbase"/>
-         <ref name="tei_att.global.attribute.xmlspace"/>
-         <ref name="tei_att.global.rendition.attribute.rend"/>
-         <ref name="tei_att.global.rendition.attribute.style"/>
-         <ref name="tei_att.global.rendition.attribute.rendition"/>
-         <ref name="tei_att.global.linking.attribute.synch"/>
-         <ref name="tei_att.global.linking.attribute.sameAs"/>
-         <ref name="tei_att.global.linking.attribute.copyOf"/>
-         <ref name="tei_att.global.linking.attribute.next"/>
-         <ref name="tei_att.global.linking.attribute.prev"/>
-         <ref name="tei_att.global.linking.attribute.exclude"/>
-         <ref name="tei_att.global.linking.attribute.select"/>
-         <ref name="tei_att.global.analytic.attribute.ana"/>
-         <ref name="tei_att.global.facs.attribute.facs"/>
-         <ref name="tei_att.global.change.attribute.change"/>
-         <ref name="tei_att.global.responsibility.attribute.cert"/>
-         <ref name="tei_att.global.responsibility.attribute.resp"/>
-         <ref name="tei_att.canonical.attributes"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.canonical.attribute.key"/>
          <ref name="tei_att.typed.attribute.subtype"/>
          <optional>
-            <attribute name="corresp">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(corresponds) points to elements that correspond to the current element in some way.</a:documentation>
+            <attribute name="ref">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) provides an explicit means of locating a full definition or identity for the entity being named by means of one or more URIs.</a:documentation>
                <list>
                   <oneOrMore>
                      <data type="anyURI"/>
@@ -5367,7 +5350,7 @@ Sample values include: 1] generalEditor</a:documentation>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] complete; 2] incomplete; 3] normalized</a:documentation>
+Sample values include: 1] complete; 2] incomplete; 3] normalized; 4] supplied; 5] uniform</a:documentation>
                <text/>
             </attribute>
          </optional>
@@ -9671,11 +9654,32 @@ Sample values include: 1] pattern; 2] usage; 3] executed; 4] dividers</a:documen
       <element name="seg">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(arbitrary segment) represents any segmentation of text below the chunk level. [16.3. Blocks, Segments, and Anchors 6.2. Components of the Verse Line 7.2.5. Speech Contents]</a:documentation>
          <ref name="tei_macro.paraContent"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei-betamesaheft-seg-seg-constraint-31">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="tei:ab[ancestor::tei:handNote]">
+               <sch:report test="not(@type or @subtype)">seg in layout should always
+                                    have a type</sch:report>
+            </sch:rule>
+         </pattern>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.segLike.attributes"/>
-         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.typed.attribute.subtype"/>
          <ref name="tei_att.source.attributes"/>
          <ref name="tei_att.written.attributes"/>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <choice>
+               <value>script</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>ink</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>rubrication</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -9805,7 +9809,7 @@ You must supply at least two values for @target on <name/>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-41">
+                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-42">
             <rule context="tei:dimensions">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9815,7 +9819,7 @@ The element <name/> may appear once only
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-42">
+                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-43">
             <rule context="tei:dimensions">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9825,7 +9829,7 @@ The element <name/> may appear once only
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-43">
+                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-44">
             <rule context="tei:dimensions">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -10036,7 +10040,7 @@ Sample values include: 1] m</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines a location within a manuscript or manuscript part, usually as a (possibly discontinuous) sequence of folio references. [10.3.5. References to Locations within a Manuscript]</a:documentation>
          <ref name="tei_macro.xtext"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-locus-locus-constraint-31">
+                  id="tei-betamesaheft-locus-locus-constraint-32">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -10144,7 +10148,7 @@ Sample values include: 1] m</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-origDate-origDate-constraint-32">
+                  id="tei-betamesaheft-origDate-origDate-constraint-33">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -10400,7 +10404,7 @@ Sample values include: 1] editor; 2] mss; 3] literature; 4] foundation; 5] compo
       
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-msIdentifier-msId_minimal-constraint-46">
+                  id="tei-betamesaheft-msIdentifier-msId_minimal-constraint-47">
             <rule context="tei:msIdentifier">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -10504,7 +10508,41 @@ Sample values include: 1] editor; 2] mss; 3] literature; 4] foundation; 5] compo
       <element name="colophon">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the colophon of a manuscript item: that is, a statement providing information regarding the date, place, agency, or reason for production of the manuscript. [10.6.1. The msItem and msItemStruct Elements]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
-         <ref name="tei_att.global.attributes"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei-betamesaheft-colophon-colophon-constraint-34">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="tei:colophon/@xml:id">
+               <sch:report test="not(matches(.,'coloph\d+'))">
+                                    Colophon in Manuscript items must have ids starting with
+                                    coloph. </sch:report>
+            </sch:rule>
+         </pattern>
+         <ref name="tei_att.global.attribute.n"/>
+         <ref name="tei_att.global.attribute.xmllang"/>
+         <ref name="tei_att.global.attribute.xmlbase"/>
+         <ref name="tei_att.global.attribute.xmlspace"/>
+         <ref name="tei_att.global.rendition.attribute.rend"/>
+         <ref name="tei_att.global.rendition.attribute.style"/>
+         <ref name="tei_att.global.rendition.attribute.rendition"/>
+         <ref name="tei_att.global.linking.attribute.corresp"/>
+         <ref name="tei_att.global.linking.attribute.synch"/>
+         <ref name="tei_att.global.linking.attribute.sameAs"/>
+         <ref name="tei_att.global.linking.attribute.copyOf"/>
+         <ref name="tei_att.global.linking.attribute.next"/>
+         <ref name="tei_att.global.linking.attribute.prev"/>
+         <ref name="tei_att.global.linking.attribute.exclude"/>
+         <ref name="tei_att.global.linking.attribute.select"/>
+         <ref name="tei_att.global.analytic.attribute.ana"/>
+         <ref name="tei_att.global.facs.attribute.facs"/>
+         <ref name="tei_att.global.change.attribute.change"/>
+         <ref name="tei_att.global.responsibility.attribute.cert"/>
+         <ref name="tei_att.global.responsibility.attribute.resp"/>
+         <attribute name="xml:id">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(identifier) provides a unique identifier for the element bearing the attribute.</a:documentation>
+            <data type="ID"/>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -10618,18 +10656,16 @@ Sample values include: 1] editor; 2] mss; 3] literature; 4] foundation; 5] compo
             </choice>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-msItem-msItem-constraint-33">
+                  id="tei-betamesaheft-msItem-msItem-constraint-35">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:msItem/@xml:id">
-               <sch:report test="not(matches(.,'_i\d+') or matches(.,'coloph'))">
+               <sch:report test="not(matches(.,'_i\d+'))">
                                     Content Items in Manuscript parts must have ids starting with
                                     the reference to the part in which they are contained, then
                                     underscore and the letter 'i' followed by a progressive number,
-                                    e.g. p1.1_i1.1, p1.1_i2. The only exception is colophon which
-                                    takes an id colophon followed by a number, e.g. coloph1,
-                                    coloph2. </sch:report>
+                                    e.g. p1.1_i1.1, p1.1_i2. </sch:report>
                <sch:report test="matches(.,'(_.*){2}')"> The Underscore is used in
                                     ids to mark a nesting of differnt ids, especially items in
                                     parts. there should thus be only one of them as a maximum. If
@@ -10854,33 +10890,34 @@ Sample values include: 1] editor; 2] mss; 3] literature; 4] foundation; 5] compo
       <element name="objectDesc">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of the physical components making up the object which is being described. [10.7.1. Object Description]</a:documentation>
          <choice>
-      
             <oneOrMore>
                <ref name="tei_model.pLike"/>
             </oneOrMore>
-      
             <group>
-        
                <optional>
                   <ref name="tei_supportDesc"/>
                </optional>
-        
-        
                <optional>
                   <ref name="tei_layoutDesc"/>
                </optional>
-        
             </group>
          </choice>
          <ref name="tei_att.global.attributes"/>
-         <optional>
-            <attribute name="form">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a short project-specific name identifying the physical form of the carrier, for example as a codex, roll, fragment, partial leaf, cutting etc.</a:documentation>
-               <data type="token">
-                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-               </data>
-            </attribute>
-         </optional>
+         <attribute name="form">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <choice>
+               <value>Codex</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>Scroll</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>Leporello</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>Leaf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>Other</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -11177,7 +11214,7 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(note on decoration) contains a note describing either a decorative component of a manuscript, or a fairly homogenous class of such components. [10.7.3. Bindings, Seals, and Additional Material]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-decoNote-decoNote-constraint-34">
+                  id="tei-betamesaheft-decoNote-decoNote-constraint-36">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11187,7 +11224,7 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-decoNote-decoNote-constraint-35">
+                  id="tei-betamesaheft-decoNote-decoNote-constraint-37">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11198,7 +11235,7 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-decoNote-decoNote-constraint-36">
+                  id="tei-betamesaheft-decoNote-decoNote-constraint-38">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11242,7 +11279,7 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawing</a:documentation>
+Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawing; 6] border; 7] diagram; 8] frieze; 9] illustration; 10] initial; 11] map; 12] marginal; 13] mixed; 14] other; 15] ornamentation; 16] paratext; 17] printmark; 18] publishmark; 19] rubrication; 20] secondary; 21] tooling; 22]  unspecified; 23] unwan; 24] vignette</a:documentation>
                <text/>
             </attribute>
          </optional>
@@ -11419,7 +11456,7 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains any descriptive or other information concerning the origin of a manuscript or manuscript part. [10.8. History]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-origin-origin-constraint-37">
+                  id="tei-betamesaheft-origin-origin-constraint-39">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11622,7 +11659,7 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
             </choice>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-msPart-msPart-constraint-38">
+                  id="tei-betamesaheft-msPart-msPart-constraint-40">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11639,7 +11676,7 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-msPart-deprecate-altIdentifier-child-constraint-55">
+                  id="tei-betamesaheft-msPart-deprecate-altIdentifier-child-constraint-57">
             <rule context="tei:msPart">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -12005,54 +12042,24 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(personal name) contains a proper noun or proper-noun phrase referring to a person, possibly including one or more of the person's forenames, surnames, honorifics, added names, etc. [13.2.1. Personal Names]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-persName-persName-constraint-39">
+                  id="tei-betamesaheft-persName-persName-constraint-41">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:persName[ancestor::tei:TEI[@type='mss' or @type='place' or @type='ins' or @type='work']]">
-               <sch:report test="not(@corresp)">A persName in a mss, place or work
-                                    description should always contain an attribute @corresp pointing
+               <sch:report test="not(@ref)">A persName in a mss, place or work
+                                    description should always contain an attribute @ref pointing
                                     to the relevant record</sch:report>
             </sch:rule>
          </pattern>
-         <ref name="tei_att.global.attribute.xmlid"/>
-         <ref name="tei_att.global.attribute.n"/>
-         <ref name="tei_att.global.attribute.xmllang"/>
-         <ref name="tei_att.global.attribute.xmlbase"/>
-         <ref name="tei_att.global.attribute.xmlspace"/>
-         <ref name="tei_att.global.rendition.attribute.rend"/>
-         <ref name="tei_att.global.rendition.attribute.style"/>
-         <ref name="tei_att.global.rendition.attribute.rendition"/>
-         <ref name="tei_att.global.linking.attribute.synch"/>
-         <ref name="tei_att.global.linking.attribute.sameAs"/>
-         <ref name="tei_att.global.linking.attribute.copyOf"/>
-         <ref name="tei_att.global.linking.attribute.next"/>
-         <ref name="tei_att.global.linking.attribute.prev"/>
-         <ref name="tei_att.global.linking.attribute.exclude"/>
-         <ref name="tei_att.global.linking.attribute.select"/>
-         <ref name="tei_att.global.analytic.attribute.ana"/>
-         <ref name="tei_att.global.facs.attribute.facs"/>
-         <ref name="tei_att.global.change.attribute.change"/>
-         <ref name="tei_att.global.responsibility.attribute.cert"/>
-         <ref name="tei_att.global.responsibility.attribute.resp"/>
+         <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.datable.attributes"/>
          <ref name="tei_att.editLike.attributes"/>
          <ref name="tei_att.personal.attribute.full"/>
          <ref name="tei_att.personal.attribute.sort"/>
          <ref name="tei_att.naming.attribute.nymRef"/>
          <ref name="tei_att.canonical.attribute.key"/>
-         <ref name="tei_att.canonical.attribute.ref"/>
          <ref name="tei_att.typed.attribute.subtype"/>
-         <optional>
-            <attribute name="corresp">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(corresponds) points to elements that correspond to the current element in some way.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="anyURI"/>
-                  </oneOrMore>
-               </list>
-            </attribute>
-         </optional>
          <optional>
             <attribute name="role">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -12076,6 +12083,16 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                   <value>tabot</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="ref">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) provides an explicit means of locating a full definition or identity for the entity being named by means of one or more URIs.</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI"/>
+                  </oneOrMore>
+               </list>
             </attribute>
          </optional>
          <optional>
@@ -12159,43 +12176,28 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains an absolute or relative place name. [13.2.3. Place Names]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-placeName-placeName-constraint-40">
+                  id="tei-betamesaheft-placeName-placeName-constraint-42">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:placeName[ancestor::tei:TEI[@type='mss' or @type='pers' or @type='work']]">
-               <sch:report test="not(@corresp)">A placeName in a mss, person or
-                                    work description should always contain an attribute @corresp
+               <sch:report test="not(@ref)">A placeName in a mss, person or
+                                    work description should always contain an attribute @ref
                                     pointing to the relevant record</sch:report>
             </sch:rule>
          </pattern>
          <ref name="tei_att.datable.attributes"/>
          <ref name="tei_att.editLike.attributes"/>
-         <ref name="tei_att.global.attribute.xmlid"/>
-         <ref name="tei_att.global.attribute.n"/>
-         <ref name="tei_att.global.attribute.xmllang"/>
-         <ref name="tei_att.global.attribute.xmlbase"/>
-         <ref name="tei_att.global.attribute.xmlspace"/>
-         <ref name="tei_att.global.rendition.attribute.rend"/>
-         <ref name="tei_att.global.rendition.attribute.style"/>
-         <ref name="tei_att.global.rendition.attribute.rendition"/>
-         <ref name="tei_att.global.linking.attribute.synch"/>
-         <ref name="tei_att.global.linking.attribute.sameAs"/>
-         <ref name="tei_att.global.linking.attribute.copyOf"/>
-         <ref name="tei_att.global.linking.attribute.next"/>
-         <ref name="tei_att.global.linking.attribute.prev"/>
-         <ref name="tei_att.global.linking.attribute.exclude"/>
-         <ref name="tei_att.global.linking.attribute.select"/>
-         <ref name="tei_att.global.analytic.attribute.ana"/>
-         <ref name="tei_att.global.facs.attribute.facs"/>
-         <ref name="tei_att.global.change.attribute.change"/>
-         <ref name="tei_att.global.responsibility.attribute.cert"/>
-         <ref name="tei_att.global.responsibility.attribute.resp"/>
-         <ref name="tei_att.personal.attributes"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.personal.attribute.full"/>
+         <ref name="tei_att.personal.attribute.sort"/>
+         <ref name="tei_att.naming.attribute.role"/>
+         <ref name="tei_att.naming.attribute.nymRef"/>
+         <ref name="tei_att.canonical.attribute.key"/>
          <ref name="tei_att.typed.attribute.subtype"/>
          <optional>
-            <attribute name="corresp">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(corresponds) points to elements that correspond to the current element in some way.</a:documentation>
+            <attribute name="ref">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) provides an explicit means of locating a full definition or identity for the entity being named by means of one or more URIs.</a:documentation>
                <list>
                   <oneOrMore>
                      <data type="anyURI"/>
@@ -12583,7 +12585,7 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(geographical coordinates) contains any expression of a set of geographic coordinates, representing a point, line, or area on the surface of the earth in some notation. [13.3.4.1. Varieties of Location]</a:documentation>
          <text/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-geo-geo-constraint-41">
+                  id="tei-betamesaheft-geo-geo-constraint-43">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14240,7 +14242,7 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
             <ref name="tei_desc"/>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-relation-relation-constraint-42">
+                  id="tei-betamesaheft-relation-relation-constraint-44">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14259,7 +14261,7 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-relation-activemutual-constraint-60">
+                  id="tei-betamesaheft-relation-activemutual-constraint-62">
             <rule context="tei:relation">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14268,7 +14270,7 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-relation-activepassive-constraint-61">
+                  id="tei-betamesaheft-relation-activepassive-constraint-63">
             <rule context="tei:relation">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -15138,7 +15140,7 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains either a description of a single witness referred to within the critical apparatus, or a list of witnesses which is to be referred to by a single sigil. [12.1. The Apparatus Entry, Readings, and Witnesses]</a:documentation>
          <ref name="tei_macro.limitedContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-witness-witness-constraint-43">
+                  id="tei-betamesaheft-witness-witness-constraint-45">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -15156,7 +15158,7 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-witness-witness-constraint-44">
+                  id="tei-betamesaheft-witness-witness-constraint-46">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -15206,7 +15208,7 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
             </choice>
          </attribute>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-45">
+                  id="tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-47">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
