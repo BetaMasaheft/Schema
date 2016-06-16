@@ -204,6 +204,10 @@
                                 <valItem ident="Prayers"/>
                                 <valItem ident="Religion"/>
                                 <valItem ident="Theology"/>
+                                
+                                <valItem ident="Commentary"/>  
+                                
+                                <valItem ident="Chronography"/>
                             </valList>
                         </attDef>
 
@@ -696,6 +700,8 @@
                                 <valItem ident="Letter"/>
                                 <valItem ident="MagicFormula"/>
                                 <valItem ident="MagicText"/>
+                                <valItem ident="Comment"/>
+                                <valItem ident="Gloss"/>
                             </valList>
                         </attDef>
                     </attList>
