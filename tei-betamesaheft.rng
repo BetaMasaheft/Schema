@@ -12093,6 +12093,9 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>tabot</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>other</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  
                </choice>
             </attribute>
          </optional>
