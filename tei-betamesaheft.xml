@@ -701,6 +701,7 @@
                                 <valItem ident="MagicFormula"/>
                                 <valItem ident="MagicText"/>
                                 <valItem ident="Comment"/>
+                                <valItem ident="Correction"/>
                                 <valItem ident="Gloss"/>
                             </valList>
                         </attDef>
