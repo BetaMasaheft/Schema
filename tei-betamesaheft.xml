@@ -815,7 +815,7 @@
                 <elementSpec ident="decoNote" mode="change" module="msdescription">
                     <constraintSpec scheme="isoschematron" ident="decoNote">
                         <constraint>
-                            <sch:rule context="tei:decoNote[not(ancestor::tei:bindingDesc)]">
+                            <sch:rule context="tei:decoNote[not(ancestor::tei:bindingDesc)][not(@type='rubrication')]">
                                 <sch:report test="not(child::tei:locus)">decoNote must contain a
                                     locus to indicate the position of the feature</sch:report>
                             </sch:rule>

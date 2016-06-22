@@ -11229,7 +11229,7 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      context="tei:decoNote[not(ancestor::tei:bindingDesc)]">
+                      context="tei:decoNote[not(ancestor::tei:bindingDesc)][not(@type='rubrication')]">
                <sch:report test="not(child::tei:locus)">decoNote must contain a
                                     locus to indicate the position of the feature</sch:report>
             </sch:rule>
