@@ -1337,7 +1337,7 @@
                                 <valItem ident="gn:locatedIn"/>
                                 <valItem ident="dcterms:isPartOf"/>
                                 <valItem ident="lawd:hasAttestation"/>
-                                
+                                <valItem ident="rel:enemyOf"/>
                                 
                                 <valItem ident="bm:wifeOf"/>
                                 <valItem ident="bm:husbandOf"/>
