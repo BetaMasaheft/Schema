@@ -1707,9 +1707,9 @@
                     <constraintSpec scheme="isoschematron" ident="locus">
                         <constraint>
                             <sch:rule context="tei:locus">
-                                <sch:report test="not(@target or @from)">locus must have either an
+                                <sch:report test="not(@target or @from or @to)">locus must have either an
                                     exact reference to a page with @target or a range indicated with
-                                    @from and @to.</sch:report>
+                                    @from and @to or either of the two if the other extreme of the range is unknown. Please do not use "unknown" as value.</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
