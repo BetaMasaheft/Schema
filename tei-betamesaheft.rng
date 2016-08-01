@@ -14331,6 +14331,15 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>bm:hasTabot</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>bm:ordainedBy</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ordained priest, bishop or monk. Same as Consacrated.</a:documentation>
+               <value>bm:hasOrdained</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>bm:hasBaptized</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>bm:baptizedBy</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               
                <value>syriaca:different-from</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>syriaca:has-literary-connection-to-place</value>

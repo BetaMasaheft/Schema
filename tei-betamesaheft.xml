@@ -1348,7 +1348,11 @@
                                 <valItem ident="bm:sisterInLawOf"/>
                                 <valItem ident="bm:daugtherInLawOf"/>
                                 <valItem ident="bm:hasTabot"/>
-                                
+                                <valItem ident="bm:ordainedBy"><desc>Ordained priest, bishop or monk. Same as Consacrated.</desc></valItem>
+                                <valItem ident="bm:hasOrdained"/>
+                                <valItem ident="bm:hasBaptized"/>
+                                <valItem ident="bm:baptizedBy"/>
+                               
                                 <valItem ident="syriaca:different-from"/>
                                 <valItem ident="syriaca:has-literary-connection-to-place"/>
                                 <valItem ident="syriaca:has-relation-to-place"/>
