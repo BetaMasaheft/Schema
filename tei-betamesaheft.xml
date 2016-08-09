@@ -499,6 +499,8 @@
                                 <valItem ident="notSpecified"/>
                                 <valItem ident="Poland"/>
                                 <valItem ident="Canada"/>
+                                <valItem ident="UnitedKingdom"/>
+                                <valItem ident="Scotland"/>
                             </valList>
                         </attDef>
                     </attList>
