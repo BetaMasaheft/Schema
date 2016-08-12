@@ -13428,6 +13428,9 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>museum</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     <value>hill</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     
                   </choice>
                   <optional>
                      <choice>
@@ -13593,6 +13596,9 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>museum</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>hill</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        
                      </choice>
                   </optional>
                   <optional>
@@ -13759,6 +13765,8 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>museum</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>hill</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      </choice>
                   </optional>
                   <optional>
@@ -13925,6 +13933,8 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>museum</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>hill</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      </choice>
                   </optional>
                   <optional>
@@ -14091,6 +14101,8 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>museum</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>hill</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      </choice>
                   </optional>
                   <optional>
@@ -14256,6 +14268,8 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                         <value>library</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>museum</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>hill</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      </choice>
                   </optional>
