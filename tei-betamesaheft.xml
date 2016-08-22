@@ -1355,7 +1355,10 @@
                                 <valItem ident="bm:hasOrdained"/>
                                 <valItem ident="bm:hasBaptized"/>
                                 <valItem ident="bm:baptizedBy"/>
-                               
+                                <valItem ident="bm:isAuthorOfEthiopicTranslation">
+                                    <desc>The subject of the relation is author of a translation of a work in another language and there is no digital resource enabling us to document the authorship of this work and the fact that the work as such is a translation of another work.</desc>
+                                </valItem>
+                                
                                 <valItem ident="syriaca:different-from"/>
                                 <valItem ident="syriaca:has-literary-connection-to-place"/>
                                 <valItem ident="syriaca:has-relation-to-place"/>
