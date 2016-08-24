@@ -1182,6 +1182,7 @@
                                 <valItem ident="shrine"/>
                                 <valItem ident="town"/>
                                 <valItem ident="region"/>
+                                <valItem ident="RegionalState"/>
                                 <valItem ident="province"/>
                                 <valItem ident="monastery"/>
                                 <valItem ident="church"/>
