@@ -340,11 +340,15 @@
                 <elementSpec ident="title" mode="change" module="core">
                     <constraintSpec scheme="isoschematron" ident="title">
                         <constraint>
-                            <sch:rule context="tei:title[ancestor::tei:TEI[@type='work']]">
+                            <sch:rule context="tei:title[ancestor::tei:TEI[@type='work']][ancestor::tei:titleStmt]">
+                                <sch:report test="not(@xml:id or @corresp)">title in a Work entity must
+                                    always have an @xml:id which identifies alternative titles or a @corresp pointing to one of such xml:ids. 
+                                    Format of the id should be like t1 t2, etc. and thus in @corresp #t1, #t2, etc.</sch:report>
+                            </sch:rule>
+                            <sch:rule context="tei:title[ancestor::tei:TEI[@type='work']][not(ancestor::tei:titleStmt)]">
                                 <sch:report test="not(@xml:id or @ref)">title in work must
-                                    always have an @xml:id which identifies alternative titles and
-                                    @ref for the titles in other languages translating each of
-                                    the given titles. Format of the id should be like t1 t2,
+                                    always have an @xml:id which identifies alternative titles and/or a
+                                    @ref pointing to the correct Work entity. Format of the id should be like t1 t2,
                                     etc.</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:title[ancestor::tei:TEI[@type='work']]/@xml:id">
@@ -524,7 +528,7 @@
                 <elementSpec ident="bibl" mode="change" module="core">
                     <constraintSpec scheme="isoschematron" ident="bibl">
                         <constraint>
-                            <sch:rule context="tei:bibl[ancestor::tei:listBibl[@type='mss']]">
+                            <!--<sch:rule context="tei:bibl[ancestor::tei:listBibl[@type='mss']]">
                                 <sch:report test="not(@corresp)">bibl in a mss list of references
                                     must always contain a @corresp pointing to a project xml:id of a
                                     manuscript or to an external resource (in which case you need to
@@ -536,7 +540,7 @@
                             </sch:rule>
                             <sch:rule context="tei:bibl[not(ancestor::tei:listBibl[@type='mss'])]">
                                 <sch:report test="@corresp">@corresp in a bibl is only allowed for listBibl[@type='mss']</sch:report>
-                                  </sch:rule>
+                                  </sch:rule>-->
                             <sch:rule context="tei:bibl[not(ancestor::tei:listBibl[@type='mss' or @type='relations'])]">
                                 <sch:report test="not(contains(tei:ptr/@target, 'bm:'))">The unique tag in Zotero to be used in this pointers should be namespaced.
                                     Please make sure that the tag in zotero begins with bm: and copy it here exactely as it is, without spaces.</sch:report>
