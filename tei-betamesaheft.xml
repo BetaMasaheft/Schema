@@ -1000,6 +1000,8 @@
                                 <!--Solomon-->
                                 <valItem ident="DR"/>
                                 <!--Dorothea-->
+                                <valItem ident="FP"/>
+<!--                                Francesca-->
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -1051,6 +1053,8 @@
                                 <!--IFridman-->
                                 <valItem ident="MB"/>
                                 <!--MBulakh-->
+                                
+                                <valItem ident="FP"/>
                             </valList>
                         </attDef>
                         <attDef ident="when" mode="replace" usage="req"/>
