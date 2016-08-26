@@ -171,7 +171,7 @@
                         <attDef ident="key" mode="replace" usage="rec">
                             <valList type="closed">
                                 <!--                          list coming from myCore-->
-                                <valItem ident="Apocrypha/Pseudoepigrapha"/>
+                                <valItem ident="ApocryphaPseudoepigrapha"/>
                                 <!--mycore-->
                                 <valItem ident="Apocrypha"/>
                                 <valItem ident="Pseudoepigrapha"/>
