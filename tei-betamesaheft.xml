@@ -1591,6 +1591,9 @@
                                 <valItem ident="chapter">
                                     <desc>this container is for a chapter and may contain sections</desc>
                                 </valItem>
+                                <valItem ident="stanza">
+                                    <desc>this container is for a stanza and may contain verses</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                     </attList>

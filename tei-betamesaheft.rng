@@ -7989,6 +7989,8 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a book and may contain chapters</a:documentation>
                   <value>chapter</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a chapter and may contain sections</a:documentation>
+                  <value>stanza</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a stanza and may contain verses</a:documentation>
                </choice>
             </attribute>
          </optional>
