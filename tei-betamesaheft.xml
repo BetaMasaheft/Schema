@@ -269,8 +269,8 @@
                                 <valItem ident="en">
                                     <desc>English</desc>
                                 </valItem>
-                                <valItem ident="la">
-                                    <desc>English</desc>
+                                <valItem ident="de">
+                                    <desc>German</desc>
                                 </valItem>
                             </valList>
                         </attDef>
