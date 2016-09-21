@@ -224,6 +224,9 @@
                                 <valItem ident="am">
                                     <desc>Amharic</desc>
                                 </valItem>
+                                <valItem ident="om">
+                                    <desc>Afaan Oromoo</desc>
+                                </valItem>
                                 <valItem ident="ar">
                                     <desc>Arabic</desc>
                                 </valItem>

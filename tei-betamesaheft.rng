@@ -7149,6 +7149,8 @@ Suggested values include: 1] WGS84(World Geodetic System) ; 2] MGRS(Military Gri
                <choice>
                   <value>am</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Amharic</a:documentation>
+                  <value>om</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Afaan Oromoo</a:documentation>
                   <value>ar</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Arabic</a:documentation>
                   <value>hy</value>
