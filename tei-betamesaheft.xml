@@ -712,6 +712,7 @@
                                 <valItem ident="Correction"/>
                                 <valItem ident="Gloss"/>
                                 <valItem ident="Excommunication"/>
+                                <valItem ident="GuestText"><desc>A (complete) work added later to a manuscript</desc></valItem>
                             </valList>
                         </attDef>
                     </attList>
