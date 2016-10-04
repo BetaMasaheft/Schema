@@ -11277,7 +11277,7 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawing; 6] border; 7] diagram; 8] frieze; 9] illustration; 10] initial; 11] map; 12] marginal; 13] mixed; 14] other; 15] ornamentation; 16] paratext; 17] printmark; 18] publishmark; 19] rubrication; 20] secondary; 21] tooling; 22]  unspecified; 23] unwan; 24] vignette</a:documentation>
+                  Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawing; 6] border; 7] diagram; 8] frieze; 9] illustration; 10] initial; 11] map; 12] marginal; 13] mixed; 14] other; 15] ornamentation; 16] paratext; 17] printmark; 18] publishmark; 19] rubrication; 20] secondary; 21] tooling; 22]  unspecified; 23] unwan; 24] vignette; 25] engraving</a:documentation>
                <text/>
             </attribute>
          </optional>
