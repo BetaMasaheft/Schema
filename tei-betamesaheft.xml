@@ -1154,10 +1154,12 @@
                         <attDef ident="type" mode="change" usage="opt">
                             <valList>
                                 <valItem ident="given"/>
+                                <valItem ident="birth"/>
                                 <valItem ident="baptismal"/>
                                 <valItem ident="regnal"/>
                                 <valItem ident="monastic"/>
                                 <valItem ident="horse"/>
+                                <valItem ident="nick"/>
                             </valList>
                         </attDef>
                     </attList>
@@ -1761,7 +1763,7 @@
                                 </valItem>
                             </valList>
                         </attDef>
-                        <attDef ident="calendar" usage="opt" mode="change">
+                        <attDef ident="calendar" usage="opt" mode="replace">
                             <valList type="open">
                                 <valItem ident="world">
                                     <desc>ʿĀmata ʿālam/ʿĀmata ʾəm-fəṭrat (Era of the World)</desc>
