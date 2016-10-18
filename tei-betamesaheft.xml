@@ -69,6 +69,20 @@
                     </attList>
                 </elementSpec>
 
+                <!--  adds value partly to binding/@contemporary-->
+                <elementSpec ident="personGrp" mode="change" module="namesdates">
+                    <attList>
+                        <attDef ident="role" mode="change">
+                            <valList type="open">
+                                <valItem ident="ethnic">
+                                    <desc>records with this type represent an ethnic group as a whole and in general</desc>
+                                </valItem>
+                                <valItem ident="congregation"/>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+
                 <!--         suggest values for @type in origDate-->
                 <elementSpec ident="origDate" mode="change" module="msdescription">
                     <constraintSpec scheme="isoschematron" ident="origDate">
