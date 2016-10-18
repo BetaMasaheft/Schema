@@ -74,9 +74,9 @@
                     <constraintSpec scheme="isoschematron" ident="origDate">
                         <constraint>
                             <sch:rule context="tei:origDate">
-                                <sch:report test="@notBefore = @notAfter">For an exact date, please use @when.</sch:report>
+                                <sch:report test="@notBefore = @notAfter">For an exact date, please
+                                    use @when.</sch:report>
                             </sch:rule>
-                           
                         </constraint>
                     </constraintSpec>
                     <attList>
@@ -131,13 +131,14 @@
                     <constraintSpec scheme="isoschematron" ident="citedRange">
                         <constraint>
                             <sch:rule context="tei:citedRange">
-                                <sch:report test="@from or @to">Please, don't use @from and @to in citedRange, wirte the range into the element</sch:report>
+                                <sch:report test="@from or @to">Please, don't use @from and @to in
+                                    citedRange, wirte the range into the element</sch:report>
                             </sch:rule>
-                            <sch:rule
-                                context="tei:citedRange">
-                                <sch:report test="not(text())">An Empty citedRange is not allowed, remove it if you don't need it or
-                                    please enter the page range, unit number according to need and use @unit to specifiy the type of range.
-                                Multiple citedRange are allowed.</sch:report>
+                            <sch:rule context="tei:citedRange">
+                                <sch:report test="not(text())">An Empty citedRange is not allowed,
+                                    remove it if you don't need it or please enter the page range,
+                                    unit number according to need and use @unit to specifiy the type
+                                    of range. Multiple citedRange are allowed.</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
@@ -203,9 +204,9 @@
                                 <valItem ident="Prayers"/>
                                 <valItem ident="Religion"/>
                                 <valItem ident="Theology"/>
-                                
-                                <valItem ident="Commentary"/>  
-                                
+
+                                <valItem ident="Commentary"/>
+
                                 <valItem ident="Chronography"/>
                             </valList>
                         </attDef>
@@ -288,18 +289,17 @@
                             <sch:rule context="tei:ref">
                                 <sch:report test="not(@target or @corresp)">ref must be used with
                                     either a @corresp pointing to a project xml:id or a @target
-                                    pointing to a an internal id</sch:report>
-                            
-                            <sch:report test="not(@type) and @corresp">Please use @correps only for external entities, 
-                            assigning also a @type. if you need to point to something into the current file 
-                            or to a resource external to the project use @target.</sch:report>
-                            
-                       </sch:rule> 
-                            <sch:rule  context="tei:ref[@target]">
-                                
-                                <sch:report test="not(starts-with(@target, '#') or starts-with(@target, 'http://'))">Please use 
-                                    @target if you need to point to something into the current file (e.g. #h1)
-                                    or to point to a resource external to the project (http://www.example.com). if you need to point to a mss, use @corresp</sch:report>
+                                    pointing to a an internal id</sch:report> <sch:report
+                                    test="not(@type) and @corresp">Please use @correps only for
+                                    external entities, assigning also a @type. if you need to point
+                                    to something into the current file or to a resource external to
+                                    the project use @target.</sch:report> </sch:rule>
+                            <sch:rule context="tei:ref[@target]"> <sch:report
+                                    test="not(starts-with(@target, '#') or starts-with(@target, 'http://'))"
+                                    >Please use @target if you need to point to something into the
+                                    current file (e.g. #h1) or to point to a resource external to
+                                    the project (http://www.example.com). if you need to point to a
+                                    mss, use @corresp</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
@@ -327,32 +327,36 @@
                     </attList>
                 </elementSpec>
 
-<!--add evidence to creation-->
+                <!--add evidence to creation-->
                 <elementSpec ident="creation" mode="change" module="core">
                     <attList>
                         <attDef ident="evidence" mode="add" usage="opt">
                             <datatype maxOccurs="6">
                                 <rng:ref name="data.word"/>
                             </datatype>
-                            
+
                         </attDef>
                     </attList>
                 </elementSpec>
-                
+
                 <!--          suggest use in title of type complete, incomplete, normalized or alternative-->
                 <elementSpec ident="title" mode="change" module="core">
                     <constraintSpec scheme="isoschematron" ident="title">
                         <constraint>
-                            <sch:rule context="tei:title[ancestor::tei:TEI[@type='work']][ancestor::tei:titleStmt]">
-                                <sch:report test="not(@xml:id or @corresp)">title in a Work entity must
-                                    always have an @xml:id which identifies alternative titles or a @corresp pointing to one of such xml:ids. 
-                                    Format of the id should be like t1 t2, etc. and thus in @corresp #t1, #t2, etc.</sch:report>
-                            </sch:rule>
-                            <sch:rule context="tei:title[ancestor::tei:TEI[@type='work']][not(ancestor::tei:titleStmt)]">
-                                <sch:report test="not(@xml:id or @ref)">title in work must
-                                    always have an @xml:id which identifies alternative titles and/or a
-                                    @ref pointing to the correct Work entity. Format of the id should be like t1 t2,
+                            <sch:rule
+                                context="tei:title[ancestor::tei:TEI[@type='work']][ancestor::tei:titleStmt]">
+                                <sch:report test="not(@xml:id or @corresp)">title in a Work entity
+                                    must always have an @xml:id which identifies alternative titles
+                                    or a @corresp pointing to one of such xml:ids. Format of the id
+                                    should be like t1 t2, etc. and thus in @corresp #t1, #t2,
                                     etc.</sch:report>
+                            </sch:rule>
+                            <sch:rule
+                                context="tei:title[ancestor::tei:TEI[@type='work']][not(ancestor::tei:titleStmt)]">
+                                <sch:report test="not(@xml:id or @ref)">title in work must always
+                                    have an @xml:id which identifies alternative titles and/or a
+                                    @ref pointing to the correct Work entity. Format of the id
+                                    should be like t1 t2, etc.</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:title[ancestor::tei:TEI[@type='work']]/@xml:id">
                                 <sch:report test="not(matches(.,'t\d+'))"> Titles of works must have
@@ -375,10 +379,12 @@
                                 <valItem ident="incomplete"/>
                                 <valItem ident="normalized"/>
                                 <valItem ident="supplied">
-                                    <desc>syriaca.org: an existing print catalogue provides a descriptive title</desc>
+                                    <desc>syriaca.org: an existing print catalogue provides a
+                                        descriptive title</desc>
                                 </valItem>
                                 <valItem ident="uniform">
-                                    <desc>syriaca.org: a title for such work established by the editor or cataloguer</desc>
+                                    <desc>syriaca.org: a title for such work established by the
+                                        editor or cataloguer</desc>
                                 </valItem>
                             </valList>
                         </attDef>
@@ -544,9 +550,12 @@
                             <sch:rule context="tei:bibl[not(ancestor::tei:listBibl[@type='mss'])]">
                                 <sch:report test="@corresp">@corresp in a bibl is only allowed for listBibl[@type='mss']</sch:report>
                                   </sch:rule>-->
-                            <sch:rule context="tei:bibl[not(ancestor::tei:listBibl[@type='mss' or @type='relations'])]">
-                                <sch:report test="not(contains(tei:ptr/@target, 'bm:'))">The unique tag in Zotero to be used in this pointers should be namespaced.
-                                    Please make sure that the tag in zotero begins with bm: and copy it here exactely as it is, without spaces.</sch:report>
+                            <sch:rule
+                                context="tei:bibl[not(ancestor::tei:listBibl[@type='mss' or @type='relations'])]">
+                                <sch:report test="not(contains(tei:ptr/@target, 'bm:'))">The unique
+                                    tag in Zotero to be used in this pointers should be namespaced.
+                                    Please make sure that the tag in zotero begins with bm: and copy
+                                    it here exactely as it is, without spaces.</sch:report>
                             </sch:rule>
                             <sch:rule
                                 context="tei:bibl[ancestor::tei:listBibl[@type='mss']][@type='external']">
@@ -567,12 +576,15 @@
                                     @corresp pointing to a project xml:id of a manuscript or to an
                                     external resource (in which case you need to add a
                                     @type="external")</sch:report>
-                                <sch:report test="contains(@corresp, 'bm:')">Please, don't point to bibliography items for 
-                                    witnesses as it is unlikely that the edition of the text is based on secondary literature. use @corresp to 
-                                    point to the id of a manuscript. If the record does not exist, consider 
-                                    creating it as a minimss using the provided models and guidelines. 
-                                    If you point to an external digital reproduction, use @facs and enter the permalink to the main view. 
-                                    You will still need to create a minimss if the record does not exist.</sch:report>
+                                <sch:report test="contains(@corresp, 'bm:')">Please, don't point to
+                                    bibliography items for witnesses as it is unlikely that the
+                                    edition of the text is based on secondary literature. use
+                                    @corresp to point to the id of a manuscript. If the record does
+                                    not exist, consider creating it as a minimss using the provided
+                                    models and guidelines. If you point to an external digital
+                                    reproduction, use @facs and enter the permalink to the main
+                                    view. You will still need to create a minimss if the record does
+                                    not exist.</sch:report>
                             </sch:rule>
                             <sch:rule
                                 context="tei:witness[ancestor::tei:listBibl[@type='mss']][@type='external']">
@@ -617,93 +629,97 @@
                                 <valItem ident="foundation">
                                     <desc>for use in place or institution record</desc>
                                 </valItem>
-                                <valItem ident="Headband"><desc>for use in binding description</desc></valItem>
-                                <valItem ident="Tailband"><desc>for use in binding description</desc></valItem>
-                                 <valItem ident="DonationNote">
-                                        <desc>1. the book belongs to an individual, 2. the book belongs
-                                            to an institution</desc>
-                                    </valItem>
-                                    <valItem ident="OwnershipNote">
-                                        <desc>1. the book belongs to an individual, 2. the book belongs
-                                            to an institution</desc>
-                                    </valItem>
+                                <valItem ident="Headband">
+                                    <desc>for use in binding description</desc>
+                                </valItem>
+                                <valItem ident="Tailband">
+                                    <desc>for use in binding description</desc>
+                                </valItem>
+                                <valItem ident="DonationNote">
+                                    <desc>1. the book belongs to an individual, 2. the book belongs
+                                        to an institution</desc>
+                                </valItem>
+                                <valItem ident="OwnershipNote">
+                                    <desc>1. the book belongs to an individual, 2. the book belongs
+                                        to an institution</desc>
+                                </valItem>
                                 <valItem ident="PurchaseNote"/>
                                 <valItem ident="AcquisitionNote"/>
                                 <valItem ident="ReceiptNote"/>
-                                    <valItem ident="Admonition">
-                                        <desc>to AM</desc>
-                                    </valItem>
-                                    <valItem ident="LandGrant"/>
-                                    <valItem ident="FoundationCharter"/>
-                                    <valItem ident="Genealogy"/>
-                                    <valItem ident="ScribalSignature"/>
-                                    <valItem ident="Supplication"/>
-                                    <valItem ident="Subscription"/>
-                                    <valItem ident="Doxology"/>
-                                    <valItem ident="Exhortation">
-                                        <desc>to the brethren/ to commemorate __ / to celebrate __ / to
-                                            learn the religion __ etc./ on the importance of
-                                            commemorating __/ on what is useful for the soul),
-                                            Invocation against __/ against those who __ (not very much
-                                            different from condemnation, s. below</desc>
-                                    </valItem>
+                                <valItem ident="Admonition">
+                                    <desc>to AM</desc>
+                                </valItem>
+                                <valItem ident="LandGrant"/>
+                                <valItem ident="FoundationCharter"/>
+                                <valItem ident="Genealogy"/>
+                                <valItem ident="ScribalSignature"/>
+                                <valItem ident="Supplication"/>
+                                <valItem ident="Subscription"/>
+                                <valItem ident="Doxology"/>
+                                <valItem ident="Exhortation">
+                                    <desc>to the brethren/ to commemorate __ / to celebrate __ / to
+                                        learn the religion __ etc./ on the importance of
+                                        commemorating __/ on what is useful for the soul),
+                                        Invocation against __/ against those who __ (not very much
+                                        different from condemnation, s. below</desc>
+                                </valItem>
                                 <valItem ident="Invocation"/>
-                                    <valItem ident="Inventory"/>
-                                    <valItem ident="TransactionNote"/>
-                                    <valItem ident="ScribalNoteCommencing">
-                                        <desc>(Scribe’s) note on commencing the work</desc>
-                                    </valItem>
-                                    <valItem ident="ScribalNoteOrdering">
-                                        <desc>Note on ordering of the copying</desc>
-                                    </valItem>
+                                <valItem ident="Inventory"/>
+                                <valItem ident="TransactionNote"/>
+                                <valItem ident="ScribalNoteCommencing">
+                                    <desc>(Scribe’s) note on commencing the work</desc>
+                                </valItem>
+                                <valItem ident="ScribalNoteOrdering">
+                                    <desc>Note on ordering of the copying</desc>
+                                </valItem>
                                 <valItem ident="ScribalNoteCommissioning">
-                                        <desc>Note on commissioning of the writing</desc>
-                                    </valItem>
+                                    <desc>Note on commissioning of the writing</desc>
+                                </valItem>
                                 <valItem ident="ScribalNoteCompleting">
-                                        <desc> (Scribe’s) note on completing the writing </desc>
-                                    </valItem>
+                                    <desc> (Scribe’s) note on completing the writing </desc>
+                                </valItem>
                                 <valItem ident="ScribalNoteAssigningLang">
-                                        <desc> (Scribe’s) note on assigning of land </desc>
-                                    </valItem>
+                                    <desc> (Scribe’s) note on assigning of land </desc>
+                                </valItem>
                                 <valItem ident="ScribalNoteBequeathing">
-                                        <desc> (Scribe’s) note on bequeathing </desc>
-                                    </valItem>
+                                    <desc> (Scribe’s) note on bequeathing </desc>
+                                </valItem>
                                 <valItem ident="RecordReconciliation"/>
                                 <valItem ident="RecordLitigation"/>
                                 <valItem ident="RecordTransaction"/>
                                 <valItem ident="RecordDistribution"/>
                                 <valItem ident="RecordGuarantors"/>
-                                    <valItem ident="Record">
-                                        <desc>“Record” can be used for a note of a documentary, official
-                                            character</desc>
-                                    </valItem>
-                                    <valItem ident="ScribalSupplication">
-                                        <desc>(Scribe’s) entreat to God for help during ...</desc>
-                                    </valItem>
-                                    <valItem ident="Unclear"/>
-                                    <valItem ident="GuarantorsList">
-                                        <desc> List of guarantors, Record concerning guarantors</desc>
-                                    </valItem>
-                                    <valItem ident="CommemorativeNote">
-                                        <desc>Commemorative notice on __ (mainly for the
-                                            Synaxarion)</desc>
-                                    </valItem>
-                                    <valItem ident="Condemnation">
-                                        <desc>Condemnation of those who __ (e.g., “who stole the
-                                            book”)</desc>
-                                    </valItem>
-                                    <valItem ident="ProtectivePrayer">
-                                        <desc>(Protective) prayer</desc>
-                                    </valItem>
+                                <valItem ident="Record">
+                                    <desc>“Record” can be used for a note of a documentary, official
+                                        character</desc>
+                                </valItem>
+                                <valItem ident="ScribalSupplication">
+                                    <desc>(Scribe’s) entreat to God for help during ...</desc>
+                                </valItem>
+                                <valItem ident="Unclear"/>
+                                <valItem ident="GuarantorsList">
+                                    <desc> List of guarantors, Record concerning guarantors</desc>
+                                </valItem>
+                                <valItem ident="CommemorativeNote">
+                                    <desc>Commemorative notice on __ (mainly for the
+                                        Synaxarion)</desc>
+                                </valItem>
+                                <valItem ident="Condemnation">
+                                    <desc>Condemnation of those who __ (e.g., “who stole the
+                                        book”)</desc>
+                                </valItem>
+                                <valItem ident="ProtectivePrayer">
+                                    <desc>(Protective) prayer</desc>
+                                </valItem>
                                 <valItem ident="Poem"/>
-                                    <valItem ident="PoemQǝne"/>
-                                    <valItem ident="PoemSalam"/>
-                                    <valItem ident="PoemArke"/>
-                                    <valItem ident="StampExlibris">
-                                        <desc>hardly discernible, of the owning institution, of the
-                                            church….</desc>
-                                    </valItem>
-                                    <valItem ident="CalendaricNote"/>
+                                <valItem ident="PoemQǝne"/>
+                                <valItem ident="PoemSalam"/>
+                                <valItem ident="PoemArke"/>
+                                <valItem ident="StampExlibris">
+                                    <desc>hardly discernible, of the owning institution, of the
+                                        church….</desc>
+                                </valItem>
+                                <valItem ident="CalendaricNote"/>
                                 <valItem ident="Excerpt"/>
                                 <valItem ident="Letter"/>
                                 <valItem ident="MagicFormula"/>
@@ -712,7 +728,9 @@
                                 <valItem ident="Correction"/>
                                 <valItem ident="Gloss"/>
                                 <valItem ident="Excommunication"/>
-                                <valItem ident="GuestText"><desc>A (complete) work added later to a manuscript</desc></valItem>
+                                <valItem ident="GuestText">
+                                    <desc>A (complete) work added later to a manuscript</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                     </attList>
@@ -795,29 +813,28 @@
                         </attDef>
                     </attList>
                 </elementSpec>
-                
-<!--              values for seg in handNote  -->
+
+                <!--              values for seg in handNote  -->
                 <elementSpec ident="seg" mode="change" module="linking">
                     <constraintSpec scheme="isoschematron" ident="seg">
                         <constraint>
                             <sch:rule context="tei:ab[ancestor::tei:handNote]">
-                                <sch:report test="not(@type or @subtype)">seg in layout should always
-                                    have a type</sch:report>
+                                <sch:report test="not(@type or @subtype)">seg in layout should
+                                    always have a type</sch:report>
                             </sch:rule>
-                           
                         </constraint>
                     </constraintSpec>
                     <attList>
                         <attDef ident="type" mode="replace" usage="req">
                             <valList type="closed">
-                                
+
                                 <valItem ident="script"/>
                                 <valItem ident="ink"/>
                                 <valItem ident="rubrication"/>
-                               
+
                             </valList>
                         </attDef>
-                       
+
                     </attList>
                 </elementSpec>
 
@@ -874,7 +891,7 @@
                                 <valItem ident="unwan"/>
                                 <valItem ident="vignette"/>
                                 <valItem ident="engraving"/>
-                                
+
                             </valList>
                         </attDef>
                         <attDef ident="rend" mode="replace" usage="opt">
@@ -925,11 +942,11 @@
                     <constraintSpec scheme="isoschematron" ident="msItem">
                         <constraint>
                             <sch:rule context="tei:msItem/@xml:id">
-                                <sch:report test="not(matches(.,'_i\d+'))">
-                                    Content Items in Manuscript parts must have ids starting with
-                                    the reference to the part in which they are contained, then
-                                    underscore and the letter 'i' followed by a progressive number,
-                                    e.g. p1.1_i1.1, p1.1_i2. </sch:report>
+                                <sch:report test="not(matches(.,'_i\d+'))"> Content Items in
+                                    Manuscript parts must have ids starting with the reference to
+                                    the part in which they are contained, then underscore and the
+                                    letter 'i' followed by a progressive number, e.g. p1.1_i1.1,
+                                    p1.1_i2. </sch:report>
                                 <sch:report test="matches(.,'(_.*){2}')"> The Underscore is used in
                                     ids to mark a nesting of differnt ids, especially items in
                                     parts. there should thus be only one of them as a maximum. If
@@ -943,14 +960,14 @@
                         <attDef ident="xml:id" mode="change" usage="req"/>
                     </attList>
                 </elementSpec>
-                
+
                 <elementSpec ident="colophon" mode="change" module="msdescription">
                     <constraintSpec scheme="isoschematron" ident="colophon">
                         <constraint>
                             <sch:rule context="tei:colophon/@xml:id">
-                                <sch:report test="not(matches(.,'coloph\d+'))">
-                                    Colophon in Manuscript items must have ids starting with
-                                    coloph. </sch:report>
+                                <sch:report test="not(matches(.,'coloph\d+'))"> Colophon in
+                                    Manuscript items must have ids starting with coloph.
+                                </sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
@@ -1006,7 +1023,7 @@
                                 <valItem ident="DR"/>
                                 <!--Dorothea-->
                                 <valItem ident="FP"/>
-<!--                                Francesca-->
+                                <!--                                Francesca-->
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -1058,7 +1075,7 @@
                                 <!--IFridman-->
                                 <valItem ident="MB"/>
                                 <!--MBulakh-->
-                                
+
                                 <valItem ident="FP"/>
                             </valList>
                         </attDef>
@@ -1103,8 +1120,8 @@
                             <sch:rule
                                 context="tei:persName[ancestor::tei:TEI[@type='mss' or @type='place' or @type='ins' or @type='work']]">
                                 <sch:report test="not(@ref)">A persName in a mss, place or work
-                                    description should always contain an attribute @ref pointing
-                                    to the relevant record</sch:report>
+                                    description should always contain an attribute @ref pointing to
+                                    the relevant record</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
@@ -1153,9 +1170,9 @@
                         <constraint>
                             <sch:rule
                                 context="tei:placeName[ancestor::tei:TEI[@type='mss' or @type='pers' or @type='work']]">
-                                <sch:report test="not(@ref)">A placeName in a mss, person or
-                                    work description should always contain an attribute @ref
-                                    pointing to the relevant record</sch:report>
+                                <sch:report test="not(@ref)">A placeName in a mss, person or work
+                                    description should always contain an attribute @ref pointing to
+                                    the relevant record</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
@@ -1300,13 +1317,13 @@
 
                     </attList>
                 </elementSpec>
-                
+
                 <!--          controlled values for objectDesc @form -->
                 <elementSpec ident="objectDesc" mode="change" module="msdescription">
                     <attList>
                         <attDef ident="form" mode="replace" usage="req">
                             <valList type="closed">
-                                
+
                                 <!--                          list coming from myCore-->
                                 <valItem ident="Codex"/>
                                 <valItem ident="Scroll"/>
@@ -1315,10 +1332,10 @@
                                 <valItem ident="Other"/>
                             </valList>
                         </attDef>
-                        
+
                     </attList>
                 </elementSpec>
-                
+
                 <!--          controlled values for note type commemoration in person records of Saints-->
                 <elementSpec ident="note" mode="change" module="core">
                     <attList>
@@ -1328,7 +1345,7 @@
                                 <valItem ident="liturgical"/>
                             </valList>
                         </attDef>
-                        
+
                     </attList>
                 </elementSpec>
 
@@ -1338,10 +1355,12 @@
                 <elementSpec ident="relation" mode="change" module="namesdates">
                     <constraintSpec scheme="isoschematron" ident="relation">
                         <constraint>
-                            <sch:rule
-                                context="tei:relation">
-                                <sch:report test="not(parent::tei:listRelation or parent::tei:listBibl[@type='relations'])">
-                                    a relation element is only allowed within a listRelation (for places, institution, person and groups) or in a listBibl[@type='relations'] in manuscripts and works
+                            <sch:rule context="tei:relation">
+                                <sch:report
+                                    test="not(parent::tei:listRelation or parent::tei:listBibl[@type='relations'])"
+                                    > a relation element is only allowed within a listRelation (for
+                                    places, institution, person and groups) or in a
+                                    listBibl[@type='relations'] in manuscripts and works
                                 </sch:report>
                             </sch:rule>
                         </constraint>
@@ -1355,7 +1374,7 @@
                                 <valItem ident="dcterms:isPartOf"/>
                                 <valItem ident="lawd:hasAttestation"/>
                                 <valItem ident="rel:enemyOf"/>
-                                
+
                                 <valItem ident="bm:wifeOf"/>
                                 <valItem ident="bm:husbandOf"/>
                                 <valItem ident="bm:motherInLawOf"/>
@@ -1365,14 +1384,21 @@
                                 <valItem ident="bm:sisterInLawOf"/>
                                 <valItem ident="bm:daugtherInLawOf"/>
                                 <valItem ident="bm:hasTabot"/>
-                                <valItem ident="bm:ordainedBy"><desc>Ordained priest, bishop or monk. Same as Consacrated.</desc></valItem>
+                                <valItem ident="bm:ordainedBy">
+                                    <desc>Ordained priest, bishop or monk. Same as
+                                        Consacrated.</desc>
+                                </valItem>
                                 <valItem ident="bm:hasOrdained"/>
                                 <valItem ident="bm:hasBaptized"/>
                                 <valItem ident="bm:baptizedBy"/>
                                 <valItem ident="bm:isAuthorOfEthiopicTranslation">
-                                    <desc>The subject of the relation is author of a translation of a work in another language and there is no digital resource enabling us to document the authorship of this work and the fact that the work as such is a translation of another work.</desc>
+                                    <desc>The subject of the relation is author of a translation of
+                                        a work in another language and there is no digital resource
+                                        enabling us to document the authorship of this work and the
+                                        fact that the work as such is a translation of another
+                                        work.</desc>
                                 </valItem>
-                                
+
                                 <valItem ident="syriaca:different-from"/>
                                 <valItem ident="syriaca:has-literary-connection-to-place"/>
                                 <valItem ident="syriaca:has-relation-to-place"/>
@@ -1380,8 +1406,8 @@
                                 <valItem ident="syriaca:share-a-name"/>
                                 <valItem ident="syriaca:share-a-title"/>
                                 <valItem ident="syriaca:born-at"/>
-                                
-                                
+
+
                                 <valItem ident="snap:DaughterOf"/>
                                 <valItem ident="snap:ChildOf"/>
                                 <valItem ident="snap:BrotherOf"/>
@@ -1476,8 +1502,8 @@
                                 <valItem ident="snap:SonOf"/>
                                 <valItem ident="snap:StepFamilyRelationship"/>
                                 <valItem ident="snap:UncleOf"/>
-                                
-                                
+
+
                                 <!--                          list INCOMPLETE! -->
                                 <valItem ident="saws:AbstractManuscriptText"/>
                                 <valItem ident="saws:P129i_is_subject_of"/>
@@ -1550,8 +1576,8 @@
                                 <valItem ident="saws:isVersionInAnotherLanguageOf"/>
                                 <valItem ident="saws:isVersionOf"/>
                                 <valItem ident="saws:isYoungerThan"/>
-                                
-                                
+
+
                             </valList>
                         </attDef>
 
@@ -1591,13 +1617,16 @@
                         <attDef ident="subtype" mode="replace" usage="opt">
                             <valList type="closed">
                                 <valItem ident="book">
-                                    <desc>this container is for a book and may contain chapters</desc>
+                                    <desc>this container is for a book and may contain
+                                        chapters</desc>
                                 </valItem>
                                 <valItem ident="chapter">
-                                    <desc>this container is for a chapter and may contain sections</desc>
+                                    <desc>this container is for a chapter and may contain
+                                        sections</desc>
                                 </valItem>
                                 <valItem ident="stanza">
-                                    <desc>this container is for a stanza and may contain verses</desc>
+                                    <desc>this container is for a stanza and may contain
+                                        verses</desc>
                                 </valItem>
                             </valList>
                         </attDef>
@@ -1653,12 +1682,16 @@
                                         at any given granularity</desc>
                                 </valItem>
                                 <valItem ident="nar">
-                                    
-                                    <desc>Description of a Narrative Unit, independent of the Work or textual unit to which it is part. This includes document types, e.g. used to classify additiones to a manuscript.</desc>
+
+                                    <desc>Description of a Narrative Unit, independent of the Work
+                                        or textual unit to which it is part. This includes document
+                                        types, e.g. used to classify additiones to a
+                                        manuscript.</desc>
                                 </valItem>
                                 <valItem ident="auth">
-                                    
-                                    <desc>Description of a concept used as authority list (faith, art element)</desc>
+
+                                    <desc>Description of a concept used as authority list (faith,
+                                        art element)</desc>
                                 </valItem>
                             </valList>
                         </attDef>
@@ -1706,6 +1739,7 @@
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
+
                     <attList>
                         <attDef ident="type" usage="opt" mode="change">
                             <datatype maxOccurs="3">
@@ -1722,8 +1756,39 @@
                                 <valItem ident="ascension"/>
                                 <valItem ident="death"/>
                                 <valItem ident="repeated">
-                                    <desc>If the commemoration is repeated, please add this value as well in type</desc>
+                                    <desc>If the commemoration is repeated, please add this value as
+                                        well in type</desc>
                                 </valItem>
+                            </valList>
+                        </attDef>
+                        <attDef ident="calendar" usage="opt" mode="change">
+                            <valList type="open">
+                                <valItem ident="world">
+                                    <desc>ʿĀmata ʿālam/ʿĀmata ʾəm-fəṭrat (Era of the World)</desc>
+                                </valItem>
+                                <valItem ident="ethiopian">
+                                    <desc> ʿĀmata śəggāwe (Era of the Incarnation –
+                                        Ethiopian)</desc>
+                                </valItem>
+                                <valItem ident="grace">
+                                    <desc>ʿĀmata məḥrat (Era of Grace)</desc>
+                                </valItem>
+                                <valItem ident="diocletian">
+                                    <desc>ʿĀmata samāʿtāt (Era of Martyrs (Diocletian))</desc>
+                                </valItem>
+                                <valItem ident="alexander">
+                                    <desc> Era of Alexander</desc>
+                                </valItem>
+                                <valItem ident="evangelists">
+                                    <desc>Evangelists' years</desc>
+                                </valItem>
+                                <valItem ident="islamic">
+                                    <desc>Hiǧrī (Islamic)</desc>
+                                </valItem>
+                                <valItem ident="julian">
+                                    <desc> Julian</desc>
+                                </valItem>
+
                             </valList>
                         </attDef>
                     </attList>
@@ -1734,9 +1799,11 @@
                     <constraintSpec scheme="isoschematron" ident="locus">
                         <constraint>
                             <sch:rule context="tei:locus">
-                                <sch:report test="not(@target or @from or @to)">locus must have either an
-                                    exact reference to a page with @target or a range indicated with
-                                    @from and @to or either of the two if the other extreme of the range is unknown. Please do not use "unknown" as value.</sch:report>
+                                <sch:report test="not(@target or @from or @to)">locus must have
+                                    either an exact reference to a page with @target or a range
+                                    indicated with @from and @to or either of the two if the other
+                                    extreme of the range is unknown. Please do not use "unknown" as
+                                    value.</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
@@ -1751,17 +1818,17 @@
                                     @xml:id</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:item[ancestor::tei:collation]">
-                                <sch:report test="not(matches(@xml:id,'q\d+'))"> Items in Collation must
-                                    have ids starting with the letter 'q' followed by a progressive
-                                    number, e.g. q1, q2, q3 </sch:report>
+                                <sch:report test="not(matches(@xml:id,'q\d+'))"> Items in Collation
+                                    must have ids starting with the letter 'q' followed by a
+                                    progressive number, e.g. q1, q2, q3 </sch:report>
                             </sch:rule>
                             <sch:rule context="tei:item[ancestor::tei:additions]">
-                                <sch:report test="not(@xml:id)">
-                                    items in additions must have an
+                                <sch:report test="not(@xml:id)"> items in additions must have an
                                     @xml:id</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:item[ancestor::tei:additions]">
-                                <sch:report test="not(matches(@xml:id,'a\d+') or matches(@xml:id,'e\d+'))">
+                                <sch:report
+                                    test="not(matches(@xml:id,'a\d+') or matches(@xml:id,'e\d+'))">
                                     Additions must have ids starting with the letter 'a' followed by
                                     a progressive number, e.g. a1, a2, a3. In case of other contents
                                     (varia) use an id starting with 'e. </sch:report>
