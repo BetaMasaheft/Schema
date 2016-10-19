@@ -26,9 +26,11 @@
         </front>
         <body>
             <schemaSpec ident="tei-betamesaheft" docLang="en" prefix="tei_" start="TEI"
-                xml:lang="en">
+                xml:lang="en" source="tei:3.0.0">
 
-                <!--       MODULES USED BY THE Beta maṣāḥǝft: Manuscripts of Ethiopia and Eritrea SCHEMA       -->
+                <!--       MODULES USED BY THE Beta maṣāḥǝft: Manuscripts of Ethiopia and Eritrea SCHEMA  
+                the @source ties our current schema to the version 3.0.0 of TEI
+                -->
                 <moduleRef key="core"/>
                 <moduleRef key="tei"/>
                 <moduleRef key="header" except="appInfo"/>
@@ -286,6 +288,9 @@
                                 </valItem>
                                 <valItem ident="en">
                                     <desc>English</desc>
+                                </valItem>
+                                <valItem ident="sv">
+                                    <desc>Swedish</desc>
                                 </valItem>
                                 <valItem ident="de">
                                     <desc>German</desc>
