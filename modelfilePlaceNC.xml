@@ -5,7 +5,7 @@ schematypens="http://relaxng.org/ns/structure/1.0"
 ?>
 <?xml-model href="https://raw.githubusercontent.com/SChAth/schema/master/tei-betamesaheft.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" type="place">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xml:id="" type="place">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -39,13 +39,13 @@ schematypens="http://relaxng.org/ns/structure/1.0"
             </langUsage>
         </profileDesc>
         <revisionDesc>
-            <change who="AB" when="2016-02-09">CREATED: place</change>
+            <change who="FP" when="2016-10-17">CREATED: place</change>
         </revisionDesc>
     </teiHeader>
     <text>
         <body>
             <listPlace>
-                <place>
+                <place type="area">
                     <placeName/>
                     <placeName type="alt"/>
                     <country> </country>
