@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2016-10-18T13:06:44Z. .
+Schema generated from ODD source 2016-10-24T20:27:07Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -3916,111 +3916,111 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <choice>
                   <value>foundation</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in place or institution record</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to be used for place and institutions</a:documentation>
                   <value>Headband</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to be used in binding description.</a:documentation>
                   <value>Tailband</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description</a:documentation>
                   <value>DonationNote</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1. the book belongs to an individual, 2. the book belongs to an institution</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note stating that the manuscript has been donated to an individual or to an institution.</a:documentation>
                   <value>OwnershipNote</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">1. the book belongs to an individual, 2. the book belongs to an institution</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note stating the book belongs to an individual or to an institution.</a:documentation>
                   <value>PurchaseNote</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note stating that the book has been purchased for money by an individual or an institution.</a:documentation>
                   <value>AcquisitionNote</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note stating that the manuscript has been generically acquired by an individual or an institution. Similar to “PurchaseNote”.</a:documentation>
                   <value>ReceiptNote</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note written down as a receipt of a transaction of goods.</a:documentation>
                   <value>Admonition</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to AM</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note admonishing individuals to a righteous behavior. See also “Exhortation”.</a:documentation>
                   <value>LandGrant</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note stating the concession of lands by an authority in favor of individuals or typically of institutions.</a:documentation>
                   <value>FoundationCharter</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">act of foundation of an institution.</a:documentation>
                   <value>Genealogy</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note containing the spiritual genealogy of the leader of the community or an institution, or the family members of an individual.</a:documentation>
                   <value>ScribalSignature</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scribe’s signature.</a:documentation>
                   <value>Supplication</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">entreat to God for help, written down in a later hand.</a:documentation>
                   <value>Subscription</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note added at the end of the main text concerning its completion.</a:documentation>
                   <value>Doxology</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">hymn or praise to God or other entities.</a:documentation>
                   <value>Exhortation</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to the brethren/ to commemorate __ / to celebrate __ / to learn the religion __ etc./ on the importance of commemorating __/ on what is useful for the soul), Invocation against __/ against those who __ (not very much different from condemnation, s. below</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note addressed to the brethren in order to commemorate a saint, to celebrate a given feast or for educational purposes.</a:documentation>
                   <value>Invocation</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">invocation against those who stole or erased the book or against other individuals. Not very different from “Condemnation”.</a:documentation>
                   <value>Inventory</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">list of books or items held by the individual or the institution.</a:documentation>
                   <value>TransactionNote</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note stating a transaction of goods between individuals or institutions.</a:documentation>
                   <value>ScribalNoteCommencing</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Scribe’s) note on commencing the work</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scribe’s note on commencing the work</a:documentation>
                   <value>ScribalNoteOrdering</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Note on ordering of the copying</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scribe’s note on ordering of the copying</a:documentation>
                   <value>ScribalNoteCommissioning</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Note on commissioning of the writing</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scribe’s note on commissioning of the writing</a:documentation>
                   <value>ScribalNoteCompleting</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Scribe’s) note on completing the writing </a:documentation>
-                  <value>ScribalNoteAssigningLang</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Scribe’s) note on assigning of land </a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scribe’s note on completing the writing</a:documentation>
+                  <value>ScribalNoteAssigningLand</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scribe’s note on assigning of land. </a:documentation>
                   <value>ScribalNoteBequeathing</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Scribe’s) note on bequeathing </a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scribe’s note on bequeathing.</a:documentation>
                   <value>RecordReconciliation</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documentary record concerning a reconciliation.</a:documentation>
                   <value>RecordLitigation</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documentary record concerning a litigation.</a:documentation>
                   <value>RecordTransaction</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documentary record concerning a transaction of goods.</a:documentation>
                   <value>RecordDistribution</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documentary record concerning the distribution of goods or lands.</a:documentation>
                   <value>RecordGuarantors</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documentary record concerning the guarantors of a transaction or a loan.</a:documentation>
                   <value>Record</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">“Record” can be used for a note of a documentary, official character</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">generic note of a documentary, official character.</a:documentation>
                   <value>ScribalSupplication</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Scribe’s) entreat to God for help during ...</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scribe’s entreat to God.</a:documentation>
                   <value>Unclear</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note whose content is hardly understandable. </a:documentation>
                   <value>GuarantorsList</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">List of guarantors, Record concerning guarantors</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">list of the guarantors of transaction or a loan.</a:documentation>
                   <value>CommemorativeNote</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Commemorative notice on __ (mainly for the Synaxarion)</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">commemorative notice on a saint. Mainly taken from the Synaxarion.</a:documentation>
                   <value>Condemnation</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Condemnation of those who __ (e.g., “who stole the book”)</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note condemning those who stole the book or erased it.</a:documentation>
                   <value>ProtectivePrayer</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(Protective) prayer</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">prayer to be read or carried along for protective purposes.</a:documentation>
                   <value>Poem</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>PoemQǝne</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note containing a generic poetic text. See “PoemArke”, “PoemQene”, “PoemSalam”.</a:documentation>
+                  <value>PoemQene</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">rhymed composition fulfilling the requirements of the Qəne-hymn.</a:documentation>
                   <value>PoemSalam</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">short rhymed poem beginning with the words “salām (ʾəbəl) la-”.</a:documentation>
                   <value>PoemArke</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">five-line rhymed poem.</a:documentation>
                   <value>StampExlibris</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">hardly discernible, of the owning institution, of the church….</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">stamp affixed by the owning institution, e.g., a library.</a:documentation>
                   <value>CalendaricNote</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note for calculating the moveable feasts and for other calendrical computes.</a:documentation>
                   <value>Excerpt</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">fragment of a literary work added at a later stage to a manuscript. See also “GuestText”.</a:documentation>
                   <value>Letter</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">communication formally addressed to an individual or an institution.</a:documentation>
                   <value>MagicFormula</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">set form of words to be recited or carried along for healing and protecting.</a:documentation>
                   <value>MagicText</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">elaborate note to be recited or carried along for healing and protecting.</a:documentation>
                   <value>Comment</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note added at a later stage in order to comment word or passages of the main text. See also “Gloss”.</a:documentation>
                   <value>Correction</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note added at a later stage in order to correct words or passages of the main text.</a:documentation>
                   <value>Gloss</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note added at a later stage in order to interpret or explain words or passages of the main text. See also “Comment”.</a:documentation>
                   <value>Excommunication</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note excommunicating an individual from a religious community, e.g., a monastery.</a:documentation>
                   <value>GuestText</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A (complete) work added later to a manuscript</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a complete work, provided with its own ID, added later to a manuscript. </a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -4056,71 +4056,71 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <choice>
                   <value>ApocryphaPseudoepigrapha</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works of unknown or doubtful authorship rejected from the set of the canonical scriptures, e.g., the book of Enoch, Jubilees, Herma, the Miracles of Mary, the Miracles of Jesus, Maṣḥafa ṭomār, the apocryphal Acts of the Apostles, etc.</a:documentation>
                   <value>Apocrypha</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>Pseudoepigrapha</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>NewTestament</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">biblical books belonging to the New Testament.</a:documentation>
                   <value>OldTestament</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">biblical books belonging to the Old Testament.</a:documentation>
                   <value>Bible</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works belonging to the biblical canon, subdivided into the Old and New Testament. </a:documentation>
                   <value>Biography</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing the description of the life events of an individual.</a:documentation>
                   <value>CanonLaw</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing regulations for the government of the Christian organizations, e.g., the Sinodos, the Fətḥa Nagaśt, the Śərʿata faws manfasāwi.</a:documentation>
                   <value>ChristianLiterature</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts of unspecified Christian subject.</a:documentation>
                   <value>Hagiography</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works and collections of works containing the Vita (Life) of a saint, included the cycles of miracles performed by the saint himself, as well as Acts and Passiones of martyrs. </a:documentation>
                   <value>HistoryAndHistoriography</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing royal chronicles and other historical material, e.g., Tārik za-Walda ʿAmid, Zenā ʾAyhud and various treatises of Ethiopian history.</a:documentation>
                   <value>Homily</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works and collections of works containing homiletic texts to be read on the occasion of specific commemorative days, e.g., the homiliaries in honour of Michael and Gabriel, Dərsāna sanbat krəstiyan, Dərsān māḥyāwi, Dərsāna madḫāne ʿalam, etc.</a:documentation>
                   <value>IslamicLiterature</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts of Islamic subject.</a:documentation>
                   <value>Koran</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">manuscripts containing the Koran.</a:documentation>
                   <value>LegalDocument</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">texts that formally record grants and rights to institutions and individuals, such as land charters, donation acts, land grants. </a:documentation>
                   <value>Liturgy</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing directives for the liturgy of the office services (except for the mass and rituals like weddings and funerals), e.g., Maṣḥafa nəfq, the Horologium, etc.</a:documentation>
                   <value>Chants</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing chants, hymns and antiphons to be sung for liturgical purposes, e.g., Dəggwā, Ṣoma dəggwā, Məʿərāf, Zəmmāre, Mawāśəʾət.</a:documentation>
                   <value>Lectionary</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing scriptural readings to be read on various religious occasions (fast, feasts, liturgical periods), e.g. Maṣḥafa gəṣṣəw, Maṣḥafa ʾaśləti, etc. </a:documentation>
                   <value>Missal</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>RitualsAndRites</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing directives for the celebration of religious offices such as weddings and funerals, e.g., Maṣḥafa taklil and Maṣḥafa gənzat.</a:documentation>
                   <value>Missal</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing liturgical instructions for the celebration of the mass, e.g. Maṣḥafa qəddāse.</a:documentation>
                   <value>Magic</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing magic texts, prayers and formulas to be recited or carried along for healing and as a protection from demons, diseases and natural accidents, e.g. Maftəḥe śərāy, etc.</a:documentation>
                   <value>Medicine</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing medical texts and recipes for healing.</a:documentation>
                   <value>Miscellanea</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts of various unspecified nature.</a:documentation>
                   <value>MonasticLiterature</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts to be read for the education and edification of the monastic community members, e.g., Mār Yəsḥāq, Filkəsyos, ʾAragāwi manfasāwi, etc.</a:documentation>
                   <value>NaturalSciences</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing observations and investigations into a number of natural phenomena.</a:documentation>
                   <value>Other</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works belonging to other literary genres.</a:documentation>
                   <value>Poetry</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing praises, ʿarke-hymns, salām-hymns, malkəʾ, songs and canticles, texts subdivided into stanzas, rhymed texts.</a:documentation>
                   <value>Prayers</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing prayers, supplications and invocations to God and other revered entities.</a:documentation>
                   <value>Religion</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>Theology</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing patristic texts dealing with theological subjects, e.g. Qerəllos, Hāymānota ʾAbaw, the Five Pillars of Mystery, etc.</a:documentation>
                   <value>Commentary</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">exegetical works containing the interpretation of biblical texts, e.g, the Tərgwāme and ʾAndəmtā corpus.</a:documentation>
                   <value>Chronography</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts for the calculation of the moveable feasts and for other calendrical computes, e.g., ʾAbušākər, Bāḥra ḥassāb.</a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -5711,19 +5711,19 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
                <value>mss</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>catalogue</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Descriptions in manuscript catalogues of the subject of the record</a:documentation>
                <value>editions</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Editions of the work</a:documentation>
                <value>text</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>otherLanguages</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>translation</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern translations of the work </a:documentation>
                <value>secondary</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Secondary bibliography on the subject of the record</a:documentation>
                <value>relations</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Relations between the subject of the record and other entities (persons, related works, manuscript filiation etc.)</a:documentation>
             </choice>
          </attribute>
          <empty/>
@@ -10950,15 +10950,15 @@ Sample values include: 1] editor; 2] mss; 3] literature; 4] foundation; 5] compo
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             <choice>
                <value>Codex</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">manuscript format consisting of quires bound together to the spine, in their turn made up of a variable number of leaves sewn together and protected by two hard boards.</a:documentation>
                <value>Scroll</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">manuscript format consisting of one continuous flow of writing material rolled up, generally around one or two wooden cylindrical supports.</a:documentation>
                <value>Leporello</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">manuscript format consisting of one leaf assembled in a multiple zig-zag folding, resembling an accordion, and generally enclosed between two hard boards.</a:documentation>
                <value>Leaf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">manuscript format consisting of one single unbound sheet.</a:documentation>
                <value>Other</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">other manuscript formats.</a:documentation>
             </choice>
          </attribute>
          <empty/>
@@ -12098,23 +12098,25 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <choice>
                   <value>scribe</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the copyist of the manuscript</a:documentation>
                   <value>donor</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the person who donated the manuscript</a:documentation>
                   <value>author</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the author of a work</a:documentation>
                   <value>translator</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the translator of a work</a:documentation>
                   <value>binder</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">manuscript binder</a:documentation>
                   <value>parchmentMaker</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">parchment maker</a:documentation>
                   <value>owner</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the owner of a ms or an item</a:documentation>
                   <value>patron</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the commissioner of a ms or an item</a:documentation>
                   <value>tabot</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the saint to whom the tabot is dedicated</a:documentation>
+                  <value>sponsor</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the person paying for a ms (possibly not the same as donor/commissioner)</a:documentation>
                   <value>other</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                </choice>
@@ -12499,8 +12501,6 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>Gurage</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>Church</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>notSpecified</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                </choice>
@@ -12545,8 +12545,6 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                      <value>Oromo</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>Gurage</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                     <value>Church</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>notSpecified</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -12593,8 +12591,6 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                      <value>Oromo</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>Gurage</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                     <value>Church</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>notSpecified</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -12991,23 +12987,23 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             <choice>
                <value>ruler</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ruler of a country, region or similar</a:documentation>
                <value>military</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Military occupation</a:documentation>
                <value>academic</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Occupation within an academic institution or independently pursuing academic interests</a:documentation>
                <value>political</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Political occupation (other than ruler)</a:documentation>
                <value>literary</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Literary activities (i.e. author, translator)</a:documentation>
                <value>ecclesiastic</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Occupation within a religious institution</a:documentation>
                <value>medical</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Medical occupation</a:documentation>
                <value>art</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Artistic occupation or interests</a:documentation>
                <value>other</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Other occupation</a:documentation>
             </choice>
          </attribute>
          <optional>
@@ -13176,19 +13172,15 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
       <element name="personGrp">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(personal group) describes a group of individuals treated as a single person for analytic purposes. [15.2.2. The Participant Description]</a:documentation>
          <choice>
-      
             <oneOrMore>
                <ref name="tei_model.pLike"/>
             </oneOrMore>
-      
-      
             <zeroOrMore>
                <choice>
                   <ref name="tei_model.personPart"/>
                   <ref name="tei_model.global"/>
                </choice>
             </zeroOrMore>
-      
          </choice>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.sortable.attributes"/>
@@ -13403,8 +13395,6 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>river</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                     <value>cape</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>gorge</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>cave</value>
@@ -13426,8 +13416,6 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                      <value>farm</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>desert</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                     <value>cave</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>gulf</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -13574,8 +13562,6 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>river</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <value>cape</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>gorge</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>cave</value>
@@ -13597,8 +13583,6 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                         <value>farm</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>desert</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <value>cave</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>gulf</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -13746,8 +13730,6 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>river</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <value>cape</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>gorge</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>cave</value>
@@ -13769,8 +13751,6 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                         <value>farm</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>desert</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <value>cave</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>gulf</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -13918,8 +13898,6 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>river</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <value>cape</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>gorge</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>cave</value>
@@ -13941,8 +13919,6 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                         <value>farm</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>desert</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <value>cave</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>gulf</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -14090,8 +14066,6 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>river</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <value>cape</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>gorge</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>cave</value>
@@ -14113,8 +14087,6 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                         <value>farm</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>desert</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <value>cave</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>gulf</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -14262,8 +14234,6 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>river</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <value>cape</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>gorge</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>cave</value>
@@ -14285,8 +14255,6 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                         <value>farm</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>desert</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <value>cave</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>gulf</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -14369,385 +14337,389 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             <choice>
                <value>dcterms:hasPart</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/dc/terms/hasPart</a:documentation>
                <value>gn:nearBy</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://www.geonames.org/ontology#nearby</a:documentation>
                <value>gn:locatedIn</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://www.geonames.org/ontology#locatedIn</a:documentation>
                <value>dcterms:isPartOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/dc/terms/isPartOf</a:documentation>
                <value>lawd:hasAttestation</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://lawd.info/ontology/hasAttestation</a:documentation>
                <value>rel:enemyOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/vocab/relationship/enemyOf</a:documentation>
+               <value>agrelon:isFounderOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://d-nb.info/standards/elementset/agrelon.owl#isFounderOf</a:documentation>
+               <value>agrelon:hasFounder</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://d-nb.info/standards/elementset/agrelon.owl#hasFounder</a:documentation>
                <value>bm:wifeOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Is the wife of ...</a:documentation>
                <value>bm:husbandOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Is the husband of..</a:documentation>
                <value>bm:motherInLawOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is the mother of the legally conjugated partner</a:documentation>
                <value>bm:fatherInLawOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is the father of the legally conjugated partner</a:documentation>
                <value>bm:sonInLawOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is the husband of the daugther</a:documentation>
                <value>bm:brotherInLawOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is the brother of the legally conjugated partner</a:documentation>
                <value>bm:sisterInLawOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is the brother of the legally conjugated partner</a:documentation>
                <value>bm:daugtherInLawOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is the wife of the daugther</a:documentation>
                <value>bm:hasTabot</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This person has a Tabot at the location...</a:documentation>
                <value>bm:ordainedBy</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ordained priest, bishop or monk. Same as Consacrated.</a:documentation>
                <value>bm:hasOrdained</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">has ordained to a religious ministery ...</a:documentation>
                <value>bm:hasBaptized</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">has baptized ...</a:documentation>
                <value>bm:baptizedBy</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">has been baptized by ...</a:documentation>
                <value>bm:isAuthorOfEthiopicTranslation</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The subject of the relation is author of a translation of a work in another language and there is no digital resource enabling us to document the authorship of this work and the fact that the work as such is a translation of another work.</a:documentation>
                <value>syriaca:different-from</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://syriaca.org/documentation/relations.html#different-from</a:documentation>
                <value>syriaca:has-literary-connection-to-place</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://syriaca.org/documentation/relations.html#has-literary-connection-to-place</a:documentation>
                <value>syriaca:has-relation-to-place</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://syriaca.org/documentation/relations.html#has-relation-to-place</a:documentation>
                <value>syriaca:possibly-identical</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://syriaca.org/documentation/relations.html#possibly-identical</a:documentation>
                <value>syriaca:share-a-name</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://syriaca.org/documentation/relations.html#share-a-name</a:documentation>
                <value>syriaca:share-a-title</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://syriaca.org/documentation/relations.html#share-a-title</a:documentation>
                <value>syriaca:born-at</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://syriaca.org/documentation/relations.html#born-at</a:documentation>
                <value>snap:DaughterOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#</a:documentation>
                <value>snap:ChildOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#ChildOf</a:documentation>
                <value>snap:BrotherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#BrotherOf</a:documentation>
                <value>snap:SeriousIntimateRelationshipWith</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#SeriousIntimateRelationshipWith</a:documentation>
                <value>snap:SiblingOfParentOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#SiblingOfParentOf</a:documentation>
                <value>snap:SeriousIntimateRelationshipWith</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#SeriousIntimateRelationshipWith</a:documentation>
                <value>snap:AllianceWith</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#AllianceWith</a:documentation>
                <value>snap:CasualIntimateRelationshipWith</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#CasualIntimateRelationshipWith</a:documentation>
                <value>snap:ChildOfSiblingOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#ChildOfSiblingOf</a:documentation>
                <value>snap:EmnityFor</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#EmnityFor</a:documentation>
                <value>snap:FriendshipFor</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FriendshipFor</a:documentation>
                <value>snap:Group</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#Group</a:documentation>
                <value>snap:HereditaryFamilyOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#HereditaryFamilyOf</a:documentation>
                <value>snap:IntimateRelationshipWith</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#IntimateRelationshipWith</a:documentation>
                <value>snap:KinOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#KinOf</a:documentation>
                <value>snap:AncestorOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#AncestorOf</a:documentation>
                <value>snap:AuntOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#AuntOf</a:documentation>
                <value>snap:CousinOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#CousinOf</a:documentation>
                <value>snap:ClaimedFamilyRelationship</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#ClaimedFamilyRelationship</a:documentation>
                <value>snap:ExtendedFamilyOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#ExtendedFamilyOf</a:documentation>
                <value>snap:ExtendedHouseholdOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#ExtendedHouseholdOf</a:documentation>
                <value>snap:FamilyOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FamilyOf</a:documentation>
                <value>snap:FatherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FatherOf</a:documentation>
                <value>snap:FosterFamilyRelationship</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FosterFamilyRelationship</a:documentation>
                <value>snap:FreedmanOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FreedmanOf</a:documentation>
                <value>snap:FreedSlaveOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FreedSlaveOf</a:documentation>
                <value>snap:FreedwomanOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FreedwomanOf</a:documentation>
                <value>snap:FriendshipFor</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FriendshipFor</a:documentation>
                <value>snap:GrandchildOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GrandchildOf</a:documentation>
                <value>snap:GranddaughterOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GranddaughterOf</a:documentation>
                <value>snap:GrandfatherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GrandfatherOf</a:documentation>
                <value>snap:GrandmotherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GrandmotherOf</a:documentation>
                <value>snap:GrandparentOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GrandparentOf</a:documentation>
                <value>snap:GrandsonOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GrandsonOf</a:documentation>
                <value>snap:GreatGrandfatherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GreatGrandfatherOf</a:documentation>
                <value>snap:GreatGrandmotherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GreatGrandmotherOf</a:documentation>
                <value>snap:GreatGrandparentOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GreatGrandparentOf</a:documentation>
                <value>snap:HalfFamilyRelationship</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#HalfFamilyRelationship</a:documentation>
                <value>snap:HereditaryFamilyOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#HereditaryFamilyOf</a:documentation>
                <value>snap:HouseholdOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#HouseholdOf</a:documentation>
                <value>snap:HouseSlaveOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#HouseSlaveOf</a:documentation>
                <value>snap:InLawFamilyRelationship</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#InLawFamilyRelationship</a:documentation>
                <value>snap:IntimateRelationshipWith</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#IntimateRelationshipWith</a:documentation>
                <value>snap:KinOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#KinOf</a:documentation>
                <value>snap:LegallyRecognisedRelationshipWithExtendedFamilyOf</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>snap:ExtendedHouseholdOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#ExtendedHouseholdOf</a:documentation>
                <value>snap:FamilyOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FamilyOf</a:documentation>
                <value>snap:FatherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FatherOf</a:documentation>
                <value>snap:FosterFamilyRelationship</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FosterFamilyRelationship</a:documentation>
                <value>snap:FreedmanOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FreedmanOf</a:documentation>
                <value>snap:FreedSlaveOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FreedSlaveOf</a:documentation>
                <value>snap:FreedwomanOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FreedwomanOf</a:documentation>
                <value>snap:FriendshipFor</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FriendshipFor</a:documentation>
                <value>snap:GrandchildOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GrandchildOf</a:documentation>
                <value>snap:GranddaughterOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GranddaughterOf</a:documentation>
                <value>snap:GrandfatherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GrandfatherOf</a:documentation>
                <value>snap:GrandmotherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GrandmotherOf</a:documentation>
                <value>snap:GrandparentOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GrandparentOf</a:documentation>
                <value>snap:GrandsonOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GrandsonOf</a:documentation>
                <value>snap:GreatGrandfatherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GreatGrandfatherOf</a:documentation>
                <value>snap:GreatGrandmotherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GreatGrandmotherOf</a:documentation>
                <value>snap:GreatGrandparentOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GreatGrandparentOf</a:documentation>
                <value>snap:HalfFamilyRelationship</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#HalfFamilyRelationship</a:documentation>
                <value>snap:HereditaryFamilyOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#HereditaryFamilyOf</a:documentation>
                <value>snap:HouseholdOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#HouseholdOf</a:documentation>
                <value>snap:HouseSlaveOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#HouseSlaveOf</a:documentation>
                <value>snap:InLawFamilyRelationship</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#InLawFamilyRelationship</a:documentation>
                <value>snap:IntimateRelationshipWith</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#IntimateRelationshipWith</a:documentation>
                <value>snap:KinOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#KinOf</a:documentation>
                <value>snap:LegallyRecognisedRelationshipWith</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#LegallyRecognisedRelationshipWith</a:documentation>
                <value>snap:MaternalFamilyRelationship</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#MaternalFamilyRelationship</a:documentation>
                <value>snap:ProfessionalRelationshipMaternalFamilyRelationship</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>snap:MotherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#MotherOf</a:documentation>
                <value>snap:NephewOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#NephewOf</a:documentation>
                <value>snap:NieceOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#NieceOf</a:documentation>
                <value>snap:ParentOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#ParentOf</a:documentation>
                <value>snap:PaternalFamilyRelationship</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#PaternalFamilyRelationship</a:documentation>
                <value>snap:ProfessionalRelationship</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#ProfessionalRelationship</a:documentation>
                <value>snap:SeriousIntimateRelationshipWith</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#SeriousIntimateRelationshipWith</a:documentation>
                <value>snap:SiblingOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#SiblingOf</a:documentation>
                <value>snap:SiblingOfParentOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#SiblingOfParentOf</a:documentation>
                <value>snap:SisterOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#SisterOf</a:documentation>
                <value>snap:SlaveOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#SlaveOf</a:documentation>
                <value>snap:SonOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#SonOf</a:documentation>
                <value>snap:StepFamilyRelationship</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#StepFamilyRelationship</a:documentation>
                <value>snap:UncleOfSeriousIntimateRelationshipWith</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#UncleOfSeriousIntimateRelationshipWith</a:documentation>
                <value>snap:SiblingOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#SiblingOf</a:documentation>
                <value>snap:SiblingOfParentOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#SiblingOfParentOf</a:documentation>
                <value>snap:SlaveOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#SlaveOf</a:documentation>
                <value>snap:SonOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#SonOf</a:documentation>
                <value>snap:StepFamilyRelationship</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#StepFamilyRelationship</a:documentation>
                <value>snap:UncleOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#UncleOf</a:documentation>
                <value>saws:AbstractManuscriptText</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#AbstractManuscriptText</a:documentation>
                <value>saws:P129i_is_subject_of</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#P129i_is_subject_of</a:documentation>
                <value>saws:F15_Complex_Work</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#F15_Complex_Work</a:documentation>
                <value>saws:F16_Container_Work</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#F16_Container_Work</a:documentation>
                <value>saws:F17_Aggregation_Work</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#F17_Aggregation_Work</a:documentation>
                <value>saws:CLP57_should_have_number_of_parts</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#CLP57_should_have_number_of_parts</a:documentation>
                <value>saws:P57_has_number_of_parts</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#P57_has_number_of_parts</a:documentation>
                <value>saws:CLP45_should_consist_of</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#CLP45_should_consist_of</a:documentation>
                <value>saws:CLP45i_should_be_incorporated_in</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#CLP45i_should_be_incorporated_in</a:documentation>
                <value>saws:CLP46_should_be_composed_of</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#CLP46_should_be_composed_of</a:documentation>
                <value>saws:CLP46i_may_form_part_of</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#CLP46i_may_form_part_of</a:documentation>
                <value>saws:CLR6_should_carry</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#CLR6_should_carry</a:documentation>
                <value>saws:CLR6i_should_be_carried_by</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#CLR6i_should_be_carried_by</a:documentation>
                <value>saws:commentMadeBy</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#commentMadeBy</a:documentation>
                <value>saws:contains</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#contains</a:documentation>
                <value>saws:containsTextInLanguage</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#containsTextInLanguage</a:documentation>
                <value>saws:decorationAddedBy</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#decorationAddedBy</a:documentation>
                <value>saws:fallsWithin</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#fallsWithin</a:documentation>
                <value>saws:follows</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#follows</a:documentation>
                <value>saws:formsPartOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#formsPartOf</a:documentation>
                <value>saws:hasAncestor</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasAncestor</a:documentation>
                <value>saws:hasChild</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasChild</a:documentation>
                <value>saws:hasComment</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasComment</a:documentation>
                <value>saws:hasComponent</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasComponent</a:documentation>
                <value>saws:hasDescendant</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasDescendant</a:documentation>
                <value>saws:hasMember</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasMember</a:documentation>
                <value>saws:hasOwned</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasOwned</a:documentation>
                <value>saws:hasParent</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasParent</a:documentation>
                <value>saws:hasPart</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasPart</a:documentation>
                <value>saws:hasUsed</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasUsed</a:documentation>
                <value>saws:hasWritten</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasWritten</a:documentation>
                <value>saws:isAncestorOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isAncestorOf</a:documentation>
                <value>saws:isAttributedAuthorOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isAttributedAuthorOf</a:documentation>
                <value>saws:isAttributedToAuthor</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isAttributedToAuthor</a:documentation>
                <value>saws:isChildOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isChildOf</a:documentation>
                <value>saws:isCloseRenderingOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isCloseRenderingOf</a:documentation>
                <value>saws:isCloseTranslationOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isCloseTranslationOf</a:documentation>
                <value>saws:isCommentOn</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isCommentOn</a:documentation>
                <value>saws:isComponentOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isComponentOf</a:documentation>
                <value>saws:isDescendantOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isDescendantOf</a:documentation>
                <value>saws:isDifferentTo</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isDifferentTo</a:documentation>
                <value>saws:isDirectCopyOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isDirectCopyOf</a:documentation>
                <value>saws:isDirectTranslationOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isDirectTranslationOf</a:documentation>
                <value>saws:isInSameFamilyAs</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isInSameFamilyAs</a:documentation>
                <value>saws:isLongerTranslationOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isLongerTranslationOf</a:documentation>
                <value>saws:isLongerVersionOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isLongerVersionOf</a:documentation>
                <value>saws:isLooseRenderingOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isLooseRenderingOf</a:documentation>
                <value>saws:isLooseTranslationOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isLooseTranslationOf</a:documentation>
                <value>saws:isMemberOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isMemberOf</a:documentation>
                <value>saws:isNotPresentIn</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isNotPresentIn</a:documentation>
                <value>saws:isOlderThan</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isOlderThan</a:documentation>
                <value>saws:isParentOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isParentOf</a:documentation>
                <value>saws:isReferencedBy</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isReferencedBy</a:documentation>
                <value>saws:isRelatedTo</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isRelatedTo</a:documentation>
                <value>saws:isSequentiallySameAs</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isSequentiallySameAs</a:documentation>
                <value>saws:isSequentiallySimilarTo</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isSequentiallySimilarTo</a:documentation>
                <value>saws:isShorterTranslationOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isShorterTranslationOf</a:documentation>
                <value>saws:isShorterVersionOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isShorterVersionOf</a:documentation>
                <value>saws:isSiblingOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isSiblingOf</a:documentation>
                <value>saws:isSourceFor</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isSourceFor</a:documentation>
                <value>saws:isSubSequenceOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isSubSequenceOf</a:documentation>
                <value>saws:isTransliterationOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isTransliterationOf</a:documentation>
                <value>saws:isTwinOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isTwinOf</a:documentation>
                <value>saws:isUnrelatedTo</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isUnrelatedTo</a:documentation>
                <value>saws:isVariantOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isVariantOf</a:documentation>
                <value>saws:isVariantTranslationOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isVariantTranslationOf</a:documentation>
                <value>saws:isVerbatimOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isVerbatimOf</a:documentation>
                <value>saws:isVerbatimTranslationOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isVerbatimTranslationOf</a:documentation>
                <value>saws:isVersionInAnotherLanguageOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isVersionInAnotherLanguageOf</a:documentation>
                <value>saws:isVersionOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isVersionOf</a:documentation>
                <value>saws:isYoungerThan</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isYoungerThan</a:documentation>
             </choice>
          </attribute>
          <choice>

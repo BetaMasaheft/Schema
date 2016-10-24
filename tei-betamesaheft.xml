@@ -188,42 +188,40 @@
                         <attDef ident="key" mode="replace" usage="rec">
                             <valList type="closed">
                                 <!--                          list coming from myCore-->
-                                <valItem ident="ApocryphaPseudoepigrapha"/>
+                                <valItem ident="ApocryphaPseudoepigrapha"><desc>works of unknown or doubtful authorship rejected from the set of the canonical scriptures, e.g., the book of Enoch, Jubilees, Herma, the Miracles of Mary, the Miracles of Jesus, Maṣḥafa ṭomār, the apocryphal Acts of the Apostles, etc.</desc></valItem>
                                 <!--mycore-->
-                                <valItem ident="Apocrypha"/>
-                                <valItem ident="Pseudoepigrapha"/>
-                                <valItem ident="NewTestament"/>
-                                <valItem ident="OldTestament"/>
-                                <valItem ident="Bible"/>
-                                <valItem ident="Biography"/>
-                                <valItem ident="CanonLaw"/>
-                                <valItem ident="ChristianLiterature"/>
-                                <valItem ident="Hagiography"/>
-                                <valItem ident="HistoryAndHistoriography"/>
-                                <valItem ident="Homily"/>
-                                <valItem ident="IslamicLiterature"/>
-                                <valItem ident="Koran"/>
-                                <valItem ident="LegalDocument"/>
-                                <valItem ident="Liturgy"/>
-                                <valItem ident="Chants"/>
-                                <valItem ident="Lectionary"/>
-                                <valItem ident="Missal"/>
-                                <valItem ident="RitualsAndRites"/>
-                                <valItem ident="Missal"/>
-                                <valItem ident="Magic"/>
-                                <valItem ident="Medicine"/>
-                                <valItem ident="Miscellanea"/>
-                                <valItem ident="MonasticLiterature"/>
-                                <valItem ident="NaturalSciences"/>
-                                <valItem ident="Other"/>
-                                <valItem ident="Poetry"/>
-                                <valItem ident="Prayers"/>
-                                <valItem ident="Religion"/>
-                                <valItem ident="Theology"/>
-
-                                <valItem ident="Commentary"/>
-
-                                <valItem ident="Chronography"/>
+                                <valItem ident="Apocrypha"><desc></desc></valItem>
+                                <valItem ident="Pseudoepigrapha"><desc></desc></valItem>
+                                <valItem ident="NewTestament"><desc>biblical books belonging to the New Testament.</desc></valItem>
+                                <valItem ident="OldTestament"><desc>biblical books belonging to the Old Testament.</desc></valItem>
+                                <valItem ident="Bible"><desc>works belonging to the biblical canon, subdivided into the Old and New Testament. </desc></valItem>
+                                <valItem ident="Biography"><desc>works containing the description of the life events of an individual.</desc></valItem>
+                                <valItem ident="CanonLaw"><desc>works containing regulations for the government of the Christian organizations, e.g., the Sinodos, the Fətḥa Nagaśt, the Śərʿata faws manfasāwi.</desc></valItem>
+                                <valItem ident="ChristianLiterature"><desc>works containing texts of unspecified Christian subject.</desc></valItem>
+                                <valItem ident="Hagiography"><desc>works and collections of works containing the Vita (Life) of a saint, included the cycles of miracles performed by the saint himself, as well as Acts and Passiones of martyrs. </desc></valItem>
+                                <valItem ident="HistoryAndHistoriography"><desc>works containing royal chronicles and other historical material, e.g., Tārik za-Walda ʿAmid, Zenā ʾAyhud and various treatises of Ethiopian history.</desc></valItem>
+                                <valItem ident="Homily"><desc>works and collections of works containing homiletic texts to be read on the occasion of specific commemorative days, e.g., the homiliaries in honour of Michael and Gabriel, Dərsāna sanbat krəstiyan, Dərsān māḥyāwi, Dərsāna madḫāne ʿalam, etc.</desc></valItem>
+                                <valItem ident="IslamicLiterature"><desc>works containing texts of Islamic subject.</desc></valItem>
+                                <valItem ident="Koran"><desc>manuscripts containing the Koran.</desc></valItem>
+                                <valItem ident="LegalDocument"><desc>texts that formally record grants and rights to institutions and individuals, such as land charters, donation acts, land grants. </desc></valItem>
+                                <valItem ident="Liturgy"><desc>works containing directives for the liturgy of the office services (except for the mass and rituals like weddings and funerals), e.g., Maṣḥafa nəfq, the Horologium, etc.</desc></valItem>
+                                <valItem ident="Chants"><desc>works containing chants, hymns and antiphons to be sung for liturgical purposes, e.g., Dəggwā, Ṣoma dəggwā, Məʿərāf, Zəmmāre, Mawāśəʾət.</desc></valItem>
+                                <valItem ident="Lectionary"><desc>works containing scriptural readings to be read on various religious occasions (fast, feasts, liturgical periods), e.g. Maṣḥafa gəṣṣəw, Maṣḥafa ʾaśləti, etc. </desc></valItem>
+                                <valItem ident="Missal"><desc></desc></valItem>
+                                <valItem ident="RitualsAndRites"><desc>works containing directives for the celebration of religious offices such as weddings and funerals, e.g., Maṣḥafa taklil and Maṣḥafa gənzat.</desc></valItem>
+                                <valItem ident="Missal"><desc>works containing liturgical instructions for the celebration of the mass, e.g. Maṣḥafa qəddāse.</desc></valItem>
+                                <valItem ident="Magic"><desc>works containing magic texts, prayers and formulas to be recited or carried along for healing and as a protection from demons, diseases and natural accidents, e.g. Maftəḥe śərāy, etc.</desc></valItem>
+                                <valItem ident="Medicine"><desc>works containing medical texts and recipes for healing.</desc></valItem>
+                                <valItem ident="Miscellanea"><desc>works containing texts of various unspecified nature.</desc></valItem>
+                                <valItem ident="MonasticLiterature"><desc>works containing texts to be read for the education and edification of the monastic community members, e.g., Mār Yəsḥāq, Filkəsyos, ʾAragāwi manfasāwi, etc.</desc></valItem>
+                                <valItem ident="NaturalSciences"><desc>works containing observations and investigations into a number of natural phenomena.</desc></valItem>
+                                <valItem ident="Other"><desc>works belonging to other literary genres.</desc></valItem>
+                                <valItem ident="Poetry"><desc>works containing praises, ʿarke-hymns, salām-hymns, malkəʾ, songs and canticles, texts subdivided into stanzas, rhymed texts.</desc></valItem>
+                                <valItem ident="Prayers"><desc>works containing prayers, supplications and invocations to God and other revered entities.</desc></valItem>
+                                <valItem ident="Religion"><desc></desc></valItem>
+                                <valItem ident="Theology"><desc>works containing patristic texts dealing with theological subjects, e.g. Qerəllos, Hāymānota ʾAbaw, the Five Pillars of Mystery, etc.</desc></valItem>
+                                <valItem ident="Commentary"><desc>exegetical works containing the interpretation of biblical texts, e.g, the Tərgwāme and ʾAndəmtā corpus.</desc></valItem>
+                                <valItem ident="Chronography"><desc>works containing texts for the calculation of the moveable feasts and for other calendrical computes, e.g., ʾAbušākər, Bāḥra ḥassāb.</desc></valItem>
                             </valList>
                         </attDef>
 
@@ -394,8 +392,8 @@
                         <attDef ident="ref" mode="change" usage="rec"/>
                         <attDef ident="type" mode="replace" usage="opt">
                             <valList type="open">
-                                <valItem ident="complete"/>
-                                <valItem ident="incomplete"/>
+                                <valItem ident="complete"><desc>the work is contained completely in the manuscript</desc></valItem>
+                                <valItem ident="incomplete"><desc>the work is contained incompetely in the manuscript, i.e. even only a small part is missing </desc></valItem>
                                 <valItem ident="normalized"/>
                                 <valItem ident="supplied">
                                     <desc>syriaca.org: an existing print catalogue provides a
@@ -415,14 +413,14 @@
                     <attList>
                         <attDef ident="type" mode="replace" usage="req">
                             <valList type="closed">
-                                <valItem ident="mss"/>
-                                <valItem ident="catalogue"/>
-                                <valItem ident="editions"/>
-                                <valItem ident="text"/>
-                                <valItem ident="otherLanguages"/>
-                                <valItem ident="translation"/>
-                                <valItem ident="secondary"/>
-                                <valItem ident="relations"/>
+                                <valItem ident="mss"><desc></desc></valItem>
+                                <valItem ident="catalogue"><desc>Descriptions in manuscript catalogues of the subject of the record</desc></valItem>
+                                <valItem ident="editions"><desc> Editions of the work</desc></valItem>
+                                <valItem ident="text"><desc></desc></valItem>
+                                <valItem ident="otherLanguages"><desc></desc></valItem>
+                                <valItem ident="translation"><desc>Modern translations of the work </desc></valItem>
+                                <valItem ident="secondary"><desc>Secondary bibliography on the subject of the record</desc></valItem>
+                                <valItem ident="relations"><desc>Relations between the subject of the record and other entities (persons, related works, manuscript filiation etc.)</desc></valItem>
                             </valList>
                         </attDef>
                     </attList>
@@ -433,15 +431,15 @@
                     <attList>
                         <attDef ident="type" mode="replace" usage="req">
                             <valList type="closed">
-                                <valItem ident="ruler"/>
-                                <valItem ident="military"/>
-                                <valItem ident="academic"/>
-                                <valItem ident="political"/>
-                                <valItem ident="literary"/>
-                                <valItem ident="ecclesiastic"/>
-                                <valItem ident="medical"/>
-                                <valItem ident="art"/>
-                                <valItem ident="other"/>
+                                <valItem ident="ruler"><desc>Ruler of a country, region or similar</desc></valItem>
+                                <valItem ident="military"><desc>Military occupation</desc></valItem>
+                                <valItem ident="academic"><desc>Occupation within an academic institution or independently pursuing academic interests</desc></valItem>
+                                <valItem ident="political"><desc>Political occupation (other than ruler)</desc></valItem>
+                                <valItem ident="literary"><desc>Literary activities (i.e. author, translator)</desc></valItem>
+                                <valItem ident="ecclesiastic"><desc>Occupation within a religious institution</desc></valItem>
+                                <valItem ident="medical"><desc>Medical occupation</desc></valItem>
+                                <valItem ident="art"><desc>Artistic occupation or interests</desc></valItem>
+                                <valItem ident="other"><desc>Other occupation</desc></valItem>
                             </valList>
                         </attDef>
                     </attList>
@@ -475,7 +473,6 @@
                                 <valItem ident="Aksumite"/>
                                 <valItem ident="Oromo"/>
                                 <valItem ident="Gurage"/>
-                                <valItem ident="Church"/>
                                 <valItem ident="notSpecified"/>
                             </valList>
                         </attDef>
@@ -640,115 +637,105 @@
                     </attList>
                 </elementSpec>
 
-                <!--          desc typologies tailband. should be ONLY for binding desc-->
+                <!--          desc typologies -->
                 <elementSpec ident="desc" mode="change" module="msdescription">
                     <attList>
                         <attDef ident="type" mode="replace" usage="opt">
                             <valList type="closed">
                                 <valItem ident="foundation">
-                                    <desc>for use in place or institution record</desc>
+                                    <desc> to be used for place and institutions</desc>
                                 </valItem>
                                 <valItem ident="Headband">
-                                    <desc>for use in binding description</desc>
+                                    <desc>to be used in binding description.</desc>
                                 </valItem>
                                 <valItem ident="Tailband">
                                     <desc>for use in binding description</desc>
                                 </valItem>
                                 <valItem ident="DonationNote">
-                                    <desc>1. the book belongs to an individual, 2. the book belongs
-                                        to an institution</desc>
+                                    <desc>note stating that the manuscript has been donated to an individual or to an institution.</desc>
                                 </valItem>
                                 <valItem ident="OwnershipNote">
-                                    <desc>1. the book belongs to an individual, 2. the book belongs
-                                        to an institution</desc>
+                                    <desc>note stating the book belongs to an individual or to an institution.</desc>
                                 </valItem>
-                                <valItem ident="PurchaseNote"/>
-                                <valItem ident="AcquisitionNote"/>
-                                <valItem ident="ReceiptNote"/>
+                                <valItem ident="PurchaseNote"><desc>note stating that the book has been purchased for money by an individual or an institution.</desc></valItem>
+                                <valItem ident="AcquisitionNote"><desc>note stating that the manuscript has been generically acquired by an individual or an institution. Similar to “PurchaseNote”.</desc></valItem>
+                                <valItem ident="ReceiptNote"><desc>note written down as a receipt of a transaction of goods.</desc></valItem>
                                 <valItem ident="Admonition">
-                                    <desc>to AM</desc>
+                                    <desc> note admonishing individuals to a righteous behavior. See also “Exhortation”.</desc>
                                 </valItem>
-                                <valItem ident="LandGrant"/>
-                                <valItem ident="FoundationCharter"/>
-                                <valItem ident="Genealogy"/>
-                                <valItem ident="ScribalSignature"/>
-                                <valItem ident="Supplication"/>
-                                <valItem ident="Subscription"/>
-                                <valItem ident="Doxology"/>
+                                <valItem ident="LandGrant"><desc>note stating the concession of lands by an authority in favor of individuals or typically of institutions.</desc></valItem>
+                                <valItem ident="FoundationCharter"><desc>act of foundation of an institution.</desc></valItem>
+                                <valItem ident="Genealogy"><desc>note containing the spiritual genealogy of the leader of the community or an institution, or the family members of an individual.</desc></valItem>
+                                <valItem ident="ScribalSignature"><desc>scribe’s signature.</desc></valItem>
+                                <valItem ident="Supplication"><desc>entreat to God for help, written down in a later hand.</desc></valItem>
+                                <valItem ident="Subscription"><desc>note added at the end of the main text concerning its completion.</desc></valItem>
+                                <valItem ident="Doxology"><desc>hymn or praise to God or other entities.</desc></valItem>
                                 <valItem ident="Exhortation">
-                                    <desc>to the brethren/ to commemorate __ / to celebrate __ / to
-                                        learn the religion __ etc./ on the importance of
-                                        commemorating __/ on what is useful for the soul),
-                                        Invocation against __/ against those who __ (not very much
-                                        different from condemnation, s. below</desc>
+                                    <desc>note addressed to the brethren in order to commemorate a saint, to celebrate a given feast or for educational purposes.</desc>
                                 </valItem>
-                                <valItem ident="Invocation"/>
-                                <valItem ident="Inventory"/>
-                                <valItem ident="TransactionNote"/>
+                                <valItem ident="Invocation"><desc>invocation against those who stole or erased the book or against other individuals. Not very different from “Condemnation”.</desc></valItem>
+                                <valItem ident="Inventory"><desc>list of books or items held by the individual or the institution.</desc></valItem>
+                                <valItem ident="TransactionNote"><desc> note stating a transaction of goods between individuals or institutions.</desc></valItem>
                                 <valItem ident="ScribalNoteCommencing">
-                                    <desc>(Scribe’s) note on commencing the work</desc>
+                                    <desc>scribe’s note on commencing the work</desc>
                                 </valItem>
                                 <valItem ident="ScribalNoteOrdering">
-                                    <desc>Note on ordering of the copying</desc>
+                                    <desc> scribe’s note on ordering of the copying</desc>
                                 </valItem>
                                 <valItem ident="ScribalNoteCommissioning">
-                                    <desc>Note on commissioning of the writing</desc>
+                                    <desc>scribe’s note on commissioning of the writing</desc>
                                 </valItem>
                                 <valItem ident="ScribalNoteCompleting">
-                                    <desc> (Scribe’s) note on completing the writing </desc>
+                                    <desc>scribe’s note on completing the writing</desc>
                                 </valItem>
-                                <valItem ident="ScribalNoteAssigningLang">
-                                    <desc> (Scribe’s) note on assigning of land </desc>
+                                <valItem ident="ScribalNoteAssigningLand">
+                                    <desc> scribe’s note on assigning of land. </desc>
                                 </valItem>
                                 <valItem ident="ScribalNoteBequeathing">
-                                    <desc> (Scribe’s) note on bequeathing </desc>
+                                    <desc>scribe’s note on bequeathing.</desc>
                                 </valItem>
-                                <valItem ident="RecordReconciliation"/>
-                                <valItem ident="RecordLitigation"/>
-                                <valItem ident="RecordTransaction"/>
-                                <valItem ident="RecordDistribution"/>
-                                <valItem ident="RecordGuarantors"/>
+                                <valItem ident="RecordReconciliation"><desc>documentary record concerning a reconciliation.</desc></valItem>
+                                <valItem ident="RecordLitigation"><desc>documentary record concerning a litigation.</desc></valItem>
+                                <valItem ident="RecordTransaction"><desc>documentary record concerning a transaction of goods.</desc></valItem>
+                                <valItem ident="RecordDistribution"><desc>documentary record concerning the distribution of goods or lands.</desc></valItem>
+                                <valItem ident="RecordGuarantors"><desc>documentary record concerning the guarantors of a transaction or a loan.</desc></valItem>
                                 <valItem ident="Record">
-                                    <desc>“Record” can be used for a note of a documentary, official
-                                        character</desc>
+                                    <desc>generic note of a documentary, official character.</desc>
                                 </valItem>
                                 <valItem ident="ScribalSupplication">
-                                    <desc>(Scribe’s) entreat to God for help during ...</desc>
+                                    <desc>scribe’s entreat to God.</desc>
                                 </valItem>
-                                <valItem ident="Unclear"/>
+                                <valItem ident="Unclear"><desc>note whose content is hardly understandable. </desc></valItem>
                                 <valItem ident="GuarantorsList">
-                                    <desc> List of guarantors, Record concerning guarantors</desc>
+                                    <desc>  list of the guarantors of transaction or a loan.</desc>
                                 </valItem>
                                 <valItem ident="CommemorativeNote">
-                                    <desc>Commemorative notice on __ (mainly for the
-                                        Synaxarion)</desc>
+                                    <desc>commemorative notice on a saint. Mainly taken from the Synaxarion.</desc>
                                 </valItem>
                                 <valItem ident="Condemnation">
-                                    <desc>Condemnation of those who __ (e.g., “who stole the
-                                        book”)</desc>
+                                    <desc>note condemning those who stole the book or erased it.</desc>
                                 </valItem>
                                 <valItem ident="ProtectivePrayer">
-                                    <desc>(Protective) prayer</desc>
+                                    <desc>prayer to be read or carried along for protective purposes.</desc>
                                 </valItem>
-                                <valItem ident="Poem"/>
-                                <valItem ident="PoemQǝne"/>
-                                <valItem ident="PoemSalam"/>
-                                <valItem ident="PoemArke"/>
+                                <valItem ident="Poem"><desc>note containing a generic poetic text. See “PoemArke”, “PoemQene”, “PoemSalam”.</desc></valItem>
+                                <valItem ident="PoemQene"><desc>rhymed composition fulfilling the requirements of the Qəne-hymn.</desc></valItem>
+                                <valItem ident="PoemSalam"><desc>short rhymed poem beginning with the words “salām (ʾəbəl) la-”.</desc></valItem>
+                                <valItem ident="PoemArke"><desc>five-line rhymed poem.</desc></valItem>
                                 <valItem ident="StampExlibris">
-                                    <desc>hardly discernible, of the owning institution, of the
-                                        church….</desc>
+                                    <desc>stamp affixed by the owning institution, e.g., a library.</desc>
                                 </valItem>
-                                <valItem ident="CalendaricNote"/>
-                                <valItem ident="Excerpt"/>
-                                <valItem ident="Letter"/>
-                                <valItem ident="MagicFormula"/>
-                                <valItem ident="MagicText"/>
-                                <valItem ident="Comment"/>
-                                <valItem ident="Correction"/>
-                                <valItem ident="Gloss"/>
-                                <valItem ident="Excommunication"/>
+                                <valItem ident="CalendaricNote"><desc>note for calculating the moveable feasts and for other calendrical computes.</desc></valItem>
+                                <valItem ident="Excerpt"><desc>fragment of a literary work added at a later stage to a manuscript. See also “GuestText”.</desc></valItem>
+                                <valItem ident="Letter"><desc> communication formally addressed to an individual or an institution.</desc></valItem>
+                                <valItem ident="MagicFormula"><desc>set form of words to be recited or carried along for healing and protecting.</desc></valItem>
+                                <valItem ident="MagicText"><desc>elaborate note to be recited or carried along for healing and protecting.</desc></valItem>
+                                <valItem ident="Comment"><desc>note added at a later stage in order to comment word or passages of the main text. See also “Gloss”.</desc></valItem>
+                                <valItem ident="Correction"><desc>note added at a later stage in order to correct words or passages of the main text.</desc></valItem>
+                                <valItem ident="Gloss"><desc>note added at a later stage in order to interpret or explain words or passages of the main text. See also “Comment”.</desc></valItem>
+                                <valItem ident="Excommunication"><desc>note excommunicating an individual from a religious community, e.g., a monastery.</desc></valItem>
                                 <valItem ident="GuestText">
-                                    <desc>A (complete) work added later to a manuscript</desc>
+                                    <desc>a complete work, provided with its own ID, added later to a manuscript. </desc>
                                 </valItem>
                             </valList>
                         </attDef>
@@ -1148,15 +1135,24 @@
                         <attDef ident="ref" mode="change" usage="rec"/>
                         <attDef ident="role" mode="replace" usage="opt">
                             <valList type="closed">
-                                <valItem ident="scribe"/>
-                                <valItem ident="donor"/>
-                                <valItem ident="author"/>
-                                <valItem ident="translator"/>
-                                <valItem ident="binder"/>
-                                <valItem ident="parchmentMaker"/>
-                                <valItem ident="owner"/>
-                                <valItem ident="patron"/>
-                                <valItem ident="tabot"/>
+                                <valItem ident="scribe">
+                                    <desc>the copyist of the manuscript</desc>
+                                </valItem>
+                                <valItem ident="donor">
+                                    <desc>the person who donated the manuscript</desc>
+                                </valItem>
+                                <valItem ident="author"><desc>the author of a work</desc></valItem>
+                                <valItem ident="translator"><desc>the translator of a work</desc></valItem>
+                                <valItem ident="binder"><desc>manuscript binder</desc></valItem>
+                                <valItem ident="parchmentMaker"><desc>parchment maker</desc></valItem>
+                                <valItem ident="owner">
+                                    <desc>the owner of a ms or an item</desc>
+                                </valItem>
+                                <valItem ident="patron"><desc>the commissioner of a ms or an item</desc></valItem>
+                                <valItem ident="tabot"><desc>the saint to whom the tabot is dedicated</desc></valItem>
+                                <valItem ident="sponsor">
+                                    <desc>the person paying for a ms (possibly not the same as donor/commissioner)</desc>
+                                </valItem>
                                 <valItem ident="other"/>
                             </valList>
                         </attDef>
@@ -1172,13 +1168,17 @@
                     <attList>
                         <attDef ident="type" mode="change" usage="opt">
                             <valList>
-                                <valItem ident="given"/>
-                                <valItem ident="birth"/>
-                                <valItem ident="baptismal"/>
-                                <valItem ident="regnal"/>
-                                <valItem ident="monastic"/>
-                                <valItem ident="horse"/>
-                                <valItem ident="nick"/>
+                                <valItem ident="given"><desc>name given at birth</desc></valItem>
+                                <valItem ident="birth"></valItem>
+                                <valItem ident="baptismal"><desc>name given at baptism</desc></valItem>
+                                <valItem ident="regnal"><desc>name given on coronation (kings but also patriarchs)</desc></valItem>
+                                <valItem ident="monastic"><desc>name given on entering monastic life </desc></valItem>
+                                <valItem ident="horse"><desc>the name of the battle horse of kings and rulers</desc></valItem>
+                                <valItem ident="nick"><desc>a name given to a person associated to his occupation or other deeds</desc></valItem>
+                                <valItem ident="war"><desc>nom de guerre (if different from horse name, e.g. Malas)</desc></valItem>
+                                <valItem ident="hypocoristic"><desc>short form (diminutive or abbreviated, e.g. Taklo for Takla Maryam)</desc></valItem>
+                                <valItem ident="patronymic"><desc>father's name, esp. for eventual Russian names, but could be also highlighted in others</desc></valItem>
+                                
                             </valList>
                         </attDef>
                     </attList>
@@ -1284,7 +1284,6 @@
                                 <valItem ident="port"/>
                                 <valItem ident="oasis"/>
                                 <valItem ident="river"/>
-                                <valItem ident="cape"/>
                                 <valItem ident="gorge"/>
                                 <valItem ident="cave"/>
                                 <valItem ident="strait"/>
@@ -1296,7 +1295,6 @@
                                 <valItem ident="fort"/>
                                 <valItem ident="farm"/>
                                 <valItem ident="desert"/>
-                                <valItem ident="cave"/>
                                 <valItem ident="gulf"/>
                                 <valItem ident="qabale"/>
                                 <valItem ident="peninsula"/>
@@ -1346,11 +1344,11 @@
                             <valList type="closed">
 
                                 <!--                          list coming from myCore-->
-                                <valItem ident="Codex"/>
-                                <valItem ident="Scroll"/>
-                                <valItem ident="Leporello"/>
-                                <valItem ident="Leaf"/>
-                                <valItem ident="Other"/>
+                                <valItem ident="Codex"><desc>manuscript format consisting of quires bound together to the spine, in their turn made up of a variable number of leaves sewn together and protected by two hard boards.</desc></valItem>
+                                <valItem ident="Scroll"><desc>manuscript format consisting of one continuous flow of writing material rolled up, generally around one or two wooden cylindrical supports.</desc></valItem>
+                                <valItem ident="Leporello"><desc>manuscript format consisting of one leaf assembled in a multiple zig-zag folding, resembling an accordion, and generally enclosed between two hard boards.</desc></valItem>
+                                <valItem ident="Leaf"><desc>manuscript format consisting of one single unbound sheet.</desc></valItem>
+                                <valItem ident="Other"><desc>other manuscript formats.</desc></valItem>
                             </valList>
                         </attDef>
 
@@ -1389,29 +1387,31 @@
                     <attList>
                         <attDef ident="name" mode="replace" usage="req">
                             <valList type="closed">
-                                <valItem ident="dcterms:hasPart"/>
-                                <valItem ident="gn:nearBy"/>
-                                <valItem ident="gn:locatedIn"/>
-                                <valItem ident="dcterms:isPartOf"/>
-                                <valItem ident="lawd:hasAttestation"/>
-                                <valItem ident="rel:enemyOf"/>
+                                <valItem ident="dcterms:hasPart"><desc>http://purl.org/dc/terms/hasPart</desc></valItem>
+                                <valItem ident="gn:nearBy"><desc>http://www.geonames.org/ontology#nearby</desc></valItem>
+                                <valItem ident="gn:locatedIn"><desc>http://www.geonames.org/ontology#locatedIn</desc></valItem>
+                                <valItem ident="dcterms:isPartOf"><desc>http://purl.org/dc/terms/isPartOf</desc></valItem>
+                                <valItem ident="lawd:hasAttestation"><desc>http://lawd.info/ontology/hasAttestation</desc></valItem>
+                                <valItem ident="rel:enemyOf"><desc>http://purl.org/vocab/relationship/enemyOf</desc></valItem>
+                                <valItem ident="agrelon:isFounderOf"><desc>http://d-nb.info/standards/elementset/agrelon.owl#isFounderOf</desc></valItem>
+                                <valItem ident="agrelon:hasFounder"><desc>http://d-nb.info/standards/elementset/agrelon.owl#hasFounder</desc></valItem>
 
-                                <valItem ident="bm:wifeOf"/>
-                                <valItem ident="bm:husbandOf"/>
-                                <valItem ident="bm:motherInLawOf"/>
-                                <valItem ident="bm:fatherInLawOf"/>
-                                <valItem ident="bm:sonInLawOf"/>
-                                <valItem ident="bm:brotherInLawOf"/>
-                                <valItem ident="bm:sisterInLawOf"/>
-                                <valItem ident="bm:daugtherInLawOf"/>
-                                <valItem ident="bm:hasTabot"/>
+                                <valItem ident="bm:wifeOf"><desc>Is the wife of ...</desc></valItem>
+                                <valItem ident="bm:husbandOf"><desc>Is the husband of..</desc></valItem>
+                                <valItem ident="bm:motherInLawOf"><desc>is the mother of the legally conjugated partner</desc></valItem>
+                                <valItem ident="bm:fatherInLawOf"><desc>is the father of the legally conjugated partner</desc></valItem>
+                                <valItem ident="bm:sonInLawOf"><desc>is the husband of the daugther</desc></valItem>
+                                <valItem ident="bm:brotherInLawOf"><desc>is the brother of the legally conjugated partner</desc></valItem>
+                                <valItem ident="bm:sisterInLawOf"><desc>is the brother of the legally conjugated partner</desc></valItem>
+                                <valItem ident="bm:daugtherInLawOf"><desc>is the wife of the daugther</desc></valItem>
+                                <valItem ident="bm:hasTabot"><desc>This person has a Tabot at the location...</desc></valItem>
                                 <valItem ident="bm:ordainedBy">
                                     <desc>Ordained priest, bishop or monk. Same as
                                         Consacrated.</desc>
                                 </valItem>
-                                <valItem ident="bm:hasOrdained"/>
-                                <valItem ident="bm:hasBaptized"/>
-                                <valItem ident="bm:baptizedBy"/>
+                                <valItem ident="bm:hasOrdained"><desc>has ordained to a religious ministery ...</desc></valItem>
+                                <valItem ident="bm:hasBaptized"><desc>has baptized ...</desc></valItem>
+                                <valItem ident="bm:baptizedBy"><desc>has been baptized by ...</desc></valItem>
                                 <valItem ident="bm:isAuthorOfEthiopicTranslation">
                                     <desc>The subject of the relation is author of a translation of
                                         a work in another language and there is no digital resource
@@ -1420,183 +1420,183 @@
                                         work.</desc>
                                 </valItem>
 
-                                <valItem ident="syriaca:different-from"/>
-                                <valItem ident="syriaca:has-literary-connection-to-place"/>
-                                <valItem ident="syriaca:has-relation-to-place"/>
-                                <valItem ident="syriaca:possibly-identical"/>
-                                <valItem ident="syriaca:share-a-name"/>
-                                <valItem ident="syriaca:share-a-title"/>
-                                <valItem ident="syriaca:born-at"/>
+                                <valItem ident="syriaca:different-from"><desc>http://syriaca.org/documentation/relations.html#different-from</desc></valItem>
+                                <valItem ident="syriaca:has-literary-connection-to-place"><desc>http://syriaca.org/documentation/relations.html#has-literary-connection-to-place</desc></valItem>
+                                <valItem ident="syriaca:has-relation-to-place"><desc>http://syriaca.org/documentation/relations.html#has-relation-to-place</desc></valItem>
+                                <valItem ident="syriaca:possibly-identical"><desc>http://syriaca.org/documentation/relations.html#possibly-identical</desc></valItem>
+                                <valItem ident="syriaca:share-a-name"><desc>http://syriaca.org/documentation/relations.html#share-a-name</desc></valItem>
+                                <valItem ident="syriaca:share-a-title"><desc>http://syriaca.org/documentation/relations.html#share-a-title</desc></valItem>
+                                <valItem ident="syriaca:born-at"><desc>http://syriaca.org/documentation/relations.html#born-at</desc></valItem>
 
 
-                                <valItem ident="snap:DaughterOf"/>
-                                <valItem ident="snap:ChildOf"/>
-                                <valItem ident="snap:BrotherOf"/>
-                                <valItem ident="snap:SeriousIntimateRelationshipWith"/>
-                                <valItem ident="snap:SiblingOfParentOf"/>
-                                <valItem ident="snap:SeriousIntimateRelationshipWith"/>
-                                <valItem ident="snap:AllianceWith"/>
-                                <valItem ident="snap:CasualIntimateRelationshipWith"/>
-                                <valItem ident="snap:ChildOfSiblingOf"/>
-                                <valItem ident="snap:EmnityFor"/>
-                                <valItem ident="snap:FriendshipFor"/>
-                                <valItem ident="snap:Group"/>
-                                <valItem ident="snap:HereditaryFamilyOf"/>
-                                <valItem ident="snap:IntimateRelationshipWith"/>
-                                <valItem ident="snap:KinOf"/>
-                                <valItem ident="snap:AncestorOf"/>
-                                <valItem ident="snap:AuntOf"/>
-                                <valItem ident="snap:CousinOf"/>
-                                <valItem ident="snap:ClaimedFamilyRelationship"/>
-                                <valItem ident="snap:ExtendedFamilyOf"/>
-                                <valItem ident="snap:ExtendedHouseholdOf"/>
-                                <valItem ident="snap:FamilyOf"/>
-                                <valItem ident="snap:FatherOf"/>
-                                <valItem ident="snap:FosterFamilyRelationship"/>
-                                <valItem ident="snap:FreedmanOf"/>
-                                <valItem ident="snap:FreedSlaveOf"/>
-                                <valItem ident="snap:FreedwomanOf"/>
-                                <valItem ident="snap:FriendshipFor"/>
-                                <valItem ident="snap:GrandchildOf"/>
-                                <valItem ident="snap:GranddaughterOf"/>
-                                <valItem ident="snap:GrandfatherOf"/>
-                                <valItem ident="snap:GrandmotherOf"/>
-                                <valItem ident="snap:GrandparentOf"/>
-                                <valItem ident="snap:GrandsonOf"/>
-                                <valItem ident="snap:GreatGrandfatherOf"/>
-                                <valItem ident="snap:GreatGrandmotherOf"/>
-                                <valItem ident="snap:GreatGrandparentOf"/>
-                                <valItem ident="snap:HalfFamilyRelationship"/>
-                                <valItem ident="snap:HereditaryFamilyOf"/>
-                                <valItem ident="snap:HouseholdOf"/>
-                                <valItem ident="snap:HouseSlaveOf"/>
-                                <valItem ident="snap:InLawFamilyRelationship"/>
-                                <valItem ident="snap:IntimateRelationshipWith"/>
-                                <valItem ident="snap:KinOf"/>
+                                <valItem ident="snap:DaughterOf"><desc>http://data.snapdrgn.net/ontology/snap#</desc></valItem>
+                                <valItem ident="snap:ChildOf"><desc>http://data.snapdrgn.net/ontology/snap#ChildOf</desc></valItem>
+                                <valItem ident="snap:BrotherOf"><desc>http://data.snapdrgn.net/ontology/snap#BrotherOf</desc></valItem>
+                                <valItem ident="snap:SeriousIntimateRelationshipWith"><desc>http://data.snapdrgn.net/ontology/snap#SeriousIntimateRelationshipWith</desc></valItem>
+                                <valItem ident="snap:SiblingOfParentOf"><desc>http://data.snapdrgn.net/ontology/snap#SiblingOfParentOf</desc></valItem>
+                                <valItem ident="snap:SeriousIntimateRelationshipWith"><desc>http://data.snapdrgn.net/ontology/snap#SeriousIntimateRelationshipWith</desc></valItem>
+                                <valItem ident="snap:AllianceWith"><desc>http://data.snapdrgn.net/ontology/snap#AllianceWith</desc></valItem>
+                                <valItem ident="snap:CasualIntimateRelationshipWith"><desc>http://data.snapdrgn.net/ontology/snap#CasualIntimateRelationshipWith</desc></valItem>
+                                <valItem ident="snap:ChildOfSiblingOf"><desc>http://data.snapdrgn.net/ontology/snap#ChildOfSiblingOf</desc></valItem>
+                                <valItem ident="snap:EmnityFor"><desc>http://data.snapdrgn.net/ontology/snap#EmnityFor</desc></valItem>
+                                <valItem ident="snap:FriendshipFor"><desc>http://data.snapdrgn.net/ontology/snap#FriendshipFor</desc></valItem>
+                                <valItem ident="snap:Group"><desc>http://data.snapdrgn.net/ontology/snap#Group</desc></valItem>
+                                <valItem ident="snap:HereditaryFamilyOf"><desc>http://data.snapdrgn.net/ontology/snap#HereditaryFamilyOf</desc></valItem>
+                                <valItem ident="snap:IntimateRelationshipWith"><desc>http://data.snapdrgn.net/ontology/snap#IntimateRelationshipWith</desc></valItem>
+                                <valItem ident="snap:KinOf"><desc>http://data.snapdrgn.net/ontology/snap#KinOf</desc></valItem>
+                                <valItem ident="snap:AncestorOf"><desc>http://data.snapdrgn.net/ontology/snap#AncestorOf</desc></valItem>
+                                <valItem ident="snap:AuntOf"><desc>http://data.snapdrgn.net/ontology/snap#AuntOf</desc></valItem>
+                                <valItem ident="snap:CousinOf"><desc>http://data.snapdrgn.net/ontology/snap#CousinOf</desc></valItem>
+                                <valItem ident="snap:ClaimedFamilyRelationship"><desc>http://data.snapdrgn.net/ontology/snap#ClaimedFamilyRelationship</desc></valItem>
+                                <valItem ident="snap:ExtendedFamilyOf"><desc>http://data.snapdrgn.net/ontology/snap#ExtendedFamilyOf</desc></valItem>
+                                <valItem ident="snap:ExtendedHouseholdOf"><desc>http://data.snapdrgn.net/ontology/snap#ExtendedHouseholdOf</desc></valItem>
+                                <valItem ident="snap:FamilyOf"><desc>http://data.snapdrgn.net/ontology/snap#FamilyOf</desc></valItem>
+                                <valItem ident="snap:FatherOf"><desc>http://data.snapdrgn.net/ontology/snap#FatherOf</desc></valItem>
+                                <valItem ident="snap:FosterFamilyRelationship"><desc>http://data.snapdrgn.net/ontology/snap#FosterFamilyRelationship</desc></valItem>
+                                <valItem ident="snap:FreedmanOf"><desc>http://data.snapdrgn.net/ontology/snap#FreedmanOf</desc></valItem>
+                                <valItem ident="snap:FreedSlaveOf"><desc>http://data.snapdrgn.net/ontology/snap#FreedSlaveOf</desc></valItem>
+                                <valItem ident="snap:FreedwomanOf"><desc>http://data.snapdrgn.net/ontology/snap#FreedwomanOf</desc></valItem>
+                                <valItem ident="snap:FriendshipFor"><desc>http://data.snapdrgn.net/ontology/snap#FriendshipFor</desc></valItem>
+                                <valItem ident="snap:GrandchildOf"><desc>http://data.snapdrgn.net/ontology/snap#GrandchildOf</desc></valItem>
+                                <valItem ident="snap:GranddaughterOf"><desc>http://data.snapdrgn.net/ontology/snap#GranddaughterOf</desc></valItem>
+                                <valItem ident="snap:GrandfatherOf"><desc>http://data.snapdrgn.net/ontology/snap#GrandfatherOf</desc></valItem>
+                                <valItem ident="snap:GrandmotherOf"><desc>http://data.snapdrgn.net/ontology/snap#GrandmotherOf</desc></valItem>
+                                <valItem ident="snap:GrandparentOf"><desc>http://data.snapdrgn.net/ontology/snap#GrandparentOf</desc></valItem>
+                                <valItem ident="snap:GrandsonOf"><desc>http://data.snapdrgn.net/ontology/snap#GrandsonOf</desc></valItem>
+                                <valItem ident="snap:GreatGrandfatherOf"><desc>http://data.snapdrgn.net/ontology/snap#GreatGrandfatherOf</desc></valItem>
+                                <valItem ident="snap:GreatGrandmotherOf"><desc>http://data.snapdrgn.net/ontology/snap#GreatGrandmotherOf</desc></valItem>
+                                <valItem ident="snap:GreatGrandparentOf"><desc>http://data.snapdrgn.net/ontology/snap#GreatGrandparentOf</desc></valItem>
+                                <valItem ident="snap:HalfFamilyRelationship"><desc>http://data.snapdrgn.net/ontology/snap#HalfFamilyRelationship</desc></valItem>
+                                <valItem ident="snap:HereditaryFamilyOf"><desc>http://data.snapdrgn.net/ontology/snap#HereditaryFamilyOf</desc></valItem>
+                                <valItem ident="snap:HouseholdOf"><desc>http://data.snapdrgn.net/ontology/snap#HouseholdOf</desc></valItem>
+                                <valItem ident="snap:HouseSlaveOf"><desc>http://data.snapdrgn.net/ontology/snap#HouseSlaveOf</desc></valItem>
+                                <valItem ident="snap:InLawFamilyRelationship"><desc>http://data.snapdrgn.net/ontology/snap#InLawFamilyRelationship</desc></valItem>
+                                <valItem ident="snap:IntimateRelationshipWith"><desc>http://data.snapdrgn.net/ontology/snap#IntimateRelationshipWith</desc></valItem>
+                                <valItem ident="snap:KinOf"><desc>http://data.snapdrgn.net/ontology/snap#KinOf</desc></valItem>
                                 <valItem
                                     ident="snap:LegallyRecognisedRelationshipWithExtendedFamilyOf"/>
-                                <valItem ident="snap:ExtendedHouseholdOf"/>
-                                <valItem ident="snap:FamilyOf"/>
-                                <valItem ident="snap:FatherOf"/>
-                                <valItem ident="snap:FosterFamilyRelationship"/>
-                                <valItem ident="snap:FreedmanOf"/>
-                                <valItem ident="snap:FreedSlaveOf"/>
-                                <valItem ident="snap:FreedwomanOf"/>
-                                <valItem ident="snap:FriendshipFor"/>
-                                <valItem ident="snap:GrandchildOf"/>
-                                <valItem ident="snap:GranddaughterOf"/>
-                                <valItem ident="snap:GrandfatherOf"/>
-                                <valItem ident="snap:GrandmotherOf"/>
-                                <valItem ident="snap:GrandparentOf"/>
-                                <valItem ident="snap:GrandsonOf"/>
-                                <valItem ident="snap:GreatGrandfatherOf"/>
-                                <valItem ident="snap:GreatGrandmotherOf"/>
-                                <valItem ident="snap:GreatGrandparentOf"/>
-                                <valItem ident="snap:HalfFamilyRelationship"/>
-                                <valItem ident="snap:HereditaryFamilyOf"/>
-                                <valItem ident="snap:HouseholdOf"/>
-                                <valItem ident="snap:HouseSlaveOf"/>
-                                <valItem ident="snap:InLawFamilyRelationship"/>
-                                <valItem ident="snap:IntimateRelationshipWith"/>
-                                <valItem ident="snap:KinOf"/>
-                                <valItem ident="snap:LegallyRecognisedRelationshipWith"/>
-                                <valItem ident="snap:MaternalFamilyRelationship"/>
+                                <valItem ident="snap:ExtendedHouseholdOf"><desc>http://data.snapdrgn.net/ontology/snap#ExtendedHouseholdOf</desc></valItem>
+                                <valItem ident="snap:FamilyOf"><desc>http://data.snapdrgn.net/ontology/snap#FamilyOf</desc></valItem>
+                                <valItem ident="snap:FatherOf"><desc>http://data.snapdrgn.net/ontology/snap#FatherOf</desc></valItem>
+                                <valItem ident="snap:FosterFamilyRelationship"><desc>http://data.snapdrgn.net/ontology/snap#FosterFamilyRelationship</desc></valItem>
+                                <valItem ident="snap:FreedmanOf"><desc>http://data.snapdrgn.net/ontology/snap#FreedmanOf</desc></valItem>
+                                <valItem ident="snap:FreedSlaveOf"><desc>http://data.snapdrgn.net/ontology/snap#FreedSlaveOf</desc></valItem>
+                                <valItem ident="snap:FreedwomanOf"><desc>http://data.snapdrgn.net/ontology/snap#FreedwomanOf</desc></valItem>
+                                <valItem ident="snap:FriendshipFor"><desc>http://data.snapdrgn.net/ontology/snap#FriendshipFor</desc></valItem>
+                                <valItem ident="snap:GrandchildOf"><desc>http://data.snapdrgn.net/ontology/snap#GrandchildOf</desc></valItem>
+                                <valItem ident="snap:GranddaughterOf"><desc>http://data.snapdrgn.net/ontology/snap#GranddaughterOf</desc></valItem>
+                                <valItem ident="snap:GrandfatherOf"><desc>http://data.snapdrgn.net/ontology/snap#GrandfatherOf</desc></valItem>
+                                <valItem ident="snap:GrandmotherOf"><desc>http://data.snapdrgn.net/ontology/snap#GrandmotherOf</desc></valItem>
+                                <valItem ident="snap:GrandparentOf"><desc>http://data.snapdrgn.net/ontology/snap#GrandparentOf</desc></valItem>
+                                <valItem ident="snap:GrandsonOf"><desc>http://data.snapdrgn.net/ontology/snap#GrandsonOf</desc></valItem>
+                                <valItem ident="snap:GreatGrandfatherOf"><desc>http://data.snapdrgn.net/ontology/snap#GreatGrandfatherOf</desc></valItem>
+                                <valItem ident="snap:GreatGrandmotherOf"><desc>http://data.snapdrgn.net/ontology/snap#GreatGrandmotherOf</desc></valItem>
+                                <valItem ident="snap:GreatGrandparentOf"><desc>http://data.snapdrgn.net/ontology/snap#GreatGrandparentOf</desc></valItem>
+                                <valItem ident="snap:HalfFamilyRelationship"><desc>http://data.snapdrgn.net/ontology/snap#HalfFamilyRelationship</desc></valItem>
+                                <valItem ident="snap:HereditaryFamilyOf"><desc>http://data.snapdrgn.net/ontology/snap#HereditaryFamilyOf</desc></valItem>
+                                <valItem ident="snap:HouseholdOf"><desc>http://data.snapdrgn.net/ontology/snap#HouseholdOf</desc></valItem>
+                                <valItem ident="snap:HouseSlaveOf"><desc>http://data.snapdrgn.net/ontology/snap#HouseSlaveOf</desc></valItem>
+                                <valItem ident="snap:InLawFamilyRelationship"><desc>http://data.snapdrgn.net/ontology/snap#InLawFamilyRelationship</desc></valItem>
+                                <valItem ident="snap:IntimateRelationshipWith"><desc>http://data.snapdrgn.net/ontology/snap#IntimateRelationshipWith</desc></valItem>
+                                <valItem ident="snap:KinOf"><desc>http://data.snapdrgn.net/ontology/snap#KinOf</desc></valItem>
+                                <valItem ident="snap:LegallyRecognisedRelationshipWith"><desc>http://data.snapdrgn.net/ontology/snap#LegallyRecognisedRelationshipWith</desc></valItem>
+                                <valItem ident="snap:MaternalFamilyRelationship"><desc>http://data.snapdrgn.net/ontology/snap#MaternalFamilyRelationship</desc></valItem>
                                 <valItem
                                     ident="snap:ProfessionalRelationshipMaternalFamilyRelationship"/>
-                                <valItem ident="snap:MotherOf"/>
-                                <valItem ident="snap:NephewOf"/>
-                                <valItem ident="snap:NieceOf"/>
-                                <valItem ident="snap:ParentOf"/>
-                                <valItem ident="snap:PaternalFamilyRelationship"/>
-                                <valItem ident="snap:ProfessionalRelationship"/>
-                                <valItem ident="snap:SeriousIntimateRelationshipWith"/>
-                                <valItem ident="snap:SiblingOf"/>
-                                <valItem ident="snap:SiblingOfParentOf"/>
-                                <valItem ident="snap:SisterOf"/>
-                                <valItem ident="snap:SlaveOf"/>
-                                <valItem ident="snap:SonOf"/>
-                                <valItem ident="snap:StepFamilyRelationship"/>
-                                <valItem ident="snap:UncleOfSeriousIntimateRelationshipWith"/>
-                                <valItem ident="snap:SiblingOf"/>
-                                <valItem ident="snap:SiblingOfParentOf"/>
-                                <valItem ident="snap:SlaveOf"/>
-                                <valItem ident="snap:SonOf"/>
-                                <valItem ident="snap:StepFamilyRelationship"/>
-                                <valItem ident="snap:UncleOf"/>
+                                <valItem ident="snap:MotherOf"><desc>http://data.snapdrgn.net/ontology/snap#MotherOf</desc></valItem>
+                                <valItem ident="snap:NephewOf"><desc>http://data.snapdrgn.net/ontology/snap#NephewOf</desc></valItem>
+                                <valItem ident="snap:NieceOf"><desc>http://data.snapdrgn.net/ontology/snap#NieceOf</desc></valItem>
+                                <valItem ident="snap:ParentOf"><desc>http://data.snapdrgn.net/ontology/snap#ParentOf</desc></valItem>
+                                <valItem ident="snap:PaternalFamilyRelationship"><desc>http://data.snapdrgn.net/ontology/snap#PaternalFamilyRelationship</desc></valItem>
+                                <valItem ident="snap:ProfessionalRelationship"><desc>http://data.snapdrgn.net/ontology/snap#ProfessionalRelationship</desc></valItem>
+                                <valItem ident="snap:SeriousIntimateRelationshipWith"><desc>http://data.snapdrgn.net/ontology/snap#SeriousIntimateRelationshipWith</desc></valItem>
+                                <valItem ident="snap:SiblingOf"><desc>http://data.snapdrgn.net/ontology/snap#SiblingOf</desc></valItem>
+                                <valItem ident="snap:SiblingOfParentOf"><desc>http://data.snapdrgn.net/ontology/snap#SiblingOfParentOf</desc></valItem>
+                                <valItem ident="snap:SisterOf"><desc>http://data.snapdrgn.net/ontology/snap#SisterOf</desc></valItem>
+                                <valItem ident="snap:SlaveOf"><desc>http://data.snapdrgn.net/ontology/snap#SlaveOf</desc></valItem>
+                                <valItem ident="snap:SonOf"><desc>http://data.snapdrgn.net/ontology/snap#SonOf</desc></valItem>
+                                <valItem ident="snap:StepFamilyRelationship"><desc>http://data.snapdrgn.net/ontology/snap#StepFamilyRelationship</desc></valItem>
+                                <valItem ident="snap:UncleOfSeriousIntimateRelationshipWith"><desc>http://data.snapdrgn.net/ontology/snap#UncleOfSeriousIntimateRelationshipWith</desc></valItem>
+                                <valItem ident="snap:SiblingOf"><desc>http://data.snapdrgn.net/ontology/snap#SiblingOf</desc></valItem>
+                                <valItem ident="snap:SiblingOfParentOf"><desc>http://data.snapdrgn.net/ontology/snap#SiblingOfParentOf</desc></valItem>
+                                <valItem ident="snap:SlaveOf"><desc>http://data.snapdrgn.net/ontology/snap#SlaveOf</desc></valItem>
+                                <valItem ident="snap:SonOf"><desc>http://data.snapdrgn.net/ontology/snap#SonOf</desc></valItem>
+                                <valItem ident="snap:StepFamilyRelationship"><desc>http://data.snapdrgn.net/ontology/snap#StepFamilyRelationship</desc></valItem>
+                                <valItem ident="snap:UncleOf"><desc>http://data.snapdrgn.net/ontology/snap#UncleOf</desc></valItem>
 
 
                                 <!--                          list INCOMPLETE! -->
-                                <valItem ident="saws:AbstractManuscriptText"/>
-                                <valItem ident="saws:P129i_is_subject_of"/>
-                                <valItem ident="saws:F15_Complex_Work"/>
-                                <valItem ident="saws:F16_Container_Work"/>
-                                <valItem ident="saws:F17_Aggregation_Work"/>
-                                <valItem ident="saws:CLP57_should_have_number_of_parts"/>
-                                <valItem ident="saws:P57_has_number_of_parts"/>
-                                <valItem ident="saws:CLP45_should_consist_of"/>
-                                <valItem ident="saws:CLP45i_should_be_incorporated_in"/>
-                                <valItem ident="saws:CLP46_should_be_composed_of"/>
-                                <valItem ident="saws:CLP46i_may_form_part_of"/>
-                                <valItem ident="saws:CLR6_should_carry"/>
-                                <valItem ident="saws:CLR6i_should_be_carried_by"/>
-                                <valItem ident="saws:commentMadeBy"/>
-                                <valItem ident="saws:contains"/>
-                                <valItem ident="saws:containsTextInLanguage"/>
-                                <valItem ident="saws:decorationAddedBy"/>
-                                <valItem ident="saws:fallsWithin"/>
-                                <valItem ident="saws:follows"/>
-                                <valItem ident="saws:formsPartOf"/>
-                                <valItem ident="saws:hasAncestor"/>
-                                <valItem ident="saws:hasChild"/>
-                                <valItem ident="saws:hasComment"/>
-                                <valItem ident="saws:hasComponent"/>
-                                <valItem ident="saws:hasDescendant"/>
-                                <valItem ident="saws:hasMember"/>
-                                <valItem ident="saws:hasOwned"/>
-                                <valItem ident="saws:hasParent"/>
-                                <valItem ident="saws:hasPart"/>
-                                <valItem ident="saws:hasUsed"/>
-                                <valItem ident="saws:hasWritten"/>
-                                <valItem ident="saws:isAncestorOf"/>
-                                <valItem ident="saws:isAttributedAuthorOf"/>
-                                <valItem ident="saws:isAttributedToAuthor"/>
-                                <valItem ident="saws:isChildOf"/>
-                                <valItem ident="saws:isCloseRenderingOf"/>
-                                <valItem ident="saws:isCloseTranslationOf"/>
-                                <valItem ident="saws:isCommentOn"/>
-                                <valItem ident="saws:isComponentOf"/>
-                                <valItem ident="saws:isDescendantOf"/>
-                                <valItem ident="saws:isDifferentTo"/>
-                                <valItem ident="saws:isDirectCopyOf"/>
-                                <valItem ident="saws:isDirectTranslationOf"/>
-                                <valItem ident="saws:isInSameFamilyAs"/>
-                                <valItem ident="saws:isLongerTranslationOf"/>
-                                <valItem ident="saws:isLongerVersionOf"/>
-                                <valItem ident="saws:isLooseRenderingOf"/>
-                                <valItem ident="saws:isLooseTranslationOf"/>
-                                <valItem ident="saws:isMemberOf"/>
-                                <valItem ident="saws:isNotPresentIn"/>
-                                <valItem ident="saws:isOlderThan"/>
-                                <valItem ident="saws:isParentOf"/>
-                                <valItem ident="saws:isReferencedBy"/>
-                                <valItem ident="saws:isRelatedTo"/>
-                                <valItem ident="saws:isSequentiallySameAs"/>
-                                <valItem ident="saws:isSequentiallySimilarTo"/>
-                                <valItem ident="saws:isShorterTranslationOf"/>
-                                <valItem ident="saws:isShorterVersionOf"/>
-                                <valItem ident="saws:isSiblingOf"/>
-                                <valItem ident="saws:isSourceFor"/>
-                                <valItem ident="saws:isSubSequenceOf"/>
-                                <valItem ident="saws:isTransliterationOf"/>
-                                <valItem ident="saws:isTwinOf"/>
-                                <valItem ident="saws:isUnrelatedTo"/>
-                                <valItem ident="saws:isVariantOf"/>
-                                <valItem ident="saws:isVariantTranslationOf"/>
-                                <valItem ident="saws:isVerbatimOf"/>
-                                <valItem ident="saws:isVerbatimTranslationOf"/>
-                                <valItem ident="saws:isVersionInAnotherLanguageOf"/>
-                                <valItem ident="saws:isVersionOf"/>
-                                <valItem ident="saws:isYoungerThan"/>
+                                <valItem ident="saws:AbstractManuscriptText"><desc>http://purl.org/saws/ontology#AbstractManuscriptText</desc></valItem>
+                                <valItem ident="saws:P129i_is_subject_of"><desc>http://purl.org/saws/ontology#P129i_is_subject_of</desc></valItem>
+                                <valItem ident="saws:F15_Complex_Work"><desc>http://purl.org/saws/ontology#F15_Complex_Work</desc></valItem>
+                                <valItem ident="saws:F16_Container_Work"><desc>http://purl.org/saws/ontology#F16_Container_Work</desc></valItem>
+                                <valItem ident="saws:F17_Aggregation_Work"><desc>http://purl.org/saws/ontology#F17_Aggregation_Work</desc></valItem>
+                                <valItem ident="saws:CLP57_should_have_number_of_parts"><desc>http://purl.org/saws/ontology#CLP57_should_have_number_of_parts</desc></valItem>
+                                <valItem ident="saws:P57_has_number_of_parts"><desc>http://purl.org/saws/ontology#P57_has_number_of_parts</desc></valItem>
+                                <valItem ident="saws:CLP45_should_consist_of"><desc>http://purl.org/saws/ontology#CLP45_should_consist_of</desc></valItem>
+                                <valItem ident="saws:CLP45i_should_be_incorporated_in"><desc>http://purl.org/saws/ontology#CLP45i_should_be_incorporated_in</desc></valItem>
+                                <valItem ident="saws:CLP46_should_be_composed_of"><desc>http://purl.org/saws/ontology#CLP46_should_be_composed_of</desc></valItem>
+                                <valItem ident="saws:CLP46i_may_form_part_of"><desc>http://purl.org/saws/ontology#CLP46i_may_form_part_of</desc></valItem>
+                                <valItem ident="saws:CLR6_should_carry"><desc>http://purl.org/saws/ontology#CLR6_should_carry</desc></valItem>
+                                <valItem ident="saws:CLR6i_should_be_carried_by"><desc>http://purl.org/saws/ontology#CLR6i_should_be_carried_by</desc></valItem>
+                                <valItem ident="saws:commentMadeBy"><desc>http://purl.org/saws/ontology#commentMadeBy</desc></valItem>
+                                <valItem ident="saws:contains"><desc>http://purl.org/saws/ontology#contains</desc></valItem>
+                                <valItem ident="saws:containsTextInLanguage"><desc>http://purl.org/saws/ontology#containsTextInLanguage</desc></valItem>
+                                <valItem ident="saws:decorationAddedBy"><desc>http://purl.org/saws/ontology#decorationAddedBy</desc></valItem>
+                                <valItem ident="saws:fallsWithin"><desc>http://purl.org/saws/ontology#fallsWithin</desc></valItem>
+                                <valItem ident="saws:follows"><desc>http://purl.org/saws/ontology#follows</desc></valItem>
+                                <valItem ident="saws:formsPartOf"><desc>http://purl.org/saws/ontology#formsPartOf</desc></valItem>
+                                <valItem ident="saws:hasAncestor"><desc>http://purl.org/saws/ontology#hasAncestor</desc></valItem>
+                                <valItem ident="saws:hasChild"><desc>http://purl.org/saws/ontology#hasChild</desc></valItem>
+                                <valItem ident="saws:hasComment"><desc>http://purl.org/saws/ontology#hasComment</desc></valItem>
+                                <valItem ident="saws:hasComponent"><desc>http://purl.org/saws/ontology#hasComponent</desc></valItem>
+                                <valItem ident="saws:hasDescendant"><desc>http://purl.org/saws/ontology#hasDescendant</desc></valItem>
+                                <valItem ident="saws:hasMember"><desc>http://purl.org/saws/ontology#hasMember</desc></valItem>
+                                <valItem ident="saws:hasOwned"><desc>http://purl.org/saws/ontology#hasOwned</desc></valItem>
+                                <valItem ident="saws:hasParent"><desc>http://purl.org/saws/ontology#hasParent</desc></valItem>
+                                <valItem ident="saws:hasPart"><desc>http://purl.org/saws/ontology#hasPart</desc></valItem>
+                                <valItem ident="saws:hasUsed"><desc>http://purl.org/saws/ontology#hasUsed</desc></valItem>
+                                <valItem ident="saws:hasWritten"><desc>http://purl.org/saws/ontology#hasWritten</desc></valItem>
+                                <valItem ident="saws:isAncestorOf"><desc>http://purl.org/saws/ontology#isAncestorOf</desc></valItem>
+                                <valItem ident="saws:isAttributedAuthorOf"><desc>http://purl.org/saws/ontology#isAttributedAuthorOf</desc></valItem>
+                                <valItem ident="saws:isAttributedToAuthor"><desc>http://purl.org/saws/ontology#isAttributedToAuthor</desc></valItem>
+                                <valItem ident="saws:isChildOf"><desc>http://purl.org/saws/ontology#isChildOf</desc></valItem>
+                                <valItem ident="saws:isCloseRenderingOf"><desc>http://purl.org/saws/ontology#isCloseRenderingOf</desc></valItem>
+                                <valItem ident="saws:isCloseTranslationOf"><desc>http://purl.org/saws/ontology#isCloseTranslationOf</desc></valItem>
+                                <valItem ident="saws:isCommentOn"><desc>http://purl.org/saws/ontology#isCommentOn</desc></valItem>
+                                <valItem ident="saws:isComponentOf"><desc>http://purl.org/saws/ontology#isComponentOf</desc></valItem>
+                                <valItem ident="saws:isDescendantOf"><desc>http://purl.org/saws/ontology#isDescendantOf</desc></valItem>
+                                <valItem ident="saws:isDifferentTo"><desc>http://purl.org/saws/ontology#isDifferentTo</desc></valItem>
+                                <valItem ident="saws:isDirectCopyOf"><desc>http://purl.org/saws/ontology#isDirectCopyOf</desc></valItem>
+                                <valItem ident="saws:isDirectTranslationOf"><desc>http://purl.org/saws/ontology#isDirectTranslationOf</desc></valItem>
+                                <valItem ident="saws:isInSameFamilyAs"><desc>http://purl.org/saws/ontology#isInSameFamilyAs</desc></valItem>
+                                <valItem ident="saws:isLongerTranslationOf"><desc>http://purl.org/saws/ontology#isLongerTranslationOf</desc></valItem>
+                                <valItem ident="saws:isLongerVersionOf"><desc>http://purl.org/saws/ontology#isLongerVersionOf</desc></valItem>
+                                <valItem ident="saws:isLooseRenderingOf"><desc>http://purl.org/saws/ontology#isLooseRenderingOf</desc></valItem>
+                                <valItem ident="saws:isLooseTranslationOf"><desc>http://purl.org/saws/ontology#isLooseTranslationOf</desc></valItem>
+                                <valItem ident="saws:isMemberOf"><desc>http://purl.org/saws/ontology#isMemberOf</desc></valItem>
+                                <valItem ident="saws:isNotPresentIn"><desc>http://purl.org/saws/ontology#isNotPresentIn</desc></valItem>
+                                <valItem ident="saws:isOlderThan"><desc>http://purl.org/saws/ontology#isOlderThan</desc></valItem>
+                                <valItem ident="saws:isParentOf"><desc>http://purl.org/saws/ontology#isParentOf</desc></valItem>
+                                <valItem ident="saws:isReferencedBy"><desc>http://purl.org/saws/ontology#isReferencedBy</desc></valItem>
+                                <valItem ident="saws:isRelatedTo"><desc>http://purl.org/saws/ontology#isRelatedTo</desc></valItem>
+                                <valItem ident="saws:isSequentiallySameAs"><desc>http://purl.org/saws/ontology#isSequentiallySameAs</desc></valItem>
+                                <valItem ident="saws:isSequentiallySimilarTo"><desc>http://purl.org/saws/ontology#isSequentiallySimilarTo</desc></valItem>
+                                <valItem ident="saws:isShorterTranslationOf"><desc>http://purl.org/saws/ontology#isShorterTranslationOf</desc></valItem>
+                                <valItem ident="saws:isShorterVersionOf"><desc>http://purl.org/saws/ontology#isShorterVersionOf</desc></valItem>
+                                <valItem ident="saws:isSiblingOf"><desc>http://purl.org/saws/ontology#isSiblingOf</desc></valItem>
+                                <valItem ident="saws:isSourceFor"><desc>http://purl.org/saws/ontology#isSourceFor</desc></valItem>
+                                <valItem ident="saws:isSubSequenceOf"><desc>http://purl.org/saws/ontology#isSubSequenceOf</desc></valItem>
+                                <valItem ident="saws:isTransliterationOf"><desc>http://purl.org/saws/ontology#isTransliterationOf</desc></valItem>
+                                <valItem ident="saws:isTwinOf"><desc>http://purl.org/saws/ontology#isTwinOf</desc></valItem>
+                                <valItem ident="saws:isUnrelatedTo"><desc>http://purl.org/saws/ontology#isUnrelatedTo</desc></valItem>
+                                <valItem ident="saws:isVariantOf"><desc>http://purl.org/saws/ontology#isVariantOf</desc></valItem>
+                                <valItem ident="saws:isVariantTranslationOf"><desc>http://purl.org/saws/ontology#isVariantTranslationOf</desc></valItem>
+                                <valItem ident="saws:isVerbatimOf"><desc>http://purl.org/saws/ontology#isVerbatimOf</desc></valItem>
+                                <valItem ident="saws:isVerbatimTranslationOf"><desc>http://purl.org/saws/ontology#isVerbatimTranslationOf</desc></valItem>
+                                <valItem ident="saws:isVersionInAnotherLanguageOf"><desc>http://purl.org/saws/ontology#isVersionInAnotherLanguageOf</desc></valItem>
+                                <valItem ident="saws:isVersionOf"><desc>http://purl.org/saws/ontology#isVersionOf</desc></valItem>
+                                <valItem ident="saws:isYoungerThan"><desc>http://purl.org/saws/ontology#isYoungerThan</desc></valItem>
 
 
                             </valList>
