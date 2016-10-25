@@ -290,6 +290,9 @@
                                 <valItem ident="sv">
                                     <desc>Swedish</desc>
                                 </valItem>
+                                <valItem ident="ru">
+                                    <desc>Russian</desc>
+                                </valItem>
                                 <valItem ident="de">
                                     <desc>German</desc>
                                 </valItem>
