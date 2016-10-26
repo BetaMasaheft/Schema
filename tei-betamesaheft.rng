@@ -4057,6 +4057,9 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                <choice>
                   <value>ApocryphaPseudoepigrapha</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works of unknown or doubtful authorship rejected from the set of the canonical scriptures, e.g., the book of Enoch, Jubilees, Herma, the Miracles of Mary, the Miracles of Jesus, Maṣḥafa ṭomār, the apocryphal Acts of the Apostles, etc.</a:documentation>
+                  <value>Vocabulary</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  
                   <value>Apocrypha</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>Pseudoepigrapha</value>
