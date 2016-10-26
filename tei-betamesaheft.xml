@@ -307,9 +307,9 @@
                     <constraintSpec scheme="isoschematron" ident="ref">
                         <constraint>
                             <sch:rule context="tei:ref">
-                                <sch:report test="not(@target or @corresp)">ref must be used with
+                                <sch:report test="not(@target or @corresp or @cRef)">ref must be used with
                                     either a @corresp pointing to a project xml:id or a @target
-                                    pointing to a an internal id</sch:report> <sch:report
+                                    pointing to a an internal id or a @cRef pointing to an external urn, like those in Perseus</sch:report> <sch:report
                                     test="not(@type) and @corresp">Please use @correps only for
                                     external entities, assigning also a @type. if you need to point
                                     to something into the current file or to a resource external to
