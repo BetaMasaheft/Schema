@@ -235,7 +235,7 @@
                 <elementSpec ident="language" mode="change" module="header">
                     <attList>
                         <attDef ident="ident" mode="replace" usage="opt">
-                            <valList type="closed">
+                            <valList type="open">
 
                                 <!--  modified  list of languages coming from myCore-->
                                 <valItem ident="am">
@@ -297,6 +297,9 @@
                                 </valItem>
                                 <valItem ident="de">
                                     <desc>German</desc>
+                                </valItem>
+                                <valItem ident="es">
+                                    <desc>Spanish</desc>
                                 </valItem>
                             </valList>
                         </attDef>

@@ -7227,6 +7227,8 @@ Suggested values include: 1] WGS84(World Geodetic System) ; 2] MGRS(Military Gri
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Russian</a:documentation>
                   <value>de</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+                  <value>es</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
                </choice>
             </attribute>
          </optional>
