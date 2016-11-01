@@ -161,7 +161,8 @@
                     <attList>
                         <attDef ident="unit" mode="change">
                             <valList type="open">
-                                <valItem ident="fol"/>
+                                <valItem ident="fol"><desc>folio</desc></valItem>
+                                <valItem ident="note"><desc>numbered note (footnote, sidenote, endnote)</desc></valItem>
                             </valList>
                         </attDef>
                     </attList>

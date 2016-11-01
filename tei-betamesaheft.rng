@@ -5569,6 +5569,11 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the element identifies a part of a book or collection.</a:documentation>
                   <value>column</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the element identifies a column.</a:documentation>
+                  <value>fol</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a folio</a:documentation>
+                  <value>note</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">numbered note (footnote, sidenote, endnote)</a:documentation>
+                  
                   <data type="token">
                      <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
                   </data>
