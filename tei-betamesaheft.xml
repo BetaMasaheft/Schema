@@ -301,6 +301,9 @@
                                 <valItem ident="es">
                                     <desc>Spanish</desc>
                                 </valItem>
+                                <valItem ident="pal">
+                                    <desc>Pahlavi</desc>
+                                </valItem>
                             </valList>
                         </attDef>
 
