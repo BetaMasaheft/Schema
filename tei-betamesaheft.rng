@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2016-11-02T11:54:21Z. .
+Schema generated from ODD source 2016-11-23T08:13:05Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -5568,10 +5568,6 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the element identifies a part of a book or collection.</a:documentation>
                   <value>column</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the element identifies a column.</a:documentation>
-                  <value>fol</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a folio</a:documentation>
-                  <value>note</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">numbered note (footnote, sidenote, endnote)</a:documentation>
                   <data type="token">
                      <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
                   </data>
@@ -7184,7 +7180,7 @@ Suggested values include: 1] WGS84(World Geodetic System) ; 2] MGRS(Military Gri
          <optional>
             <attribute name="ident">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] am; 2] om; 3] ar; 4] hy; 5] cop; 6] geo; 7] la; 8] fr; 9] grc; 10] gez; 11] he; 12] it; 13] fa; 14] syr; 15] tu; 16] ti; 17] en; 18] sv; 19] ru; 20] de; 21] es</a:documentation>
+Sample values include: 1] am; 2] om; 3] ar; 4] hy; 5] cop; 6] geo; 7] la; 8] fr; 9] grc; 10] gez; 11] he; 12] it; 13] fa; 14] syr; 15] tu; 16] ti; 17] en; 18] sv; 19] ru; 20] de; 21] es; 22] pal</a:documentation>
                <text/>
             </attribute>
          </optional>
@@ -8747,19 +8743,46 @@ Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNu
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">signifies text supplied by the transcriber or editor for any reason; for example because the original cannot be read due to physical damage, or because of an obvious omission by the author or scribe. [11.3.3.1. Damage, Illegibility, and Supplied Text]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.editLike.attributes"/>
+         <ref name="tei_att.editLike.attribute.instant"/>
+         <ref name="tei_att.dimensions.attribute.precision"/>
+         <ref name="tei_att.dimensions.attribute.unit"/>
+         <ref name="tei_att.dimensions.attribute.quantity"/>
+         <ref name="tei_att.dimensions.attribute.extent"/>
+         <ref name="tei_att.dimensions.attribute.scope"/>
+         <ref name="tei_att.ranging.attribute.atLeast"/>
+         <ref name="tei_att.ranging.attribute.atMost"/>
+         <ref name="tei_att.ranging.attribute.min"/>
+         <ref name="tei_att.ranging.attribute.max"/>
+         <ref name="tei_att.ranging.attribute.confidence"/>
+         <ref name="tei_att.source.attribute.source"/>
          <optional>
-            <attribute name="reason">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">one or more words indicating why the text has had to be supplied, e.g. overbinding, faded-ink, lost-folio, omitted-in-original.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="token">
-                        <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-                     </data>
-                  </oneOrMore>
-               </list>
+            <attribute name="evidence">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+Suggested values include: 1] parallel; 2] previouseditor</a:documentation>
+               <choice>
+                  <value>parallel</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Characters supplied from a parallel version of this text, absent from this one</a:documentation>
+                  <value>previouseditor</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Characters visible to a previous editor, now lost/unclear due to damage</a:documentation>
+                  <ref name="tei_data.word"/>
+               </choice>
             </attribute>
          </optional>
+         <attribute name="reason">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            <choice>
+               <value>lost</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Restoration of text completely lost from the surface</a:documentation>
+               <value>omitted</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Supplement of text erroneously omitted from the surface by the scribe/cutter</a:documentation>
+               <value>subaudible</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Editorial supplement of words subaudible to the native reader</a:documentation>
+               <value>explanation</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Editorial explanation of oblique text in original</a:documentation>
+               <value>undefined</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Text restored (e.g. from earlier witness or alternate copy) without specification of current state of this text</a:documentation>
+            </choice>
+         </attribute>
          <empty/>
       </element>
    </define>
@@ -11023,13 +11046,13 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             <choice>
                <value>deficient</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The manuscript is badly preserved and severely damaged.</a:documentation>
                <value>good</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The manuscript is preserved with minimal damages.</a:documentation>
                <value>intact</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The manuscript is preserved completely undamaged.</a:documentation>
                <value>other</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">If you use this value, please provide in the description a proper motivation, otherwise avoid it.</a:documentation>
             </choice>
          </attribute>
          <empty/>

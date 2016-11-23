@@ -173,10 +173,10 @@
                     <attList>
                         <attDef ident="key" mode="replace" usage="req">
                             <valList type="closed">
-                                <valItem ident="deficient"/>
-                                <valItem ident="good"/>
-                                <valItem ident="intact"/>
-                                <valItem ident="other"/>
+                                <valItem ident="deficient"><desc>The manuscript is badly preserved and severely damaged.</desc></valItem>
+                                <valItem ident="good"><desc>The manuscript is preserved with minimal damages.</desc></valItem>
+                                <valItem ident="intact"><desc>The manuscript is preserved completely undamaged.</desc></valItem>
+                                <valItem ident="other"><desc>If you use this value, please provide in the description a proper motivation, otherwise avoid it.</desc></valItem>
                             </valList>
                         </attDef>
 
@@ -1876,7 +1876,53 @@
                         </attDef>
                     </attList>
                 </elementSpec>
+                
 
+<!--from EpiDoc schema-->
+                <elementSpec ident="supplied" module="transcr" mode="change">
+                    <attList>
+                        <!-- suggested attribute list for supplied/@evidence -->
+                        <attDef ident="evidence" mode="replace" usage="opt">
+                            <datatype maxOccurs="1">
+                                <rng:ref name="data.word"/>
+                            </datatype>
+                            <valList type="semi">
+                                <valItem ident="parallel">
+                                    <desc>Characters supplied from a parallel version of this text, absent from this one</desc>
+                                </valItem>
+                                <valItem ident="previouseditor">
+                                    <desc>Characters visible to a previous editor, now lost/unclear due to damage</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <!-- constrained attribute list for supplied/@reason -->
+                        <attDef ident="reason" mode="replace" usage="req">
+                            <valList type="closed">
+                                <valItem ident="lost">
+                                    <desc>Restoration of text completely lost from the
+                                        surface</desc>
+                                </valItem>
+                                <valItem ident="omitted">
+                                    <desc>Supplement of text erroneously omitted from the surface by
+                                        the scribe/cutter</desc>
+                                </valItem>
+                                <valItem ident="subaudible">
+                                    <desc>Editorial supplement of words subaudible to the native
+                                        reader</desc>
+                                </valItem>
+                                <valItem ident="explanation">
+                                    <desc>Editorial explanation of oblique text in original</desc>
+                                </valItem>
+                                <valItem ident="undefined">
+                                    <desc>Text restored (e.g. from earlier witness or alternate
+                                        copy) without specification of current state of this
+                                        text</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                
                 <classSpec type="atts" ident="att.dimensions" mode="change">
                     <attList>
                         <attDef ident="precision" mode="replace">
