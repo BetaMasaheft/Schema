@@ -1351,7 +1351,7 @@
                 <!--          controlled values for objectDesc @form -->
                 <elementSpec ident="objectDesc" mode="change" module="msdescription">
                     <attList>
-                        <attDef ident="form" mode="replace" usage="req">
+                        <attDef ident="form" mode="replace" usage="opt">
                             <valList type="closed">
 
                                 <!--                          list coming from myCore-->
