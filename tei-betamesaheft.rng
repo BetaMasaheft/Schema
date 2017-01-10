@@ -12834,6 +12834,8 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>Russia/USSR</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>Babylon</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>Belgium</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>Netherlands</value>
@@ -12920,6 +12922,8 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                      <value>Germany</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>Russia/USSR</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     <value>Babylon</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>Belgium</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
