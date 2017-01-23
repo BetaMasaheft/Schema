@@ -70,6 +70,20 @@
                         </attDef>
                     </attList>
                 </elementSpec>
+                
+                <elementSpec ident="creation" mode="change" module="header">
+                    <content>
+                        <rng:zeroOrMore>
+                        <rng:choice>
+                            <rng:text/>
+                            <rng:ref name="model.limitedPhrase"/>
+                            <rng:ref name="listChange"/>
+                            <rng:ref name="listBibl"/>
+                            <rng:ref name="bibl"/>
+                        </rng:choice>
+                    </rng:zeroOrMore>
+                    </content>
+                </elementSpec>
 
                 <!--  adds value partly to binding/@contemporary-->
                 <elementSpec ident="personGrp" mode="change" module="namesdates">
@@ -1136,7 +1150,7 @@
                     <constraintSpec scheme="isoschematron" ident="persName">
                         <constraint>
                             <sch:rule
-                                context="tei:persName[ancestor::tei:TEI[@type='mss' or @type='place' or @type='ins' or @type='work']]">
+                                context="tei:persName[ancestor::tei:TEI[@type='mss' or @type='place' or @type='ins' or @type='work']][not(parent::tei:respStmt)]">
                                 <sch:report test="not(@ref)">A persName in a mss, place or work
                                     description should always contain an attribute @ref pointing to
                                     the relevant record</sch:report>
@@ -1361,6 +1375,8 @@
                                 <valItem ident="Leporello"><desc>manuscript format consisting of one leaf assembled in a multiple zig-zag folding, resembling an accordion, and generally enclosed between two hard boards.</desc></valItem>
                                 <valItem ident="Leaf"><desc>manuscript format consisting of one single unbound sheet.</desc></valItem>
                                 <valItem ident="Other"><desc>other manuscript formats.</desc></valItem>
+                                <valItem ident="Book"><desc>A printed book.</desc></valItem>
+                                <valItem ident="Photograph"><desc>A phootograph.</desc></valItem>
                             </valList>
                         </attDef>
 
