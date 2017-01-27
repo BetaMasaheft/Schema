@@ -1258,6 +1258,8 @@
                                 <valItem ident="shrine"/>
                                 <valItem ident="town"/>
                                 <valItem ident="region"/>
+                                <valItem ident="ethnic"/>
+                                <valItem ident="ford"/>
                                 <valItem ident="RegionalState"/>
                                 <valItem ident="province"/>
                                 <valItem ident="monastery"/>
@@ -1377,6 +1379,7 @@
                                 <valItem ident="Other"><desc>other manuscript formats.</desc></valItem>
                                 <valItem ident="Book"><desc>A printed book.</desc></valItem>
                                 <valItem ident="Photograph"><desc>A phootograph.</desc></valItem>
+                                <valItem ident="Inscription"><desc>An inscribed object different from a codex, scroll or leaf</desc></valItem>
                             </valList>
                         </attDef>
 
@@ -1664,7 +1667,7 @@
                             </valList>
                         </attDef>
                         <attDef ident="subtype" mode="replace" usage="opt">
-                            <valList type="closed">
+                            <valList type="open">
                                 <valItem ident="book">
                                     <desc>this container is for a book and may contain
                                         chapters</desc>
@@ -1676,6 +1679,17 @@
                                 <valItem ident="stanza">
                                     <desc>this container is for a stanza and may contain
                                         verses</desc>
+                                </valItem>
+                                
+                                <valItem ident="incipit">
+                                    <desc>incipit of the text</desc>
+                                </valItem>
+                                
+                                <valItem ident="explicit">
+                                    <desc>explicit of the text</desc>
+                                </valItem>
+                                <valItem ident="canon">
+                                    <desc>to be used for canonical texts like LIT2688CanonsNicaea2</desc>
                                 </valItem>
                             </valList>
                         </attDef>
