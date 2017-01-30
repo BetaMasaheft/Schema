@@ -1360,6 +1360,7 @@
                                 <valItem ident="other"/>
                                 <valItem ident="parchment"/>
                                 <valItem ident="silk"/>
+                                <valItem ident="stone"/>
                             </valList>
                         </attDef>
 
