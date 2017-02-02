@@ -55,6 +55,16 @@
                 <moduleRef key="corpus"
                     except="activity channel constitution derivation domain factuality interaction locale
                     preparedness purpose setting textDesc"/>
+                
+                <elementSpec ident="antiphon" mode="add">
+                    <classes>
+                        <memberOf key="model.pPart.transcriptional"/>
+                    </classes>
+                    <content>
+                        <rng:text/>
+                        
+                    </content>
+                </elementSpec>
 
                 <!--          LISTS OF VALUES FOR ATTRIBUTES-->
                 <!--  adds value partly to binding/@contemporary-->
