@@ -1005,7 +1005,7 @@
                     </constraintSpec>
                     <attList>
                         <attDef ident="xml:id" mode="change" usage="req"/>
-                        <attDef ident="type" mode="change" usage="opt"/>
+                        <attDef ident="type" mode="add" usage="opt"/>
                     </attList>
                 </elementSpec>
 
