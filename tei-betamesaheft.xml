@@ -1369,6 +1369,16 @@
 
                 <!--          controlled values for objectDesc @form -->
                 <elementSpec ident="objectDesc" mode="change" module="msdescription">
+                    <constraintSpec scheme="isoschematron" ident="objectDesc">
+                        <constraint>
+                            <sch:rule context="tei:msDesc">
+                                <sch:report
+                                    test="(//tei:objectDesc)[1][not(@form)]"
+                                    >At least the first objectDesc of msDesc must have attribute form specified.
+                                </sch:report>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
                     <attList>
                         <attDef ident="form" mode="replace" usage="opt">
                             <valList type="closed">
@@ -1460,7 +1470,8 @@
                                 <valItem ident="syriaca:share-a-name"><desc>http://syriaca.org/documentation/relations.html#share-a-name</desc></valItem>
                                 <valItem ident="syriaca:share-a-title"><desc>http://syriaca.org/documentation/relations.html#share-a-title</desc></valItem>
                                 <valItem ident="syriaca:born-at"><desc>http://syriaca.org/documentation/relations.html#born-at</desc></valItem>
-
+                                
+                                <valItem ident="saws:isCopierOf"><desc>http://purl.org/saws/ontology#isCopierOf</desc></valItem>
 
                                 <valItem ident="snap:DaughterOf"><desc>http://data.snapdrgn.net/ontology/snap#</desc></valItem>
                                 <valItem ident="snap:ChildOf"><desc>http://data.snapdrgn.net/ontology/snap#ChildOf</desc></valItem>
@@ -1640,6 +1651,13 @@
 
                 <!-- constraining values of div/@type  inherited from EpiDoc-->
                 <elementSpec ident="div" mode="change" module="textstructure">
+                    <constraintSpec scheme="isoschematron" ident="div">
+                        <constraint>
+                            <sch:rule context="tei:div[parent::tei:body]">
+                                <sch:report test="not(@type='edition')">the outermost div must always have an attribute type edition, bibliography, commentary, translation or apparatus; type textpart is to be used inside edition.</sch:report>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
                     <attList>
                         <attDef ident="type" mode="replace" usage="req">
                             <valList type="closed">

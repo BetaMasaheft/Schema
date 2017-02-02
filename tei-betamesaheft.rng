@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-02-02T14:19:10Z. .
+Schema generated from ODD source 2017-02-02T21:59:25Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -7943,7 +7943,16 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
             </optional>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-div-abstractModel-structure-l-constraint-report-30">
+                  id="tei-betamesaheft-div-div-constraint-rule-26">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="tei:div[parent::tei:body]">
+               <sch:report test="not(@type='edition')">the outermost div must always have an attribute type edition, bibliography, commentary, translation or apparatus; type textpart is to be used inside edition.</sch:report>
+            </sch:rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei-betamesaheft-div-abstractModel-structure-l-constraint-report-31">
             <rule context="tei:div">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7953,7 +7962,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-div-abstractModel-structure-p-constraint-report-31">
+                  id="tei-betamesaheft-div-abstractModel-structure-p-constraint-report-32">
             <rule context="tei:div">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9019,7 +9028,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(s-unit) contains a sentence-like division of a text. [17.1. Linguistic Segment Categories 8.4.1. Segmentation]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-s-noNestedS-constraint-report-32">
+                  id="tei-betamesaheft-s-noNestedS-constraint-report-33">
             <rule context="tei:s">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9585,7 +9594,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(anonymous block) contains any arbitrary component-level unit of text, acting as an anonymous container for phrase or inter level elements analogous to, but without the semantic baggage of, a paragraph. [16.3. Blocks, Segments, and Anchors]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ab-ab-constraint-rule-26">
+                  id="tei-betamesaheft-ab-ab-constraint-rule-27">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9595,7 +9604,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ab-ab-constraint-rule-27">
+                  id="tei-betamesaheft-ab-ab-constraint-rule-28">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9607,7 +9616,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ab-ab-constraint-rule-28">
+                  id="tei-betamesaheft-ab-ab-constraint-rule-29">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9618,7 +9627,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ab-ab-constraint-rule-29">
+                  id="tei-betamesaheft-ab-ab-constraint-rule-30">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9628,7 +9637,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ab-abstractModel-structure-p-constraint-report-37">
+                  id="tei-betamesaheft-ab-abstractModel-structure-p-constraint-report-38">
             <rule context="tei:ab">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9638,7 +9647,7 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ab-abstractModel-structure-l-constraint-report-38">
+                  id="tei-betamesaheft-ab-abstractModel-structure-l-constraint-report-39">
             <rule context="tei:ab">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9682,7 +9691,7 @@ Sample values include: 1] pattern; 2] usage; 3] executed; 4] dividers</a:documen
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(arbitrary segment) represents any segmentation of text below the chunk level. [16.3. Blocks, Segments, and Anchors 6.2. Components of the Verse Line 7.2.5. Speech Contents]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-seg-seg-constraint-rule-30">
+                  id="tei-betamesaheft-seg-seg-constraint-rule-31">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9836,7 +9845,7 @@ You must supply at least two values for @target on <name/>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-report-40">
+                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-report-41">
             <rule context="tei:dimensions">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9846,7 +9855,7 @@ The element <name/> may appear once only
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-report-41">
+                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-report-42">
             <rule context="tei:dimensions">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9856,7 +9865,7 @@ The element <name/> may appear once only
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-report-42">
+                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-report-43">
             <rule context="tei:dimensions">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -10067,7 +10076,7 @@ Sample values include: 1] m</a:documentation>
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines a location within a manuscript or manuscript part, usually as a (possibly discontinuous) sequence of folio references. [10.3.5. References to Locations within a Manuscript]</a:documentation>
          <ref name="tei_macro.xtext"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-locus-locus-constraint-rule-31">
+                  id="tei-betamesaheft-locus-locus-constraint-rule-32">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -10179,7 +10188,7 @@ Sample values include: 1] m</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-origDate-origDate-constraint-rule-32">
+                  id="tei-betamesaheft-origDate-origDate-constraint-rule-33">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -10436,7 +10445,7 @@ Sample values include: 1] editor; 2] mss; 3] literature; 4] foundation; 5] compo
       
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-msIdentifier-msId_minimal-constraint-report-45">
+                  id="tei-betamesaheft-msIdentifier-msId_minimal-constraint-report-46">
             <rule context="tei:msIdentifier">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -10541,7 +10550,7 @@ Sample values include: 1] editor; 2] mss; 3] literature; 4] foundation; 5] compo
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the colophon of a manuscript item: that is, a statement providing information regarding the date, place, agency, or reason for production of the manuscript. [10.6.1. The msItem and msItemStruct Elements]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-colophon-colophon-constraint-rule-33">
+                  id="tei-betamesaheft-colophon-colophon-constraint-rule-34">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -10694,7 +10703,7 @@ Sample values include: 1] editor; 2] mss; 3] literature; 4] foundation; 5] compo
             </choice>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-msItem-msItem-constraint-rule-34">
+                  id="tei-betamesaheft-msItem-msItem-constraint-rule-35">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -10940,6 +10949,16 @@ Sample values include: 1] editor; 2] mss; 3] literature; 4] foundation; 5] compo
                </optional>
             </group>
          </choice>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei-betamesaheft-objectDesc-objectDesc-constraint-rule-36">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      context="tei:msDesc">
+               <sch:report test="(//tei:objectDesc)[1][not(@form)]">At least the first objectDesc of msDesc must have attribute form specified.
+                                </sch:report>
+            </sch:rule>
+         </pattern>
          <ref name="tei_att.global.attributes"/>
          <optional>
             <attribute name="form">
@@ -11260,7 +11279,7 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(note on decoration) contains a note describing either a decorative component of a manuscript, or a fairly homogenous class of such components. [10.7.3. Bindings, Seals, and Additional Material]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-35">
+                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-37">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11271,7 +11290,7 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-36">
+                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-38">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11492,7 +11511,7 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains any descriptive or other information concerning the origin of a manuscript or manuscript part. [10.8. History]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-origin-origin-constraint-rule-37">
+                  id="tei-betamesaheft-origin-origin-constraint-rule-39">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11695,7 +11714,7 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
             </choice>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-msPart-msPart-constraint-rule-38">
+                  id="tei-betamesaheft-msPart-msPart-constraint-rule-40">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11712,7 +11731,7 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-msPart-deprecate-altIdentifier-child-constraint-report-54">
+                  id="tei-betamesaheft-msPart-deprecate-altIdentifier-child-constraint-report-56">
             <rule context="tei:msPart">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -12078,7 +12097,7 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(personal name) contains a proper noun or proper-noun phrase referring to a person, possibly including one or more of the person's forenames, surnames, honorifics, added names, etc. [13.2.1. Personal Names]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-persName-persName-constraint-rule-39">
+                  id="tei-betamesaheft-persName-persName-constraint-rule-41">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12216,7 +12235,7 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains an absolute or relative place name. [13.2.3. Place Names]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-placeName-placeName-constraint-rule-40">
+                  id="tei-betamesaheft-placeName-placeName-constraint-rule-42">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12619,7 +12638,7 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(geographical coordinates) contains any expression of a set of geographic coordinates, representing a point, line, or area on the surface of the earth in some notation. [13.3.4.1. Varieties of Location]</a:documentation>
          <text/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-geo-geo-constraint-rule-41">
+                  id="tei-betamesaheft-geo-geo-constraint-rule-43">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14320,7 +14339,7 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
             <ref name="tei_desc"/>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-relation-relation-constraint-rule-42">
+                  id="tei-betamesaheft-relation-relation-constraint-rule-44">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14340,7 +14359,7 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-relation-activemutual-constraint-report-59">
+                  id="tei-betamesaheft-relation-activemutual-constraint-report-61">
             <rule context="tei:relation">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14349,7 +14368,7 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-relation-activepassive-constraint-report-60">
+                  id="tei-betamesaheft-relation-activepassive-constraint-report-62">
             <rule context="tei:relation">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14425,6 +14444,8 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://syriaca.org/documentation/relations.html#share-a-title</a:documentation>
                <value>syriaca:born-at</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://syriaca.org/documentation/relations.html#born-at</a:documentation>
+               <value>saws:isCopierOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isCopierOf</a:documentation>
                <value>snap:DaughterOf</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#</a:documentation>
                <value>snap:ChildOf</value>
@@ -15235,7 +15256,7 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains either a description of a single witness referred to within the critical apparatus, or a list of witnesses which is to be referred to by a single sigil. [12.1. The Apparatus Entry, Readings, and Witnesses]</a:documentation>
          <ref name="tei_macro.limitedContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-witness-witness-constraint-rule-43">
+                  id="tei-betamesaheft-witness-witness-constraint-rule-45">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -15256,7 +15277,7 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-witness-witness-constraint-rule-44">
+                  id="tei-betamesaheft-witness-witness-constraint-rule-46">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -15306,7 +15327,7 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
             </choice>
          </attribute>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-rule-45">
+                  id="tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-rule-47">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
