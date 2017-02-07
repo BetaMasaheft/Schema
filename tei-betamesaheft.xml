@@ -1664,7 +1664,7 @@
                     <constraintSpec scheme="isoschematron" ident="div">
                         <constraint>
                             <sch:rule context="tei:div[parent::tei:body]">
-                                <sch:report test="not(@type='edition')">the outermost div must always have an attribute type edition, bibliography, commentary, translation or apparatus; type textpart is to be used inside edition.</sch:report>
+                                <sch:report test="@type='textpart'">the outermost div must always have an attribute type edition, bibliography, commentary, translation or apparatus; type textpart is to be used inside edition.</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
