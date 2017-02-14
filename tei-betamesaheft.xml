@@ -94,6 +94,23 @@
                     </rng:zeroOrMore>
                     </content>
                 </elementSpec>
+                
+                <elementSpec ident="date" mode="change" module="header">
+                    <content>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:text/>
+                                <rng:ref name="tei_model.gLike"/>
+                                <rng:ref name="tei_model.phrase"/>
+                                <rng:ref name="tei_model.global"/>
+                                <rng:ref name="listChange"/>
+                                <rng:ref name="listBibl"/>
+                                <rng:ref name="bibl"/>
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
+                </elementSpec>
+                
 
                 <!--  adds value partly to binding/@contemporary-->
                 <elementSpec ident="personGrp" mode="change" module="namesdates">
@@ -426,7 +443,7 @@
                         </attDef>
                         <attDef ident="ref" mode="change" usage="rec"/>
                         <attDef ident="type" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="closed">
                                 <valItem ident="complete"><desc>the work is contained completely in the manuscript</desc></valItem>
                                 <valItem ident="incomplete"><desc>the work is contained incompetely in the manuscript, i.e. even only a small part is missing </desc></valItem>
                                 <valItem ident="normalized"/>
@@ -437,6 +454,9 @@
                                 <valItem ident="uniform">
                                     <desc>syriaca.org: a title for such work established by the
                                         editor or cataloguer</desc>
+                                </valItem>
+                                <valItem ident="main">
+                                    <desc>for titleStmt, specifies to which title to give priority in output.</desc>
                                 </valItem>
                             </valList>
                         </attDef>
