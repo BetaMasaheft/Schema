@@ -81,6 +81,34 @@
                     </attList>
                 </elementSpec>
                 
+                
+                <!--  adds value partly to add/@place-->
+                <elementSpec ident="add" mode="change" module="core">
+                    <attList>
+                                <attDef ident="place" mode="replace">
+                                    <valList type="closed">
+                                        <valItem ident="above"/>
+                                        <valItem ident="below"/>
+                                        <valItem ident="bottom"/>
+                                        <valItem ident="inline"/>
+                                        <valItem ident="interlinear"/>
+                                        <valItem ident="left"/>
+                                        <valItem ident="margin"/>
+                                        <valItem ident="mixed"/>
+                                        <valItem ident="opposite"/>
+                                        <valItem ident="overleaf"/>
+                                        <valItem ident="overstrike">
+                                            <desc>text written over previously deleted text</desc>
+                                        </valItem>
+                                        <valItem ident="right"/>
+                                        <valItem ident="top"/>
+                                        <valItem ident="unspecified"/>
+                                    </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                
+                
                 <elementSpec ident="creation" mode="change" module="header">
                     <content>
                         <rng:zeroOrMore>
@@ -112,7 +140,6 @@
                 </elementSpec>
                 
 
-                <!--  adds value partly to binding/@contemporary-->
                 <elementSpec ident="personGrp" mode="change" module="namesdates">
                     <attList>
                         <attDef ident="role" mode="change">
@@ -125,6 +152,8 @@
                         </attDef>
                     </attList>
                 </elementSpec>
+                
+                
 
                 <!--         suggest values for @type in origDate-->
                 <elementSpec ident="origDate" mode="change" module="msdescription">
