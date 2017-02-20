@@ -1666,6 +1666,9 @@
                                 <valItem ident="saws:hasUsed"><desc>http://purl.org/saws/ontology#hasUsed</desc></valItem>
                                 <valItem ident="saws:hasWritten"><desc>http://purl.org/saws/ontology#hasWritten</desc></valItem>
                                 <valItem ident="saws:isAncestorOf"><desc>http://purl.org/saws/ontology#isAncestorOf</desc></valItem>
+                                <valItem ident="dcterms:creator">
+                                    <desc>http://purl.org/dc/terms/creator</desc>
+                                </valItem>
                                 <valItem ident="saws:isAttributedAuthorOf"><desc>http://purl.org/saws/ontology#isAttributedAuthorOf</desc></valItem>
                                 <valItem ident="saws:isAttributedToAuthor"><desc>http://purl.org/saws/ontology#isAttributedToAuthor</desc></valItem>
                                 <valItem ident="saws:isChildOf"><desc>http://purl.org/saws/ontology#isChildOf</desc></valItem>
