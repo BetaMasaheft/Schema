@@ -269,6 +269,11 @@
                                 <valItem ident="Bible"><desc>works belonging to the biblical canon, subdivided into the Old and New Testament. </desc></valItem>
                                 <valItem ident="Biography"><desc>works containing the description of the life events of an individual.</desc></valItem>
                                 <valItem ident="CanonLaw"><desc>works containing regulations for the government of the Christian organizations, e.g., the Sinodos, the Fətḥa Nagaśt, the Śərʿata faws manfasāwi.</desc></valItem>
+                                <valItem ident="TigrinyaLiterature"><desc>works containing texts of unspecified Tigrinya subject.</desc></valItem>
+                                <valItem ident="Fiction"><desc>works containing fiction.</desc></valItem>
+                                <valItem ident="Translation"><desc>works containing a translation.</desc></valItem>
+                                <valItem ident="AmharicLiterature"><desc>works containing texts of unspecified Amharic subject.</desc></valItem>
+                                <valItem ident="BetaEsraelLiterature"><desc>works containing texts of unspecified Jewish subject.</desc></valItem>
                                 <valItem ident="ChristianLiterature"><desc>works containing texts of unspecified Christian subject.</desc></valItem>
                                 <valItem ident="Hagiography"><desc>works and collections of works containing the Vita (Life) of a saint, included the cycles of miracles performed by the saint himself, as well as Acts and Passiones of martyrs. </desc></valItem>
                                 <valItem ident="HistoryAndHistoriography"><desc>works containing royal chronicles and other historical material, e.g., Tārik za-Walda ʿAmid, Zenā ʾAyhud and various treatises of Ethiopian history.</desc></valItem>
