@@ -1635,18 +1635,19 @@
 
                                 <!--                          list INCOMPLETE! -->
                                 <valItem ident="saws:AbstractManuscriptText"><desc>http://purl.org/saws/ontology#AbstractManuscriptText</desc></valItem>
-                                <valItem ident="saws:P129i_is_subject_of"><desc>http://purl.org/saws/ontology#P129i_is_subject_of</desc></valItem>
-                                <valItem ident="saws:F15_Complex_Work"><desc>http://purl.org/saws/ontology#F15_Complex_Work</desc></valItem>
-                                <valItem ident="saws:F16_Container_Work"><desc>http://purl.org/saws/ontology#F16_Container_Work</desc></valItem>
-                                <valItem ident="saws:F17_Aggregation_Work"><desc>http://purl.org/saws/ontology#F17_Aggregation_Work</desc></valItem>
-                                <valItem ident="saws:CLP57_should_have_number_of_parts"><desc>http://purl.org/saws/ontology#CLP57_should_have_number_of_parts</desc></valItem>
-                                <valItem ident="saws:P57_has_number_of_parts"><desc>http://purl.org/saws/ontology#P57_has_number_of_parts</desc></valItem>
-                                <valItem ident="saws:CLP45_should_consist_of"><desc>http://purl.org/saws/ontology#CLP45_should_consist_of</desc></valItem>
-                                <valItem ident="saws:CLP45i_should_be_incorporated_in"><desc>http://purl.org/saws/ontology#CLP45i_should_be_incorporated_in</desc></valItem>
-                                <valItem ident="saws:CLP46_should_be_composed_of"><desc>http://purl.org/saws/ontology#CLP46_should_be_composed_of</desc></valItem>
-                                <valItem ident="saws:CLP46i_may_form_part_of"><desc>http://purl.org/saws/ontology#CLP46i_may_form_part_of</desc></valItem>
-                                <valItem ident="saws:CLR6_should_carry"><desc>http://purl.org/saws/ontology#CLR6_should_carry</desc></valItem>
-                                <valItem ident="saws:CLR6i_should_be_carried_by"><desc>http://purl.org/saws/ontology#CLR6i_should_be_carried_by</desc></valItem>
+                                <valItem ident="ecrm:P129i_is_subject_of"><desc>http://erlangen-crm.org/current/P129i_is_subject_of</desc></valItem>
+                                <valItem ident="ecrm:P129_is_about"><desc>http://erlangen-crm.org/current/P129_is_about</desc></valItem>
+                                <valItem ident="ecrm:F15_Complex_Work"><desc>http://erlangen-crm.org/efrbroo/F15_Complex_Work</desc></valItem>
+                                <valItem ident="ecrm:F16_Container_Work"><desc>http://erlangen-crm.org/efrbroo/F16_Container_Work</desc></valItem>
+                                <valItem ident="ecrm:F17_Aggregation_Work"><desc>http://erlangen-crm.org/efrbroo/F17_Aggregation_Work</desc></valItem>
+                                <valItem ident="ecrm:CLP57_should_have_number_of_parts"><desc>http://erlangen-crm.org/efrbroo/CLP57_should_have_number_of_parts</desc></valItem>
+                                <valItem ident="ecrm:P57_has_number_of_parts"><desc>http://erlangen-crm.org/current/P57_has_number_of_parts</desc></valItem>
+                                <valItem ident="ecrm:CLP45_should_consist_of"><desc>http://erlangen-crm.org/efrbroo/CLP45_should_consist_of</desc></valItem>
+                                <valItem ident="ecrm:CLP45i_should_be_incorporated_in"><desc>http://erlangen-crm.org/efrbroo/CLP45i_should_be_incorporated_in</desc></valItem>
+                                <valItem ident="ecrm:CLP46_should_be_composed_of"><desc>http://erlangen-crm.org/efrbroo/CLP46_should_be_composed_of</desc></valItem>
+                                <valItem ident="ecrm:CLP46i_may_form_part_of"><desc>http://erlangen-crm.org/efrbroo/CLP46i_may_form_part_of</desc></valItem>
+                                <valItem ident="ecrm:CLR6_should_carry"><desc>http://erlangen-crm.org/efrbroo/CLR6_should_carry</desc></valItem>
+                                <valItem ident="ecrm:CLR6i_should_be_carried_by"><desc>http://erlangen-crm.org/efrbroo/CLR6i_should_be_carried_by</desc></valItem>
                                 <valItem ident="saws:commentMadeBy"><desc>http://purl.org/saws/ontology#commentMadeBy</desc></valItem>
                                 <valItem ident="saws:contains"><desc>http://purl.org/saws/ontology#contains</desc></valItem>
                                 <valItem ident="saws:containsTextInLanguage"><desc>http://purl.org/saws/ontology#containsTextInLanguage</desc></valItem>
