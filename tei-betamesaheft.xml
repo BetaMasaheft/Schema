@@ -492,6 +492,9 @@
                                 <valItem ident="main">
                                     <desc>for titleStmt, specifies to which title to give priority in output.</desc>
                                 </valItem>
+                                <valItem ident="short">
+                                    <desc>for titleStmt, contains an abbreviated form of the title, typically citation forms like Sal. Mar. or Jn. or Gen..</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                     </attList>
@@ -1897,6 +1900,11 @@
                                 <rng:ref name="data.word"/>
                             </datatype>
                             <valList type="open">
+                                <valItem ident="age"/>
+                                <valItem ident="reign"/>
+                                <valItem ident="life"/>
+                                <valItem ident="marriage"/>
+                                <valItem ident="generic-duration"/>
                                 <valItem ident="foundation"/>
                                 <valItem ident="composition"/>
                                 <valItem ident="translation"/>
