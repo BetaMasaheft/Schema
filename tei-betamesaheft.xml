@@ -1497,7 +1497,7 @@
                     <attList>
                         <attDef ident="name" mode="replace" usage="req">
                             <valList type="closed">
-                                <valItem ident="dcterms:hasPart"><desc>http://purl.org/dc/terms/hasPart</desc></valItem>
+                                <!--<valItem ident="dcterms:hasPart"><desc>http://purl.org/dc/terms/hasPart</desc></valItem> --><!--to be removed-->
                                 <valItem ident="gn:nearBy"><desc>http://www.geonames.org/ontology#nearby</desc></valItem>
                                 <valItem ident="gn:locatedIn"><desc>http://www.geonames.org/ontology#locatedIn</desc></valItem>
                                 <valItem ident="dcterms:isPartOf"><desc>http://purl.org/dc/terms/isPartOf</desc></valItem>
