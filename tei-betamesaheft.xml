@@ -238,6 +238,7 @@
                                 <valItem ident="line"><desc>line</desc></valItem>
                                 <valItem ident="part"><desc>part</desc></valItem>
                                 <valItem ident="volume"><desc>volume</desc></valItem>
+                                <valItem ident="item"><desc>item number</desc></valItem>
                                 <valItem ident="fol"><desc>folio</desc></valItem>
                                 <valItem ident="note"><desc>numbered note (footnote, sidenote, endnote)</desc></valItem>
                             </valList>
