@@ -1070,6 +1070,14 @@
                 </elementSpec>
 
                 <elementSpec ident="colophon" mode="change" module="msdescription">
+                    <content>
+                        <macroRef key="macro.phraseSeq"/>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="tei_model.biblLike"/>
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
                     <constraintSpec scheme="isoschematron" ident="colophon">
                         <constraint>
                             <sch:rule context="tei:colophon/@xml:id">
