@@ -68,6 +68,18 @@
 
                 <!--          LISTS OF VALUES FOR ATTRIBUTES-->
                 <!--  adds value partly to binding/@contemporary-->
+               
+                <elementSpec ident="del" mode="change" module="core">
+                    <attList>
+                        <attDef ident="rend" mode="replace">
+                            <valList type="closed">
+                                <valItem ident="erasure"/>
+                                <valItem ident="strikethrough"/>
+                                <valItem ident="exponctuated"/>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
                 <elementSpec ident="binding" mode="change" module="msdescription">
                     <attList>
                         <attDef ident="contemporary" mode="replace">
