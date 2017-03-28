@@ -1963,6 +1963,14 @@
                 </elementSpec>
 
                 <elementSpec ident="locus" module="msdescription" mode="change">
+                    <content>
+                        <macroRef key="macro.xtext"/>
+                        <rng:zeroOrMore>
+                            <rng:choice>
+                                <rng:ref name="tei_model.certLike"/>
+                            </rng:choice>
+                        </rng:zeroOrMore>
+                    </content>
                     <!--  checks that locus has @target or @from-->
                     <constraintSpec scheme="isoschematron" ident="locus">
                         <constraint>
@@ -1975,6 +1983,7 @@
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
+                    
                 </elementSpec>
 
                 <elementSpec ident="item" module="msdescription" mode="change">
