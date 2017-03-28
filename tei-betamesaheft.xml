@@ -518,6 +518,7 @@
                                 <valItem ident="editions"><desc> Editions of the work</desc></valItem>
                                 <valItem ident="text"><desc></desc></valItem>
                                 <valItem ident="otherLanguages"><desc></desc></valItem>
+                                <valItem ident="clavis"><desc></desc></valItem>
                                 <valItem ident="translation"><desc>Modern translations of the work </desc></valItem>
                                 <valItem ident="secondary"><desc>Secondary bibliography on the subject of the record</desc></valItem>
                                 <valItem ident="relations"><desc>Relations between the subject of the record and other entities (persons, related works, manuscript filiation etc.)</desc></valItem>
