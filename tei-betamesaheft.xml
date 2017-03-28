@@ -229,8 +229,15 @@
                         </constraint>
                     </constraintSpec>
                     <attList>
-                        <attDef ident="unit" mode="change">
+                        <attDef ident="unit" mode="replace">
                             <valList type="open">
+                                <valItem ident="page"><desc>page</desc></valItem>
+                                <valItem ident="chapter"><desc>chapter</desc></valItem>
+                                <valItem ident="column"><desc>column</desc></valItem>
+                                <valItem ident="issue"><desc>issue</desc></valItem>
+                                <valItem ident="line"><desc>line</desc></valItem>
+                                <valItem ident="part"><desc>part</desc></valItem>
+                                <valItem ident="volume"><desc>volume</desc></valItem>
                                 <valItem ident="fol"><desc>folio</desc></valItem>
                                 <valItem ident="note"><desc>numbered note (footnote, sidenote, endnote)</desc></valItem>
                             </valList>
