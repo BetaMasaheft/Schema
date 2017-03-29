@@ -67,7 +67,7 @@
                 </elementSpec>
 
                 <!--          LISTS OF VALUES FOR ATTRIBUTES-->
-                <!--  adds value partly to binding/@contemporary-->
+                <!--  adds value partly to del/@rend-->
                
                 <elementSpec ident="del" mode="change" module="core">
                     <attList>
@@ -281,6 +281,13 @@
                                 <!--                          list coming from myCore-->
                                 <valItem ident="ApocryphaPseudoepigrapha"><desc>works of unknown or doubtful authorship rejected from the set of the canonical scriptures, e.g., the book of Enoch, Jubilees, Herma, the Miracles of Mary, the Miracles of Jesus, Maṣḥafa ṭomār, the apocryphal Acts of the Apostles, etc.</desc></valItem>
                                 <!--mycore-->
+                                
+                                <valItem ident="Gon"></valItem>
+                                <valItem ident="Paks1"></valItem>
+                                <valItem ident="Paks2"></valItem>
+                                <valItem ident="Aks"></valItem>
+                                <valItem ident="ZaMa"></valItem>
+                                <valItem ident="MoPe"></valItem>
                                 <valItem ident="ArarayMode"><desc>ʾArārāy musical mode</desc></valItem>
                                 <valItem ident="EzelMode"><desc>ʿƎzǝl musical mode</desc></valItem>
                                 <valItem ident="GeezMode"><desc>Gǝʿǝz musical mode</desc></valItem>
