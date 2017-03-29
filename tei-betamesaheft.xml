@@ -281,6 +281,9 @@
                                 <!--                          list coming from myCore-->
                                 <valItem ident="ApocryphaPseudoepigrapha"><desc>works of unknown or doubtful authorship rejected from the set of the canonical scriptures, e.g., the book of Enoch, Jubilees, Herma, the Miracles of Mary, the Miracles of Jesus, Maṣḥafa ṭomār, the apocryphal Acts of the Apostles, etc.</desc></valItem>
                                 <!--mycore-->
+                                <valItem ident="ArarayMode"><desc>ʾArārāy musical mode</desc></valItem>
+                                <valItem ident="EzelMode"><desc>ʿƎzǝl musical mode</desc></valItem>
+                                <valItem ident="GeezMode"><desc>Gǝʿǝz musical mode</desc></valItem>
                                 <valItem ident="Vocabulary"><desc></desc></valItem>
                                 <valItem ident="Apocrypha"><desc></desc></valItem>
                                 <valItem ident="Pseudoepigrapha"><desc></desc></valItem>
