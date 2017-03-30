@@ -73,9 +73,10 @@
                     <attList>
                         <attDef ident="rend" mode="replace">
                             <valList type="closed">
-                                <valItem ident="erasure"/>
-                                <valItem ident="strikethrough"/>
-                                <valItem ident="exponctuated"/>
+                                <valItem ident="erasure"><desc>scrathed with a knife or similar</desc></valItem>
+                                <valItem ident="strikethrough"><desc>crossed out with red or black ink, a line or dashes</desc></valItem>
+                                <valItem ident="exponctuated"><desc>marked with dots above or below the line</desc></valItem>
+                                <valItem ident="effaced"><desc>deleted or washed out. the material is untouched</desc></valItem>
                             </valList>
                         </attDef>
                     </attList>
