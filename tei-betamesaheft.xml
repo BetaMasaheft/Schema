@@ -295,6 +295,7 @@
                                 <valItem ident="Vocabulary"><desc></desc></valItem>
                                 <valItem ident="Apocrypha"><desc></desc></valItem>
                                 <valItem ident="Pseudoepigrapha"><desc></desc></valItem>
+                                <valItem ident="Miracle"><desc></desc></valItem>
                                 <valItem ident="NewTestament"><desc>biblical books belonging to the New Testament.</desc></valItem>
                                 <valItem ident="OldTestament"><desc>biblical books belonging to the Old Testament.</desc></valItem>
                                 <valItem ident="Bible"><desc>works belonging to the biblical canon, subdivided into the Old and New Testament. </desc></valItem>
