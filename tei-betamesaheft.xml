@@ -315,7 +315,7 @@
                                 <valItem ident="Koran"><desc>manuscripts containing the Koran.</desc></valItem>
                                 <valItem ident="LegalDocument"><desc>texts that formally record grants and rights to institutions and individuals, such as land charters, donation acts, land grants. </desc></valItem>
                                 <valItem ident="Liturgy"><desc>works containing directives for the liturgy of the office services (except for the mass and rituals like weddings and funerals), e.g., Maṣḥafa nəfq, the Horologium, etc.</desc></valItem>
-                                <valItem ident="Chants"><desc>works containing chants, hymns and antiphons to be sung for liturgical purposes, e.g., Dəggwā, Ṣoma dəggwā, Məʿərāf, Zəmmāre, Mawāśəʾət.</desc></valItem>
+                                <valItem ident="Chants"><desc>works containing chants, hymns and antiphons to be sung for liturgical purposes, e.g., Dəggʷā, Ṣoma dəggʷā, Məʿərāf, Zəmmāre, Mawāśəʾət.</desc></valItem>
                                 <valItem ident="Lectionary"><desc>works containing scriptural readings to be read on various religious occasions (fast, feasts, liturgical periods), e.g. Maṣḥafa gəṣṣəw, Maṣḥafa ʾaśləti, etc. </desc></valItem>
                                 <valItem ident="Missal"><desc></desc></valItem>
                                 <valItem ident="RitualsAndRites"><desc>works containing directives for the celebration of religious offices such as weddings and funerals, e.g., Maṣḥafa taklil and Maṣḥafa gənzat.</desc></valItem>
@@ -330,7 +330,7 @@
                                 <valItem ident="Prayers"><desc>works containing prayers, supplications and invocations to God and other revered entities.</desc></valItem>
                                 <valItem ident="Religion"><desc></desc></valItem>
                                 <valItem ident="Theology"><desc>works containing patristic texts dealing with theological subjects, e.g. Qerəllos, Hāymānota ʾAbaw, the Five Pillars of Mystery, etc.</desc></valItem>
-                                <valItem ident="Commentary"><desc>exegetical works containing the interpretation of biblical texts, e.g, the Tərgwāme and ʾAndəmtā corpus.</desc></valItem>
+                                <valItem ident="Commentary"><desc>exegetical works containing the interpretation of biblical texts, e.g, the Tərgʷāme and ʾAndəmtā corpus.</desc></valItem>
                                 <valItem ident="Chronography"><desc>works containing texts for the calculation of the moveable feasts and for other calendrical computes, e.g., ʾAbušākər, Bāḥra ḥassāb.</desc></valItem>
                             </valList>
                         </attDef>
