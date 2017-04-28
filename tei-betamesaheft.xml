@@ -1295,7 +1295,7 @@
                             <valList>
                                 <valItem ident="normalized"><desc>the normalized transcription of the name in fidel</desc></valItem> 
                                 <valItem ident="given"><desc>name given at birth</desc></valItem>
-                                <valItem ident="birthName"><desc>name given at birth</desc></valItem>
+                                <valItem ident="birth"><desc>name given at birth</desc></valItem>
                                 <valItem ident="baptismal"><desc>name given at baptism</desc></valItem>
                                 <valItem ident="regnal"><desc>name given on coronation (kings but also patriarchs)</desc></valItem>
                                 <valItem ident="monastic"><desc>name given on entering monastic life </desc></valItem>
