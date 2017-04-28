@@ -74,10 +74,10 @@
                     <attList>
                         <attDef ident="rend" mode="replace">
                             <valList type="closed">
-                                <valItem ident="erasure"><desc>scrathed with a knife or similar</desc></valItem>
+                                <valItem ident="erasure"><desc>scratched with a knife or similar</desc></valItem>
                                 <valItem ident="strikethrough"><desc>crossed out with red or black ink, a line or dashes</desc></valItem>
                                 <valItem ident="exponctuated"><desc>marked with dots above or below the line</desc></valItem>
-                                <valItem ident="effaced"><desc>deleted or washed out. the material is untouched</desc></valItem>
+                                <valItem ident="effaced"><desc>deleted or washed out, the material is untouched</desc></valItem>
                             </valList>
                         </attDef>
                     </attList>
@@ -232,7 +232,7 @@
                         <constraint>
                             <sch:rule context="tei:citedRange">
                                 <sch:report test="@from or @to">Please, don't use @from and @to in
-                                    citedRange, wirte the range into the element</sch:report>
+                                    citedRange, write the range into the element</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:citedRange">
                                 <sch:report test="not(text())">An Empty citedRange is not allowed,
@@ -284,12 +284,12 @@
                                 <valItem ident="ApocryphaPseudoepigrapha"><desc>works of unknown or doubtful authorship rejected from the set of the canonical scriptures, e.g., the book of Enoch, Jubilees, Herma, the Miracles of Mary, the Miracles of Jesus, Maṣḥafa ṭomār, the apocryphal Acts of the Apostles, etc.</desc></valItem>
                                 <!--mycore-->
                                 
-                                <valItem ident="Gon"></valItem>
-                                <valItem ident="Paks1"></valItem>
-                                <valItem ident="Paks2"></valItem>
-                                <valItem ident="Aks"></valItem>
-                                <valItem ident="ZaMa"></valItem>
-                                <valItem ident="MoPe"></valItem>
+                                <valItem ident="Gon"><desc>Gondarine (1632-1769 CE)</desc></valItem>
+                                <valItem ident="Paks1"><desc>Postaksumite I (1200-1433 CE)</desc></valItem>
+                                <valItem ident="Paks2"><desc>Postaksumite II (1434-1632 CE)</desc></valItem>
+                                <valItem ident="Aks"><desc>Aksumite (300-700 CE )</desc></valItem>
+                                <valItem ident="ZaMa"><desc>Zamana Masāfǝnt (1769-1855 CE)</desc></valItem>
+                                <valItem ident="MoPe"><desc>Modern Period (1855-1974 CE)</desc></valItem>
                                 <valItem ident="ArarayMode"><desc>ʾArārāy musical mode</desc></valItem>
                                 <valItem ident="EzelMode"><desc>ʿƎzǝl musical mode</desc></valItem>
                                 <valItem ident="GeezMode"><desc>Gǝʿǝz musical mode</desc></valItem>
@@ -317,7 +317,6 @@
                                 <valItem ident="Liturgy"><desc>works containing directives for the liturgy of the office services (except for the mass and rituals like weddings and funerals), e.g., Maṣḥafa nəfq, the Horologium, etc.</desc></valItem>
                                 <valItem ident="Chants"><desc>works containing chants, hymns and antiphons to be sung for liturgical purposes, e.g., Dəggʷā, Ṣoma dəggʷā, Məʿərāf, Zəmmāre, Mawāśəʾət.</desc></valItem>
                                 <valItem ident="Lectionary"><desc>works containing scriptural readings to be read on various religious occasions (fast, feasts, liturgical periods), e.g. Maṣḥafa gəṣṣəw, Maṣḥafa ʾaśləti, etc. </desc></valItem>
-                                <valItem ident="Missal"><desc></desc></valItem>
                                 <valItem ident="RitualsAndRites"><desc>works containing directives for the celebration of religious offices such as weddings and funerals, e.g., Maṣḥafa taklil and Maṣḥafa gənzat.</desc></valItem>
                                 <valItem ident="Missal"><desc>works containing liturgical instructions for the celebration of the mass, e.g. Maṣḥafa qəddāse.</desc></valItem>
                                 <valItem ident="Magic"><desc>works containing magic texts, prayers and formulas to be recited or carried along for healing and as a protection from demons, diseases and natural accidents, e.g. Maftəḥe śərāy, etc.</desc></valItem>
@@ -426,7 +425,7 @@
                                 <sch:report test="not(@target or @corresp or @cRef)">ref must be used with
                                     either a @corresp pointing to a project xml:id or a @target
                                     pointing to a an internal id or a @cRef pointing to an external urn, like those in Perseus</sch:report> <sch:report
-                                    test="not(@type) and @corresp">Please use @correps only for
+                                    test="not(@type) and @corresp">Please use @corresp only for
                                     external entities, assigning also a @type. if you need to point
                                     to something into the current file or to a resource external to
                                     the project use @target.</sch:report> </sch:rule>
@@ -513,7 +512,7 @@
                             <valList type="closed">
                                 <valItem ident="complete"><desc>the work is contained completely in the manuscript</desc></valItem>
                                 <valItem ident="incomplete"><desc>the work is contained incompetely in the manuscript, i.e. even only a small part is missing </desc></valItem>
-                                <valItem ident="normalized"/>
+                                <valItem ident="normalized"><desc>Transliteration of the title</desc></valItem>
                                 <valItem ident="supplied">
                                     <desc>syriaca.org: an existing print catalogue provides a
                                         descriptive title</desc>
@@ -1020,7 +1019,7 @@
                                 <valItem ident="rubrication"/>
                                 <valItem ident="secondary"/>
                                 <valItem ident="tooling"/>
-                                <valItem ident=" unspecified"/>
+                                <valItem ident="unspecified"/>
                                 <valItem ident="unwan"/>
                                 <valItem ident="vignette"/>
                                 <valItem ident="engraving"/>
@@ -1305,7 +1304,7 @@
                                 <valItem ident="war"><desc>nom de guerre (if different from horse name, e.g. Malas)</desc></valItem>
                                 <valItem ident="hypocoristic"><desc>short form (diminutive or abbreviated, e.g. Taklo for Takla Maryam)</desc></valItem>
                                 <valItem ident="patronymic"><desc>father's name, esp. for eventual Russian names, but could be also highlighted in others</desc></valItem>
-                                
+                                <valItem ident="alt"><desc>alternative name</desc></valItem>
                             </valList>
                         </attDef>
                     </attList>
