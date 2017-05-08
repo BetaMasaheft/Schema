@@ -19,6 +19,7 @@
             <change who="PL" when="2016-04-08">generated first version of the ODD from
                 requirements</change>
             <change who="DR" when="2017-04-21">Added keyword</change>
+            <change who="DR" when="2017-05-02">Added value definitions @place</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -101,21 +102,21 @@
                     <attList>
                                 <attDef ident="place" mode="replace">
                                     <valList type="closed">
-                                        <valItem ident="above"/>
-                                        <valItem ident="below"/>
-                                        <valItem ident="bottom"/>
-                                        <valItem ident="inline"/>
+                                        <valItem ident="above"><desc>text written above the line</desc></valItem>
+                                        <valItem ident="below"><desc>text written below the line</desc></valItem>
+                                        <valItem ident="bottom"><desc>text written at the foot of the page</desc></valItem>
+                                        <valItem ident="inline"><desc>text written within the body of the text</desc></valItem>
                                         <valItem ident="interlinear"/>
                                         <valItem ident="left"/>
-                                        <valItem ident="margin"/>
+                                        <valItem ident="margin"><desc>text written in the margin (left, right, or both)</desc></valItem>
                                         <valItem ident="mixed"/>
-                                        <valItem ident="opposite"/>
-                                        <valItem ident="overleaf"/>
+                                        <valItem ident="opposite"><desc>text written on the opposite, i.e. facing, page</desc></valItem>
+                                        <valItem ident="overleaf"><desc>text written on the other side of the leaf</desc></valItem>
                                         <valItem ident="overstrike">
                                             <desc>text written over previously deleted text</desc>
                                         </valItem>
                                         <valItem ident="right"/>
-                                        <valItem ident="top"/>
+                                        <valItem ident="top"><desc>text written at the top of the page</desc></valItem>
                                         <valItem ident="unspecified"/>
                                     </valList>
                         </attDef>
@@ -161,7 +162,7 @@
                                 <valItem ident="ethnic">
                                     <desc>records with this type represent an ethnic group as a whole and in general</desc>
                                 </valItem>
-                                <valItem ident="congregation"/>
+                                <valItem ident="congregation"/> <!--monastic orders such as House of Takla Hāymānot?-->
                             </valList>
                         </attDef>
                     </attList>
@@ -542,7 +543,7 @@
                                 <valItem ident="editions"><desc> Editions of the work</desc></valItem>
                                 <valItem ident="text"><desc></desc></valItem>
                                 <valItem ident="otherLanguages"><desc></desc></valItem>
-                                <valItem ident="clavis"><desc></desc></valItem>
+                                <valItem ident="clavis"><desc>ID of the work in an external clavis (CC, CPG etc.)</desc></valItem>
                                 <valItem ident="translation"><desc>Modern translations of the work </desc></valItem>
                                 <valItem ident="secondary"><desc>Secondary bibliography on the subject of the record</desc></valItem>
                                 <valItem ident="relations"><desc>Relations between the subject of the record and other entities (persons, related works, manuscript filiation etc.)</desc></valItem>
@@ -769,10 +770,10 @@
                         <attDef ident="type" mode="replace" usage="opt">
                             <valList type="closed">
                                 <valItem ident="foundation">
-                                    <desc> to be used for place and institutions</desc>
+                                    <desc> to be used for places and institutions</desc>
                                 </valItem>
                                 <valItem ident="Headband">
-                                    <desc>to be used in binding description.</desc>
+                                    <desc>to be used in binding description</desc>
                                 </valItem>
                                 <valItem ident="Tailband">
                                     <desc>for use in binding description</desc>
@@ -1293,7 +1294,7 @@
                         </attDef>
                         <attDef ident="type" mode="change">
                             <valList>
-                                <valItem ident="normalized"><desc>the normalized transcription of the name in fidel</desc></valItem> 
+                                <valItem ident="normalized"><desc>the normalized transcription of the name in fidal</desc></valItem> 
                                 <valItem ident="given"><desc>name given at birth</desc></valItem>
                                 <valItem ident="birth"><desc>name given at birth</desc></valItem>
                                 <valItem ident="baptismal"><desc>name given at baptism</desc></valItem>
