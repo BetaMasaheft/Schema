@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-04-26T13:36:20Z. .
+Schema generated from ODD source 2017-05-08T09:39:56Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -4071,17 +4071,17 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <value>ApocryphaPseudoepigrapha</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works of unknown or doubtful authorship rejected from the set of the canonical scriptures, e.g., the book of Enoch, Jubilees, Herma, the Miracles of Mary, the Miracles of Jesus, Maṣḥafa ṭomār, the apocryphal Acts of the Apostles, etc.</a:documentation>
                   <value>Gon</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gondarine (1632-1769 CE)</a:documentation>
                   <value>Paks1</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Postaksumite I (1200-1433 CE)</a:documentation>
                   <value>Paks2</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Postaksumite II (1434-1632 CE)</a:documentation>
                   <value>Aks</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Aksumite (300-700 CE )</a:documentation>
                   <value>ZaMa</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Zamana Masāfǝnt (1769-1855 CE)</a:documentation>
                   <value>MoPe</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Period (1855-1974 CE)</a:documentation>
                   <value>ArarayMode</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ʾArārāy musical mode</a:documentation>
                   <value>EzelMode</value>
@@ -4136,8 +4136,6 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing chants, hymns and antiphons to be sung for liturgical purposes, e.g., Dəggʷā, Ṣoma dəggʷā, Məʿərāf, Zəmmāre, Mawāśəʾət.</a:documentation>
                   <value>Lectionary</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing scriptural readings to be read on various religious occasions (fast, feasts, liturgical periods), e.g. Maṣḥafa gəṣṣəw, Maṣḥafa ʾaśləti, etc. </a:documentation>
-                  <value>Missal</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>RitualsAndRites</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing directives for the celebration of religious offices such as weddings and funerals, e.g., Maṣḥafa taklil and Maṣḥafa gənzat.</a:documentation>
                   <value>Missal</value>
@@ -4238,18 +4236,23 @@ Normalization 12. Critical Apparatus]</a:documentation>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.timed.attributes"/>
          <ref name="tei_att.editLike.attributes"/>
-         <optional>
-            <attribute name="reason">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives the reason for omission. Sample values include sampling, inaudible, irrelevant, cancelled.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="token">
-                        <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-                     </data>
-                  </oneOrMore>
-               </list>
-            </attribute>
-         </optional>
+         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                    name="reason"
+                    a:defaultValue="lost">
+            <a:documentation/>
+            <choice>
+               <value>rubrication</value>
+               <a:documentation>spaces left for rubrication, which were left unfilled</a:documentation>
+               <value>lost</value>
+               <a:documentation>No better specification available, there is simply a gap.</a:documentation>
+               <value>illegible</value>
+               <a:documentation>Traces of text remains on the surface but cannot be interpreted</a:documentation>
+               <value>omitted</value>
+               <a:documentation>Text erroneously omitted from the surface by the scribe/cutter</a:documentation>
+               <value>ellipsis</value>
+               <a:documentation>Text omitted from the edition by the editor, for whatever reason (brevity, context, language, etc.)</a:documentation>
+            </choice>
+         </attribute>
          <optional>
             <attribute name="hand">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">in the case of text omitted from the transcription because of deliberate deletion by an identifiable hand, indicates the hand which made the deletion.</a:documentation>
@@ -4344,13 +4347,13 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <choice>
                   <value>erasure</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scrathed with a knife or similar</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scratched with a knife or similar</a:documentation>
                   <value>strikethrough</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">crossed out with red or black ink, a line or dashes</a:documentation>
                   <value>exponctuated</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">marked with dots above or below the line</a:documentation>
                   <value>effaced</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">deleted or washed out. the material is untouched</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">deleted or washed out, the material is untouched</a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -4711,7 +4714,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
                                 <sch:report test="not(@target or @corresp or @cRef)">ref must be used with
                                     either a @corresp pointing to a project xml:id or a @target
                                     pointing to a an internal id or a @cRef pointing to an external urn, like those in Perseus</sch:report> 
-               <sch:report test="not(@type) and @corresp">Please use @correps only for
+               <sch:report test="not(@type) and @corresp">Please use @corresp only for
                                     external entities, assigning also a @type. if you need to point
                                     to something into the current file or to a resource external to
                                     the project use @target.</sch:report> 
@@ -5517,7 +5520,7 @@ Sample values include: 1] generalEditor</a:documentation>
                   <value>incomplete</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the work is contained incompetely in the manuscript, i.e. even only a small part is missing </a:documentation>
                   <value>normalized</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Transliteration of the title</a:documentation>
                   <value>supplied</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">syriaca.org: an existing print catalogue provides a descriptive title</a:documentation>
                   <value>uniform</value>
@@ -5650,7 +5653,7 @@ Sample values include: 1] generalEditor</a:documentation>
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:citedRange">
                                 <sch:report test="@from or @to">Please, don't use @from and @to in
-                                    citedRange, wirte the range into the element</sch:report>
+                                    citedRange, write the range into the element</sch:report>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
@@ -11444,7 +11447,7 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawing; 6] border; 7] diagram; 8] frieze; 9] illustration; 10] initial; 11] map; 12] marginal; 13] mixed; 14] other; 15] ornamentation; 16] paratext; 17] printmark; 18] publishmark; 19] rubrication; 20] secondary; 21] tooling; 22]  unspecified; 23] unwan; 24] vignette; 25] engraving</a:documentation>
+Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawing; 6] border; 7] diagram; 8] frieze; 9] illustration; 10] initial; 11] map; 12] marginal; 13] mixed; 14] other; 15] ornamentation; 16] paratext; 17] printmark; 18] publishmark; 19] rubrication; 20] secondary; 21] tooling; 22] unspecified; 23] unwan; 24] vignette; 25] engraving</a:documentation>
                <text/>
             </attribute>
          </optional>

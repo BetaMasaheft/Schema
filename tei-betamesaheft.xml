@@ -2091,6 +2091,36 @@
                     </attList>
                 </elementSpec>
                 
+                <elementSpec ident="gap" module="core" mode="change">
+                    <attList>
+                        <attDef ident="reason" mode="replace" usage="req">
+                            <defaultVal>lost</defaultVal>
+                            <valList type="closed">
+                                <valItem ident="rubrication">
+                                    <desc>spaces left for rubrication, which were left unfilled</desc>
+                                </valItem>
+                                <valItem ident="lost">
+                                    <desc>No better specification available, there is simply a gap.</desc>
+                                </valItem>
+<!--                                the following definitions have been inherited from EpiDoc schema-->
+                                <valItem ident="illegible">
+                                    <desc>Traces of text remains on the surface but cannot be
+                                        interpreted</desc>
+                                </valItem>
+                                <valItem ident="omitted">
+                                    <desc>Text erroneously omitted from the surface by the
+                                        scribe/cutter</desc>
+                                </valItem>
+                                <valItem ident="ellipsis">
+                                    <desc>Text omitted from the edition by the editor, for whatever
+                                        reason (brevity, context, language, etc.)</desc>
+                                </valItem>
+                                
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                
                 <classSpec type="atts" ident="att.dimensions" mode="change">
                     <attList>
                         <attDef ident="precision" mode="replace">
