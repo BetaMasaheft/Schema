@@ -412,6 +412,9 @@
                                 <valItem ident="pal">
                                     <desc>Pahlavi</desc>
                                 </valItem>
+                                <valItem ident="gft">
+                                    <desc>Gāfāt</desc>
+                                </valItem>
                             </valList>
                         </attDef>
 

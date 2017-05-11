@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-05-02T08:59:08Z. .
+Schema generated from ODD source 2017-05-11T12:24:04Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -4236,18 +4236,23 @@ Normalization 12. Critical Apparatus]</a:documentation>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.timed.attributes"/>
          <ref name="tei_att.editLike.attributes"/>
-         <optional>
-            <attribute name="reason">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gives the reason for omission. Sample values include sampling, inaudible, irrelevant, cancelled.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="token">
-                        <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-                     </data>
-                  </oneOrMore>
-               </list>
-            </attribute>
-         </optional>
+         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                    name="reason"
+                    a:defaultValue="lost">
+            <a:documentation/>
+            <choice>
+               <value>rubrication</value>
+               <a:documentation>spaces left for rubrication, which were left unfilled</a:documentation>
+               <value>lost</value>
+               <a:documentation>No better specification available, there is simply a gap.</a:documentation>
+               <value>illegible</value>
+               <a:documentation>Traces of text remains on the surface but cannot be interpreted</a:documentation>
+               <value>omitted</value>
+               <a:documentation>Text erroneously omitted from the surface by the scribe/cutter</a:documentation>
+               <value>ellipsis</value>
+               <a:documentation>Text omitted from the edition by the editor, for whatever reason (brevity, context, language, etc.)</a:documentation>
+            </choice>
+         </attribute>
          <optional>
             <attribute name="hand">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">in the case of text omitted from the transcription because of deliberate deletion by an identifiable hand, indicates the hand which made the deletion.</a:documentation>
@@ -7284,7 +7289,7 @@ Suggested values include: 1] WGS84(World Geodetic System) ; 2] MGRS(Military Gri
          <optional>
             <attribute name="ident">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] am; 2] om; 3] ar; 4] hy; 5] cop; 6] geo; 7] la; 8] fr; 9] grc; 10] gez; 11] he; 12] it; 13] fa; 14] syr; 15] tu; 16] ti; 17] en; 18] sv; 19] ru; 20] de; 21] es; 22] pal</a:documentation>
+Sample values include: 1] am; 2] om; 3] ar; 4] hy; 5] cop; 6] geo; 7] la; 8] fr; 9] grc; 10] gez; 11] he; 12] it; 13] fa; 14] syr; 15] tu; 16] ti; 17] en; 18] sv; 19] ru; 20] de; 21] es; 22] pal; 23] gft</a:documentation>
                <text/>
             </attribute>
          </optional>
