@@ -9,7 +9,6 @@
                 <author xml:id="PL">Pietro Liuzzo</author>
             </titleStmt>
             <publicationStmt>
-                <p>Released under GNU GPL 3.0</p>
             </publicationStmt>
             <sourceDesc>
                 <p>created electronically</p>
@@ -1271,6 +1270,9 @@
                         <attDef ident="ref" mode="change" usage="rec"/>
                         <attDef ident="role" mode="replace" usage="opt">
                             <valList type="closed">
+                                <valItem ident="illustrator">
+                                    <desc>the illustrator of the manuscript</desc>
+                                </valItem>
                                 <valItem ident="scribe">
                                     <desc>the copyist of the manuscript</desc>
                                 </valItem>
