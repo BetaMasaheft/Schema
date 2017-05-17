@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-05-11T14:37:37Z. .
+Schema generated from ODD source 2017-05-17T12:17:00Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -4164,6 +4164,8 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">exegetical works containing the interpretation of biblical texts, e.g, the Tərgʷāme and ʾAndəmtā corpus.</a:documentation>
                   <value>Chronography</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts for the calculation of the moveable feasts and for other calendrical computes, e.g., ʾAbušākər, Bāḥra ḥassāb.</a:documentation>
+                  <value>GoldenGospel</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A particular type of a manuscript - usually a main copy of the Four Gospels of a church - where documents (land charters, foundation charters, etc) concerning the place are collected.</a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -5467,7 +5469,7 @@ Sample values include: 1] generalEditor</a:documentation>
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      context="tei:title[ancestor::tei:TEI[@type='work']][ancestor::tei:titleStmt]">
+                      context="tei:title[not(@type='short')][ancestor::tei:TEI[@type='work']][ancestor::tei:titleStmt]">
                                 <sch:report test="not(@xml:id or @corresp)">title in a Work entity
                                     must always have an @xml:id which identifies alternative titles
                                     or a @corresp pointing to one of such xml:ids. Format of the id
@@ -7289,7 +7291,7 @@ Suggested values include: 1] WGS84(World Geodetic System) ; 2] MGRS(Military Gri
          <optional>
             <attribute name="ident">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] am; 2] om; 3] ar; 4] hy; 5] cop; 6] geo; 7] la; 8] fr; 9] grc; 10] gez; 11] he; 12] it; 13] fa; 14] syr; 15] tu; 16] ti; 17] en; 18] sv; 19] ru; 20] de; 21] es; 22] pal</a:documentation>
+Sample values include: 1] am; 2] om; 3] ar; 4] hy; 5] cop; 6] geo; 7] la; 8] fr; 9] grc; 10] gez; 11] he; 12] it; 13] fa; 14] syr; 15] tu; 16] ti; 17] en; 18] sv; 19] ru; 20] de; 21] es; 22] pal; 23] gft</a:documentation>
                <text/>
             </attribute>
          </optional>
@@ -10711,8 +10713,16 @@ Sample values include: 1] editor; 2] mss; 3] literature; 4] foundation; 5] compo
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the explicit of a manuscript item, that is, the closing words of the text proper, exclusive of any rubric or colophon which might follow it. [10.6.1. The msItem and msItemStruct Elements]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.typed.attribute.subtype"/>
          <ref name="tei_att.msExcerpt.attributes"/>
+         <optional>
+            <attribute name="type">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
+               <data type="token">
+                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+               </data>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>

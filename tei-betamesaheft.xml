@@ -331,6 +331,7 @@
                                 <valItem ident="Theology"><desc>works containing patristic texts dealing with theological subjects, e.g. Qerəllos, Hāymānota ʾAbaw, the Five Pillars of Mystery, etc.</desc></valItem>
                                 <valItem ident="Commentary"><desc>exegetical works containing the interpretation of biblical texts, e.g, the Tərgʷāme and ʾAndəmtā corpus.</desc></valItem>
                                 <valItem ident="Chronography"><desc>works containing texts for the calculation of the moveable feasts and for other calendrical computes, e.g., ʾAbušākər, Bāḥra ḥassāb.</desc></valItem>
+                                <valItem ident="GoldenGospel"><desc>A particular type of a manuscript - usually a main copy of the Four Gospels of a church - where documents (land charters, foundation charters, etc) concerning the place are collected.</desc></valItem>
                             </valList>
                         </attDef>
 
@@ -482,7 +483,7 @@
                     <constraintSpec scheme="isoschematron" ident="title">
                         <constraint>
                             <sch:rule
-                                context="tei:title[ancestor::tei:TEI[@type='work']][ancestor::tei:titleStmt]">
+                                context="tei:title[not(@type='short')][ancestor::tei:TEI[@type='work']][ancestor::tei:titleStmt]">
                                 <sch:report test="not(@xml:id or @corresp)">title in a Work entity
                                     must always have an @xml:id which identifies alternative titles
                                     or a @corresp pointing to one of such xml:ids. Format of the id
@@ -1469,6 +1470,20 @@
                             </valList>
                         </attDef>
 
+                    </attList>
+                </elementSpec>
+                
+                <!--          controlled values for material-->
+                <elementSpec ident="explicit" mode="change" module="msdescription">
+                    <attList>
+                        <attDef ident="type" mode="change" usage="opt">
+                            <valList type="closed">
+                                
+                                <!--                          list coming from myCore-->
+                                <valItem ident="subscription"><desc>note originally added at the end of the main text concerning its completion. not to be confused with later additions</desc></valItem>
+                            </valList>
+                        </attDef>
+                        
                     </attList>
                 </elementSpec>
 
