@@ -309,7 +309,8 @@
                                 <valItem ident="BetaEsraelLiterature"><desc>works containing texts of unspecified Jewish subject.</desc></valItem>
                                 <valItem ident="ChristianLiterature"><desc>works containing texts of unspecified Christian subject.</desc></valItem>
                                 <valItem ident="Hagiography"><desc>works and collections of works containing the Vita (Life) of a saint, included the cycles of miracles performed by the saint himself, as well as Acts and Passiones of martyrs. </desc></valItem>
-                                <valItem ident="HistoryAndHistoriography"><desc>works containing royal chronicles and other historical material, e.g., Tārik za-Walda ʿAmid, Zenā ʾAyhud and various treatises of Ethiopian history.</desc></valItem>
+                                <valItem ident="HistoryAndHistoriography"><desc>works containing land grants, Amharic historical works of the 19th century which cannot be labelled chronicles, the history of churches and monasteries, biographies etc.</desc></valItem>
+                                <valItem ident="Chronicles"><desc>works containing royal and other chronicles e.g., Tārik za-Walda ʿAmid, Zenā ʾAyhud and various treatises of Ethiopian history.</desc></valItem>
                                 <valItem ident="Homily"><desc>works and collections of works containing homiletic texts to be read on the occasion of specific commemorative days, e.g., the homiliaries in honour of Michael and Gabriel, Dərsāna sanbat krəstiyan, Dərsān māḥyāwi, Dərsāna madḫāne ʿalam, etc.</desc></valItem>
                                 <valItem ident="IslamicLiterature"><desc>works containing texts of Islamic subject.</desc></valItem>
                                 <valItem ident="Koran"><desc>manuscripts containing the Koran.</desc></valItem>
