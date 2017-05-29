@@ -1170,6 +1170,10 @@
                                 <!--Dorothea-->
                                 <valItem ident="FP"/>
                                 <!--                                Francesca-->
+                                <valItem ident="NV"/>
+                                <!--                                Nafisa-->
+                                <valItem ident="SS"/>
+                                <!--                                Sisay-->
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -2116,7 +2120,6 @@
                 <elementSpec ident="gap" module="core" mode="change">
                     <attList>
                         <attDef ident="reason" mode="replace" usage="req">
-                            <defaultVal>lost</defaultVal>
                             <valList type="closed">
                                 <valItem ident="rubrication">
                                     <desc>spaces left for rubrication, which were left unfilled</desc>
