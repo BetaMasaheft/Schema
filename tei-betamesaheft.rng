@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-05-29T21:37:39Z. .
+Schema generated from ODD source 2017-06-21T09:08:50Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -4121,7 +4121,9 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <value>Hagiography</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works and collections of works containing the Vita (Life) of a saint, included the cycles of miracles performed by the saint himself, as well as Acts and Passiones of martyrs. </a:documentation>
                   <value>HistoryAndHistoriography</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing royal chronicles and other historical material, e.g., Tārik za-Walda ʿAmid, Zenā ʾAyhud and various treatises of Ethiopian history.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing land grants, Amharic historical works of the 19th century which cannot be labelled chronicles, the history of churches and monasteries, biographies etc.</a:documentation>
+                  <value>Chronicles</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing royal and other chronicles e.g., Tārik za-Walda ʿAmid, Zenā ʾAyhud and various treatises of Ethiopian history.</a:documentation>
                   <value>Homily</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works and collections of works containing homiletic texts to be read on the occasion of specific commemorative days, e.g., the homiliaries in honour of Michael and Gabriel, Dərsāna sanbat krəstiyan, Dərsān māḥyāwi, Dərsāna madḫāne ʿalam, etc.</a:documentation>
                   <value>IslamicLiterature</value>
@@ -14527,6 +14529,8 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://d-nb.info/standards/elementset/agrelon.owl#isFounderOf</a:documentation>
                <value>agrelon:hasFounder</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://d-nb.info/standards/elementset/agrelon.owl#hasFounder</a:documentation>
+               <value>bm:isAntigraphOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the relation between a ms and the first printed edition of a text it contains</a:documentation>
                <value>bm:wifeOf</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Is the wife of ...</a:documentation>
                <value>bm:husbandOf</value>

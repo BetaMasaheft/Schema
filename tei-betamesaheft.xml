@@ -1563,7 +1563,7 @@
                                 <valItem ident="rel:enemyOf"><desc>http://purl.org/vocab/relationship/enemyOf</desc></valItem>
                                 <valItem ident="agrelon:isFounderOf"><desc>http://d-nb.info/standards/elementset/agrelon.owl#isFounderOf</desc></valItem>
                                 <valItem ident="agrelon:hasFounder"><desc>http://d-nb.info/standards/elementset/agrelon.owl#hasFounder</desc></valItem>
-
+                                <valItem ident="bm:isAntigraphOf"><desc>the relation between a ms and the first printed edition of a text it contains</desc></valItem>
                                 <valItem ident="bm:wifeOf"><desc>Is the wife of ...</desc></valItem>
                                 <valItem ident="bm:husbandOf"><desc>Is the husband of..</desc></valItem>
                                 <valItem ident="bm:motherInLawOf"><desc>is the mother of the legally conjugated partner</desc></valItem>
