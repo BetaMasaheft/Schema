@@ -1174,6 +1174,8 @@
                                 <!--                                Nafisa-->
                                 <valItem ident="SS"/>
                                 <!--                                Sisay-->
+                                <valItem ident="RHC"/>
+<!--                                Ran HaCohen-->
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -1227,6 +1229,8 @@
                                 <!--MBulakh-->
 
                                 <valItem ident="FP"/>
+                                <valItem ident="RHC"/>
+                                <!--                                Ran HaCohen-->
                             </valList>
                         </attDef>
                         <attDef ident="when" mode="replace" usage="req"/>
