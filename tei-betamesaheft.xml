@@ -416,6 +416,9 @@
                                 <valItem ident="gft">
                                     <desc>Gāfāt</desc>
                                 </valItem>
+                                <valItem ident="awn">
+                                    <desc>Awngi</desc>
+                                </valItem>
                             </valList>
                         </attDef>
 
