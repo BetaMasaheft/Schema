@@ -1234,6 +1234,8 @@
                                 <valItem ident="FP"/>
                                 <valItem ident="RHC"/>
                                 <!--                                Ran HaCohen-->
+                                <valItem ident="SS"/>
+                                <!--                                Sisay-->
                             </valList>
                         </attDef>
                         <attDef ident="when" mode="replace" usage="req"/>
