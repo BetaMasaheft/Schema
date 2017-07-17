@@ -9,6 +9,14 @@
                 <author xml:id="PL">Pietro Liuzzo</author>
             </titleStmt>
             <publicationStmt>
+                <authority>Hiob Ludolf Zentrum für Äthiopistik</authority>
+                <publisher>Die Schriftkultur des christlichen Äthiopiens: Eine multimediale
+                    Forschungsumgebung / beta maṣāḥǝft</publisher>
+                <pubPlace>Hamburg</pubPlace>
+                <availability>
+                    <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
+                        licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
+                </availability>
             </publicationStmt>
             <sourceDesc>
                 <p>created electronically</p>
@@ -1236,31 +1244,17 @@
                                 <!--                                Ran HaCohen-->
                                 <valItem ident="SS"/>
                                 <!--                                Sisay-->
+                                <valItem ident="DE"/>
+                                <!--                                Daria-->
+                                <valItem ident="NV"/>
+                                <!--                                Nafisa-->
                             </valList>
                         </attDef>
                         <attDef ident="when" mode="replace" usage="req"/>
                     </attList>
                 </elementSpec>
 
-                <!--<elementSpec ident="item" mode="change" module="core">
-                    <constraintSpec scheme="isoschematron" ident="item">
-                        <constraint>
-                            <sch:rule context="tei:item[ancestor::tei:additions]">
-                                <sch:report test="not(@xml:id)">
-                                    Additions must have ids starting with the letter 'a' followed by
-                                    a progressive number, e.g. a1, a2, a3. In case of other contents
-                                    (varia) use an id starting with 'e. </sch:report>
-                            </sch:rule>
-                            <sch:rule context="tei:item[ancestor::tei:additions]">
-                                <sch:report test="not(matches(@xml:id,'a\d+'')) or not(matches(@xml:id,'e\d+''))">
-                                    Additions must have ids starting with the letter 'a' followed by
-                                    a progressive number, e.g. a1, a2, a3. In case of other contents
-                                    (varia) use an id starting with 'e. </sch:report>
-                            </sch:rule>
-                        </constraint>
-                    </constraintSpec>
-                </elementSpec>-->
-
+             
                 <elementSpec ident="height" mode="change" module="msdescription">
                     <attList>
                         <attDef ident="unit" mode="replace">
