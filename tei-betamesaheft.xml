@@ -2119,7 +2119,20 @@
                         </attDef>
                     </attList>
                 </elementSpec>
-                
+ 
+                <elementSpec ident="space" module="transcr" mode="change">
+                    <attList>
+                        <attDef ident="reason" mode="add" usage="opt">
+                            <valList type="open">
+                                <valItem ident="rubrication">
+                                    <desc>space voluntarily left e.g. for later rubrication never accomplished
+                                </desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+ 
                 <elementSpec ident="gap" module="core" mode="change">
                     <attList>
                         <attDef ident="reason" mode="replace" usage="req">
