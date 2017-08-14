@@ -879,6 +879,9 @@
                                 <valItem ident="GuestText">
                                     <desc>a complete work, provided with its own ID, added later to a manuscript. </desc>
                                 </valItem>
+                                <valItem ident="MalkeHymn">
+                                    <desc>Malkǝʾ Hymn</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                     </attList>
