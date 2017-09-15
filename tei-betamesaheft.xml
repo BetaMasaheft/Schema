@@ -27,6 +27,7 @@
                 requirements</change>
             <change who="DR" when="2017-04-21">Added keyword</change>
             <change who="DR" when="2017-05-02">Added value definitions @place</change>
+            <change who="DR" when="2017-09-15">Added philosophy keyword</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -337,6 +338,7 @@
                                 <valItem ident="Poetry"><desc>works containing praises, ʿarke-hymns, salām-hymns, malkəʾ, songs and canticles, texts subdivided into stanzas, rhymed texts.</desc></valItem>
                                 <valItem ident="Prayers"><desc>works containing prayers, supplications and invocations to God and other revered entities.</desc></valItem>
                                 <valItem ident="Religion"><desc></desc></valItem>
+                                <valItem ident="Philosophy"><desc>works containing philosophical texts and sentences, as Maṣḥafa falāsfā ṭabibān</desc></valItem>
                                 <valItem ident="Theology"><desc>works containing patristic texts dealing with theological subjects, e.g. Qerəllos, Hāymānota ʾAbaw, the Five Pillars of Mystery, etc.</desc></valItem>
                                 <valItem ident="Commentary"><desc>exegetical works containing the interpretation of biblical texts, e.g, the Tərgʷāme and ʾAndəmtā corpus.</desc></valItem>
                                 <valItem ident="Chronography"><desc>works containing texts for the calculation of the moveable feasts and for other calendrical computes, e.g., ʾAbušākər, Bāḥra ḥassāb.</desc></valItem>
