@@ -697,19 +697,6 @@
                 <elementSpec ident="bibl" mode="change" module="core">
                     <constraintSpec scheme="isoschematron" ident="bibl">
                         <constraint>
-                            <!--<sch:rule context="tei:bibl[ancestor::tei:listBibl[@type='mss']]">
-                                <sch:report test="not(@corresp)">bibl in a mss list of references
-                                    must always contain a @corresp pointing to a project xml:id of a
-                                    manuscript or to an external resource (in which case you need to
-                                    add a @type="external")</sch:report>
-                                <sch:report test="contains(@corresp, 'bm:')">we use bibl[@corresp] 
-                                    for similar or related manuscript. to point to an external bibliographic reference, 
-                                    please use the appropriate listBibl and a bibl with a ptr[@target] 
-                                    containing the tag you are trying to use here.</sch:report>
-                            </sch:rule>
-                            <sch:rule context="tei:bibl[not(ancestor::tei:listBibl[@type='mss'])]">
-                                <sch:report test="@corresp">@corresp in a bibl is only allowed for listBibl[@type='mss']</sch:report>
-                                  </sch:rule>-->
                             <sch:rule
                                 context="tei:bibl[not(ancestor::tei:listBibl[@type='mss' or @type='relations'])]">
                                 <sch:report test="not(contains(tei:ptr/@target, 'bm:'))">The unique
@@ -722,6 +709,10 @@
                                 <sch:report test="not(tei:ptr[@target])">bibl in a mss list of
                                     references with a @type="external" must contain a pointer with
                                     @target cointaing a full uri to the resource</sch:report>
+                            </sch:rule>
+                            <sch:rule
+                                context="tei:bibl">
+                                <sch:report test="child::tei:biblScope">we use citedRange, not biblScope. Please, see guidelines wiki on Beta Masaheft.</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
