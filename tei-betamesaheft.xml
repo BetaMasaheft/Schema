@@ -1578,7 +1578,7 @@
                     <constraintSpec scheme="isoschematron" ident="change">
                         <constraint>
                             <sch:rule context="tei:change/@when">
-                                <sch:report test="not(matches(., 'ˆ\d{4}-\d{2}-\d{2}$'))">This is
+                                <sch:report test="not(matches(., '20\d{2}-\d{2}-\d{2}$'))">This is
                                     not a correct date.</sch:report>
                             </sch:rule>
                         </constraint>
