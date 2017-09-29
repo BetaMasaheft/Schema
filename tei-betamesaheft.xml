@@ -2906,6 +2906,11 @@
                                     a progressive number, e.g. a1, a2, a3. In case of other contents
                                     (varia) use an id starting with 'e. </sch:report>
                             </sch:rule>
+                            <sch:rule context="tei:item[ancestor::tei:additions]">
+                                <sch:report
+                                    test="tei:desc/tei:locus[@facs]">
+                                    The locus of the addition should be child of the item, not of desc. Please move it outside of the desc element, just before it for exemple.</sch:report>
+                            </sch:rule>
                         </constraint>
                     </constraintSpec>
                     <attList>
