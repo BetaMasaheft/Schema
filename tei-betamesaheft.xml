@@ -1676,7 +1676,7 @@
                                 <valItem ident="donor">
                                     <desc>the person who donated the manuscript</desc>
                                 </valItem>
-                                <valItem ident="beqeather">
+                                <valItem ident="bequeather">
                                     <desc>the person who donated the manuscript, tipically to a library</desc>
                                 </valItem>
                                 <valItem ident="author">
