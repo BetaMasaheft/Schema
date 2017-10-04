@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-09-29T09:41:36Z. .
+Schema generated from ODD source 2017-10-04T21:16:35Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -12311,7 +12311,7 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the copyist of the manuscript</a:documentation>
                   <value>donor</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the person who donated the manuscript</a:documentation>
-                  <value>beqeather</value>
+                  <value>bequeather</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the person who donated the manuscript, tipically to a library</a:documentation>
                   <value>author</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the author of a work</a:documentation>
