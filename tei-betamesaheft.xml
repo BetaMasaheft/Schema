@@ -2775,11 +2775,29 @@
                     <!--             testing for origDate in origin-->
                     <constraintSpec scheme="isoschematron" ident="geo">
                         <constraint>
-                            <sch:rule context="tei:geo">
+                            <sch:rule context="tei:geo[not(@rend)]">
                                 <sch:report
                                     test="not(matches(.,'\-?\d{1,2}\.\d{3,6}\s\-?\d{1,2}\.\d{3,6}'))"
                                     > Coordinates should be written as decimal degrees separated by
                                     a single space e.g. "14.165289 39.447665" latitude first.
+                                </sch:report>
+                            </sch:rule>
+                            <sch:rule context="tei:geo[@rend]">
+                                <sch:report
+                                    test="matches(.,'\,')"
+                                    >Please use one for line for each point defining the polygon. Please do not add spaces at the beginning and end of the sequence. You can draw your polygon with https://www.keene.edu/campus/maps/tool/ and copy past directly from there. Just take care, please, to remove the commas afterwards..
+                                </sch:report>
+                            </sch:rule>
+                            <sch:rule context="tei:geo[@rend]">
+                                <sch:report
+                                    test="matches(.,'ˆ\s')"
+                                    >Please use one for line for each point defining the polygon. Please do not add spaces at the beginning and end of the sequence. You can draw your polygon with https://www.keene.edu/campus/maps/tool/ and copy past directly from there. Just take care, please, to remove the commas afterwards..
+                                </sch:report>
+                            </sch:rule>
+                            <sch:rule context="tei:geo[@rend]">
+                                <sch:report
+                                    test="matches(.,'\s$')"
+                                    >Please use one for line for each point defining the polygon. Please do not add spaces at the beginning and end of the sequence. You can draw your polygon with https://www.keene.edu/campus/maps/tool/ and copy past directly from there. Just take care, please, to remove the commas afterwards..
                                 </sch:report>
                             </sch:rule>
                         </constraint>
