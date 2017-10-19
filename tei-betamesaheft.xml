@@ -1556,6 +1556,8 @@
                                 <!--                                Sisay-->
                                 <valItem ident="RHC"/>
                                 <!--                                Ran HaCohen-->
+                                <valItem ident="SJ"/>
+                                <!--                                Sybilla-->
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -1627,6 +1629,9 @@
                                 <!--                                francesca-->
                                 <valItem ident="RHC"/>
                                 <!--                                Ran HaCohen-->
+                                <valItem ident="SJ"/>
+                                <!--                                Sybilla-->
+                                
                                 <valItem ident="SS"/>
                                 <!--                                Sisay-->
                                 <valItem ident="DE"/>
