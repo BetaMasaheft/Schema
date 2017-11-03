@@ -1558,6 +1558,8 @@
                                 <!--                                Ran HaCohen-->
                                 <valItem ident="SJ"/>
                                 <!--                                Sybilla-->
+                                <valItem ident="JG"/>
+                                <!--                                Jacopo-->
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -1638,6 +1640,8 @@
                                 <!--                                Daria-->
                                 <valItem ident="NV"/>
                                 <!--                                Nafisa-->
+                                <valItem ident="JG"/>
+                                <!--                                Jacopo-->
                             </valList>
                         </attDef>
                         <attDef ident="when" mode="replace" usage="req"/>
