@@ -644,6 +644,9 @@
                                 <valItem ident="awn">
                                     <desc>Awngi</desc>
                                 </valItem>
+                                <valItem ident="pt">
+                                    <desc>Portuguese</desc>
+                                </valItem>
                             </valList>
                         </attDef>
 
@@ -1802,11 +1805,11 @@
                                 <rng:ref name="data.word"/>
                             </datatype>
                             <valList type="closed">
-                                <valItem ident="ṭabiya"/>
+                                <valItem ident="tabiya"/>
                                 <valItem ident="dabr"/>
                                 <valItem ident="gadam"/>
-                                <valItem ident="gaṭar"/>
-                                <valItem ident="waradā"/>
+                                <valItem ident="gatar"/>
+                                <valItem ident="warada"/>
                                 <valItem ident="settlement"/>
                                 <valItem ident="archaeologicalSite"/>
                                 <valItem ident="shrine"/>
@@ -1831,7 +1834,7 @@
                                 <valItem ident="zone"/>
                                 <valItem ident="country"/>
                                 <valItem ident="gulf"/>
-                                <valItem ident="qušat"/>
+                                <valItem ident="qushat"/>
                                 <valItem ident="pass"/>
                                 <valItem ident="island"/>
                                 <valItem ident="cataract"/>
@@ -1850,19 +1853,19 @@
                                 <valItem ident="volcano"/>
                                 <valItem ident="city"/>
                                 <valItem ident="falls"/>
-                                <valItem ident="ambā"/>
+                                <valItem ident="amba"/>
                                 <valItem ident="sultanate"/>
                                 <valItem ident="sea"/>
                                 <valItem ident="cape"/>
                                 <valItem ident="chapel"/>
                                 <valItem ident="zoba"/>
-                                <valItem ident="wādī"/>
+                                <valItem ident="wadi"/>
                                 <valItem ident="dam"/>
                                 <valItem ident="quarter"/>
                                 <valItem ident="well"/>
-                                <valItem ident="awraǧǧā"/>
+                                <valItem ident="awragga"/>
                                 <valItem ident="site"/>
-                                <valItem ident="katamā"/>
+                                <valItem ident="katama"/>
                                 <valItem ident="port"/>
                                 <valItem ident="oasis"/>
                                 <valItem ident="river"/>
