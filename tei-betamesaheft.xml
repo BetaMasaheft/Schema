@@ -581,10 +581,10 @@
                                 <valItem ident="Ethics">
                                     <desc>Ethics (IslHornAfr)</desc>
                                 </valItem>
-                                <valItem ident="Fawā'id / Masā'il">
+                                <valItem ident="Fawaid_Masail">
                                     <desc>Fawā'id / Masā'il (IslHornAfr)</desc>
                                 </valItem>
-                                <valItem ident="Faḍā'il">
+                                <valItem ident="Fadaill">
                                     <desc>Faḍā'il (IslHornAfr)</desc>
                                 </valItem>
                                 <valItem ident="Genealogy">
@@ -605,16 +605,16 @@
                                 <valItem ident="Mysticism">
                                     <desc>Mysticism (IslHornAfr)</desc>
                                 </valItem>
-                                <valItem ident="Natural Sciences">
+                                <valItem ident="Natural_Sciences">
                                     <desc>Natural Sciences (IslHornAfr)</desc>
                                 </valItem>
                                 <valItem ident="Preaching">
                                     <desc>Preaching (IslHornAfr)</desc>
                                 </valItem>
-                                <valItem ident="Qur'ān">
+                                <valItem ident="Quran">
                                     <desc>Qur'ān (IslHornAfr)</desc>
                                 </valItem>
-                                <valItem ident="Ḥadīṯ">
+                                <valItem ident="Hadit">
                                     <desc>Ḥadīṯ (IslHornAfr)</desc>
                                 </valItem>
                             </valList>
@@ -709,10 +709,10 @@
                                 <valItem ident="so">
                                     <desc>Somali (IslHornAfr)</desc>
                                 </valItem>
-                                <valItem ident="oldharari">
+                                <valItem ident="x-ho">
                                     <desc>Old Harari (IslHornAfr)</desc>
                                 </valItem>
-                                <valItem ident="unidentified">
+                                <valItem ident="x-un">
                                     <desc>Unidentified (IslHornAfr)</desc>
                                 </valItem>
                             </valList>
