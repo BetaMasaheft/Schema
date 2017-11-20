@@ -353,8 +353,16 @@
                                         Jesus, Maṣḥafa ṭomār, the apocryphal Acts of the Apostles,
                                         etc.</desc>
                                 </valItem>
-                                <!--mycore-->
 
+                                <valItem ident="poetry">
+                                    <desc>poetry (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="prose">
+                                    <desc>prose (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="rhymedprose">
+                                    <desc>rhymed prose (IslHornAfr)</desc>
+                                </valItem>
                                 <valItem ident="Gon">
                                     <desc>Gondarine (1632-1769 CE)</desc>
                                 </valItem>
@@ -558,6 +566,57 @@
                                         charters, foundation charters, etc) concerning the place are
                                         collected.</desc>
                                 </valItem>
+                                <valItem ident="Adab">
+                                    <desc>Adab (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="Belief">
+                                    <desc>Belief (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="Devotional">
+                                    <desc>Devotional (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="Documentary">
+                                    <desc>Documentary (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="Ethics">
+                                    <desc>Ethics (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="Fawā'id / Masā'il">
+                                    <desc>Fawā'id / Masā'il (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="Faḍā'il">
+                                    <desc>Faḍā'il (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="Genealogy">
+                                    <desc>Genealogy (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="Geography">
+                                    <desc>Geography (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="History">
+                                    <desc>History (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="Jurisprudence">
+                                    <desc>Jurisprudence (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="Linguistics">
+                                    <desc>Linguistics (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="Mysticism">
+                                    <desc>Mysticism (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="Natural Sciences">
+                                    <desc>Natural Sciences (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="Preaching">
+                                    <desc>Preaching (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="Qur'ān">
+                                    <desc>Qur'ān (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="Ḥadīṯ">
+                                    <desc>Ḥadīṯ (IslHornAfr)</desc>
+                                </valItem>
                             </valList>
                         </attDef>
 
@@ -644,8 +703,17 @@
                                 <valItem ident="awn">
                                     <desc>Awngi</desc>
                                 </valItem>
-                                <valItem ident="pt">
-                                    <desc>Portuguese</desc>
+                                <valItem ident="aa">
+                                    <desc>Afar (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="so">
+                                    <desc>Somali (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="oldharari">
+                                    <desc>Old Harari (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="unidentified">
+                                    <desc>Unidentified (IslHornAfr)</desc>
                                 </valItem>
                             </valList>
                         </attDef>
@@ -750,6 +818,21 @@
                         <attDef ident="ref" mode="change" usage="rec"/>
                         <attDef ident="type" mode="replace" usage="opt">
                             <valList type="closed">
+                                <valItem ident="conceived">
+                                    <desc>conceived (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="identified">
+                                    <desc>identified (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="acephalous">
+                                    <desc>acephalous (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="apodous">
+                                    <desc>apodous (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="lacunous">
+                                    <desc>lacunous (IslHornAfr)</desc>
+                                </valItem>
                                 <valItem ident="complete">
                                     <desc>the work is contained completely in the manuscript</desc>
                                 </valItem>
@@ -1530,6 +1613,10 @@
                                 <valItem ident="other"/>
                                 <valItem ident="Syriac"/>
                                 <valItem ident="Coptic"/>
+                                <valItem ident="Fidel"><desc>(IslHornAfr)</desc></valItem>
+                                <valItem ident="Vocalized Arabic"><desc>(IslHornAfr)</desc></valItem>
+                                <valItem ident="Partially vocalized Arabic"><desc>(IslHornAfr)</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                     </attList>
@@ -1563,6 +1650,28 @@
                                 <!--                                Sybilla-->
                                 <valItem ident="JG"/>
                                 <!--                                Jacopo-->
+
+                                <valItem ident="MP"/>
+                                <!--                                Michele Petrone-->
+
+                                <valItem ident="SF"/>
+                                <!--                                Sara Fani-->
+                                <valItem ident="IP"/>
+                                <!--                                Irmeli Perho-->
+                                <valItem ident="AG"/>
+                                <!--                                Alessandro Gori-->
+                                <valItem ident="RBO"/>
+                                <!--                                Rasmus Bech Olsen-->
+                                <valItem ident="AR"/>
+                                <!--                                Anne Regourd-->
+                                <valItem ident="AH"/>
+                                <!--                                Adday Hernández-->
+                                <valItem ident="JS"/>
+                                <!--                               Joshua Sabih-->
+                                <valItem ident="AW"/>
+                                <!--                               Andreas Wetter-->
+                                <valItem ident="JML"/>
+                                <!--                               John Møller Larsen-->
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -1575,13 +1684,14 @@
 
                 <elementSpec ident="change" mode="change" module="header">
                     <desc>It is very important, at the end of each section of work of improvement of
-                        a record to record a <gi>change</gi> in the <gi>revisionDesc</gi> element of the <gi>teiHeader</gi>. In
-                        the attribute <att>who</att> enter your id, in the <att>when</att> enter the date of the change,
-                        in the format YYYY-MM-DD. Inside the element, briefly describe the changes
-                        you have made. When you are done with a file, please, add a change 
-                        element with content <emph>completed</emph>. 
-                        If you have reviewed and corrected a file which is now ready and published, 
-                        please add a <gi>change</gi> with content <emph>reviewed</emph></desc>
+                        a record to record a <gi>change</gi> in the <gi>revisionDesc</gi> element of
+                        the <gi>teiHeader</gi>. In the attribute <att>who</att> enter your id, in
+                        the <att>when</att> enter the date of the change, in the format YYYY-MM-DD.
+                        Inside the element, briefly describe the changes you have made. When you are
+                        done with a file, please, add a change element with content
+                            <emph>completed</emph>. If you have reviewed and corrected a file which
+                        is now ready and published, please add a <gi>change</gi> with content
+                            <emph>reviewed</emph></desc>
                     <constraintSpec scheme="isoschematron" ident="change">
                         <constraint>
                             <sch:rule context="tei:change/@when">
@@ -1636,7 +1746,7 @@
                                 <!--                                Ran HaCohen-->
                                 <valItem ident="SJ"/>
                                 <!--                                Sybilla-->
-                                
+
                                 <valItem ident="SS"/>
                                 <!--                                Sisay-->
                                 <valItem ident="DE"/>
@@ -1645,6 +1755,27 @@
                                 <!--                                Nafisa-->
                                 <valItem ident="JG"/>
                                 <!--                                Jacopo-->
+                                <valItem ident="MP"/>
+                                <!--                                Michele Petrone-->
+
+                                <valItem ident="SF"/>
+                                <!--                                Sara Fani-->
+                                <valItem ident="IP"/>
+                                <!--                                Irmeli Perho-->
+                                <valItem ident="AG"/>
+                                <!--                                Alessandro Gori-->
+                                <valItem ident="RBO"/>
+                                <!--                                Rasmus Bech Olsen-->
+                                <valItem ident="AR"/>
+                                <!--                                Anne Regourd-->
+                                <valItem ident="AH"/>
+                                <!--                                Adday Hernández-->
+                                <valItem ident="JS"/>
+                                <!--                               Joshua Sabih-->
+                                <valItem ident="AW"/>
+                                <!--                               Andreas Wetter-->
+                                <valItem ident="JML"/>
+                                <!--                               John Møller Larsen-->
                             </valList>
                         </attDef>
                         <attDef ident="when" mode="replace" usage="req"/>
@@ -1679,6 +1810,12 @@
                         <attDef ident="ref" mode="change" usage="rec"/>
                         <attDef ident="role" mode="replace" usage="opt">
                             <valList type="closed">
+                                <valItem ident="presentCustodian">
+                                    <desc>present custodian of a collection (IslHornAfr)</desc>
+                                </valItem>
+                                <valItem ident="mainCollector">
+                                    <desc>main collector of a collection (IslHornAfr)</desc>
+                                </valItem>
                                 <valItem ident="illustrator">
                                     <desc>the illustrator of the manuscript</desc>
                                 </valItem>
@@ -1689,7 +1826,8 @@
                                     <desc>the person who donated the manuscript</desc>
                                 </valItem>
                                 <valItem ident="bequeather">
-                                    <desc>the person who donated the manuscript, tipically to a library</desc>
+                                    <desc>the person who donated the manuscript, tipically to a
+                                        library</desc>
                                 </valItem>
                                 <valItem ident="author">
                                     <desc>the author of a work</desc>
@@ -1721,6 +1859,10 @@
                         </attDef>
                         <attDef ident="type" mode="change">
                             <valList>
+                                <valItem ident="transliterated">
+                                    <desc>the normalized transliteration of the name
+                                        (IslHornAfr)</desc>
+                                </valItem>
                                 <valItem ident="normalized">
                                     <desc>the normalized transcription of the name in fidal</desc>
                                 </valItem>
@@ -1805,11 +1947,11 @@
                                 <rng:ref name="data.word"/>
                             </datatype>
                             <valList type="closed">
-                                <valItem ident="tabiya"/>
+                                <valItem ident="ṭabiya"/>
                                 <valItem ident="dabr"/>
                                 <valItem ident="gadam"/>
-                                <valItem ident="gatar"/>
-                                <valItem ident="warada"/>
+                                <valItem ident="gaṭar"/>
+                                <valItem ident="waradā"/>
                                 <valItem ident="settlement"/>
                                 <valItem ident="archaeologicalSite"/>
                                 <valItem ident="shrine"/>
@@ -1834,7 +1976,7 @@
                                 <valItem ident="zone"/>
                                 <valItem ident="country"/>
                                 <valItem ident="gulf"/>
-                                <valItem ident="qushat"/>
+                                <valItem ident="qušat"/>
                                 <valItem ident="pass"/>
                                 <valItem ident="island"/>
                                 <valItem ident="cataract"/>
@@ -1853,19 +1995,19 @@
                                 <valItem ident="volcano"/>
                                 <valItem ident="city"/>
                                 <valItem ident="falls"/>
-                                <valItem ident="amba"/>
+                                <valItem ident="ambā"/>
                                 <valItem ident="sultanate"/>
                                 <valItem ident="sea"/>
                                 <valItem ident="cape"/>
                                 <valItem ident="chapel"/>
                                 <valItem ident="zoba"/>
-                                <valItem ident="wadi"/>
+                                <valItem ident="wādī"/>
                                 <valItem ident="dam"/>
                                 <valItem ident="quarter"/>
                                 <valItem ident="well"/>
-                                <valItem ident="awragga"/>
+                                <valItem ident="awraǧǧā"/>
                                 <valItem ident="site"/>
-                                <valItem ident="katama"/>
+                                <valItem ident="katamā"/>
                                 <valItem ident="port"/>
                                 <valItem ident="oasis"/>
                                 <valItem ident="river"/>
@@ -2795,22 +2937,28 @@
                                 </sch:report>
                             </sch:rule>
                             <sch:rule context="tei:geo[@rend]">
-                                <sch:report
-                                    test="matches(.,'\,')"
-                                    >Please use one for line for each point defining the polygon. Please do not add spaces at the beginning and end of the sequence. You can draw your polygon with https://www.keene.edu/campus/maps/tool/ and copy past directly from there. Just take care, please, to remove the commas afterwards..
-                                </sch:report>
+                                <sch:report test="matches(.,'\,')">Please use one for line for each
+                                    point defining the polygon. Please do not add spaces at the
+                                    beginning and end of the sequence. You can draw your polygon
+                                    with https://www.keene.edu/campus/maps/tool/ and copy past
+                                    directly from there. Just take care, please, to remove the
+                                    commas afterwards.. </sch:report>
                             </sch:rule>
                             <sch:rule context="tei:geo[@rend]">
-                                <sch:report
-                                    test="matches(.,'ˆ\s')"
-                                    >Please use one for line for each point defining the polygon. Please do not add spaces at the beginning and end of the sequence. You can draw your polygon with https://www.keene.edu/campus/maps/tool/ and copy past directly from there. Just take care, please, to remove the commas afterwards..
-                                </sch:report>
+                                <sch:report test="matches(.,'ˆ\s')">Please use one for line for each
+                                    point defining the polygon. Please do not add spaces at the
+                                    beginning and end of the sequence. You can draw your polygon
+                                    with https://www.keene.edu/campus/maps/tool/ and copy past
+                                    directly from there. Just take care, please, to remove the
+                                    commas afterwards.. </sch:report>
                             </sch:rule>
                             <sch:rule context="tei:geo[@rend]">
-                                <sch:report
-                                    test="matches(.,'\s$')"
-                                    >Please use one for line for each point defining the polygon. Please do not add spaces at the beginning and end of the sequence. You can draw your polygon with https://www.keene.edu/campus/maps/tool/ and copy past directly from there. Just take care, please, to remove the commas afterwards..
-                                </sch:report>
+                                <sch:report test="matches(.,'\s$')">Please use one for line for each
+                                    point defining the polygon. Please do not add spaces at the
+                                    beginning and end of the sequence. You can draw your polygon
+                                    with https://www.keene.edu/campus/maps/tool/ and copy past
+                                    directly from there. Just take care, please, to remove the
+                                    commas afterwards.. </sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
@@ -2830,6 +2978,22 @@
                     </constraintSpec>
 
                     <attList>
+                        <attDef ident="evidence" mode="replace" usage="opt">
+                            <datatype maxOccurs="3">
+                                <rng:ref name="data.word"/>
+                            </datatype>
+                            <valList type="semi">
+                                <valItem ident="estimated">
+                                    <desc>IslHornAfr</desc>
+                                </valItem>
+                                <valItem ident="expressed">
+                                    <desc>IslHornAfr</desc>
+                                </valItem>
+                                <valItem ident="inferred">
+                                    <desc>IslHornAfr</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
                         <attDef ident="type" usage="opt" mode="change">
                             <datatype maxOccurs="3">
                                 <rng:ref name="data.word"/>
@@ -2937,9 +3101,10 @@
                                     (varia) use an id starting with 'e. </sch:report>
                             </sch:rule>
                             <sch:rule context="tei:item[ancestor::tei:additions]">
-                                <sch:report
-                                    test="tei:desc/tei:locus[@facs]">
-                                    The locus of the addition should be child of the item, not of desc. Please move it outside of the desc element, just before it for exemple.</sch:report>
+                                <sch:report test="tei:desc/tei:locus[@facs]"> The locus of the
+                                    addition should be child of the item, not of desc. Please move
+                                    it outside of the desc element, just before it for
+                                    exemple.</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
