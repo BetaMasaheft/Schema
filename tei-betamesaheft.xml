@@ -353,6 +353,15 @@
                                         Jesus, Maṣḥafa ṭomār, the apocryphal Acts of the Apostles,
                                         etc.</desc>
                                 </valItem>
+                                
+                                <valItem ident="censer"><desc>censer</desc></valItem>
+                                <valItem ident="column"><desc>column</desc></valItem>
+                                <valItem ident="cross"><desc>cross</desc></valItem>
+                                <valItem ident="spear"><desc>spear</desc></valItem>
+                                <valItem ident="sponge"><desc>sponge</desc></valItem>
+                                <valItem ident="twothieves"><desc>two thieves</desc></valItem>
+                                
+                                
                                 <!--mycore-->
 
                                 <valItem ident="Gon">
