@@ -361,7 +361,16 @@
                                 <valItem ident="sponge"><desc>sponge</desc></valItem>
                                 <valItem ident="twothieves"><desc>two thieves</desc></valItem>
                                 
-                                
+                                <valItem ident="AksumiteStyle"><desc>Aksumite Style</desc></valItem>
+                                <valItem ident="FirstSolomonicStyle"><desc>First Solomonic Style</desc></valItem>
+                                <valItem ident="SecondSolomonicStyle"><desc>Second Solomonic Style</desc></valItem>
+                                <valItem ident="ThirdSolomonicStyle"><desc>Third Solomonic Style</desc></valItem>
+                                <valItem ident="FirstGondarineStyle"><desc>First Gondarine Style</desc></valItem>
+                                <valItem ident="SecondGondarineStyle"><desc>Second Gondarine Style</desc></valItem>
+                                <valItem ident="PostGondarineStyle"><desc>Post Gondarine Style</desc></valItem>
+                                <valItem ident="ModernStyle"><desc>Modern Style</desc></valItem>
+                                <valItem ident="ShortCycle"><desc>Short Cycle</desc></valItem>
+                                <valItem ident="LongCycle"><desc>Long Cycle</desc></valItem>
                                 <!--mycore-->
 
                                 <valItem ident="Gon">

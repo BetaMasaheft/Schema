@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-11-22T09:12:38Z. .
+Schema generated from ODD source 2017-11-22T10:29:13Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -4084,6 +4084,26 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">sponge</a:documentation>
                   <value>twothieves</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">two thieves</a:documentation>
+                  <value>AksumiteStyle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Aksumite Style</a:documentation>
+                  <value>FirstSolomonicStyle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">First Solomonic Style</a:documentation>
+                  <value>SecondSolomonicStyle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Second Solomonic Style</a:documentation>
+                  <value>ThirdSolomonicStyle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Third Solomonic Style</a:documentation>
+                  <value>FirstGondarineStyle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">First Gondarine Style</a:documentation>
+                  <value>SecondGondarineStyle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Second Gondarine Style</a:documentation>
+                  <value>PostGondarineStyle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Post Gondarine Style</a:documentation>
+                  <value>ModernStyle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Style</a:documentation>
+                  <value>ShortCycle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Short Cycle</a:documentation>
+                  <value>LongCycle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Long Cycle</a:documentation>
                   <value>Gon</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gondarine (1632-1769 CE)</a:documentation>
                   <value>Paks1</value>
