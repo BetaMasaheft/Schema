@@ -576,6 +576,9 @@
                                         charters, foundation charters, etc) concerning the place are
                                         collected.</desc>
                                 </valItem>
+                                <valItem ident="ChristianContent">
+                                    <desc>Items belonging to the Christian tradition which do not contain text, such as miniature collections.</desc>
+                                </valItem>
                             </valList>
                         </attDef>
 
