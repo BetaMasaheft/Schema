@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2017-11-29T14:54:29Z. .
+Schema generated from ODD source 2017-11-30T10:41:55Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -4767,7 +4767,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:ref[@target]">
-                                <sch:report test="not(starts-with(@target, '#') or starts-with(@target, 'http://'))">Please use @target if you need to point to something into the
+                                <sch:report test="not(starts-with(@target, '#') or starts-with(@target, 'http'))">Please use @target if you need to point to something into the
                                     current file (e.g. #h1) or to point to a resource external to
                                     the project (http://www.example.com). if you need to point to a
                                     mss, use @corresp</sch:report>
