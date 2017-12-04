@@ -353,13 +353,22 @@
                                         Jesus, Maṣḥafa ṭomār, the apocryphal Acts of the Apostles,
                                         etc.</desc>
                                 </valItem>
-                                
+                                <valItem ident="animal"><desc>animal</desc></valItem>
+                                <valItem ident="arch"><desc>arch</desc></valItem>
+                                <valItem ident="architecture"><desc>architecture</desc></valItem>
+                                <valItem ident="bird"><desc>bird</desc></valItem>
                                 <valItem ident="censer"><desc>censer</desc></valItem>
+                                <valItem ident="codex"><desc>codex</desc></valItem>
                                 <valItem ident="column"><desc>column</desc></valItem>
                                 <valItem ident="cross"><desc>cross</desc></valItem>
+                                <valItem ident="curtain"><desc>curtain</desc></valItem>
+                                <valItem ident="eucharist"><desc>eucharist</desc></valItem>
+                                <valItem ident="scroll"><desc>scroll</desc></valItem>
                                 <valItem ident="spear"><desc>spear</desc></valItem>
                                 <valItem ident="sponge"><desc>sponge</desc></valItem>
                                 <valItem ident="twothieves"><desc>two thieves</desc></valItem>
+                                <valItem ident="vestment"><desc>vestment</desc></valItem>
+                      
                                 
                                 <valItem ident="AksumiteStyle"><desc>Aksumite Style</desc></valItem>
                                 <valItem ident="FirstSolomonicStyle"><desc>First Solomonic Style</desc></valItem>
@@ -371,6 +380,28 @@
                                 <valItem ident="ModernStyle"><desc>Modern Style</desc></valItem>
                                 <valItem ident="ShortCycle"><desc>Short Cycle</desc></valItem>
                                 <valItem ident="LongCycle"><desc>Long Cycle</desc></valItem>
+                                <valItem ident="angel"><desc>angel</desc></valItem>
+                                <valItem ident="attribute"><desc>attribute</desc></valItem>
+                                <valItem ident="bearded"><desc>bearded</desc></valItem>
+                                <valItem ident="beardless"><desc>beardless</desc></valItem>
+                                <valItem ident="deadjesus"><desc>deadjesus</desc></valItem>
+                                <valItem ident="donordepiction"><desc>donordepiction</desc></valItem>
+                                <valItem ident="emptycross"><desc>emptycross</desc></valItem>
+                                <valItem ident="livingjesus"><desc>livingjesus</desc></valItem>
+                                <valItem ident="interlace"><desc>interlace</desc></valItem>
+                                <valItem ident="gesture"><desc>gesture</desc></valItem>
+                                <valItem ident="gestureblessing"><desc>gestureblessing</desc></valItem>
+                                <valItem ident="gesturegrief"><desc>gesturegrief</desc></valItem>
+                                <valItem ident="gestureorans"><desc>gestureorans</desc></valItem>
+                                <valItem ident="gesturewitnessing"><desc>gesturewitnessing</desc></valItem>
+                                <valItem ident="halo"><desc>halo</desc></valItem>
+                                <valItem ident="mandorla"><desc>mandorla</desc></valItem>
+                                <valItem ident="saluspopuli"><desc>saluspopuli</desc></valItem>
+                                <valItem ident="hodegetria"><desc>hodegetria</desc></valItem>
+                                <valItem ident="seated"><desc>seated</desc></valItem>
+                                <valItem ident="standing"><desc>standing</desc></valItem>
+                                <valItem ident="sunandmoon"><desc>sunandmoon</desc></valItem>
+                                <valItem ident="tetramorph"><desc>tetramorph</desc></valItem>
                                 <!--mycore-->
 
                                 <valItem ident="Gon">
