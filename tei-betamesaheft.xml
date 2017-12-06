@@ -1617,6 +1617,8 @@
                                 <!--                                Sybilla-->
                                 <valItem ident="JG"/>
                                 <!--                                Jacopo-->
+                                <valItem ident="JK"/>
+                                <!--                                Jonas-->
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -1699,6 +1701,8 @@
                                 <!--                                Nafisa-->
                                 <valItem ident="JG"/>
                                 <!--                                Jacopo-->
+                                <valItem ident="JK"/>
+                                <!--                                Jonas-->
                             </valList>
                         </attDef>
                         <attDef ident="when" mode="replace" usage="req"/>
