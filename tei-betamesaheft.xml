@@ -28,6 +28,7 @@
             <change who="DR" when="2017-04-21">Added keyword</change>
             <change who="DR" when="2017-05-02">Added value definitions @place</change>
             <change who="DR" when="2017-09-15">Added philosophy keyword</change>
+            <change who="DR" when="2017-12-15">Added Golden Gospel relation</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -2140,11 +2141,11 @@
                                     <desc>is the wife of the daugther</desc>
                                 </valItem>
                                 <valItem ident="bm:hasTabot">
-                                    <desc>This person has a Tabot at the location...</desc>
+                                    <desc>This person has a Tābot at the location...</desc>
                                 </valItem>
                                 <valItem ident="bm:ordainedBy">
                                     <desc>Ordained priest, bishop or monk. Same as
-                                        Consacrated.</desc>
+                                        Consecrated.</desc>
                                 </valItem>
                                 <valItem ident="bm:hasOrdained">
                                     <desc>has ordained to a religious ministery ...</desc>
@@ -2161,6 +2162,11 @@
                                         enabling us to document the authorship of this work and the
                                         fact that the work as such is a translation of another
                                         work.</desc>
+                                </valItem>
+                                <valItem ident="bm:isGoldenGospelof">
+                                    <desc>The relation between a Golden Gospel and its original institution (even if the manuscript is now kept in a different place),
+                                        to be used in cases where the definition of "Golden Gospel" is explicitly mentioned somewhere in the Gospel
+                                        or when there is enough evidence that the Gospel is the main material repository of documentary texts related to a certain institution.</desc>
                                 </valItem>
 
                                 <valItem ident="syriaca:different-from">
@@ -2182,7 +2188,7 @@
                                     <desc>http://syriaca.org/documentation/relations.html#share-a-title</desc>
                                 </valItem>
                                 <valItem ident="syriaca:born-at">
-                                    <desc>http://syriaca.org/documentation/relations.html#born-at</desc>
+                                    <desc>http://syriaca.org/documentation/relations.html#born-at</desc>    
                                 </valItem>
 
                                 <valItem ident="saws:isCopierOf">
