@@ -363,6 +363,7 @@
                                 <valItem ident="column"><desc>column</desc></valItem>
                                 <valItem ident="cross"><desc>cross</desc></valItem>
                                 <valItem ident="curtain"><desc>curtain</desc></valItem>
+                                <valItem ident="dragon"><desc>dragon</desc></valItem>
                                 <valItem ident="eucharist"><desc>eucharist</desc></valItem>
                                 <valItem ident="scroll"><desc>scroll</desc></valItem>
                                 <valItem ident="spear"><desc>spear</desc></valItem>
