@@ -172,7 +172,7 @@
                 </elementSpec>
 
                 <elementSpec ident="date" mode="change" module="header">
-                    <content>
+                     <content>
                         <rng:zeroOrMore>
                             <rng:choice>
                                 <rng:text/>
@@ -185,6 +185,17 @@
                             </rng:choice>
                         </rng:zeroOrMore>
                     </content>
+                    <constraintSpec  scheme="isoschematron" ident="date">
+                    <constraint>
+                        <sch:rule context="tei:date[not(text())]">
+                            <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
+                                There should be a space before and one after the element date 
+                            </sch:report>
+                            
+                        </sch:rule>
+                    </constraint>
+                    </constraintSpec>
+                   
                 </elementSpec>
 
 
@@ -729,6 +740,12 @@
                                     the project (http://www.example.com). if you need to point to a
                                     mss, use @corresp</sch:report>
                             </sch:rule>
+                            <sch:rule context="tei:ref[not(text())]">
+                                <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
+                                    There should be a space before and one after the element ref 
+                                </sch:report>
+                                
+                            </sch:rule>
                         </constraint>
                     </constraintSpec>
                     <attList>
@@ -791,6 +808,12 @@
                                 <sch:report test="not(matches(.,'t\d+'))"> Titles of works must have
                                     ids starting with the letter 't' followed by a progressive
                                     number, e.g. t1, t2, t3 </sch:report>
+                            </sch:rule>
+                            <sch:rule context="tei:title[not(text())][not(parent::tei:titleStmt)]">
+                                <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
+                                    There should be a space before and one after the element title 
+                                </sch:report>
+                                
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
@@ -1731,11 +1754,17 @@
                 <elementSpec ident="persName" mode="change" module="namesdates">
                     <constraintSpec scheme="isoschematron" ident="persName">
                         <constraint>
+                            
                             <sch:rule
                                 context="tei:persName[ancestor::tei:TEI[@type='mss' or @type='place' or @type='ins' or @type='work']][not(parent::tei:respStmt)]">
                                 <sch:report test="not(@ref)">A persName in a mss, place or work
                                     description should always contain an attribute @ref pointing to
                                     the relevant record</sch:report>
+                            </sch:rule>
+                            <sch:rule context="tei:persName[not(text())][not(parent::tei:person)]">
+                                <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
+                                    There should be a space before and one after the element persName 
+                                </sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
@@ -1841,6 +1870,12 @@
                                 <sch:report test="not(@ref)">A placeName in a mss, person or work
                                     description should always contain an attribute @ref pointing to
                                     the relevant record</sch:report>
+                            </sch:rule>  
+                            <sch:rule context="tei:placeName[not(text())][not(parent::tei:place)]">
+                                <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
+                                    There should be a space before and one after the element placeName 
+                                </sch:report>
+                                
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
