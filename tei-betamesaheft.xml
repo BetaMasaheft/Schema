@@ -76,6 +76,12 @@
 
                     </content>
                 </elementSpec>
+                
+                <elementSpec ident="listRelation" mode="change" module="namesdates">
+                    <classes>
+                        <memberOf key="model.global"/>
+                    </classes>
+                </elementSpec>
 
                 <!--          LISTS OF VALUES FOR ATTRIBUTES-->
                 <!--  adds value partly to del/@rend-->
