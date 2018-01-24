@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-01-23T14:38:11Z. .
+Schema generated from ODD source 2018-01-24T06:07:22Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -5879,7 +5879,7 @@ Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] par
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      context="tei:bibl[not(ancestor::tei:listBibl[@type='mss' or @type='relations'])]">
+                      context="tei:bibl[not(ancestor::tei:listBibl[@type='mss'])]">
                                 <sch:report test="not(contains(tei:ptr/@target, 'bm:'))">The unique
                                     tag in Zotero to be used in this pointers should be namespaced.
                                     Please make sure that the tag in zotero begins with bm: and copy
@@ -6009,8 +6009,6 @@ Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] par
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern translations of the work </a:documentation>
                <value>secondary</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Secondary bibliography on the subject of the record</a:documentation>
-               <value>relations</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Relations between the subject of the record and other entities (persons, related works, manuscript filiation etc.)</a:documentation>
             </choice>
          </attribute>
          <empty/>
@@ -14738,9 +14736,7 @@ Sample values include: 1] frame; 2] miniature; 3] band; 4] punctuation; 5] drawi
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:relation">
-                                <sch:report test="not(parent::tei:listRelation or parent::tei:listBibl[@type='relations'])"> a relation element is only allowed within a listRelation (for
-                                    places, institution, person and groups) or in a
-                                    listBibl[@type='relations'] in manuscripts and works
+                                <sch:report test="not(parent::tei:listRelation)"> a relation element is only allowed within a listRelation
                                 </sch:report>
                             </sch:rule>
          </pattern>

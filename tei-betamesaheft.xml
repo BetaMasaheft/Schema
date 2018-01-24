@@ -895,11 +895,6 @@
                                 <valItem ident="secondary">
                                     <desc>Secondary bibliography on the subject of the record</desc>
                                 </valItem>
-                                <valItem ident="relations">
-                                    <desc>Relations between the subject of the record and other
-                                        entities (persons, related works, manuscript filiation
-                                        etc.)</desc>
-                                </valItem>
                             </valList>
                         </attDef>
                     </attList>
@@ -1053,7 +1048,7 @@
                     <constraintSpec scheme="isoschematron" ident="bibl">
                         <constraint>
                             <sch:rule
-                                context="tei:bibl[not(ancestor::tei:listBibl[@type='mss' or @type='relations'])]">
+                                context="tei:bibl[not(ancestor::tei:listBibl[@type='mss'])]">
                                 <sch:report test="not(contains(tei:ptr/@target, 'bm:'))">The unique
                                     tag in Zotero to be used in this pointers should be namespaced.
                                     Please make sure that the tag in zotero begins with bm: and copy
@@ -2124,10 +2119,8 @@
                         <constraint>
                             <sch:rule context="tei:relation">
                                 <sch:report
-                                    test="not(parent::tei:listRelation or parent::tei:listBibl[@type='relations'])"
-                                    > a relation element is only allowed within a listRelation (for
-                                    places, institution, person and groups) or in a
-                                    listBibl[@type='relations'] in manuscripts and works
+                                    test="not(parent::tei:listRelation)"
+                                    > a relation element is only allowed within a listRelation
                                 </sch:report>
                             </sch:rule>
                         </constraint>
