@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-02-13T10:11:52Z. .
+Schema generated from ODD source 2018-02-13T10:34:13Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -11705,7 +11705,7 @@ Suggested values include: 1] paper; 2] parch (parchment) ; 3] mixed</a:documenta
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:decoNote[ancestor::tei:bindingDesc][@pastedown]">
                               <sch:report test="not(@type='EndLeaves')">the attribute pastedown is only allowed on a decoNote with type EndLeaves.</sch:report>
-                                <sch:report test="not(matches(@pastedown, '[NYUOTILR\s]+'))">values of pastedown might only be a combination of maximum three of the suggested values. Y OTI L is fine, N is fine, UTI R is fine.</sch:report>
+                                <sch:report test="not(matches(@pastedown, '[UOTILR\s]+'))">values of pastedown might only be a combination of maximum three of the suggested values. Y OTI L is fine, N is fine, UTI R is fine.</sch:report>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
@@ -11838,13 +11838,9 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
          <optional>
             <attribute name="pastedown">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Suggested values include: 1] Y; 2] N; 3] UTI; 4] OTI; 5] L; 6] R</a:documentation>
+Suggested values include: 1] UTI; 2] OTI; 3] L; 4] R</a:documentation>
                <list>
                   <choice>
-                     <value>Y</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                     <value>N</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>UTI</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Under...</a:documentation>
                      <value>OTI</value>
@@ -11857,10 +11853,6 @@ Suggested values include: 1] Y; 2] N; 3] UTI; 4] OTI; 5] L; 6] R</a:documentatio
                   </choice>
                   <optional>
                      <choice>
-                        <value>Y</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <value>N</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>UTI</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Under...</a:documentation>
                         <value>OTI</value>
@@ -11874,10 +11866,6 @@ Suggested values include: 1] Y; 2] N; 3] UTI; 4] OTI; 5] L; 6] R</a:documentatio
                   </optional>
                   <optional>
                      <choice>
-                        <value>Y</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                        <value>N</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>UTI</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Under...</a:documentation>
                         <value>OTI</value>

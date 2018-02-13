@@ -1453,7 +1453,7 @@
                             </sch:rule>
                             <sch:rule context="tei:decoNote[ancestor::tei:bindingDesc][@pastedown]">
                               <sch:report test="not(@type='EndLeaves')">the attribute pastedown is only allowed on a decoNote with type EndLeaves.</sch:report>
-                                <sch:report test="not(matches(@pastedown, '[NYUOTILR\s]+'))">values of pastedown might only be a combination of maximum three of the suggested values. Y OTI L is fine, N is fine, UTI R is fine.</sch:report>
+                                <sch:report test="not(matches(@pastedown, '[UOTILR\s]+'))">values of pastedown might only be a combination of maximum three of the suggested values. Y OTI L is fine, N is fine, UTI R is fine.</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:decoNote[ancestor::tei:bindingDesc][@color]">
                                 <sch:report test="@type='SawingStations' or @type='Spine' or @type='Other' or @type='Fastening' ">The attribute color is not allowed on a decoNote with this type.</sch:report>
@@ -1469,8 +1469,6 @@
                             </datatype>
                             <valList type="semi">
                             
-                            <valItem ident="Y"/>
-                            <valItem ident="N"/>
                             <valItem ident="UTI">
                                 <desc>Under...</desc>
                             </valItem>
