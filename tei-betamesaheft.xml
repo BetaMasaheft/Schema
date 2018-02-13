@@ -1448,15 +1448,15 @@
                                     Description must have ids starting with the letter 'b' followed
                                     by a progressive number, e.g. b1, b2, b3 </sch:report>
                             </sch:rule>
-                            <sch:rule context="tei:decoNote[ancestor::tei:bindingDesc][@type='SawingStations']">
-                                <sch:report test="not(number(.))">decoNote with type sawingStations should contain a number.</sch:report>
+                            <sch:rule context="tei:decoNote[ancestor::tei:bindingDesc][@type='SewingStations']">
+                                <sch:report test="not(number(.))">decoNote with type SewingStations should contain a number.</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:decoNote[ancestor::tei:bindingDesc][@pastedown]">
                               <sch:report test="not(@type='EndLeaves')">the attribute pastedown is only allowed on a decoNote with type EndLeaves.</sch:report>
                                 <sch:report test="not(matches(@pastedown, '[UOTILR\s]+'))">values of pastedown might only be a combination of maximum three of the suggested values. Y OTI L is fine, N is fine, UTI R is fine.</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:decoNote[ancestor::tei:bindingDesc][@color]">
-                                <sch:report test="@type='SawingStations' or @type='Spine' or @type='Other' or @type='Fastening' ">The attribute color is not allowed on a decoNote with this type.</sch:report>
+                                <sch:report test="@type='SewingStations' or @type='Spine' or @type='Other' or @type='Fastening' ">The attribute color is not allowed on a decoNote with this type.</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
@@ -1555,7 +1555,7 @@
                                 <valItem ident="Boardsatt">
                                   <desc>for use in binding description</desc>
                                 </valItem>
-                                <valItem ident="SawingStations">
+                                <valItem ident="SewingStations">
                                   <desc>for use in binding description</desc>
                                 </valItem>
                                 <valItem ident="EndLeaves">
