@@ -1530,6 +1530,9 @@
                                 <valItem ident="Tailband">
                                     <desc>for use in binding description.</desc>
                                 </valItem>
+                                <valItem ident="Endbands">
+                                    <desc>for use in binding description.</desc>
+                                </valItem>
                                 <valItem ident="Fastening">
                                   <desc>for use in binding description</desc>
                                 </valItem>
