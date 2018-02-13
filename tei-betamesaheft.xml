@@ -39,7 +39,7 @@
             <schemaSpec ident="tei-betamesaheft" docLang="en" prefix="tei_" start="TEI"
                 xml:lang="en" source="tei:3.0.0">
 
-                <!--       MODULES USED BY THE Beta maṣāḥǝft: Manuscripts of Ethiopia and Eritrea SCHEMA  
+                <!--       MODULES USED BY THE Beta maṣāḥǝft: Manuscripts of Ethiopia and Eritrea SCHEMA
                 the @source ties our current schema to the version 3.0.0 of TEI
                 -->
                 <moduleRef key="core"/>
@@ -76,7 +76,7 @@
 
                     </content>
                 </elementSpec>
-                
+
                 <elementSpec ident="listRelation" mode="change" module="namesdates">
                     <classes>
                         <memberOf key="model.global"/>
@@ -195,13 +195,13 @@
                     <constraint>
                         <sch:rule context="tei:date[not(text())]">
                             <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
-                                There should be a space before and one after the element date 
+                                There should be a space before and one after the element date
                             </sch:report>
-                            
+
                         </sch:rule>
                     </constraint>
                     </constraintSpec>
-                   
+
                 </elementSpec>
 
 
@@ -387,8 +387,8 @@
                                 <valItem ident="sponge"><desc>sponge</desc></valItem>
                                 <valItem ident="twothieves"><desc>two thieves</desc></valItem>
                                 <valItem ident="vestment"><desc>vestment</desc></valItem>
-                      
-                                
+
+
                                 <valItem ident="AksumiteStyle"><desc>Aksumite Style</desc></valItem>
                                 <valItem ident="FirstSolomonicStyle"><desc>First Solomonic Style</desc></valItem>
                                 <valItem ident="SecondSolomonicStyle"><desc>Second Solomonic Style</desc></valItem>
@@ -748,9 +748,9 @@
                             </sch:rule>
                             <sch:rule context="tei:ref[not(text())]">
                                 <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
-                                    There should be a space before and one after the element ref 
+                                    There should be a space before and one after the element ref
                                 </sch:report>
-                                
+
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
@@ -817,9 +817,9 @@
                             </sch:rule>
                             <sch:rule context="tei:title[not(text())][not(parent::tei:titleStmt)]">
                                 <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
-                                    There should be a space before and one after the element title 
+                                    There should be a space before and one after the element title
                                 </sch:report>
-                                
+
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
@@ -1130,12 +1130,6 @@
                             <valList type="closed">
                                 <valItem ident="foundation">
                                     <desc> to be used for places and institutions</desc>
-                                </valItem>
-                                <valItem ident="Headband">
-                                    <desc>to be used in binding description</desc>
-                                </valItem>
-                                <valItem ident="Tailband">
-                                    <desc>for use in binding description</desc>
                                 </valItem>
                                 <valItem ident="DonationNote">
                                     <desc>note stating that the manuscript has been donated to an
@@ -1454,12 +1448,53 @@
                                     Description must have ids starting with the letter 'b' followed
                                     by a progressive number, e.g. b1, b2, b3 </sch:report>
                             </sch:rule>
+                            <sch:rule context="tei:decoNote[ancestor::tei:bindingDesc][@type='SawingStations']">
+                                <sch:report test="not(number(.))">decoNote with type sawingStations should contain a number.</sch:report>
+                            </sch:rule>
+                            <sch:rule context="tei:decoNote[ancestor::tei:bindingDesc][@pastedown]">
+                              <sch:report test="not(@type='EndLeaves')">the attribute pastedown is only allowed on a decoNote with type EndLeaves.</sch:report>
+                                <sch:report test="not(matches(@pastedown, '[NYUOTILR\s]+'))">values of pastedown might only be a combination of maximum three of the suggested values. Y OTI L is fine, N is fine, UTI R is fine.</sch:report>
+                            </sch:rule>
+                            <sch:rule context="tei:decoNote[ancestor::tei:bindingDesc][@color]">
+                                <sch:report test="@type='SawingStations' or @type='Spine' or @type='Other' or @type='Fastening' ">The attribute color is not allowed on a decoNote with this type.</sch:report>
+                            </sch:rule>
                         </constraint>
                     </constraintSpec>
                     <attList>
                         <attDef ident="xml:id" mode="change" usage="req"/>
+                        <attDef ident="color" mode="add" usage="opt"/>
+                        <attDef ident="pastedown" mode="add" usage="opt">
+                          <valList type="closed">
+                            <datatype maxOccurs="3">
+                                <rng:ref name="data.word"/>
+                            </datatype>
+                            <valItem ident="Y"/>
+                            <valItem ident="N"/>
+                            <valItem ident="UTI">
+                                <desc>Under...</desc>
+                            </valItem>
+                            <valItem ident="OTI">
+                                <desc>Over...</desc>
+                            </valItem>
+                            <valItem ident="L">
+                                <desc>Left</desc>
+                            </valItem>
+                            <valItem ident="R">
+                                <desc>Right</desc>
+                            </valItem>
+                          </valList>
+                        </attDef>
+                        <attDef ident="repaired" mode="add" usage="opt">
+                          <valList type="closed">
+                            <datatype maxOccurs="1">
+                                <rng:ref name="data.word"/>
+                            </datatype>
+                            <valItem ident="Y"/>
+                            <valItem ident="N"/>
+                          </valList>
+                        </attDef>
                         <attDef ident="type" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="closed">
                                 <valItem ident="frame">
                                     <desc>an ornament around the page</desc>
                                 </valItem>
@@ -1489,6 +1524,33 @@
                                 <valItem ident="unwan"/>
                                 <valItem ident="vignette"/>
                                 <valItem ident="engraving"/>
+                                <valItem ident="Headband">
+                                    <desc>to be used in binding description</desc>
+                                </valItem>
+                                <valItem ident="Tailband">
+                                    <desc>for use in binding description.</desc>
+                                </valItem>
+                                <valItem ident="Fastening">
+                                  <desc>for use in binding description</desc>
+                                </valItem>
+                                <valItem ident="Spine">
+                                  <desc>for use in binding description</desc>
+                                </valItem>
+                                <valItem ident="SlipCase">
+                                  <desc>for use in binding description</desc>
+                                </valItem>
+                                <valItem ident="Boards">
+                                  <desc>for use in binding description</desc>
+                                </valItem>
+                                <valItem ident="Boardsatt">
+                                  <desc>for use in binding description</desc>
+                                </valItem>
+                                <valItem ident="SawingStations">
+                                  <desc>for use in binding description</desc>
+                                </valItem>
+                                <valItem ident="EndLeaves">
+                                  <desc>for use in binding description</desc>
+                                </valItem>
 
                             </valList>
                         </attDef>
@@ -1662,9 +1724,9 @@
                         a record to record a <gi>change</gi> in the <gi>revisionDesc</gi> element of the <gi>teiHeader</gi>. In
                         the attribute <att>who</att> enter your id, in the <att>when</att> enter the date of the change,
                         in the format YYYY-MM-DD. Inside the element, briefly describe the changes
-                        you have made. When you are done with a file, please, add a change 
-                        element with content <emph>completed</emph>. 
-                        If you have reviewed and corrected a file which is now ready and published, 
+                        you have made. When you are done with a file, please, add a change
+                        element with content <emph>completed</emph>.
+                        If you have reviewed and corrected a file which is now ready and published,
                         please add a <gi>change</gi> with content <emph>reviewed</emph></desc>
                     <constraintSpec scheme="isoschematron" ident="change">
                         <constraint>
@@ -1720,7 +1782,7 @@
                                 <!--                                Ran HaCohen-->
                                 <valItem ident="SJ"/>
                                 <!--                                Sybilla-->
-                                
+
                                 <valItem ident="SS"/>
                                 <!--                                Sisay-->
                                 <valItem ident="DE"/>
@@ -1755,7 +1817,7 @@
                 <elementSpec ident="persName" mode="change" module="namesdates">
                     <constraintSpec scheme="isoschematron" ident="persName">
                         <constraint>
-                            
+
                             <sch:rule
                                 context="tei:persName[ancestor::tei:TEI[@type='mss' or @type='place' or @type='ins' or @type='work']][not(parent::tei:respStmt)]">
                                 <sch:report test="not(@ref)">A persName in a mss, place or work
@@ -1764,7 +1826,7 @@
                             </sch:rule>
                             <sch:rule context="tei:persName[not(text())][not(parent::tei:person)]">
                                 <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
-                                    There should be a space before and one after the element persName 
+                                    There should be a space before and one after the element persName
                                 </sch:report>
                             </sch:rule>
                         </constraint>
@@ -1871,12 +1933,12 @@
                                 <sch:report test="not(@ref)">A placeName in a mss, person or work
                                     description should always contain an attribute @ref pointing to
                                     the relevant record</sch:report>
-                            </sch:rule>  
+                            </sch:rule>
                             <sch:rule context="tei:placeName[not(text())][not(parent::tei:place)]">
                                 <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
-                                    There should be a space before and one after the element placeName 
+                                    There should be a space before and one after the element placeName
                                 </sch:report>
-                                
+
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
@@ -2227,7 +2289,7 @@
                                     <desc>http://syriaca.org/documentation/relations.html#share-a-title</desc>
                                 </valItem>
                                 <valItem ident="syriaca:born-at">
-                                    <desc>http://syriaca.org/documentation/relations.html#born-at</desc>    
+                                    <desc>http://syriaca.org/documentation/relations.html#born-at</desc>
                                 </valItem>
 
                                 <valItem ident="saws:isCopierOf">
