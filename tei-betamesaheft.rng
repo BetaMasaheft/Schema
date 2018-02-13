@@ -5,12 +5,13 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-02-13T09:26:03Z. .
+Schema generated from ODD source 2018-02-13T10:11:52Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
   
---><!--[http://creativecommons.org/licenses/by-sa/4.0/] This file is licensed under the Creative Commons Attribution-ShareAlike 4.0. --><define name="tei_macro.paraContent">
+--><!--[http://creativecommons.org/licenses/by-sa/4.0/] This file is licensed under the Creative Commons Attribution-ShareAlike 4.0. -->
+   <define name="tei_macro.paraContent">
       <zeroOrMore>
          <choice>
             <text/>
@@ -234,7 +235,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
       <optional>
          <attribute name="unit">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">names the unit used for the measurement
-Suggested values include: 1] cm(centimetres) ; 2] mm(millimetres) ; 3] in(inches) ; 4] lines; 5] chars(characters) </a:documentation>
+Suggested values include: 1] cm (centimetres) ; 2] mm (millimetres) ; 3] in (inches) ; 4] lines; 5] chars (characters) </a:documentation>
             <choice>
                <value>cm</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(centimetres) </a:documentation>
@@ -465,7 +466,7 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[@when]">
-        <sch:report role="nonfatal" test="@notBefore|@notAfter|@from|@to">The @when attribute cannot be used with any other att.datable.w3c attributes.</sch:report>
+        <sch:report test="@notBefore|@notAfter|@from|@to" role="nonfatal">The @when attribute cannot be used with any other att.datable.w3c attributes.</sch:report>
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
@@ -474,7 +475,7 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[@from]">
-        <sch:report role="nonfatal" test="@notBefore">The @from and @notBefore attributes cannot be used together.</sch:report>
+        <sch:report test="@notBefore" role="nonfatal">The @from and @notBefore attributes cannot be used together.</sch:report>
       </sch:rule>
    </pattern>
    <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
@@ -483,7 +484,7 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
                 xmlns:rng="http://relaxng.org/ns/structure/1.0"
                 xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                 context="tei:*[@to]">
-        <sch:report role="nonfatal" test="@notAfter">The @to and @notAfter attributes cannot be used together.</sch:report>
+        <sch:report test="@notAfter" role="nonfatal">The @to and @notAfter attributes cannot be used together.</sch:report>
       </sch:rule>
    </pattern>
    <define name="tei_att.datable.attributes">
@@ -1057,7 +1058,7 @@ Sample values include: 1] image; 2] character; 3] theme; 4] allusion</a:document
       <optional>
          <attribute name="unit">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates the units used for the measurement, usually using the standard symbol for the desired units.
-Suggested values include: 1] m(metre) ; 2] kg(kilogram) ; 3] s(second) ; 4] Hz(hertz) ; 5] Pa(pascal) ; 6] Ω(ohm) ; 7] L(litre) ; 8] t(tonne) ; 9] ha(hectare) ; 10] Å(ångström) ; 11] mL(millilitre) ; 12] cm(centimetre) ; 13] dB(decibel) ; 14] kbit(kilobit) ; 15] Kibit(kibibit) ; 16] kB(kilobyte) ; 17] KiB(kibibyte) ; 18] MB(megabyte) ; 19] MiB(mebibyte) </a:documentation>
+Suggested values include: 1] m (metre) ; 2] kg (kilogram) ; 3] s (second) ; 4] Hz (hertz) ; 5] Pa (pascal) ; 6] Ω (ohm) ; 7] L (litre) ; 8] t (tonne) ; 9] ha (hectare) ; 10] Å (ångström) ; 11] mL (millilitre) ; 12] cm (centimetre) ; 13] dB (decibel) ; 14] kbit (kilobit) ; 15] Kibit (kibibit) ; 16] kB (kilobyte) ; 17] KiB (kibibyte) ; 18] MB (megabyte) ; 19] MiB (mebibyte) </a:documentation>
             <choice>
                <value>m</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(metre) SI base unit of length</a:documentation>
@@ -4681,10 +4682,11 @@ Measures]</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:date[not(text())]">
-               <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
+                            <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
                                 There should be a space before and one after the element date
                             </sch:report>
-            </sch:rule>
+
+                        </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-date-date-constraint-rule-10">
@@ -4692,10 +4694,10 @@ Measures]</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:date[ancestor::place[@subtype='institution']]">
-               <sch:report test="not(@type='foundation')">Attribute
+                                <sch:report test="not(@type='foundation')">Attribute
                                     @type='foundation' is require for date into a note about an
                                     institution.</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.datable.attribute.period"/>
@@ -4823,15 +4825,15 @@ attributes @target and @cRef may be supplied on <name/>.</report>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:ref">
-               <sch:report test="not(@target or @corresp or @cRef)">ref must be
+                                <sch:report test="not(@target or @corresp or @cRef)">ref must be
                                     used with either a @corresp pointing to a project xml:id or a
                                     @target pointing to a an internal id or a @cRef pointing to an
                                     external urn, like those in Perseus</sch:report>
-               <sch:report test="not(@type) and @corresp">Please use @corresp only
+                                <sch:report test="not(@type) and @corresp">Please use @corresp only
                                     for external entities, assigning also a @type. if you need to
                                     point to something into the current file or to a resource
                                     external to the project use @target.</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-ref-ref-constraint-rule-12">
@@ -4839,11 +4841,11 @@ attributes @target and @cRef may be supplied on <name/>.</report>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:ref[@target]">
-               <sch:report test="not(starts-with(@target, '#') or starts-with(@target, 'http'))">Please use @target if you need to point to something into the
+                                <sch:report test="not(starts-with(@target, '#') or starts-with(@target, 'http'))">Please use @target if you need to point to something into the
                                     current file (e.g. #h1) or to point to a resource external to
                                     the project (http://www.example.com). if you need to point to a
                                     mss, use @corresp</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-ref-ref-constraint-rule-13">
@@ -4851,10 +4853,11 @@ attributes @target and @cRef may be supplied on <name/>.</report>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:ref[not(text())]">
-               <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
+                                <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
                                     There should be a space before and one after the element ref
                                 </sch:report>
-            </sch:rule>
+
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-ref-refAtts-constraint-report-13">
@@ -5029,9 +5032,9 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:item[ancestor::tei:collation]">
-               <sch:report test="not(@xml:id)">items in collation must have an
+                                <sch:report test="not(@xml:id)">items in collation must have an
                                     @xml:id</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-item-item-constraint-rule-16">
@@ -5039,10 +5042,10 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:item[ancestor::tei:collation]">
-               <sch:report test="not(matches(@xml:id,'q\d+'))"> Items in Collation
+                                <sch:report test="not(matches(@xml:id,'q\d+'))"> Items in Collation
                                     must have ids starting with the letter 'q' followed by a
                                     progressive number, e.g. q1, q2, q3 </sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-item-item-constraint-rule-17">
@@ -5050,9 +5053,9 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:item[ancestor::tei:additions]">
-               <sch:report test="not(@xml:id)"> items in additions must have an
+                                <sch:report test="not(@xml:id)"> items in additions must have an
                                     @xml:id</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-item-item-constraint-rule-18">
@@ -5060,11 +5063,11 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:item[ancestor::tei:additions]">
-               <sch:report test="not(matches(@xml:id,'a\d+') or matches(@xml:id,'e\d+'))">
+                                <sch:report test="not(matches(@xml:id,'a\d+') or matches(@xml:id,'e\d+'))">
                                     Additions must have ids starting with the letter 'a' followed by
                                     a progressive number, e.g. a1, a2, a3. In case of other contents
                                     (varia) use an id starting with 'e. </sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-item-item-constraint-rule-19">
@@ -5072,9 +5075,9 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:item[ancestor::tei:additions]">
-               <sch:report test="tei:desc/tei:locus[@facs]">
+                                <sch:report test="tei:desc/tei:locus[@facs]">
                                     The locus of the addition should be child of the item, not of desc. Please move it outside of the desc element, just before it for exemple.</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <ref name="tei_att.global.attribute.xmlid"/>
          <ref name="tei_att.global.attribute.n"/>
@@ -5543,8 +5546,6 @@ Sample values include: 1] generalEditor</a:documentation>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>FP</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <value>NV</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>SS</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>RHC</value>
@@ -5556,6 +5557,58 @@ Sample values include: 1] generalEditor</a:documentation>
                <value>JK</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <value>EDS</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>SA</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>SD</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>VP</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>IF</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>SH</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>FP</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>DE</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>MK</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>VR</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>AA</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>EG</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>IR</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>MB</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>NV</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>MP</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>JK</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>EDS</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>SF</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>IP</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>RBO</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>AR</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>AH</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>JS</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>AW</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>JML</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>AG</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </choice>
          </attribute>
@@ -5616,12 +5669,12 @@ Sample values include: 1] generalEditor</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:title[not(@type='short')][ancestor::tei:TEI[@type='work']][ancestor::tei:titleStmt]">
-               <sch:report test="not(@xml:id or @corresp)">title in a Work entity
+                                <sch:report test="not(@xml:id or @corresp)">title in a Work entity
                                     must always have an @xml:id which identifies alternative titles
                                     or a @corresp pointing to one of such xml:ids. Format of the id
                                     should be like t1 t2, etc. and thus in @corresp #t1, #t2,
                                     etc.</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-title-title-constraint-rule-21">
@@ -5629,11 +5682,11 @@ Sample values include: 1] generalEditor</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:title[ancestor::tei:TEI[@type='work']][not(ancestor::tei:titleStmt)]">
-               <sch:report test="not(@xml:id or @ref)">title in work must always
+                                <sch:report test="not(@xml:id or @ref)">title in work must always
                                     have an @xml:id which identifies alternative titles and/or a
                                     @ref pointing to the correct Work entity. Format of the id
                                     should be like t1 t2, etc.</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-title-title-constraint-rule-22">
@@ -5641,10 +5694,10 @@ Sample values include: 1] generalEditor</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:title[not(parent::tei:ab)][ancestor::tei:TEI[@type='work']]/@xml:id">
-               <sch:report test="not(matches(.,'t\d+'))"> Titles of works must have
+                                <sch:report test="not(matches(.,'t\d+'))"> Titles of works must have
                                     ids starting with the letter 't' followed by a progressive
                                     number, e.g. t1, t2, t3 </sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-title-title-constraint-rule-23">
@@ -5652,10 +5705,11 @@ Sample values include: 1] generalEditor</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:title[not(text())][not(parent::tei:titleStmt)]">
-               <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
+                                <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
                                     There should be a space before and one after the element title
                                 </sch:report>
-            </sch:rule>
+
+                            </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.canonical.attribute.key"/>
@@ -5811,9 +5865,9 @@ Sample values include: 1] generalEditor</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:citedRange">
-               <sch:report test="@from or @to">Please, don't use @from and @to in
+                                <sch:report test="@from or @to">Please, don't use @from and @to in
                                     citedRange, write the range into the element</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-citedRange-citedRange-constraint-rule-25">
@@ -5821,11 +5875,11 @@ Sample values include: 1] generalEditor</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:citedRange">
-               <sch:report test="not(text())">An Empty citedRange is not allowed,
+                                <sch:report test="not(text())">An Empty citedRange is not allowed,
                                     remove it if you don't need it or please enter the page range,
                                     unit number according to need and use @unit to specifiy the type
                                     of range. Multiple citedRange are allowed.</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.pointing.attributes"/>
@@ -5872,11 +5926,11 @@ Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] par
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:bibl[not(ancestor::tei:listBibl[@type='mss'])]">
-               <sch:report test="not(contains(tei:ptr/@target, 'bm:'))">The unique
+                                <sch:report test="not(contains(tei:ptr/@target, 'bm:'))">The unique
                                     tag in Zotero to be used in this pointers should be namespaced.
                                     Please make sure that the tag in zotero begins with bm: and copy
                                     it here exactely as it is, without spaces.</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-bibl-bibl-constraint-rule-27">
@@ -5884,10 +5938,10 @@ Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] par
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:bibl[ancestor::tei:listBibl[@type='mss']][@type='external']">
-               <sch:report test="not(tei:ptr[@target])">bibl in a mss list of
+                                <sch:report test="not(tei:ptr[@target])">bibl in a mss list of
                                     references with a @type="external" must contain a pointer with
                                     @target cointaing a full uri to the resource</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-bibl-bibl-constraint-rule-28">
@@ -5895,10 +5949,10 @@ Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] par
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:bibl">
-               <sch:report test="child::tei:biblScope">we use citedRange, not
+                                <sch:report test="child::tei:biblScope">we use citedRange, not
                                     biblScope. Please, see guidelines wiki on Beta
                                     Masaheft.</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.declarable.attributes"/>
@@ -5946,8 +6000,8 @@ Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] par
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
                            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                           role="nonfatal"
-                           test="child::tei:idno">WARNING: use of deprecated method — the use of the idno element as a direct child of the biblStruct element will be removed from the TEI on 2016-09-18</sch:report>
+                           test="child::tei:idno"
+                           role="nonfatal">WARNING: use of deprecated method — the use of the idno element as a direct child of the biblStruct element will be removed from the TEI on 2016-09-18</sch:report>
             </rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
@@ -7277,7 +7331,7 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
                        name="datum"
                        a:defaultValue="WGS84">
                <a:documentation>supplies a commonly used code name for the datum employed.
-Suggested values include: 1] WGS84(World Geodetic System) ; 2] MGRS(Military Grid Reference System) ; 3] OSGB36(ordnance survey great britain) ; 4] ED50(European Datum coordinate system) </a:documentation>
+Suggested values include: 1] WGS84 (World Geodetic System) ; 2] MGRS (Military Grid Reference System) ; 3] OSGB36 (ordnance survey great britain) ; 4] ED50 (European Datum coordinate system) </a:documentation>
                <choice>
                   <value>WGS84</value>
                   <a:documentation>(World Geodetic System) a pair of numbers to be interpreted as latitude followed by longitude according to the World Geodetic System.</a:documentation>
@@ -7317,10 +7371,10 @@ Suggested values include: 1] WGS84(World Geodetic System) ; 2] MGRS(Military Gri
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:handNote/@xml:id">
-               <sch:report test="not(matches(.,'h\d+'))"> HandNotes must have ids
+                                <sch:report test="not(matches(.,'h\d+'))"> HandNotes must have ids
                                     starting with the letter 'h' followed by a progressive number,
                                     e.g. h1, h2, h3 </sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <ref name="tei_att.global.attribute.n"/>
          <ref name="tei_att.global.attribute.xmllang"/>
@@ -7670,9 +7724,9 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:change/@when">
-               <sch:report test="not(matches(., '20\d{2}-\d{2}-\d{2}$'))">This is
+                                <sch:report test="not(matches(., '20\d{2}-\d{2}-\d{2}$'))">This is
                                     not a correct date.</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <ref name="tei_att.datable.attribute.calendar"/>
          <ref name="tei_att.datable.attribute.period"/>
@@ -7827,9 +7881,9 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:TEI">
-               <sch:report test="not(@type)">Each record must have a type with one
+                                <sch:report test="not(@type)">Each record must have a type with one
                                     of the values suggested.</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <ns xmlns="http://purl.oclc.org/dsdl/schematron"
              prefix="tei"
@@ -8254,11 +8308,11 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:div[parent::tei:body]">
-               <sch:report test="@type='textpart'">the outermost div must always
+                                <sch:report test="@type='textpart'">the outermost div must always
                                     have an attribute type edition, bibliography, commentary,
                                     translation or apparatus; type textpart is to be used inside
                                     edition.</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-div-abstractModel-structure-l-constraint-report-37">
@@ -8906,7 +8960,7 @@ Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">classifies the material encoded according to some useful typology.
-Sample values include: 1] header; 2] footer; 3] pageNum(page number) ; 4] lineNum(line number) ; 5] sig(signature) ; 6] catch(catchword) </a:documentation>
+Sample values include: 1] header; 2] footer; 3] pageNum (page number) ; 4] lineNum (line number) ; 5] sig (signature) ; 6] catch (catchword) </a:documentation>
                <data type="token">
                   <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
                </data>
@@ -9915,9 +9969,9 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:ab[ancestor::tei:layout]">
-               <sch:report test="not(@type or @subtype)">ab in layout should always
+                                <sch:report test="not(@type or @subtype)">ab in layout should always
                                     have a type and optionally a subtype</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-ab-ab-constraint-rule-34">
@@ -9925,11 +9979,11 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:ab[ancestor::tei:note]">
-               <sch:report test="not(@type)">ab in note is used in listPlace for
+                                <sch:report test="not(@type)">ab in note is used in listPlace for
                                     institutions and should always have a @type equal to 'history'
                                     or 'description'. @type equal to 'appellation' can be used to
                                     list a series of ways in which a place is called. </sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-ab-ab-constraint-rule-35">
@@ -9937,10 +9991,10 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:ab[@subtype='dividers']/@xml:id">
-               <sch:report test="not(matches(.,'div\d+'))"> Dividers must have ids
+                                <sch:report test="not(matches(.,'div\d+'))"> Dividers must have ids
                                     starting with 'div' followed by a progressive number, e.g. div1,
                                     div2, div3 </sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-ab-ab-constraint-rule-36">
@@ -9948,9 +10002,9 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:ab[ancestor::tei:note][@type='appellation']">
-               <sch:report test="not(tei:list/tei:item)">an ab[@type='appellation']
+                                <sch:report test="not(tei:list/tei:item)">an ab[@type='appellation']
                                     must contain a list.</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-ab-abstractModel-structure-p-constraint-report-44">
@@ -10012,9 +10066,9 @@ Sample values include: 1] pattern; 2] usage; 3] executed; 4] dividers</a:documen
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:ab[ancestor::tei:handNote]">
-               <sch:report test="not(@type or @subtype)">seg in layout should
+                                <sch:report test="not(@type or @subtype)">seg in layout should
                                     always have a type</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.segLike.attributes"/>
@@ -10400,12 +10454,12 @@ Sample values include: 1] m</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:locus">
-               <sch:report test="not(@target or @from or @to)">locus must have
+                                <sch:report test="not(@target or @from or @to)">locus must have
                                     either an exact reference to a page with @target or a range
                                     indicated with @from and @to or either of the two if the other
                                     extreme of the range is unknown. Please do not use "unknown" as
                                     value.</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.pointing.attributes"/>
@@ -10516,9 +10570,9 @@ Sample values include: 1] m</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:origDate">
-               <sch:report test="@notBefore = @notAfter">For an exact date, please
+                                <sch:report test="@notBefore = @notAfter">For an exact date, please
                                     use @when.</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.datable.attributes"/>
@@ -10881,10 +10935,10 @@ Sample values include: 1] editor; 2] mss; 3] literature; 4] foundation; 5] compo
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:colophon/@xml:id">
-               <sch:report test="not(matches(.,'coloph\d+'))"> Colophon in
+                                <sch:report test="not(matches(.,'coloph\d+'))"> Colophon in
                                     Manuscript items must have ids starting with coloph.
                                 </sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <ref name="tei_att.global.attribute.n"/>
          <ref name="tei_att.global.attribute.xmllang"/>
@@ -11042,18 +11096,18 @@ Sample values include: 1] editor; 2] mss; 3] literature; 4] foundation; 5] compo
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:msItem/@xml:id">
-               <sch:report test="not(matches(.,'_i\d+'))"> Content Items in
+                                <sch:report test="not(matches(.,'_i\d+'))"> Content Items in
                                     Manuscript parts must have ids starting with the reference to
                                     the part in which they are contained, then underscore and the
                                     letter 'i' followed by a progressive number, e.g. p1.1_i1.1,
                                     p1.1_i2. </sch:report>
-               <sch:report test="matches(.,'(_.*){2}')"> The Underscore is used in
+                                <sch:report test="matches(.,'(_.*){2}')"> The Underscore is used in
                                     ids to mark a nesting of different ids, especially items in
                                     parts. there should thus be only one of them as a maximum. If
                                     you have parts into parts or items into items, please use a full
                                     stop. p1.2_i3.4 is e.g. the subitem 4 of item 3 in subpart 2 of
                                     part 1. </sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <ref name="tei_att.global.attribute.n"/>
          <ref name="tei_att.global.attribute.xmllang"/>
@@ -11289,10 +11343,10 @@ Sample values include: 1] editor; 2] mss; 3] literature; 4] foundation; 5] compo
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:msDesc">
-               <sch:report test="(//tei:objectDesc)[1][not(@form)]">At least the
+                                <sch:report test="(//tei:objectDesc)[1][not(@form)]">At least the
                                     first objectDesc of msDesc must have attribute form specified.
                                 </sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
          <optional>
@@ -11362,7 +11416,7 @@ Sample values include: 1] editor; 2] mss; 3] literature; 4] foundation; 5] compo
          <optional>
             <attribute name="material">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a short project-defined name for the material composing the majority of the support
-Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentation>
+Suggested values include: 1] paper; 2] parch (parchment) ; 3] mixed</a:documentation>
                <choice>
                   <value>paper</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -11619,10 +11673,10 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:decoNote[not(ancestor::tei:bindingDesc)]/@xml:id">
-               <sch:report test="not(matches(.,'d\d+'))"> DecoNotes must have ids
+                                <sch:report test="not(matches(.,'d\d+'))"> DecoNotes must have ids
                                     starting with the letter 'd' followed by a progressive number,
                                     e.g. d1, d2, d3 </sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-decoNote-decoNote-constraint-rule-44">
@@ -11630,10 +11684,10 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:decoNote[ancestor::tei:bindingDesc]/@xml:id">
-               <sch:report test="not(matches(.,'b\d+'))"> DecoNotes in Binding
+                                <sch:report test="not(matches(.,'b\d+'))"> DecoNotes in Binding
                                     Description must have ids starting with the letter 'b' followed
                                     by a progressive number, e.g. b1, b2, b3 </sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-decoNote-decoNote-constraint-rule-45">
@@ -11641,8 +11695,8 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:decoNote[ancestor::tei:bindingDesc][@type='SawingStations']">
-               <sch:report test="not(number(.))">decoNote with type sawingStations should contain a number.</sch:report>
-            </sch:rule>
+                                <sch:report test="not(number(.))">decoNote with type sawingStations should contain a number.</sch:report>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-decoNote-decoNote-constraint-rule-46">
@@ -11650,9 +11704,9 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:decoNote[ancestor::tei:bindingDesc][@pastedown]">
-               <sch:report test="not(@type='EndLeaves')">the attribute pastedown is only allowed on a decoNote with type EndLeaves.</sch:report>
-               <sch:report test="not(matches(@pastedown, '[NYUOTILR\s]+'))">values of pastedown might only be a combination of maximum three of the suggested values. Y OTI L is fine, N is fine, UTI R is fine.</sch:report>
-            </sch:rule>
+                              <sch:report test="not(@type='EndLeaves')">the attribute pastedown is only allowed on a decoNote with type EndLeaves.</sch:report>
+                                <sch:report test="not(matches(@pastedown, '[NYUOTILR\s]+'))">values of pastedown might only be a combination of maximum three of the suggested values. Y OTI L is fine, N is fine, UTI R is fine.</sch:report>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-decoNote-decoNote-constraint-rule-47">
@@ -11660,8 +11714,8 @@ Suggested values include: 1] paper; 2] parch(parchment) ; 3] mixed</a:documentat
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:decoNote[ancestor::tei:bindingDesc][@color]">
-               <sch:report test="@type='SawingStations' or @type='Spine' or @type='Other' or @type='Fastening' ">The attribute color is not allowed on a decoNote with this type.</sch:report>
-            </sch:rule>
+                                <sch:report test="@type='SawingStations' or @type='Spine' or @type='Other' or @type='Fastening' ">The attribute color is not allowed on a decoNote with this type.</sch:report>
+                            </sch:rule>
          </pattern>
          <ref name="tei_att.global.attribute.n"/>
          <ref name="tei_att.global.attribute.xmllang"/>
@@ -11748,6 +11802,10 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>engraving</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>Other</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to be used in binding description</a:documentation>
+                  <value>bindingMaterial</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to be used in binding description</a:documentation>
                   <value>Headband</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to be used in binding description</a:documentation>
                   <value>Tailband</value>
@@ -11779,21 +11837,59 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
          </optional>
          <optional>
             <attribute name="pastedown">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <choice>
-                  <value>Y</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>N</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>UTI</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Under...</a:documentation>
-                  <value>OTI</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Over...</a:documentation>
-                  <value>L</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Left</a:documentation>
-                  <value>R</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Right</a:documentation>
-               </choice>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+Suggested values include: 1] Y; 2] N; 3] UTI; 4] OTI; 5] L; 6] R</a:documentation>
+               <list>
+                  <choice>
+                     <value>Y</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     <value>N</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     <value>UTI</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Under...</a:documentation>
+                     <value>OTI</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Over...</a:documentation>
+                     <value>L</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Left</a:documentation>
+                     <value>R</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Right</a:documentation>
+                     <ref name="tei_data.word"/>
+                  </choice>
+                  <optional>
+                     <choice>
+                        <value>Y</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>N</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>UTI</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Under...</a:documentation>
+                        <value>OTI</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Over...</a:documentation>
+                        <value>L</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Left</a:documentation>
+                        <value>R</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Right</a:documentation>
+                        <ref name="tei_data.word"/>
+                     </choice>
+                  </optional>
+                  <optional>
+                     <choice>
+                        <value>Y</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>N</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>UTI</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Under...</a:documentation>
+                        <value>OTI</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Over...</a:documentation>
+                        <value>L</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Left</a:documentation>
+                        <value>R</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Right</a:documentation>
+                        <ref name="tei_data.word"/>
+                     </choice>
+                  </optional>
+               </list>
             </attribute>
          </optional>
          <optional>
@@ -11985,10 +12081,10 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:origin">
-               <sch:report test="not(child::tei:origDate)">At least one date must
+                                <sch:report test="not(child::tei:origDate)">At least one date must
                                     be specified, preferably with a type to indicate the origin of
                                     it and evidence</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.editLike.attributes"/>
@@ -12188,16 +12284,16 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:msPart/@xml:id">
-               <sch:report test="not(matches(.,'p\d+'))"> Manuscript parts ids must
+                                <sch:report test="not(matches(.,'p\d+'))"> Manuscript parts ids must
                                     start with the letter 'p' followed by a progressive number, e.g.
                                     p1, p1.3, p1.1_i1.1 </sch:report>
-               <sch:report test="matches(.,'(_.*){2}')"> The Underscore is used in
+                                <sch:report test="matches(.,'(_.*){2}')"> The Underscore is used in
                                     ids to mark a nesting of different ids, especially items in
                                     parts. there should thus be only one of them as a maximum. If
                                     you have parts into parts or items into items, please use a full
                                     stop. p1.2_i3.4 is e.g. the subitem 4 of item 3 in subpart 2 of
                                     part 1. </sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-msPart-deprecate-altIdentifier-child-constraint-report-66">
@@ -12205,8 +12301,8 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
                            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                           role="nonfatal"
-                           test="child::tei:altIdentifier">WARNING: use of deprecated method — the use of the altIdentifier element as a direct child of the msPart element will be removed from the TEI on 2016-09-09</sch:report>
+                           test="child::tei:altIdentifier"
+                           role="nonfatal">WARNING: use of deprecated method — the use of the altIdentifier element as a direct child of the msPart element will be removed from the TEI on 2016-09-09</sch:report>
             </rule>
          </pattern>
          <ref name="tei_att.global.attribute.n"/>
@@ -12571,10 +12667,10 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:persName[ancestor::tei:TEI[@type='mss' or @type='place' or @type='ins' or @type='work']][not(parent::tei:respStmt)]">
-               <sch:report test="not(@ref)">A persName in a mss, place or work
+                                <sch:report test="not(@ref)">A persName in a mss, place or work
                                     description should always contain an attribute @ref pointing to
                                     the relevant record</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-persName-persName-constraint-rule-51">
@@ -12582,10 +12678,10 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:persName[not(text())][not(parent::tei:person)]">
-               <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
+                                <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
                                     There should be a space before and one after the element persName
                                 </sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.datable.attributes"/>
@@ -12724,10 +12820,10 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:placeName[ancestor::tei:TEI[@type='mss' or @type='pers' or @type='work']]">
-               <sch:report test="not(@ref)">A placeName in a mss, person or work
+                                <sch:report test="not(@ref)">A placeName in a mss, person or work
                                     description should always contain an attribute @ref pointing to
                                     the relevant record</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-placeName-placeName-constraint-rule-53">
@@ -12735,10 +12831,11 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:placeName[not(text())][not(parent::tei:place)]">
-               <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
+                                <sch:report test="matches(following-sibling::text()[1], '^\w') or matches(preceding-sibling::text()[1], '\w$')">
                                     There should be a space before and one after the element placeName
                                 </sch:report>
-            </sch:rule>
+
+                            </sch:rule>
          </pattern>
          <ref name="tei_att.datable.attributes"/>
          <ref name="tei_att.editLike.attributes"/>
@@ -13138,10 +13235,10 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:geo[not(@rend)]">
-               <sch:report test="not(matches(.,'\-?\d{1,2}\.\d{3,6}\s\-?\d{1,2}\.\d{3,6}'))"> Coordinates should be written as decimal degrees separated by
+                                <sch:report test="not(matches(.,'\-?\d{1,2}\.\d{3,6}\s\-?\d{1,2}\.\d{3,6}'))"> Coordinates should be written as decimal degrees separated by
                                     a single space e.g. "14.165289 39.447665" latitude first.
                                 </sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-geo-geo-constraint-rule-55">
@@ -13149,9 +13246,9 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:geo[@rend]">
-               <sch:report test="matches(.,'\,')">Please use one for line for each point defining the polygon. Please do not add spaces at the beginning and end of the sequence. You can draw your polygon with https://www.keene.edu/campus/maps/tool/ and copy past directly from there. Just take care, please, to remove the commas afterwards..
+                                <sch:report test="matches(.,'\,')">Please use one for line for each point defining the polygon. Please do not add spaces at the beginning and end of the sequence. You can draw your polygon with https://www.keene.edu/campus/maps/tool/ and copy past directly from there. Just take care, please, to remove the commas afterwards..
                                 </sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-geo-geo-constraint-rule-56">
@@ -13159,9 +13256,9 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:geo[@rend]">
-               <sch:report test="matches(.,'ˆ\s')">Please use one for line for each point defining the polygon. Please do not add spaces at the beginning and end of the sequence. You can draw your polygon with https://www.keene.edu/campus/maps/tool/ and copy past directly from there. Just take care, please, to remove the commas afterwards..
+                                <sch:report test="matches(.,'ˆ\s')">Please use one for line for each point defining the polygon. Please do not add spaces at the beginning and end of the sequence. You can draw your polygon with https://www.keene.edu/campus/maps/tool/ and copy past directly from there. Just take care, please, to remove the commas afterwards..
                                 </sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-geo-geo-constraint-rule-57">
@@ -13169,9 +13266,9 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:geo[@rend]">
-               <sch:report test="matches(.,'\s$')">Please use one for line for each point defining the polygon. Please do not add spaces at the beginning and end of the sequence. You can draw your polygon with https://www.keene.edu/campus/maps/tool/ and copy past directly from there. Just take care, please, to remove the commas afterwards..
+                                <sch:report test="matches(.,'\s$')">Please use one for line for each point defining the polygon. Please do not add spaces at the beginning and end of the sequence. You can draw your polygon with https://www.keene.edu/campus/maps/tool/ and copy past directly from there. Just take care, please, to remove the commas afterwards..
                                 </sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.declaring.attributes"/>
@@ -14861,9 +14958,9 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:relation">
-               <sch:report test="not(parent::tei:listRelation)"> a relation element is only allowed within a listRelation
+                                <sch:report test="not(parent::tei:listRelation)"> a relation element is only allowed within a listRelation
                                 </sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-relation-reforkeyorname-constraint-assert-16">
@@ -15782,11 +15879,11 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:witness">
-               <sch:report test="not(@corresp)">witness must always contain a
+                                <sch:report test="not(@corresp)">witness must always contain a
                                     @corresp pointing to a project xml:id of a manuscript or to an
                                     external resource (in which case you need to add a
                                     @type="external")</sch:report>
-               <sch:report test="contains(@corresp, 'bm:')">Please, don't point to
+                                <sch:report test="contains(@corresp, 'bm:')">Please, don't point to
                                     bibliography items for witnesses as it is unlikely that the
                                     edition of the text is based on secondary literature. use
                                     @corresp to point to the id of a manuscript. If the record does
@@ -15795,7 +15892,7 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
                                     reproduction, use @facs and enter the permalink to the main
                                     view. You will still need to create a minimss if the record does
                                     not exist.</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-witness-witness-constraint-rule-60">
@@ -15803,10 +15900,10 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       context="tei:witness[ancestor::tei:listBibl[@type='mss']][@type='external']">
-               <sch:report test="not(tei:ptr[@target])">bibl in a mss list of
+                                <sch:report test="not(tei:ptr[@target])">bibl in a mss list of
                                     references with a @type="external" must contain a pointer with
                                     @target cointaing a full uri to the resource</sch:report>
-            </sch:rule>
+                            </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.sortable.attributes"/>

@@ -1464,10 +1464,11 @@
                         <attDef ident="xml:id" mode="change" usage="req"/>
                         <attDef ident="color" mode="add" usage="opt"/>
                         <attDef ident="pastedown" mode="add" usage="opt">
-                          <valList type="closed">
-                            <datatype maxOccurs="3">
+                          <datatype maxOccurs="3">
                                 <rng:ref name="data.word"/>
                             </datatype>
+                            <valList type="semi">
+                            
                             <valItem ident="Y"/>
                             <valItem ident="N"/>
                             <valItem ident="UTI">
@@ -1485,10 +1486,11 @@
                           </valList>
                         </attDef>
                         <attDef ident="repaired" mode="add" usage="opt">
-                          <valList type="closed">
-                            <datatype maxOccurs="1">
+                          <datatype maxOccurs="1">
                                 <rng:ref name="data.word"/>
                             </datatype>
+                            <valList type="closed">
+                            
                             <valItem ident="Y"/>
                             <valItem ident="N"/>
                           </valList>
@@ -1524,6 +1526,13 @@
                                 <valItem ident="unwan"/>
                                 <valItem ident="vignette"/>
                                 <valItem ident="engraving"/>
+                                
+                                <valItem ident="Other">
+                                    <desc>to be used in binding description</desc>
+                                </valItem>
+                                <valItem ident="bindingMaterial">
+                                    <desc>to be used in binding description</desc>
+                                </valItem>
                                 <valItem ident="Headband">
                                     <desc>to be used in binding description</desc>
                                 </valItem>
@@ -1698,8 +1707,6 @@
                                 <!--Dorothea-->
                                 <valItem ident="FP"/>
                                 <!--                                Francesca-->
-                                <valItem ident="NV"/>
-                                <!--                                Nafisa-->
                                 <valItem ident="SS"/>
                                 <!--                                Sisay-->
                                 <valItem ident="RHC"/>
@@ -1712,6 +1719,59 @@
                                 <!--                                Jonas-->
                                 <valItem ident="EDS"/>
                                 <!--                                Eliana-->
+                                
+                                <valItem ident="SA"/>
+<!-- 'Stéphane Ancel'-->
+                                <valItem ident="SD"/>
+<!-- 'Sophia Dege'-->
+                                <valItem ident="VP"/>
+<!-- 'Vitagrazia Pisani'-->
+                                <valItem ident="IF"/>
+<!-- 'Iosif Fridman'-->
+                                <valItem ident="SH"/>
+<!-- 'Susanne Hummel'-->
+                                <valItem ident="FP"/>
+<!-- 'Francesca Panini'-->
+                                <valItem ident="DE"/>
+<!-- 'Daria Elagina'-->
+                                <valItem ident="MK"/>
+<!-- 'Magdalena Krzyzanowska'-->
+                                <valItem ident="VR"/>
+<!-- 'Veronika Roth'-->
+                                <valItem ident="AA"/>
+<!-- 'Abreham Adugna'-->
+                                <valItem ident="EG"/>
+<!-- 'Ekaterina Gusarova'-->
+                                <valItem ident="IR"/>
+<!-- 'Irene Roticiani'-->
+                                <valItem ident="MB"/>
+<!-- 'Maria Bulakh'-->
+                                <valItem ident="NV"/>
+<!-- 'Nafisa Valieva'-->
+                                <valItem ident="MP"/>
+<!-- 'Michele Petrone'-->
+                                <valItem ident="JK"/>
+<!-- 'Jonas Karlsson'-->
+                                <valItem ident="EDS"/>
+<!-- 'Eliana Dal Sasso'-->
+                                <valItem ident="SF"/>
+<!-- 'Sara Fani'-->
+                                <valItem ident="IP"/>
+<!-- 'Irmeli Perho'-->
+                                <valItem ident="RBO"/>
+<!-- 'Rasmus Bech Olsen'-->
+                                <valItem ident="AR"/>
+<!-- 'Anne Regourd'-->
+                                <valItem ident="AH"/>
+<!-- 'Adday Hernández'-->
+                                <valItem ident="JS"/>
+<!-- 'Joshua Sabih'-->
+                                <valItem ident="AW"/>
+<!-- 'Andreas Wetter'-->
+                                <valItem ident="JML"/>
+<!-- 'John Møller Larsen'-->
+                                <valItem ident="AG"/>
+<!-- 'Alessandro Gori'-->
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
