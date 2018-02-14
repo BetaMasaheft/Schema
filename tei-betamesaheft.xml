@@ -2261,7 +2261,7 @@
                                     <desc>http://www.w3.org/2004/02/skos/core#broadMatch</desc>
                                 </valItem>
                                 <valItem ident="skos:closeMatch">
-                                    <desc>http://www.w3.org/2004/02/skos/core#closeMatch</desc>
+                                    <desc>http://www.w3.org/2004/02/skos/core#closef[Match</desc>
                                 </valItem>
                                 <valItem ident="gn:nearBy">
                                     <desc>http://www.geonames.org/ontology#nearby</desc>
@@ -3219,8 +3219,7 @@
                                         surface</desc>
                                 </valItem>
                                 <valItem ident="omitted">
-                                    <desc>Supplement of text erroneously omitted from the surface by
-                                        the scribe/cutter</desc>
+                                    <desc>Words or lines skipped in omitted by the editor in transcription</desc>
                                 </valItem>
                                 <valItem ident="subaudible">
                                     <desc>Editorial supplement of words subaudible to the native
@@ -3270,8 +3269,7 @@
                                         interpreted</desc>
                                 </valItem>
                                 <valItem ident="omitted">
-                                    <desc>Text erroneously omitted from the surface by the
-                                        scribe/cutter</desc>
+                                    <desc>Words or lines skipped in omitted by the editor in transcription</desc>
                                 </valItem>
                                 <valItem ident="ellipsis">
                                     <desc>Text omitted from the edition by the editor, for whatever
