@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-02-13T11:39:20Z. .
+Schema generated from ODD source 2018-02-14T11:36:56Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -14986,6 +14986,12 @@ Suggested values include: 1] UTI; 2] OTI; 3] L; 4] R</a:documentation>
          <attribute name="name">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             <choice>
+               <value>skos:exactMatch</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://www.w3.org/2004/02/skos/core#exactMatch</a:documentation>
+               <value>skos:broadMatch</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://www.w3.org/2004/02/skos/core#broadMatch</a:documentation>
+               <value>skos:closeMatch</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://www.w3.org/2004/02/skos/core#closeMatch</a:documentation>
                <value>gn:nearBy</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://www.geonames.org/ontology#nearby</a:documentation>
                <value>gn:locatedIn</value>

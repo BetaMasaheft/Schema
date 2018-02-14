@@ -2253,6 +2253,16 @@
                             <valList type="closed">
                                 <!--<valItem ident="dcterms:hasPart"><desc>http://purl.org/dc/terms/hasPart</desc></valItem> -->
                                 <!--to be removed-->
+                                
+                                <valItem ident="skos:exactMatch">
+                                    <desc>http://www.w3.org/2004/02/skos/core#exactMatch</desc>
+                                </valItem>
+                                <valItem ident="skos:broadMatch">
+                                    <desc>http://www.w3.org/2004/02/skos/core#broadMatch</desc>
+                                </valItem>
+                                <valItem ident="skos:closeMatch">
+                                    <desc>http://www.w3.org/2004/02/skos/core#closeMatch</desc>
+                                </valItem>
                                 <valItem ident="gn:nearBy">
                                     <desc>http://www.geonames.org/ontology#nearby</desc>
                                 </valItem>
