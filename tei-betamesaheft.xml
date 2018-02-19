@@ -2028,6 +2028,7 @@
                                 <rng:ref name="data.word"/>
                             </datatype>
                             <valList type="closed">
+                                <valItem ident="privateHouse"/>
                                 <valItem ident="tabiya"/>
                                 <valItem ident="dabr"/>
                                 <valItem ident="gadam"/>
