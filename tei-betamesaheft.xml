@@ -82,7 +82,33 @@
                         <memberOf key="model.global"/>
                     </classes>
                 </elementSpec>
-
+                <elementSpec ident="msDesc" mode="change" module="msdescription">
+                    <content>
+                        <sequence>
+                            <elementRef key="msIdentifier"/>
+                            <classRef key="model.headLike"
+                                minOccurs="0" maxOccurs="unbounded"/>
+                            <alternate>
+                                <classRef key="model.pLike"
+                                    minOccurs="1" maxOccurs="unbounded"/>
+                                <sequence>
+                                    <elementRef key="msContents"
+                                        minOccurs="0"/>
+                                    <elementRef key="physDesc"
+                                        minOccurs="0"/>
+                                    <elementRef key="history" minOccurs="0"/>
+                                    <elementRef key="additional"
+                                        minOccurs="0"/>
+                                    <elementRef key="msPart" minOccurs="0"
+                                            maxOccurs="unbounded"/>
+                                    <elementRef key="msFrag" minOccurs="0"
+                                            maxOccurs="unbounded"/>
+                                    
+                                </sequence>
+                            </alternate>
+                        </sequence>
+                    </content>
+                </elementSpec>
                 <!--          LISTS OF VALUES FOR ATTRIBUTES-->
                 <!--  adds value partly to del/@rend-->
 
@@ -860,6 +886,18 @@
                                         typically citation forms like Sal. Mar. or Jn. or
                                         Gen..</desc>
                                 </valItem>
+                                <valItem ident="D'usage">
+                                    <desc>EMA</desc>
+                                </valItem>
+                                <valItem ident="académique">
+                                    <desc>EMA</desc>
+                                </valItem>
+                                <valItem ident="Forgé">
+                                    <desc>EMA</desc>
+                                </valItem>
+                                <valItem ident="Original">
+                                    <desc>EMA</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                     </attList>
@@ -1030,6 +1068,14 @@
 
                 <!--                constrain use of type in roleName and suggest values-->
                 <elementSpec ident="roleName" mode="change" module="namesdates">
+                    <constraintSpec scheme="isoschematron" ident="roleName">
+                        <constraint>
+                            <sch:rule
+                                context="tei:roleName">
+                                <sch:report test="not(parent::tei:persName)">A roleName not nested in a persName does not allow anything useful to be done with the markup. Please add a persName around the name of the person which has this role.</sch:report>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
                     <attList>
                         <attDef ident="type" mode="replace" usage="req">
                             <valList type="closed">
@@ -1423,6 +1469,7 @@
                                 <valItem ident="script"/>
                                 <valItem ident="ink"/>
                                 <valItem ident="rubrication"/>
+                                <valItem ident="interpretation"/>
 
                             </valList>
                         </attDef>
@@ -1769,7 +1816,9 @@
                                 <valItem ident="JML"/>
 <!-- 'John Møller Larsen'-->
                                 <valItem ident="AG"/>
-<!-- 'Alessandro Gori'-->
+                                <!-- 'Alessandro Gori'-->
+                                <valItem ident="AWi"/>
+                                <!-- 'Anaïs Wion'-->
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -1856,6 +1905,8 @@
                                 <!--                                Jonas-->
                                 <valItem ident="EDS"/>
                                 <!--                                Eliana-->
+                                <valItem ident="AWi"/>
+                                <!--                                Anaïs Wion-->
                             </valList>
                         </attDef>
                         <attDef ident="when" mode="replace" usage="req"/>
@@ -2229,6 +2280,9 @@
                             <valList type="closed">
                                 <valItem ident="commemoration"/>
                                 <valItem ident="liturgical"/>
+                                <valItem ident="résumé"/>
+                                <valItem ident="scientifique"/>
+                                <valItem ident="transcription"/>
                             </valList>
                         </attDef>
 
@@ -3088,6 +3142,9 @@
                                 <valItem ident="birth"/>
                                 <valItem ident="ascension"/>
                                 <valItem ident="death"/>
+                                <valItem ident="production">
+                                    <desc>The date of production of the document (EMA)</desc>
+                                </valItem>
                                 <valItem ident="repeated">
                                     <desc>If the commemoration is repeated, please add this value as
                                         well in type</desc>
@@ -3119,7 +3176,7 @@
                                     <desc>Hiǧrī (Islamic)</desc>
                                 </valItem>
                                 <valItem ident="julian">
-                                    <desc> Julian</desc>
+                                    <desc>Julian</desc>
                                 </valItem>
 
                             </valList>
