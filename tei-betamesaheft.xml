@@ -1122,7 +1122,7 @@
                     <constraintSpec scheme="isoschematron" ident="ptr">
                         <constraint>
                             <sch:rule
-                                context="tei:ptr[starts-with(@target='bm:')]">
+                                context="tei:ptr[starts-with(@target, 'bm:')]">
                                 <sch:report test="not(parent::tei:bibl)">A ptr elements with a bibliographical reference target should always be inside a bibl element</sch:report>
                             </sch:rule>
                         </constraint>
