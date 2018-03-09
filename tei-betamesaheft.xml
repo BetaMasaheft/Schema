@@ -77,11 +77,13 @@
                     </content>
                 </elementSpec>
 
+<!--allows listRelation everywhere-->
                 <elementSpec ident="listRelation" mode="change" module="namesdates">
                     <classes>
                         <memberOf key="model.global"/>
                     </classes>
                 </elementSpec>
+                
                 <elementSpec ident="msDesc" mode="change" module="msdescription">
                     <content>
                         <sequence>
@@ -99,6 +101,7 @@
                                     <elementRef key="history" minOccurs="0"/>
                                     <elementRef key="additional"
                                         minOccurs="0"/>
+<!--                                    in the original TEI content model this is inside an alternate element. this change allows us to have at the same level inside msDesc both msPart and msFrag-->
                                     <elementRef key="msPart" minOccurs="0"
                                             maxOccurs="unbounded"/>
                                     <elementRef key="msFrag" minOccurs="0"
@@ -1114,6 +1117,17 @@
                         </constraint>
                     </constraintSpec>
                 </elementSpec>
+                
+                <elementSpec ident="ptr" mode="change" module="core">
+                    <constraintSpec scheme="isoschematron" ident="ptr">
+                        <constraint>
+                            <sch:rule
+                                context="tei:ptr[starts-with(@target='bm:')]">
+                                <sch:report test="not(parent::tei:bibl)">A ptr elements with a bibliographical reference target should always be inside a bibl element</sch:report>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
+                </elementSpec>
 
                 <!--          test the content of witnesses list to be as described in guidelines and point to mss ids-->
                 <elementSpec ident="witness" mode="change" module="textcrit">
@@ -1681,11 +1695,10 @@
                 <elementSpec ident="colophon" mode="change" module="msdescription">
                     <content>
                         <macroRef key="macro.phraseSeq"/>
-                        <rng:zeroOrMore>
-                            <rng:choice>
-                                <rng:ref name="tei_model.biblLike"/>
-                            </rng:choice>
-                        </rng:zeroOrMore>
+                        <sequence>
+                            <classRef key="tei_model.biblLike" 
+                                minOccurs="0" maxOccurs="unbounded"/>
+                        </sequence>
                     </content>
                     <constraintSpec scheme="isoschematron" ident="colophon">
                         <constraint>
@@ -2309,6 +2322,36 @@
                                 <!--<valItem ident="dcterms:hasPart"><desc>http://purl.org/dc/terms/hasPart</desc></valItem> -->
                                 <!--to be removed-->
                                 
+                                <valItem ident="SdC:constituteUnit">
+                                    <desc>Property to link a Discontinuite with a Unite de Production</desc>
+                                </valItem>
+                                <valItem ident="SdC:constituteUnit">
+                                    <desc>States that one or more identified discontinuities constitute a UniProd, which can be certain or hypothetical</desc>
+                                </valItem>
+                                <valItem ident="SdC:containsUnits">
+                                    <desc>States that a UniCirc or a UniProd contains the Units declared in the object/@passive</desc>
+                                </valItem>
+                                <valItem ident="SdC:hasUnitModel">
+                                    <desc>The Unit has one of the possible model for its class.</desc>
+                                </valItem>
+                                <valItem ident="SdC:undergoesTransformation">
+                                    <desc>Something happens to a UniCirc or less often a UniProd</desc>
+                                </valItem>
+                                <valItem ident="SdC:hasTransformationModel">
+                                    <desc>Something happens to a UniCirc or less often a UniProd</desc>
+                                </valItem>
+                                <valItem ident="SdC:hasTransformationPart">
+                                    <desc>If the model of the transformation is multiple, you can specify which individual parts constitute it.</desc>
+                                </valItem>
+                                <valItem ident="SdC:isPartOfTransformation">
+                                    <desc>If the model of the transformation is simple, you can specify of which individual mutiple transformation it is a part.</desc>
+                                </valItem>
+                                <valItem ident="SdC:produces">
+                                    <desc>A transformation produces a new UniProd or a new UniCirc.</desc>
+                                </valItem>
+                                <valItem ident="SdC:hasCertainty">
+                                    <desc>Certain or Hypothetique</desc>
+                                </valItem>
                                 <valItem ident="skos:exactMatch">
                                     <desc>http://www.w3.org/2004/02/skos/core#exactMatch</desc>
                                 </valItem>
@@ -2327,6 +2370,9 @@
                                 <valItem ident="dcterms:isPartOf">
                                     <desc>http://purl.org/dc/terms/isPartOf</desc>
                                 </valItem>
+                                <valItem ident="dcterms:hasPart">
+                                    <desc>http://purl.org/dc/terms/hasPart</desc>
+                                </valItem>
                                 <valItem ident="lawd:hasAttestation">
                                     <desc>http://lawd.info/ontology/hasAttestation</desc>
                                 </valItem>
@@ -2342,6 +2388,18 @@
                                 <valItem ident="bm:isAntigraphOf">
                                     <desc>the relation between a ms and the first printed edition of
                                         a text it contains</desc>
+                                </valItem>
+                                <valItem ident="bm:hasLocus">
+                                    <desc>might be used to locate a unit defined relationally. If stated, a further relation is needed with one of the properties defining the locus</desc>
+                                </valItem>
+                                <valItem ident="bm:locusFrom">
+                                    <desc>the locus rante starts at</desc>
+                                </valItem>
+                                <valItem ident="bm:locusTo">
+                                    <desc>the locus range ends at</desc>
+                                </valItem>
+                                <valItem ident="bm:locusTarget">
+                                    <desc>the locus has target</desc>
                                 </valItem>
                                 <valItem ident="bm:wifeOf">
                                     <desc>Is the wife of ...</desc>
@@ -3187,11 +3245,12 @@
                 <elementSpec ident="locus" module="msdescription" mode="change">
                     <content>
                         <macroRef key="macro.xtext"/>
-                        <rng:zeroOrMore>
-                            <rng:choice>
-                                <rng:ref name="tei_model.certLike"/>
-                            </rng:choice>
-                        </rng:zeroOrMore>
+                        <sequence>
+                            
+                            <classRef key="tei_model.certLike" 
+                                minOccurs="0" maxOccurs="unbounded"/>
+                            
+                        </sequence>
                     </content>
                     <!--  checks that locus has @target or @from-->
                     <constraintSpec scheme="isoschematron" ident="locus">
@@ -3220,6 +3279,9 @@
                                 <sch:report test="not(matches(@xml:id,'q\d+'))"> Items in Collation
                                     must have ids starting with the letter 'q' followed by a
                                     progressive number, e.g. q1, q2, q3 </sch:report>
+                            </sch:rule>
+                            <sch:rule context="tei:item[ancestor::tei:collation]">
+                                <sch:report test="not(child::tei:dim)">Please always add a dim element inside your quire descriptions</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:item[ancestor::tei:additions]">
                                 <sch:report test="not(@xml:id)"> items in additions must have an
