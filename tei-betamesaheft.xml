@@ -3366,6 +3366,9 @@
                                     <desc>space voluntarily left e.g. for later rubrication never
                                         accomplished </desc>
                                 </valItem>
+                                <valItem ident="owner">
+                                    <desc>space voluntarily left e.g. for a potential owner</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                     </attList>
