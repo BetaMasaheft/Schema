@@ -1075,7 +1075,7 @@
                         <constraint>
                             <sch:rule
                                 context="tei:roleName">
-                                <sch:report test="not(parent::tei:persName and parent::tei:occupation)">A roleName not nested in a persName does not allow anything useful to be done with the markup. Please add a persName around the name of the person which has this role.</sch:report>
+                                <sch:report test="not(parent::tei:persName or parent::tei:occupation)">A roleName not nested in a persName does not allow anything useful to be done with the markup. Please add a persName around the name of the person which has this role.</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
