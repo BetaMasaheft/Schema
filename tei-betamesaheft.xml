@@ -404,16 +404,25 @@
                                 <valItem ident="arch"><desc>arch</desc></valItem>
                                 <valItem ident="architecture"><desc>architecture</desc></valItem>
                                 <valItem ident="bird"><desc>bird</desc></valItem>
+                                <valItem ident="canopy"><desc>canopy</desc></valItem>
+                                <valItem ident="codex"><desc>canopy</desc></valItem>
                                 <valItem ident="censer"><desc>censer</desc></valItem>
-                                <valItem ident="codex"><desc>codex</desc></valItem>
+                                <valItem ident="codex"><desc>codex</desc></valItem>        
                                 <valItem ident="column"><desc>column</desc></valItem>
                                 <valItem ident="cross"><desc>cross</desc></valItem>
+                                <valItem ident="crown"><desc>crown</desc></valItem>
                                 <valItem ident="curtain"><desc>curtain</desc></valItem>
                                 <valItem ident="dragon"><desc>dragon</desc></valItem>
                                 <valItem ident="eucharist"><desc>eucharist</desc></valItem>
+                                <valItem ident="globe"><desc>globe</desc></valItem>
+                                <valItem ident="maniple"><desc>maniple</desc></valItem>
+                                <valItem ident="rod"><desc>rod</desc></valItem>
+                                <valItem ident="scale"><desc>scale</desc></valItem>
                                 <valItem ident="scroll"><desc>scroll</desc></valItem>
+                                <valItem ident="shield"><desc>shield</desc></valItem>
                                 <valItem ident="spear"><desc>spear</desc></valItem>
                                 <valItem ident="sponge"><desc>sponge</desc></valItem>
+                                <valItem ident="sword"><desc>sword</desc></valItem>
                                 <valItem ident="twothieves"><desc>two thieves</desc></valItem>
                                 <valItem ident="vestment"><desc>vestment</desc></valItem>
 
