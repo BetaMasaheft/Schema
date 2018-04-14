@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-03-27T13:13:49Z. .
+Schema generated from ODD source 2018-04-14T07:45:15Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -4361,12 +4361,10 @@ Normalization 12. Critical Apparatus]</a:documentation>
          <attribute name="reason">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             <choice>
-               <value>rubrication</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">spaces left for rubrication, which were left unfilled</a:documentation>
                <value>lost</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">No better specification available, there is simply a gap.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">used to indicate a material loss or a portion of text that is to be hypothesized for material reasons ("it was there!"), but which is lost for loss of the material</a:documentation>
                <value>illegible</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Traces of text remains on the surface but cannot be interpreted</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a sign, pointing to the place where the text should be added</a:documentation>
                <value>omitted</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Words or lines skipped in omitted by the editor in transcription</a:documentation>
                <value>ellipsis</value>
@@ -11867,27 +11865,25 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
                   <value>Other</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to be used in binding description</a:documentation>
                   <value>bindingMaterial</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to be used in binding description</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to be used in binding description. Materials of which the binding is made.</a:documentation>
                   <value>Headband</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to be used in binding description</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to be used in binding description. Endband at the head end of the spine of a book.</a:documentation>
                   <value>Tailband</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description. Endband at the tail end of the spine of a book.</a:documentation>
                   <value>Endbands</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description. Structural and decorative elements of the binding which are found at the head and tail of the spine of a book. The ethiopian endbands are usually slit-braid stripes of leather or link-stitch sewings. </a:documentation>
                   <value>Fastening</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description. Stripe of different form and material used to keep closed a book. Traces of fastenings can be holes and pins on the outer edge of the boards.</a:documentation>
                   <value>Spine</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description. The part of the book opposite the fore-edge.</a:documentation>
                   <value>SlipCase</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description. Portable leather case with attached slip where the manuscript is kept. </a:documentation>
                   <value>Boards</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description</a:documentation>
-                  <value>Boardsatt</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description. Components made from one or more pieces of material (usually wood) used to protect and support a bookblock.</a:documentation>
                   <value>SewingStations</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description. Sewing stations are created by passing a thread through a spine fold when sewing a book.</a:documentation>
                   <value>EndLeaves</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for use in binding description. All the leaves found at each side of a bookblock, intended to give protection to the text leaves.</a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -11904,38 +11900,38 @@ Suggested values include: 1] UTI; 2] OTI; 3] L; 4] R</a:documentation>
                <list>
                   <choice>
                      <value>UTI</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Under...</a:documentation>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Under the turn-ins. The pastedown is pasted under the turn-ins.</a:documentation>
                      <value>OTI</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Over...</a:documentation>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Over the turn-ins. The pastedown is pasted over the turn-ins.</a:documentation>
                      <value>L</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Left</a:documentation>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Left pastedown, on the upper board.</a:documentation>
                      <value>R</value>
-                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Right</a:documentation>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Right pastedown, on the lower board.</a:documentation>
                      <ref name="tei_data.word"/>
                   </choice>
                   <optional>
                      <choice>
                         <value>UTI</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Under...</a:documentation>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Under the turn-ins. The pastedown is pasted under the turn-ins.</a:documentation>
                         <value>OTI</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Over...</a:documentation>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Over the turn-ins. The pastedown is pasted over the turn-ins.</a:documentation>
                         <value>L</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Left</a:documentation>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Left pastedown, on the upper board.</a:documentation>
                         <value>R</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Right</a:documentation>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Right pastedown, on the lower board.</a:documentation>
                         <ref name="tei_data.word"/>
                      </choice>
                   </optional>
                   <optional>
                      <choice>
                         <value>UTI</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Under...</a:documentation>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Under the turn-ins. The pastedown is pasted under the turn-ins.</a:documentation>
                         <value>OTI</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Over...</a:documentation>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Over the turn-ins. The pastedown is pasted over the turn-ins.</a:documentation>
                         <value>L</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Left</a:documentation>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Left pastedown, on the upper board.</a:documentation>
                         <value>R</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Right</a:documentation>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Right pastedown, on the lower board.</a:documentation>
                         <ref name="tei_data.word"/>
                      </choice>
                   </optional>

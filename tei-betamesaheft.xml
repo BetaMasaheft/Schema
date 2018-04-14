@@ -1539,18 +1539,21 @@
                             </datatype>
                             <valList type="semi">
                             
-                            <valItem ident="UTI">
-                                <desc>Under...</desc>
-                            </valItem>
-                            <valItem ident="OTI">
-                                <desc>Over...</desc>
-                            </valItem>
-                            <valItem ident="L">
-                                <desc>Left</desc>
-                            </valItem>
-                            <valItem ident="R">
-                                <desc>Right</desc>
-                            </valItem>
+                            
+                                <valItem ident="UTI">
+                                    <desc>Under the turn-ins.
+                                        The pastedown is pasted under the turn-ins.</desc>
+                                </valItem>
+                                <valItem ident="OTI">
+                                    <desc>Over the turn-ins.
+                                        The pastedown is pasted over the turn-ins.</desc>
+                                </valItem>
+                                <valItem ident="L">
+                                    <desc>Left pastedown, on the upper board.</desc>
+                                </valItem>
+                                <valItem ident="R">
+                                    <desc>Right pastedown, on the lower board.</desc>
+                                </valItem>
                           </valList>
                         </attDef>
                         <attDef ident="repaired" mode="add" usage="opt">
@@ -1599,39 +1602,54 @@
                                     <desc>to be used in binding description</desc>
                                 </valItem>
                                 <valItem ident="bindingMaterial">
-                                    <desc>to be used in binding description</desc>
+                                    <desc>to be used in binding description.
+                                        Materials of which the binding is made.</desc>
                                 </valItem>
                                 <valItem ident="Headband">
-                                    <desc>to be used in binding description</desc>
+                                    <desc>to be used in binding description.
+                                        Endband at the head end of the spine of a book.</desc>
                                 </valItem>
                                 <valItem ident="Tailband">
-                                    <desc>for use in binding description.</desc>
+                                    <desc>for use in binding description.
+                                        Endband at the tail end of the spine of a book.</desc>
                                 </valItem>
                                 <valItem ident="Endbands">
-                                    <desc>for use in binding description.</desc>
+                                    <desc>for use in binding description.
+                                        Structural and decorative elements of the binding which are found at
+                                        the head and tail of the spine of a book. The ethiopian endbands are
+                                        usually slit-braid stripes of leather or link-stitch sewings.
+                                    </desc>
                                 </valItem>
                                 <valItem ident="Fastening">
-                                  <desc>for use in binding description</desc>
+                                    <desc>for use in binding description.
+                                        Stripe of different form and material used to keep closed a book.
+                                        Traces of fastenings can be holes and pins on the outer edge of the boards.</desc>
                                 </valItem>
                                 <valItem ident="Spine">
-                                  <desc>for use in binding description</desc>
+                                    <desc>for use in binding description.
+                                        The part of the book opposite the fore-edge.</desc>
                                 </valItem>
                                 <valItem ident="SlipCase">
-                                  <desc>for use in binding description</desc>
+                                    <desc>for use in binding description.
+                                        Portable leather case with attached slip where the manuscript is kept.
+                                    </desc>
                                 </valItem>
                                 <valItem ident="Boards">
-                                  <desc>for use in binding description</desc>
-                                </valItem>
-                                <valItem ident="Boardsatt">
-                                  <desc>for use in binding description</desc>
+                                    <desc>for use in binding description.
+                                        Components made from one or more pieces of material (usually wood) used
+                                        to protect and support a bookblock.</desc>
                                 </valItem>
                                 <valItem ident="SewingStations">
-                                  <desc>for use in binding description</desc>
+                                    <desc>for use in binding description.
+                                        Sewing stations are created by passing a thread through a spine fold when
+                                        sewing a book.</desc>
                                 </valItem>
                                 <valItem ident="EndLeaves">
-                                  <desc>for use in binding description</desc>
+                                    <desc>for use in binding description.
+                                        All the leaves found at each side of a bookblock, intended to give protection
+                                        to the text leaves.</desc>
                                 </valItem>
-
+                                
                             </valList>
                         </attDef>
                         <attDef ident="rend" mode="replace" usage="opt">
@@ -3402,18 +3420,12 @@
                     <attList>
                         <attDef ident="reason" mode="replace" usage="req">
                             <valList type="closed">
-                                <valItem ident="rubrication">
-                                    <desc>spaces left for rubrication, which were left
-                                        unfilled</desc>
-                                </valItem>
                                 <valItem ident="lost">
-                                    <desc>No better specification available, there is simply a
-                                        gap.</desc>
+                                    <desc>used to indicate a material loss or a portion of text that is to be hypothesized for material reasons ("it was there!"), but which is lost for loss of the material</desc>
                                 </valItem>
                                 <!--                                the following definitions have been inherited from EpiDoc schema-->
                                 <valItem ident="illegible">
-                                    <desc>Traces of text remains on the surface but cannot be
-                                        interpreted</desc>
+                                    <desc>a sign, pointing to the place where the text should be added</desc>
                                 </valItem>
                                 <valItem ident="omitted">
                                     <desc>Words or lines skipped in omitted by the editor in transcription</desc>
