@@ -2321,11 +2321,14 @@
                                     <desc>A printed book.</desc>
                                 </valItem>
                                 <valItem ident="Photograph">
-                                    <desc>A phootograph.</desc>
+                                    <desc>A photograph.</desc>
                                 </valItem>
                                 <valItem ident="Inscription">
                                     <desc>An inscribed object different from a codex, scroll or
                                         leaf</desc>
+                                </valItem>
+                                <valItem ident="Notebook">
+                                    <desc>An object consisting of an industrially produced paperblock in the form of a notebook.</desc>
                                 </valItem>
                             </valList>
                         </attDef>
