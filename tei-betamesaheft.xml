@@ -1654,6 +1654,9 @@
                                         All the leaves found at each side of a bookblock, intended to give protection
                                         to the text leaves.</desc>
                                 </valItem>
+                                <valItem ident="Cover">
+                                    <desc>The material that constitutes the immediate covering of the completed binding.</desc>
+                                </valItem>
                                 
                             </valList>
                         </attDef>
