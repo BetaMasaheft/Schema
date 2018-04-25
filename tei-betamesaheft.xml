@@ -416,6 +416,7 @@
                                 <valItem ident="eucharist"><desc>eucharist</desc></valItem>
                                 <valItem ident="globe"><desc>globe</desc></valItem>
                                 <valItem ident="maniple"><desc>maniple</desc></valItem>
+                                <valItem ident="prayerstaff"><desc>prayer staff</desc></valItem>
                                 <valItem ident="rod"><desc>rod</desc></valItem>
                                 <valItem ident="scale"><desc>scale</desc></valItem>
                                 <valItem ident="scroll"><desc>scroll</desc></valItem>
