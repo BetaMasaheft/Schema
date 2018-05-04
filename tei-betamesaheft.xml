@@ -1787,87 +1787,45 @@
                     <attList>
                         <attDef ident="key" mode="replace" usage="req">
                             <valList type="closed">
-                                <valItem ident="AB"/>
-                                <!--Alessandro-->
-                                <valItem ident="ES"/>
-                                <!--Eugenia-->
-                                <valItem ident="DN"/>
-                                <!--Denis-->
-                                <valItem ident="MV"/>
-                                <!--Massimo-->
-                                <valItem ident="SG"/>
-                                <!--Solomon-->
-                                <valItem ident="DR"/>
-                                <!--Dorothea-->
-                                <valItem ident="FP"/>
-                                <!--                                Francesca-->
-                                <valItem ident="SS"/>
-                                <!--                                Sisay-->
-                                <valItem ident="RHC"/>
-                                <!--                                Ran HaCohen-->
-                                <valItem ident="SJ"/>
-                                <!--                                Sybilla-->
-                                <valItem ident="JG"/>
-                                <!--                                Jacopo-->
-                                <valItem ident="JK"/>
-                                <!--                                Jonas-->
-                                <valItem ident="EDS"/>
-                                <!--                                Eliana-->
-                                
-                                <valItem ident="SA"/>
-<!-- 'Stéphane Ancel'-->
-                                <valItem ident="SD"/>
-<!-- 'Sophia Dege'-->
-                                <valItem ident="VP"/>
-<!-- 'Vitagrazia Pisani'-->
-                                <valItem ident="IF"/>
-<!-- 'Iosif Fridman'-->
-                                <valItem ident="SH"/>
-<!-- 'Susanne Hummel'-->
-                                <valItem ident="FP"/>
-<!-- 'Francesca Panini'-->
-                                <valItem ident="DE"/>
-<!-- 'Daria Elagina'-->
-                                <valItem ident="MK"/>
-<!-- 'Magdalena Krzyzanowska'-->
-                                <valItem ident="VR"/>
-<!-- 'Veronika Roth'-->
-                                <valItem ident="AA"/>
-<!-- 'Abreham Adugna'-->
-                                <valItem ident="EG"/>
-<!-- 'Ekaterina Gusarova'-->
-                                <valItem ident="IR"/>
-<!-- 'Irene Roticiani'-->
-                                <valItem ident="MB"/>
-<!-- 'Maria Bulakh'-->
-                                <valItem ident="NV"/>
-<!-- 'Nafisa Valieva'-->
-                                <valItem ident="MP"/>
-<!-- 'Michele Petrone'-->
-                                <valItem ident="JK"/>
-<!-- 'Jonas Karlsson'-->
-                                <valItem ident="EDS"/>
-<!-- 'Eliana Dal Sasso'-->
-                                <valItem ident="SF"/>
-<!-- 'Sara Fani'-->
-                                <valItem ident="IP"/>
-<!-- 'Irmeli Perho'-->
-                                <valItem ident="RBO"/>
-<!-- 'Rasmus Bech Olsen'-->
-                                <valItem ident="AR"/>
-<!-- 'Anne Regourd'-->
-                                <valItem ident="AH"/>
-<!-- 'Adday Hernández'-->
-                                <valItem ident="JS"/>
-<!-- 'Joshua Sabih'-->
-                                <valItem ident="AW"/>
-<!-- 'Andreas Wetter'-->
-                                <valItem ident="JML"/>
-<!-- 'John Møller Larsen'-->
-                                <valItem ident="AG"/>
-                                <!-- 'Alessandro Gori'-->
-                                <valItem ident="AWi"/>
-                                <!-- 'Anaïs Wion'-->
+                                <valItem ident="AB"><desc>Alessandro Bausi</desc></valItem>
+                                <valItem ident="ES"><desc>Eugenia Sokolinski</desc></valItem>
+                                <valItem ident="PL"><desc>Pietro Maria Liuzzo</desc></valItem>
+                                <valItem ident="DN"><desc>Denis Nosnitsin</desc></valItem>
+                                <valItem ident="MV"><desc>Massimo Villa</desc></valItem>
+                                <valItem ident="SG"><desc>Solomon Gebreyes Beyene</desc></valItem>
+                                <valItem ident="DR"><desc>Dorothea Reule</desc></valItem>
+                                <valItem ident="FP"><desc>Francesca Panini</desc></valItem>
+                                <valItem ident="SS"><desc>Sisay Sahile</desc></valItem>
+                                <valItem ident="RHC"><desc> Ran HaCohen</desc></valItem>
+                                <valItem ident="SJ"><desc>Sybilla Jenner</desc></valItem>
+                                <valItem ident="JG"><desc>Jacopo Gnisci</desc></valItem>
+                                <valItem ident="SA"><desc>Stéphane Ancel</desc></valItem>
+                                <valItem ident="SD"><desc>Sophia Dege</desc></valItem>
+                                <valItem ident="VP"><desc>Vitagrazia Pisani</desc></valItem>
+                                <valItem ident="IF"><desc>Iosif Fridman</desc></valItem>
+                                <valItem ident="SH"><desc>Susanne Hummel</desc></valItem>
+                                <valItem ident="FP"><desc>Francesca Panini</desc></valItem>
+                                <valItem ident="DE"><desc>Daria Elagina</desc></valItem>
+                                <valItem ident="MK"><desc>Magdalena Krzyzanowska</desc></valItem>
+                                <valItem ident="VR"><desc>Veronika Roth</desc></valItem>
+                                <valItem ident="AA"><desc>Abreham Adugna</desc></valItem>
+                                <valItem ident="EG"><desc>Ekaterina Gusarova</desc></valItem>
+                                <valItem ident="IR"><desc>Irene Roticiani</desc></valItem>
+                                <valItem ident="MB"><desc>Maria Bulakh</desc></valItem>
+                                <valItem ident="NV"><desc>Nafisa Valieva</desc></valItem>
+                                <valItem ident="MP"><desc>Michele Petrone</desc></valItem>
+                                <valItem ident="JK"><desc>Jonas Karlsson</desc></valItem>
+                                <valItem ident="EDS"><desc>Eliana Dal Sasso</desc></valItem>
+                                <valItem ident="SF"><desc>Sara Fani</desc></valItem>
+                                <valItem ident="IP"><desc>Irmeli Perho</desc></valItem>
+                                <valItem ident="RBO"><desc>Rasmus Bech Olsen</desc></valItem>
+                                <valItem ident="AR"><desc>Anne Regourd</desc></valItem>
+                                <valItem ident="AH"><desc>Adday Hernández</desc></valItem>
+                                <valItem ident="JS"><desc>Joshua Sabih</desc></valItem>
+                                <valItem ident="AW"><desc>Andreas Wetter'</desc></valItem>
+                                <valItem ident="JML"><desc>John Møller Larsen</desc></valItem>
+                                <valItem ident="AG"><desc>Alessandro Gori</desc></valItem>
+                                <valItem ident="AWi"><desc>Anaïs Wion</desc></valItem>
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -1898,65 +1856,35 @@
                     <attList>
                         <attDef ident="who" mode="replace" usage="req">
                             <valList type="closed">
-                                <valItem ident="AB"/>
-                                <!--Alessandro-->
-                                <valItem ident="ES"/>
-                                <!--Eugenia-->
-                                <valItem ident="DN"/>
-                                <!--Denis-->
-                                <valItem ident="DR"/>
-                                <!--Dorothea-->
-                                <valItem ident="MV"/>
-                                <!--Massimo-->
-                                <valItem ident="SG"/>
-                                <!--Solomon-->
-                                <valItem ident="PL"/>
-                                <!--Pietro-->
-                                <valItem ident="SH"/>
-                                <!--SHummel-->
-                                <valItem ident="EG"/>
-                                <!--EGusarova-->
-                                <valItem ident="MK"/>
-                                <!--MKrzyzanowska-->
-                                <valItem ident="VP"/>
-                                <!--VPisani-->
-                                <valItem ident="SA"/>
-                                <!--SAncel-->
-                                <valItem ident="VR"/>
-                                <!--VRoth-->
-                                <valItem ident="AA"/>
-                                <!--AAdugna-->
-                                <valItem ident="SD"/>
-                                <!--SDege-->
-                                <valItem ident="IR"/>
-                                <!--IRoticiani-->
-                                <valItem ident="IF"/>
-                                <!--IFridman-->
-                                <valItem ident="MB"/>
-                                <!--MBulakh-->
-
-                                <valItem ident="FP"/>
-                                <!--                                francesca-->
-                                <valItem ident="RHC"/>
-                                <!--                                Ran HaCohen-->
-                                <valItem ident="SJ"/>
-                                <!--                                Sybilla-->
-
-                                <valItem ident="SS"/>
-                                <!--                                Sisay-->
-                                <valItem ident="DE"/>
-                                <!--                                Daria-->
-                                <valItem ident="NV"/>
-                                <!--                                Nafisa-->
-                                <valItem ident="JG"/>
-                                <!--                                Jacopo-->
-                                <valItem ident="JK"/>
-                                <!--                                Jonas-->
-                                <valItem ident="EDS"/>
-                                <!--                                Eliana-->
-                                <valItem ident="AWi"/>
-                                <!--                                Anaïs Wion-->
-                            </valList>
+                                <valItem ident="AB"><desc>Alessandro Bausi</desc></valItem>
+                                <valItem ident="ES"><desc>Eugenia Sokolinski</desc></valItem>
+                                <valItem ident="DN"><desc>Denis Nosnitsin</desc></valItem>
+                                <valItem ident="DR"><desc>Dorothea Reule</desc></valItem>
+                                <valItem ident="MV"><desc>Massimo Villa</desc></valItem>
+                                <valItem ident="SG"><desc>Solomon Gebreyes Beyene</desc></valItem>
+                                <valItem ident="PL"><desc>Pietro Liuzzo</desc></valItem>
+                                <valItem ident="SH"><desc>S. Hummel</desc></valItem>
+                                <valItem ident="EG"><desc>E. Gusarova</desc></valItem>
+                                <valItem ident="MK"><desc>M. Krzyzanowska</desc></valItem>
+                                <valItem ident="VP"><desc>V. Pisani</desc></valItem>
+                                <valItem ident="SA"><desc>S. Ancel</desc></valItem>
+                                <valItem ident="VR"><desc>V. Roth</desc></valItem>
+                                <valItem ident="AA"><desc>A. Adugna</desc></valItem>
+                                <valItem ident="SD"><desc>Sophia Dege-Müller</desc></valItem>
+                                <valItem ident="IR"><desc>I. Roticiani</desc></valItem>
+                                <valItem ident="IF"><desc>I. Fridman</desc></valItem>
+                                <valItem ident="MB"><desc>M. Bulakh</desc></valItem>
+                                <valItem ident="FP"><desc>Francesca Panini</desc></valItem>
+                                <valItem ident="RHC"><desc>Ran HaCohen</desc></valItem>
+                                <valItem ident="SJ"><desc>Sybilla Jenner</desc></valItem>
+                                <valItem ident="SS"><desc>Sisay Sahile</desc></valItem>
+                                <valItem ident="DE"><desc>Daria Elagina</desc></valItem>
+                                <valItem ident="NV"><desc>Nafisa Valieva</desc></valItem>
+                                <valItem ident="JG"><desc>Jacopo Gnisci</desc></valItem>
+                                <valItem ident="JK"><desc>Jonas Karlsson</desc></valItem>
+                                <valItem ident="EDS"><desc>Eliana Dal Sasso</desc></valItem>
+                                <valItem ident="AWi"><desc>Anaïs Wion</desc></valItem>
+                             </valList>
                         </attDef>
                         <attDef ident="when" mode="replace" usage="req"/>
                     </attList>
