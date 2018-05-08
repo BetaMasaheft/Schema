@@ -392,6 +392,65 @@
                     <attList>
                         <attDef ident="key" mode="replace" usage="rec">
                             <valList type="closed">
+                                
+                                
+                                <valItem ident="guard"/>
+                                <valItem ident="centerfold"/>
+                                <valItem ident="spinefold"/>
+                                <valItem ident="sidestitches"/>
+                                <valItem ident="mainSewing"/>
+                                <valItem ident="slitBraid"/>
+                                <valItem ident="linkStitch"/>
+                                <valItem ident="textile"/>
+                                <valItem ident="mirror"/>
+                                <valItem ident="additionalLeatherPatch"/>
+                                <valItem ident="cordiaAfricana"/>
+                                <valItem ident="oleaAfricana"/>
+                                <valItem ident="cedar"/>
+                                <valItem ident="eucalyptus"/>
+                                <valItem ident="juniper"/>
+                                <valItem ident="hageniaAbyssinica"/>
+                                <valItem ident="acacia"/>
+                                <valItem ident="ficus"/>
+                                <valItem ident="crotonMacrostachyus"/>
+                                <valItem ident="euphorbia"/>
+                                <valItem ident="ekebergia"/>
+                                <valItem ident="podocarpus"/>
+                                <valItem ident="plywood"/>
+                                <valItem ident="patternA"/>
+                                <valItem ident="patternA1"/>
+                                <valItem ident="patternA2"/>
+                                <valItem ident="patternA3"/>
+                                <valItem ident="patternA4"/>
+                                <valItem ident="patternA5"/>
+                                <valItem ident="patternA6"/>
+                                <valItem ident="patternA7"/>
+                                <valItem ident="patternB"/>
+                                <valItem ident="patternC"/>
+                                <valItem ident="patternC1"/>
+                                <valItem ident="tripleStraightLine"/>
+                                <valItem ident="doubleStraightLine"/>
+                                <valItem ident="singleStraightLine"/>
+                                <valItem ident="crissCross"/>
+                                <valItem ident="doubleCircle"/>
+                                <valItem ident="singleCircle"/>
+                                <valItem ident="crescent"/>
+                                <valItem ident="XForm"/>
+                                <valItem ident="palmShape"/>
+                                <valItem ident="rosette"/>
+                                <valItem ident="corniForm"/>
+                                <valItem ident="grid"/>
+                                <valItem ident="VForm"/>
+                                <valItem ident="wavyLine"/>
+                                <valItem ident="zigZag"/>
+                                <valItem ident="motherOfWater"/>
+                                <valItem ident="straightStrapwork"/>
+                                <valItem ident="curveStrapwork"/>
+                                <valItem ident="animalThread"/>
+                                <valItem ident="vegetableThread"/>
+                                <valItem ident="syntheticThread"/>
+                                <valItem ident="tannedSkin"/>
+                                
                                 <!--                          list coming from myCore-->
                                 <valItem ident="ApocryphaPseudoepigrapha">
                                     <desc>works of unknown or doubtful authorship rejected from the
