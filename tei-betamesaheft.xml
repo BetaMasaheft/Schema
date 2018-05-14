@@ -1061,26 +1061,33 @@
                                 <rng:ref name="data.word"/>
                             </datatype>
                             <valList type="closed">
-                                <valItem ident="EOTC"/>
-                                <valItem ident="Christianity"/>
-                                <valItem ident="Catholicism"/>
-                                <valItem ident="Protestantism"/>
-                                <valItem ident="Anglican"/>
-                                <valItem ident="Coptic"/>
-                                <valItem ident="Orthodox"/>
-                                <valItem ident="Syriac"/>
-                                <valItem ident="Greek"/>
-                                <valItem ident="Russian"/>
-                                <valItem ident="Armenian"/>
-                                <valItem ident="Islam"/>
-                                <valItem ident="Sunni"/>
-                                <valItem ident="Shia"/>
-                                <valItem ident="Judaism"/>
-                                <valItem ident="Ethiopian"/>
-                                <valItem ident="Traditional"/>
-                                <valItem ident="Aksumite"/>
-                                <valItem ident="Oromo"/>
-                                <valItem ident="Gurage"/>
+                                
+                                <valItem ident="Christianity"><desc>Unspecified Christian</desc></valItem>
+                                
+                                <valItem ident="Anglican"><desc>Christian Anglican, belonging to the Anglican Church after the reformation</desc></valItem>
+                                <valItem ident="Catholicism"><desc>Christian Catholic, belonging to the Catholic Church after 1054</desc></valItem>
+                                <valItem ident="Protestantism"><desc>Christian Protestant, belonging to a Protestant church after the reformation</desc></valItem>
+                                <valItem ident="Orthodox"><desc>Christian Orthodox, belonging to a pre-Chalcedonian Church or an Orthodox church after 1054</desc></valItem>
+                                
+                                <valItem ident="EOTC"><desc>Christian Orthodox, belonging to the Ethiopian Orthodox Tewahedo Church</desc></valItem>
+                                <valItem ident="Greek"><desc>Greek Orthodox Christian</desc></valItem>
+                                <valItem ident="Russian"><desc>Russian Orthodox Christian</desc></valItem>
+                                <valItem ident="Armenian"><desc>Armenian Orthodox Christian</desc></valItem>
+                                <valItem ident="Coptic"><desc>Christian Coptic Orthodox</desc></valItem>
+                                <valItem ident="Syriac"><desc>Christian Syriac Orthodox ("Jacobite")</desc></valItem>
+                                
+                                <valItem ident="Islam"><desc>Unspecified Islam</desc></valItem>
+                                <valItem ident="Sunni"><desc>Sunni Islam</desc></valItem>
+                                <valItem ident="Shia"><desc>Shia Islam</desc></valItem>
+                               
+                                <valItem ident="Judaism"><desc>Unspecified Judaism</desc></valItem>
+                                
+                                <valItem ident="Oromo"><desc>Traditional Oromo belief system</desc></valItem>
+                                <valItem ident="Gurage"><desc>Traditional Gurage belief system</desc></valItem>
+                                <valItem ident="Traditional"><desc>Traditional non-Christian or Muslim belief system</desc></valItem>
+                                <valItem ident="Ethiopian"><desc>Traditional Ethiopian belief system</desc></valItem>
+                                <valItem ident="Aksumite"><desc></desc></valItem>
+                               
                                 <valItem ident="notSpecified"/>
                             </valList>
                         </attDef>
