@@ -2033,10 +2033,10 @@
                         <attDef ident="type" mode="change">
                             <valList>
                                 <valItem ident="normalized">
-                                    <desc>the normalized transcription of the name in fidal</desc>
+                                    <desc>the normalized transcription of the name in fidal or another script</desc>
                                 </valItem>
                                 <valItem ident="given">
-                                    <desc>name given at birth</desc>
+                                    <desc>name received later in life, different from the other specified types of names</desc>
                                 </valItem>
                                 <valItem ident="birth">
                                     <desc>name given at birth</desc>
@@ -2045,7 +2045,7 @@
                                     <desc>name given at baptism</desc>
                                 </valItem>
                                 <valItem ident="regnal">
-                                    <desc>name given on coronation (kings but also
+                                    <desc>name given on coronation (kings and queens but also
                                         patriarchs)</desc>
                                 </valItem>
                                 <valItem ident="monastic">
@@ -2064,7 +2064,7 @@
                                 </valItem>
                                 <valItem ident="hypocoristic">
                                     <desc>short form (diminutive or abbreviated, e.g. Taklo for
-                                        Takla Maryam)</desc>
+                                        Takla Māryām)</desc>
                                 </valItem>
                                 <valItem ident="patronymic">
                                     <desc>father's name, esp. for eventual Russian names, but could
