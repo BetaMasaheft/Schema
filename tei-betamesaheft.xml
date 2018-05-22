@@ -1152,14 +1152,14 @@
 
                 <!--                constrain use of type in roleName and suggest values-->
                 <elementSpec ident="roleName" mode="change" module="namesdates">
-                    <constraintSpec scheme="isoschematron" ident="roleName">
+                   <!-- <constraintSpec scheme="isoschematron" ident="roleName">
                         <constraint>
                             <sch:rule
                                 context="tei:roleName">
                                 <sch:report test="not(parent::tei:persName or parent::tei:occupation)">A roleName not nested in a persName does not allow anything useful to be done with the markup. Please add a persName around the name of the person which has this role.</sch:report>
                             </sch:rule>
                         </constraint>
-                    </constraintSpec>
+                    </constraintSpec>-->
                     <attList>
                         <attDef ident="type" mode="replace" usage="req">
                             <valList type="closed">
