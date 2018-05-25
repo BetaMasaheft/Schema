@@ -2501,6 +2501,9 @@
                                         to be used in cases where the definition of "Golden Gospel" is explicitly mentioned somewhere in the Gospel
                                         or when there is enough evidence that the Gospel is the main material repository of documentary texts related to a certain institution.</desc>
                                 </valItem>
+                                <valItem ident="bm:hasLexiconEntry">
+                                    <desc>corresponds to the lemma ...</desc>
+                                </valItem>
 
                                 <valItem ident="syriaca:different-from">
                                     <desc>http://syriaca.org/documentation/relations.html#different-from</desc>
