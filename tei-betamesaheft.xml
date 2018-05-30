@@ -3397,7 +3397,8 @@
                                         surface</desc>
                                 </valItem>
                                 <valItem ident="omitted">
-                                    <desc>Words or lines skipped in omitted by the editor in transcription</desc>
+                                    <desc>Text erroneously omitted or skipped by the
+                                        scribe</desc>
                                 </valItem>
                                 <valItem ident="subaudible">
                                     <desc>Editorial supplement of words subaudible to the native

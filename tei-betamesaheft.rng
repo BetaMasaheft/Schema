@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-05-30T10:53:18Z. .
+Schema generated from ODD source 2018-05-30T19:48:30Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -9335,7 +9335,7 @@ Suggested values include: 1] parallel; 2] previouseditor</a:documentation>
                <value>lost</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Restoration of text completely lost from the surface</a:documentation>
                <value>omitted</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Words or lines skipped in omitted by the editor in transcription</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Text erroneously omitted or skipped by the scribe</a:documentation>
                <value>subaudible</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Editorial supplement of words subaudible to the native reader</a:documentation>
                <value>explanation</value>
