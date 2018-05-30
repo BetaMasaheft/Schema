@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-05-25T14:43:41Z. .
+Schema generated from ODD source 2018-05-30T10:53:18Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -5774,6 +5774,12 @@ Sample values include: 1] generalEditor</a:documentation>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Alessandro Gori</a:documentation>
                <value>AWi</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Anaïs Wion</a:documentation>
+               <value>SD</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Steve Delamarter</a:documentation>
+               <value>RL</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ralph Lee</a:documentation>
+               <value>JS</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Jonah Sandford</a:documentation>
             </choice>
          </attribute>
          <empty/>
@@ -7980,6 +7986,12 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Eliana Dal Sasso</a:documentation>
                <value>AWi</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Anaïs Wion</a:documentation>
+               <value>SD</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Steve Delamarter</a:documentation>
+               <value>RL</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ralph Lee</a:documentation>
+               <value>JS</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Jonah Sandford</a:documentation>
             </choice>
          </attribute>
          <attribute name="when">
@@ -15263,7 +15275,7 @@ Suggested values include: 1] UTI; 2] OTI; 3] L; 4] R</a:documentation>
                <value>bm:isGoldenGospelof</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The relation between a Golden Gospel and its original institution (even if the manuscript is now kept in a different place), to be used in cases where the definition of "Golden Gospel" is explicitly mentioned somewhere in the Gospel or when there is enough evidence that the Gospel is the main material repository of documentary texts related to a certain institution.</a:documentation>
                <value>bm:hasLexiconEntry</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">corresponds to the lemma ...</a:documentation>               
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">corresponds to the lemma ...</a:documentation>
                <value>syriaca:different-from</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://syriaca.org/documentation/relations.html#different-from</a:documentation>
                <value>syriaca:has-literary-connection-to-place</value>

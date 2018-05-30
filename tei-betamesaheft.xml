@@ -1893,6 +1893,9 @@
                                 <valItem ident="JML"><desc>John Møller Larsen</desc></valItem>
                                 <valItem ident="AG"><desc>Alessandro Gori</desc></valItem>
                                 <valItem ident="AWi"><desc>Anaïs Wion</desc></valItem>
+                                <valItem ident="SD"><desc>Steve Delamarter</desc></valItem>
+                                <valItem ident="RL"><desc>Ralph Lee</desc></valItem>
+                                <valItem ident="JS"><desc>Jonah Sandford</desc></valItem>
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -1951,6 +1954,9 @@
                                 <valItem ident="JK"><desc>Jonas Karlsson</desc></valItem>
                                 <valItem ident="EDS"><desc>Eliana Dal Sasso</desc></valItem>
                                 <valItem ident="AWi"><desc>Anaïs Wion</desc></valItem>
+                                <valItem ident="SD"><desc>Steve Delamarter</desc></valItem>
+                                <valItem ident="RL"><desc>Ralph Lee</desc></valItem>
+                                <valItem ident="JS"><desc>Jonah Sandford</desc></valItem>
                              </valList>
                         </attDef>
                         <attDef ident="when" mode="replace" usage="req"/>
