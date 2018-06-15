@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-06-15T05:43:47Z. .
+Schema generated from ODD source 2018-06-15T06:04:01Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -4592,7 +4592,7 @@ Sample values include: 1] rubbing; 2] mildew; 3] smoke</a:documentation>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scratched with a knife or similar</a:documentation>
                   <value>strikethrough</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">crossed out with red or black ink, a line or dashes</a:documentation>
-                  <value>exponctuated</value>
+                  <value>expunctuated</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">marked with dots above or below the line</a:documentation>
                   <value>effaced</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">deleted or washed out, the material is untouched</a:documentation>
