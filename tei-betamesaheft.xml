@@ -126,7 +126,7 @@
                                 <valItem ident="strikethrough">
                                     <desc>crossed out with red or black ink, a line or dashes</desc>
                                 </valItem>
-                                <valItem ident="exponctuated">
+                                <valItem ident="expunctuated">
                                     <desc>marked with dots above or below the line</desc>
                                 </valItem>
                                 <valItem ident="effaced">
