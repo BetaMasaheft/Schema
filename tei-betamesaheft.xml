@@ -2404,10 +2404,19 @@
                                     <desc>If the model of the transformation is simple, you can specify of which individual mutiple transformation it is a part.</desc>
                                 </valItem>
                                 <valItem ident="SdC:produces">
-                                    <desc>A transformation produces a new UniProd or a new UniCirc.</desc>
+                                    <desc>A transcormation produces new UniProd s</desc>
+                                </valItem>
+                                <valItem ident="SdC:resultsIn">
+                                    <desc>A transformation results in a new UniProd or a new UniCirc.</desc>
                                 </valItem>
                                 <valItem ident="SdC:hasCertainty">
                                     <desc>Certain or Hypothetique</desc>
+                                </valItem>
+                                <valItem ident="SdC:hasStratum">
+                                    <desc>Declares for a UniCirc one or more of the Stratum types in Ansdrist 2015, 512.</desc>
+                                </valItem>
+                                <valItem ident="SdC:isStratumOf">
+                                    <desc>Declares one or more of the Stratum types in Ansdrist 2015, 512 and assign them to a UniCirc</desc>
                                 </valItem>
                                 <valItem ident="skos:exactMatch">
                                     <desc>http://www.w3.org/2004/02/skos/core#exactMatch</desc>
