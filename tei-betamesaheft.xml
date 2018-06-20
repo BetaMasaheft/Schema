@@ -496,6 +496,7 @@
                                 <valItem ident="SecondGondarineStyle"><desc>Second Gondarine Style</desc></valItem>
                                 <valItem ident="PostGondarineStyle"><desc>Post Gondarine Style</desc></valItem>
                                 <valItem ident="ModernStyle"><desc>Modern Style</desc></valItem>
+                                <valItem ident="SawaStyle"><desc>Šawān Style</desc></valItem>
                                 <valItem ident="ShortCycle"><desc>Short Cycle</desc></valItem>
                                 <valItem ident="LongCycle"><desc>Long Cycle</desc></valItem>
                                 <valItem ident="angel"><desc>angel</desc></valItem>
