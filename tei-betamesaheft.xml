@@ -31,7 +31,7 @@
             <change who="DR" when="2017-12-15">Added Golden Gospel relation</change>
             <change who="ES" when="2018-05-25">Added Lexicon relation</change>
             <change who="DR" when="2018-06-29">Deleted TransactionNote and updated definition for RecordTransaction</change>
-            <change who="ES" when="2018-06-29">Added WD</change>
+            <change who="ES" when="2018-06-29">Added WD, AE</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -1899,6 +1899,7 @@
                                 <valItem ident="WD"><desc>Wolfgang Dickhut</desc></valItem>
 
                                 <valItem ident="CH"><desc>Carsten Hoffmann</desc></valItem>
+                                <valItem ident="AE"><desc>Andreas Ellwardt</desc></valItem>
 
                             </valList>
                         </attDef>
