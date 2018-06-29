@@ -30,6 +30,7 @@
             <change who="DR" when="2017-09-15">Added philosophy keyword</change>
             <change who="DR" when="2017-12-15">Added Golden Gospel relation</change>
             <change who="ES" when="2018-05-25">Added Lexicon relation</change>
+            <change who="DR" when="2018-06-29">Deleted TransactionNote and updated definition for RecordTransaction</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -126,7 +127,7 @@
                                 <valItem ident="strikethrough">
                                     <desc>crossed out with red or black ink, a line or dashes</desc>
                                 </valItem>
-                                <valItem ident="exponctuated">
+                                <valItem ident="expunctuated">
                                     <desc>marked with dots above or below the line</desc>
                                 </valItem>
                                 <valItem ident="effaced">
@@ -496,6 +497,7 @@
                                 <valItem ident="SecondGondarineStyle"><desc>Second Gondarine Style</desc></valItem>
                                 <valItem ident="PostGondarineStyle"><desc>Post Gondarine Style</desc></valItem>
                                 <valItem ident="ModernStyle"><desc>Modern Style</desc></valItem>
+                                <valItem ident="SawaStyle"><desc>Šawān Style</desc></valItem>
                                 <valItem ident="ShortCycle"><desc>Short Cycle</desc></valItem>
                                 <valItem ident="LongCycle"><desc>Long Cycle</desc></valItem>
                                 <valItem ident="angel"><desc>angel</desc></valItem>
@@ -1338,10 +1340,6 @@
                                     <desc>list of books or items held by the individual or the
                                         institution.</desc>
                                 </valItem>
-                                <valItem ident="TransactionNote">
-                                    <desc> note stating a transaction of goods between individuals
-                                        or institutions.</desc>
-                                </valItem>
                                 <valItem ident="ScribalNoteCommencing">
                                     <desc>scribe’s note on commencing the work</desc>
                                 </valItem>
@@ -1367,8 +1365,7 @@
                                     <desc>documentary record concerning a litigation.</desc>
                                 </valItem>
                                 <valItem ident="RecordTransaction">
-                                    <desc>documentary record concerning a transaction of
-                                        goods.</desc>
+                                    <desc>text documenting an act of selling or buying something, in many cases a house and land, sometimes a book</desc>
                                 </valItem>
                                 <valItem ident="RecordDistribution">
                                     <desc>documentary record concerning the distribution of goods or
@@ -1670,6 +1667,7 @@
                                 <valItem ident="unwan"/>
                                 <valItem ident="vignette"/>
                                 <valItem ident="engraving"/>
+                                <valItem ident="printedImage"><desc>A printed image, usually of devotional character, glued to a manuscript</desc></valItem>
                                 
                                 <valItem ident="Other">
                                     <desc>to be used in binding description</desc>
@@ -1896,7 +1894,11 @@
                                 <valItem ident="SD"><desc>Steve Delamarter</desc></valItem>
                                 <valItem ident="RL"><desc>Ralph Lee</desc></valItem>
                                 <valItem ident="JS"><desc>Jonah Sandford</desc></valItem>
+<<<<<<< HEAD
                                 <valItem ident="WD"><desc>Wolfgang Dickhut</desc></valItem>
+=======
+                                <valItem ident="CH"><desc>Carsten Hoffmann</desc></valItem>
+>>>>>>> origin/master
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -1958,6 +1960,7 @@
                                 <valItem ident="SD"><desc>Steve Delamarter</desc></valItem>
                                 <valItem ident="RL"><desc>Ralph Lee</desc></valItem>
                                 <valItem ident="JS"><desc>Jonah Sandford</desc></valItem>
+                                <valItem ident="CH"><desc>Carsten Hoffmann</desc></valItem>
                              </valList>
                         </attDef>
                         <attDef ident="when" mode="replace" usage="req"/>
@@ -2403,10 +2406,19 @@
                                     <desc>If the model of the transformation is simple, you can specify of which individual mutiple transformation it is a part.</desc>
                                 </valItem>
                                 <valItem ident="SdC:produces">
-                                    <desc>A transformation produces a new UniProd or a new UniCirc.</desc>
+                                    <desc>A transcormation produces new UniProd s</desc>
+                                </valItem>
+                                <valItem ident="SdC:resultsIn">
+                                    <desc>A transformation results in a new UniProd or a new UniCirc.</desc>
                                 </valItem>
                                 <valItem ident="SdC:hasCertainty">
                                     <desc>Certain or Hypothetique</desc>
+                                </valItem>
+                                <valItem ident="SdC:hasStratum">
+                                    <desc>Declares for a UniCirc one or more of the Stratum types in Ansdrist 2015, 512.</desc>
+                                </valItem>
+                                <valItem ident="SdC:isStratumOf">
+                                    <desc>Declares one or more of the Stratum types in Ansdrist 2015, 512 and assign them to a UniCirc</desc>
                                 </valItem>
                                 <valItem ident="skos:exactMatch">
                                     <desc>http://www.w3.org/2004/02/skos/core#exactMatch</desc>
