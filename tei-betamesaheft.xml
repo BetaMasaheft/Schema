@@ -30,6 +30,7 @@
             <change who="DR" when="2017-09-15">Added philosophy keyword</change>
             <change who="DR" when="2017-12-15">Added Golden Gospel relation</change>
             <change who="ES" when="2018-05-25">Added Lexicon relation</change>
+            <change who="DR" when="2018-06-29">Deleted TransactionNote and updated definition for RecordTransaction</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -1339,10 +1340,6 @@
                                     <desc>list of books or items held by the individual or the
                                         institution.</desc>
                                 </valItem>
-                                <valItem ident="TransactionNote">
-                                    <desc> note stating a transaction of goods between individuals
-                                        or institutions.</desc>
-                                </valItem>
                                 <valItem ident="ScribalNoteCommencing">
                                     <desc>scribe’s note on commencing the work</desc>
                                 </valItem>
@@ -1368,8 +1365,7 @@
                                     <desc>documentary record concerning a litigation.</desc>
                                 </valItem>
                                 <valItem ident="RecordTransaction">
-                                    <desc>documentary record concerning a transaction of
-                                        goods.</desc>
+                                    <desc>text documenting an act of selling or buying something, in many cases a house and land, sometimes a book</desc>
                                 </valItem>
                                 <valItem ident="RecordDistribution">
                                     <desc>documentary record concerning the distribution of goods or

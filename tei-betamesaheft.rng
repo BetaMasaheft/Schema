@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-06-25T08:04:56Z. .
+Schema generated from ODD source 2018-06-29T07:36:01Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -3962,8 +3962,6 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">invocation against those who stole or erased the book or against other individuals. Not very different from “Condemnation”.</a:documentation>
                   <value>Inventory</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">list of books or items held by the individual or the institution.</a:documentation>
-                  <value>TransactionNote</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note stating a transaction of goods between individuals or institutions.</a:documentation>
                   <value>ScribalNoteCommencing</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scribe’s note on commencing the work</a:documentation>
                   <value>ScribalNoteOrdering</value>
@@ -3981,7 +3979,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <value>RecordLitigation</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documentary record concerning a litigation.</a:documentation>
                   <value>RecordTransaction</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documentary record concerning a transaction of goods.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">text documenting an act of selling or buying something, in many cases a house and land, sometimes a book</a:documentation>
                   <value>RecordDistribution</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documentary record concerning the distribution of goods or lands.</a:documentation>
                   <value>RecordGuarantors</value>
