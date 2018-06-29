@@ -1896,6 +1896,7 @@
                                 <valItem ident="SD"><desc>Steve Delamarter</desc></valItem>
                                 <valItem ident="RL"><desc>Ralph Lee</desc></valItem>
                                 <valItem ident="JS"><desc>Jonah Sandford</desc></valItem>
+                                <valItem ident="WD"><desc>Wolfgang Dickhut</desc></valItem>
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
