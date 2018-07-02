@@ -32,6 +32,7 @@
             <change who="ES" when="2018-05-25">Added Lexicon relation</change>
             <change who="DR" when="2018-06-29">Deleted TransactionNote and updated definition for RecordTransaction</change>
             <change who="ES" when="2018-06-29">Added WD, AE</change>
+            <change who="ES" when="2018-07-02">Added HE</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -1900,6 +1901,7 @@
 
                                 <valItem ident="CH"><desc>Carsten Hoffmann</desc></valItem>
                                 <valItem ident="AE"><desc>Andreas Ellwardt</desc></valItem>
+                                <valItem ident="HE"><desc>Hiruie Ermias</desc></valItem>
 
                             </valList>
                         </attDef>
@@ -1963,6 +1965,9 @@
                                 <valItem ident="RL"><desc>Ralph Lee</desc></valItem>
                                 <valItem ident="JS"><desc>Jonah Sandford</desc></valItem>
                                 <valItem ident="CH"><desc>Carsten Hoffmann</desc></valItem>
+                                <valItem ident="WD"><desc>Wolfgang Dickhut</desc></valItem>
+                                <valItem ident="AE"><desc>Andreas Ellwardt</desc></valItem>
+                                <valItem ident="HE"><desc>Hiruie Ermias</desc></valItem>
                              </valList>
                         </attDef>
                         <attDef ident="when" mode="replace" usage="req"/>
