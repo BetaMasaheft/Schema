@@ -2531,6 +2531,12 @@
                                 <valItem ident="bm:hasLexiconEntry">
                                     <desc>corresponds to the lemma ...</desc>
                                 </valItem>
+                                <valItem ident="bm:isSuccessorOf">
+                                    <desc>The subject of the relation is the successor of...</desc>
+                                </valItem>
+                                <valItem ident="bm:isPredecessorOf">
+                                    <desc>The subject of the relation is the predecessor of...</desc>
+                                </valItem>
 
                                 <valItem ident="syriaca:different-from">
                                     <desc>http://syriaca.org/documentation/relations.html#different-from</desc>
