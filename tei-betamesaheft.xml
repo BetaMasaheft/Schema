@@ -62,6 +62,7 @@ End license statement: do not remove -->
             <change who="ES" when="2018-07-02">Added HE</change>
             <change who="PL" when="2018-07-20">Changed the context statments for schematron rules pointing directly to @xml:id. 
                 This was preventing proper validation in JING</change>
+            <change who="PL" when="2018-07-20">Added rule for dimensions and dim inside item of collation</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -1286,6 +1287,13 @@ End license statement: do not remove -->
           more values can be added, and up to 6 can be entered in the attribute
           -->
                 <elementSpec ident="dimensions" mode="change" module="msdescription">
+                    <constraintSpec scheme="isoschematron" ident="witness">
+                        <constraint>
+                            <sch:rule context="tei:dimensions/tei:*">
+                                <sch:report test="contains(.,',')">please, make sure you use a dot for decimal notation like in 13.5, not a comma 13,5</sch:report>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
                     <attList>
                         <attDef ident="rend" mode="replace" usage="opt">
                             <datatype maxOccurs="6">
@@ -3396,6 +3404,7 @@ End license statement: do not remove -->
                             </sch:rule>
                             <sch:rule context="tei:item[ancestor::tei:collation]">
                                 <sch:report test="not(child::tei:dim)">Please always add a dim element inside your quire descriptions</sch:report>
+                                <sch:report test="child::tei:dim[not(matches(.,'\d+'))]">Dimensions of quire should be given as integers.</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:item[ancestor::tei:additions]">
                                 <sch:report test="not(@xml:id)"> items in additions must have an
