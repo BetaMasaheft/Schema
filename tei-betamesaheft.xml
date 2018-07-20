@@ -1,14 +1,40 @@
 <?xml version="1.0"?>
+<!-- Start license statement: do not remove 
+    
+Beta maṣāḥǝft Schema
+Copyright (c) 2016-2040 by all contributors listed in <titleStmt>, below and contributors to the github stored version
+see https://github.com/BetaMasaheft/Schema/graphs/contributors
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+
+The Beta maṣāḥǝft Guidelines, which integrate the latest version of this schema, should be used contextually. 
+http://betamasaheft.eu/Guidelines/
+
+End license statement: do not remove -->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en" xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron">
     <teiHeader>
         <fileDesc>
             <titleStmt>
                 <title>Beta maṣāḥǝft schema</title>
-                <author xml:id="ES">Eugenia Sokolinski</author>
                 <author xml:id="PL">Pietro Liuzzo</author>
+                <author xml:id="ES">Eugenia Sokolinski</author>
+                <author xml:id="DR">Dorothea Reule</author>
             </titleStmt>
             <publicationStmt>
+                
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
                 <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine
                     multimediale Forschungsumgebung / Beta maṣāḥǝft</publisher>
@@ -17,6 +43,7 @@
                     <licence target="http://creativecommons.org/licenses/by-sa/4.0/"> This file is
                         licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
                 </availability>
+                
             </publicationStmt>
             <sourceDesc>
                 <p>created electronically</p>
@@ -33,6 +60,8 @@
             <change who="DR" when="2018-06-29">Deleted TransactionNote and updated definition for RecordTransaction</change>
             <change who="ES" when="2018-06-29">Added WD, AE</change>
             <change who="ES" when="2018-07-02">Added HE</change>
+            <change who="PL" when="2018-07-20">Changed the context statments for schematron rules pointing directly to @xml:id. 
+                This was preventing proper validation in JING</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -40,6 +69,7 @@
             <divGen type="toc"/>
         </front>
         <body>
+            <p>Schema for the Beta maṣāḥǝft: Manuscripts of Ethiopia and Eritrea research environment.</p>
             <schemaSpec ident="tei-betamesaheft" docLang="en" prefix="tei_" start="TEI"
                 xml:lang="en" source="tei:3.0.0">
 
@@ -918,8 +948,8 @@
                                     should be like t1 t2, etc.</sch:report>
                             </sch:rule>
                             <sch:rule
-                                context="tei:title[not(parent::tei:ab)][ancestor::tei:TEI[@type='work']]/@xml:id">
-                                <sch:report test="not(matches(.,'t\d+'))"> Titles of works must have
+                                context="tei:title[not(parent::tei:ab)][ancestor::tei:TEI[@type='work']]">
+                                <sch:report test="not(matches(@xml:id,'t\d+'))"> Titles of works must have
                                     ids starting with the letter 't' followed by a progressive
                                     number, e.g. t1, t2, t3 </sch:report>
                             </sch:rule>
@@ -1508,8 +1538,8 @@
                                     or 'description'. @type equal to 'appellation' can be used to
                                     list a series of ways in which a place is called. </sch:report>
                             </sch:rule>
-                            <sch:rule context="tei:ab[@subtype='dividers']/@xml:id">
-                                <sch:report test="not(matches(.,'div\d+'))"> Dividers must have ids
+                            <sch:rule context="tei:ab[@subtype='dividers']">
+                                <sch:report test="not(matches(@xml:id,'div\d+'))"> Dividers must have ids
                                     starting with 'div' followed by a progressive number, e.g. div1,
                                     div2, div3 </sch:report>
                             </sch:rule>
@@ -1580,13 +1610,13 @@
                                 <sch:report test="not(child::tei:locus)">decoNote must contain a
                                     locus to indicate the position of the feature</sch:report>
                             </sch:rule>-->
-                            <sch:rule context="tei:decoNote[not(ancestor::tei:bindingDesc)]/@xml:id">
-                                <sch:report test="not(matches(.,'d\d+'))"> DecoNotes must have ids
+                            <sch:rule context="tei:decoNote[not(ancestor::tei:bindingDesc)]">
+                                <sch:report test="not(matches(@xml:id,'d\d+'))"> DecoNotes must have ids
                                     starting with the letter 'd' followed by a progressive number,
                                     e.g. d1, d2, d3 </sch:report>
                             </sch:rule>
-                            <sch:rule context="tei:decoNote[ancestor::tei:bindingDesc]/@xml:id">
-                                <sch:report test="not(matches(.,'b\d+'))"> DecoNotes in Binding
+                            <sch:rule context="tei:decoNote[ancestor::tei:bindingDesc]">
+                                <sch:report test="not(matches(@xml:id,'b\d+'))"> DecoNotes in Binding
                                     Description must have ids starting with the letter 'b' followed
                                     by a progressive number, e.g. b1, b2, b3 </sch:report>
                             </sch:rule>
@@ -1754,11 +1784,11 @@
                 <elementSpec ident="msPart" mode="change" module="msdescription">
                     <constraintSpec scheme="isoschematron" ident="msPart">
                         <constraint>
-                            <sch:rule context="tei:msPart/@xml:id">
-                                <sch:report test="not(matches(.,'p\d+'))"> Manuscript parts ids must
+                            <sch:rule context="tei:msPart">
+                                <sch:report test="not(matches(@xml:id,'p\d+'))"> Manuscript parts ids must
                                     start with the letter 'p' followed by a progressive number, e.g.
                                     p1, p1.3, p1.1_i1.1 </sch:report>
-                                <sch:report test="matches(.,'(_.*){2}')"> The Underscore is used in
+                                <sch:report test="matches(@xml:id,'(_.*){2}')"> The Underscore is used in
                                     ids to mark a nesting of different ids, especially items in
                                     parts. there should thus be only one of them as a maximum. If
                                     you have parts into parts or items into items, please use a full
@@ -1775,13 +1805,13 @@
                 <elementSpec ident="msItem" mode="change" module="msdescription">
                     <constraintSpec scheme="isoschematron" ident="msItem">
                         <constraint>
-                            <sch:rule context="tei:msItem/@xml:id">
-                                <sch:report test="not(matches(.,'_i\d+'))"> Content Items in
+                            <sch:rule context="tei:msItem">
+                                <sch:report test="not(matches(@xml:id,'_i\d+'))"> Content Items in
                                     Manuscript parts must have ids starting with the reference to
                                     the part in which they are contained, then underscore and the
                                     letter 'i' followed by a progressive number, e.g. p1.1_i1.1,
                                     p1.1_i2. </sch:report>
-                                <sch:report test="matches(.,'(_.*){2}')"> The Underscore is used in
+                                <sch:report test="matches(@xml:id,'(_.*){2}')"> The Underscore is used in
                                     ids to mark a nesting of different ids, especially items in
                                     parts. there should thus be only one of them as a maximum. If
                                     you have parts into parts or items into items, please use a full
@@ -1805,8 +1835,8 @@
                     </content>
                     <constraintSpec scheme="isoschematron" ident="colophon">
                         <constraint>
-                            <sch:rule context="tei:colophon/@xml:id">
-                                <sch:report test="not(matches(.,'coloph\d+'))"> Colophon in
+                            <sch:rule context="tei:colophon">
+                                <sch:report test="not(matches(@xml:id,'coloph\d+'))"> Colophon in
                                     Manuscript items must have ids starting with coloph.
                                 </sch:report>
                             </sch:rule>
@@ -1822,8 +1852,8 @@
                 <elementSpec ident="handNote" mode="change" module="msdescription">
                     <constraintSpec scheme="isoschematron" ident="handNote">
                         <constraint>
-                            <sch:rule context="tei:handNote/@xml:id">
-                                <sch:report test="not(matches(.,'h\d+'))"> HandNotes must have ids
+                            <sch:rule context="tei:handNote">
+                                <sch:report test="not(matches(@xml:id,'h\d+'))"> HandNotes must have ids
                                     starting with the letter 'h' followed by a progressive number,
                                     e.g. h1, h2, h3 </sch:report>
                             </sch:rule>
@@ -1924,8 +1954,8 @@
                         please add a <gi>change</gi> with content <emph>reviewed</emph></desc>
                     <constraintSpec scheme="isoschematron" ident="change">
                         <constraint>
-                            <sch:rule context="tei:change/@when">
-                                <sch:report test="not(matches(., '20\d{2}-\d{2}-\d{2}$'))">This is
+                            <sch:rule context="tei:change">
+                                <sch:report test="not(matches(@when, '20\d{2}-\d{2}-\d{2}$'))">This is
                                     not a correct date.</sch:report>
                             </sch:rule>
                         </constraint>
