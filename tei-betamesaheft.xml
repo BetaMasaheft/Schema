@@ -949,7 +949,7 @@ End license statement: do not remove -->
                                     should be like t1 t2, etc.</sch:report>
                             </sch:rule>
                             <sch:rule
-                                context="tei:title[not(parent::tei:ab)][ancestor::tei:TEI[@type='work']]">
+                                context="tei:title[not(parent::tei:ab)][ancestor::tei:TEI[@type='work']][@xml:id]">
                                 <sch:report test="not(matches(@xml:id,'t\d+'))"> Titles of works must have
                                     ids starting with the letter 't' followed by a progressive
                                     number, e.g. t1, t2, t3 </sch:report>
