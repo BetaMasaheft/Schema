@@ -2246,7 +2246,6 @@ End license statement: do not remove -->
                                 <valItem ident="gorge"/>
                                 <valItem ident="cave"/>
                                 <valItem ident="strait"/>
-                                <valItem ident="station"/>
                                 <valItem ident="post"/>
                                 <valItem ident="market"/>
                                 <valItem ident="temple"/>
@@ -2263,9 +2262,7 @@ End license statement: do not remove -->
                                 <valItem ident="library"/>
                                 <valItem ident="museum"/>
                                 <valItem ident="hill"/>
-
-
-
+                                <valItem ident="depression"/>
                             </valList>
                         </attDef>
 
