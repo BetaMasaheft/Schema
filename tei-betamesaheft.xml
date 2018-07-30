@@ -1320,17 +1320,18 @@ End license statement: do not remove -->
                                         individual or to an institution.</desc>
                                 </valItem>
                                 <valItem ident="OwnershipNote">
-                                    <desc>note stating the book belongs to an individual or to an
-                                        institution.</desc>
+                                    <desc>Indicating that the book belongs to 1) an institution; 2) an individual. Various shapes of these notes are possible, 
+                                        from rubricated and very regular, written in the main hands, to less formal notes in the margins, written in crude hands 
+                                        (also without the formula ዝመጽሐፍ፡ ዘ…). </desc>
                                 </valItem>
                                 <valItem ident="PurchaseNote">
                                     <desc>note stating that the book has been purchased for money by
                                         an individual or an institution.</desc>
                                 </valItem>
                                 <valItem ident="AcquisitionNote">
-                                    <desc>note stating that the manuscript has been generically
-                                        acquired by an individual or an institution. Similar to
-                                        “PurchaseNote”.</desc>
+                                    <desc>Points only to the fact of the acquisition of the book or transaction with the book. 
+                                        The buyer/owner/donor (?) can also be indicated. In some cases, the price and the source of the money can be specified.
+                                        Includes the formula of the ownership note.</desc>
                                 </valItem>
                                 <valItem ident="ReceiptNote">
                                     <desc>note written down as a receipt of a transaction of
@@ -1348,16 +1349,19 @@ End license statement: do not remove -->
                                     <desc>act of foundation of an institution.</desc>
                                 </valItem>
                                 <valItem ident="Genealogy">
-                                    <desc>note containing the spiritual genealogy of the leader of
-                                        the community or an institution, or the family members of an
-                                        individual.</desc>
+                                    <desc>It can be a separate genealogy of local lineages or ruling families or individual rulers; it can be a genealogy of the owner/donor of the book,
+                                        independent or included into another note (frequently in a donation note).</desc>
                                 </valItem>
                                 <valItem ident="ScribalSignature">
-                                    <desc>scribe’s signature.</desc>
+                                    <desc>The name of the scribe written down. Sometimes the purpose of such a signature is not clear (just a pen trial?). 
+                                        There is a number of manuscripts in the British Library where the scribes notes their names in the bottom margin of the first 
+                                        page of a quire (but this is not by chance; it has to do with the manuscript production mode).</desc>
                                 </valItem>
                                 <valItem ident="Supplication">
-                                    <desc>entreat to God for help, written down in a later
-                                        hand.</desc>
+                                    <desc>A short prayer for (the souls) of individuals.
+                                        It is not necessarily in the explicit of the text, but is sometimes written as addition, in the margins or elsewhere. 
+                                        In the most cases, refers to the donor or owner of the book and his/her family members, but frequently it is difficult to understand who is meant. 
+                                    </desc>
                                 </valItem>
                                 <valItem ident="Subscription">
                                     <desc>note added at the end of the main text concerning its
@@ -1377,8 +1381,7 @@ End license statement: do not remove -->
                                         “Condemnation”.</desc>
                                 </valItem>
                                 <valItem ident="Inventory">
-                                    <desc>list of books or items held by the individual or the
-                                        institution.</desc>
+                                    <desc>Lists of books, or church utensils (in most of the cases both together), or objects donated by someone, in Gǝʿǝz or Amharic. </desc>
                                 </valItem>
                                 <valItem ident="ScribalNoteCommencing">
                                     <desc>scribe’s note on commencing the work</desc>
@@ -1399,10 +1402,11 @@ End license statement: do not remove -->
                                     <desc>scribe’s note on bequeathing.</desc>
                                 </valItem>
                                 <valItem ident="RecordReconciliation">
-                                    <desc>documentary record concerning a reconciliation.</desc>
+                                    <desc>Records concerning a settlement of a legal case, related to the next category; 
+                                        usually in Amharic, very extensive, very difficult to understand.  Frequently with the date of the writing, names of the persons involved.</desc>
                                 </valItem>
                                 <valItem ident="RecordLitigation">
-                                    <desc>documentary record concerning a litigation.</desc>
+                                    <desc>Similar to Reconciliation Records, but with the settlement of the dispute not clearly indicated; only the dispute itself is referred to. Sometimes the word “dispute” was also used.</desc>
                                 </valItem>
                                 <valItem ident="RecordTransaction">
                                     <desc>text documenting an act of selling or buying something, in many cases a house and land, sometimes a book</desc>
@@ -1422,14 +1426,17 @@ End license statement: do not remove -->
                                     <desc>scribe’s entreat to God.</desc>
                                 </valItem>
                                 <valItem ident="Unclear">
-                                    <desc>note whose content is hardly understandable. </desc>
+                                    <desc>Content is too vague to assign another category or resists any interpretation.</desc>
                                 </valItem>
                                 <valItem ident="GuarantorsList">
-                                    <desc> list of the guarantors of transaction or a loan.</desc>
+                                    <desc> Lists of individuals, sometimes independent from any other note or context, but with the word was/waḥəs used to describe their role. 
+                                        Sometimes a list of guarantors/witnesses may be included into an acquisition note; normally into a litigation/reconciliation record.</desc>
                                 </valItem>
                                 <valItem ident="CommemorativeNote">
-                                    <desc>commemorative notice on a saint. Mainly taken from the
-                                        Synaxarion.</desc>
+                                    <desc>The term stands for an extract from the Synaxarion (i.e., identified text), or a text close or similar to the Synaxarion notice.  
+                                        Also, some Synaxarion manuscripts have a number of added notices, mostly short, written in a secondary hand(s) in the margins,
+                                        extending the local commemorative practice.  Sometimes they go with ʾarke-hymns (as they are in the regular Synaxarion), or are just ʾarke-hymns.
+                                    </desc>
                                 </valItem>
                                 <valItem ident="Condemnation">
                                     <desc>note condemning those who stole the book or erased
@@ -1440,35 +1447,35 @@ End license statement: do not remove -->
                                         purposes.</desc>
                                 </valItem>
                                 <valItem ident="Poem">
-                                    <desc>note containing a generic poetic text. See “PoemArke”,
-                                        “PoemQene”, “PoemSalam”.</desc>
+                                    <desc>Rarely used without further specification, otherwise the term “hymn” is applied (seems to be more suitable for written religious poetry).</desc>
                                 </valItem>
                                 <valItem ident="PoemQene">
-                                    <desc>rhymed composition fulfilling the requirements of the
-                                        Qəne-hymn.</desc>
+                                    <desc>Despite wide-spread opinion that qene is a poetic improvisation which is not written down, manuscripts contain unexpectedly many qene-poems, usually as additional notes. 
+                                        Frequently it is clearly stated the the poem is qene, and even the type is indicated. But no one tried to check if these poems formally correspond to what we know today as qene-forms. </desc>
                                 </valItem>
                                 <valItem ident="PoemSalam">
-                                    <desc>short rhymed poem beginning with the words “salām (ʾəbəl)
-                                        la-”.</desc>
+                                    <desc>Short hymn starting with words ሰላም፡ አብል፡ ለ... or ሰላም፡ ለ...
+                                        There is a confusion here, since malkəʾ also include the words salam la-…, and there are longer composition with stanzas starting with salam la- </desc>
                                 </valItem>
                                 <valItem ident="PoemArke">
-                                    <desc>five-line rhymed poem.</desc>
+                                    <desc>A short hymn of ca. 5 lines following the commemorative notice in the Synaxarion; can circulate independently. </desc>
                                 </valItem>
                                 <valItem ident="StampExlibris">
                                     <desc>stamp affixed by the owning institution, e.g., a
                                         library.</desc>
                                 </valItem>
                                 <valItem ident="CalendaricNote">
-                                    <desc>note for calculating the moveable feasts and for other
-                                        calendrical computes.</desc>
+                                    <desc>Note in whatever way related to the calendar or computus, or reckoning time or calculating feasts; sometimes with such terms as bahrä hassab, or sǝfrä säˁat, or list of feasts with the dates, or lists of fasting periods. 
+                                        Some notes can be found also by means of the key-word “computus”. Poorly understood.
+                                    </desc>
                                 </valItem>
                                 <valItem ident="Excerpt">
-                                    <desc>fragment of a literary work added at a later stage to a
-                                        manuscript. See also “GuestText”.</desc>
+                                    <desc>“(Name of the work), excerpt from ”, i.e. the source should be indicated.  </desc>
                                 </valItem>
                                 <valItem ident="Letter">
-                                    <desc> communication formally addressed to an individual or an
-                                        institution.</desc>
+                                    <desc> Written message looking like a sample of the epistolary genre copied into a manuscript. 
+                                        It can be a personal message to one specific community or person, or a “public” message to institutions and communities. 
+                                        Some libraries still preserve the paper letters from the time of Hayla Sellase I.  </desc>
                                 </valItem>
                                 <valItem ident="MagicFormula">
                                     <desc>set form of words to be recited or carried along for
@@ -1483,24 +1490,46 @@ End license statement: do not remove -->
                                         passages of the main text. See also “Gloss”.</desc>
                                 </valItem>
                                 <valItem ident="Correction">
-                                    <desc>note added at a later stage in order to correct words or
-                                        passages of the main text.</desc>
+                                    <desc>Found in many manuscripts, sometimes in significant numbers. The same problem as with “Gloss” and “Commentary”
+                                        (recorded in “Varia”, no exact specification). 
+                                        Addition of omitted passages, words or letters (using various forms of the tamallas-sign), and corrections written over erasures seem to be the most frequent.
+                                    </desc>
                                 </valItem>
                                 <valItem ident="Gloss">
-                                    <desc>note added at a later stage in order to interpret or
-                                        explain words or passages of the main text. See also
-                                        “Comment”.</desc>
+                                    <desc>Refers to a note aimed to solve a purely language difficulty, in particular adding clarifications to difficult words (frequently just single words, 
+                                        synonyms, in Amharic or Gǝʿǝz, or sometimes longer passages).
+                                        The big problem is to understand that the writing is a true gloss and not a correction or something else. 
+                                    </desc>
                                 </valItem>
                                 <valItem ident="Excommunication">
                                     <desc>note excommunicating an individual from a religious
                                         community, e.g., a monastery.</desc>
                                 </valItem>
                                 <valItem ident="GuestText">
-                                    <desc>a complete work, provided with its own ID, added later to
-                                        a manuscript. </desc>
+                                    <desc>Any literary work /text which has been added to the manuscript as an additional note, in part (excerpts) or in entirety. 
+                                        It can be a small size or even mid-size composition (frequently malke’). Typical cases are works written on guard leaves, sometimes even in the reversed direction 
+                                        or transgressing the codicological settings of the main texts in any different way.</desc>
                                 </valItem>
                                 <valItem ident="MalkeHymn">
-                                    <desc>Malkǝʾ Hymn</desc>
+                                    <desc>The hymn of composed of some 50 stanzas, describing the “limbs” of a saint (but there are also Malkeʾ for the Trinity, Covenant of Mercy, Jesus, St. Mary, even for literary works, icons etc.).</desc>
+                                </valItem>
+                                <valItem ident="Directive">
+                                    <desc>Mostly in Amharic; usually addressed to the ministers as to how the texts should be read or how the church service/liturgy be carried out. 
+                                        Technical directives only, other formulas. The words በል, አንብ are frequently included.</desc>
+                                </valItem>
+                                <valItem ident="Asmat">
+                                    <desc>Sometimes developed, with the formalized incipit and explicit, sometimes 
+                                        nothing more than a short string of “hidden God’s names”, written in a crude hand. 
+                                    </desc>
+                                </valItem>
+                                <valItem ident="CustomaryLaw">
+                                    <desc>Rare, but important records explaining the local customary law. Usually in Amharic, difficult to understand. </desc>
+                                </valItem>
+                                <valItem ident="Statutes">
+                                    <desc>Regulations, statutes, constitutions of the churches; monastic rules.</desc>
+                                </valItem>
+                                <valItem ident="MixedNote">
+                                    <desc>Notes difficult to classify.</desc>
                                 </valItem>
                             </valList>
                         </attDef>

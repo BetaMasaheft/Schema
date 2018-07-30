@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-07-23T07:53:16Z. .
+Schema generated from ODD source 2018-07-30T10:18:39Z. .
 TEI Edition: Version 3.0.0. Last updated on
 	29th March 2016, revision 89ba24e
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.0.0/
@@ -3933,11 +3933,11 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <value>DonationNote</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note stating that the manuscript has been donated to an individual or to an institution.</a:documentation>
                   <value>OwnershipNote</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note stating the book belongs to an individual or to an institution.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicating that the book belongs to 1) an institution; 2) an individual. Various shapes of these notes are possible, from rubricated and very regular, written in the main hands, to less formal notes in the margins, written in crude hands (also without the formula ዝመጽሐፍ፡ ዘ…). </a:documentation>
                   <value>PurchaseNote</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note stating that the book has been purchased for money by an individual or an institution.</a:documentation>
                   <value>AcquisitionNote</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note stating that the manuscript has been generically acquired by an individual or an institution. Similar to “PurchaseNote”.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Points only to the fact of the acquisition of the book or transaction with the book. The buyer/owner/donor (?) can also be indicated. In some cases, the price and the source of the money can be specified. Includes the formula of the ownership note.</a:documentation>
                   <value>ReceiptNote</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note written down as a receipt of a transaction of goods.</a:documentation>
                   <value>Admonition</value>
@@ -3947,11 +3947,11 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <value>FoundationCharter</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">act of foundation of an institution.</a:documentation>
                   <value>Genealogy</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note containing the spiritual genealogy of the leader of the community or an institution, or the family members of an individual.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">It can be a separate genealogy of local lineages or ruling families or individual rulers; it can be a genealogy of the owner/donor of the book, independent or included into another note (frequently in a donation note).</a:documentation>
                   <value>ScribalSignature</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scribe’s signature.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The name of the scribe written down. Sometimes the purpose of such a signature is not clear (just a pen trial?). There is a number of manuscripts in the British Library where the scribes notes their names in the bottom margin of the first page of a quire (but this is not by chance; it has to do with the manuscript production mode).</a:documentation>
                   <value>Supplication</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">entreat to God for help, written down in a later hand.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A short prayer for (the souls) of individuals. It is not necessarily in the explicit of the text, but is sometimes written as addition, in the margins or elsewhere. In the most cases, refers to the donor or owner of the book and his/her family members, but frequently it is difficult to understand who is meant. </a:documentation>
                   <value>Subscription</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note added at the end of the main text concerning its completion.</a:documentation>
                   <value>Doxology</value>
@@ -3961,7 +3961,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <value>Invocation</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">invocation against those who stole or erased the book or against other individuals. Not very different from “Condemnation”.</a:documentation>
                   <value>Inventory</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">list of books or items held by the individual or the institution.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Lists of books, or church utensils (in most of the cases both together), or objects donated by someone, in Gǝʿǝz or Amharic. </a:documentation>
                   <value>ScribalNoteCommencing</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scribe’s note on commencing the work</a:documentation>
                   <value>ScribalNoteOrdering</value>
@@ -3975,9 +3975,9 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <value>ScribalNoteBequeathing</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scribe’s note on bequeathing.</a:documentation>
                   <value>RecordReconciliation</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documentary record concerning a reconciliation.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records concerning a settlement of a legal case, related to the next category; usually in Amharic, very extensive, very difficult to understand. Frequently with the date of the writing, names of the persons involved.</a:documentation>
                   <value>RecordLitigation</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documentary record concerning a litigation.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Similar to Reconciliation Records, but with the settlement of the dispute not clearly indicated; only the dispute itself is referred to. Sometimes the word “dispute” was also used.</a:documentation>
                   <value>RecordTransaction</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">text documenting an act of selling or buying something, in many cases a house and land, sometimes a book</a:documentation>
                   <value>RecordDistribution</value>
@@ -3989,31 +3989,31 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <value>ScribalSupplication</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scribe’s entreat to God.</a:documentation>
                   <value>Unclear</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note whose content is hardly understandable. </a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Content is too vague to assign another category or resists any interpretation.</a:documentation>
                   <value>GuarantorsList</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">list of the guarantors of transaction or a loan.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Lists of individuals, sometimes independent from any other note or context, but with the word was/waḥəs used to describe their role. Sometimes a list of guarantors/witnesses may be included into an acquisition note; normally into a litigation/reconciliation record.</a:documentation>
                   <value>CommemorativeNote</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">commemorative notice on a saint. Mainly taken from the Synaxarion.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The term stands for an extract from the Synaxarion (i.e., identified text), or a text close or similar to the Synaxarion notice. Also, some Synaxarion manuscripts have a number of added notices, mostly short, written in a secondary hand(s) in the margins, extending the local commemorative practice. Sometimes they go with ʾarke-hymns (as they are in the regular Synaxarion), or are just ʾarke-hymns. </a:documentation>
                   <value>Condemnation</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note condemning those who stole the book or erased it.</a:documentation>
                   <value>ProtectivePrayer</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">prayer to be read or carried along for protective purposes.</a:documentation>
                   <value>Poem</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note containing a generic poetic text. See “PoemArke”, “PoemQene”, “PoemSalam”.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Rarely used without further specification, otherwise the term “hymn” is applied (seems to be more suitable for written religious poetry).</a:documentation>
                   <value>PoemQene</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">rhymed composition fulfilling the requirements of the Qəne-hymn.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Despite wide-spread opinion that qene is a poetic improvisation which is not written down, manuscripts contain unexpectedly many qene-poems, usually as additional notes. Frequently it is clearly stated the the poem is qene, and even the type is indicated. But no one tried to check if these poems formally correspond to what we know today as qene-forms. </a:documentation>
                   <value>PoemSalam</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">short rhymed poem beginning with the words “salām (ʾəbəl) la-”.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Short hymn starting with words ሰላም፡ አብል፡ ለ... or ሰላም፡ ለ... There is a confusion here, since malkəʾ also include the words salam la-…, and there are longer composition with stanzas starting with salam la- </a:documentation>
                   <value>PoemArke</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">five-line rhymed poem.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A short hymn of ca. 5 lines following the commemorative notice in the Synaxarion; can circulate independently. </a:documentation>
                   <value>StampExlibris</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">stamp affixed by the owning institution, e.g., a library.</a:documentation>
                   <value>CalendaricNote</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note for calculating the moveable feasts and for other calendrical computes.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Note in whatever way related to the calendar or computus, or reckoning time or calculating feasts; sometimes with such terms as bahrä hassab, or sǝfrä säˁat, or list of feasts with the dates, or lists of fasting periods. Some notes can be found also by means of the key-word “computus”. Poorly understood. </a:documentation>
                   <value>Excerpt</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">fragment of a literary work added at a later stage to a manuscript. See also “GuestText”.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">“(Name of the work), excerpt from ”, i.e. the source should be indicated. </a:documentation>
                   <value>Letter</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">communication formally addressed to an individual or an institution.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Written message looking like a sample of the epistolary genre copied into a manuscript. It can be a personal message to one specific community or person, or a “public” message to institutions and communities. Some libraries still preserve the paper letters from the time of Hayla Sellase I. </a:documentation>
                   <value>MagicFormula</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">set form of words to be recited or carried along for healing and protecting.</a:documentation>
                   <value>MagicText</value>
@@ -4021,15 +4021,25 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <value>Comment</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note added at a later stage in order to comment word or passages of the main text. See also “Gloss”.</a:documentation>
                   <value>Correction</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note added at a later stage in order to correct words or passages of the main text.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Found in many manuscripts, sometimes in significant numbers. The same problem as with “Gloss” and “Commentary” (recorded in “Varia”, no exact specification). Addition of omitted passages, words or letters (using various forms of the tamallas-sign), and corrections written over erasures seem to be the most frequent. </a:documentation>
                   <value>Gloss</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note added at a later stage in order to interpret or explain words or passages of the main text. See also “Comment”.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Refers to a note aimed to solve a purely language difficulty, in particular adding clarifications to difficult words (frequently just single words, synonyms, in Amharic or Gǝʿǝz, or sometimes longer passages). The big problem is to understand that the writing is a true gloss and not a correction or something else. </a:documentation>
                   <value>Excommunication</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note excommunicating an individual from a religious community, e.g., a monastery.</a:documentation>
                   <value>GuestText</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a complete work, provided with its own ID, added later to a manuscript. </a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Any literary work /text which has been added to the manuscript as an additional note, in part (excerpts) or in entirety. It can be a small size or even mid-size composition (frequently malke’). Typical cases are works written on guard leaves, sometimes even in the reversed direction or transgressing the codicological settings of the main texts in any different way.</a:documentation>
                   <value>MalkeHymn</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Malkǝʾ Hymn</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The hymn of composed of some 50 stanzas, describing the “limbs” of a saint (but there are also Malkeʾ for the Trinity, Covenant of Mercy, Jesus, St. Mary, even for literary works, icons etc.).</a:documentation>
+                  <value>Directive</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Mostly in Amharic; usually addressed to the ministers as to how the texts should be read or how the church service/liturgy be carried out. Technical directives only, other formulas. The words በል, አንብ are frequently included.</a:documentation>
+                  <value>Asmat</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sometimes developed, with the formalized incipit and explicit, sometimes nothing more than a short string of “hidden God’s names”, written in a crude hand. </a:documentation>
+                  <value>CustomaryLaw</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Rare, but important records explaining the local customary law. Usually in Amharic, difficult to understand. </a:documentation>
+                  <value>Statutes</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Regulations, statutes, constitutions of the churches; monastic rules.</a:documentation>
+                  <value>MixedNote</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Notes difficult to classify.</a:documentation>
                </choice>
             </attribute>
          </optional>
