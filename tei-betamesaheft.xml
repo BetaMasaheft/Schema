@@ -1502,6 +1502,9 @@ End license statement: do not remove -->
                                 <valItem ident="MalkeHymn">
                                     <desc>Malkǝʾ Hymn</desc>
                                 </valItem>
+                                <valItem ident="Asmat">
+                                    <desc>Asmat</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                     </attList>
