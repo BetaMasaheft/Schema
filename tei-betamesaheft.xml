@@ -773,6 +773,9 @@ End license statement: do not remove -->
                                     nothing more than a short string of “hidden God’s names”, written in a crude hand. 
                                 </desc>
                             </valItem>
+                                <valItem ident="Letter">
+                                    <desc>Private or official letter</desc>
+                                </valItem>
                             </valList>
                         </attDef>
 
