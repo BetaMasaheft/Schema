@@ -1614,17 +1614,6 @@ End license statement: do not remove -->
                                             target="http://betamasaheft.eu/authority-files/Asmat"
                                             >See Asmat in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
-<<<<<<< HEAD
-=======
-                            <valItem ident="Asmat">
-                                <desc>Sometimes developed, with the formalized incipit and explicit, sometimes 
-                                    nothing more than a short string of “hidden God’s names”, written in a crude hand. 
-                                </desc>
-                            </valItem>
-                                <valItem ident="Letter">
-                                    <desc>Private or official letter</desc>
-                                </valItem>
->>>>>>> 9dc1134ca77f2b778226fd8f70dedd952c2cfff7
                             </valList>
                         </attDef>
 
