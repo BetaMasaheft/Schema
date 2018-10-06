@@ -3521,6 +3521,9 @@ End license statement: do not remove -->
                                 <valItem ident="AB">
                                     <desc>Alessandro Bausi</desc>
                                 </valItem>
+                                <valItem ident="ABr">
+                                    <desc>Antonella Brita</desc>
+                                </valItem>
                                 <valItem ident="ES">
                                     <desc>Eugenia Sokolinski</desc>
                                 </valItem>
@@ -3695,6 +3698,9 @@ End license statement: do not remove -->
                             <valList type="closed">
                                 <valItem ident="AB">
                                     <desc>Alessandro Bausi</desc>
+                                </valItem>
+                                <valItem ident="ABr">
+                                    <desc>Antonella Brita</desc>
                                 </valItem>
                                 <valItem ident="ES">
                                     <desc>Eugenia Sokolinski</desc>
