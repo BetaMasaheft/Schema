@@ -1308,6 +1308,16 @@ End license statement: do not remove -->
                                             target="http://betamasaheft.eu/authority-files/Paks2"
                                             >See Paks2 in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
+                                <valItem ident="PreAks">
+                                    <desc>South-Arabian, Pre-Aksumite and Proto-Aksumite (1000-1 BCE ) <ref
+                                        target="http://betamasaheft.eu/authority-files/PreAks">See
+                                        PreAks in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="Eaks">
+                                    <desc>Early Aksumite (1-300 BCE ) <ref
+                                        target="http://betamasaheft.eu/authority-files/Eaks">See
+                                        Eaks in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
                                 <valItem ident="Aks">
                                     <desc>Aksumite (300-700 CE ) <ref
                                             target="http://betamasaheft.eu/authority-files/Aks">See

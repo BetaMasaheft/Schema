@@ -5059,6 +5059,16 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Postaksumite II (1434-1632 CE) <a xmlns="http://www.w3.org/1999/xhtml"
                      href="http://betamasaheft.eu/authority-files/Paks2">See Paks2 in Beta maṣāḥǝft</a>
                </a:documentation>
+               <value>PreAks</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">South-Arabian, Pre-Aksumite and Proto-Aksumite (1000-1 BCE ) <a xmlns="http://www.w3.org/1999/xhtml"
+                  href="http://betamasaheft.eu/authority-files/PreAks">See
+                  PreAks in Beta maṣāḥǝft</a>
+               </a:documentation>
+               <value>Eaks</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Early Aksumite (1-300 CE ) <a xmlns="http://www.w3.org/1999/xhtml"
+                  href="http://betamasaheft.eu/authority-files/Eaks">See
+                  Eaks in Beta maṣāḥǝft</a>
+               </a:documentation>
                <value>Aks</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Aksumite (300-700 CE ) <a xmlns="http://www.w3.org/1999/xhtml"
                      href="http://betamasaheft.eu/authority-files/Aks">See
