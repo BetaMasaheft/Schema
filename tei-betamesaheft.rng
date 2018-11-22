@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-11-22T06:16:48Z. .
+Schema generated from ODD source 2018-11-22T12:34:59Z. .
 TEI Edition: Version 3.4.0. Last updated on
 	23rd July 2018, revision 1fa0b54
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
@@ -4774,15 +4774,6 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                      <a xmlns="http://www.w3.org/1999/xhtml"
                         href="http://betamasaheft.eu/authority-files/tannedSkin">See tannedSkin in Beta maṣāḥǝft</a>
                   </a:documentation>
-                  <value>ApocryphaPseudoepigrapha</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works of unknown or doubtful authorship rejected from the
-                                        set of the canonical scriptures, e.g., the book of Enoch,
-                                        Jubilees, Herma, the Miracles of Mary, the Miracles of
-                                        Jesus, Maṣḥafa ṭomār, the apocryphal Acts of the Apostles,
-                                        etc. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/ApocryphaPseudoepigrapha">See ApocryphaPseudoepigrapha in Beta
-                                        maṣāḥǝft</a>
-                  </a:documentation>
                   <value>animal</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
                      <a xmlns="http://www.w3.org/1999/xhtml"
@@ -5113,14 +5104,11 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                         href="http://betamasaheft.eu/authority-files/Vocabulary">See Vocabulary in Beta maṣāḥǝft</a>
                   </a:documentation>
                   <value>Apocrypha</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                     <a xmlns="http://www.w3.org/1999/xhtml"
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works not universally recognised in the Christian and Jewish religions as belonging to the fixed set of canonical scriptures, 
+                                        either for reasons of tradition or of secundary development or doubtful authorship or heterodox opinions and for this rejected from one 
+                                        or the other biblical canon of the respective tradition: 
+                                        e.g. the Book of Enoch, Jubilees, Herma, the Miracles of Mary, the Miracles of Jesus, Maṣḥafa ṭomār, the apocryphal Acts of the Apostles, etc<a xmlns="http://www.w3.org/1999/xhtml"
                         href="http://betamasaheft.eu/authority-files/Apocrypha">See Apocrypha in Beta maṣāḥǝft</a>
-                  </a:documentation>
-                  <value>Pseudoepigrapha</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                     <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Pseudoepigrapha">See Pseudoepigrapha in Beta maṣāḥǝft</a>
                   </a:documentation>
                   <value>Miracle</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
@@ -5152,7 +5140,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                         href="http://betamasaheft.eu/authority-files/CanonLaw">See CanonLaw in Beta maṣāḥǝft</a>
                   </a:documentation>
                   <value>TigrinyaLiterature</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts of unspecified Tigrinya subject.
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">any works of Tigrinya literature
                                             <a xmlns="http://www.w3.org/1999/xhtml"
                         href="http://betamasaheft.eu/authority-files/TigrinyaLiterature">See TigrinyaLiterature in Beta maṣāḥǝft</a>
                   </a:documentation>
@@ -5165,23 +5153,26 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                         href="http://betamasaheft.eu/authority-files/Translation">See Translation in Beta maṣāḥǝft</a>
                   </a:documentation>
                   <value>AmharicLiterature</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts of unspecified Amharic subject.
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">any works of Amharic literature
                                             <a xmlns="http://www.w3.org/1999/xhtml"
                         href="http://betamasaheft.eu/authority-files/AmharicLiterature">See AmharicLiterature in Beta maṣāḥǝft</a>
                   </a:documentation>
                   <value>BetaEsraelLiterature</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts of unspecified Jewish subject. <a xmlns="http://www.w3.org/1999/xhtml"
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">any works of Beta ʾƎsrāʾel literature <a xmlns="http://www.w3.org/1999/xhtml"
                         href="http://betamasaheft.eu/authority-files/BetaEsraelLiterature">See BetaEsraelLiterature in Beta maṣāḥǝft</a>
                   </a:documentation>
                   <value>ChristianLiterature</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts of unspecified Christian subject.
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">any works belonging to the Christian tradition
                                             <a xmlns="http://www.w3.org/1999/xhtml"
                         href="http://betamasaheft.eu/authority-files/ChristianLiterature">See ChristianLiterature in Beta maṣāḥǝft</a>
                   </a:documentation>
                   <value>Hagiography</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works and collections of works containing the Vita (Life)
-                                        of a saint, included the cycles of miracles performed by the
-                                        saint himself, as well as Acts and Passiones of martyrs.
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Genre of literature whose aims were the veneration of the saint and the creation of an ideal of Christian behavior
+                                        as well as documentation and entertainment. As a protrayal of historical personages, hagiography overlaps with historiography, 
+                                        conveying historical information, using chronicles as sources, and, in turn, serving as a source for chronicles; 
+                                        as an edifying genre, hagiography may bear resemblance to the Sermon. Three major types of hagiography already existed in the early
+                                        centuries of the Roman empire: Martyrion, the account of a martyr's trial and execution; Vita, a saint's biography; and Apophthegmata Patrum, 
+                                        a collection of wise sayings of hermits. Probably by the 7th c. the description of posthumous Miracles was established as a separate genre.
                                             <a xmlns="http://www.w3.org/1999/xhtml"
                         href="http://betamasaheft.eu/authority-files/Hagiography">See Hagiography in Beta maṣāḥǝft</a>
                                     </a:documentation>
@@ -7389,7 +7380,7 @@ Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] par
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                       xmlns:bm="http://betamasaheft.eu"
-                      context="tei:listBibl[@type='edition']">
+                      context="tei:listBibl[@type='editions']">
                                   <sch:report test="ancestor::tei:TEI/@type = 'mss'">
                                       Edition bibliography is meaningful only for a textual unit description.
                                       If the information about this manuscript is found in the edition of
