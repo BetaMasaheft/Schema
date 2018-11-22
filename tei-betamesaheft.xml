@@ -2010,7 +2010,7 @@ End license statement: do not remove -->
                                       for the attribute type.
                                   </sch:report>
                               </sch:rule>
-                              <sch:rule context="tei:listBibl[@type='edition']">
+                              <sch:rule context="tei:listBibl[@type='editions']">
                                   <sch:report
                                       test="ancestor::tei:TEI/@type = 'mss'">
                                       Edition bibliography is meaningful only for a textual unit description.
