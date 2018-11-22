@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Start license statement: do not remove 
-    
+<!-- Start license statement: do not remove
+
 Beta maṣāḥǝft Schema
 Copyright (c) 2016-2040 by all contributors listed in <titleStmt>, below and contributors to the github stored version
 see https://github.com/BetaMasaheft/Schema/graphs/contributors
@@ -19,7 +19,7 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
-The Beta maṣāḥǝft Guidelines, which integrate the latest version of this schema, should be used contextually. 
+The Beta maṣāḥǝft Guidelines, which integrate the latest version of this schema, should be used contextually.
 http://betamasaheft.eu/Guidelines/
 
 End license statement: do not remove -->
@@ -72,6 +72,9 @@ End license statement: do not remove -->
                 https://raw.githubusercontent.com/TEIC/TEI/dev/P5/Scripts/purify.xsl</change>
             <change who="PL" when="2018-09-18">added examples to all rules and description to all rules, transformed to
             RNG with modified TEI XSLT to produce links in descriptions.</change>
+            <change who="PL" when="2018-11-22">added rules 
+                to constrain use of listBibl, check the ids in placeName 
+                and persName, avoid locus inside div[@type='edition'].</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -92,7 +95,7 @@ End license statement: do not remove -->
                 <moduleRef key="tei"/>
                 <moduleRef key="header" except="appInfo"/>
                 <moduleRef key="textstructure"
-                    except="argument byline closer div1 div2 div3 div4 div5 div6 div7 imprimatur                     
+                    except="argument byline closer div1 div2 div3 div4 div5 div6 div7 imprimatur
                                           opener postscript salute signed titlePage titlePart trailer"/>
                 <moduleRef key="transcr" except="damageSpan restore"/>
                 <moduleRef key="verse" except="caesura metDecl metSym rhyme"/>
@@ -102,15 +105,15 @@ End license statement: do not remove -->
                 <moduleRef key="linking" except="alt altGrp joinGrp timeline when"/>
                 <moduleRef key="msdescription"/>
                 <moduleRef key="namesdates"
-                    except="climate education geoFeat langKnowledge                     
+                    except="climate education geoFeat langKnowledge
                                           langKnown nameLink population socecStatus terrain trait"/>
                 <moduleRef key="textcrit" except="lacunaEnd lacunaStart witDetail witEnd witStart"/>
                 <moduleRef key="figures" except="cell formula row table"/>
                 <moduleRef key="spoken"
-                    except="broadcast equipment incident kinesic pause recording recordingStmt                     
+                    except="broadcast equipment incident kinesic pause recording recordingStmt
                                         scriptStmt shift u vocal writing"/>
                 <moduleRef key="corpus"
-                    except="activity channel constitution derivation domain factuality interaction locale                     
+                    except="activity channel constitution derivation domain factuality interaction locale
                                          preparedness purpose setting textDesc"/>
 
                 <elementSpec ident="antiphon" mode="add" ns="bm">
@@ -390,7 +393,7 @@ End license statement: do not remove -->
                 <elementSpec ident="date" mode="change" module="header">
                     <desc>In the element <gi>date</gi> we often want to add bibliography in the form
                         of a single citation or a full bibliography. The schematron rule tries to
-                        avoid the absence of white spaces before and after the element. 
+                        avoid the absence of white spaces before and after the element.
                         Please use the provided values for <att>type</att> and <att>calendar</att>
                         <ref
                             target="http://betamasaheft.eu/Guidelines/?id=date">Beta maṣāḥǝft
@@ -407,7 +410,7 @@ End license statement: do not remove -->
                         </alternate>
                     </content>
                     <constraintSpec scheme="isoschematron" ident="date">
-                        
+
                         <constraint>
                             <sch:rule context="tei:date[ancestor::place[@subtype='institution']]">
                                 <sch:report test="not(@type='foundation')">Attribute
@@ -478,7 +481,7 @@ End license statement: do not remove -->
                                 <valItem ident="julian">
                                     <desc>Julian</desc>
                                 </valItem>
-                                
+
                             </valList>
                         </attDef>
                     </attList>
@@ -699,8 +702,15 @@ End license statement: do not remove -->
                         describing them, which is pointed to in the description of each value. <ref
                             target="http://betamasaheft.eu/Guidelines/?id=term">Beta maṣāḥǝft
                             Guidelines</ref></desc>
+                    <constraintSpec scheme="schematron" ident="term">
+                        <constraint>
+                            <sch:rule context="tei:term[parent::tei:keywords]">
+                                <sch:report test="not(@key)">In the keywords list the attribute @key must be present.</sch:report>
+                            </sch:rule>
+                        </constraint>
+                    </constraintSpec>
                     <attList>
-                        <attDef ident="key" mode="replace" usage="req">
+                        <attDef ident="key" mode="replace" usage="rec">
                             <valList type="closed">
                                 <valItem ident="guard">
                                     <desc><ref target="http://betamasaheft.eu/authority-files/guard"
@@ -1876,6 +1886,10 @@ End license statement: do not remove -->
                     </desc>
                     <constraintSpec scheme="isoschematron" ident="title">
                         <constraint>
+                            <sch:rule context="tei:title[@ref]">
+
+                                <sch:report test="not(matches(@ref, 'LIT\d+\w+') or matches(@ref, 'NAR\d+\w+'))">The textual or narrative unit ID you have entered is wrong. Textual units IDs must match the pattern LIT\d+\w+, narrative units must match the pattern  NAR\d+\w+.</sch:report>
+                            </sch:rule>
                             <sch:rule
                                 context="tei:title[not(@type='short')][ancestor::tei:TEI[@type='work']][ancestor::tei:titleStmt]">
                                 <sch:report test="not(@xml:id or @corresp)">title in a Work entity
@@ -1995,6 +2009,27 @@ End license statement: do not remove -->
                         <att>type</att>. <ref
                             target="http://betamasaheft.eu/Guidelines/?id=listBibl">Beta maṣāḥǝft
                             Guidelines</ref></desc>
+                    <constraintSpec  scheme="isoschematron" ident="listBibl">
+                              <constraint>
+                              <sch:rule context="tei:listBibl[@type='catalogue']">
+                                  <sch:report
+                                      test="ancestor::tei:TEI/@type = 'work'">
+                                      Catalogue bibliography is meaningful only for a manuscript description.
+                                      If the information about a work is in a catalogue, please use the value "secondary"
+                                      for the attribute type.
+                                  </sch:report>
+                              </sch:rule>
+                              <sch:rule context="tei:listBibl[@type='edition']">
+                                  <sch:report
+                                      test="ancestor::tei:TEI/@type = 'mss'">
+                                      Edition bibliography is meaningful only for a textual unit description.
+                                      If the information about this manuscript is found in the edition of
+                                      a text, please use the value "secondary"
+                                      for the attribute type.
+                                  </sch:report>
+                              </sch:rule>
+                          </constraint>
+                      </constraintSpec>
                     <attList>
                         <attDef ident="type" mode="replace" usage="req">
                             <valList type="closed">
@@ -2027,21 +2062,24 @@ End license statement: do not remove -->
                         </attDef>
                     </attList>
                     <exemplum>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="LIT2182Preach">
-                            <div type="bibliography">
-                                <listBibl type="editions">
-                                    <bibl>
-                                        <ptr target="bm:Budge1899ContendingsText"/>
-                                        <citedRange>140-156</citedRange>
-                                    </bibl>
-                                </listBibl>
-                                <listBibl type="translation" xml:lang="en">
-                                    <bibl>
-                                        <ptr target="bm:Budge1901ContendingsTransl"/>
-                                        <citedRange>162-182</citedRange>
-                                    </bibl>
-                                </listBibl>
-                            </div>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="LIT4847Actsof">
+                          <div type="bibliography">
+          <listBibl type="secondary">
+             <bibl>
+                <ptr target="bm:Habtemichael2005EAEAkkonu"/>
+             </bibl>
+             <bibl>
+                <ptr target="bm:Grohmann1919Marien"/>
+                <citedRange unit="page">322-382</citedRange>
+             </bibl>
+          </listBibl>
+          <listBibl type="editions">
+             <bibl>
+                <ptr target="bm:Grohmann1919Marien"/>
+                <citedRange unit="page">336-352</citedRange>
+             </bibl>
+          </listBibl>
+       </div>
                         </egXML>
                     </exemplum>
                 </elementSpec>
@@ -2331,6 +2369,10 @@ End license statement: do not remove -->
                                     tag in Zotero to be used in this pointers should be namespaced.
                                     Please make sure that the tag in zotero begins with bm: and copy
                                     it here exactely as it is, without spaces.</sch:report>
+                            </sch:rule>
+                            <sch:rule context="tei:bibl">
+                                <sch:report test="ancestor::tei:div[@type='bibliography']
+                                  and not(parent::tei:listBibl)">Please, place your bibliographical references inside a listBibl element.</sch:report>
                             </sch:rule>
                             <sch:rule
                                 context="tei:bibl[ancestor::tei:listBibl[@type='mss']][@type='external']">
@@ -3186,19 +3228,21 @@ End license statement: do not remove -->
                                 <valItem ident="frame">
                                     <desc>an ornament around the page</desc>
                                 </valItem>
-                                <valItem ident="miniature"/>
+                                <valItem ident="miniature">
+                                    <desc>An indipendent illustration in colour
+                                        that occupies the full-page or part 
+                                        of the equivalent space of one or more 
+                                        columns of text.
+                                </desc></valItem>
                                 <valItem ident="band">
-                                    <desc>ornamental band is above the page</desc>
+                                    <desc>A border that surrounds a text or image and may occupy the margins and intercolumnar space. Typically used to mark the beginning of a new text or section of text.</desc>
                                 </valItem>
                                 <valItem ident="punctuation"/>
-                                <valItem ident="drawing"/>
-                                <valItem ident="border"/>
-                                <valItem ident="diagram"/>
-                                <valItem ident="frieze"/>
-                                <valItem ident="illustration"/>
-                                <valItem ident="initial"/>
+                                <valItem ident="drawing"><desc>A monochrome or bichrome image that is not painted.</desc></valItem>
+                                <valItem ident="diagram"><desc>A drawing that conveys information or knowledge in schematic form.</desc></valItem>
+                                <valItem ident="initial"><desc>An enlarged letter at the beginning of a text of paragraph that features figurative or decorative motifs.</desc></valItem>
                                 <valItem ident="map"/>
-                                <valItem ident="marginal"/>
+                                <valItem ident="marginal"><desc>A small miniature painted next to one of the margins of the text.</desc></valItem>
                                 <valItem ident="mixed"/>
                                 <valItem ident="other"/>
                                 <valItem ident="ornamentation"/>
@@ -3210,8 +3254,7 @@ End license statement: do not remove -->
                                 <valItem ident="tooling"/>
                                 <valItem ident="unspecified"/>
                                 <valItem ident="unwan"/>
-                                <valItem ident="vignette"/>
-                                <valItem ident="engraving"/>
+                                <valItem ident="engraving"><desc>An image on paper created with a printing plate.</desc></valItem>
                                 <valItem ident="printedImage">
                                     <desc>A printed image, usually of devotional character, glued to
                                         a manuscript</desc>
@@ -3406,7 +3449,7 @@ End license statement: do not remove -->
                 </elementSpec>
 
                 <elementSpec ident="msItem" mode="change" module="msdescription">
-                    <desc>Please note the semantically meaningful structure 
+                    <desc>Please note the semantically meaningful structure
                         of the <att>xml:id</att> <ref target="http://betamasaheft.eu/Guidelines/?id=msItem">Beta maṣāḥǝft
                             Guidelines</ref></desc>
                     <constraintSpec scheme="isoschematron" ident="msItem">
@@ -3851,6 +3894,7 @@ End license statement: do not remove -->
                                 <sch:report test="not(@ref)">A persName in a mss, place or work
                                     description should always contain an attribute @ref pointing to
                                     the relevant record</sch:report>
+                                <sch:report test="not(matches(@ref, 'PRS\d+\w+') or matches(@ref, 'ETH\d+\w+'))">The person ID you have entered is wrong. Persons IDs must match the pattern PRS\d+\w+ or ETH\d+\w+ .</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:persName[not(text())][not(parent::tei:person)]">
                                 <sch:report
@@ -3981,6 +4025,11 @@ End license statement: do not remove -->
                                 <sch:report test="not(@ref)">A placeName in a mss, person or work
                                     description should always contain an attribute @ref pointing to
                                     the relevant record</sch:report>
+                                <sch:report test="not(matches(@ref, 'INS\d+\w+') or
+                                    matches(@ref, 'LOC\d+\w+') or
+                                    matches(@ref, 'Q\d+') or
+                                    matches(@ref, 'pleiades:\d+'))">The place identifier you have entered is wrong.
+                                    Place IDs must match LOC\d+\w+ for places, INS\d+\w+ for institutions, Q\d+ for wikidata items or pleiades:\d+ for ancient places in the Pleiades Gazetteer.</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:placeName[not(text())][not(parent::tei:place)]">
                                 <sch:report
@@ -4527,7 +4576,7 @@ End license statement: do not remove -->
                     </attList>
                     <exemplum>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="FSUor12">
-                            <explicit xml:lang="gez" type="subscription">በዝየ፡ ተፈጸመ፡ ራእየ፡ ሕዝቅኤል፡ ነቢይ፡ ጸሎቱ፡ ወበረከቱ፡ የሃሉ፡ ምስለ፡ 
+                            <explicit xml:lang="gez" type="subscription">በዝየ፡ ተፈጸመ፡ ራእየ፡ ሕዝቅኤል፡ ነቢይ፡ ጸሎቱ፡ ወበረከቱ፡ የሃሉ፡ ምስለ፡
                                 ፍቁሩ፡ <hi rend="rubric">
                                     <persName ref="PRS11725Mardokyos">መርዶክዮስ፡</persName>
                                 </hi> ለዓለመ፡ ዓለም፡ አሜን፡ ወአሜን፡ ለይኩን፡ ለይኩን፨</explicit>
@@ -6123,7 +6172,7 @@ End license statement: do not remove -->
                                 xml:lang="am"
                                 xml:id="Genealogy"
                                 corresp="LIT3854KingList">
-                                <label>Genealogy and History of the kings of Ethiopia from <persName ref="PRS1386Adam"/> to 
+                                <label>Genealogy and History of the kings of Ethiopia from <persName ref="PRS1386Adam"/> to
                                     <persName ref="PRS9142TaklaGi"/>/ʾAdbǝʾal, successor of Fǝre Śannāy</label>
                             </div>
                         </egXML>
@@ -6148,7 +6197,7 @@ End license statement: do not remove -->
 
                 <!--         TESTS ONLY -->
                <elementSpec ident="TEI" module="textstructure" mode="change">
-                    <desc>Because different types of entity are all encoded 
+                    <desc>Because different types of entity are all encoded
                         in TEI, we need to type the TEI to be able to know from the root what type of TEI to expect.
                         the <att>xml:id</att> uses the syntax for identifiers inherited from the
                         indexes of the the Encyclopaedia Aethiopica. <ref target="http://betamasaheft.eu/Guidelines/?id=TEI">Beta maṣāḥǝft
@@ -6232,9 +6281,9 @@ End license statement: do not remove -->
 
                 <elementSpec ident="geo" module="namesdates" mode="change">
                     <desc>The rules here help the encoding of the coordinates.
-                        It is anyway preferable to use the <att>sameAs</att> 
+                        It is anyway preferable to use the <att>sameAs</att>
                         in <gi>place</gi> if possible to point to an external authority with
-                        coordinates. If this is not possible than coordinates might be provided. 
+                        coordinates. If this is not possible than coordinates might be provided.
                         Please do not delete coordinates if you add an external pointer.
                         <ref target="http://betamasaheft.eu/Guidelines/?id=geo">Beta maṣāḥǝft
                             Guidelines</ref></desc>
@@ -6296,6 +6345,10 @@ End license statement: do not remove -->
                                     indicated with @from and @to or either of the two if the other
                                     extreme of the range is unknown. Please do not use "unknown" as
                                     value.</sch:report>
+                                    <sch:report test="ancestor::tei:div[@type='edition']">
+The structuring elements used in a manuscript transcription are div, pb and cb.
+locus is used to point to values of these elements in the teiHeader.
+                                    </sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
@@ -6304,7 +6357,7 @@ End license statement: do not remove -->
         <locus from="4va" to="4vb"/>
     </egXML>
 </exemplum>
-                    
+
                     <exemplum>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="BLorient636">
                             <locus target="#6r"/>
@@ -6313,7 +6366,7 @@ End license statement: do not remove -->
                 </elementSpec>
 
                 <elementSpec ident="item" module="msdescription" mode="change">
-                    <desc>The generic element is used with specific meaning 
+                    <desc>The generic element is used with specific meaning
                         in <gi>list</gi> inside <gi>collation</gi> and <gi>additions</gi>
                         with the additional use of a semantic value for the <att>xml:id</att>
                         some special values for the type are provided to be used only when the ancestor
@@ -6391,7 +6444,7 @@ End license statement: do not remove -->
                             </item>
                         </egXML>
                     </exemplum>
-                    
+
                 </elementSpec>
 
                 <!--from EpiDoc schema-->
@@ -6462,7 +6515,7 @@ End license statement: do not remove -->
                 </elementSpec>
 
                 <elementSpec ident="space" module="transcr" mode="change">
-                    <desc>This was initially inherited from the EpiDoc schema version 8.21. 
+                    <desc>This was initially inherited from the EpiDoc schema version 8.21.
                         <ref target="http://betamasaheft.eu/Guidelines/?id=space">Beta maṣāḥǝft
                             Guidelines</ref></desc>
                     <attList>
@@ -6491,7 +6544,7 @@ End license statement: do not remove -->
                 </elementSpec>
 
                 <elementSpec ident="gap" module="core" mode="change">
-                    <desc>This was initially inherited from the EpiDoc schema version 8.21.  
+                    <desc>This was initially inherited from the EpiDoc schema version 8.21.
                         <ref target="http://betamasaheft.eu/Guidelines/?id=gap">Beta maṣāḥǝft
                             Guidelines</ref></desc>
                     <attList>

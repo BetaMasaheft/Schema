@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-09-18T06:00:19Z. .
+Schema generated from ODD source 2018-11-22T06:16:48Z. .
 TEI Edition: Version 3.4.0. Last updated on
 	23rd July 2018, revision 1fa0b54
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
@@ -4472,6 +4472,16 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                href="http://betamasaheft.eu/Guidelines/?id=term">Beta maṣāḥǝft
                             Guidelines</a> [3.3.4. Terms, Glosses, Equivalents, and Descriptions]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei-betamesaheft-term-term-constraint-rule-10">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:bm="http://betamasaheft.eu"
+                      context="tei:term[parent::tei:keywords]">
+                                <sch:report test="not(@key)">In the keywords list the attribute @key must be present.</sch:report>
+                            </sch:rule>
+         </pattern>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.declaring.attributes"/>
          <ref name="tei_att.pointing.attributes"/>
@@ -4479,857 +4489,859 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
          <ref name="tei_att.canonical.attribute.ref"/>
          <ref name="tei_att.sortable.attributes"/>
          <ref name="tei_att.cReferencing.attributes"/>
-         <attribute name="key">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <choice>
-               <value>guard</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/guard">See guard in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>centerfold</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/centerfold">See centerfold in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>spinefold</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/spinefold">See spinefold in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>sidestitches</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/sidestitches">See sidestitches in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>mainSewing</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/mainSewing">See mainSewing in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>slitBraid</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/slitBraid">See slitBraid in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>linkStitch</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/linkStitch">See linkStitch in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>textile</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/textile">See textile in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>mirror</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/mirror">See mirror in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>additionalLeatherPatch</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/additionalLeatherPatch">See additionalLeatherPatch in Beta
+         <optional>
+            <attribute name="key">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>guard</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/guard">See guard in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>centerfold</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/centerfold">See centerfold in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>spinefold</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/spinefold">See spinefold in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>sidestitches</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/sidestitches">See sidestitches in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>mainSewing</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/mainSewing">See mainSewing in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>slitBraid</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/slitBraid">See slitBraid in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>linkStitch</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/linkStitch">See linkStitch in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>textile</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/textile">See textile in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>mirror</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/mirror">See mirror in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>additionalLeatherPatch</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/additionalLeatherPatch">See additionalLeatherPatch in Beta
                                         maṣāḥǝft</a>
-               </a:documentation>
-               <value>cordiaAfricana</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/cordiaAfricana">See cordiaAfricana in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>oleaAfricana</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/oleaAfricana">See oleaAfricana in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>cedar</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/cedar">See cedar in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>eucalyptus</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/eucalyptus">See eucalyptus in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>juniper</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/juniper">See juniper in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>hageniaAbyssinica</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/hageniaAbyssinica">See hageniaAbyssinica in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>acacia</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/acacia">See acacia in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>ficus</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/ficus">See ficus in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>crotonMacrostachyus</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/crotonMacrostachyus">See crotonMacrostachyus in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>euphorbia</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/euphorbia">See euphorbia in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>ekebergia</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/ekebergia">See ekebergia in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>podocarpus</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/podocarpus">See podocarpus in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>plywood</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/plywood">See plywood in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>patternA</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/patternA">See patternA in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>patternA1</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/patternA1">See patternA1 in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>patternA2</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/patternA2">See patternA2 in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>patternA3</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/patternA3">See patternA3 in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>patternA4</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/patternA4">See patternA4 in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>patternA5</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/patternA5">See patternA5 in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>patternA6</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/patternA6">See patternA6 in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>patternA7</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/patternA7">See patternA7 in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>patternB</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/patternB">See patternB in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>patternC</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/patternC">See patternC in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>patternC1</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/patternC1">See patternC1 in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>tripleStraightLine</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/tripleStraightLine">See tripleStraightLine in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>doubleStraightLine</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/doubleStraightLine">See doubleStraightLine in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>singleStraightLine</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/singleStraightLine">See singleStraightLine in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>crissCross</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/crissCross">See crissCross in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>doubleCircle</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/doubleCircle">See doubleCircle in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>singleCircle</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/singleCircle">See singleCircle in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>crescent</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/crescent">See crescent in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>XForm</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/XForm">See XForm in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>palmShape</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/palmShape">See palmShape in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>rosette</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/rosette">See rosette in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>corniForm</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/corniForm">See corniForm in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>grid</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/grid">See grid in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>VForm</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/VForm">See VForm in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>wavyLine</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/wavyLine">See wavyLine in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>zigZag</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/zigZag">See zigZag in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>motherOfWater</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/motherOfWater">See motherOfWater in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>straightStrapwork</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/straightStrapwork">See straightStrapwork in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>curveStrapwork</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/curveStrapwork">See curveStrapwork in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>animalThread</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/animalThread">See animalThread in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>vegetableThread</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/vegetableThread">See vegetableThread in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>syntheticThread</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/syntheticThread">See syntheticThread in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>tannedSkin</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/tannedSkin">See tannedSkin in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>ApocryphaPseudoepigrapha</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works of unknown or doubtful authorship rejected from the
+                  </a:documentation>
+                  <value>cordiaAfricana</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/cordiaAfricana">See cordiaAfricana in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>oleaAfricana</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/oleaAfricana">See oleaAfricana in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>cedar</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/cedar">See cedar in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>eucalyptus</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/eucalyptus">See eucalyptus in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>juniper</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/juniper">See juniper in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>hageniaAbyssinica</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/hageniaAbyssinica">See hageniaAbyssinica in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>acacia</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/acacia">See acacia in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>ficus</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/ficus">See ficus in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>crotonMacrostachyus</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/crotonMacrostachyus">See crotonMacrostachyus in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>euphorbia</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/euphorbia">See euphorbia in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>ekebergia</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/ekebergia">See ekebergia in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>podocarpus</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/podocarpus">See podocarpus in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>plywood</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/plywood">See plywood in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>patternA</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/patternA">See patternA in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>patternA1</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/patternA1">See patternA1 in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>patternA2</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/patternA2">See patternA2 in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>patternA3</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/patternA3">See patternA3 in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>patternA4</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/patternA4">See patternA4 in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>patternA5</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/patternA5">See patternA5 in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>patternA6</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/patternA6">See patternA6 in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>patternA7</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/patternA7">See patternA7 in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>patternB</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/patternB">See patternB in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>patternC</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/patternC">See patternC in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>patternC1</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/patternC1">See patternC1 in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>tripleStraightLine</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/tripleStraightLine">See tripleStraightLine in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>doubleStraightLine</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/doubleStraightLine">See doubleStraightLine in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>singleStraightLine</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/singleStraightLine">See singleStraightLine in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>crissCross</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/crissCross">See crissCross in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>doubleCircle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/doubleCircle">See doubleCircle in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>singleCircle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/singleCircle">See singleCircle in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>crescent</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/crescent">See crescent in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>XForm</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/XForm">See XForm in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>palmShape</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/palmShape">See palmShape in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>rosette</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/rosette">See rosette in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>corniForm</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/corniForm">See corniForm in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>grid</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/grid">See grid in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>VForm</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/VForm">See VForm in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>wavyLine</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/wavyLine">See wavyLine in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>zigZag</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/zigZag">See zigZag in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>motherOfWater</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/motherOfWater">See motherOfWater in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>straightStrapwork</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/straightStrapwork">See straightStrapwork in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>curveStrapwork</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/curveStrapwork">See curveStrapwork in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>animalThread</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/animalThread">See animalThread in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>vegetableThread</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/vegetableThread">See vegetableThread in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>syntheticThread</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/syntheticThread">See syntheticThread in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>tannedSkin</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/tannedSkin">See tannedSkin in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>ApocryphaPseudoepigrapha</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works of unknown or doubtful authorship rejected from the
                                         set of the canonical scriptures, e.g., the book of Enoch,
                                         Jubilees, Herma, the Miracles of Mary, the Miracles of
                                         Jesus, Maṣḥafa ṭomār, the apocryphal Acts of the Apostles,
                                         etc. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/ApocryphaPseudoepigrapha">See ApocryphaPseudoepigrapha in Beta
+                        href="http://betamasaheft.eu/authority-files/ApocryphaPseudoepigrapha">See ApocryphaPseudoepigrapha in Beta
                                         maṣāḥǝft</a>
-               </a:documentation>
-               <value>animal</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/animal">See animal in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>arch</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/arch">See arch in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>architecture</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/architecture">See architecture in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>bird</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/bird">See bird in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>canopy</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/canopy">See canopy in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>codex</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/codex">See codex in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>censer</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/censer">See censer in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>column</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/column">See column in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>cross</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/cross">See cross in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>crown</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/crown">See crown in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>curtain</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/curtain">See curtain in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>dragon</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/dragon">See dragon in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>eucharist</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/eucharist">See eucharist in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>globe</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/globe">See globe in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>maniple</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/maniple">See maniple in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>prayerstaff</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/prayerstaff">See prayerstaff in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>rod</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/rod">See rod in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>scale</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/scale">See scale in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>scroll</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/scroll">See scroll in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>shield</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/shield">See shield in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>spear</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/spear">See spear in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>sponge</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/sponge">See sponge in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>sword</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/sword">See sword in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>twothieves</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/twothieves">See twothieves in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>vestment</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/vestment">See vestment in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>AksumiteStyle</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Aksumite Style <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/AksumiteStyle">See AksumiteStyle in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>FirstSolomonicStyle</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">First Solomonic Style <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/FirstSolomonicStyle">See FirstSolomonicStyle in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>SecondSolomonicStyle</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Second Solomonic Style <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/SecondSolomonicStyle">See SecondSolomonicStyle in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>ThirdSolomonicStyle</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Third Solomonic Style <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/ThirdSolomonicStyle">See ThirdSolomonicStyle in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>FirstGondarineStyle</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">First Gondarine Style <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/FirstGondarineStyle">See FirstGondarineStyle in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>SecondGondarineStyle</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Second Gondarine Style <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/SecondGondarineStyle">See SecondGondarineStyle in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>PostGondarineStyle</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Post Gondarine Style <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/PostGondarineStyle">See PostGondarineStyle in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>ModernStyle</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Style <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/ModernStyle">See ModernStyle in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>SawaStyle</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Šawān Style <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/SawaStyle">See SawaStyle in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>ShortCycle</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Short Cycle <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/ShortCycle">See ShortCycle in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>LongCycle</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Long Cycle <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/LongCycle">See LongCycle in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>angel</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">angel <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/angel">See angel in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>attribute</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">attribute <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/attribute">See attribute in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>bearded</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">bearded <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/bearded">See bearded in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>beardless</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">beardless <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/beardless">See beardless in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>deadjesus</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">dead Jesus <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/deadjesus">See deadjesus in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>demon</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">demon <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/demon">See demon in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>donordepiction</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">donor depiction <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/donordepiction">See donordepiction in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>emptycross</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">empty cross <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/emptycross">See emptycross in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>handGod</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Hand of God <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/handGod">See handGod in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>hodegetria</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">hodegetria <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/hodegetria">See hodegetria in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>HolySpirit</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Holy Spirit <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/HolySpirit">See HolySpirit in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>livingjesus</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">living Jesus <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/livingjesus">See livingjesus in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>interlace</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">interlace <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/interlace">See interlace in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>gesture</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gesture <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/gesture">See gesture in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>gestureblessing</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gesture, blessing <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/gestureblessing">See gestureblessing in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>gesturecrossed</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gesture, crossed <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/gesturecrossed">See gesturecrossed in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>gesturegrief</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gesture, grief <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/gesturegrief">See gesturegrief in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>gestureorans</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gesture, orans <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/gestureorans">See gestureorans in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>gesturewitnessing</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gesture, witnessing <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/gesturewitnessing">See gesturewitnessing in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>halo</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">halo <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/halo">See
+                  </a:documentation>
+                  <value>animal</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/animal">See animal in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>arch</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/arch">See arch in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>architecture</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/architecture">See architecture in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>bird</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/bird">See bird in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>canopy</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/canopy">See canopy in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>codex</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/codex">See codex in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>censer</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/censer">See censer in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>column</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/column">See column in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>cross</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/cross">See cross in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>crown</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/crown">See crown in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>curtain</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/curtain">See curtain in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>dragon</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/dragon">See dragon in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>eucharist</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/eucharist">See eucharist in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>globe</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/globe">See globe in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>maniple</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/maniple">See maniple in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>prayerstaff</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/prayerstaff">See prayerstaff in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>rod</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/rod">See rod in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>scale</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/scale">See scale in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>scroll</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/scroll">See scroll in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>shield</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/shield">See shield in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>spear</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/spear">See spear in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>sponge</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/sponge">See sponge in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>sword</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/sword">See sword in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>twothieves</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/twothieves">See twothieves in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>vestment</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/vestment">See vestment in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>AksumiteStyle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Aksumite Style <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/AksumiteStyle">See AksumiteStyle in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>FirstSolomonicStyle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">First Solomonic Style <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/FirstSolomonicStyle">See FirstSolomonicStyle in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>SecondSolomonicStyle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Second Solomonic Style <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/SecondSolomonicStyle">See SecondSolomonicStyle in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>ThirdSolomonicStyle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Third Solomonic Style <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/ThirdSolomonicStyle">See ThirdSolomonicStyle in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>FirstGondarineStyle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">First Gondarine Style <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/FirstGondarineStyle">See FirstGondarineStyle in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>SecondGondarineStyle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Second Gondarine Style <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/SecondGondarineStyle">See SecondGondarineStyle in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>PostGondarineStyle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Post Gondarine Style <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/PostGondarineStyle">See PostGondarineStyle in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>ModernStyle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Style <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/ModernStyle">See ModernStyle in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>SawaStyle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Šawān Style <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/SawaStyle">See SawaStyle in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>ShortCycle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Short Cycle <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/ShortCycle">See ShortCycle in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>LongCycle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Long Cycle <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/LongCycle">See LongCycle in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>angel</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">angel <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/angel">See angel in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>attribute</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">attribute <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/attribute">See attribute in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>bearded</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">bearded <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/bearded">See bearded in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>beardless</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">beardless <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/beardless">See beardless in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>deadjesus</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">dead Jesus <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/deadjesus">See deadjesus in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>demon</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">demon <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/demon">See demon in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>donordepiction</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">donor depiction <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/donordepiction">See donordepiction in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>emptycross</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">empty cross <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/emptycross">See emptycross in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>handGod</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Hand of God <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/handGod">See handGod in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>hodegetria</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">hodegetria <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/hodegetria">See hodegetria in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>HolySpirit</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Holy Spirit <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/HolySpirit">See HolySpirit in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>livingjesus</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">living Jesus <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/livingjesus">See livingjesus in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>interlace</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">interlace <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/interlace">See interlace in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>gesture</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gesture <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/gesture">See gesture in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>gestureblessing</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gesture, blessing <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/gestureblessing">See gestureblessing in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>gesturecrossed</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gesture, crossed <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/gesturecrossed">See gesturecrossed in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>gesturegrief</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gesture, grief <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/gesturegrief">See gesturegrief in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>gestureorans</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gesture, orans <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/gestureorans">See gestureorans in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>gesturewitnessing</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">gesture, witnessing <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/gesturewitnessing">See gesturewitnessing in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>halo</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">halo <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/halo">See
                                             halo in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>mandorla</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">mandorla <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/mandorla">See mandorla in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>saluspopuli</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">salus populi <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/saluspopuli">See saluspopuli in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>seated</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">seated <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/seated">See seated in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>standing</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">standing <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/standing">See standing in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>sunandmoon</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">sun and moon <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/sunandmoon">See sunandmoon in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>tetramorph</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">tetramorph <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/tetramorph">See tetramorph in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Gon</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gondarine (1632-1769 CE) <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Gon">See
+                  </a:documentation>
+                  <value>mandorla</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">mandorla <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/mandorla">See mandorla in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>saluspopuli</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">salus populi <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/saluspopuli">See saluspopuli in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>seated</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">seated <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/seated">See seated in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>standing</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">standing <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/standing">See standing in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>sunandmoon</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">sun and moon <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/sunandmoon">See sunandmoon in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>tetramorph</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">tetramorph <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/tetramorph">See tetramorph in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Gon</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gondarine (1632-1769 CE) <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/Gon">See
                                             Gon in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Paks1</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Postaksumite I (1200-1433 CE) <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Paks1">See Paks1 in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Paks2</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Postaksumite II (1434-1632 CE) <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Paks2">See Paks2 in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>PreAks</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">South-Arabian, Pre-Aksumite and Proto-Aksumite (1000-1 BCE ) <a xmlns="http://www.w3.org/1999/xhtml"
-                  href="http://betamasaheft.eu/authority-files/PreAks">See
-                  PreAks in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Eaks</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Early Aksumite (1-300 CE ) <a xmlns="http://www.w3.org/1999/xhtml"
-                  href="http://betamasaheft.eu/authority-files/Eaks">See
-                  Eaks in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Aks</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Aksumite (300-700 CE ) <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Aks">See
+                  </a:documentation>
+                  <value>Paks1</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Postaksumite I (1200-1433 CE) <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/Paks1">See Paks1 in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Paks2</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Postaksumite II (1434-1632 CE) <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/Paks2">See Paks2 in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>PreAks</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">South-Arabian, Pre-Aksumite and Proto-Aksumite (1000-1 BCE ) <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/PreAks">See
+                                        PreAks in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Eaks</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Early Aksumite (1-300 BCE ) <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/Eaks">See
+                                        Eaks in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Aks</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Aksumite (300-700 CE ) <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/Aks">See
                                             Aks in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>ZaMa</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Zamana Masāfǝnt (1769-1855 CE) <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/ZaMa">See
+                  </a:documentation>
+                  <value>ZaMa</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Zamana Masāfǝnt (1769-1855 CE) <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/ZaMa">See
                                             ZaMa in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>MoPe</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Period (1855-1974 CE) <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/MoPe">See
+                  </a:documentation>
+                  <value>MoPe</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Period (1855-1974 CE) <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/MoPe">See
                                             MoPe in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>ArarayMode</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ʾArārāy musical mode <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/ArarayMode">See ArarayMode in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>EzelMode</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ʿƎzǝl musical mode <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/EzelMode">See EzelMode in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>GeezMode</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gǝʿǝz musical mode <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/GeezMode">See GeezMode in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Vocabulary</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Vocabulary">See Vocabulary in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Apocrypha</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Apocrypha">See Apocrypha in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Pseudoepigrapha</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Pseudoepigrapha">See Pseudoepigrapha in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Miracle</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Miracle">See Miracle in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>NewTestament</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">biblical books belonging to the New Testament. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/NewTestament">See NewTestament in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>OldTestament</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">biblical books belonging to the Old Testament. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/OldTestament">See OldTestament in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Bible</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works belonging to the biblical canon, subdivided into the
+                  </a:documentation>
+                  <value>ArarayMode</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ʾArārāy musical mode <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/ArarayMode">See ArarayMode in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>EzelMode</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ʿƎzǝl musical mode <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/EzelMode">See EzelMode in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>GeezMode</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gǝʿǝz musical mode <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/GeezMode">See GeezMode in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Vocabulary</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/Vocabulary">See Vocabulary in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Apocrypha</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/Apocrypha">See Apocrypha in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Pseudoepigrapha</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/Pseudoepigrapha">See Pseudoepigrapha in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Miracle</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/Miracle">See Miracle in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>NewTestament</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">biblical books belonging to the New Testament. <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/NewTestament">See NewTestament in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>OldTestament</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">biblical books belonging to the Old Testament. <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/OldTestament">See OldTestament in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Bible</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works belonging to the biblical canon, subdivided into the
                                         Old and New Testament. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Bible">See Bible in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Biography</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing the description of the life events of an
+                        href="http://betamasaheft.eu/authority-files/Bible">See Bible in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Biography</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing the description of the life events of an
                                         individual. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Biography">See Biography in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>CanonLaw</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing regulations for the government of the
+                        href="http://betamasaheft.eu/authority-files/Biography">See Biography in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>CanonLaw</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing regulations for the government of the
                                         Christian organizations, e.g., the Sinodos, the Fətḥa
                                         Nagaśt, the Śərʿata faws manfasāwi. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/CanonLaw">See CanonLaw in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>TigrinyaLiterature</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts of unspecified Tigrinya subject.
+                        href="http://betamasaheft.eu/authority-files/CanonLaw">See CanonLaw in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>TigrinyaLiterature</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts of unspecified Tigrinya subject.
                                             <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/TigrinyaLiterature">See TigrinyaLiterature in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Fiction</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing fiction. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Fiction">See Fiction in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Translation</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing a translation. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Translation">See Translation in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>AmharicLiterature</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts of unspecified Amharic subject.
+                        href="http://betamasaheft.eu/authority-files/TigrinyaLiterature">See TigrinyaLiterature in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Fiction</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing fiction. <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/Fiction">See Fiction in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Translation</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing a translation. <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/Translation">See Translation in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>AmharicLiterature</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts of unspecified Amharic subject.
                                             <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/AmharicLiterature">See AmharicLiterature in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>BetaEsraelLiterature</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts of unspecified Jewish subject. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/BetaEsraelLiterature">See BetaEsraelLiterature in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>ChristianLiterature</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts of unspecified Christian subject.
+                        href="http://betamasaheft.eu/authority-files/AmharicLiterature">See AmharicLiterature in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>BetaEsraelLiterature</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts of unspecified Jewish subject. <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/BetaEsraelLiterature">See BetaEsraelLiterature in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>ChristianLiterature</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts of unspecified Christian subject.
                                             <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/ChristianLiterature">See ChristianLiterature in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Hagiography</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works and collections of works containing the Vita (Life)
+                        href="http://betamasaheft.eu/authority-files/ChristianLiterature">See ChristianLiterature in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Hagiography</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works and collections of works containing the Vita (Life)
                                         of a saint, included the cycles of miracles performed by the
                                         saint himself, as well as Acts and Passiones of martyrs.
                                             <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Hagiography">See Hagiography in Beta maṣāḥǝft</a>
+                        href="http://betamasaheft.eu/authority-files/Hagiography">See Hagiography in Beta maṣāḥǝft</a>
                                     </a:documentation>
-               <value>HistoryAndHistoriography</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing land grants, Amharic historical works of
+                  <value>HistoryAndHistoriography</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing land grants, Amharic historical works of
                                         the 19th century which cannot be labelled chronicles, the
                                         history of churches and monasteries, biographies etc. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/HistoryAndHistoriography">See HistoryAndHistoriography in Beta maṣāḥǝft</a>
+                        href="http://betamasaheft.eu/authority-files/HistoryAndHistoriography">See HistoryAndHistoriography in Beta maṣāḥǝft</a>
                                     </a:documentation>
-               <value>Chronicles</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing royal and other chronicles e.g., Tārik
+                  <value>Chronicles</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing royal and other chronicles e.g., Tārik
                                         za-Walda ʿAmid, Zenā ʾAyhud and various treatises of
                                         Ethiopian history. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Chronicles">See Chronicles in Beta maṣāḥǝft</a>
+                        href="http://betamasaheft.eu/authority-files/Chronicles">See Chronicles in Beta maṣāḥǝft</a>
                                     </a:documentation>
-               <value>Homily</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works and collections of works containing homiletic texts
+                  <value>Homily</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works and collections of works containing homiletic texts
                                         to be read on the occasion of specific commemorative days,
                                         e.g., the homiliaries in honour of Michael and Gabriel,
                                         Dərsāna sanbat krəstiyan, Dərsān māḥyāwi, Dərsāna madḫāne
                                         ʿalam, etc. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Homily">See Homily in Beta maṣāḥǝft</a>
+                        href="http://betamasaheft.eu/authority-files/Homily">See Homily in Beta maṣāḥǝft</a>
                                     </a:documentation>
-               <value>IslamicLiterature</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts of Islamic subject. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/IslamicLiterature">See IslamicLiterature in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Koran</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">manuscripts containing the Koran. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Koran">See Koran in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>LegalDocument</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">texts that formally record grants and rights to
+                  <value>IslamicLiterature</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts of Islamic subject. <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/IslamicLiterature">See IslamicLiterature in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Koran</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">manuscripts containing the Koran. <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/Koran">See Koran in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>LegalDocument</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">texts that formally record grants and rights to
                                         institutions and individuals, such as land charters,
                                         donation acts, land grants. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/LegalDocument">See LegalDocument in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Liturgy</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing directives for the liturgy of the office
+                        href="http://betamasaheft.eu/authority-files/LegalDocument">See LegalDocument in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Liturgy</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing directives for the liturgy of the office
                                         services (except for the mass and rituals like weddings and
                                         funerals), e.g., Maṣḥafa nəfq, the Horologium, etc. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Liturgy">See Liturgy in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Chants</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing chants, hymns and antiphons to be sung
+                        href="http://betamasaheft.eu/authority-files/Liturgy">See Liturgy in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Chants</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing chants, hymns and antiphons to be sung
                                         for liturgical purposes, e.g., Dəggʷā, Ṣoma dəggʷā, Məʿərāf,
                                         Zəmmāre, Mawāśəʾət. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Chants">See Chants in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Lectionary</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing scriptural readings to be read on various
+                        href="http://betamasaheft.eu/authority-files/Chants">See Chants in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Lectionary</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing scriptural readings to be read on various
                                         religious occasions (fast, feasts, liturgical periods), e.g.
                                         Maṣḥafa gəṣṣəw, Maṣḥafa ʾaśləti, etc. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Lectionary">See Lectionary in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Rituals</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">See Rituals and Rites. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Rituals">See Rituals in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>RitualsAndRites</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing directives for the celebration of
+                        href="http://betamasaheft.eu/authority-files/Lectionary">See Lectionary in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Rituals</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">See Rituals and Rites. <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/Rituals">See Rituals in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>RitualsAndRites</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing directives for the celebration of
                                         religious offices such as weddings and funerals, e.g.,
                                         Maṣḥafa taklil and Maṣḥafa gənzat. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/RitualsAndRites">See RitualsAndRites in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Missal</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing liturgical instructions for the
+                        href="http://betamasaheft.eu/authority-files/RitualsAndRites">See RitualsAndRites in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Missal</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing liturgical instructions for the
                                         celebration of the mass, e.g. Maṣḥafa qəddāse. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Missal">See Missal in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Magic</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing magic texts, prayers and formulas to be
+                        href="http://betamasaheft.eu/authority-files/Missal">See Missal in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Magic</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing magic texts, prayers and formulas to be
                                         recited or carried along for healing and as a protection
                                         from demons, diseases and natural accidents, e.g. Maftəḥe
                                         śərāy, etc. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Magic">See Magic in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Medicine</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing medical texts and recipes for healing.
+                        href="http://betamasaheft.eu/authority-files/Magic">See Magic in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Medicine</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing medical texts and recipes for healing.
                                             <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Medicine">See Medicine in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Miscellanea</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts of various unspecified nature. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Miscellanea">See Miscellanea in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>MonasticLiterature</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts to be read for the education and
+                        href="http://betamasaheft.eu/authority-files/Medicine">See Medicine in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Miscellanea</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts of various unspecified nature. <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/Miscellanea">See Miscellanea in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>MonasticLiterature</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts to be read for the education and
                                         edification of the monastic community members, e.g., Mār
                                         Yəsḥāq, Filkəsyos, ʾAragāwi manfasāwi, etc. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/MonasticLiterature">See MonasticLiterature in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>NaturalSciences</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing observations and investigations into a
+                        href="http://betamasaheft.eu/authority-files/MonasticLiterature">See MonasticLiterature in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>NaturalSciences</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing observations and investigations into a
                                         number of natural phenomena. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/NaturalSciences">See NaturalSciences in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Other</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works belonging to other literary genres. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Other">See Other in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Poetry</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing praises, ʿarke-hymns, salām-hymns,
+                        href="http://betamasaheft.eu/authority-files/NaturalSciences">See NaturalSciences in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Other</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works belonging to other literary genres. <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/Other">See Other in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Poetry</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing praises, ʿarke-hymns, salām-hymns,
                                         malkəʾ, songs and canticles, texts subdivided into stanzas,
                                         rhymed texts. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Poetry">See Poetry in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Prayers</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing prayers, supplications and invocations to
+                        href="http://betamasaheft.eu/authority-files/Poetry">See Poetry in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Prayers</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing prayers, supplications and invocations to
                                         God and other revered entities. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Prayers">See Prayers in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Religion</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                        href="http://betamasaheft.eu/authority-files/Prayers">See Prayers in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Religion</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
                                         <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Religion">See Religion in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Philosophy</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing philosophical texts and sentences, as
+                        href="http://betamasaheft.eu/authority-files/Religion">See Religion in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Philosophy</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing philosophical texts and sentences, as
                                         Maṣḥafa falāsfā ṭabibān. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Philosophy">See Philosophy in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Theology</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing patristic texts dealing with theological
+                        href="http://betamasaheft.eu/authority-files/Philosophy">See Philosophy in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Theology</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing patristic texts dealing with theological
                                         subjects, e.g. Qerəllos, Hāymānota ʾAbaw, the Five Pillars
                                         of Mystery, etc. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Theology">See Theology in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Commentary</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">exegetical works containing the interpretation of biblical
+                        href="http://betamasaheft.eu/authority-files/Theology">See Theology in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Commentary</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">exegetical works containing the interpretation of biblical
                                         texts, e.g, the Tərgʷāme and ʾAndəmtā corpus. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Commentary">See Commentary in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Chronography</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts for the calculation of the moveable
+                        href="http://betamasaheft.eu/authority-files/Commentary">See Commentary in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Chronography</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing texts for the calculation of the moveable
                                         feasts and for other calendrical computes, e.g., ʾAbušākər,
                                         Bāḥra ḥassāb. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Chronography">See Chronography in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>GoldenGospel</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A particular type of a manuscript - usually a main copy of
+                        href="http://betamasaheft.eu/authority-files/Chronography">See Chronography in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>GoldenGospel</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A particular type of a manuscript - usually a main copy of
                                         the Four Gospels of a church - where documents (land
                                         charters, foundation charters, etc) concerning the place are
                                         collected. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/GoldenGospel">See GoldenGospel in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>ChristianContent</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Items belonging to the Christian tradition which do not
+                        href="http://betamasaheft.eu/authority-files/GoldenGospel">See GoldenGospel in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>ChristianContent</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Items belonging to the Christian tradition which do not
                                         contain text, such as miniature collections. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/ChristianContent">See ChristianContent in Beta maṣāḥǝft</a>
-               </a:documentation>
-               <value>Asmat</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sometimes developed, with the formalized incipit and
+                        href="http://betamasaheft.eu/authority-files/ChristianContent">See ChristianContent in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>Asmat</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sometimes developed, with the formalized incipit and
                                         explicit, sometimes nothing more than a short string of
                                             'hidden God’s names', written in a crude hand. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://betamasaheft.eu/authority-files/Asmat">See Asmat in Beta maṣāḥǝft</a>
-               </a:documentation>
-            </choice>
-         </attribute>
+                        href="http://betamasaheft.eu/authority-files/Asmat">See Asmat in Beta maṣāḥǝft</a>
+                  </a:documentation>
+               </choice>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
@@ -5388,7 +5400,7 @@ Normalization 12. Critical Apparatus]</a:documentation>
    </define>
    <define name="tei_gap">
       <element name="gap">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This was initially inherited from the EpiDoc schema version 8.21.  
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This was initially inherited from the EpiDoc schema version 8.21.
                         <a xmlns="http://www.w3.org/1999/xhtml"
                href="http://betamasaheft.eu/Guidelines/?id=gap">Beta maṣāḥǝft
                             Guidelines</a> [3.4.3. Additions, Deletions, and Omissions]</a:documentation>
@@ -5766,7 +5778,7 @@ Measures]</a:documentation>
       <element name="date">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">In the element <code xmlns="http://www.w3.org/1999/xhtml">&lt;date&gt;</code> we often want to add bibliography in the form
                         of a single citation or a full bibliography. The schematron rule tries to
-                        avoid the absence of white spaces before and after the element. 
+                        avoid the absence of white spaces before and after the element.
                         Please use the provided values for <code xmlns="http://www.w3.org/1999/xhtml">@type</code> and <code xmlns="http://www.w3.org/1999/xhtml">@calendar</code>
                         <a xmlns="http://www.w3.org/1999/xhtml"
                href="http://betamasaheft.eu/Guidelines/?id=date">Beta maṣāḥǝft
@@ -5783,7 +5795,7 @@ Measures]</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-date-date-constraint-rule-10">
+                  id="tei-betamesaheft-date-date-constraint-rule-11">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5795,7 +5807,7 @@ Measures]</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-date-date-constraint-rule-11">
+                  id="tei-betamesaheft-date-date-constraint-rule-12">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5921,7 +5933,7 @@ Sample values include: 1] suspension; 2] contraction; 3] brevigraph; 4] superscr
                             Guidelines</a> [3.6. Simple Links and Cross-References 16.1. Links]</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ptr-ptr-constraint-rule-12">
+                  id="tei-betamesaheft-ptr-ptr-constraint-rule-13">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5933,7 +5945,7 @@ Sample values include: 1] suspension; 2] contraction; 3] brevigraph; 4] superscr
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ptr-ptrAtts-constraint-report-10">
+                  id="tei-betamesaheft-ptr-ptrAtts-constraint-report-11">
             <rule context="tei:ptr">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5961,7 +5973,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
                             Guidelines</a> [3.6. Simple Links and Cross-References 16.1. Links]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ref-ref-constraint-rule-13">
+                  id="tei-betamesaheft-ref-ref-constraint-rule-14">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5978,7 +5990,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ref-ref-constraint-rule-14">
+                  id="tei-betamesaheft-ref-ref-constraint-rule-15">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5991,7 +6003,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ref-ref-constraint-rule-15">
+                  id="tei-betamesaheft-ref-ref-constraint-rule-16">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6002,7 +6014,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ref-refAtts-constraint-report-15">
+                  id="tei-betamesaheft-ref-refAtts-constraint-report-16">
             <rule context="tei:ref">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6153,7 +6165,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
       
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-list-gloss-list-must-have-labels-constraint-rule-16">
+                  id="tei-betamesaheft-list-gloss-list-must-have-labels-constraint-rule-17">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6196,7 +6208,7 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
    </define>
    <define name="tei_item">
       <element name="item">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The generic element is used with specific meaning 
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The generic element is used with specific meaning
                         in <code xmlns="http://www.w3.org/1999/xhtml">&lt;list&gt;</code> inside <code xmlns="http://www.w3.org/1999/xhtml">&lt;collation&gt;</code> and <code xmlns="http://www.w3.org/1999/xhtml">&lt;additions&gt;</code>
                         with the additional use of a semantic value for the <code xmlns="http://www.w3.org/1999/xhtml">@xml:id</code>
                         some special values for the type are provided to be used only when the ancestor
@@ -6205,7 +6217,7 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
                             Guidelines</a> [3.7. Lists 2.6. The Revision Description]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-item-item-constraint-rule-17">
+                  id="tei-betamesaheft-item-item-constraint-rule-18">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6216,7 +6228,7 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-item-item-constraint-rule-18">
+                  id="tei-betamesaheft-item-item-constraint-rule-19">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6228,7 +6240,7 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-item-item-constraint-rule-19">
+                  id="tei-betamesaheft-item-item-constraint-rule-20">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6241,7 +6253,7 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-item-item-constraint-rule-20">
+                  id="tei-betamesaheft-item-item-constraint-rule-21">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6252,7 +6264,7 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-item-item-constraint-rule-21">
+                  id="tei-betamesaheft-item-item-constraint-rule-22">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6265,7 +6277,7 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-item-item-constraint-rule-22">
+                  id="tei-betamesaheft-item-item-constraint-rule-23">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6928,7 +6940,18 @@ Sample values include: 1] generalEditor</a:documentation>
                      [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.5. The Series Statement]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-title-title-constraint-rule-23">
+                  id="tei-betamesaheft-title-title-constraint-rule-24">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:bm="http://betamasaheft.eu"
+                      context="tei:title[@ref]">
+
+                                <sch:report test="not(matches(@ref, 'LIT\d+\w+') or matches(@ref, 'NAR\d+\w+'))">The textual or narrative unit ID you have entered is wrong. Textual units IDs must match the pattern LIT\d+\w+, narrative units must match the pattern  NAR\d+\w+.</sch:report>
+                            </sch:rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei-betamesaheft-title-title-constraint-rule-25">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6942,7 +6965,7 @@ Sample values include: 1] generalEditor</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-title-title-constraint-rule-24">
+                  id="tei-betamesaheft-title-title-constraint-rule-26">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6955,7 +6978,7 @@ Sample values include: 1] generalEditor</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-title-title-constraint-rule-25">
+                  id="tei-betamesaheft-title-title-constraint-rule-27">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6967,7 +6990,7 @@ Sample values include: 1] generalEditor</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-title-title-constraint-rule-26">
+                  id="tei-betamesaheft-title-title-constraint-rule-28">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7163,7 +7186,7 @@ Sample values include: 1] generalEditor</a:documentation>
                      [3.11.2.5. Scopes and Ranges in Bibliographic Citations]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-citedRange-citedRange-constraint-rule-27">
+                  id="tei-betamesaheft-citedRange-citedRange-constraint-rule-29">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7174,7 +7197,7 @@ Sample values include: 1] generalEditor</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-citedRange-citedRange-constraint-rule-28">
+                  id="tei-betamesaheft-citedRange-citedRange-constraint-rule-30">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7236,7 +7259,7 @@ Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] par
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-bibl-bibl-constraint-rule-29">
+                  id="tei-betamesaheft-bibl-bibl-constraint-rule-31">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7249,7 +7272,17 @@ Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] par
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-bibl-bibl-constraint-rule-30">
+                  id="tei-betamesaheft-bibl-bibl-constraint-rule-32">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:bm="http://betamasaheft.eu"
+                      context="tei:bibl">
+                                <sch:report test="ancestor::tei:div[@type='bibliography']                                   and not(parent::tei:listBibl)">Please, place your bibliographical references inside a listBibl element.</sch:report>
+                            </sch:rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei-betamesaheft-bibl-bibl-constraint-rule-33">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7261,7 +7294,7 @@ Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] par
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-bibl-bibl-constraint-rule-31">
+                  id="tei-betamesaheft-bibl-bibl-constraint-rule-34">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7336,6 +7369,35 @@ Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] par
                </choice>
             </zeroOrMore>
          </group>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei-betamesaheft-listBibl-listBibl-constraint-rule-35">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:bm="http://betamasaheft.eu"
+                      context="tei:listBibl[@type='catalogue']">
+                                  <sch:report test="ancestor::tei:TEI/@type = 'work'">
+                                      Catalogue bibliography is meaningful only for a manuscript description.
+                                      If the information about a work is in a catalogue, please use the value "secondary"
+                                      for the attribute type.
+                                  </sch:report>
+                              </sch:rule>
+         </pattern>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei-betamesaheft-listBibl-listBibl-constraint-rule-36">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:bm="http://betamasaheft.eu"
+                      context="tei:listBibl[@type='edition']">
+                                  <sch:report test="ancestor::tei:TEI/@type = 'mss'">
+                                      Edition bibliography is meaningful only for a textual unit description.
+                                      If the information about this manuscript is found in the edition of
+                                      a text, please use the value "secondary"
+                                      for the attribute type.
+                                  </sch:report>
+                              </sch:rule>
+         </pattern>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.sortable.attributes"/>
          <ref name="tei_att.declarable.attributes"/>
@@ -7376,7 +7438,7 @@ Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] par
             </choice>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-relatedItem-targetorcontent1-constraint-report-32">
+                  id="tei-betamesaheft-relatedItem-targetorcontent1-constraint-report-37">
             <rule context="tei:relatedItem">
                <sch:report xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -7423,7 +7485,7 @@ relatedItem element must be empty</sch:report>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-l-abstractModel-structure-l-constraint-report-33">
+                  id="tei-betamesaheft-l-abstractModel-structure-l-constraint-report-38">
             <rule context="tei:l">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7495,7 +7557,7 @@ relatedItem element must be empty</sch:report>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-lg-abstractModel-structure-l-constraint-report-34">
+                  id="tei-betamesaheft-lg-abstractModel-structure-l-constraint-report-39">
             <rule context="tei:lg">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -8269,7 +8331,7 @@ during the encoding of a text. [2.3.3. The Editorial Practices Declaration 2.3. 
             <ref name="tei_model.pLike"/>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-quotation-quotationContents-constraint-report-35">
+                  id="tei-betamesaheft-quotation-quotationContents-constraint-report-40">
             <rule context="tei:quotation">
                <report xmlns:xi="http://www.w3.org/2001/XInclude"
                        xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -8759,7 +8821,7 @@ Suggested values include: 1] WGS84 (World Geodetic System) ; 2] MGRS (Military G
                             Guidelines</a> [10.7.2. Writing, Decoration, and Other Notations]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-handNote-handNote-constraint-rule-32">
+                  id="tei-betamesaheft-handNote-handNote-constraint-rule-37">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -9165,7 +9227,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                      [2.6. The Revision Description 2.4.1. Creation 11.7. Identifying Changes and Revisions]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-change-change-constraint-rule-33">
+                  id="tei-betamesaheft-change-change-constraint-rule-38">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -9328,7 +9390,7 @@ elements is to be considered significant or not</a:documentation>
    </define>
    <define name="tei_TEI">
       <element name="TEI">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(TEI document) Because different types of entity are all encoded 
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(TEI document) Because different types of entity are all encoded
                         in TEI, we need to type the TEI to be able to know from the root what type of TEI to expect.
                         the <code xmlns="http://www.w3.org/1999/xhtml">@xml:id</code> uses the syntax for identifiers inherited from the
                         indexes of the the Encyclopaedia Aethiopica. <a xmlns="http://www.w3.org/1999/xhtml"
@@ -9341,7 +9403,7 @@ elements is to be considered significant or not</a:documentation>
             </oneOrMore>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-TEI-TEI-constraint-rule-34">
+                  id="tei-betamesaheft-TEI-TEI-constraint-rule-39">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9790,7 +9852,7 @@ elements is to be considered significant or not</a:documentation>
             </optional>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-div-div-constraint-rule-35">
+                  id="tei-betamesaheft-div-div-constraint-rule-40">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9803,7 +9865,7 @@ elements is to be considered significant or not</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-div-abstractModel-structure-l-constraint-report-40">
+                  id="tei-betamesaheft-div-abstractModel-structure-l-constraint-report-45">
             <rule context="tei:div">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9814,7 +9876,7 @@ elements is to be considered significant or not</a:documentation>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-div-abstractModel-structure-p-constraint-report-41">
+                  id="tei-betamesaheft-div-abstractModel-structure-p-constraint-report-46">
             <rule context="tei:div">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -10413,7 +10475,7 @@ element. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]</a:documentat
 element. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-path-pathmustnotbeclosed-constraint-rule-36">
+                  id="tei-betamesaheft-path-pathmustnotbeclosed-constraint-rule-41">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -10622,7 +10684,7 @@ hand, or the beginning of a scribal stint. [11.3.2.1. Document Hands]</a:documen
    </define>
    <define name="tei_space">
       <element name="space">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This was initially inherited from the EpiDoc schema version 8.21. 
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This was initially inherited from the EpiDoc schema version 8.21.
                         <a xmlns="http://www.w3.org/1999/xhtml"
                href="http://betamasaheft.eu/Guidelines/?id=space">Beta maṣāḥǝft
                             Guidelines</a> [11.5.1. Space]</a:documentation>
@@ -11110,7 +11172,7 @@ element on which the <code xmlns="http://www.w3.org/1999/xhtml">@ana</code> attr
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(s-unit) contains a sentence-like division of a text. [17.1. Linguistic Segment Categories 8.4.1. Segmentation]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-s-noNestedS-constraint-report-43">
+                  id="tei-betamesaheft-s-noNestedS-constraint-report-48">
             <rule context="tei:s">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11720,7 +11782,7 @@ of the markup named by the <code xmlns="http://www.w3.org/1999/xhtml">@locus</co
                             descriptions Beta maṣāḥǝft Guidelines</a> [16.3. Blocks, Segments, and Anchors]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ab-ab-constraint-rule-37">
+                  id="tei-betamesaheft-ab-ab-constraint-rule-42">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11731,7 +11793,7 @@ of the markup named by the <code xmlns="http://www.w3.org/1999/xhtml">@locus</co
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ab-ab-constraint-rule-38">
+                  id="tei-betamesaheft-ab-ab-constraint-rule-43">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11744,7 +11806,7 @@ of the markup named by the <code xmlns="http://www.w3.org/1999/xhtml">@locus</co
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ab-ab-constraint-rule-39">
+                  id="tei-betamesaheft-ab-ab-constraint-rule-44">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11755,7 +11817,7 @@ of the markup named by the <code xmlns="http://www.w3.org/1999/xhtml">@locus</co
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ab-abstractModel-structure-ab-constraint-report-47">
+                  id="tei-betamesaheft-ab-abstractModel-structure-ab-constraint-report-52">
             <rule context="tei:ab">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11766,7 +11828,7 @@ of the markup named by the <code xmlns="http://www.w3.org/1999/xhtml">@locus</co
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ab-abstractModel-structure-l-constraint-report-48">
+                  id="tei-betamesaheft-ab-abstractModel-structure-l-constraint-report-53">
             <rule context="tei:ab">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11815,7 +11877,7 @@ Sample values include: 1] pattern; 2] usage; 3] executed; 4] dividers</a:documen
                             Guidelines</a> [16.3. Blocks, Segments, and Anchors 6.2. Components of the Verse Line 7.2.5. Speech Contents]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-seg-seg-constraint-rule-40">
+                  id="tei-betamesaheft-seg-seg-constraint-rule-45">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12010,7 +12072,7 @@ typically by means of annotations at the foot of the page. [10.3.7. Catchwords, 
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-dimensions-witness-constraint-rule-41">
+                  id="tei-betamesaheft-dimensions-witness-constraint-rule-46">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12021,7 +12083,7 @@ typically by means of annotations at the foot of the page. [10.3.7. Catchwords, 
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-report-51">
+                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-report-56">
             <rule context="tei:dimensions">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12032,7 +12094,7 @@ The element <name/> may appear once only
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-report-52">
+                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-report-57">
             <rule context="tei:dimensions">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12043,7 +12105,7 @@ The element <name/> may appear once only
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-report-53">
+                  id="tei-betamesaheft-dimensions-duplicateDim-constraint-report-58">
             <rule context="tei:dimensions">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12271,7 +12333,7 @@ or phrase, typically found as part of a blazon, coat of arms, etc.
             <ref name="tei_model.certLike"/>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-locus-locus-constraint-rule-42">
+                  id="tei-betamesaheft-locus-locus-constraint-rule-47">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12282,6 +12344,10 @@ or phrase, typically found as part of a blazon, coat of arms, etc.
                                     indicated with @from and @to or either of the two if the other
                                     extreme of the range is unknown. Please do not use "unknown" as
                                     value.</sch:report>
+                                    <sch:report test="ancestor::tei:div[@type='edition']">
+The structuring elements used in a manuscript transcription are div, pb and cb.
+locus is used to point to values of these elements in the teiHeader.
+                                    </sch:report>
                             </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
@@ -12410,7 +12476,7 @@ or phrase, typically found as part of a blazon, coat of arms, etc.
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-origDate-origDate-constraint-rule-43">
+                  id="tei-betamesaheft-origDate-origDate-constraint-rule-48">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12713,7 +12779,7 @@ the  manuscript being described. [10.4. The Manuscript Identifier]</a:documentat
       
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-msIdentifier-msId_minimal-constraint-report-56">
+                  id="tei-betamesaheft-msIdentifier-msId_minimal-constraint-report-62">
             <rule context="tei:msIdentifier">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12837,7 +12903,7 @@ nominum, or nickname. [10.4. The Manuscript Identifier]</a:documentation>
             <ref name="tei_model.biblLike"/>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-colophon-colophon-constraint-rule-44">
+                  id="tei-betamesaheft-colophon-colophon-constraint-rule-49">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12988,7 +13054,7 @@ nominum, or nickname. [10.4. The Manuscript Identifier]</a:documentation>
    </define>
    <define name="tei_msItem">
       <element name="msItem">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(manuscript item) Please note the semantically meaningful structure 
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(manuscript item) Please note the semantically meaningful structure
                         of the <code xmlns="http://www.w3.org/1999/xhtml">@xml:id</code> 
             <a xmlns="http://www.w3.org/1999/xhtml"
                href="http://betamasaheft.eu/Guidelines/?id=msItem">Beta maṣāḥǝft
@@ -13014,7 +13080,7 @@ nominum, or nickname. [10.4. The Manuscript Identifier]</a:documentation>
             </choice>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-msItem-msItem-constraint-rule-45">
+                  id="tei-betamesaheft-msItem-msItem-constraint-rule-50">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -13264,7 +13330,7 @@ specialized elements from the model.physDescPart class. [10.7. Physical Descript
             </group>
          </choice>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-objectDesc-objectDesc-constraint-rule-46">
+                  id="tei-betamesaheft-objectDesc-objectDesc-constraint-rule-51">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -13648,7 +13714,7 @@ count the leaves or pages in a codex. [10.7.1.4. Foliation]</a:documentation>
                             Guidelines</a> [10.7.3. Bindings, Seals, and Additional Material]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-47">
+                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-52">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -13660,7 +13726,7 @@ count the leaves or pages in a codex. [10.7.1.4. Foliation]</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-48">
+                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-53">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -13672,7 +13738,7 @@ count the leaves or pages in a codex. [10.7.1.4. Foliation]</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-49">
+                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-54">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -13683,7 +13749,7 @@ count the leaves or pages in a codex. [10.7.1.4. Foliation]</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-50">
+                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-55">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -13698,7 +13764,7 @@ count the leaves or pages in a codex. [10.7.1.4. Foliation]</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-51">
+                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-56">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -13747,27 +13813,25 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
                   <value>frame</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">an ornament around the page</a:documentation>
                   <value>miniature</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An indipendent illustration in colour
+                                        that occupies the full-page or part 
+                                        of the equivalent space of one or more 
+                                        columns of text.
+                                </a:documentation>
                   <value>band</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ornamental band is above the page</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A border that surrounds a text or image and may occupy the margins and intercolumnar space. Typically used to mark the beginning of a new text or section of text.</a:documentation>
                   <value>punctuation</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>drawing</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>border</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A monochrome or bichrome image that is not painted.</a:documentation>
                   <value>diagram</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>frieze</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>illustration</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A drawing that conveys information or knowledge in schematic form.</a:documentation>
                   <value>initial</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An enlarged letter at the beginning of a text of paragraph that features figurative or decorative motifs.</a:documentation>
                   <value>map</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>marginal</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A small miniature painted next to one of the margins of the text.</a:documentation>
                   <value>mixed</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>other</value>
@@ -13790,10 +13854,8 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>unwan</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>vignette</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>engraving</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">An image on paper created with a printing plate.</a:documentation>
                   <value>printedImage</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A printed image, usually of devotional character, glued to
                                         a manuscript</a:documentation>
@@ -14103,7 +14165,7 @@ describing the full history of a manuscript or manuscript part. [10.8. History]<
                             Guidelines</a> [10.8. History]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-origin-origin-constraint-rule-52">
+                  id="tei-betamesaheft-origin-origin-constraint-rule-57">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14318,7 +14380,7 @@ may exist in the holding institution or elsewhere. [10.9. Additional Information
             </choice>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-msPart-msPart-constraint-rule-53">
+                  id="tei-betamesaheft-msPart-msPart-constraint-rule-58">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14398,7 +14460,7 @@ may exist in the holding institution or elsewhere. [10.9. Additional Information
             </choice>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-msFrag-msfrag-constraint-rule-54">
+                  id="tei-betamesaheft-msFrag-msfrag-constraint-rule-59">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14747,7 +14809,7 @@ may exist in the holding institution or elsewhere. [10.9. Additional Information
                href="http://betamasaheft.eu/Guidelines/?id=persName">Beta maṣāḥǝft Guidelines</a> [13.2.1. Personal Names]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-persName-persName-constraint-rule-55">
+                  id="tei-betamesaheft-persName-persName-constraint-rule-60">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14756,10 +14818,11 @@ may exist in the holding institution or elsewhere. [10.9. Additional Information
                                 <sch:report test="not(@ref)">A persName in a mss, place or work
                                     description should always contain an attribute @ref pointing to
                                     the relevant record</sch:report>
+                                <sch:report test="not(matches(@ref, 'PRS\d+\w+') or matches(@ref, 'ETH\d+\w+'))">The person ID you have entered is wrong. Persons IDs must match the pattern PRS\d+\w+ or ETH\d+\w+ .</sch:report>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-persName-persName-constraint-rule-56">
+                  id="tei-betamesaheft-persName-persName-constraint-rule-61">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14917,7 +14980,7 @@ may exist in the holding institution or elsewhere. [10.9. Additional Information
                             Guidelines</a> [13.2.3. Place Names]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-placeName-placeName-constraint-rule-57">
+                  id="tei-betamesaheft-placeName-placeName-constraint-rule-62">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14926,10 +14989,12 @@ may exist in the holding institution or elsewhere. [10.9. Additional Information
                                 <sch:report test="not(@ref)">A placeName in a mss, person or work
                                     description should always contain an attribute @ref pointing to
                                     the relevant record</sch:report>
+                                <sch:report test="not(matches(@ref, 'INS\d+\w+') or                                     matches(@ref, 'LOC\d+\w+') or                                     matches(@ref, 'Q\d+') or                                     matches(@ref, 'pleiades:\d+'))">The place identifier you have entered is wrong.
+                                    Place IDs must match LOC\d+\w+ for places, INS\d+\w+ for institutions, Q\d+ for wikidata items or pleiades:\d+ for ancient places in the Pleiades Gazetteer.</sch:report>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-placeName-placeName-constraint-rule-58">
+                  id="tei-betamesaheft-placeName-placeName-constraint-rule-63">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -15410,16 +15475,16 @@ Sample values include: 1] proclaimed; 2] assumed; 3] verified; 4] clinical; 5] b
    <define name="tei_geo">
       <element name="geo">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(geographical coordinates) The rules here help the encoding of the coordinates.
-                        It is anyway preferable to use the <code xmlns="http://www.w3.org/1999/xhtml">@sameAs</code> 
+                        It is anyway preferable to use the <code xmlns="http://www.w3.org/1999/xhtml">@sameAs</code>
                         in <code xmlns="http://www.w3.org/1999/xhtml">&lt;place&gt;</code> if possible to point to an external authority with
-                        coordinates. If this is not possible than coordinates might be provided. 
+                        coordinates. If this is not possible than coordinates might be provided.
                         Please do not delete coordinates if you add an external pointer.
                         <a xmlns="http://www.w3.org/1999/xhtml"
                href="http://betamasaheft.eu/Guidelines/?id=geo">Beta maṣāḥǝft
                             Guidelines</a> [13.3.4.1. Varieties of Location]</a:documentation>
          <text/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-geo-geo-constraint-rule-59">
+                  id="tei-betamesaheft-geo-geo-constraint-rule-64">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -15431,7 +15496,7 @@ Sample values include: 1] proclaimed; 2] assumed; 3] verified; 4] clinical; 5] b
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-geo-geo-constraint-rule-60">
+                  id="tei-betamesaheft-geo-geo-constraint-rule-65">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -15446,7 +15511,7 @@ Sample values include: 1] proclaimed; 2] assumed; 3] verified; 4] clinical; 5] b
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-geo-geo-constraint-rule-61">
+                  id="tei-betamesaheft-geo-geo-constraint-rule-66">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -15461,7 +15526,7 @@ Sample values include: 1] proclaimed; 2] assumed; 3] verified; 4] clinical; 5] b
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-geo-geo-constraint-rule-62">
+                  id="tei-betamesaheft-geo-geo-constraint-rule-67">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -18790,7 +18855,7 @@ Sample values include: 1] proclaimed; 2] assumed; 3] verified; 4] clinical; 5] b
             <ref name="tei_desc"/>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-relation-relation-constraint-rule-63">
+                  id="tei-betamesaheft-relation-relation-constraint-rule-68">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -18810,7 +18875,7 @@ Sample values include: 1] proclaimed; 2] assumed; 3] verified; 4] clinical; 5] b
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-relation-activemutual-constraint-report-81">
+                  id="tei-betamesaheft-relation-activemutual-constraint-report-89">
             <rule context="tei:relation">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -18819,7 +18884,7 @@ Sample values include: 1] proclaimed; 2] assumed; 3] verified; 4] clinical; 5] b
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-relation-activepassive-constraint-report-82">
+                  id="tei-betamesaheft-relation-activepassive-constraint-report-90">
             <rule context="tei:relation">
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -20328,7 +20393,7 @@ given reading, in a textual variation. [12.1.4. Witness Information]</a:document
                             Guidelines</a> [12.1. The Apparatus Entry, Readings, and Witnesses]</a:documentation>
          <ref name="tei_macro.limitedContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-witness-witness-constraint-rule-64">
+                  id="tei-betamesaheft-witness-witness-constraint-rule-69">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -20350,7 +20415,7 @@ given reading, in a textual variation. [12.1.4. Witness Information]</a:document
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-witness-witness-constraint-rule-65">
+                  id="tei-betamesaheft-witness-witness-constraint-rule-70">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -20406,7 +20471,7 @@ or external to it.</a:documentation>
             </choice>
          </attribute>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-rule-66">
+                  id="tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-rule-71">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
