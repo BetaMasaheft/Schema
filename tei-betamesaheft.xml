@@ -2565,8 +2565,8 @@ End license statement: do not remove -->
                                 <valItem ident="DonationNote">
                                     <desc>note stating that the manuscript has been donated to an
                                         individual or to an institution. <ref
-                                            target="http://betamasaheft.eu/authority-files/foundation"
-                                            >foundation</ref></desc>
+                                            target="http://betamasaheft.eu/authority-files/DonationNote"
+                                            >DonationNote</ref></desc>
                                 </valItem>
                                 <valItem ident="OwnershipNote">
                                     <desc>Indicating that the book belongs to 1) an institution; 2)
@@ -2574,14 +2574,14 @@ End license statement: do not remove -->
                                         from rubricated and very regular, written in the main hands,
                                         to less formal notes in the margins, written in crude hands
                                         (also without the formula ዝመጽሐፍ፡ ዘ…). <ref
-                                            target="http://betamasaheft.eu/authority-files/foundation"
-                                            >foundation</ref></desc>
+                                            target="http://betamasaheft.eu/authority-files/OwnershipNote"
+                                            >OwnershipNote</ref></desc>
                                 </valItem>
                                 <valItem ident="PurchaseNote">
                                     <desc>note stating that the book has been purchased for money by
                                         an individual or an institution. <ref
-                                            target="http://betamasaheft.eu/authority-files/foundation"
-                                            >foundation</ref></desc>
+                                            target="http://betamasaheft.eu/authority-files/PurchaseNote"
+                                            >PurchaseNote</ref></desc>
                                 </valItem>
                                 <valItem ident="AcquisitionNote">
                                     <desc>Points only to the fact of the acquisition of the book or
@@ -2589,26 +2589,26 @@ End license statement: do not remove -->
                                         also be indicated. In some cases, the price and the source
                                         of the money can be specified. Includes the formula of the
                                         ownership note. <ref
-                                            target="http://betamasaheft.eu/authority-files/foundation"
-                                            >foundation</ref></desc>
+                                            target="http://betamasaheft.eu/authority-files/AcquisitionNote"
+                                            >AcquisitionNote</ref></desc>
                                 </valItem>
                                 <valItem ident="ReceiptNote">
                                     <desc>note written down as a receipt of a transaction of goods.
                                             <ref
-                                            target="http://betamasaheft.eu/authority-files/foundation"
-                                            >foundation</ref></desc>
+                                                target="http://betamasaheft.eu/authority-files/ReceiptNote"
+                                                >ReceiptNote</ref></desc>
                                 </valItem>
                                 <valItem ident="Admonition">
                                     <desc> note admonishing individuals to a righteous behavior. See
                                         also “Exhortation”. <ref
-                                            target="http://betamasaheft.eu/authority-files/foundation"
-                                            >foundation</ref></desc>
+                                            target="http://betamasaheft.eu/authority-files/Admonition"
+                                            >Admonition</ref></desc>
                                 </valItem>
                                 <valItem ident="LandGrant">
                                     <desc>note stating the concession of lands by an authority in
                                         favor of individuals or typically of institutions. <ref
-                                            target="http://betamasaheft.eu/authority-files/foundation"
-                                            >foundation</ref></desc>
+                                            target="http://betamasaheft.eu/authority-files/LandGrant"
+                                            >LandGrant</ref></desc>
                                 </valItem>
                                 <valItem ident="FoundationCharter">
                                     <desc>act of foundation of an institution. <ref
