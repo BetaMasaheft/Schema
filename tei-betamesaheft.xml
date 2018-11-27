@@ -2559,13 +2559,13 @@ End license statement: do not remove -->
                             <valList type="closed">
                                 <valItem ident="foundation">
                                     <desc> to be used for places and institutions <ref
-                                            target="http://betamasaheft.eu/authority-files/foundation"
+                                        target="http://betamasaheft.eu/authority-files/list?keyword=foundation"
                                             >foundation</ref></desc>
                                 </valItem>
                                 <valItem ident="DonationNote">
                                     <desc>note stating that the manuscript has been donated to an
                                         individual or to an institution. <ref
-                                            target="http://betamasaheft.eu/authority-files/DonationNote"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=DonationNote"
                                             >DonationNote</ref></desc>
                                 </valItem>
                                 <valItem ident="OwnershipNote">
@@ -2574,13 +2574,13 @@ End license statement: do not remove -->
                                         from rubricated and very regular, written in the main hands,
                                         to less formal notes in the margins, written in crude hands
                                         (also without the formula ዝመጽሐፍ፡ ዘ…). <ref
-                                            target="http://betamasaheft.eu/authority-files/OwnershipNote"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=OwnershipNote"
                                             >OwnershipNote</ref></desc>
                                 </valItem>
                                 <valItem ident="PurchaseNote">
                                     <desc>note stating that the book has been purchased for money by
                                         an individual or an institution. <ref
-                                            target="http://betamasaheft.eu/authority-files/PurchaseNote"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=PurchaseNote"
                                             >PurchaseNote</ref></desc>
                                 </valItem>
                                 <valItem ident="AcquisitionNote">
@@ -2589,30 +2589,30 @@ End license statement: do not remove -->
                                         also be indicated. In some cases, the price and the source
                                         of the money can be specified. Includes the formula of the
                                         ownership note. <ref
-                                            target="http://betamasaheft.eu/authority-files/AcquisitionNote"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=AcquisitionNote"
                                             >AcquisitionNote</ref></desc>
                                 </valItem>
                                 <valItem ident="ReceiptNote">
                                     <desc>note written down as a receipt of a transaction of goods.
                                             <ref
-                                                target="http://betamasaheft.eu/authority-files/ReceiptNote"
+                                                target="http://betamasaheft.eu/authority-files/list?keyword=ReceiptNote"
                                                 >ReceiptNote</ref></desc>
                                 </valItem>
                                 <valItem ident="Admonition">
                                     <desc> note admonishing individuals to a righteous behavior. See
                                         also “Exhortation”. <ref
-                                            target="http://betamasaheft.eu/authority-files/Admonition"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=Admonition"
                                             >Admonition</ref></desc>
                                 </valItem>
                                 <valItem ident="LandGrant">
                                     <desc>note stating the concession of lands by an authority in
                                         favor of individuals or typically of institutions. <ref
-                                            target="http://betamasaheft.eu/authority-files/LandGrant"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=LandGrant"
                                             >LandGrant</ref></desc>
                                 </valItem>
                                 <valItem ident="FoundationCharter">
                                     <desc>act of foundation of an institution. <ref
-                                            target="http://betamasaheft.eu/authority-files/FoundationCharter"
+                                        target="http://betamasaheft.eu/authority-files/list?keyword=FoundationCharter"
                                             >Foundation Charter</ref></desc>
                                 </valItem>
                                 <valItem ident="Genealogy">
@@ -2620,7 +2620,7 @@ End license statement: do not remove -->
                                         families or individual rulers; it can be a genealogy of the
                                         owner/donor of the book, independent or included into
                                         another note (frequently in a donation note). <ref
-                                            target="http://betamasaheft.eu/authority-files/Genealogy"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=Genealogy"
                                             >Genealogy</ref></desc>
                                 </valItem>
                                 <valItem ident="ScribalSignature">
@@ -2630,7 +2630,7 @@ End license statement: do not remove -->
                                         scribes notes their names in the bottom margin of the first
                                         page of a quire (but this is not by chance; it has to do
                                         with the manuscript production mode). <ref
-                                            target="http://betamasaheft.eu/authority-files/ScribalSignature"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=ScribalSignature"
                                             >Scribal Signature</ref></desc>
                                 </valItem>
                                 <valItem ident="Supplication">
@@ -2640,69 +2640,69 @@ End license statement: do not remove -->
                                         most cases, refers to the donor or owner of the book and
                                         his/her family members, but frequently it is difficult to
                                         understand who is meant. <ref
-                                            target="http://betamasaheft.eu/authority-files/Supplication"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=Supplication"
                                             >Supplication</ref></desc>
                                 </valItem>
                                 <valItem ident="Subscription">
                                     <desc>note added at the end of the main text concerning its
                                         completion. <ref
-                                            target="http://betamasaheft.eu/authority-files/Subscription"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=Subscription"
                                             >Subscription</ref></desc>
                                 </valItem>
                                 <valItem ident="Doxology">
                                     <desc>hymn or praise to God or other entities. <ref
-                                            target="http://betamasaheft.eu/authority-files/Doxology"
+                                        target="http://betamasaheft.eu/authority-files/list?keyword=Doxology"
                                             >Doxology</ref></desc>
                                 </valItem>
                                 <valItem ident="Exhortation">
                                     <desc>note addressed to the brethren in order to commemorate a
                                         saint, to celebrate a given feast or for educational
                                         purposes. <ref
-                                            target="http://betamasaheft.eu/authority-files/Exhortation"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=Exhortation"
                                             >Exhortation</ref></desc>
                                 </valItem>
                                 <valItem ident="Invocation">
                                     <desc>invocation against those who stole or erased the book or
                                         against other individuals. Not very different from
                                         “Condemnation”. <ref
-                                            target="http://betamasaheft.eu/authority-files/Invocation"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=Invocation"
                                             >Invocation</ref></desc>
                                 </valItem>
                                 <valItem ident="Inventory">
                                     <desc>Lists of books, or church utensils (in most of the cases
                                         both together), or objects donated by someone, in Gǝʿǝz or
                                         Amharic. <ref
-                                            target="http://betamasaheft.eu/authority-files/Inventory"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=Inventory"
                                             >Inventory</ref></desc>
                                 </valItem>
                                 <valItem ident="ScribalNoteCommencing">
                                     <desc>scribe’s note on commencing the work <ref
-                                            target="http://betamasaheft.eu/authority-files/ScribalNoteCommencing"
+                                        target="http://betamasaheft.eu/authority-files/list?keyword=ScribalNoteCommencing"
                                             >Scribal Note - Commencing</ref></desc>
                                 </valItem>
                                 <valItem ident="ScribalNoteOrdering">
                                     <desc> scribe’s note on ordering of the copying <ref
-                                            target="http://betamasaheft.eu/authority-files/ScribalNoteOrdering"
+                                        target="http://betamasaheft.eu/authority-files/list?keyword=ScribalNoteOrdering"
                                             >Scribal Note - Ordering</ref></desc>
                                 </valItem>
                                 <valItem ident="ScribalNoteCommissioning">
                                     <desc>scribe’s note on commissioning of the writing <ref
-                                            target="http://betamasaheft.eu/authority-files/ScribalNoteCommissioning"
+                                        target="http://betamasaheft.eu/authority-files/list?keyword=ScribalNoteCommissioning"
                                             >Scribal Note - Commissioning</ref></desc>
                                 </valItem>
                                 <valItem ident="ScribalNoteCompleting">
                                     <desc>scribe’s note on completing the writing <ref
-                                            target="http://betamasaheft.eu/authority-files/ScribalNoteCompleting"
+                                        target="http://betamasaheft.eu/authority-files/list?keyword=ScribalNoteCompleting"
                                             >Scribal Note - Completing</ref></desc>
                                 </valItem>
                                 <valItem ident="ScribalNoteAssigningLand">
                                     <desc> scribe’s note on assigning of land. <ref
-                                            target="http://betamasaheft.eu/authority-files/ScribalNoteAssigningLand"
+                                        target="http://betamasaheft.eu/authority-files/list?keyword=ScribalNoteAssigningLand"
                                             >Scribal Note - Assigning Land</ref></desc>
                                 </valItem>
                                 <valItem ident="ScribalNoteBequeathing">
                                     <desc>scribe’s note on bequeathing. <ref
-                                            target="http://betamasaheft.eu/authority-files/ScribalNoteBequeathing"
+                                        target="http://betamasaheft.eu/authority-files/list?keyword=ScribalNoteBequeathing"
                                             >Scribal Note - Bequeathing</ref></desc>
                                 </valItem>
                                 <valItem ident="RecordReconciliation">
@@ -2710,7 +2710,7 @@ End license statement: do not remove -->
                                         to the next category; usually in Amharic, very extensive,
                                         very difficult to understand. Frequently with the date of
                                         the writing, names of the persons involved. <ref
-                                            target="http://betamasaheft.eu/authority-files/RecordReconciliation"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=RecordReconciliation"
                                             >Record Reconciliation</ref></desc>
                                 </valItem>
                                 <valItem ident="RecordLitigation">
@@ -2718,41 +2718,41 @@ End license statement: do not remove -->
                                         of the dispute not clearly indicated; only the dispute
                                         itself is referred to. Sometimes the word “dispute” was also
                                         used. <ref
-                                            target="http://betamasaheft.eu/authority-files/RecordLitigation"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=RecordLitigation"
                                             >Record Litigation</ref></desc>
                                 </valItem>
                                 <valItem ident="RecordTransaction">
                                     <desc>text documenting an act of selling or buying something, in
                                         many cases a house and land, sometimes a book. <ref
-                                            target="http://betamasaheft.eu/authority-files/RecordTransaction"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=RecordTransaction"
                                             >Record Transaction</ref></desc>
                                 </valItem>
                                 <valItem ident="RecordDistribution">
                                     <desc>documentary record concerning the distribution of goods or
                                         lands. <ref
-                                            target="http://betamasaheft.eu/authority-files/RecordDistribution"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=RecordDistribution"
                                             >Record Distribution</ref></desc>
                                 </valItem>
                                 <valItem ident="RecordGuarantors">
                                     <desc>documentary record concerning the guarantors of a
                                         transaction or a loan. <ref
-                                            target="http://betamasaheft.eu/authority-files/RecordGuarantors"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=RecordGuarantors"
                                             >Record Guarantors</ref></desc>
                                 </valItem>
                                 <valItem ident="Record">
                                     <desc>generic note of a documentary, official character. <ref
-                                            target="http://betamasaheft.eu/authority-files/Record"
+                                        target="http://betamasaheft.eu/authority-files/list?keyword=Record"
                                             >Record</ref></desc>
                                 </valItem>
                                 <valItem ident="ScribalSupplication">
                                     <desc>scribe’s entreat to God. <ref
-                                            target="http://betamasaheft.eu/authority-files/ScribalSupplication"
+                                        target="http://betamasaheft.eu/authority-files/list?keyword=ScribalSupplication"
                                             >Scribal Supplication</ref></desc>
                                 </valItem>
                                 <valItem ident="Unclear">
                                     <desc>Content is too vague to assign another category or resists
                                         any interpretation. <ref
-                                            target="http://betamasaheft.eu/authority-files/Unclear"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=Unclear"
                                             >Unclear</ref></desc>
                                 </valItem>
                                 <valItem ident="GuarantorsList">
@@ -2761,7 +2761,7 @@ End license statement: do not remove -->
                                         describe their role. Sometimes a list of
                                         guarantors/witnesses may be included into an acquisition
                                         note; normally into a litigation/reconciliation record. <ref
-                                            target="http://betamasaheft.eu/authority-files/GuarantorsList"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=GuarantorsList"
                                             >Guarantors List</ref></desc>
                                 </valItem>
                                 <valItem ident="CommemorativeNote">
@@ -2773,26 +2773,26 @@ End license statement: do not remove -->
                                         commemorative practice. Sometimes they go with ʾarke-hymns
                                         (as they are in the regular Synaxarion), or are just
                                         ʾarke-hymns. <ref
-                                            target="http://betamasaheft.eu/authority-files/CommemorativeNote"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=CommemorativeNote"
                                             >Commemorative Note</ref></desc>
                                 </valItem>
                                 <valItem ident="Condemnation">
                                     <desc>note condemning those who stole the book or erased it.
                                             <ref
-                                            target="http://betamasaheft.eu/authority-files/Condemnation"
+                                                target="http://betamasaheft.eu/authority-files/list?keyword=Condemnation"
                                             >Condemnation</ref></desc>
                                 </valItem>
                                 <valItem ident="ProtectivePrayer">
                                     <desc>prayer to be read or carried along for protective
                                         purposes. <ref
-                                            target="http://betamasaheft.eu/authority-files/ProtectivePrayer"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=ProtectivePrayer"
                                             >Protective Prayer</ref></desc>
                                 </valItem>
                                 <valItem ident="Poem">
                                     <desc>Rarely used without further specification, otherwise the
                                         term “hymn” is applied (seems to be more suitable for
                                         written religious poetry). <ref
-                                            target="http://betamasaheft.eu/authority-files/Poem"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=Poem"
                                             >Poem</ref></desc>
                                 </valItem>
                                 <valItem ident="PoemQene">
@@ -2803,7 +2803,7 @@ End license statement: do not remove -->
                                         even the type is indicated. But no one tried to check if
                                         these poems formally correspond to what we know today as
                                         qene-forms. <ref
-                                            target="http://betamasaheft.eu/authority-files/PoemQene"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=PoemQene"
                                             >Poem Qene</ref></desc>
                                 </valItem>
                                 <valItem ident="PoemSalam">
@@ -2811,20 +2811,20 @@ End license statement: do not remove -->
                                         There is a confusion here, since malkəʾ also include the
                                         words salam la-…, and there are longer composition with
                                         stanzas starting with salam la- <ref
-                                            target="http://betamasaheft.eu/authority-files/PoemSalam"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=PoemSalam"
                                             >Poem Salam</ref></desc>
                                 </valItem>
                                 <valItem ident="PoemArke">
                                     <desc>A short hymn of ca. 5 lines following the commemorative
                                         notice in the Synaxarion; can circulate independently. <ref
-                                            target="http://betamasaheft.eu/authority-files/PoemArke"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=PoemArke"
                                             >Poem Arke</ref>
                                     </desc>
                                 </valItem>
                                 <valItem ident="StampExlibris">
                                     <desc>stamp affixed by the owning institution, e.g., a library.
                                             <ref
-                                            target="http://betamasaheft.eu/authority-files/StampExlibris"
+                                                target="http://betamasaheft.eu/authority-files/list?keyword=StampExlibris"
                                             >Stamp Exlibris</ref></desc>
                                 </valItem>
                                 <valItem ident="CalendaricNote">
@@ -2834,13 +2834,13 @@ End license statement: do not remove -->
                                         with the dates, or lists of fasting periods. Some notes can
                                         be found also by means of the key-word “computus”. Poorly
                                         understood. <ref
-                                            target="http://betamasaheft.eu/authority-files/CalendaricNote"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=CalendaricNote"
                                             >Calendaric Note</ref></desc>
                                 </valItem>
                                 <valItem ident="Excerpt">
                                     <desc>“(Name of the work), excerpt from ”, i.e. the source
                                         should be indicated. <ref
-                                            target="http://betamasaheft.eu/authority-files/Excerpt"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=Excerpt"
                                             >Excerpt</ref></desc>
                                 </valItem>
                                 <valItem ident="Letter">
@@ -2850,26 +2850,26 @@ End license statement: do not remove -->
                                         to institutions and communities. Some libraries still
                                         preserve the paper letters from the time of Hayla Sellase I.
                                             <ref
-                                            target="http://betamasaheft.eu/authority-files/Letter"
+                                                target="http://betamasaheft.eu/authority-files/list?keyword=Letter"
                                             >Letter</ref>
                                     </desc>
                                 </valItem>
                                 <valItem ident="MagicFormula">
                                     <desc>set form of words to be recited or carried along for
                                         healing and protecting. <ref
-                                            target="http://betamasaheft.eu/authority-files/MagicFormula"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=MagicFormula"
                                             >Magic Formula</ref></desc>
                                 </valItem>
                                 <valItem ident="MagicText">
                                     <desc>elaborate note to be recited or carried along for healing
                                         and protecting. <ref
-                                            target="http://betamasaheft.eu/authority-files/MagicText"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=MagicText"
                                             >Magic Text</ref></desc>
                                 </valItem>
                                 <valItem ident="Comment">
                                     <desc>note added at a later stage in order to comment word or
                                         passages of the main text. See also “Gloss”. <ref
-                                            target="http://betamasaheft.eu/authority-files/Comment"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=Comment"
                                             >Comment</ref></desc>
                                 </valItem>
                                 <valItem ident="Correction">
@@ -2879,7 +2879,7 @@ End license statement: do not remove -->
                                         omitted passages, words or letters (using various forms of
                                         the tamallas-sign), and corrections written over erasures
                                         seem to be the most frequent. <ref
-                                            target="http://betamasaheft.eu/authority-files/Correction"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=Correction"
                                             >Correction</ref></desc>
                                 </valItem>
                                 <valItem ident="Gloss">
@@ -2889,13 +2889,13 @@ End license statement: do not remove -->
                                         Gǝʿǝz, or sometimes longer passages). The big problem is to
                                         understand that the writing is a true gloss and not a
                                         correction or something else. <ref
-                                            target="http://betamasaheft.eu/authority-files/Gloss"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=Gloss"
                                             >Gloss</ref></desc>
                                 </valItem>
                                 <valItem ident="Excommunication">
                                     <desc>note excommunicating an individual from a religious
                                         community, e.g., a monastery. <ref
-                                            target="http://betamasaheft.eu/authority-files/Excommunication"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=Excommunication"
                                             >Excommunication</ref></desc>
                                 </valItem>
                                 <valItem ident="GuestText">
@@ -2906,7 +2906,7 @@ End license statement: do not remove -->
                                         written on guard leaves, sometimes even in the reversed
                                         direction or transgressing the codicological settings of the
                                         main texts in any different way. <ref
-                                            target="http://betamasaheft.eu/authority-files/GuestText"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=GuestText"
                                             >Guest Text</ref></desc>
                                 </valItem>
                                 <valItem ident="MalkeHymn">
@@ -2914,7 +2914,7 @@ End license statement: do not remove -->
                                         “limbs” of a saint (but there are also Malkeʾ for the
                                         Trinity, Covenant of Mercy, Jesus, St. Mary, even for
                                         literary works, icons etc.). <ref
-                                            target="http://betamasaheft.eu/authority-files/MalkeHymn"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=MalkeHymn"
                                             >Malke Hymn</ref></desc>
                                 </valItem>
                                 <valItem ident="Directive">
@@ -2923,31 +2923,31 @@ End license statement: do not remove -->
                                         service/liturgy be carried out. Technical directives only,
                                         other formulas. The words በል, አንብ are frequently included.
                                             <ref
-                                            target="http://betamasaheft.eu/authority-files/Directive"
+                                                target="http://betamasaheft.eu/authority-files/list?keyword=Directive"
                                             >Directive</ref></desc>
                                 </valItem>
                                 <valItem ident="Asmat">
                                     <desc>Sometimes developed, with the formalized incipit and
                                         explicit, sometimes nothing more than a short string of
                                         “hidden God’s names”, written in a crude hand. <ref
-                                            target="http://betamasaheft.eu/authority-files/Asmat"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=Asmat"
                                             >Asmat</ref></desc>
                                 </valItem>
                                 <valItem ident="CustomaryLaw">
                                     <desc>Rare, but important records explaining the local customary
                                         law. Usually in Amharic, difficult to understand. <ref
-                                            target="http://betamasaheft.eu/authority-files/CustomaryLaw"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=CustomaryLaw"
                                             >Customary Law</ref></desc>
                                 </valItem>
                                 <valItem ident="Statutes">
                                     <desc>Regulations, statutes, constitutions of the churches;
                                         monastic rules. <ref
-                                            target="http://betamasaheft.eu/authority-files/Statutes"
+                                            target="http://betamasaheft.eu/authority-files/list?keyword=Statutes"
                                             >Statutes</ref></desc>
                                 </valItem>
                                 <valItem ident="MixedNote">
                                     <desc>Notes difficult to classify. <ref
-                                            target="http://betamasaheft.eu/authority-files/MixedNote"
+                                        target="http://betamasaheft.eu/authority-files/list?keyword=MixedNote"
                                             >Mixed Note</ref></desc>
                                 </valItem>
                             </valList>

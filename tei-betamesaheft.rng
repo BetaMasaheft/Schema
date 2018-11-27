@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-11-27T10:44:25Z. .
+Schema generated from ODD source 2018-11-27T10:49:00Z. .
 TEI Edition: Version 3.4.0. Last updated on
 	23rd July 2018, revision 1fa0b54
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
@@ -4110,12 +4110,12 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                <choice>
                   <value>foundation</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"> to be used for places and institutions <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/foundation">foundation</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=foundation">foundation</a>
                   </a:documentation>
                   <value>DonationNote</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note stating that the manuscript has been donated to an
                                         individual or to an institution. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/DonationNote">DonationNote</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=DonationNote">DonationNote</a>
                   </a:documentation>
                   <value>OwnershipNote</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Indicating that the book belongs to 1) an institution; 2)
@@ -4123,12 +4123,12 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                                         from rubricated and very regular, written in the main hands,
                                         to less formal notes in the margins, written in crude hands
                                         (also without the formula ዝመጽሐፍ፡ ዘ…). <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/OwnershipNote">OwnershipNote</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=OwnershipNote">OwnershipNote</a>
                   </a:documentation>
                   <value>PurchaseNote</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note stating that the book has been purchased for money by
                                         an individual or an institution. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/PurchaseNote">PurchaseNote</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=PurchaseNote">PurchaseNote</a>
                   </a:documentation>
                   <value>AcquisitionNote</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Points only to the fact of the acquisition of the book or
@@ -4136,33 +4136,33 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                                         also be indicated. In some cases, the price and the source
                                         of the money can be specified. Includes the formula of the
                                         ownership note. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/AcquisitionNote">AcquisitionNote</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=AcquisitionNote">AcquisitionNote</a>
                   </a:documentation>
                   <value>ReceiptNote</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note written down as a receipt of a transaction of goods.
                                             <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/ReceiptNote">ReceiptNote</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=ReceiptNote">ReceiptNote</a>
                   </a:documentation>
                   <value>Admonition</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"> note admonishing individuals to a righteous behavior. See
                                         also “Exhortation”. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Admonition">Admonition</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Admonition">Admonition</a>
                   </a:documentation>
                   <value>LandGrant</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note stating the concession of lands by an authority in
                                         favor of individuals or typically of institutions. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/LandGrant">LandGrant</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=LandGrant">LandGrant</a>
                   </a:documentation>
                   <value>FoundationCharter</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">act of foundation of an institution. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/FoundationCharter">Foundation Charter</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=FoundationCharter">Foundation Charter</a>
                   </a:documentation>
                   <value>Genealogy</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">It can be a separate genealogy of local lineages or ruling
                                         families or individual rulers; it can be a genealogy of the
                                         owner/donor of the book, independent or included into
                                         another note (frequently in a donation note). <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Genealogy">Genealogy</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Genealogy">Genealogy</a>
                   </a:documentation>
                   <value>ScribalSignature</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The name of the scribe written down. Sometimes the purpose
@@ -4171,7 +4171,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                                         scribes notes their names in the bottom margin of the first
                                         page of a quire (but this is not by chance; it has to do
                                         with the manuscript production mode). <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/ScribalSignature">Scribal Signature</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=ScribalSignature">Scribal Signature</a>
                   </a:documentation>
                   <value>Supplication</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A short prayer for (the souls) of individuals. It is not
@@ -4180,100 +4180,100 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                                         most cases, refers to the donor or owner of the book and
                                         his/her family members, but frequently it is difficult to
                                         understand who is meant. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Supplication">Supplication</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Supplication">Supplication</a>
                   </a:documentation>
                   <value>Subscription</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note added at the end of the main text concerning its
                                         completion. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Subscription">Subscription</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Subscription">Subscription</a>
                   </a:documentation>
                   <value>Doxology</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">hymn or praise to God or other entities. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Doxology">Doxology</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Doxology">Doxology</a>
                   </a:documentation>
                   <value>Exhortation</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note addressed to the brethren in order to commemorate a
                                         saint, to celebrate a given feast or for educational
                                         purposes. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Exhortation">Exhortation</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Exhortation">Exhortation</a>
                   </a:documentation>
                   <value>Invocation</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">invocation against those who stole or erased the book or
                                         against other individuals. Not very different from
                                         “Condemnation”. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Invocation">Invocation</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Invocation">Invocation</a>
                   </a:documentation>
                   <value>Inventory</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Lists of books, or church utensils (in most of the cases
                                         both together), or objects donated by someone, in Gǝʿǝz or
                                         Amharic. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Inventory">Inventory</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Inventory">Inventory</a>
                   </a:documentation>
                   <value>ScribalNoteCommencing</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scribe’s note on commencing the work <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/ScribalNoteCommencing">Scribal Note - Commencing</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=ScribalNoteCommencing">Scribal Note - Commencing</a>
                   </a:documentation>
                   <value>ScribalNoteOrdering</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"> scribe’s note on ordering of the copying <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/ScribalNoteOrdering">Scribal Note - Ordering</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=ScribalNoteOrdering">Scribal Note - Ordering</a>
                   </a:documentation>
                   <value>ScribalNoteCommissioning</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scribe’s note on commissioning of the writing <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/ScribalNoteCommissioning">Scribal Note - Commissioning</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=ScribalNoteCommissioning">Scribal Note - Commissioning</a>
                   </a:documentation>
                   <value>ScribalNoteCompleting</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scribe’s note on completing the writing <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/ScribalNoteCompleting">Scribal Note - Completing</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=ScribalNoteCompleting">Scribal Note - Completing</a>
                   </a:documentation>
                   <value>ScribalNoteAssigningLand</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"> scribe’s note on assigning of land. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/ScribalNoteAssigningLand">Scribal Note - Assigning Land</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=ScribalNoteAssigningLand">Scribal Note - Assigning Land</a>
                   </a:documentation>
                   <value>ScribalNoteBequeathing</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scribe’s note on bequeathing. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/ScribalNoteBequeathing">Scribal Note - Bequeathing</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=ScribalNoteBequeathing">Scribal Note - Bequeathing</a>
                   </a:documentation>
                   <value>RecordReconciliation</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Records concerning a settlement of a legal case, related
                                         to the next category; usually in Amharic, very extensive,
                                         very difficult to understand. Frequently with the date of
                                         the writing, names of the persons involved. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/RecordReconciliation">Record Reconciliation</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=RecordReconciliation">Record Reconciliation</a>
                   </a:documentation>
                   <value>RecordLitigation</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Similar to Reconciliation Records, but with the settlement
                                         of the dispute not clearly indicated; only the dispute
                                         itself is referred to. Sometimes the word “dispute” was also
                                         used. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/RecordLitigation">Record Litigation</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=RecordLitigation">Record Litigation</a>
                   </a:documentation>
                   <value>RecordTransaction</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">text documenting an act of selling or buying something, in
                                         many cases a house and land, sometimes a book. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/RecordTransaction">Record Transaction</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=RecordTransaction">Record Transaction</a>
                   </a:documentation>
                   <value>RecordDistribution</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documentary record concerning the distribution of goods or
                                         lands. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/RecordDistribution">Record Distribution</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=RecordDistribution">Record Distribution</a>
                   </a:documentation>
                   <value>RecordGuarantors</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">documentary record concerning the guarantors of a
                                         transaction or a loan. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/RecordGuarantors">Record Guarantors</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=RecordGuarantors">Record Guarantors</a>
                   </a:documentation>
                   <value>Record</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">generic note of a documentary, official character. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Record">Record</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Record">Record</a>
                   </a:documentation>
                   <value>ScribalSupplication</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">scribe’s entreat to God. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/ScribalSupplication">Scribal Supplication</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=ScribalSupplication">Scribal Supplication</a>
                   </a:documentation>
                   <value>Unclear</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Content is too vague to assign another category or resists
                                         any interpretation. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Unclear">Unclear</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Unclear">Unclear</a>
                   </a:documentation>
                   <value>GuarantorsList</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"> Lists of individuals, sometimes independent from any
@@ -4281,7 +4281,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                                         describe their role. Sometimes a list of
                                         guarantors/witnesses may be included into an acquisition
                                         note; normally into a litigation/reconciliation record. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/GuarantorsList">Guarantors List</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=GuarantorsList">Guarantors List</a>
                   </a:documentation>
                   <value>CommemorativeNote</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The term stands for an extract from the Synaxarion (i.e.,
@@ -4292,23 +4292,23 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                                         commemorative practice. Sometimes they go with ʾarke-hymns
                                         (as they are in the regular Synaxarion), or are just
                                         ʾarke-hymns. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/CommemorativeNote">Commemorative Note</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=CommemorativeNote">Commemorative Note</a>
                   </a:documentation>
                   <value>Condemnation</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note condemning those who stole the book or erased it.
                                             <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Condemnation">Condemnation</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Condemnation">Condemnation</a>
                   </a:documentation>
                   <value>ProtectivePrayer</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">prayer to be read or carried along for protective
                                         purposes. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/ProtectivePrayer">Protective Prayer</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=ProtectivePrayer">Protective Prayer</a>
                   </a:documentation>
                   <value>Poem</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Rarely used without further specification, otherwise the
                                         term “hymn” is applied (seems to be more suitable for
                                         written religious poetry). <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Poem">Poem</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Poem">Poem</a>
                   </a:documentation>
                   <value>PoemQene</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Despite wide-spread opinion that qene is a poetic
@@ -4318,24 +4318,24 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                                         even the type is indicated. But no one tried to check if
                                         these poems formally correspond to what we know today as
                                         qene-forms. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/PoemQene">Poem Qene</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=PoemQene">Poem Qene</a>
                   </a:documentation>
                   <value>PoemSalam</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Short hymn starting with words ሰላም፡ አብል፡ ለ... or ሰላም፡ ለ...
                                         There is a confusion here, since malkəʾ also include the
                                         words salam la-…, and there are longer composition with
                                         stanzas starting with salam la- <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/PoemSalam">Poem Salam</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=PoemSalam">Poem Salam</a>
                   </a:documentation>
                   <value>PoemArke</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A short hymn of ca. 5 lines following the commemorative
                                         notice in the Synaxarion; can circulate independently. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/PoemArke">Poem Arke</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=PoemArke">Poem Arke</a>
                                     </a:documentation>
                   <value>StampExlibris</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">stamp affixed by the owning institution, e.g., a library.
                                             <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/StampExlibris">Stamp Exlibris</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=StampExlibris">Stamp Exlibris</a>
                   </a:documentation>
                   <value>CalendaricNote</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Note in whatever way related to the calendar or computus,
@@ -4344,12 +4344,12 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                                         with the dates, or lists of fasting periods. Some notes can
                                         be found also by means of the key-word “computus”. Poorly
                                         understood. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/CalendaricNote">Calendaric Note</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=CalendaricNote">Calendaric Note</a>
                   </a:documentation>
                   <value>Excerpt</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">“(Name of the work), excerpt from ”, i.e. the source
                                         should be indicated. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Excerpt">Excerpt</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Excerpt">Excerpt</a>
                   </a:documentation>
                   <value>Letter</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"> Written message looking like a sample of the epistolary
@@ -4358,22 +4358,22 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                                         to institutions and communities. Some libraries still
                                         preserve the paper letters from the time of Hayla Sellase I.
                                             <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Letter">Letter</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Letter">Letter</a>
                                     </a:documentation>
                   <value>MagicFormula</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">set form of words to be recited or carried along for
                                         healing and protecting. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/MagicFormula">Magic Formula</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=MagicFormula">Magic Formula</a>
                   </a:documentation>
                   <value>MagicText</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">elaborate note to be recited or carried along for healing
                                         and protecting. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/MagicText">Magic Text</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=MagicText">Magic Text</a>
                   </a:documentation>
                   <value>Comment</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note added at a later stage in order to comment word or
                                         passages of the main text. See also “Gloss”. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Comment">Comment</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Comment">Comment</a>
                   </a:documentation>
                   <value>Correction</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Found in many manuscripts, sometimes in significant
@@ -4382,7 +4382,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                                         omitted passages, words or letters (using various forms of
                                         the tamallas-sign), and corrections written over erasures
                                         seem to be the most frequent. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Correction">Correction</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Correction">Correction</a>
                   </a:documentation>
                   <value>Gloss</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Refers to a note aimed to solve a purely language
@@ -4391,12 +4391,12 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                                         Gǝʿǝz, or sometimes longer passages). The big problem is to
                                         understand that the writing is a true gloss and not a
                                         correction or something else. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Gloss">Gloss</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Gloss">Gloss</a>
                   </a:documentation>
                   <value>Excommunication</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">note excommunicating an individual from a religious
                                         community, e.g., a monastery. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Excommunication">Excommunication</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Excommunication">Excommunication</a>
                   </a:documentation>
                   <value>GuestText</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Any literary work /text which has been added to the
@@ -4406,14 +4406,14 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                                         written on guard leaves, sometimes even in the reversed
                                         direction or transgressing the codicological settings of the
                                         main texts in any different way. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/GuestText">Guest Text</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=GuestText">Guest Text</a>
                   </a:documentation>
                   <value>MalkeHymn</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The hymn of composed of some 50 stanzas, describing the
                                         “limbs” of a saint (but there are also Malkeʾ for the
                                         Trinity, Covenant of Mercy, Jesus, St. Mary, even for
                                         literary works, icons etc.). <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/MalkeHymn">Malke Hymn</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=MalkeHymn">Malke Hymn</a>
                   </a:documentation>
                   <value>Directive</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Mostly in Amharic; usually addressed to the ministers as
@@ -4421,27 +4421,27 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                                         service/liturgy be carried out. Technical directives only,
                                         other formulas. The words በል, አንብ are frequently included.
                                             <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Directive">Directive</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Directive">Directive</a>
                   </a:documentation>
                   <value>Asmat</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sometimes developed, with the formalized incipit and
                                         explicit, sometimes nothing more than a short string of
                                         “hidden God’s names”, written in a crude hand. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Asmat">Asmat</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Asmat">Asmat</a>
                   </a:documentation>
                   <value>CustomaryLaw</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Rare, but important records explaining the local customary
                                         law. Usually in Amharic, difficult to understand. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/CustomaryLaw">Customary Law</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=CustomaryLaw">Customary Law</a>
                   </a:documentation>
                   <value>Statutes</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Regulations, statutes, constitutions of the churches;
                                         monastic rules. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/Statutes">Statutes</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=Statutes">Statutes</a>
                   </a:documentation>
                   <value>MixedNote</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Notes difficult to classify. <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="http://betamasaheft.eu/authority-files/MixedNote">Mixed Note</a>
+                        href="http://betamasaheft.eu/authority-files/list?keyword=MixedNote">Mixed Note</a>
                   </a:documentation>
                </choice>
             </attribute>
