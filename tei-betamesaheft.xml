@@ -3743,6 +3743,12 @@ End license statement: do not remove -->
                     <attList>
                         <attDef ident="who" mode="replace" usage="req">
                             <valList type="closed">
+                                <valItem ident="SK" ><desc>Sergey Kim</desc></valItem>
+                                <valItem ident="MGO"><desc>Meseret G. Oldjira</desc></valItem>
+                                <valItem ident="EF" ><desc>Éloi Ficquet</desc></valItem>
+                                <valItem ident="BC" ><desc>Brando Carmen</desc></valItem>
+                                <valItem ident="MA" ><desc>Martina Ambu</desc></valItem>
+                                <valItem ident="AC"><desc>Amélie Chekroun</desc></valItem>
                                 <valItem ident="AB">
                                     <desc>Alessandro Bausi</desc>
                                 </valItem>

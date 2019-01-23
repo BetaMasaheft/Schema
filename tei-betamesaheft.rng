@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-11-27T10:49:00Z. .
+Schema generated from ODD source 2019-01-23T17:50:59Z. .
 TEI Edition: Version 3.4.0. Last updated on
 	23rd July 2018, revision 1fa0b54
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
@@ -8985,7 +8985,7 @@ represented within a text. [2.4.2. Language Usage 2.4. The Profile Description 1
          <optional>
             <attribute name="ident">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  Sample values include: 1] am; 2] om; 3] ar; 4] hy; 5] cop; 6] geo; 7] la; 8] fr; 9] grc; 10] gez; 11] he; 12] it; 13] fa; 14] syr; 15] tu; 16] ti; 17] en; 18] sv; 19] ru; 20] de; 21] es; 22] pal; 23] gft; 24] awn; 25] pt; 26] pl</a:documentation>
+Sample values include: 1] am; 2] om; 3] ar; 4] hy; 5] cop; 6] geo; 7] la; 8] fr; 9] grc; 10] gez; 11] he; 12] it; 13] fa; 14] syr; 15] tu; 16] ti; 17] en; 18] sv; 19] ru; 20] de; 21] es; 22] pal; 23] gft; 24] awn; 25] pt; 26] pl</a:documentation>
                <text/>
             </attribute>
          </optional>
@@ -9253,6 +9253,18 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
          <attribute name="who">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             <choice>
+               <value>SK</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sergey Kim</a:documentation>
+               <value>MGO</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Meseret G. Oldjira</a:documentation>
+               <value>EF</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Éloi Ficquet</a:documentation>
+               <value>BC</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Brando Carmen</a:documentation>
+               <value>MA</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Martina Ambu</a:documentation>
+               <value>AC</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Amélie Chekroun</a:documentation>
                <value>AB</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Alessandro Bausi</a:documentation>
                <value>ABr</value>
