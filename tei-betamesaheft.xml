@@ -1881,7 +1881,7 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="title">
                         <constraint>
                             <sch:rule context="tei:title[@ref]">
-
+                                <sch:report test="matches(@ref, '\s+')">Please remove spaces from the value of attribute ref. Only one value is allowed.</sch:report>
                                 <sch:report test="not(matches(@ref, 'LIT\d+\w+') or matches(@ref, 'NAR\d+\w+'))">The textual or narrative unit ID you have entered is wrong. Textual units IDs must match the pattern LIT\d+\w+, narrative units must match the pattern  NAR\d+\w+.</sch:report>
                             </sch:rule>
                             <sch:rule
