@@ -5,10 +5,10 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2019-01-29T13:47:38Z. .
-TEI Edition: Version 3.4.0. Last updated on
-	23rd July 2018, revision 1fa0b54
-TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
+Schema generated from ODD source 2019-01-30T08:37:03Z. .
+TEI Edition: Version 3.5.0. Last updated on
+	29th January 2019, revision 3c0c64ec4
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
   
 --><!--[http://creativecommons.org/licenses/by-sa/4.0/] This file is licensed under the Creative Commons Attribution-ShareAlike 4.0. -->
    <define name="tei_macro.paraContent">
@@ -38,6 +38,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
          <choice>
             <text/>
             <ref name="tei_model.gLike"/>
+            <ref name="tei_model.qLike"/>
             <ref name="tei_model.phrase"/>
             <ref name="tei_model.global"/>
          </choice>
@@ -730,19 +731,6 @@ Sample values include: 1] approved; 2] candidate; 3] cleared; 4] deprecated; 5] 
          <attribute name="dur">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(duration) indicates the length of this element in time.</a:documentation>
             <data type="duration"/>
-         </attribute>
-      </optional>
-   </define>
-   <define name="tei_att.duration.iso.attributes">
-      <ref name="tei_att.duration.iso.attribute.dur-iso"/>
-   </define>
-   <define name="tei_att.duration.iso.attribute.dur-iso">
-      <optional>
-         <attribute name="dur-iso">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(duration) indicates the length of this element in time.</a:documentation>
-            <data type="token">
-               <param name="pattern">[0-9.,DHMPRSTWYZ/:+\-]+</param>
-            </data>
          </attribute>
       </optional>
    </define>
@@ -2771,6 +2759,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_listEvent"/>
          <ref name="tei_listPerson"/>
          <ref name="tei_listPlace"/>
+         <ref name="tei_listObject"/>
          <ref name="tei_listNym"/>
          <ref name="tei_listApp"/>
          <ref name="tei_listWit"/>
@@ -2783,6 +2772,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_listEvent"/>
          <ref name="tei_listPerson"/>
          <ref name="tei_listPlace"/>
+         <ref name="tei_listObject"/>
          <ref name="tei_listNym"/>
          <ref name="tei_listApp"/>
          <ref name="tei_listWit"/>
@@ -2794,6 +2784,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <ref name="tei_listEvent"/>
       <ref name="tei_listPerson"/>
       <ref name="tei_listPlace"/>
+      <ref name="tei_listObject"/>
       <ref name="tei_listNym"/>
       <ref name="tei_listApp"/>
       <ref name="tei_listWit"/>
@@ -2813,6 +2804,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </optional>
       <optional>
          <ref name="tei_listPlace"/>
+      </optional>
+      <optional>
+         <ref name="tei_listObject"/>
       </optional>
       <optional>
          <ref name="tei_listNym"/>
@@ -2841,6 +2835,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_listPlace"/>
       </zeroOrMore>
       <zeroOrMore>
+         <ref name="tei_listObject"/>
+      </zeroOrMore>
+      <zeroOrMore>
          <ref name="tei_listNym"/>
       </zeroOrMore>
       <zeroOrMore>
@@ -2865,6 +2862,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_listPlace"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_listObject"/>
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_listNym"/>
@@ -3515,6 +3515,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_rs"/>
          <ref name="tei_idno"/>
          <ref name="tei_model.persNamePart"/>
+         <ref name="tei_objectName"/>
       </choice>
    </define>
    <define name="tei_model.nameLike_alternation">
@@ -3525,6 +3526,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_rs"/>
          <ref name="tei_idno"/>
          <ref name="tei_model.persNamePart_alternation"/>
+         <ref name="tei_objectName"/>
       </choice>
    </define>
    <define name="tei_model.nameLike_sequence">
@@ -3534,6 +3536,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <ref name="tei_rs"/>
       <ref name="tei_idno"/>
       <ref name="tei_model.persNamePart_sequence"/>
+      <ref name="tei_objectName"/>
    </define>
    <define name="tei_model.nameLike_sequenceOptional">
       <optional>
@@ -3553,6 +3556,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </optional>
       <optional>
          <ref name="tei_model.persNamePart_sequenceOptional"/>
+      </optional>
+      <optional>
+         <ref name="tei_objectName"/>
       </optional>
    </define>
    <define name="tei_model.nameLike_sequenceOptionalRepeatable">
@@ -3574,6 +3580,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       <zeroOrMore>
          <ref name="tei_model.persNamePart_sequenceOptionalRepeatable"/>
       </zeroOrMore>
+      <zeroOrMore>
+         <ref name="tei_objectName"/>
+      </zeroOrMore>
    </define>
    <define name="tei_model.nameLike_sequenceRepeatable">
       <oneOrMore>
@@ -3593,6 +3602,9 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
       </oneOrMore>
       <oneOrMore>
          <ref name="tei_model.persNamePart_sequenceRepeatable"/>
+      </oneOrMore>
+      <oneOrMore>
+         <ref name="tei_objectName"/>
       </oneOrMore>
    </define>
    <define name="tei_model.global">
@@ -3621,6 +3633,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_extent"/>
          <ref name="tei_availability"/>
          <ref name="tei_msIdentifier"/>
+         <ref name="tei_objectIdentifier"/>
       </choice>
    </define>
    <define name="tei_model.frontPart">
@@ -3784,6 +3797,12 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_sourceDoc"/>
       </choice>
    </define>
+   <define name="tei_model.objectLike">
+      <choice>
+         <ref name="tei_object"/>
+         <ref name="tei_listObject"/>
+      </choice>
+   </define>
    <define name="tei_att.personal.attributes">
       <ref name="tei_att.naming.attributes"/>
       <ref name="tei_att.personal.attribute.full"/>
@@ -3820,6 +3839,19 @@ one initial.</a:documentation>
       <choice>
          <ref name="tei_place"/>
       </choice>
+   </define>
+   <define name="tei_att.duration.iso.attributes">
+      <ref name="tei_att.duration.iso.attribute.dur-iso"/>
+   </define>
+   <define name="tei_att.duration.iso.attribute.dur-iso">
+      <optional>
+         <attribute name="dur-iso">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(duration) indicates the length of this element in time.</a:documentation>
+            <data type="token">
+               <param name="pattern">[0-9.,DHMPRSTWYZ/:+\-]+</param>
+            </data>
+         </attribute>
+      </optional>
    </define>
    <define name="tei_att.milestoneUnit.attributes">
       <ref name="tei_att.milestoneUnit.attribute.unit"/>
@@ -4101,6 +4133,20 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                href="http://betamasaheft.eu/Guidelines/?id=desc">Beta maṣāḥǝft
                             Guidelines</a> [22.4.1. Description of Components]</a:documentation>
          <ref name="tei_macro.limitedContent"/>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei-betamesaheft-desc-deprecationInfo-only-in-deprecated-constraint-rule-10">
+            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
+                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                      xmlns:bm="http://betamasaheft.eu"
+                      context="tei:desc[ @type eq 'deprecationInfo']">
+	              <sch:assert test="../@validUntil">Information about a
+	deprecation should only be present in a specification element
+	that is being deprecated: that is, only an element that has a
+	@validUntil attribute should have a child &lt;desc
+	type="deprecationInfo"&gt;.</sch:assert>
+            </sch:rule>
+         </pattern>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.translatable.attributes"/>
          <ref name="tei_att.typed.attribute.subtype"/>
@@ -4473,7 +4519,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                             Guidelines</a> [3.3.4. Terms, Glosses, Equivalents, and Descriptions]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-term-term-constraint-rule-10">
+                  id="tei-betamesaheft-term-term-constraint-rule-11">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5773,7 +5819,7 @@ Measures]</a:documentation>
                         Please use the provided values for <code xmlns="http://www.w3.org/1999/xhtml">@type</code> and <code xmlns="http://www.w3.org/1999/xhtml">@calendar</code>
                         <a xmlns="http://www.w3.org/1999/xhtml"
                href="http://betamasaheft.eu/Guidelines/?id=date">Beta maṣāḥǝft
-                            Guidelines</a> [3.5.4. Dates and Times 2.2.4. Publication, Distribution, Licensing, etc. 2.6. The Revision Description 3.11.2.4. Imprint, Size of a Document, and Reprint Information 15.2.3. The Setting Description 13.3.6. Dates and Times]</a:documentation>
+                            Guidelines</a> [3.5.4. Dates and Times 2.2.4. Publication, Distribution, Licensing, etc. 2.6. The Revision Description 3.11.2.4. Imprint, Size of a Document, and Reprint Information 15.2.3. The Setting Description 13.3.7. Dates and Times]</a:documentation>
          <zeroOrMore>
             <choice>
                <text/>
@@ -5786,7 +5832,7 @@ Measures]</a:documentation>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-date-date-constraint-rule-11">
+                  id="tei-betamesaheft-date-date-constraint-rule-12">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5798,7 +5844,7 @@ Measures]</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-date-date-constraint-rule-12">
+                  id="tei-betamesaheft-date-date-constraint-rule-13">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5809,6 +5855,7 @@ Measures]</a:documentation>
                             </sch:rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.canonical.attributes"/>
          <ref name="tei_att.datable.attribute.period"/>
          <ref name="tei_att.datable.w3c.attribute.when"/>
          <ref name="tei_att.datable.w3c.attribute.notBefore"/>
@@ -5924,7 +5971,7 @@ Sample values include: 1] suspension; 2] contraction; 3] brevigraph; 4] superscr
                             Guidelines</a> [3.6. Simple Links and Cross-References 16.1. Links]</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ptr-ptr-constraint-rule-13">
+                  id="tei-betamesaheft-ptr-ptr-constraint-rule-14">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5964,7 +6011,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
                             Guidelines</a> [3.6. Simple Links and Cross-References 16.1. Links]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ref-ref-constraint-rule-14">
+                  id="tei-betamesaheft-ref-ref-constraint-rule-15">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5981,7 +6028,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ref-ref-constraint-rule-15">
+                  id="tei-betamesaheft-ref-ref-constraint-rule-16">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -5994,7 +6041,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ref-ref-constraint-rule-16">
+                  id="tei-betamesaheft-ref-ref-constraint-rule-17">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6156,7 +6203,7 @@ attributes @target and @cRef may be supplied on <name/>.</report>
       
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-list-gloss-list-must-have-labels-constraint-rule-17">
+                  id="tei-betamesaheft-list-gloss-list-must-have-labels-constraint-rule-18">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6208,7 +6255,7 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
                             Guidelines</a> [3.7. Lists 2.6. The Revision Description]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-item-item-constraint-rule-18">
+                  id="tei-betamesaheft-item-item-constraint-rule-19">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6219,7 +6266,7 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-item-item-constraint-rule-19">
+                  id="tei-betamesaheft-item-item-constraint-rule-20">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6231,7 +6278,7 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-item-item-constraint-rule-20">
+                  id="tei-betamesaheft-item-item-constraint-rule-21">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6244,7 +6291,7 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-item-item-constraint-rule-21">
+                  id="tei-betamesaheft-item-item-constraint-rule-22">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6255,7 +6302,7 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-item-item-constraint-rule-22">
+                  id="tei-betamesaheft-item-item-constraint-rule-23">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6268,7 +6315,7 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-item-item-constraint-rule-23">
+                  id="tei-betamesaheft-item-item-constraint-rule-24">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6931,7 +6978,7 @@ Sample values include: 1] generalEditor</a:documentation>
                      [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.5. The Series Statement]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-title-title-constraint-rule-24">
+                  id="tei-betamesaheft-title-title-constraint-rule-25">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6942,7 +6989,7 @@ Sample values include: 1] generalEditor</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-title-title-constraint-rule-25">
+                  id="tei-betamesaheft-title-title-constraint-rule-26">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6956,7 +7003,7 @@ Sample values include: 1] generalEditor</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-title-title-constraint-rule-26">
+                  id="tei-betamesaheft-title-title-constraint-rule-27">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6969,7 +7016,7 @@ Sample values include: 1] generalEditor</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-title-title-constraint-rule-27">
+                  id="tei-betamesaheft-title-title-constraint-rule-28">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -6981,7 +7028,7 @@ Sample values include: 1] generalEditor</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-title-title-constraint-rule-28">
+                  id="tei-betamesaheft-title-title-constraint-rule-29">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7177,7 +7224,7 @@ Sample values include: 1] generalEditor</a:documentation>
                      [3.11.2.5. Scopes and Ranges in Bibliographic Citations]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-citedRange-citedRange-constraint-rule-29">
+                  id="tei-betamesaheft-citedRange-citedRange-constraint-rule-30">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7188,7 +7235,7 @@ Sample values include: 1] generalEditor</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-citedRange-citedRange-constraint-rule-30">
+                  id="tei-betamesaheft-citedRange-citedRange-constraint-rule-31">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7250,7 +7297,7 @@ Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] par
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-bibl-bibl-constraint-rule-31">
+                  id="tei-betamesaheft-bibl-bibl-constraint-rule-32">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7263,7 +7310,7 @@ Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] par
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-bibl-bibl-constraint-rule-32">
+                  id="tei-betamesaheft-bibl-bibl-constraint-rule-33">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7273,7 +7320,7 @@ Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] par
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-bibl-bibl-constraint-rule-33">
+                  id="tei-betamesaheft-bibl-bibl-constraint-rule-34">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7285,7 +7332,7 @@ Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] par
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-bibl-bibl-constraint-rule-34">
+                  id="tei-betamesaheft-bibl-bibl-constraint-rule-35">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7361,7 +7408,7 @@ Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] par
             </zeroOrMore>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-listBibl-listBibl-constraint-rule-35">
+                  id="tei-betamesaheft-listBibl-listBibl-constraint-rule-36">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7375,7 +7422,7 @@ Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] par
                               </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-listBibl-listBibl-constraint-rule-36">
+                  id="tei-betamesaheft-listBibl-listBibl-constraint-rule-37">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -7441,7 +7488,7 @@ relatedItem element must be empty</sch:report>
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-relatedItem-targetorcontent1-constraint-assert-7">
+                  id="tei-betamesaheft-relatedItem-targetorcontent1-constraint-assert-8">
             <rule context="tei:relatedItem">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -7537,7 +7584,7 @@ relatedItem element must be empty</sch:report>
             </zeroOrMore>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-lg-atleast1oflggapl-constraint-assert-8">
+                  id="tei-betamesaheft-lg-atleast1oflggapl-constraint-assert-9">
             <rule context="tei:lg">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -8812,7 +8859,7 @@ Suggested values include: 1] WGS84 (World Geodetic System) ; 2] MGRS (Military G
                             Guidelines</a> [10.7.2. Writing, Decoration, and Other Notations]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-handNote-handNote-constraint-rule-37">
+                  id="tei-betamesaheft-handNote-handNote-constraint-rule-38">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -9218,7 +9265,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                      [2.6. The Revision Description 2.4.1. Creation 11.7. Identifying Changes and Revisions]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-change-change-constraint-rule-38">
+                  id="tei-betamesaheft-change-change-constraint-rule-39">
             <sch:rule xmlns:xi="http://www.w3.org/2001/XInclude"
                       xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -9406,7 +9453,7 @@ elements is to be considered significant or not</a:documentation>
             </oneOrMore>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-TEI-TEI-constraint-rule-39">
+                  id="tei-betamesaheft-TEI-TEI-constraint-rule-40">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -9855,7 +9902,7 @@ elements is to be considered significant or not</a:documentation>
             </optional>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-div-div-constraint-rule-40">
+                  id="tei-betamesaheft-div-div-constraint-rule-41">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -10478,7 +10525,7 @@ element. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]</a:documentat
 element. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-path-pathmustnotbeclosed-constraint-rule-41">
+                  id="tei-betamesaheft-path-pathmustnotbeclosed-constraint-rule-42">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -10537,7 +10584,7 @@ element. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]</a:documentat
   author, scribe, annotator or corrector (see also <code xmlns="http://www.w3.org/1999/xhtml">&lt;add&gt;</code>). [11.3.1.4. Additions and Deletions]</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-addSpan-spanTo-constraint-assert-9">
+                  id="tei-betamesaheft-addSpan-spanTo-constraint-assert-10">
             <rule context="tei:addSpan">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -10547,7 +10594,7 @@ element. [11.1. Digital Facsimiles 11.2.2. Embedded Transcription]</a:documentat
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-addSpan-spanTo_fr-constraint-assert-10">
+                  id="tei-betamesaheft-addSpan-spanTo_fr-constraint-assert-11">
             <rule context="tei:addSpan">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -10582,7 +10629,7 @@ marked as deleted, or otherwise signaled as superfluous or spurious by an
 author, scribe, annotator, or corrector. [11.3.1.4. Additions and Deletions]</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-delSpan-spanTo-constraint-assert-11">
+                  id="tei-betamesaheft-delSpan-spanTo-constraint-assert-12">
             <rule context="tei:delSpan">
                <assert xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -10591,7 +10638,7 @@ author, scribe, annotator, or corrector. [11.3.1.4. Additions and Deletions]</a:
             </rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-delSpan-spanTo_fr-constraint-assert-12">
+                  id="tei-betamesaheft-delSpan-spanTo_fr-constraint-assert-13">
             <rule context="tei:delSpan">
                <assert xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -10763,7 +10810,7 @@ Sample values include: 1] rubrication; 2] owner</a:documentation>
             </choice>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-subst-substContents1-constraint-assert-13">
+                  id="tei-betamesaheft-subst-substContents1-constraint-assert-14">
             <rule context="tei:subst">
                <assert xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11747,7 +11794,7 @@ of the markup named by the <code xmlns="http://www.w3.org/1999/xhtml">@locus</co
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">defines an association or hypertextual link among elements or passages, of some type not more precisely specifiable by other elements. [16.1. Links]</a:documentation>
          <empty/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-link-linkTargets3-constraint-assert-14">
+                  id="tei-betamesaheft-link-linkTargets3-constraint-assert-15">
             <rule context="tei:link">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -11785,7 +11832,7 @@ of the markup named by the <code xmlns="http://www.w3.org/1999/xhtml">@locus</co
                             descriptions Beta maṣāḥǝft Guidelines</a> [16.3. Blocks, Segments, and Anchors]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ab-ab-constraint-rule-42">
+                  id="tei-betamesaheft-ab-ab-constraint-rule-43">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11796,7 +11843,7 @@ of the markup named by the <code xmlns="http://www.w3.org/1999/xhtml">@locus</co
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ab-ab-constraint-rule-43">
+                  id="tei-betamesaheft-ab-ab-constraint-rule-44">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11809,7 +11856,7 @@ of the markup named by the <code xmlns="http://www.w3.org/1999/xhtml">@locus</co
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-ab-ab-constraint-rule-44">
+                  id="tei-betamesaheft-ab-ab-constraint-rule-45">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11880,7 +11927,7 @@ Sample values include: 1] pattern; 2] usage; 3] executed; 4] dividers</a:documen
                             Guidelines</a> [16.3. Blocks, Segments, and Anchors 6.2. Components of the Verse Line 7.2.5. Speech Contents]</a:documentation>
          <ref name="tei_macro.paraContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-seg-seg-constraint-rule-45">
+                  id="tei-betamesaheft-seg-seg-constraint-rule-46">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -11921,7 +11968,7 @@ Sample values include: 1] pattern; 2] usage; 3] executed; 4] dividers</a:documen
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-join-joinTargets3-constraint-assert-15">
+                  id="tei-betamesaheft-join-joinTargets3-constraint-assert-16">
             <rule context="tei:join">
                <assert xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12044,18 +12091,17 @@ You must supply at least two values for @target on <name/>
    <define name="tei_catchwords">
       <element name="catchwords">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes the system used to ensure
-correct ordering of the quires making up a codex or incunable,
+correct ordering of the quires or similar making up a codex, incunable, or other object 
 typically by means of annotations at the foot of the page. [10.3.7. Catchwords, Signatures, Secundo Folio]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-catchwords-catchword_in_msDesc-constraint-assert-16">
+                  id="tei-betamesaheft-catchwords-catchword_in_msDesc-constraint-assert-17">
             <rule context="tei:catchwords">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
                            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                            xmlns:bm="http://betamasaheft.eu"
-                           test="ancestor::tei:msDesc"
-                           role="nonfatal">WARNING: deprecated use of element — The <sch:name/> element will not be allowed outside of msDesc as of 2018-10-01.</sch:assert>
+                           test="ancestor::tei:msDesc or ancestor::tei:egXML">The <sch:name/> element should not be used outside of msDesc.</sch:assert>
             </rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
@@ -12075,7 +12121,7 @@ typically by means of annotations at the foot of the page. [10.3.7. Catchwords, 
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-dimensions-witness-constraint-rule-46">
+                  id="tei-betamesaheft-dimensions-witness-constraint-rule-47">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12336,7 +12382,7 @@ or phrase, typically found as part of a blazon, coat of arms, etc.
             <ref name="tei_model.certLike"/>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-locus-locus-constraint-rule-47">
+                  id="tei-betamesaheft-locus-locus-constraint-rule-48">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12390,8 +12436,7 @@ locus is used to point to values of these elements in the teiHeader.
    <define name="tei_locusGrp">
       <element name="locusGrp">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">groups a number of locations which together form a
-  distinct but discontinuous item within a manuscript or manuscript
-  part, according to a specific foliation. [10.3.5. References to Locations within a Manuscript]</a:documentation>
+  distinct but discontinuous item within a manuscript, manuscript part, or other object. [10.3.5. References to Locations within a Manuscript]</a:documentation>
          <oneOrMore>
             <ref name="tei_locus"/>
          </oneOrMore>
@@ -12479,7 +12524,7 @@ locus is used to point to values of these elements in the teiHeader.
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-origDate-origDate-constraint-rule-48">
+                  id="tei-betamesaheft-origDate-origDate-constraint-rule-49">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12651,7 +12696,7 @@ Sample values include: 1] editor; 2] mss; 3] literature; 4] foundation; 5] compo
    <define name="tei_origPlace">
       <element name="origPlace">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(origin place) contains any form of place name, used to identify the
-place of origin for a manuscript or manuscript part. [10.3.1. Origination]</a:documentation>
+place of origin for a manuscript, manuscript part, or other object. [10.3.1. Origination]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.naming.attributes"/>
@@ -12663,22 +12708,18 @@ place of origin for a manuscript or manuscript part. [10.3.1. Origination]</a:do
    </define>
    <define name="tei_secFol">
       <element name="secFol">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(second folio) marks the word or words taken from a fixed point
-in a codex (typically the beginning of the
-second leaf) in order
-to provide a unique identifier for it.
-
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(second folio) marks the word or words taken from a fixed point in a codex 
+    (typically the beginning of the second leaf) in order to provide a unique identifier for it.
  [10.3.7. Catchwords, Signatures, Secundo Folio]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-secFol-secFol_in_msDesc-constraint-assert-17">
+                  id="tei-betamesaheft-secFol-secFol_in_msDesc-constraint-assert-18">
             <rule context="tei:secFol">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
                            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                            xmlns:bm="http://betamasaheft.eu"
-                           test="ancestor::tei:msDesc"
-                           role="nonfatal">WARNING: deprecated use of element — The <sch:name/> element will not be allowed outside of msDesc as of 2018-10-01.</sch:assert>
+                           test="ancestor::tei:msDesc or ancestor::tei:egXML">The <sch:name/> element should not be used outside of msDesc.</sch:assert>
             </rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
@@ -12687,17 +12728,16 @@ to provide a unique identifier for it.
    </define>
    <define name="tei_signatures">
       <element name="signatures">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains discussion of the leaf or quire signatures found within a codex. [10.3.7. Catchwords, Signatures, Secundo Folio]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains discussion of the leaf or quire signatures found within a codex or similar object. [10.3.7. Catchwords, Signatures, Secundo Folio]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-signatures-signatures_in_msDesc-constraint-assert-18">
+                  id="tei-betamesaheft-signatures-signatures_in_msDesc-constraint-assert-19">
             <rule context="tei:signatures">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
                            xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                            xmlns:bm="http://betamasaheft.eu"
-                           test="ancestor::tei:msDesc"
-                           role="nonfatal">WARNING: deprecated use of element — The <sch:name/> element will not be allowed outside of msDesc as of 2018-10-01.</sch:assert>
+                           test="ancestor::tei:msDesc or ancestor::tei:egXML">The <sch:name/> element should not be used outside of msDesc.</sch:assert>
             </rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
@@ -12727,7 +12767,7 @@ watermark or similar device. [10.3.3. Watermarks and Stamps]</a:documentation>
    <define name="tei_msIdentifier">
       <element name="msIdentifier">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(manuscript identifier) contains the information required to identify
-the  manuscript being described. [10.4. The Manuscript Identifier]</a:documentation>
+the manuscript or similar object being described. [10.4. The Manuscript Identifier]</a:documentation>
          <group>
             <group>
                <optional>
@@ -12767,15 +12807,16 @@ the  manuscript being described. [10.4. The Manuscript Identifier]</a:documentat
                </zeroOrMore>
         
         
-               <optional>
+               <zeroOrMore>
                   <ref name="tei_idno"/>
-               </optional>
+               </zeroOrMore>
         
             </group>
       
             <zeroOrMore>
                <choice>
                   <ref name="tei_msName"/>
+                  <ref name="tei_objectName"/>
                   <ref name="tei_altIdentifier"/>
                </choice>
             </zeroOrMore>
@@ -12787,7 +12828,7 @@ the  manuscript being described. [10.4. The Manuscript Identifier]</a:documentat
                <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
                        xmlns:bm="http://betamasaheft.eu"
-                       test="not(parent::tei:msPart) and       (local-name(*[1])='idno' or       local-name(*[1])='altIdentifier' or       normalize-space(.)='')">An msIdentifier must contain either a repository or location of some type, or a manuscript name</report>
+                       test="not(parent::tei:msPart) and (local-name(*[1])='idno' or local-name(*[1])='altIdentifier' or normalize-space(.)='')">An msIdentifier must contain either a repository or location.</report>
             </rule>
          </pattern>
          <ref name="tei_att.global.attributes"/>
@@ -12797,8 +12838,7 @@ the  manuscript being described. [10.4. The Manuscript Identifier]</a:documentat
    <define name="tei_institution">
       <element name="institution">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the name of an organization such as a university or
-  library, with which a manuscript is identified, generally its
-  holding institution. [10.4. The Manuscript Identifier]</a:documentation>
+  library, with which a manuscript or other object is identified, generally its holding institution. [10.4. The Manuscript Identifier]</a:documentation>
          <ref name="tei_macro.xtext"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.naming.attributes"/>
@@ -12807,7 +12847,7 @@ the  manuscript being described. [10.4. The Manuscript Identifier]</a:documentat
    </define>
    <define name="tei_repository">
       <element name="repository">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the name of a repository within which manuscripts are stored, possibly forming part of an institution. [10.4. The Manuscript Identifier]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the name of a repository within which manuscripts or other objects are stored, possibly forming part of an institution. [10.4. The Manuscript Identifier]</a:documentation>
          <ref name="tei_macro.xtext"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.naming.attributes"/>
@@ -12817,7 +12857,7 @@ the  manuscript being described. [10.4. The Manuscript Identifier]</a:documentat
    <define name="tei_collection">
       <element name="collection">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the name of a collection of
-manuscripts, not necessarily located within a single repository. [10.4. The Manuscript Identifier]</a:documentation>
+manuscripts or other objects, not necessarily located within a single repository. [10.4. The Manuscript Identifier]</a:documentation>
          <ref name="tei_macro.xtext"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.naming.attributes"/>
@@ -12827,7 +12867,7 @@ manuscripts, not necessarily located within a single repository. [10.4. The Manu
    </define>
    <define name="tei_altIdentifier">
       <element name="altIdentifier">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(alternative identifier) contains an alternative or former structured identifier used for a manuscript, such as a former catalogue number. [10.4. The Manuscript Identifier]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(alternative identifier) contains an alternative or former structured identifier used for a manuscript or other object, such as a former catalogue number. [10.4. The Manuscript Identifier]</a:documentation>
          <group>
             <optional>
                <ref name="tei_placeName"/>
@@ -12880,7 +12920,7 @@ manuscripts, not necessarily located within a single repository. [10.4. The Manu
    <define name="tei_msName">
       <element name="msName">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(alternative name) contains any form of unstructured alternative
-name used for a manuscript, such as an  ocellus
+name used for a manuscript or other object, such as an  ocellus
 nominum, or nickname. [10.4. The Manuscript Identifier]</a:documentation>
          <zeroOrMore>
             <choice>
@@ -12906,7 +12946,7 @@ nominum, or nickname. [10.4. The Manuscript Identifier]</a:documentation>
             <ref name="tei_model.biblLike"/>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-colophon-colophon-constraint-rule-49">
+                  id="tei-betamesaheft-colophon-colophon-constraint-rule-50">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -12976,7 +13016,7 @@ nominum, or nickname. [10.4. The Manuscript Identifier]</a:documentation>
    </define>
    <define name="tei_filiation">
       <element name="filiation">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains information concerning the manuscript's filiation, i.e. its relationship to other surviving manuscripts of the same text, its protographs, antigraphs and apographs. [10.6.1. The msItem and msItemStruct Elements]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains information concerning the manuscript or other object's filiation, i.e. its relationship to other surviving manuscripts or other objects of the same text or contents, its protographs, antigraphs and apographs. [10.6.1. The msItem and msItemStruct Elements]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attributes"/>
@@ -13017,8 +13057,8 @@ nominum, or nickname. [10.4. The Manuscript Identifier]</a:documentation>
    </define>
    <define name="tei_msContents">
       <element name="msContents">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(manuscript contents) describes the intellectual content of a manuscript or manuscript
-    part, either as a series of paragraphs or as a series of structured manuscript items. [10.6. Intellectual Content]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(manuscript contents) describes the intellectual content of a manuscript, manuscript
+    part, or other object either as a series of paragraphs or as a series of structured manuscript items. [10.6. Intellectual Content]</a:documentation>
          <choice>
       
             <oneOrMore>
@@ -13083,7 +13123,7 @@ nominum, or nickname. [10.4. The Manuscript Identifier]</a:documentation>
             </choice>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-msItem-msItem-constraint-rule-50">
+                  id="tei-betamesaheft-msItem-msItem-constraint-rule-51">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -13135,8 +13175,7 @@ nominum, or nickname. [10.4. The Manuscript Identifier]</a:documentation>
    <define name="tei_msItemStruct">
       <element name="msItemStruct">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(structured manuscript item) contains a structured description for an
-  individual work or item within the intellectual content of a
-  manuscript or manuscript part. [10.6.1. The msItem and msItemStruct Elements]</a:documentation>
+  individual work or item within the intellectual content of a manuscript, manuscript part, or other object. [10.6.1. The msItem and msItemStruct Elements]</a:documentation>
          <group>
       
             <optional>
@@ -13241,7 +13280,7 @@ nominum, or nickname. [10.4. The Manuscript Identifier]</a:documentation>
    <define name="tei_rubric">
       <element name="rubric">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the text of any rubric or heading attached to a particular manuscript item, that is, a string of words through which a
-manuscript signals the beginning of a text division, often with an assertion as to its author and title, which is in some way set off from the text itself, usually in red ink, or by use of different size or type of script, or some other such visual device. [10.6.1. The msItem and msItemStruct Elements]</a:documentation>
+manuscript or other object signals the beginning of a text division, often with an assertion as to its author and title, which is in some way set off from the text itself, typically in red ink, or by use of different size or type of script, or some other such visual device. [10.6.1. The msItem and msItemStruct Elements]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attributes"/>
@@ -13252,7 +13291,7 @@ manuscript signals the beginning of a text division, often with an assertion as 
    <define name="tei_summary">
       <element name="summary">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains an overview of the available
-  information concerning some aspect of an item (for example, its
+  information concerning some aspect of an item or object (for example, its
 intellectual content, history, layout, typography etc.) as a
 complement or alternative to the  more detailed information  carried by
   more specific elements. [10.6. Intellectual Content]</a:documentation>
@@ -13264,7 +13303,7 @@ complement or alternative to the  more detailed information  carried by
    <define name="tei_physDesc">
       <element name="physDesc">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(physical description) contains a full physical description of a
-manuscript or manuscript part, optionally subdivided using more
+manuscript, manuscript part, or other object optionally subdivided using more
 specialized elements from the model.physDescPart class. [10.7. Physical Description]</a:documentation>
          <group>
       
@@ -13333,7 +13372,7 @@ specialized elements from the model.physDescPart class. [10.7. Physical Descript
             </group>
          </choice>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-objectDesc-objectDesc-constraint-rule-51">
+                  id="tei-betamesaheft-objectDesc-objectDesc-constraint-rule-52">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -13385,7 +13424,7 @@ specialized elements from the model.physDescPart class. [10.7. Physical Descript
    </define>
    <define name="tei_supportDesc">
       <element name="supportDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(support description) groups elements describing the physical support for the written part of a manuscript. [10.7.1. Object Description]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(support description) groups elements describing the physical support for the written part of a manuscript or other object. [10.7.1. Object Description]</a:documentation>
          <choice>
       
             <oneOrMore>
@@ -13445,7 +13484,7 @@ Suggested values include: 1] paper; 2] parch (parchment) ; 3] mixed</a:documenta
    <define name="tei_support">
       <element name="support">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of the materials
-etc. which make up the physical support for the written part of a manuscript. [10.7.1. Object Description]</a:documentation>
+etc. which make up the physical support for the written part of a manuscript or other object. [10.7.1. Object Description]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <ref name="tei_att.global.attributes"/>
          <empty/>
@@ -13453,7 +13492,7 @@ etc. which make up the physical support for the written part of a manuscript. [1
    </define>
    <define name="tei_collation">
       <element name="collation">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of how the leaves or bifolia are physically
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of how the leaves, bifolia, or similar objects are physically
 arranged. [10.7.1. Object Description]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <ref name="tei_att.global.attributes"/>
@@ -13463,7 +13502,7 @@ arranged. [10.7.1. Object Description]</a:documentation>
    <define name="tei_foliation">
       <element name="foliation">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes the numbering system or systems used to 
-count the leaves or pages in a codex. [10.7.1.4. Foliation]</a:documentation>
+count the leaves or pages in a codex or similar object. [10.7.1.4. Foliation]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <ref name="tei_att.global.attributes"/>
          <empty/>
@@ -13497,7 +13536,7 @@ count the leaves or pages in a codex. [10.7.1.4. Foliation]</a:documentation>
    </define>
    <define name="tei_layoutDesc">
       <element name="layoutDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(layout description) collects the set of layout descriptions applicable to a manuscript. [10.7.2. Writing, Decoration, and Other Notations]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(layout description) collects the set of layout descriptions applicable to a manuscript or other object. [10.7.2. Writing, Decoration, and Other Notations]</a:documentation>
          <choice>
       
             <oneOrMore>
@@ -13524,8 +13563,7 @@ count the leaves or pages in a codex. [10.7.1.4. Foliation]</a:documentation>
    <define name="tei_layout">
       <element name="layout">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes how text is laid out on the
-  page, including information about any ruling, pricking, or other
-  evidence of page-preparation techniques. [10.7.2. Writing, Decoration, and Other Notations]</a:documentation>
+  page or surface of the object, including information about any ruling, pricking, or other evidence of page-preparation techniques. [10.7.2. Writing, Decoration, and Other Notations]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <ref name="tei_att.global.attributes"/>
          <optional>
@@ -13578,7 +13616,7 @@ count the leaves or pages in a codex. [10.7.1.4. Foliation]</a:documentation>
    </define>
    <define name="tei_handDesc">
       <element name="handDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description of hands) contains a description of all the different hands used in a manuscript. [10.7.2. Writing, Decoration, and Other Notations]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(description of hands) contains a description of all the different hands used in a manuscript or other object. [10.7.2. Writing, Decoration, and Other Notations]</a:documentation>
          <choice>
       
             <oneOrMore>
@@ -13647,7 +13685,7 @@ count the leaves or pages in a codex. [10.7.1.4. Foliation]</a:documentation>
    </define>
    <define name="tei_scriptDesc">
       <element name="scriptDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of the scripts used in a manuscript or similar source. [10.7.2.1. Writing]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of the scripts used in a manuscript or other object. [10.7.2.1. Writing]</a:documentation>
          <choice>
       
             <oneOrMore>
@@ -13681,7 +13719,7 @@ count the leaves or pages in a codex. [10.7.1.4. Foliation]</a:documentation>
    </define>
    <define name="tei_decoDesc">
       <element name="decoDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(decoration description) contains a description of the decoration of a manuscript, either as a sequence of paragraphs, or as a sequence of topically organized <code xmlns="http://www.w3.org/1999/xhtml">&lt;decoNote&gt;</code> elements. [10.7.3. Bindings, Seals, and Additional Material]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(decoration description) contains a description of the decoration of a manuscript or other object, either as in paragraphs, or as one or more <code xmlns="http://www.w3.org/1999/xhtml">&lt;decoNote&gt;</code> elements. [10.7.3. Bindings, Seals, and Additional Material]</a:documentation>
          <choice>
       
             <oneOrMore>
@@ -13717,7 +13755,7 @@ count the leaves or pages in a codex. [10.7.1.4. Foliation]</a:documentation>
                             Guidelines</a> [10.7.3. Bindings, Seals, and Additional Material]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-52">
+                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-53">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -13729,7 +13767,7 @@ count the leaves or pages in a codex. [10.7.1.4. Foliation]</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-53">
+                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-54">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -13741,7 +13779,7 @@ count the leaves or pages in a codex. [10.7.1.4. Foliation]</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-54">
+                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-55">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -13752,7 +13790,7 @@ count the leaves or pages in a codex. [10.7.1.4. Foliation]</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-55">
+                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-56">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -13767,7 +13805,7 @@ count the leaves or pages in a codex. [10.7.1.4. Foliation]</a:documentation>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-56">
+                  id="tei-betamesaheft-decoNote-decoNote-constraint-rule-57">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -13988,7 +14026,7 @@ Suggested values include: 1] UTI; 2] OTI; 3] L; 4] R</a:documentation>
    <define name="tei_additions">
       <element name="additions">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of any significant additions found
-within a manuscript, such as marginalia or other annotations. [10.7.2. Writing, Decoration, and Other Notations]</a:documentation>
+within a manuscript or other object, such as marginalia or other annotations. [10.7.2. Writing, Decoration, and Other Notations]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <ref name="tei_att.global.attributes"/>
          <empty/>
@@ -13996,7 +14034,7 @@ within a manuscript, such as marginalia or other annotations. [10.7.2. Writing, 
    </define>
    <define name="tei_bindingDesc">
       <element name="bindingDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(binding description) describes the present and former bindings of a manuscript, either
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(binding description) describes the present and former bindings of a manuscript or other object, either
 as a series of paragraphs or as a series of distinct <code xmlns="http://www.w3.org/1999/xhtml">&lt;binding&gt;</code> elements,
 one for each binding of the manuscript. [10.7.3.1. Binding Descriptions]</a:documentation>
          <choice>
@@ -14115,9 +14153,9 @@ one for each binding of the manuscript. [10.7.3.1. Binding Descriptions]</a:docu
    <define name="tei_accMat">
       <element name="accMat">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(accompanying material) contains details of any significant additional
-material which may be closely associated with the manuscript being
+material which may be closely associated with the manuscript or object being
 described, such as non-contemporaneous documents or fragments bound in
-with the manuscript at some earlier historical period. [10.7.3.3. Accompanying Material]</a:documentation>
+with it at some earlier historical period. [10.7.3.3. Accompanying Material]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.typed.attributes"/>
@@ -14127,7 +14165,7 @@ with the manuscript at some earlier historical period. [10.7.3.3. Accompanying M
    <define name="tei_history">
       <element name="history">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"> groups elements
-describing the full history of a manuscript or manuscript part. [10.8. History]</a:documentation>
+describing the full history of a manuscript, manuscript part, or other object. [10.8. History]</a:documentation>
          <choice>
       
             <oneOrMore>
@@ -14168,7 +14206,7 @@ describing the full history of a manuscript or manuscript part. [10.8. History]<
                             Guidelines</a> [10.8. History]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-origin-origin-constraint-rule-57">
+                  id="tei-betamesaheft-origin-origin-constraint-rule-58">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14188,8 +14226,7 @@ describing the full history of a manuscript or manuscript part. [10.8. History]<
    <define name="tei_provenance">
       <element name="provenance">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains any descriptive or other information
-concerning a single identifiable episode during the history of a manuscript
-or manuscript part, after its creation but before its acquisition. [10.8. History]</a:documentation>
+concerning a single identifiable episode during the history of a manuscript, manuscript part, or other object after its creation but before its acquisition. [10.8. History]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.datable.attributes"/>
@@ -14200,7 +14237,7 @@ or manuscript part, after its creation but before its acquisition. [10.8. Histor
    <define name="tei_acquisition">
       <element name="acquisition">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains any descriptive or other information
-concerning the process by which a manuscript or manuscript part entered the holding
+concerning the process by which a manuscript or manuscript part or other object entered the holding
 institution. [10.8. History]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <ref name="tei_att.global.attributes"/>
@@ -14211,8 +14248,8 @@ institution. [10.8. History]</a:documentation>
    <define name="tei_additional">
       <element name="additional">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">groups additional information, combining
-bibliographic information about a manuscript, or surrogate copies of
-it with  curatorial or administrative information. [10.9. Additional Information]</a:documentation>
+    bibliographic information about a manuscript or other object, or surrogate copies of
+it, with curatorial or administrative information. [10.9. Additional Information]</a:documentation>
          <group>
       
             <optional>
@@ -14237,7 +14274,7 @@ it with  curatorial or administrative information. [10.9. Additional Information
    <define name="tei_adminInfo">
       <element name="adminInfo">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(administrative information) contains information about the present
-custody and availability of the manuscript, and also about the record
+custody and availability of the manuscript or other object, and also about the record
 description itself. [10.9.1. Administrative Information]</a:documentation>
          <group>
       
@@ -14269,7 +14306,7 @@ description itself. [10.9.1. Administrative Information]</a:documentation>
    <define name="tei_recordHist">
       <element name="recordHist">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(recorded history) provides information about the source and
-revision status of the parent manuscript description itself. [10.9.1. Administrative Information]</a:documentation>
+revision status of the parent manuscript or object description itself. [10.9.1. Administrative Information]</a:documentation>
          <choice>
       
             <oneOrMore>
@@ -14291,7 +14328,7 @@ revision status of the parent manuscript description itself. [10.9.1. Administra
    </define>
    <define name="tei_source">
       <element name="source">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes the original source for the information contained with a manuscript description. [10.9.1.1. Record History]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes the original source for the information contained with a manuscript or object description. [10.9.1.1. Record History]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <ref name="tei_att.global.attributes"/>
          <empty/>
@@ -14299,7 +14336,7 @@ revision status of the parent manuscript description itself. [10.9.1. Administra
    </define>
    <define name="tei_custodialHist">
       <element name="custodialHist">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(custodial history) contains a description of a manuscript's custodial history, either
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(custodial history) contains a description of a manuscript or other object's custodial history, either
 as running prose or as a series of dated custodial events. [10.9.1.2. Availability and Custodial History]</a:documentation>
          <choice>
       
@@ -14342,7 +14379,7 @@ as running prose or as a series of dated custodial events. [10.9.1.2. Availabili
    </define>
    <define name="tei_surrogates">
       <element name="surrogates">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains information about any representations of the manuscript being described which
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains information about any representations of the manuscript or other object being described which
 may exist in the holding institution or elsewhere. [10.9. Additional Information]</a:documentation>
          <ref name="tei_macro.specialPara"/>
          <ref name="tei_att.global.attributes"/>
@@ -14383,7 +14420,7 @@ may exist in the holding institution or elsewhere. [10.9. Additional Information
             </choice>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-msPart-msPart-constraint-rule-58">
+                  id="tei-betamesaheft-msPart-msPart-constraint-rule-59">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14463,7 +14500,7 @@ may exist in the holding institution or elsewhere. [10.9. Additional Information
             </choice>
          </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-msFrag-msfrag-constraint-rule-59">
+                  id="tei-betamesaheft-msFrag-msfrag-constraint-rule-60">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14812,7 +14849,7 @@ may exist in the holding institution or elsewhere. [10.9. Additional Information
                href="http://betamasaheft.eu/Guidelines/?id=persName">Beta maṣāḥǝft Guidelines</a> [13.2.1. Personal Names]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-persName-persName-constraint-rule-60">
+                  id="tei-betamesaheft-persName-persName-constraint-rule-61">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14821,11 +14858,11 @@ may exist in the holding institution or elsewhere. [10.9. Additional Information
                                 <sch:report test="not(@ref)">A persName in a mss, place or work
                                     description should always contain an attribute @ref pointing to
                                     the relevant record</sch:report>
-                                <sch:report test="not(matches(@ref, 'PRS\d+\w+') or matches(@ref, 'ETH\d+\w+'))">The person ID you have entered is wrong. Persons IDs must match the pattern PRS\d+\w+ or ETH\d+\w+ .</sch:report>
+                                <sch:report test="not(matches(@ref, 'PRS\d+\w+') or matches(@ref, 'ETH\d+\w+') or matches(@ref, 'Q\d+'))">The person ID you have entered is wrong. Persons IDs must match the pattern PRS\d+\w+ or ETH\d+\w+ or Q\d+ .</sch:report>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-persName-persName-constraint-rule-61">
+                  id="tei-betamesaheft-persName-persName-constraint-rule-62">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14983,7 +15020,7 @@ may exist in the holding institution or elsewhere. [10.9. Additional Information
                             Guidelines</a> [13.2.3. Place Names]</a:documentation>
          <ref name="tei_macro.phraseSeq"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-placeName-placeName-constraint-rule-62">
+                  id="tei-betamesaheft-placeName-placeName-constraint-rule-63">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -14997,7 +15034,7 @@ may exist in the holding institution or elsewhere. [10.9. Additional Information
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-placeName-placeName-constraint-rule-63">
+                  id="tei-betamesaheft-placeName-placeName-constraint-rule-64">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -15487,7 +15524,7 @@ Sample values include: 1] proclaimed; 2] assumed; 3] verified; 4] clinical; 5] b
                             Guidelines</a> [13.3.4.1. Varieties of Location]</a:documentation>
          <text/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-geo-geo-constraint-rule-64">
+                  id="tei-betamesaheft-geo-geo-constraint-rule-65">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -15499,7 +15536,7 @@ Sample values include: 1] proclaimed; 2] assumed; 3] verified; 4] clinical; 5] b
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-geo-geo-constraint-rule-65">
+                  id="tei-betamesaheft-geo-geo-constraint-rule-66">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -15514,7 +15551,7 @@ Sample values include: 1] proclaimed; 2] assumed; 3] verified; 4] clinical; 5] b
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-geo-geo-constraint-rule-66">
+                  id="tei-betamesaheft-geo-geo-constraint-rule-67">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -15529,7 +15566,7 @@ Sample values include: 1] proclaimed; 2] assumed; 3] verified; 4] clinical; 5] b
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-geo-geo-constraint-rule-67">
+                  id="tei-betamesaheft-geo-geo-constraint-rule-68">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -18858,7 +18895,7 @@ Sample values include: 1] proclaimed; 2] assumed; 3] verified; 4] clinical; 5] b
             <ref name="tei_desc"/>
          </optional>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-relation-relation-constraint-rule-68">
+                  id="tei-betamesaheft-relation-relation-constraint-rule-69">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -18869,7 +18906,7 @@ Sample values include: 1] proclaimed; 2] assumed; 3] verified; 4] clinical; 5] b
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-relation-reforkeyorname-constraint-assert-19">
+                  id="tei-betamesaheft-relation-reforkeyorname-constraint-assert-20">
             <rule context="tei:relation">
                <assert xmlns:rng="http://relaxng.org/ns/structure/1.0"
                        xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -20001,9 +20038,125 @@ Sample values include: 1] explicit; 2] implicit</a:documentation>
          <empty/>
       </element>
    </define>
+   <define name="tei_objectName">
+      <element name="objectName">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(name of an object) contains a proper noun or noun phrase used to refer to an object. [13.2.4. Object Names]</a:documentation>
+         <ref name="tei_macro.phraseSeq"/>
+         <ref name="tei_att.datable.attributes"/>
+         <ref name="tei_att.editLike.attributes"/>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.personal.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_object">
+      <element name="object">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a description of a single identifiable physical object. [13.3.5. Objects]</a:documentation>
+         <group>
+            <oneOrMore>
+               <ref name="tei_objectIdentifier"/>
+            </oneOrMore>
+            <zeroOrMore>
+               <ref name="tei_model.headLike"/>
+            </zeroOrMore>
+            <choice>
+               <zeroOrMore>
+                  <ref name="tei_model.pLike"/>
+               </zeroOrMore>
+               <group>
+                  <optional>
+                     <ref name="tei_msContents"/>
+                  </optional>
+                  <optional>
+                     <ref name="tei_physDesc"/>
+                  </optional>
+                  <optional>
+                     <ref name="tei_history"/>
+                  </optional>
+                  <optional>
+                     <ref name="tei_additional"/>
+                  </optional>
+               </group>
+            </choice>
+            <zeroOrMore>
+               <choice>
+                  <ref name="tei_model.noteLike"/>
+                  <ref name="tei_model.biblLike"/>
+                  <ref name="tei_linkGrp"/>
+                  <ref name="tei_link"/>
+               </choice>
+            </zeroOrMore>
+            <optional>
+               <ref name="tei_object"/>
+            </optional>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.sortable.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.declaring.attributes"/>
+         <ref name="tei_att.docStatus.attributes"/>
+         <ref name="tei_att.canonical.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_listObject">
+      <element name="listObject">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(list of objects) contains a list of descriptions, each of which provides information about an
+    identifiable physical object. [13.3.5. Objects]</a:documentation>
+         <group>
+            <zeroOrMore>
+               <ref name="tei_model.headLike"/>
+            </zeroOrMore>
+            <oneOrMore>
+               <ref name="tei_model.objectLike"/>
+            </oneOrMore>
+            <zeroOrMore>
+               <choice>
+                  <ref name="tei_relation"/>
+                  <ref name="tei_listRelation"/>
+               </choice>
+            </zeroOrMore>
+         </group>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
+         <ref name="tei_att.declarable.attributes"/>
+         <ref name="tei_att.sortable.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_objectIdentifier">
+      <element name="objectIdentifier">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(object identifier) groups one or more identifiers or pieces of locating information concerning a single object. [13.3.5. Objects]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <ref name="tei_model.placeNamePart"/>
+               <ref name="tei_institution"/>
+               <ref name="tei_repository"/>
+               <ref name="tei_collection"/>
+               <ref name="tei_idno"/>
+               <ref name="tei_msName"/>
+               <ref name="tei_objectName"/>
+               <ref name="tei_altIdentifier"/>
+               <ref name="tei_address"/>
+            </choice>
+         </zeroOrMore>
+         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
+                  id="tei-betamesaheft-objectIdentifier-objectIdentifier_minimal-constraint-report-92">
+            <rule context="tei:objectIdentifier">
+               <report xmlns:rng="http://relaxng.org/ns/structure/1.0"
+                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+                       xmlns:bm="http://betamasaheft.eu"
+                       test="not(count(*) gt 0)">An objectIdentifier must contain at minimum a single piece of locating or identifying information.</report>
+            </rule>
+         </pattern>
+         <ref name="tei_att.global.attributes"/>
+         <empty/>
+      </element>
+   </define>
    <define name="tei_nym">
       <element name="nym">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(canonical name) contains the definition for a canonical name or name component of any kind. [13.3.5. Names and Nyms]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(canonical name) contains the definition for a canonical name or name component of any kind. [13.3.6. Names and Nyms]</a:documentation>
          <group>
       
         
@@ -20045,7 +20198,7 @@ Sample values include: 1] explicit; 2] implicit</a:documentation>
    </define>
    <define name="tei_listNym">
       <element name="listNym">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(list of canonical names) contains a list of nyms, that is, standardized names for any thing. [13.3.5. Names and Nyms]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(list of canonical names) contains a list of nyms, that is, standardized names for any thing. [13.3.6. Names and Nyms]</a:documentation>
          <group>
       
             <zeroOrMore>
@@ -20182,6 +20335,7 @@ lemma and usually one or more readings or notes on the relevant passage. [12.1.1
                <choice>
                   <ref name="tei_model.rdgLike"/>
                   <ref name="tei_model.noteLike"/>
+        
                   <ref name="tei_wit"/>      
                   <ref name="tei_rdgGrp"/>      
                </choice>
@@ -20305,7 +20459,7 @@ relationship or other affinity. [12.1. The Apparatus Entry, Readings, and Witnes
                      <ref name="tei_wit"/>
                   </optional>
                </group>
-          
+      
                <zeroOrMore>
                   <group>
                      <optional>
@@ -20316,7 +20470,7 @@ relationship or other affinity. [12.1. The Apparatus Entry, Readings, and Witnes
                            </optional>
                         </group>
                      </optional>
-              
+        
                      <group>
                         <ref name="tei_model.rdgLike"/>
                         <optional>
@@ -20325,15 +20479,16 @@ relationship or other affinity. [12.1. The Apparatus Entry, Readings, and Witnes
                      </group>
                   </group>
                </zeroOrMore>
-          
+      
                <zeroOrMore>
                   <ref name="tei_model.noteLike"/>
                </zeroOrMore>
-          
+      
+      
             </choice>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-rdgGrp-only1lem-constraint-assert-20">
+                  id="tei-betamesaheft-rdgGrp-only1lem-constraint-assert-21">
             <rule context="tei:rdgGrp">
                <sch:assert xmlns="http://www.tei-c.org/ns/1.0"
                            xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -20396,7 +20551,7 @@ given reading, in a textual variation. [12.1.4. Witness Information]</a:document
                             Guidelines</a> [12.1. The Apparatus Entry, Readings, and Witnesses]</a:documentation>
          <ref name="tei_macro.limitedContent"/>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-witness-witness-constraint-rule-69">
+                  id="tei-betamesaheft-witness-witness-constraint-rule-70">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -20418,7 +20573,7 @@ given reading, in a textual variation. [12.1.4. Witness Information]</a:document
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-witness-witness-constraint-rule-70">
+                  id="tei-betamesaheft-witness-witness-constraint-rule-71">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"
@@ -20474,7 +20629,7 @@ or external to it.</a:documentation>
             </choice>
          </attribute>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-rule-71">
+                  id="tei-betamesaheft-variantEncoding-location-variantEncodingLocation-constraint-rule-72">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
                       xmlns:sch="http://purl.oclc.org/dsdl/schematron"

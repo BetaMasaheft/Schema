@@ -75,6 +75,7 @@ End license statement: do not remove -->
             <change who="PL" when="2018-11-22">added rules 
                 to constrain use of listBibl, check the ids in placeName 
                 and persName, avoid locus inside div[@type='edition'].</change>
+            <change who="PL" when="2019-01-30">upgraded source to 3.5.0 after release.</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -86,10 +87,10 @@ End license statement: do not remove -->
                 environment. The website <ref target="http://betamasaheft.eu/Guidelines">Beta
                     maṣāḥǝft Guidelines</ref> contains all the how to details.</p>
             <schemaSpec ident="tei-betamesaheft" docLang="en" prefix="tei_" start="TEI"
-                xml:lang="en" source="tei:3.4.0">
+                xml:lang="en" source="tei:3.5.0">
 
                 <!--       MODULES USED BY THE Beta maṣāḥǝft: Manuscripts of Ethiopia and Eritrea SCHEMA
-                the @source ties our current schema to the version 3.4.0 of TEI
+                the @source ties our current schema to the version 3.5.0 of TEI
                 -->
                 <moduleRef key="core"/>
                 <moduleRef key="tei"/>
@@ -3894,7 +3895,7 @@ End license statement: do not remove -->
                                 <sch:report test="not(@ref)">A persName in a mss, place or work
                                     description should always contain an attribute @ref pointing to
                                     the relevant record</sch:report>
-                                <sch:report test="not(matches(@ref, 'PRS\d+\w+') or matches(@ref, 'ETH\d+\w+'))">The person ID you have entered is wrong. Persons IDs must match the pattern PRS\d+\w+ or ETH\d+\w+ .</sch:report>
+                                <sch:report test="not(matches(@ref, 'PRS\d+\w+') or matches(@ref, 'ETH\d+\w+') or matches(@ref, 'Q\d+'))">The person ID you have entered is wrong. Persons IDs must match the pattern PRS\d+\w+ or ETH\d+\w+ or Q\d+ .</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:persName[not(text())][not(parent::tei:person)]">
                                 <sch:report
