@@ -4725,13 +4725,6 @@ End license statement: do not remove -->
                     <attList>
                         <attDef ident="name" mode="replace" usage="req">
                             <valList type="closed">
-                                <!--<valItem ident="dcterms:hasPart"><desc>http://purl.org/dc/terms/hasPart</desc></valItem> -->
-                                <!--to be removed-->
-
-                                <!--<valItem ident="SdC:constituteUnit">
-                                    <desc>Property to link a Discontinuite with a Unite de
-                                        Production. <ref target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AconstituteUnit+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
-                                </valItem>-->
                                 <valItem ident="SdC:constituteUnit">
                                     <desc>States that one or more identified discontinuities
                                         constitute a UniProd, which can be certain or hypothetical.
