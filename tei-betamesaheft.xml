@@ -3895,7 +3895,7 @@ End license statement: do not remove -->
                                 <sch:report test="not(@ref)">A persName in a mss, place or work
                                     description should always contain an attribute @ref pointing to
                                     the relevant record</sch:report>
-                                <sch:report test="not(matches(@ref, 'PRS\d+\w+') or matches(@ref, 'ETH\d+\w+') or matches(@ref, 'Q\d+'))">The person ID you have entered is wrong. Persons IDs must match the pattern PRS\d+\w+ or ETH\d+\w+ or Q\d+ .</sch:report>
+                                <sch:report test="not(matches(@ref, 'PRS\d+\w+') or matches(@ref, 'ETH\d+\w+') or matches(@ref, 'Q\d+') or matches(@ref, '^[A-Za-z]{2,3}$'))">The person ID you have entered is wrong. Persons IDs must match the pattern PRS\d+\w+ or ETH\d+\w+ or Q\d+ or be one of the two/three letters abbreviations used by editors.</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:persName[not(text())][not(parent::tei:person)]">
                                 <sch:report
