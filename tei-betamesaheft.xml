@@ -2016,13 +2016,22 @@ End license statement: do not remove -->
                               </sch:rule>
                               <sch:rule context="tei:listBibl[@type='editions']">
                                   <sch:report
-                                      test="ancestor::tei:TEI/@type = 'mss'">
+                                      test="ancestor::tei:TEI/@type = 'mss' or ancestor::tei:TEI/@type = 'ins' or ancestor::tei:TEI/@type = 'place' or ancestor::tei:TEI/@type = 'pers'">
                                       Edition bibliography is meaningful only for a textual unit description.
                                       If the information about this manuscript is found in the edition of
                                       a text, please use the value "secondary"
                                       for the attribute type.
                                   </sch:report>
                               </sch:rule>
+                                  <sch:rule context="tei:listBibl[@type='translation']">
+                                      <sch:report
+                                          test="ancestor::tei:TEI/@type = 'ins' or ancestor::tei:TEI/@type = 'place' or ancestor::tei:TEI/@type = 'pers'">
+                                          Translation bibliography is meaningful only for a textual unit description or for a manuscript.
+                                          If the information about this manuscript is found in the edition of
+                                          a text, please use the value "secondary"
+                                          for the attribute type.
+                                      </sch:report>
+                                  </sch:rule>
                           </constraint>
                       </constraintSpec>
                     <attList>
