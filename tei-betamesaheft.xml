@@ -2042,30 +2042,28 @@ End license statement: do not remove -->
                     <attList>
                         <attDef ident="type" mode="replace" usage="req">
                             <valList type="closed">
-                                <valItem ident="mss">
-                                    <desc/>
-                                </valItem>
+                                
                                 <valItem ident="catalogue">
                                     <desc>Descriptions in manuscript catalogues of the subject of
-                                        the record</desc>
+                                        the record. This only makes sense if you are editing a manuscript record. <ref target="https://betamasaheft.eu/bibliography?type=catalogue&amp;collection=all">See where is this bibliography used and for what entries.</ref></desc>
                                 </valItem>
                                 <valItem ident="editions">
-                                    <desc> Editions of the work</desc>
+                                    <desc>Editions of the Textual Unit (Work). This only makes sense if you are editing a Textual Unit.<ref target="https://betamasaheft.eu/bibliography?type=editions&amp;collection=all">See where is this bibliography used and for what entries.</ref></desc>
                                 </valItem>
                                 <valItem ident="text">
-                                    <desc/>
+                                    <desc>Bibliography about the Textual Unit (Work), which is not an edition. This could also find its place in secondary bibliography.<ref target="https://betamasaheft.eu/bibliography?type=text&amp;collection=all">See where is this bibliography used and for what entries.</ref></desc>
                                 </valItem>
                                 <valItem ident="otherLanguages">
-                                    <desc/>
+                                    <desc>About the same textual unit in a different literary tradition<ref target="https://betamasaheft.eu/bibliography?otherLanguages=catalogue&amp;collection=all">See where is this bibliography used and for what entries.</ref></desc>
                                 </valItem>
                                 <valItem ident="clavis">
-                                    <desc>ID of the work in an external clavis (CC, CPG etc.)</desc>
+                                    <desc>ID of the work in other clavis (CC, CPG etc.) <ref target="https://betamasaheft.eu/bibliography?type=clavis&amp;collection=all">See where is this bibliography used and for what entries.</ref></desc>
                                 </valItem>
                                 <valItem ident="translation">
-                                    <desc>Modern translations of the work </desc>
+                                    <desc>Modern translations of the work <ref target="https://betamasaheft.eu/bibliography?type=translation&amp;collection=all">See where is this bibliography used and for what entries.</ref></desc>
                                 </valItem>
                                 <valItem ident="secondary">
-                                    <desc>Secondary bibliography on the subject of the record</desc>
+                                    <desc>Secondary bibliography on the subject of the record. <ref target="https://betamasaheft.eu/bibliography?type=secondary&amp;collection=all">See where is this bibliography used and for what entries.</ref></desc>
                                 </valItem>
                             </valList>
                         </attDef>
