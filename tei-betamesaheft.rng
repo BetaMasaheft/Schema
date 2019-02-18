@@ -5256,6 +5256,10 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                                         donation acts, land grants. <a xmlns="http://www.w3.org/1999/xhtml"
                         href="http://betamasaheft.eu/authority-files/LegalDocument">See LegalDocument in Beta maṣāḥǝft</a>
                   </a:documentation>
+                  <value>Letter</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">texts of epistolary genre with an independent support. <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="http://betamasaheft.eu/authority-files/Letter">See Letter in Beta maṣāḥǝft</a>
+                  </a:documentation>
                   <value>Liturgy</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">works containing directives for the liturgy of the office
                                         services (except for the mass and rituals like weddings and
