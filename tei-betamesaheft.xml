@@ -72,8 +72,8 @@ End license statement: do not remove -->
                 https://raw.githubusercontent.com/TEIC/TEI/dev/P5/Scripts/purify.xsl</change>
             <change who="PL" when="2018-09-18">added examples to all rules and description to all rules, transformed to
             RNG with modified TEI XSLT to produce links in descriptions.</change>
-            <change who="PL" when="2018-11-22">added rules 
-                to constrain use of listBibl, check the ids in placeName 
+            <change who="PL" when="2018-11-22">added rules
+                to constrain use of listBibl, check the ids in placeName
                 and persName, avoid locus inside div[@type='edition'].</change>
             <change who="PL" when="2019-01-30">upgraded source to 3.5.0 after release.</change>
         </revisionDesc>
@@ -1355,9 +1355,9 @@ End license statement: do not remove -->
                                             >See Vocabulary in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
                                 <valItem ident="Apocrypha">
-                                    <desc>works not universally recognised in the Christian and Jewish religions as belonging to the fixed set of canonical scriptures, 
-                                        either for reasons of tradition or of secundary development or doubtful authorship or heterodox opinions and for this rejected from one 
-                                        or the other biblical canon of the respective tradition: 
+                                    <desc>works not universally recognised in the Christian and Jewish religions as belonging to the fixed set of canonical scriptures,
+                                        either for reasons of tradition or of secundary development or doubtful authorship or heterodox opinions and for this rejected from one
+                                        or the other biblical canon of the respective tradition:
                                         e.g. the Book of Enoch, Jubilees, Herma, the Miracles of Mary, the Miracles of Jesus, Maṣḥafa ṭomār, the apocryphal Acts of the Apostles, etc<ref
                                             target="http://betamasaheft.eu/authority-files/Apocrypha"
                                             >See Apocrypha in Beta maṣāḥǝft</ref></desc>
@@ -1431,10 +1431,10 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="Hagiography">
                                     <desc>Genre of literature whose aims were the veneration of the saint and the creation of an ideal of Christian behavior
-                                        as well as documentation and entertainment. As a protrayal of historical personages, hagiography overlaps with historiography, 
-                                        conveying historical information, using chronicles as sources, and, in turn, serving as a source for chronicles; 
+                                        as well as documentation and entertainment. As a protrayal of historical personages, hagiography overlaps with historiography,
+                                        conveying historical information, using chronicles as sources, and, in turn, serving as a source for chronicles;
                                         as an edifying genre, hagiography may bear resemblance to the Sermon. Three major types of hagiography already existed in the early
-                                        centuries of the Roman empire: Martyrion, the account of a martyr's trial and execution; Vita, a saint's biography; and Apophthegmata Patrum, 
+                                        centuries of the Roman empire: Martyrion, the account of a martyr's trial and execution; Vita, a saint's biography; and Apophthegmata Patrum,
                                         a collection of wise sayings of hermits. Probably by the 7th c. the description of posthumous Miracles was established as a separate genre.
                                             <ref
                                             target="http://betamasaheft.eu/authority-files/Hagiography"
@@ -1483,6 +1483,11 @@ End license statement: do not remove -->
                                         donation acts, land grants. <ref
                                             target="http://betamasaheft.eu/authority-files/LegalDocument"
                                             >See LegalDocument in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="Letter">
+                                    <desc>texts of epistolary genre withan independent support. <ref
+                                            target="http://betamasaheft.eu/authority-files/Letter"
+                                            >See Letter in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
                                 <valItem ident="Liturgy">
                                     <desc>works containing directives for the liturgy of the office
@@ -3234,8 +3239,8 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="miniature">
                                     <desc>An indipendent illustration in colour
-                                        that occupies the full-page or part 
-                                        of the equivalent space of one or more 
+                                        that occupies the full-page or part
+                                        of the equivalent space of one or more
                                         columns of text.
                                 </desc></valItem>
                                 <valItem ident="band">
