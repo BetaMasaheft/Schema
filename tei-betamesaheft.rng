@@ -15033,7 +15033,7 @@ may exist in the holding institution or elsewhere. [10.9. Additional Information
                                 <sch:report test="not(@ref)">A placeName in a mss, person or work
                                     description should always contain an attribute @ref pointing to
                                     the relevant record</sch:report>
-                                <sch:report test="not(matches(@ref, 'INS\d+\w+') or                                     matches(@ref, 'LOC\d+\w+') or                                     matches(@ref, 'Q\d+') or                                     matches(@ref, 'pleiades:\d+'))">The place identifier you have entered is wrong.
+               <sch:report test="not(matches(@ref, 'INS\d+\w+') or                                     matches(@ref, 'LOC\d+\w+') or                                     matches(@ref, 'ETH\d+\w+') or                                     matches(@ref, 'Q\d+') or                                     matches(@ref, 'pleiades:\d+'))">The place identifier you have entered is wrong.
                                     Place IDs must match LOC\d+\w+ for places, INS\d+\w+ for institutions, Q\d+ for wikidata items or pleiades:\d+ for ancient places in the Pleiades Gazetteer.</sch:report>
                             </sch:rule>
          </pattern>
