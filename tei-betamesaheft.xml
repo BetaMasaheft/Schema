@@ -1095,6 +1095,10 @@ End license statement: do not remove -->
                                     <desc><ref target="http://betamasaheft.eu/authority-files/sword"
                                             >See sword in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
+                                <valItem ident="scabbard">
+                                    <desc><ref target="http://betamasaheft.eu/authority-files/scabbard"
+                                        >See sword in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
                                 <valItem ident="twothieves">
                                     <desc><ref
                                             target="http://betamasaheft.eu/authority-files/twothieves"
