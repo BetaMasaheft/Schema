@@ -244,10 +244,22 @@ End license statement: do not remove -->
                     <attList>
                         <attDef ident="contemporary" mode="replace">
                             <valList type="closed">
-                                <valItem ident="partly"/>
-                                <valItem ident="true"/>
-                                <valItem ident="false"/>
-                                <valItem ident="unknown"/>
+                                <valItem ident="partly">
+                                    <desc>See all examples where this value is used <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-rootMS%2F%2Ft%3Abinding%5B%40contemporary%3D%27partly%27%5D">here</ref>.
+                                    </desc>
+                                </valItem>
+                                <valItem ident="true">
+                                    <desc>See all examples where this value is used <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-rootMS%2F%2Ft%3Abinding%5B%40contemporary%3D%27true%27%5D">here</ref>.
+                                    </desc>
+                                </valItem>
+                                <valItem ident="false">
+                                    <desc>See all examples where this value is used <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-rootMS%2F%2Ft%3Abinding%5B%40contemporary%3D%27false%27%5D">here</ref>.
+                                    </desc>
+                                </valItem>
+                                <valItem ident="unknown">
+                                    <desc>See all examples where this value is used <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-rootMS%2F%2Ft%3Abinding%5B%40contemporary%3D%27unknown%27%5D">here</ref>.
+                                    </desc>
+                                </valItem>
                             </valList>
                         </attDef>
                     </attList>
@@ -432,20 +444,20 @@ End license statement: do not remove -->
                                 <dataRef key="teidata.word"/>
                             </datatype>
                             <valList type="open">
-                                <valItem ident="age"/>
-                                <valItem ident="reign"/>
-                                <valItem ident="life"/>
-                                <valItem ident="marriage"/>
-                                <valItem ident="generic-duration"/>
-                                <valItem ident="foundation"/>
-                                <valItem ident="composition"/>
-                                <valItem ident="translation"/>
-                                <valItem ident="revision"/>
-                                <valItem ident="recension"/>
-                                <valItem ident="diesNatalis"/>
-                                <valItem ident="birth"/>
-                                <valItem ident="ascension"/>
-                                <valItem ident="death"/>
+                                <valItem ident="age"><desc>Age, the value should be given in a @dur attribute according to <ref target="https://www.w3.org/TR/xmlschema-2/#duration">W3C datatypes</ref></desc></valItem>
+                                <valItem ident="reign"><desc>Duration of a reign, the value should be given in a @dur attribute according to <ref target="https://www.w3.org/TR/xmlschema-2/#duration">W3C datatypes</ref></desc></valItem>
+                                <valItem ident="life"><desc>Duration of life, the value should be given in a @dur attribute according to <ref target="https://www.w3.org/TR/xmlschema-2/#duration">W3C datatypes</ref></desc></valItem>
+                                <valItem ident="marriage"><desc>Duration of marriage, the value should be given in a @dur attribute according to <ref target="https://www.w3.org/TR/xmlschema-2/#duration">W3C datatypes</ref></desc></valItem>
+                                <valItem ident="generic-duration"><desc>Generic duration, the value should be given in a @dur attribute according to <ref target="https://www.w3.org/TR/xmlschema-2/#duration">W3C datatypes</ref></desc></valItem>
+                                <valItem ident="foundation"><desc>Date of foundation</desc></valItem>
+                                <valItem ident="composition"><desc>Date of the composition of a work</desc></valItem>
+                                <valItem ident="translation"><desc>Date of the translation of a work</desc></valItem>
+                                <valItem ident="revision"><desc>Date of the revision of a work</desc></valItem>
+                                <valItem ident="recension"><desc>Date of the composition of a specific recension</desc></valItem>
+                                <valItem ident="diesNatalis"><desc>Date of a saint’s martyrdom</desc></valItem>
+                                <valItem ident="birth"><desc>Date of birth (do not use this in a person record, use element birth)</desc></valItem>
+                                <valItem ident="ascension"><desc>Date of a person’s ascension to power</desc></valItem>
+                                <valItem ident="death"><desc>Date of death</desc></valItem>
                                 <valItem ident="production">
                                     <desc>The date of production of the document (EMA)</desc>
                                 </valItem>
@@ -546,18 +558,6 @@ End license statement: do not remove -->
                         </constraint>
                     </constraintSpec>
                     <attList>
-                        <!--    adds list of values to origDate/@type-->
-                        <attDef ident="type" mode="replace">
-                            <valList type="open">
-                                <valItem ident="editor"/>
-                                <valItem ident="mss"/>
-                                <valItem ident="literature"/>
-                                <valItem ident="foundation"/>
-                                <valItem ident="composition"/>
-                                <valItem ident="translation"/>
-                                <valItem ident="revision"/>
-                            </valList>
-                        </attDef>
                         <attDef ident="evidence" mode="replace" usage="opt">
                             <!--                          inherited from EpiDoc, could be useful-->
                             <datatype maxOccurs="6">
@@ -3361,9 +3361,21 @@ End license statement: do not remove -->
                     <attList>
                         <attDef ident="subtype" mode="replace" usage="req">
                             <valList type="closed">
-                                <valItem ident="ancient"/>
-                                <valItem ident="modern"/>
-                                <valItem ident="none"/>
+                                <valItem ident="ancient">
+                                    <desc>See examples of manuscripts where this value has been used <ref
+                                        target="https://betamasaheft.eu/manuscripts/list?restorations=ancient"
+                                        >here</ref>.</desc>
+                                </valItem>
+                                <valItem ident="modern">
+                                    <desc>See examples of manuscripts where this value has been used <ref
+                                        target="https://betamasaheft.eu/manuscripts/list?restorations=modern"
+                                        >here</ref>.</desc>
+                                </valItem>
+                                <valItem ident="none">
+                                    <desc>See examples of manuscripts where this value has been used <ref
+                                        target="https://betamasaheft.eu/manuscripts/list?restorations=none"
+                                        >here</ref>.</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                     </attList>
