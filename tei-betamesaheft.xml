@@ -5015,43 +5015,43 @@ End license statement: do not remove -->
                                 </valItem>
 
                                 <valItem ident="syriaca:different-from">
-                                    <desc>http://syriaca.org/documentation/relations.html#different-from
+                                    <desc><ref target="http://syriaca.org/documentation/relations.html#different-from">definition in syriaca.org</ref>
                                             <ref
                                             target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Adifferent-from+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="syriaca:has-literary-connection-to-place">
-                                    <desc>http://syriaca.org/documentation/relations.html#has-literary-connection-to-place
+                                    <desc><ref target="http://syriaca.org/documentation/relations.html#has-literary-connection-to-place">definition in syriaca.org</ref>
                                             <ref
                                             target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Ahas-literary-connection-to-place+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="syriaca:has-relation-to-place">
-                                    <desc>http://syriaca.org/documentation/relations.html#has-relation-to-place
+                                    <desc><ref target="http://syriaca.org/documentation/relations.html#has-relation-to-place">definition in syriaca.org</ref>
                                             <ref
                                             target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Ahas-relation-to-place+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="syriaca:possibly-identical">
-                                    <desc>http://syriaca.org/documentation/relations.html#possibly-identical
+                                    <desc><ref target="http://syriaca.org/documentation/relations.html#possibly-identical">definition in syriaca.org</ref>
                                             <ref
                                             target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Apossibly-identical+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="syriaca:share-a-name">
-                                    <desc>http://syriaca.org/documentation/relations.html#share-a-name
+                                    <desc><ref target="http://syriaca.org/documentation/relations.html#share-a-name">definition in syriaca.org</ref>
                                             <ref
                                             target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Ashare-a-name+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="syriaca:share-a-title">
-                                    <desc>http://syriaca.org/documentation/relations.html#share-a-title
+                                    <desc><ref target="http://syriaca.org/documentation/relations.html#share-a-title">definition in syriaca.org</ref>
                                             <ref
                                             target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Ashare-a-title+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="syriaca:born-at">
-                                    <desc>http://syriaca.org/documentation/relations.html#born-at
+                                    <desc><ref target="http://syriaca.org/documentation/relations.html#born-at">definition in syriaca.org</ref>
                                             <ref
                                             target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Aborn-at+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
