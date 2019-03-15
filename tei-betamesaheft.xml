@@ -713,6 +713,23 @@ End license statement: do not remove -->
                     <attList>
                         <attDef ident="key" mode="replace" usage="rec">
                             <valList type="closed">
+                                <valItem ident="angel">
+                                    <desc><ref target="http://betamasaheft.eu/authority-files/angel"
+                                        >See angel in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="saint">
+                                    <desc><ref target="http://betamasaheft.eu/authority-files/saint"
+                                        >See saint in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="prophet">
+                                    <desc><ref target="http://betamasaheft.eu/authority-files/prophet"
+                                        >See prophet in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="biblical">
+                                    <desc><ref target="http://betamasaheft.eu/authority-files/biblical"
+                                        >See biblical in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                
                                 <valItem ident="guard">
                                     <desc><ref target="http://betamasaheft.eu/authority-files/guard"
                                             >See guard in Beta maṣāḥǝft</ref></desc>
