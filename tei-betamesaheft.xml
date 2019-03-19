@@ -6385,13 +6385,20 @@ End license statement: do not remove -->
                                     indicated with @from and @to or either of the two if the other
                                     extreme of the range is unknown. Please do not use "unknown" as
                                     value.</sch:report>
-                                <sch:report test="not(starts-with(@target, '#'))">References to foliation and columns in @target, should use the #, e.g. #6r.</sch:report>
-                                <sch:report test="starts-with(@from, '#')">References to foliation and columns in @from, should NOT use the #, e.g. 6r.</sch:report>
-                                <sch:report test="starts-with(@to, '#')">References to foliation and columns in @to, should NOT use the #, e.g. 6r.</sch:report>
-                                    <sch:report test="ancestor::tei:div[@type='edition']">
+                                <sch:report test="ancestor::tei:div[@type='edition']">
 The structuring elements used in a manuscript transcription are div, pb and cb.
 locus is used to point to values of these elements in the teiHeader.
                                     </sch:report>
+                            </sch:rule>
+                            
+                            
+                            <sch:rule context="tei:locus[@from]">
+                                <sch:report test="starts-with(@from, '#')">References to foliation and columns in @from, should NOT use the #, e.g. 6r.</sch:report>
+                                <sch:report test="starts-with(@to, '#')">References to foliation and columns in @to, should NOT use the #, e.g. 6r.</sch:report>
+                                    
+                            </sch:rule>
+                            <sch:rule context="tei:locus[@target]">
+                                <sch:report test="not(starts-with(@target, '#'))">References to foliation and columns in @target, should use the #, e.g. #6r.</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
