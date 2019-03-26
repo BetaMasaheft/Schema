@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2019-03-19T15:43:21Z. .
+Schema generated from ODD source 2019-03-26T08:20:28Z. .
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
@@ -14257,8 +14257,8 @@ Suggested values include: 1] UTI; 2] OTI; 3] L; 4] R</a:documentation>
                                 <sch:report test="not(@ref)">A placeName in a mss, person or work
                                     description should always contain an attribute @ref pointing to
                                     the relevant record</sch:report>
-                                <sch:report test="not(matches(@ref, 'INS\d+\w+') or                                     matches(@ref, 'LOC\d+\w+') or                                     matches(@ref, 'ETH\d+\w+') or                                     matches(@ref, 'Q\d+') or                                     matches(@ref, 'pleiades:\d+'))">The place identifier you have entered is wrong.
-                                    Place IDs must match LOC\d+\w+ for places, INS\d+\w+ for institutions, Q\d+ for wikidata items or pleiades:\d+ for ancient places in the Pleiades Gazetteer.</sch:report>
+                                <sch:report test="not(matches(@ref, 'INS\d+\w+') or                                     matches(@ref, 'LOC\d+\w+') or                                     matches(@ref, 'ETH\d+\w+') or                                     matches(@ref, 'wd:Q\d+') or                                     matches(@ref, 'pleiades:\d+'))">The place identifier you have entered is wrong.
+                                    Place IDs must match LOC\d+\w+ for places, INS\d+\w+ for institutions, wd:Q\d+ for wikidata items or pleiades:\d+ for ancient places in the Pleiades Gazetteer.</sch:report>
                             </sch:rule>
          </pattern>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
@@ -18105,52 +18105,52 @@ Sample values include: 1] proclaimed; 2] assumed; 3] verified; 4] clinical; 5] b
          <attribute name="name">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             <choice>
-               <value>SdC:constituteUnit</value>
+               <value>sdc:constituteUnit</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">States that one or more identified discontinuities constitute a UniProd, which can be certain or hypothetical. <a xmlns="http://www.w3.org/1999/xhtml"
                      href="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AconstituteUnit+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>SdC:containsUnits</value>
+               <value>sdc:containsUnits</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">States that a UniCirc or a UniProd contains the Units declared in the <code xmlns="http://www.w3.org/1999/xhtml">&lt;object&gt;</code>
                   <code xmlns="http://www.w3.org/1999/xhtml">@passive</code>. <a xmlns="http://www.w3.org/1999/xhtml"
                      href="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AcontainsUnits+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>SdC:hasUnitModel</value>
+               <value>sdc:hasUnitModel</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The Unit has one of the possible model for its class. <a xmlns="http://www.w3.org/1999/xhtml"
                      href="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasUnitModel+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>SdC:undergoesTransformation</value>
+               <value>sdc:undergoesTransformation</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Something happens to a UniCirc or less often a UniProd. <a xmlns="http://www.w3.org/1999/xhtml"
                      href="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AundergoesTransformation+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>SdC:hasTransformationModel</value>
+               <value>sdc:hasTransformationModel</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Something happens to a UniCirc or less often a UniProd. <a xmlns="http://www.w3.org/1999/xhtml"
                      href="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasTransformationModel+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>SdC:hasTransformationPart</value>
+               <value>sdc:hasTransformationPart</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">If the model of the transformation is multiple, you can specify which individual parts constitute it. <a xmlns="http://www.w3.org/1999/xhtml"
                      href="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasTransformationPart+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>SdC:isPartOfTransformation</value>
+               <value>sdc:isPartOfTransformation</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">If the model of the transformation is simple, you can specify of which individual mutiple transformation it is a part. <a xmlns="http://www.w3.org/1999/xhtml"
                      href="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AisPartOfTransformation+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>SdC:produces</value>
+               <value>sdc:produces</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A transcormation produces new UniProds. <a xmlns="http://www.w3.org/1999/xhtml"
                      href="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3Aproduces+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>SdC:resultsIn</value>
+               <value>sdc:resultsIn</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A transformation results in a new UniProd or a new UniCirc. <a xmlns="http://www.w3.org/1999/xhtml"
                      href="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AresultsIn+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>SdC:hasCertainty</value>
+               <value>sdc:hasCertainty</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certain or Hypothetique. <a xmlns="http://www.w3.org/1999/xhtml"
                      href="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasCertainty+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>SdC:hasStratum</value>
+               <value>sdc:hasStratum</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Declares for a UniCirc one or more of the Stratum types in Ansdrist 2015, 512. <a xmlns="http://www.w3.org/1999/xhtml"
                      href="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasStratum+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>SdC:isStratumOf</value>
+               <value>sdc:isStratumOf</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Declares one or more of the Stratum types in Ansdrist 2015, 512 and assign them to a UniCirc. <a xmlns="http://www.w3.org/1999/xhtml"
                      href="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AisStratumOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>

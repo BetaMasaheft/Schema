@@ -4074,9 +4074,9 @@ End license statement: do not remove -->
                                 <sch:report test="not(matches(@ref, 'INS\d+\w+') or
                                     matches(@ref, 'LOC\d+\w+') or
                                     matches(@ref, 'ETH\d+\w+') or
-                                    matches(@ref, 'Q\d+') or
+                                    matches(@ref, 'wd:Q\d+') or
                                     matches(@ref, 'pleiades:\d+'))">The place identifier you have entered is wrong.
-                                    Place IDs must match LOC\d+\w+ for places, INS\d+\w+ for institutions, Q\d+ for wikidata items or pleiades:\d+ for ancient places in the Pleiades Gazetteer.</sch:report>
+                                    Place IDs must match LOC\d+\w+ for places, INS\d+\w+ for institutions, wd:Q\d+ for wikidata items or pleiades:\d+ for ancient places in the Pleiades Gazetteer.</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:placeName[not(text())][not(parent::tei:place)]">
                                 <sch:report
@@ -4771,73 +4771,73 @@ End license statement: do not remove -->
                     <attList>
                         <attDef ident="name" mode="replace" usage="req">
                             <valList type="closed">
-                                <valItem ident="SdC:constituteUnit">
+                                <valItem ident="sdc:constituteUnit">
                                     <desc>States that one or more identified discontinuities
                                         constitute a UniProd, which can be certain or hypothetical.
                                             <ref
                                             target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AconstituteUnit+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="SdC:containsUnits">
+                                <valItem ident="sdc:containsUnits">
                                     <desc>States that a UniCirc or a UniProd contains the Units
                                         declared in the <gi>object</gi><att>passive</att>. <ref
                                             target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AcontainsUnits+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="SdC:hasUnitModel">
+                                <valItem ident="sdc:hasUnitModel">
                                     <desc>The Unit has one of the possible model for its class. <ref
                                             target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasUnitModel+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="SdC:undergoesTransformation">
+                                <valItem ident="sdc:undergoesTransformation">
                                     <desc>Something happens to a UniCirc or less often a UniProd.
                                             <ref
                                             target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AundergoesTransformation+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="SdC:hasTransformationModel">
+                                <valItem ident="sdc:hasTransformationModel">
                                     <desc>Something happens to a UniCirc or less often a UniProd.
                                             <ref
                                             target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasTransformationModel+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="SdC:hasTransformationPart">
+                                <valItem ident="sdc:hasTransformationPart">
                                     <desc>If the model of the transformation is multiple, you can
                                         specify which individual parts constitute it. <ref
                                             target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasTransformationPart+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="SdC:isPartOfTransformation">
+                                <valItem ident="sdc:isPartOfTransformation">
                                     <desc>If the model of the transformation is simple, you can
                                         specify of which individual mutiple transformation it is a
                                         part. <ref
                                             target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AisPartOfTransformation+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="SdC:produces">
+                                <valItem ident="sdc:produces">
                                     <desc>A transcormation produces new UniProds. <ref
                                             target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3Aproduces+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                <valItem ident="SdC:resultsIn">
+                                <valItem ident="sdc:resultsIn">
                                     <desc>A transformation results in a new UniProd or a new
                                         UniCirc. <ref
                                             target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AresultsIn+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="SdC:hasCertainty">
+                                <valItem ident="sdc:hasCertainty">
                                     <desc>Certain or Hypothetique. <ref
                                             target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasCertainty+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="SdC:hasStratum">
+                                <valItem ident="sdc:hasStratum">
                                     <desc>Declares for a UniCirc one or more of the Stratum types in
                                         Ansdrist 2015, 512. <ref
                                             target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasStratum+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="SdC:isStratumOf">
+                                <valItem ident="sdc:isStratumOf">
                                     <desc>Declares one or more of the Stratum types in Ansdrist
                                         2015, 512 and assign them to a UniCirc. <ref
                                             target="http://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AisStratumOf+%3Fy%7D+LIMIT+25"
