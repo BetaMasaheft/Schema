@@ -76,6 +76,7 @@ End license statement: do not remove -->
                 to constrain use of listBibl, check the ids in placeName
                 and persName, avoid locus inside div[@type='edition'].</change>
             <change who="PL" when="2019-01-30">upgraded source to 3.5.0 after release.</change>
+            <change when="2019-03-28" who="ES">added objects of veneration</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -728,6 +729,16 @@ End license statement: do not remove -->
                                 <valItem ident="biblical">
                                     <desc><ref target="http://betamasaheft.eu/authority-files/biblical"
                                         >See biblical in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                
+                                
+                                <valItem ident="TrueCross">
+                                    <desc><ref target="http://betamasaheft.eu/authority-files/TrueCross"
+                                        >See TrueCross in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="CovenantMercy">
+                                    <desc><ref target="http://betamasaheft.eu/authority-files/CovenantMercy"
+                                        >See CovenantMercy in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
                                 
                                 <valItem ident="guard">
