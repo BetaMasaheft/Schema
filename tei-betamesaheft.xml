@@ -3002,6 +3002,9 @@ End license statement: do not remove -->
                                         target="http://betamasaheft.eu/authority-files/list?keyword=MixedNote"
                                             >Mixed Note</ref></desc>
                                 </valItem>
+                                <valItem ident="findingAid">
+                                    <desc>Finding Aids in the text (legacy from Ethio-SPaRe).</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                     </attList>
