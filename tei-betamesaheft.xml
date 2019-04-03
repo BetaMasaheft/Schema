@@ -3921,6 +3921,9 @@ End license statement: do not remove -->
                                 <valItem ident="HE">
                                     <desc>Hiruie Ermias</desc>
                                 </valItem>
+                                <valItem ident="AM">
+                                    <desc>Angela Müller</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                         <attDef ident="when" mode="replace" usage="req"/>
