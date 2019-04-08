@@ -4787,6 +4787,10 @@ End license statement: do not remove -->
                                 <sch:report test="not(parent::tei:listRelation)"> a relation element
                                     is only allowed within a listRelation </sch:report>
                             </sch:rule>
+                            <sch:rule context="tei:relation">
+                                <sch:report test="starts-with(@active, '#')">The @active element should not use the #.</sch:report>
+                                <sch:report test="starts-with(@passive, '#')">The @passive element should not use the #.</sch:report>                                
+                            </sch:rule>
                         </constraint>
                     </constraintSpec>
                     <attList>
