@@ -4346,6 +4346,16 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                      <a xmlns="http://www.w3.org/1999/xhtml"
                         href="https://betamasaheft.eu/authority-files/guard">See guard in Beta maṣāḥǝft</a>
                   </a:documentation>
+                  <value>leafStringMark</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="https://betamasaheft.eu/authority-files/leafStringMark">See leafStringMark in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>leafTabMark</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="https://betamasaheft.eu/authority-files/leafTabMark">See leafTabMark in Beta maṣāḥǝft</a>
+                  </a:documentation>
                   <value>centerfold</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
                      <a xmlns="http://www.w3.org/1999/xhtml"
