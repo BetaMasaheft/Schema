@@ -78,6 +78,7 @@ End license statement: do not remove -->
             <change who="PL" when="2019-01-30">upgraded source to 3.5.0 after release.</change>
             <change when="2019-03-28" who="ES">added objects of veneration</change>
             <change when="2019-04-18" who="ES">added leafTabMark leafStringMark</change>
+            <change when="2019-04-23" who="ES">added mitredCorner openMitredCorner overlappingCornerFO overlappingCornerHTO quarterCover overCover stitchedCorner tonguedCorner</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -757,6 +758,38 @@ End license statement: do not remove -->
                                 <valItem ident="leafTabMark">
                                     <desc><ref target="https://betamasaheft.eu/authority-files/leafTabMark"
                                         >See leafTabMark in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="mitredCorner">
+                                    <desc><ref target="https://betamasaheft.eu/authority-files/mitredCorner"
+                                        >See mitredCorner in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="openMitredCorner">
+                                    <desc><ref target="https://betamasaheft.eu/authority-files/openMitredCorner"
+                                        >See openMitredCorner in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="overlappingCornerFO">
+                                    <desc><ref target="https://betamasaheft.eu/authority-files/overlappingCornerFO"
+                                        >See overlappingCornerFO in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="quarterCover">
+                                    <desc><ref target="https://betamasaheft.eu/authority-files/quarterCover"
+                                        >See quarterCover in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="overCover">
+                                    <desc><ref target="https://betamasaheft.eu/authority-files/overCover"
+                                        >See overCover in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="stitchedCorner">
+                                    <desc><ref target="https://betamasaheft.eu/authority-files/stitchedCorner"
+                                        >See stitchedCorner in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="tonguedCorner">
+                                    <desc><ref target="https://betamasaheft.eu/authority-files/tonguedCorner"
+                                        >See tonguedCorner in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="overlappingCornerHTO">
+                                    <desc><ref target="https://betamasaheft.eu/authority-files/overlappingCornerHTO"
+                                        >See overlappingCornerHTO in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
                                 <valItem ident="centerfold">
                                     <desc><ref

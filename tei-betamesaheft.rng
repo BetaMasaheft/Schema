@@ -4356,6 +4356,46 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                      <a xmlns="http://www.w3.org/1999/xhtml"
                         href="https://betamasaheft.eu/authority-files/leafTabMark">See leafTabMark in Beta maṣāḥǝft</a>
                   </a:documentation>
+                  <value>mitredCorner</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="https://betamasaheft.eu/authority-files/mitredCorner">See mitredCorner in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>openMitredCorner</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="https://betamasaheft.eu/authority-files/openMitredCorner">See openMitredCorner in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>overlappingCornerFO</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="https://betamasaheft.eu/authority-files/overlappingCornerFO">See overlappingCornerFO in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>quarterCover</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="https://betamasaheft.eu/authority-files/quarterCover">See quarterCover in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>overCover</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="https://betamasaheft.eu/authority-files/overCover">See overCover in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>stitchedCorner</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="https://betamasaheft.eu/authority-files/stitchedCorner">See stitchedCorner in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>tonguedCorner</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="https://betamasaheft.eu/authority-files/tonguedCorner">See tonguedCorner in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>overlappingCornerHTO</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                     <a xmlns="http://www.w3.org/1999/xhtml"
+                        href="https://betamasaheft.eu/authority-files/overlappingCornerHTO">See overlappingCornerHTO in Beta maṣāḥǝft</a>
+                  </a:documentation>
                   <value>centerfold</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
                      <a xmlns="http://www.w3.org/1999/xhtml"
