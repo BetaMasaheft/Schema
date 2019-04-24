@@ -79,6 +79,7 @@ End license statement: do not remove -->
             <change when="2019-03-28" who="ES">added objects of veneration</change>
             <change when="2019-04-18" who="ES">added leafTabMark leafStringMark</change>
             <change when="2019-04-23" who="ES">added mitredCorner openMitredCorner overlappingCornerFO overlappingCornerHTO quarterCover overCover stitchedCorner tonguedCorner</change>
+            <change when="2019-04-24" who="ES">corrected rule for msFrag IDs</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -3513,7 +3514,7 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="msfrag">
                         <constraint>
                             <sch:rule context="tei:msFrag">
-                                <sch:report test="not(matches(@xml:id,'p\d+'))"> Manuscript parts
+                                <sch:report test="not(matches(@xml:id,'f\d+'))"> Manuscript fragment
                                     ids must start with the letter 'f' followed by a progressive
                                     number, e.g. p1, p1.3, p1.1_i1.1 </sch:report>
                                 <sch:report test="matches(@xml:id,'(_.*){2}')"> The Underscore is
