@@ -2408,29 +2408,78 @@ End license statement: do not remove -->
                         identification, unless the identification is not possible. <ref
                             target="https://betamasaheft.eu/Guidelines/?id=roleName">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <!-- <constraintSpec scheme="isoschematron" ident="roleName">
+                     <constraintSpec scheme="isoschematron" ident="roleName">
                         <constraint>
                             <sch:rule
-                                context="tei:roleName">
-                                <sch:report test="not(parent::tei:persName or parent::tei:occupation)">A roleName not nested in a persName does not allow anything useful to be done with the markup. Please add a persName around the name of the person which has this role.</sch:report>
+                                context="tei:roleName/@type">
+                                <sch:report test=".='office' and parent::tei:persName">the value office for the attribute type should be used only when this is not in a persName. Use title instead.</sch:report>
                             </sch:rule>
                         </constraint>
-                    </constraintSpec>-->
+                    </constraintSpec>
                     <attList>
                         <attDef ident="type" mode="replace" usage="req">
+                            <desc>These are fuzzy categories, inherited from the EAe. 
+                                In volume 5, pages 580–590 a list of titles, ranks and functions can be found.</desc>
+                            <defaultVal>title</defaultVal>
                             <valList type="closed">
-                                <valItem ident="function"/>
-                                <valItem ident="title"/>
-                                <valItem ident="office"/>
-                                <valItem ident="rank"/>
-                                <valItem ident="other"/>
+                                <valItem ident="title"><desc>title is  used when adressing a person, 
+                                    particularly an office holder (e.g. ʾabbā, wayzaro, daǧǧāzmačč, abuna), and is
+                                    to be used only within a persName, since names of offices and office
+                                    holders can overlap.</desc></valItem>
+                                <valItem ident="office"><desc>name of an office within an institution (e.g. Metropolitan, 
+                                    daǧǧāzmāčč, king, governor ), to be used only when not inside a persName, 
+                                    since names of offices and office holders can overlap</desc></valItem>
+                                <valItem ident="function"><desc>is the task that a particular office holder is assigned to accomplish or a word refering to its duties which is not a title assigned by some authority</desc></valItem>
+                                <valItem ident="rank"><desc>a position in a hierarchy, particularly military, e.g. colonel</desc></valItem>
                             </valList>
                         </attDef>
                     </attList>
                     <exemplum>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="LIT3951ChronSusenyos">
+                            ወእንዘ፡ ሀሎ፡ በምድረ፡ <placeName ref="LOC2516Danqaz">ደንቀዝ፡</placeName> 
+                            ፈነዎ፡ <persName ref="PRS4979HafaKre"><roleName type="title">ደጅ፡ አዝማች፡</roleName>ሀፈ፡ ክርስቶስ፡</persName> ለ<persName ref="PRS10233Yamana"><roleName type="title">ራስ፡</roleName> የማነ፡ ክርስቶስ፡</persName> ምስለ፡ ቊራኛ።
+                        </egXML>
+                    </exemplum>
+                    <exemplum>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="LIT4633Chronicle">
                             <persName ref="PRS2377Bakaffa"><roleName type="title">ንጉሥ፡ </roleName>
                                 መሢሕ፡ ሰገድ፡</persName>
+                        </egXML>
+                    </exemplum>
+                    <exemplum>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="LIT3951ChronSusenyos">
+                            ወእምድኅረ፡ ተቀበልዎ፡ በከመ፡ ተአዘዙ፡ ተራከቡ፡ <persName ref="PRS9038Susenyos">
+                                <roleName type="title">ንጉሥ፡ </roleName> 
+                            </persName>
+                            ወ<persName ref="PRS1291Abreham">
+                                <roleName type="title">አበ፡ ምኔት፡ </roleName> 
+                            </persName>ወተአምኁ፡ በበይናቲሆሙ፡ በአምኃ፡ ልብ፡ መንፈሳዊ። 
+                        </egXML>
+                    </exemplum>
+                    <exemplum>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="LIT4969EdictGala">
+                            <div type="textpart" subtype="paragraph" n="4">
+                                <ab>ወለተሳየጦሂ፡ እምደቂቀ፡ ዐረብ፡ እንዘ፡ የአምር፡ ከመ፡ ውእቱ፡ ክርስቲያናዊ፡ ይንሥእዎ፡  
+                                    ኵሎ፡ ንዋዮ። ኵሉ፡ <roleName type="office">አዛዢ።</roleName> 
+                                    አው፡ <roleName type="office">ፈታሕት፡</roleName> አው፡ <roleName type="office">መኮንን፡</roleName> አው፡ 
+                                    <roleName type="office">ስዩመ፡</roleName> ሀገረ፡ ዘኢይፈትሕ፡ በዘ፡ አዘዝነ፡ ቦቱ፡ ይትቀተል፡ ዘእንበለ፡ ምሕረት፡ ወይትበርበር፡ ኵሉ፡ ንዋዩ፡ ወይኩን፡ ውጉዘ፡ በአፈ፡ 
+                                    አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ወበአፈ፡ ኵሎሙ፡ አበው፡ ዘተወክፈቶሙ፡ ቤተ ክርስቲያን። </ab>
+                            </div>
+                            
+                        </egXML>
+                    </exemplum>
+                    <exemplum>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="ESakm010">
+                            <note>
+                                The note is crudely written in Amharic in blue ink (the last two lines are in black and red ink). It is written by
+                                <persName role="scribe" ref="PRS12007GabraYohannes">
+                                    <roleName type="function">priest</roleName>
+                                    (
+                                    <roleName type="title">qes</roleName>
+                                    ) Gabra Yoḥannǝs
+                                </persName>
+                                and it seems to enumerate several payments (?).
+                            </note>
                         </egXML>
                     </exemplum>
                 </elementSpec>
