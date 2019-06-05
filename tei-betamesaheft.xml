@@ -6307,7 +6307,9 @@ End license statement: do not remove -->
                                     <desc>this container is for a stanza and may contain
                                         verses</desc>
                                 </valItem>
-
+                                <valItem ident="commemoration">
+                                    <desc>texts commemorating a saint or event, usually linked for liturgical reading to a precise date, such as entries in the Sǝnkǝssār</desc>
+                                </valItem>
                                 <valItem ident="incipit">
                                     <desc>incipit of the text</desc>
                                 </valItem>
