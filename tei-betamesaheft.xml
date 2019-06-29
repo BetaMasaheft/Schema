@@ -381,7 +381,6 @@ End license statement: do not remove -->
                             <datatype maxOccurs="6">
                                 <dataRef key="teidata.word"/>
                             </datatype>
-
                         </attDef>
                     </attList>
                     <exemplum>
@@ -2048,6 +2047,31 @@ End license statement: do not remove -->
                                 </valItem>
                             </valList>
                         </attDef>
+                        <attDef ident="subtype" mode="change" usage="opt">
+                            <datatype maxOccurs="6">
+                                <dataRef key="teidata.word"/>
+                            </datatype>
+                            <valList type="closed">
+                                <valItem ident="supplication"><desc>entreat to God for help. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27supplication%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:title[contains(@subtype,'supplication')]</ref></desc></valItem>
+                                <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27expanded%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:title[contains(@subtype,'expanded')]</ref></desc></valItem>
+                                <valItem ident="inscription"><desc>is used for a title occurring at the beginning of a work. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27inscription%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:title[contains(@subtype,'inscription')]</ref></desc></valItem>
+                                <valItem ident="subscription"><desc>for a title occurring at the end of a work. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27subscription%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:title[contains(@subtype,'subscription')]</ref></desc></valItem>
+                                <valItem ident="embedded"><desc>for a title copied together with the text. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27embedded%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:title[contains(@subtype,'embedded')]</ref></desc></valItem>
+                                <valItem ident="translation"><desc>to signal that the title is only of a translation. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27translation%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:title[contains(@subtype,'translation')]</ref></desc></valItem>
+                            </valList>
+                        </attDef>
                     </attList>
                     <exemplum>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="LIT2625ZenaSe">
@@ -3232,21 +3256,55 @@ End license statement: do not remove -->
                             Guidelines</ref></desc>
                     <constraintSpec scheme="isoschematron" ident="seg">
                         <constraint>
-                            <sch:rule context="tei:ab[ancestor::tei:handNote]">
+                            <sch:rule context="tei:seg[ancestor::tei:handNote]">
                                 <sch:report test="not(@type or @subtype)">seg in handNote should
                                     always have a type</sch:report>
+                                <sch:report test="@type = 'supplication' or @type = 'expanded' or @type = 'inscription' or @type = 'subscription' or @type = 'embedded'  or @type = 'translation' ">the values 
+                                    supplication, expanded, inscription and subscription, embedded and translation are not for use in seg inside handNote which is an ancestor of the current element
+                                    you can use here script, ink, rubrication or interpretation</sch:report>
+                            </sch:rule>
+                            <sch:rule context="tei:seg[not(ancestor::tei:handNote)]">
+                                <sch:report test="@type = 'script' or @type = 'ink' or @type = 'rubrication' or @type = 'interpretation'  ">the values 
+                                    script, ink, rubrication and interpretation, are reserved for use in seg inside handNote which is not an ancestor of the current element
+                                you can use here any other value, up to six</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
                     <attList>
                         <attDef ident="type" mode="replace" usage="req">
+                            <datatype maxOccurs="6">
+                                <dataRef key="teidata.word"/>
+                            </datatype>
                             <valList type="closed">
                                 <valItem ident="script"/>
                                 <valItem ident="ink"/>
                                 <valItem ident="rubrication"/>
                                 <valItem ident="interpretation"/>
+                                <valItem ident="title"><desc>contains the title as well as tafaṣṣama/malʾa or similar expression.
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40subtype%2C%27title%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@subtype,'title')]</ref></desc></valItem>
+                                <valItem ident="desinit"><desc>to qualify expressions as tafaṣṣama/malʾa.
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40subtype%2C%27desinit%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@subtype,'desinit')]</ref></desc></valItem>
+                                <valItem ident="supplication"><desc>entreat to God for help. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27supplication%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'supplication')]</ref></desc></valItem>
+                                <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27expanded%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'expanded')]</ref></desc></valItem>
+                                <valItem ident="inscription"><desc>is used for a title occurring at the beginning of a work. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27inscription%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'inscription')]</ref></desc></valItem>
+                                <valItem ident="subscription"><desc>for a title occurring at the end of a work. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27subscription%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'subscription')]</ref></desc></valItem>
+                                <valItem ident="embedded"><desc>for a title copied together with the text. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27embedded%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'embedded')]</ref></desc></valItem>
+                                <valItem ident="translation"><desc>to signal that the title is only of a translation. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27translation%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'translation')]</ref></desc></valItem>
                             </valList>
-
                         </attDef>
 
                     </attList>
@@ -3636,6 +3694,9 @@ End license statement: do not remove -->
 
                 <elementSpec ident="colophon" mode="change" module="msdescription">
                     <desc><ref target="https://betamasaheft.eu/Guidelines/?id=colophon">Beta maṣāḥǝft
+                        Guidelines</ref>.
+                        See also, on how to encode titles, supplications and colophons in general, 
+                        <ref target="https://betamasaheft.eu/Guidelines/?id=ColophSupplTit">Beta maṣāḥǝft
                             Guidelines</ref></desc>
                     <content>
                         <macroRef key="macro.phraseSeq"/>
@@ -3654,7 +3715,31 @@ End license statement: do not remove -->
                     </constraintSpec>
                     <attList>
                         <attDef ident="xml:id" mode="change" usage="req"/>
-                        <attDef ident="type" mode="add" usage="opt"/>
+                            <attDef ident="type" mode="change" usage="opt">
+                                <datatype maxOccurs="6">
+                                    <dataRef key="teidata.word"/>
+                                </datatype>
+                                <valList type="closed">
+                                    <valItem ident="supplication"><desc>entreat to God for help. 
+                                        Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Acolophon%5Bcontains%28%40type%2C%27supplication%27%29%5D">Beta maṣāḥǝft
+                                            Xpath search for //t:colophon[@type='supplication']</ref></desc></valItem>
+                                    <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information. 
+                                        Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Acolophon%5Bcontains%28%40type%2C%27expanded%27%29%5D">Beta maṣāḥǝft
+                                            Xpath search for //t:colophon[@type='expanded']</ref></desc></valItem>
+                                    <valItem ident="inscription"><desc>is used for a title occurring at the beginning of a work. 
+                                        Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Acolophon%5Bcontains%28%40type%2C%27inscription%27%29%5D">Beta maṣāḥǝft
+                                            Xpath search for //t:colophon[@type='inscription']</ref></desc></valItem>
+                                    <valItem ident="subscription"><desc>for a title occurring at the end of a work. 
+                                        Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Acolophon%5Bcontains%28%40type%2C%27subscription%27%29%5D">Beta maṣāḥǝft
+                                            Xpath search for //t:colophon[@type='subscription']</ref></desc></valItem>
+                                    <valItem ident="embedded"><desc>for a title copied together with the text. 
+                                        Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Acolophon%5Bcontains%28%40type%2C%27embedded%27%29%5D">Beta maṣāḥǝft
+                                            Xpath search for //t:colophon[@type='embedded']</ref></desc></valItem>
+                                    <valItem ident="translation"><desc>to signal that the title is only of a translation. 
+                                        Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Acolophon%5Bcontains%28%40type%2C%27translation%27%29%5D">Beta maṣāḥǝft
+                                            Xpath search for //t:colophon[@type='translation']</ref></desc></valItem>
+                                </valList>
+                            </attDef>
                     </attList>
                     <exemplum>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="BNFet152">
@@ -4716,20 +4801,34 @@ End license statement: do not remove -->
 
                 <elementSpec ident="explicit" mode="change" module="msdescription">
                     <desc><ref target="https://betamasaheft.eu/Guidelines/?id=explicit">Beta maṣāḥǝft
+                        Guidelines</ref>.
+                        See also, on how to encode titles, supplications and colophons in general, 
+                        <ref target="https://betamasaheft.eu/Guidelines/?id=ColophSupplTit">Beta maṣāḥǝft
                             Guidelines</ref></desc>
                     <attList>
                         <attDef ident="type" mode="change" usage="opt">
+                            <datatype maxOccurs="6">
+                                <dataRef key="teidata.word"/>
+                            </datatype>
                             <valList type="closed">
-
-                                <!--                          list coming from myCore-->
-                                <valItem ident="subscription">
-                                    <desc>note originally added at the end of the main text
-                                        concerning its completion. not to be confused with later
-                                        additions</desc>
-                                </valItem>
-                                <valItem ident="supplication">
-                                    <desc>entreat to God for help</desc>
-                                </valItem>
+                                <valItem ident="supplication"><desc>entreat to God for help. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aexplicit%5Bcontains%28%40type%2C%27supplication%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:explicit[contains(@type,'supplication')]</ref></desc></valItem>
+                                <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aexplicit%5Bcontains%28%40type%2C%27expanded%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:explicit[contains(@type,'expanded')]</ref></desc></valItem>
+                                <valItem ident="inscription"><desc>is used for a title occurring at the beginning of a work. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aexplicit%5Bcontains%28%40type%2C%27inscription%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:explicit[contains(@type,'inscription')]</ref></desc></valItem>
+                                <valItem ident="subscription"><desc>for a title occurring at the end of a work. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aexplicit%5Bcontains%28%40type%2C%27subscription%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:explicit[contains(@type,'subscription')]</ref></desc></valItem>
+                                <valItem ident="embedded"><desc>for a title copied together with the text. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aexplicit%5Bcontains%28%40type%2C%27embedded%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:explicit[contains(@type,'embedded')]</ref></desc></valItem>
+                                <valItem ident="translation"><desc>to signal that the title is only of a translation. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aexplicit%5Bcontains%28%40type%2C%27translation%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:explicit[contains(@type,'translation')]</ref></desc></valItem>
                             </valList>
                         </attDef>
 
@@ -4746,13 +4845,34 @@ End license statement: do not remove -->
 
                 <elementSpec ident="incipit" mode="change" module="msdescription">
                     <desc><ref target="https://betamasaheft.eu/Guidelines/?id=incipit">Beta maṣāḥǝft
+                            Guidelines</ref>.
+                        See also, on how to encode titles, supplications and colophons in general, 
+                        <ref target="https://betamasaheft.eu/Guidelines/?id=ColophSupplTit">Beta maṣāḥǝft
                             Guidelines</ref></desc>
                     <attList>
                         <attDef ident="type" mode="change" usage="opt">
+                            <datatype maxOccurs="6">
+                                <dataRef key="teidata.word"/>
+                            </datatype>
                             <valList type="closed">
-                                <valItem ident="supplication">
-                                    <desc>entreat to God for help</desc>
-                                </valItem>
+                                <valItem ident="supplication"><desc>entreat to God for help. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aincipit%5Bcontains%28%40type%2C%27supplication%27%29%5D">Beta maṣāḥǝft
+                                    Xpath search for //t:incipit[contains(@type,'supplication')]</ref></desc></valItem>
+                                <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aincipit%5Bcontains%28%40type%2C%27expanded%27%29%5D">Beta maṣāḥǝft
+                                    Xpath search for //t:incipit[contains(@type,'expanded')]</ref></desc></valItem>
+                                <valItem ident="inscription"><desc>is used for a title occurring at the beginning of a work. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aincipit%5Bcontains%28%40type%2C%27inscription%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:incipit[contains(@type,'inscription')]</ref></desc></valItem>
+                                <valItem ident="subscription"><desc>for a title occurring at the end of a work. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aincipit%5Bcontains%28%40type%2C%27subscription%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:incipit[contains(@type,'subscription')]</ref></desc></valItem>
+                                <valItem ident="embedded"><desc>for a title copied together with the text. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aincipit%5Bcontains%28%40type%2C%27embedded%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:incipit[contains(@type,'embedded')]</ref></desc></valItem>
+                                <valItem ident="translation"><desc>to signal that the title is only of a translation. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aincipit%5Bcontains%28%40type%2C%27translation%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:incipit[contains(@type,'translation')]</ref></desc></valItem>
                             </valList>
                         </attDef>
 
@@ -6294,6 +6414,9 @@ End license statement: do not remove -->
                             </valList>
                         </attDef>
                         <attDef ident="subtype" mode="replace" usage="opt">
+                            <datatype maxOccurs="6">
+                                <dataRef key="teidata.word"/>
+                            </datatype>
                             <valList type="open">
                                 <valItem ident="book">
                                     <desc>this container is for a book and may contain
@@ -6321,6 +6444,31 @@ End license statement: do not remove -->
                                     <desc>to be used for canonical texts like
                                         LIT2688CanonsNicaea2</desc>
                                 </valItem>
+                                <valItem ident="title"><desc>contains the title as well as tafaṣṣama/malʾa or similar expression.
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27title%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:div[contains(@subtype,'title')]</ref></desc></valItem>
+                                <valItem ident="desinit"><desc>to qualify expressions as tafaṣṣama/malʾa.
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27desinit%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:div[contains(@subtype,'desinit')]</ref></desc></valItem>
+                                        <valItem ident="supplication"><desc>entreat to God for help. 
+                                            Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27supplication%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'supplication')]</ref></desc></valItem>
+                                        <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information. 
+                                            Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27expanded%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'expanded')]</ref></desc></valItem>
+                                        <valItem ident="inscription"><desc>is used for a title occurring at the beginning of a work. 
+                                            Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27inscription%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'inscription')]</ref></desc></valItem>
+                                        <valItem ident="subscription"><desc>for a title occurring at the end of a work. 
+                                            Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27subscription%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'subscription')]</ref></desc></valItem>
+                                        <valItem ident="embedded"><desc>for a title copied together with the text. 
+                                            Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27embedded%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'embedded')]</ref></desc></valItem>
+                                        <valItem ident="translation"><desc>to signal that the title is only of a translation. 
+                                            Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27translation%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'translation')]</ref></desc></valItem>
+                                    
                             </valList>
                         </attDef>
                     </attList>
@@ -6780,6 +6928,8 @@ locus is used to point to values of these elements in the teiHeader.
                         </attDef>
                     </attList>
                 </classSpec>
+                
+               
 
             </schemaSpec>
         </body>
