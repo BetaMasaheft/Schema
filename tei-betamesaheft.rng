@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2019-06-29T09:16:39Z. .
+Schema generated from ODD source 2019-07-01T12:05:08Z. .
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
@@ -5632,35 +5632,11 @@ Measures]</a:documentation>
          </pattern>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.canonical.attributes"/>
-         <ref name="tei_att.datable.attribute.period"/>
-         <ref name="tei_att.datable.w3c.attribute.when"/>
-         <ref name="tei_att.datable.w3c.attribute.notBefore"/>
-         <ref name="tei_att.datable.w3c.attribute.notAfter"/>
-         <ref name="tei_att.datable.w3c.attribute.from"/>
-         <ref name="tei_att.datable.w3c.attribute.to"/>
-         <ref name="tei_att.datable.iso.attribute.when-iso"/>
-         <ref name="tei_att.datable.iso.attribute.notBefore-iso"/>
-         <ref name="tei_att.datable.iso.attribute.notAfter-iso"/>
-         <ref name="tei_att.datable.iso.attribute.from-iso"/>
-         <ref name="tei_att.datable.iso.attribute.to-iso"/>
-         <ref name="tei_att.datable.custom.attribute.when-custom"/>
-         <ref name="tei_att.datable.custom.attribute.notBefore-custom"/>
-         <ref name="tei_att.datable.custom.attribute.notAfter-custom"/>
-         <ref name="tei_att.datable.custom.attribute.from-custom"/>
-         <ref name="tei_att.datable.custom.attribute.to-custom"/>
-         <ref name="tei_att.datable.custom.attribute.datingPoint"/>
-         <ref name="tei_att.datable.custom.attribute.datingMethod"/>
+         <ref name="tei_att.datable.attributes"/>
          <ref name="tei_att.duration.attributes"/>
          <ref name="tei_att.editLike.attributes"/>
          <ref name="tei_att.dimensions.attributes"/>
          <ref name="tei_att.typed.attribute.subtype"/>
-         <optional>
-            <attribute name="calendar">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] world; 2] ethiopian; 3] grace; 4] diocletian; 5] alexander; 6] evangelists; 7] islamic; 8] julian</a:documentation>
-               <text/>
-            </attribute>
-         </optional>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
@@ -9023,6 +8999,10 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Hiruie Ermias</a:documentation>
                <value>AM</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Angela Müller</a:documentation>
+               <value>SF</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sara Fani</a:documentation>
+               <value>MP</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">MIchele Petrone</a:documentation>
             </choice>
          </attribute>
          <attribute name="when">
@@ -9575,7 +9555,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
          <optional>
             <attribute name="subtype">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] book; 2] chapter; 3] stanza; 4] commemoration; 5] incipit; 6] explicit; 7] canon; 8] title; 9] desinit; 10] supplication; 11] expanded; 12] inscription; 13] subscription; 14] embedded; 15] translation</a:documentation>
+Sample values include: 1] book; 2] chapter; 3] stanza; 4] commemoration; 5] incipit; 6] explicit; 7] canon; 8] title; 9] desinit; 10] supplication; 11] expanded; 12] inscriptio; 13] subscriptio; 14] embedded; 15] translation</a:documentation>
                <list>
                   <data type="token">
                      <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
@@ -11434,8 +11414,8 @@ Sample values include: 1] pattern; 2] usage; 3] executed; 4] dividers</a:documen
                       context="tei:seg[ancestor::tei:handNote]">
                                 <sch:report test="not(@type or @subtype)">seg in handNote should
                                     always have a type</sch:report>
-                                <sch:report test="@type = 'supplication' or @type = 'expanded' or @type = 'inscription' or @type = 'subscription' or @type = 'embedded'  or @type = 'translation' ">the values 
-                                    supplication, expanded, inscription and subscription, embedded and translation are not for use in seg inside handNote which is an ancestor of the current element
+                                <sch:report test="@type = 'supplication' or @type = 'expanded' or @type = 'inscriptio' or @type = 'subscriptio' or @type = 'embedded'  or @type = 'translation' ">the values 
+                                    supplication, expanded, inscriptio and subscriptio, embedded and translation are not for use in seg inside handNote which is an ancestor of the current element
                                     you can use here script, ink, rubrication or interpretation</sch:report>
                             </sch:rule>
          </pattern>
@@ -11488,15 +11468,15 @@ Sample values include: 1] pattern; 2] usage; 3] executed; 4] dividers</a:documen
                         href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27expanded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:seg[contains(@type,'expanded')]</a>
                   </a:documentation>
-                  <value>inscription</value>
+                  <value>inscriptio</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is used for a title occurring at the beginning of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27inscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:seg[contains(@type,'inscription')]</a>
+                        href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'inscriptio')]</a>
                   </a:documentation>
-                  <value>subscription</value>
+                  <value>subscriptio</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title occurring at the end of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
-                        href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27subscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:seg[contains(@type,'subscription')]</a>
+                        href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'subscriptio')]</a>
                   </a:documentation>
                   <value>embedded</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title copied together with the text. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
@@ -11539,15 +11519,15 @@ Sample values include: 1] pattern; 2] usage; 3] executed; 4] dividers</a:documen
                            href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27expanded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:seg[contains(@type,'expanded')]</a>
                      </a:documentation>
-                     <value>inscription</value>
+                     <value>inscriptio</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is used for a title occurring at the beginning of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
-                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27inscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:seg[contains(@type,'inscription')]</a>
+                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'inscriptio')]</a>
                      </a:documentation>
-                     <value>subscription</value>
+                     <value>subscriptio</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title occurring at the end of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
-                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27subscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:seg[contains(@type,'subscription')]</a>
+                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'subscriptio')]</a>
                      </a:documentation>
                      <value>embedded</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title copied together with the text. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
@@ -11591,15 +11571,15 @@ Sample values include: 1] pattern; 2] usage; 3] executed; 4] dividers</a:documen
                            href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27expanded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:seg[contains(@type,'expanded')]</a>
                      </a:documentation>
-                     <value>inscription</value>
+                     <value>inscriptio</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is used for a title occurring at the beginning of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
-                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27inscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:seg[contains(@type,'inscription')]</a>
+                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'inscriptio')]</a>
                      </a:documentation>
-                     <value>subscription</value>
+                     <value>subscriptio</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title occurring at the end of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
-                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27subscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:seg[contains(@type,'subscription')]</a>
+                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'subscriptio')]</a>
                      </a:documentation>
                      <value>embedded</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title copied together with the text. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
@@ -11643,15 +11623,15 @@ Sample values include: 1] pattern; 2] usage; 3] executed; 4] dividers</a:documen
                            href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27expanded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:seg[contains(@type,'expanded')]</a>
                      </a:documentation>
-                     <value>inscription</value>
+                     <value>inscriptio</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is used for a title occurring at the beginning of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
-                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27inscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:seg[contains(@type,'inscription')]</a>
+                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'inscriptio')]</a>
                      </a:documentation>
-                     <value>subscription</value>
+                     <value>subscriptio</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title occurring at the end of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
-                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27subscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:seg[contains(@type,'subscription')]</a>
+                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'subscriptio')]</a>
                      </a:documentation>
                      <value>embedded</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title copied together with the text. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
@@ -11695,15 +11675,15 @@ Sample values include: 1] pattern; 2] usage; 3] executed; 4] dividers</a:documen
                            href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27expanded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:seg[contains(@type,'expanded')]</a>
                      </a:documentation>
-                     <value>inscription</value>
+                     <value>inscriptio</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is used for a title occurring at the beginning of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
-                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27inscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:seg[contains(@type,'inscription')]</a>
+                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'inscriptio')]</a>
                      </a:documentation>
-                     <value>subscription</value>
+                     <value>subscriptio</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title occurring at the end of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
-                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27subscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:seg[contains(@type,'subscription')]</a>
+                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'subscriptio')]</a>
                      </a:documentation>
                      <value>embedded</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title copied together with the text. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
@@ -11747,15 +11727,15 @@ Sample values include: 1] pattern; 2] usage; 3] executed; 4] dividers</a:documen
                            href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27expanded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:seg[contains(@type,'expanded')]</a>
                      </a:documentation>
-                     <value>inscription</value>
+                     <value>inscriptio</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is used for a title occurring at the beginning of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
-                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27inscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:seg[contains(@type,'inscription')]</a>
+                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'inscriptio')]</a>
                      </a:documentation>
-                     <value>subscription</value>
+                     <value>subscriptio</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title occurring at the end of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
-                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27subscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:seg[contains(@type,'subscription')]</a>
+                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'subscriptio')]</a>
                      </a:documentation>
                      <value>embedded</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title copied together with the text. Examples: <a xmlns="http://www.w3.org/1999/xhtml"

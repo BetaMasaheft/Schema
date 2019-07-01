@@ -2059,11 +2059,11 @@ End license statement: do not remove -->
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27expanded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:title[contains(@subtype,'expanded')]</ref></desc></valItem>
                                 <valItem ident="inscription"><desc>is used for a title occurring at the beginning of a work. 
-                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27inscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:title[contains(@subtype,'inscription')]</ref></desc></valItem>
-                                <valItem ident="subscription"><desc>for a title occurring at the end of a work. 
-                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27subscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:title[contains(@subtype,'subscription')]</ref></desc></valItem>
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:title[contains(@subtype,'inscriptio')]</ref></desc></valItem>
+                                <valItem ident="subscriptio"><desc>for a title occurring at the end of a work. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:title[contains(@subtype,'subscriptio')]</ref></desc></valItem>
                                 <valItem ident="embedded"><desc>for a title copied together with the text. 
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27embedded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:title[contains(@subtype,'embedded')]</ref></desc></valItem>
@@ -3259,8 +3259,8 @@ End license statement: do not remove -->
                             <sch:rule context="tei:seg[ancestor::tei:handNote]">
                                 <sch:report test="not(@type or @subtype)">seg in handNote should
                                     always have a type</sch:report>
-                                <sch:report test="@type = 'supplication' or @type = 'expanded' or @type = 'inscription' or @type = 'subscription' or @type = 'embedded'  or @type = 'translation' ">the values 
-                                    supplication, expanded, inscription and subscription, embedded and translation are not for use in seg inside handNote which is an ancestor of the current element
+                                <sch:report test="@type = 'supplication' or @type = 'expanded' or @type = 'inscriptio' or @type = 'subscriptio' or @type = 'embedded'  or @type = 'translation' ">the values 
+                                    supplication, expanded, inscriptio and subscriptio, embedded and translation are not for use in seg inside handNote which is an ancestor of the current element
                                     you can use here script, ink, rubrication or interpretation</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:seg[not(ancestor::tei:handNote)]">
@@ -3292,12 +3292,12 @@ End license statement: do not remove -->
                                 <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information. 
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27expanded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:seg[contains(@type,'expanded')]</ref></desc></valItem>
-                                <valItem ident="inscription"><desc>is used for a title occurring at the beginning of a work. 
-                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27inscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:seg[contains(@type,'inscription')]</ref></desc></valItem>
-                                <valItem ident="subscription"><desc>for a title occurring at the end of a work. 
-                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27subscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:seg[contains(@type,'subscription')]</ref></desc></valItem>
+                                <valItem ident="inscriptio"><desc>is used for a title occurring at the beginning of a work. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'inscriptio')]</ref></desc></valItem>
+                                <valItem ident="subscriptio"><desc>for a title occurring at the end of a work. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:seg[contains(@type,'subscriptio')]</ref></desc></valItem>
                                 <valItem ident="embedded"><desc>for a title copied together with the text. 
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27embedded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:seg[contains(@type,'embedded')]</ref></desc></valItem>
@@ -3726,12 +3726,12 @@ End license statement: do not remove -->
                                     <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information. 
                                         Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Acolophon%5Bcontains%28%40type%2C%27expanded%27%29%5D">Beta maṣāḥǝft
                                             Xpath search for //t:colophon[@type='expanded']</ref></desc></valItem>
-                                    <valItem ident="inscription"><desc>is used for a title occurring at the beginning of a work. 
-                                        Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Acolophon%5Bcontains%28%40type%2C%27inscription%27%29%5D">Beta maṣāḥǝft
-                                            Xpath search for //t:colophon[@type='inscription']</ref></desc></valItem>
-                                    <valItem ident="subscription"><desc>for a title occurring at the end of a work. 
-                                        Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Acolophon%5Bcontains%28%40type%2C%27subscription%27%29%5D">Beta maṣāḥǝft
-                                            Xpath search for //t:colophon[@type='subscription']</ref></desc></valItem>
+                                    <valItem ident="inscriptio"><desc>is used for a title occurring at the beginning of a work. 
+                                        Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Acolophon%5Bcontains%28%40type%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
+                                            Xpath search for //t:colophon[@type='inscriptio']</ref></desc></valItem>
+                                    <valItem ident="subscriptio"><desc>for a title occurring at the end of a work. 
+                                        Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Acolophon%5Bcontains%28%40type%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
+                                            Xpath search for //t:colophon[@type='subscriptio']</ref></desc></valItem>
                                     <valItem ident="embedded"><desc>for a title copied together with the text. 
                                         Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Acolophon%5Bcontains%28%40type%2C%27embedded%27%29%5D">Beta maṣāḥǝft
                                             Xpath search for //t:colophon[@type='embedded']</ref></desc></valItem>
@@ -4824,12 +4824,12 @@ End license statement: do not remove -->
                                 <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information. 
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aexplicit%5Bcontains%28%40type%2C%27expanded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:explicit[contains(@type,'expanded')]</ref></desc></valItem>
-                                <valItem ident="inscription"><desc>is used for a title occurring at the beginning of a work. 
-                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aexplicit%5Bcontains%28%40type%2C%27inscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:explicit[contains(@type,'inscription')]</ref></desc></valItem>
-                                <valItem ident="subscription"><desc>for a title occurring at the end of a work. 
-                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aexplicit%5Bcontains%28%40type%2C%27subscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:explicit[contains(@type,'subscription')]</ref></desc></valItem>
+                                <valItem ident="inscriptio"><desc>is used for a title occurring at the beginning of a work. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aexplicit%5Bcontains%28%40type%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:explicit[contains(@type,'inscriptio')]</ref></desc></valItem>
+                                <valItem ident="subscriptio"><desc>for a title occurring at the end of a work. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aexplicit%5Bcontains%28%40type%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:explicit[contains(@type,'subscriptio')]</ref></desc></valItem>
                                 <valItem ident="embedded"><desc>for a title copied together with the text. 
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aexplicit%5Bcontains%28%40type%2C%27embedded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:explicit[contains(@type,'embedded')]</ref></desc></valItem>
@@ -4842,7 +4842,7 @@ End license statement: do not remove -->
                     </attList>
                     <exemplum>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="FSUor12">
-                            <explicit xml:lang="gez" type="subscription">በዝየ፡ ተፈጸመ፡ ራእየ፡ ሕዝቅኤል፡ ነቢይ፡ ጸሎቱ፡ ወበረከቱ፡ የሃሉ፡ ምስለ፡
+                            <explicit xml:lang="gez" type="subscriptio">በዝየ፡ ተፈጸመ፡ ራእየ፡ ሕዝቅኤል፡ ነቢይ፡ ጸሎቱ፡ ወበረከቱ፡ የሃሉ፡ ምስለ፡
                                 ፍቁሩ፡ <hi rend="rubric">
                                     <persName ref="PRS11725Mardokyos">መርዶክዮስ፡</persName>
                                 </hi> ለዓለመ፡ ዓለም፡ አሜን፡ ወአሜን፡ ለይኩን፡ ለይኩን፨</explicit>
@@ -4868,12 +4868,12 @@ End license statement: do not remove -->
                                 <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information. 
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aincipit%5Bcontains%28%40type%2C%27expanded%27%29%5D">Beta maṣāḥǝft
                                     Xpath search for //t:incipit[contains(@type,'expanded')]</ref></desc></valItem>
-                                <valItem ident="inscription"><desc>is used for a title occurring at the beginning of a work. 
-                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aincipit%5Bcontains%28%40type%2C%27inscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:incipit[contains(@type,'inscription')]</ref></desc></valItem>
-                                <valItem ident="subscription"><desc>for a title occurring at the end of a work. 
-                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aincipit%5Bcontains%28%40type%2C%27subscription%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:incipit[contains(@type,'subscription')]</ref></desc></valItem>
+                                <valItem ident="inscriptio"><desc>is used for a title occurring at the beginning of a work. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aincipit%5Bcontains%28%40type%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:incipit[contains(@type,'inscriptio')]</ref></desc></valItem>
+                                <valItem ident="subscriptio"><desc>for a title occurring at the end of a work. 
+                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aincipit%5Bcontains%28%40type%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:incipit[contains(@type,'subscriptio')]</ref></desc></valItem>
                                 <valItem ident="embedded"><desc>for a title copied together with the text. 
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aincipit%5Bcontains%28%40type%2C%27embedded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:incipit[contains(@type,'embedded')]</ref></desc></valItem>
@@ -6463,12 +6463,12 @@ End license statement: do not remove -->
                                         <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information. 
                                             Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27expanded%27%29%5D">Beta maṣāḥǝft
                                                 Xpath search for //t:div[contains(@subtype,'expanded')]</ref></desc></valItem>
-                                        <valItem ident="inscription"><desc>is used for a title occurring at the beginning of a work. 
-                                            Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27inscription%27%29%5D">Beta maṣāḥǝft
-                                                Xpath search for //t:div[contains(@subtype,'inscription')]</ref></desc></valItem>
-                                        <valItem ident="subscription"><desc>for a title occurring at the end of a work. 
-                                            Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27subscription%27%29%5D">Beta maṣāḥǝft
-                                                Xpath search for //t:div[contains(@subtype,'subscription')]</ref></desc></valItem>
+                                        <valItem ident="inscriptio"><desc>is used for a title occurring at the beginning of a work. 
+                                            Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'inscriptio')]</ref></desc></valItem>
+                                        <valItem ident="subscriptio"><desc>for a title occurring at the end of a work. 
+                                            Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'subscriptio')]</ref></desc></valItem>
                                         <valItem ident="embedded"><desc>for a title copied together with the text. 
                                             Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27embedded%27%29%5D">Beta maṣāḥǝft
                                                 Xpath search for //t:div[contains(@subtype,'embedded')]</ref></desc></valItem>
