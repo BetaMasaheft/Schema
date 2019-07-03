@@ -736,8 +736,8 @@ End license statement: do not remove -->
                                     <desc><ref target="https://betamasaheft.eu/authority-files/martyr"
                                         >See martyr in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
-                                
-                                
+
+
                                 <valItem ident="TrueCross">
                                     <desc><ref target="https://betamasaheft.eu/authority-files/TrueCross"
                                         >See TrueCross in Beta maṣāḥǝft</ref></desc>
@@ -746,7 +746,7 @@ End license statement: do not remove -->
                                     <desc><ref target="https://betamasaheft.eu/authority-files/CovenantMercy"
                                         >See CovenantMercy in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
-                                
+
                                 <valItem ident="guard">
                                     <desc><ref target="https://betamasaheft.eu/authority-files/guard"
                                             >See guard in Beta maṣāḥǝft</ref></desc>
@@ -2052,22 +2052,22 @@ End license statement: do not remove -->
                                 <dataRef key="teidata.word"/>
                             </datatype>
                             <valList type="closed">
-                                <valItem ident="supplication"><desc>entreat to God for help. 
+                                <valItem ident="supplication"><desc>entreat to God for help.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27supplication%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:title[contains(@subtype,'supplication')]</ref></desc></valItem>
-                                <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information. 
+                                <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27expanded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:title[contains(@subtype,'expanded')]</ref></desc></valItem>
-                                <valItem ident="inscription"><desc>is used for a title occurring at the beginning of a work. 
+                                <valItem ident="inscription"><desc>is used for a title occurring at the beginning of a work.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:title[contains(@subtype,'inscriptio')]</ref></desc></valItem>
-                                <valItem ident="subscriptio"><desc>for a title occurring at the end of a work. 
+                                <valItem ident="subscriptio"><desc>for a title occurring at the end of a work.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:title[contains(@subtype,'subscriptio')]</ref></desc></valItem>
-                                <valItem ident="embedded"><desc>for a title copied together with the text. 
+                                <valItem ident="embedded"><desc>for a title copied together with the text.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27embedded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:title[contains(@subtype,'embedded')]</ref></desc></valItem>
-                                <valItem ident="translation"><desc>to signal that the title is only of a translation. 
+                                <valItem ident="translation"><desc>to signal that the title is only of a translation.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27translation%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:title[contains(@subtype,'translation')]</ref></desc></valItem>
                             </valList>
@@ -2145,7 +2145,7 @@ End license statement: do not remove -->
                     <attList>
                         <attDef ident="type" mode="replace" usage="req">
                             <valList type="closed">
-                                
+
                                 <valItem ident="catalogue">
                                     <desc>Descriptions in manuscript catalogues of the subject of
                                         the record. This only makes sense if you are editing a manuscript record. <ref target="https://betamasaheft.eu/bibliography?type=catalogue&amp;collection=all">See where is this bibliography used and for what entries.</ref></desc>
@@ -2442,16 +2442,16 @@ End license statement: do not remove -->
                     </constraintSpec>
                     <attList>
                         <attDef ident="type" mode="replace" usage="req">
-                            <desc>These are fuzzy categories, inherited from the EAe. 
+                            <desc>These are fuzzy categories, inherited from the EAe.
                                 In volume 5, pages 580–590 a list of titles, ranks and functions can be found.</desc>
                             <defaultVal>title</defaultVal>
                             <valList type="closed">
-                                <valItem ident="title"><desc>title is  used when adressing a person, 
+                                <valItem ident="title"><desc>title is  used when adressing a person,
                                     particularly an office holder (e.g. ʾabbā, wayzaro, daǧǧāzmačč, abuna), and is
                                     to be used only within a persName, since names of offices and office
                                     holders can overlap.</desc></valItem>
-                                <valItem ident="office"><desc>name of an office within an institution (e.g. Metropolitan, 
-                                    daǧǧāzmāčč, king, governor ), to be used only when not inside a persName, 
+                                <valItem ident="office"><desc>name of an office within an institution (e.g. Metropolitan,
+                                    daǧǧāzmāčč, king, governor ), to be used only when not inside a persName,
                                     since names of offices and office holders can overlap</desc></valItem>
                                 <valItem ident="function"><desc>is the task that a particular office holder is assigned to accomplish or a word refering to its duties which is not a title assigned by some authority</desc></valItem>
                                 <valItem ident="rank"><desc>a position in a hierarchy, particularly military, e.g. colonel</desc></valItem>
@@ -2460,7 +2460,7 @@ End license statement: do not remove -->
                     </attList>
                     <exemplum>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="LIT3951ChronSusenyos">
-                            ወእንዘ፡ ሀሎ፡ በምድረ፡ <placeName ref="LOC2516Danqaz">ደንቀዝ፡</placeName> 
+                            ወእንዘ፡ ሀሎ፡ በምድረ፡ <placeName ref="LOC2516Danqaz">ደንቀዝ፡</placeName>
                             ፈነዎ፡ <persName ref="PRS4979HafaKre"><roleName type="title">ደጅ፡ አዝማች፡</roleName>ሀፈ፡ ክርስቶስ፡</persName> ለ<persName ref="PRS10233Yamana"><roleName type="title">ራስ፡</roleName> የማነ፡ ክርስቶስ፡</persName> ምስለ፡ ቊራኛ።
                         </egXML>
                     </exemplum>
@@ -2473,23 +2473,23 @@ End license statement: do not remove -->
                     <exemplum>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="LIT3951ChronSusenyos">
                             ወእምድኅረ፡ ተቀበልዎ፡ በከመ፡ ተአዘዙ፡ ተራከቡ፡ <persName ref="PRS9038Susenyos">
-                                <roleName type="title">ንጉሥ፡ </roleName> 
+                                <roleName type="title">ንጉሥ፡ </roleName>
                             </persName>
                             ወ<persName ref="PRS1291Abreham">
-                                <roleName type="title">አበ፡ ምኔት፡ </roleName> 
-                            </persName>ወተአምኁ፡ በበይናቲሆሙ፡ በአምኃ፡ ልብ፡ መንፈሳዊ። 
+                                <roleName type="title">አበ፡ ምኔት፡ </roleName>
+                            </persName>ወተአምኁ፡ በበይናቲሆሙ፡ በአምኃ፡ ልብ፡ መንፈሳዊ።
                         </egXML>
                     </exemplum>
                     <exemplum>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="LIT4969EdictGala">
                             <div type="textpart" subtype="paragraph" n="4">
-                                <ab>ወለተሳየጦሂ፡ እምደቂቀ፡ ዐረብ፡ እንዘ፡ የአምር፡ ከመ፡ ውእቱ፡ ክርስቲያናዊ፡ ይንሥእዎ፡  
-                                    ኵሎ፡ ንዋዮ። ኵሉ፡ <roleName type="office">አዛዢ።</roleName> 
-                                    አው፡ <roleName type="office">ፈታሕት፡</roleName> አው፡ <roleName type="office">መኮንን፡</roleName> አው፡ 
-                                    <roleName type="office">ስዩመ፡</roleName> ሀገረ፡ ዘኢይፈትሕ፡ በዘ፡ አዘዝነ፡ ቦቱ፡ ይትቀተል፡ ዘእንበለ፡ ምሕረት፡ ወይትበርበር፡ ኵሉ፡ ንዋዩ፡ ወይኩን፡ ውጉዘ፡ በአፈ፡ 
+                                <ab>ወለተሳየጦሂ፡ እምደቂቀ፡ ዐረብ፡ እንዘ፡ የአምር፡ ከመ፡ ውእቱ፡ ክርስቲያናዊ፡ ይንሥእዎ፡
+                                    ኵሎ፡ ንዋዮ። ኵሉ፡ <roleName type="office">አዛዢ።</roleName>
+                                    አው፡ <roleName type="office">ፈታሕት፡</roleName> አው፡ <roleName type="office">መኮንን፡</roleName> አው፡
+                                    <roleName type="office">ስዩመ፡</roleName> ሀገረ፡ ዘኢይፈትሕ፡ በዘ፡ አዘዝነ፡ ቦቱ፡ ይትቀተል፡ ዘእንበለ፡ ምሕረት፡ ወይትበርበር፡ ኵሉ፡ ንዋዩ፡ ወይኩን፡ ውጉዘ፡ በአፈ፡
                                     አብ፡ ወወልድ፡ ወመንፈስ፡ ቅዱስ፡ ወበአፈ፡ ኵሎሙ፡ አበው፡ ዘተወክፈቶሙ፡ ቤተ ክርስቲያን። </ab>
                             </div>
-                            
+
                         </egXML>
                     </exemplum>
                     <exemplum>
@@ -3259,12 +3259,12 @@ End license statement: do not remove -->
                             <sch:rule context="tei:seg[ancestor::tei:handNote]">
                                 <sch:report test="not(@type or @subtype)">seg in handNote should
                                     always have a type</sch:report>
-                                <sch:report test="@type = 'supplication' or @type = 'expanded' or @type = 'inscriptio' or @type = 'subscriptio' or @type = 'embedded'  or @type = 'translation' ">the values 
+                                <sch:report test="@type = 'supplication' or @type = 'expanded' or @type = 'inscriptio' or @type = 'subscriptio' or @type = 'embedded'  or @type = 'translation' ">the values
                                     supplication, expanded, inscriptio and subscriptio, embedded and translation are not for use in seg inside handNote which is an ancestor of the current element
                                     you can use here script, ink, rubrication or interpretation</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:seg[not(ancestor::tei:handNote)]">
-                                <sch:report test="@type = 'script' or @type = 'ink' or @type = 'rubrication' or @type = 'interpretation'  ">the values 
+                                <sch:report test="@type = 'script' or @type = 'ink' or @type = 'rubrication' or @type = 'interpretation'  ">the values
                                     script, ink, rubrication and interpretation, are reserved for use in seg inside handNote which is not an ancestor of the current element
                                 you can use here any other value, up to six</sch:report>
                             </sch:rule>
@@ -3286,22 +3286,22 @@ End license statement: do not remove -->
                                 <valItem ident="desinit"><desc>to qualify expressions as tafaṣṣama/malʾa.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40subtype%2C%27desinit%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:seg[contains(@subtype,'desinit')]</ref></desc></valItem>
-                                <valItem ident="supplication"><desc>entreat to God for help. 
+                                <valItem ident="supplication"><desc>entreat to God for help.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27supplication%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:seg[contains(@type,'supplication')]</ref></desc></valItem>
-                                <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information. 
+                                <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27expanded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:seg[contains(@type,'expanded')]</ref></desc></valItem>
-                                <valItem ident="inscriptio"><desc>is used for a title occurring at the beginning of a work. 
+                                <valItem ident="inscriptio"><desc>is used for a title occurring at the beginning of a work.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:seg[contains(@type,'inscriptio')]</ref></desc></valItem>
-                                <valItem ident="subscriptio"><desc>for a title occurring at the end of a work. 
+                                <valItem ident="subscriptio"><desc>for a title occurring at the end of a work.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:seg[contains(@type,'subscriptio')]</ref></desc></valItem>
-                                <valItem ident="embedded"><desc>for a title copied together with the text. 
+                                <valItem ident="embedded"><desc>for a title copied together with the text.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27embedded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:seg[contains(@type,'embedded')]</ref></desc></valItem>
-                                <valItem ident="translation"><desc>to signal that the title is only of a translation. 
+                                <valItem ident="translation"><desc>to signal that the title is only of a translation.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27translation%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:seg[contains(@type,'translation')]</ref></desc></valItem>
                             </valList>
@@ -3695,7 +3695,7 @@ End license statement: do not remove -->
                 <elementSpec ident="colophon" mode="change" module="msdescription">
                     <desc><ref target="https://betamasaheft.eu/Guidelines/?id=colophon">Beta maṣāḥǝft
                         Guidelines</ref>.
-                        See also, on how to encode titles, supplications and colophons in general, 
+                        See also, on how to encode titles, supplications and colophons in general,
                         <ref target="https://betamasaheft.eu/Guidelines/?id=ColophSupplTit">Beta maṣāḥǝft
                             Guidelines</ref></desc>
                     <content>
@@ -3720,22 +3720,22 @@ End license statement: do not remove -->
                                     <dataRef key="teidata.word"/>
                                 </datatype>
                                 <valList type="closed">
-                                    <valItem ident="supplication"><desc>entreat to God for help. 
+                                    <valItem ident="supplication"><desc>entreat to God for help.
                                         Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Acolophon%5Bcontains%28%40type%2C%27supplication%27%29%5D">Beta maṣāḥǝft
                                             Xpath search for //t:colophon[@type='supplication']</ref></desc></valItem>
-                                    <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information. 
+                                    <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information.
                                         Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Acolophon%5Bcontains%28%40type%2C%27expanded%27%29%5D">Beta maṣāḥǝft
                                             Xpath search for //t:colophon[@type='expanded']</ref></desc></valItem>
-                                    <valItem ident="inscriptio"><desc>is used for a title occurring at the beginning of a work. 
+                                    <valItem ident="inscriptio"><desc>is used for a title occurring at the beginning of a work.
                                         Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Acolophon%5Bcontains%28%40type%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
                                             Xpath search for //t:colophon[@type='inscriptio']</ref></desc></valItem>
-                                    <valItem ident="subscriptio"><desc>for a title occurring at the end of a work. 
+                                    <valItem ident="subscriptio"><desc>for a title occurring at the end of a work.
                                         Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Acolophon%5Bcontains%28%40type%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
                                             Xpath search for //t:colophon[@type='subscriptio']</ref></desc></valItem>
-                                    <valItem ident="embedded"><desc>for a title copied together with the text. 
+                                    <valItem ident="embedded"><desc>for a title copied together with the text.
                                         Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Acolophon%5Bcontains%28%40type%2C%27embedded%27%29%5D">Beta maṣāḥǝft
                                             Xpath search for //t:colophon[@type='embedded']</ref></desc></valItem>
-                                    <valItem ident="translation"><desc>to signal that the title is only of a translation. 
+                                    <valItem ident="translation"><desc>to signal that the title is only of a translation.
                                         Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Acolophon%5Bcontains%28%40type%2C%27translation%27%29%5D">Beta maṣāḥǝft
                                             Xpath search for //t:colophon[@type='translation']</ref></desc></valItem>
                                 </valList>
@@ -4107,7 +4107,7 @@ End license statement: do not remove -->
                                 <valItem ident="MP">
                                     <desc>MIchele Petrone</desc>
                                 </valItem>
-                                
+
                             </valList>
                         </attDef>
                         <attDef ident="when" mode="replace" usage="req"/>
@@ -4809,7 +4809,7 @@ End license statement: do not remove -->
                 <elementSpec ident="explicit" mode="change" module="msdescription">
                     <desc><ref target="https://betamasaheft.eu/Guidelines/?id=explicit">Beta maṣāḥǝft
                         Guidelines</ref>.
-                        See also, on how to encode titles, supplications and colophons in general, 
+                        See also, on how to encode titles, supplications and colophons in general,
                         <ref target="https://betamasaheft.eu/Guidelines/?id=ColophSupplTit">Beta maṣāḥǝft
                             Guidelines</ref></desc>
                     <attList>
@@ -4818,22 +4818,22 @@ End license statement: do not remove -->
                                 <dataRef key="teidata.word"/>
                             </datatype>
                             <valList type="closed">
-                                <valItem ident="supplication"><desc>entreat to God for help. 
+                                <valItem ident="supplication"><desc>entreat to God for help.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aexplicit%5Bcontains%28%40type%2C%27supplication%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:explicit[contains(@type,'supplication')]</ref></desc></valItem>
-                                <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information. 
+                                <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aexplicit%5Bcontains%28%40type%2C%27expanded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:explicit[contains(@type,'expanded')]</ref></desc></valItem>
-                                <valItem ident="inscriptio"><desc>is used for a title occurring at the beginning of a work. 
+                                <valItem ident="inscriptio"><desc>is used for a title occurring at the beginning of a work.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aexplicit%5Bcontains%28%40type%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:explicit[contains(@type,'inscriptio')]</ref></desc></valItem>
-                                <valItem ident="subscriptio"><desc>for a title occurring at the end of a work. 
+                                <valItem ident="subscriptio"><desc>for a title occurring at the end of a work.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aexplicit%5Bcontains%28%40type%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:explicit[contains(@type,'subscriptio')]</ref></desc></valItem>
-                                <valItem ident="embedded"><desc>for a title copied together with the text. 
+                                <valItem ident="embedded"><desc>for a title copied together with the text.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aexplicit%5Bcontains%28%40type%2C%27embedded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:explicit[contains(@type,'embedded')]</ref></desc></valItem>
-                                <valItem ident="translation"><desc>to signal that the title is only of a translation. 
+                                <valItem ident="translation"><desc>to signal that the title is only of a translation.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aexplicit%5Bcontains%28%40type%2C%27translation%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:explicit[contains(@type,'translation')]</ref></desc></valItem>
                             </valList>
@@ -4853,7 +4853,7 @@ End license statement: do not remove -->
                 <elementSpec ident="incipit" mode="change" module="msdescription">
                     <desc><ref target="https://betamasaheft.eu/Guidelines/?id=incipit">Beta maṣāḥǝft
                             Guidelines</ref>.
-                        See also, on how to encode titles, supplications and colophons in general, 
+                        See also, on how to encode titles, supplications and colophons in general,
                         <ref target="https://betamasaheft.eu/Guidelines/?id=ColophSupplTit">Beta maṣāḥǝft
                             Guidelines</ref></desc>
                     <attList>
@@ -4862,22 +4862,22 @@ End license statement: do not remove -->
                                 <dataRef key="teidata.word"/>
                             </datatype>
                             <valList type="closed">
-                                <valItem ident="supplication"><desc>entreat to God for help. 
+                                <valItem ident="supplication"><desc>entreat to God for help.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aincipit%5Bcontains%28%40type%2C%27supplication%27%29%5D">Beta maṣāḥǝft
                                     Xpath search for //t:incipit[contains(@type,'supplication')]</ref></desc></valItem>
-                                <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information. 
+                                <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aincipit%5Bcontains%28%40type%2C%27expanded%27%29%5D">Beta maṣāḥǝft
                                     Xpath search for //t:incipit[contains(@type,'expanded')]</ref></desc></valItem>
-                                <valItem ident="inscriptio"><desc>is used for a title occurring at the beginning of a work. 
+                                <valItem ident="inscriptio"><desc>is used for a title occurring at the beginning of a work.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aincipit%5Bcontains%28%40type%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:incipit[contains(@type,'inscriptio')]</ref></desc></valItem>
-                                <valItem ident="subscriptio"><desc>for a title occurring at the end of a work. 
+                                <valItem ident="subscriptio"><desc>for a title occurring at the end of a work.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aincipit%5Bcontains%28%40type%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:incipit[contains(@type,'subscriptio')]</ref></desc></valItem>
-                                <valItem ident="embedded"><desc>for a title copied together with the text. 
+                                <valItem ident="embedded"><desc>for a title copied together with the text.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aincipit%5Bcontains%28%40type%2C%27embedded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:incipit[contains(@type,'embedded')]</ref></desc></valItem>
-                                <valItem ident="translation"><desc>to signal that the title is only of a translation. 
+                                <valItem ident="translation"><desc>to signal that the title is only of a translation.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aincipit%5Bcontains%28%40type%2C%27translation%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:incipit[contains(@type,'translation')]</ref></desc></valItem>
                             </valList>
@@ -5008,7 +5008,7 @@ End license statement: do not remove -->
                             </sch:rule>
                             <sch:rule context="tei:relation">
                                 <sch:report test="starts-with(@active, '#')">The @active element should not use the #.</sch:report>
-                                <sch:report test="starts-with(@passive, '#')">The @passive element should not use the #.</sch:report>                                
+                                <sch:report test="starts-with(@passive, '#')">The @passive element should not use the #.</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
@@ -5144,100 +5144,100 @@ End license statement: do not remove -->
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+agrelon%3AhasFounder+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="bm:isAntigraphOf">
+                                <valItem ident="betmas:isAntigraphOf">
                                     <desc>the relation between a ms and the first printed edition of
                                         a text it contains. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AisAntigraphOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="bm:hasLocus">
+                                <valItem ident="betmas:hasLocus">
                                     <desc>might be used to locate a unit defined relationally. If
                                         stated, a further relation is needed with one of the
                                         properties defining the locus. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AhasLocus+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="bm:locusFrom">
+                                <valItem ident="betmas:locusFrom">
                                     <desc>the locus rante starts at. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AlocusFrom+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="bm:locusTo">
+                                <valItem ident="betmas:locusTo">
                                     <desc>the locus range ends at. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AlocusTo+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="bm:locusTarget">
+                                <valItem ident="betmas:locusTarget">
                                     <desc>the locus has target. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AlocusTarget+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="bm:wifeOf">
+                                <valItem ident="betmas:wifeOf">
                                     <desc>Is the wife of ... <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AwifeOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="bm:husbandOf">
+                                <valItem ident="betmas:husbandOf">
                                     <desc>Is the husband of.. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AhusbandOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="bm:motherInLawOf">
+                                <valItem ident="betmas:motherInLawOf">
                                     <desc>is the mother of the legally conjugated partner. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AmotherInLawOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="bm:fatherInLawOf">
+                                <valItem ident="betmas:fatherInLawOf">
                                     <desc>is the father of the legally conjugated partner. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AfatherInLawOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="bm:sonInLawOf">
+                                <valItem ident="betmas:sonInLawOf">
                                     <desc>is the husband of the daugther. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AsonInLawOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                             <!--   <valItem ident="bm:brotherInLawOf">
+                             <!--   <valItem ident="betmas:brotherInLawOf">
                                     <desc>is the brother of the legally conjugated partner. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AbrotherInLawOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>-->
-                              <!--  <valItem ident="bm:sisterInLawOf">
+                              <!--  <valItem ident="betmas:sisterInLawOf">
                                     <desc>is the sister of the legally conjugated partner. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AsisterInLawOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>-->
-                               <!-- <valItem ident="bm:daugtherInLawOf">
+                               <!-- <valItem ident="betmas:daugtherInLawOf">
                                     <desc>is the wife of the son. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AdaugtherInLawOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>-->
-                                <valItem ident="bm:hasTabot">
+                                <valItem ident="betmas:hasTabot">
                                     <desc>This person has a Tābot at the location... <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AhasTabot+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="bm:ordainedBy">
+                                <valItem ident="betmas:ordainedBy">
                                     <desc>Ordained priest, bishop or monk. Same as Consecrated. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AordainedBy+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="bm:hasOrdained">
+                                <valItem ident="betmas:hasOrdained">
                                     <desc>has ordained to a religious ministery ... <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AhasOrdained+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                            <!--    <valItem ident="bm:hasBaptized">
+                            <!--    <valItem ident="betmas:hasBaptized">
                                     <desc>has baptized ... <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AhasBaptized+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>-->
-                                <valItem ident="bm:baptizedBy">
+                                <valItem ident="betmas:baptizedBy">
                                     <desc>has been baptized by ... <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AbaptizedBy+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="bm:isAuthorOfEthiopicTranslation">
+                                <valItem ident="betmas:isAuthorOfEthiopicTranslation">
                                     <desc>The subject of the relation is author of a translation of
                                         a work in another language and there is no digital resource
                                         enabling us to document the authorship of this work and the
@@ -5246,7 +5246,7 @@ End license statement: do not remove -->
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AisAuthorOfEthiopicTranslation+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="bm:isGoldenGospelof">
+                                <valItem ident="betmas:isGoldenGospelof">
                                     <desc>The relation between a Golden Gospel and its original
                                         institution (even if the manuscript is now kept in a
                                         different place), to be used in cases where the definition
@@ -5257,19 +5257,19 @@ End license statement: do not remove -->
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AisGoldenGospelof+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="bm:hasLexiconEntry">
+                                <valItem ident="betmas:hasLexiconEntry">
                                     <desc>corresponds to the lemma ... (associates a Dillmann Online
                                         Lexicon Linguae Aethiopicae person name to the person record
                                         in the subject). <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AhasLexiconEntry+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="bm:isSuccessorOf">
+                                <valItem ident="betmas:isSuccessorOf">
                                     <desc>The subject of the relation is the successor of... <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AisSuccessorOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                <valItem ident="bm:isPredecessorOf">
+                                <valItem ident="betmas:isPredecessorOf">
                                     <desc>The subject of the relation is the predecessor of... <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AisPredecessorOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
@@ -6457,25 +6457,25 @@ End license statement: do not remove -->
                                 <valItem ident="desinit"><desc>to qualify expressions as tafaṣṣama/malʾa.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27desinit%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:div[contains(@subtype,'desinit')]</ref></desc></valItem>
-                                        <valItem ident="supplication"><desc>entreat to God for help. 
+                                        <valItem ident="supplication"><desc>entreat to God for help.
                                             Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27supplication%27%29%5D">Beta maṣāḥǝft
                                                 Xpath search for //t:div[contains(@subtype,'supplication')]</ref></desc></valItem>
-                                        <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information. 
+                                        <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information.
                                             Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27expanded%27%29%5D">Beta maṣāḥǝft
                                                 Xpath search for //t:div[contains(@subtype,'expanded')]</ref></desc></valItem>
-                                        <valItem ident="inscriptio"><desc>is used for a title occurring at the beginning of a work. 
+                                        <valItem ident="inscriptio"><desc>is used for a title occurring at the beginning of a work.
                                             Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
                                                 Xpath search for //t:div[contains(@subtype,'inscriptio')]</ref></desc></valItem>
-                                        <valItem ident="subscriptio"><desc>for a title occurring at the end of a work. 
+                                        <valItem ident="subscriptio"><desc>for a title occurring at the end of a work.
                                             Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
                                                 Xpath search for //t:div[contains(@subtype,'subscriptio')]</ref></desc></valItem>
-                                        <valItem ident="embedded"><desc>for a title copied together with the text. 
+                                        <valItem ident="embedded"><desc>for a title copied together with the text.
                                             Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27embedded%27%29%5D">Beta maṣāḥǝft
                                                 Xpath search for //t:div[contains(@subtype,'embedded')]</ref></desc></valItem>
-                                        <valItem ident="translation"><desc>to signal that the title is only of a translation. 
+                                        <valItem ident="translation"><desc>to signal that the title is only of a translation.
                                             Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27translation%27%29%5D">Beta maṣāḥǝft
                                                 Xpath search for //t:div[contains(@subtype,'translation')]</ref></desc></valItem>
-                                    
+
                             </valList>
                         </attDef>
                     </attList>
@@ -6664,12 +6664,12 @@ The structuring elements used in a manuscript transcription are div, pb and cb.
 locus is used to point to values of these elements in the teiHeader.
                                     </sch:report>
                             </sch:rule>
-                            
-                            
+
+
                             <sch:rule context="tei:locus[@from]">
                                 <sch:report test="starts-with(@from, '#')">References to foliation and columns in @from, should NOT use the #, e.g. 6r.</sch:report>
                                 <sch:report test="starts-with(@to, '#')">References to foliation and columns in @to, should NOT use the #, e.g. 6r.</sch:report>
-                                    
+
                             </sch:rule>
                             <sch:rule context="tei:locus[@target]">
                                 <sch:report test="not(starts-with(@target, '#'))">References to foliation and columns in @target, should use the #, e.g. #6r.</sch:report>
@@ -6935,8 +6935,8 @@ locus is used to point to values of these elements in the teiHeader.
                         </attDef>
                     </attList>
                 </classSpec>
-                
-               
+
+
 
             </schemaSpec>
         </body>
