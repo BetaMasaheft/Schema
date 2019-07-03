@@ -90,6 +90,8 @@ End license statement: do not remove -->
             <p>Schema for the Beta maṣāḥǝft: Manuscripts of Ethiopia and Eritrea research
                 environment. The website <ref target="https://betamasaheft.eu/Guidelines">Beta
                     maṣāḥǝft Guidelines</ref> contains all the how to details.</p>
+            <p><att>xml:base</att> is used in <gi>teiHeader</gi> and <gi>text</gi> to support completion of partial URI given only as ID of a record.
+            Fragment only references should be interpreted without using this base url, as they are local pointers.</p>
             <schemaSpec ident="tei-betamesaheft" docLang="en" prefix="tei_" start="TEI"
                 xml:lang="en" source="tei:3.5.0">
 
