@@ -3958,6 +3958,10 @@ End license statement: do not remove -->
                                 <valItem ident="ED"><desc>Eyob Derillo</desc></valItem>
                                 <valItem ident="SSe"><desc>Simone Seyboldt</desc></valItem>
                                 <valItem ident="CD"><desc>Coleman Donaldson</desc></valItem>
+                                <valItem ident="HS">
+                                    <desc>Hewan Semon</desc>
+                                </valItem>
+                                
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -4122,7 +4126,10 @@ End license statement: do not remove -->
                                 <valItem ident="ED"><desc>Eyob Derillo</desc></valItem>
                                 <valItem ident="SSe"><desc>Simone Seyboldt</desc></valItem>
                                 <valItem ident="CD"><desc>Coleman Donaldson</desc></valItem>
-
+                                <valItem ident="HS">
+                                    <desc>Hewan Semon</desc>
+                                </valItem>
+                                
                             </valList>
                         </attDef>
                         <attDef ident="when" mode="replace" usage="req"/>
