@@ -112,7 +112,7 @@ End license statement: do not remove -->
                 <moduleRef key="linking" except="alt altGrp joinGrp timeline when"/>
                 <moduleRef key="msdescription"/>
                 <moduleRef key="namesdates"
-                    except="climate education geoFeat langKnowledge
+                    except="climate geoFeat langKnowledge
                                           langKnown nameLink population socecStatus terrain trait"/>
                 <moduleRef key="textcrit" except="lacunaEnd lacunaStart witDetail witEnd witStart"/>
                 <moduleRef key="figures" except="cell formula row table"/>
