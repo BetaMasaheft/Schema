@@ -4224,7 +4224,7 @@ End license statement: do not remove -->
                         </attDef>
                         
                         <attDef ident="type" mode="replace" usage="opt">
-                            <valList>
+                            <valList type="closed">
                                 <valItem ident="normalized">
                                     <desc>the normalized transcription of the name in fidal or
                                         another script</desc>

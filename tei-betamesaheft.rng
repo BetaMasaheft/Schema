@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2019-07-24T11:31:16Z. .
+Schema generated from ODD source 2019-07-25T07:58:18Z. .
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
@@ -14676,7 +14676,32 @@ Suggested values include: 1] UTI; 2] OTI; 3] L; 4] R</a:documentation>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <text/>
+               <choice>
+                  <value>normalized</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the normalized transcription of the name in fidal or another script</a:documentation>
+                  <value>given</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">name received later in life, different from the other specified types of names</a:documentation>
+                  <value>birth</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">name given at birth</a:documentation>
+                  <value>baptismal</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">name given at baptism</a:documentation>
+                  <value>regnal</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">name given on coronation (kings and queens but also patriarchs)</a:documentation>
+                  <value>monastic</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">name given on entering monastic life </a:documentation>
+                  <value>horse</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the name of the battle horse of kings and rulers</a:documentation>
+                  <value>nick</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a name given to a person associated to his occupation or other deeds</a:documentation>
+                  <value>war</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">nom de guerre (if different from horse name, e.g. Malas)</a:documentation>
+                  <value>hypocoristic</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">short form (diminutive or abbreviated, e.g. Taklo for Takla Māryām)</a:documentation>
+                  <value>patronymic</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">father's name, esp. for eventual Russian names, but could be also highlighted in others</a:documentation>
+                  <value>alt</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">alternative name</a:documentation>
+               </choice>
             </attribute>
          </optional>
          <empty/>
