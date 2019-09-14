@@ -3961,7 +3961,9 @@ End license statement: do not remove -->
                                 <valItem ident="HS">
                                     <desc>Hewan Semon</desc>
                                 </valItem>
-                                
+                                <valItem ident="ABe">
+                                    <desc>Ashlee Benson</desc>
+                                </valItem>    
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -4130,6 +4132,9 @@ End license statement: do not remove -->
                                     <desc>Hewan Semon</desc>
                                 </valItem>
                                 
+                                <valItem ident="ABe">
+                                    <desc>Ashlee Benson</desc>
+                                </valItem>    
                             </valList>
                         </attDef>
                         <attDef ident="when" mode="replace" usage="req"/>
