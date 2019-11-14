@@ -80,6 +80,7 @@ End license statement: do not remove -->
             <change when="2019-04-18" who="ES">added leafTabMark leafStringMark</change>
             <change when="2019-04-23" who="ES">added mitredCorner openMitredCorner overlappingCornerFO overlappingCornerHTO quarterCover overCover stitchedCorner tonguedCorner</change>
             <change when="2019-04-24" who="ES">corrected rule for msFrag IDs</change>
+            <change when="2019-11-14" who="PL">added Hagos, Marawəḥ and miniature collection</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -1697,6 +1698,11 @@ End license statement: do not remove -->
                                         collected. <ref
                                             target="https://betamasaheft.eu/authority-files/GoldenGospel"
                                             >See GoldenGospel in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="miniatureCollection">
+                                    <desc>A particular type of a manuscript made only of miniatures<ref
+                                            target="https://betamasaheft.eu/authority-files/miniatureCollection"
+                                            >See miniature collection in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
                                 <valItem ident="ChristianContent">
                                     <desc>Items belonging to the Christian tradition which do not
@@ -3966,6 +3972,9 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="SK">
                                     <desc>Sergey Kim</desc>
+                                </valItem>   
+                                <valItem ident="HA">
+                                    <desc>Hagos Abrha</desc>
                                 </valItem>        
                             </valList>
                         </attDef>
@@ -4001,6 +4010,10 @@ End license statement: do not remove -->
                     <attList>
                         <attDef ident="who" mode="replace" usage="req">
                             <valList type="closed">
+                                
+                                <valItem ident="HA">
+                                    <desc>Hagos Abrha</desc>
+                                </valItem>
                                 <valItem ident="SK" ><desc>Sergey Kim</desc></valItem>
                                 <valItem ident="MGO"><desc>Meseret G. Oldjira</desc></valItem>
                                 <valItem ident="EF" ><desc>Éloi Ficquet</desc></valItem>
@@ -4984,6 +4997,9 @@ End license statement: do not remove -->
                                 <valItem ident="Notebook">
                                     <desc>An object consisting of an industrially produced
                                         paperblock in the form of a notebook.</desc>
+                                </valItem>
+                                <valItem ident="Marawəḥ">
+                                    <desc>A so called peacock-shaped parchment manuscript, folded as a fan.</desc>
                                 </valItem>
                             </valList>
                         </attDef>
