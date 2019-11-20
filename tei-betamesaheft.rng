@@ -4247,6 +4247,10 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sometimes developed, with the formalized incipit and explicit, sometimes nothing more than a short string of “hidden God’s names”, written in a crude hand. <a xmlns="http://www.w3.org/1999/xhtml"
                         href="https://betamasaheft.eu/authority-files/list?keyword=Asmat">Asmat</a>
                   </a:documentation>
+                  <value>ApocalypticLiterature</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Works belonging to apocalyptic literature. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/authority-files/list?keyword=ApocalypticLiterature">See ApocalypticLiterature in Beta maṣāḥǝft</a>
+                  </a:documentation>
                   <value>CustomaryLaw</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Rare, but important records explaining the local customary law. Usually in Amharic, difficult to understand. <a xmlns="http://www.w3.org/1999/xhtml"
                         href="https://betamasaheft.eu/authority-files/list?keyword=CustomaryLaw">Customary Law</a>
@@ -5184,6 +5188,10 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <value>Asmat</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sometimes developed, with the formalized incipit and explicit, sometimes nothing more than a short string of hidden God’s names, written in a crude hand. <a xmlns="http://www.w3.org/1999/xhtml"
                         href="https://betamasaheft.eu/authority-files/Asmat">See Asmat in Beta maṣāḥǝft</a>
+                  </a:documentation>
+                  <value>ApocalypticLiterature</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Works belonging to apocalyptic literature. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/authority-files/list?keyword=ApocalypticLiterature">See ApocalypticLiterature in Beta maṣāḥǝft</a>
                   </a:documentation>
                </choice>
             </attribute>

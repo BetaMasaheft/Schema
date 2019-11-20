@@ -56,7 +56,7 @@ End license statement: do not remove -->
             <change who="DR" when="2017-04-21">Added keyword</change>
             <change who="DR" when="2017-05-02">Added value definitions @place</change>
             <change who="DR" when="2017-09-15">Added philosophy keyword</change>
-            <change who="DR" when="2017-12-15">Added Golden Gospel relation</change>c
+            <change who="DR" when="2017-12-15">Added Golden Gospel relation</change>
             <change who="ES" when="2018-05-25">Added Lexicon relation</change>
             <change who="DR" when="2018-06-29">Deleted TransactionNote and updated definition for
                 RecordTransaction</change>
