@@ -3270,10 +3270,10 @@ End license statement: do not remove -->
                                     always have a type</sch:report>
                                 <sch:report test="@type = 'supplication' or @type = 'expanded' or @type = 'inscriptio' or @type = 'subscriptio' or @type = 'embedded'  or @type = 'translation' ">the values
                                     supplication, expanded, inscriptio and subscriptio, embedded and translation are not for use in seg inside handNote which is an ancestor of the current element
-                                    you can use here script, ink, rubrication or interpretation</sch:report>
+                                    you can use here script, ink or rubrication</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:seg[not(ancestor::tei:handNote)]">
-                                <sch:report test="@type = 'script' or @type = 'ink' or @type = 'rubrication' or @type = 'interpretation'  ">the values
+                                <sch:report test="@type = 'script' or @type = 'ink' or @type = 'rubrication' ">the values
                                     script, ink, rubrication and interpretation, are reserved for use in seg inside handNote which is not an ancestor of the current element
                                 you can use here any other value, up to six</sch:report>
                             </sch:rule>
