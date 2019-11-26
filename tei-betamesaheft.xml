@@ -82,6 +82,7 @@ End license statement: do not remove -->
             <change when="2019-04-24" who="ES">corrected rule for msFrag IDs</change>
             <change when="2019-11-14" who="PL">added Hagos, Marawəḥ and miniature collection</change>
             <change when="2019-11-18" who="DR">Corrected typos</change>
+            <change when="2019-11-20" who="DR">Added ApocalypticLiterature</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -1717,6 +1718,11 @@ End license statement: do not remove -->
                                             <q>hidden God’s names</q>, written in a crude hand. <ref
                                             target="https://betamasaheft.eu/authority-files/Asmat"
                                             >See Asmat in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="ApocalypticLiterature">
+                                    <desc>Works belonging to apocalyptic literature. <ref
+                                            target="https://betamasaheft.eu/authority-files/ApocalypticLiterature"
+                                            >See ApocalypticLiterature in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
                             </valList>
                         </attDef>
