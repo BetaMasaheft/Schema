@@ -4240,9 +4240,6 @@ End license statement: do not remove -->
                                 <valItem ident="patron">
                                     <desc>the commissioner of a ms or an item</desc>
                                 </valItem>
-                                <valItem ident="tabot">
-                                    <desc>the saint to whom the tābot is dedicated</desc>
-                                </valItem>
                                 <valItem ident="sponsor">
                                     <desc>the person paying for a ms (possibly not the same as
                                         donor/commissioner)</desc>
@@ -4295,6 +4292,10 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="alt">
                                     <desc>alternative name</desc>
+                                </valItem>
+                                
+                                <valItem ident="tabot">
+                                    <desc>the saint to whom the tābot is dedicated</desc>
                                 </valItem>
                             </valList>
                         </attDef>

@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2019-11-26T12:18:22Z. .
+Schema generated from ODD source 2019-11-26T12:55:55Z. .
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
@@ -4247,10 +4247,6 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sometimes developed, with the formalized incipit and explicit, sometimes nothing more than a short string of “hidden God’s names”, written in a crude hand. <a xmlns="http://www.w3.org/1999/xhtml"
                         href="https://betamasaheft.eu/authority-files/list?keyword=Asmat">Asmat</a>
                   </a:documentation>
-                  <value>ApocalypticLiterature</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Works belonging to apocalyptic literature. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/authority-files/list?keyword=ApocalypticLiterature">See ApocalypticLiterature in Beta maṣāḥǝft</a>
-                  </a:documentation>
                   <value>CustomaryLaw</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Rare, but important records explaining the local customary law. Usually in Amharic, difficult to understand. <a xmlns="http://www.w3.org/1999/xhtml"
                         href="https://betamasaheft.eu/authority-files/list?keyword=CustomaryLaw">Customary Law</a>
@@ -5191,7 +5187,7 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   </a:documentation>
                   <value>ApocalypticLiterature</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Works belonging to apocalyptic literature. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/authority-files/list?keyword=ApocalypticLiterature">See ApocalypticLiterature in Beta maṣāḥǝft</a>
+                        href="https://betamasaheft.eu/authority-files/list?keyword=ApocalypticLiterature">See ApocalypticLiterature in Beta maṣāḥǝft</a>
                   </a:documentation>
                </choice>
             </attribute>
@@ -14679,8 +14675,6 @@ Suggested values include: 1] UTI; 2] OTI; 3] L; 4] R</a:documentation>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the owner of a ms or an item</a:documentation>
                   <value>patron</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the commissioner of a ms or an item</a:documentation>
-                  <value>tabot</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the saint to whom the tābot is dedicated</a:documentation>
                   <value>sponsor</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the person paying for a ms (possibly not the same as donor/commissioner)</a:documentation>
                   <value>other</value>
@@ -14726,6 +14720,8 @@ Suggested values include: 1] UTI; 2] OTI; 3] L; 4] R</a:documentation>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">father's name, esp. for eventual Russian names, but could be also highlighted in others</a:documentation>
                   <value>alt</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">alternative name</a:documentation>
+                  <value>tabot</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the saint to whom the tābot is dedicated</a:documentation>
                </choice>
             </attribute>
          </optional>
