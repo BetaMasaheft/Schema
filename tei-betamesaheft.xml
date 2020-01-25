@@ -5988,24 +5988,7 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                <valItem ident="ecrm:F15_Complex_Work">
-                                    <desc>http://erlangen-crm.org/efrbroo/F15_Complex_Work <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3AF15_Complex_Work+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                                <valItem ident="ecrm:F16_Container_Work">
-                                    <desc>http://erlangen-crm.org/efrbroo/F16_Container_Work <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3AF16_Container_Work+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                                <valItem ident="ecrm:F17_Aggregation_Work">
-                                    <desc>http://erlangen-crm.org/efrbroo/F17_Aggregation_Work <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3AF17_Aggregation_Work+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
+                               
                                 <valItem ident="ecrm:CLP57_should_have_number_of_parts">
                                     <desc>http://erlangen-crm.org/efrbroo/CLP57_should_have_number_of_parts
                                             <ref
