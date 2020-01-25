@@ -19136,18 +19136,6 @@ Sample values include: 1] primary; 2] secondary; 3] undergraduate; 4] graduate; 
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://erlangen-crm.org/current/P129_is_about <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3AP129_is_about+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>ecrm:F15_Complex_Work</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://erlangen-crm.org/efrbroo/F15_Complex_Work <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3AF15_Complex_Work+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>ecrm:F16_Container_Work</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://erlangen-crm.org/efrbroo/F16_Container_Work <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3AF16_Container_Work+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>ecrm:F17_Aggregation_Work</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://erlangen-crm.org/efrbroo/F17_Aggregation_Work <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3AF17_Aggregation_Work+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
                <value>ecrm:CLP57_should_have_number_of_parts</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://erlangen-crm.org/efrbroo/CLP57_should_have_number_of_parts <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3ACLP57_should_have_number_of_parts+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
