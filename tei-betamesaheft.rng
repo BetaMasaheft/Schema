@@ -19124,10 +19124,6 @@ Sample values include: 1] primary; 2] secondary; 3] undergraduate; 4] graduate; 
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#UncleOf <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AUncleOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>saws:AbstractManuscriptText</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#AbstractManuscriptText <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AAbstractManuscriptText+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
                <value>ecrm:P129i_is_subject_of</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://erlangen-crm.org/current/P129i_is_subject_of <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3AP129i_is_subject_of+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>

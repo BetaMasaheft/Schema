@@ -5970,12 +5970,7 @@ End license statement: do not remove -->
 
 
                                 <!--                          list INCOMPLETE! -->
-                                <valItem ident="saws:AbstractManuscriptText">
-                                    <desc>http://purl.org/saws/ontology#AbstractManuscriptText <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AAbstractManuscriptText+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
+                             
                                 <valItem ident="ecrm:P129i_is_subject_of">
                                     <desc>http://erlangen-crm.org/current/P129i_is_subject_of <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3AP129i_is_subject_of+%3Fy%7D+LIMIT+25"
