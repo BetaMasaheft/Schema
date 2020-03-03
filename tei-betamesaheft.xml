@@ -475,7 +475,7 @@ End license statement: do not remove -->
                                 </valItem>
                             </valList>
                         </attDef>
-            <!--            <attDef ident="calendar" usage="opt" mode="replace">
+                        <attDef ident="calendar" usage="opt" mode="replace">
                             <valList type="open">
                                 <valItem ident="world">
                                     <desc>ʿĀmata ʿālam/ʿĀmata ʾəm-fəṭrat (Era of the World)</desc>
@@ -504,7 +504,7 @@ End license statement: do not remove -->
                                 </valItem>
 
                             </valList>
-                        </attDef>-->
+                        </attDef>
                     </attList>
                     <exemplum>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="BLorient512">
