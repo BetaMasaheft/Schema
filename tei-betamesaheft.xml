@@ -5070,6 +5070,12 @@ End license statement: do not remove -->
                     <attList>
                         <attDef ident="name" mode="replace" usage="req">
                             <valList type="closed">
+                                <valItem ident="dc:relation">
+                                    <desc>A related resource. <ref target="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/relation">Dublin Core relation</ref>
+                                        Please use only if no other relation fits, and consider searching for a better option and
+                                        suggesting that relation instead. This is now only suggested for 
+                                        those cases of unspecified relation between two places.</desc>
+                                </valItem>
                                 <valItem ident="sdc:constituteUnit">
                                     <desc>States that one or more identified discontinuities
                                         constitute a UniProd, which can be certain or hypothetical.
