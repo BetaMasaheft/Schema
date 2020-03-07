@@ -5,7 +5,7 @@
          xmlns:teix="http://www.tei-c.org/ns/Examples"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2020-03-05T17:01:29Z. .
+Schema generated from ODD source 2020-03-07T10:25:06Z. .
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
@@ -18621,705 +18621,698 @@ Sample values include: 1] primary; 2] secondary; 3] undergraduate; 4] graduate; 
          <attribute name="name">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             <choice>
-               <value>dc:relation</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A related resource. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/relation">Dublin Core relation</a> Please use only if no other relation fits, and consider searching for a better option and suggesting that relation instead. This is now only suggested for those cases of unspecified relation between two places.</a:documentation>
-               <value>sdc:constituteUnit</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">States that one or more identified discontinuities constitute a UniProd, which can be certain or hypothetical. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AconstituteUnit+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               <value>saws:isDirectCopyOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Manuscript. http://purl.org/saws/ontology#isDirectCopyOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisDirectCopyOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>sdc:containsUnits</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">States that a UniCirc or a UniProd contains the Units declared in the <code xmlns="http://www.w3.org/1999/xhtml">&lt;object&gt;</code>
-                  <code xmlns="http://www.w3.org/1999/xhtml">@passive</code>. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AcontainsUnits+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>sdc:hasUnitModel</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The Unit has one of the possible model for its class. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasUnitModel+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>sdc:undergoesTransformation</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Something happens to a UniCirc or less often a UniProd. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AundergoesTransformation+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>sdc:hasTransformationModel</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Something happens to a UniCirc or less often a UniProd. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasTransformationModel+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>sdc:hasTransformationPart</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">If the model of the transformation is multiple, you can specify which individual parts constitute it. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasTransformationPart+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>sdc:isPartOfTransformation</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">If the model of the transformation is simple, you can specify of which individual multiple transformation it is a part. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AisPartOfTransformation+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>sdc:produces</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A transformation produces new UniProds. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3Aproduces+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>sdc:resultsIn</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A transformation results in a new UniProd or a new UniCirc. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AresultsIn+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>sdc:hasCertainty</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Certain or Hypothetique. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasCertainty+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>sdc:hasStratum</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Declares for a UniCirc one or more of the Stratum types in Andrist 2015, 512. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasStratum+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>sdc:isStratumOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Declares one or more of the Stratum types in Andrist 2015, 512 and assign them to a UniCirc. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AisStratumOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>skos:exactMatch</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://www.w3.org/2004/02/skos/core#exactMatch <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+skos%3AexactMatch+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>skos:broadMatch</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://www.w3.org/2004/02/skos/core#broadMatch <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+skos%3AbroadMatch+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>skos:closeMatch</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://www.w3.org/2004/02/skos/core#closeMatch <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+skos%3AcloseMatch+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>gn:nearBy</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://www.geonames.org/ontology#nearby <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+gn%3AnearBy+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>gn:locatedIn</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://www.geonames.org/ontology#locatedIn <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+gn%3AlocatedIn+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>dcterms:isPartOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/dc/terms/isPartOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+dcterms%3AisPartOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>dcterms:hasPart</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/dc/terms/hasPart <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+dcterms%3AhasPart+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>lawd:hasAttestation</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://lawd.info/ontology/hasAttestation <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+lawd%3AhasAttestation+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>rel:enemyOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/vocab/relationship/enemyOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+rel%3AenemyOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>agrelon:isFounderOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://d-nb.info/standards/elementset/agrelon.owl#isFounderOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+agrelon%3AisFounderOfcontainsUnits+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>agrelon:hasFounder</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://d-nb.info/standards/elementset/agrelon.owl#hasFounder <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+agrelon%3AhasFounder+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               <value>saws:isCloseTranslationOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Manuscript. http://purl.org/saws/ontology#isCloseTranslationOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisCloseTranslationOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>betmas:isAntigraphOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the relation between a ms and the first printed edition of a text it contains. <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Manuscript. The relation between a ms and the first printed edition of a text it contains. <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AisAntigraphOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>betmas:hasLocus</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">might be used to locate a unit defined relationally. If stated, a further relation is needed with one of the properties defining the locus. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AhasLocus+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>betmas:locusFrom</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the locus range starts at. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AlocusFrom+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>betmas:locusTo</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the locus range ends at. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AlocusTo+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>betmas:locusTarget</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the locus has target. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AlocusTarget+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>betmas:wifeOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Is the wife of ... <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AwifeOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>betmas:husbandOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Is the husband of.. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AhusbandOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>betmas:motherInLawOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is the mother of the legally conjugated partner. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AmotherInLawOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>betmas:fatherInLawOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is the father of the legally conjugated partner. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AfatherInLawOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>betmas:sonInLawOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is the husband of the daughter. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AsonInLawOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>betmas:hasTabot</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This person has a Tābot at the location... <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AhasTabot+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>betmas:ordainedBy</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ordained priest, bishop or monk. Same as Consecrated. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AordainedBy+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>betmas:hasOrdained</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">has ordained to a religious ministry ... <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AhasOrdained+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>betmas:baptizedBy</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">has been baptized by ... <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AbaptizedBy+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>betmas:isAuthorOfEthiopicTranslation</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The subject of the relation is author of a translation of a work in another language and there is no digital resource enabling us to document the authorship of this work and the fact that the work as such is a translation of another work. <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AisAuthorOfEthiopicTranslation+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
                <value>betmas:isGoldenGospelof</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The relation between a Golden Gospel and its original institution (even if the manuscript is now kept in a different place), to be used in cases where the definition of "Golden Gospel" is explicitly mentioned somewhere in the Gospel or when there is enough evidence that the Gospel is the main material repository of documentary texts related to a certain institution. <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Place. The relation between a Golden Gospel and its original institution (even if the manuscript is now kept in a different place), to be used in cases where the definition of "Golden Gospel" is explicitly mentioned somewhere in the Gospel or when there is enough evidence that the Gospel is the main material repository of documentary texts related to a certain institution. <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AisGoldenGospelof+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>betmas:hasLexiconEntry</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">corresponds to the lemma ... (associates a Dillmann Online Lexicon Linguae Aethiopicae person name to the person record in the subject). <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AhasLexiconEntry+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               <value>saws:formsPartOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. Also used for @active: Work, @passive: Corpus. http://purl.org/saws/ontology#formsPartOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AformsPartOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>betmas:isSuccessorOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The subject of the relation is the successor of... <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AisSuccessorOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               <value>ecrm:CLP46i_may_form_part_of</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://erlangen-crm.org/efrbroo/CLP46i_may_form_part_of <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3ACLP46i_may_form_part_of+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>betmas:isPredecessorOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">The subject of the relation is the predecessor of... <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AisPredecessorOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               <value>saws:isVersionOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#isVersionOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisVersionOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>syriaca:different-from</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://syriaca.org/documentation/relations.html#different-from">definition in syriaca.org</a> 
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Adifferent-from+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               <value>saws:isVersionInAnotherLanguageOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#isVersionInAnotherLanguageOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisVersionInAnotherLanguageOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>syriaca:has-literary-connection-to-place</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://syriaca.org/documentation/relations.html#has-literary-connection-to-place">definition in syriaca.org</a> 
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Ahas-literary-connection-to-place+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               <value>saws:isRelatedTo</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#isRelatedTo <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisRelatedTo+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>syriaca:has-relation-to-place</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://syriaca.org/documentation/relations.html#has-relation-to-place">definition in syriaca.org</a> 
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Ahas-relation-to-place+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               <value>saws:follows</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#follows <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3Afollows+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>syriaca:possibly-identical</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://syriaca.org/documentation/relations.html#possibly-identical">definition in syriaca.org</a> 
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Apossibly-identical+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               <value>saws:isCommentOn</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#isCommentOn <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisCommentOn+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>syriaca:share-a-name</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="http://syriaca.org/documentation/relations.html#share-a-name">definition in syriaca.org</a> 
-                  <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Ashare-a-name+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               <value>saws:hasUsed</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#hasUsed <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AhasUsed+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>saws:fallsWithin</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#fallsWithin <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AfallsWithin+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>saws:isShorterVersionOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#isShorterVersionOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisShorterVersionOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>saws:isLongerVersionOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#isLongerVersionOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisLongerVersionOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>saws:isVariantOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#isVariantOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisVariantOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>saws:isVariantTranslationOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#isVariantTranslationOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisVariantTranslationOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>saws:hasDescendant</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#hasDescendant <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AhasDescendant+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>syriaca:share-a-title</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-                  <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. <a xmlns="http://www.w3.org/1999/xhtml"
                      href="http://syriaca.org/documentation/relations.html#share-a-title">definition in syriaca.org</a> 
                   <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Ashare-a-title+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>syriaca:born-at</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+               <value>syriaca:different-from</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="http://syriaca.org/documentation/relations.html#different-from">definition in syriaca.org</a> 
                   <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Adifferent-from+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>saws:isDifferentTo</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#isDifferentTo <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisDifferentTo+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>syriaca:possibly-identical</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="http://syriaca.org/documentation/relations.html#possibly-identical">definition in syriaca.org</a> 
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Apossibly-identical+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>saws:hasPart</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#hasPart <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AhasPart+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>dcterms:isPartOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/dc/terms/isPartOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+dcterms%3AisPartOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>dcterms:hasPart</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/dc/terms/hasPart <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+dcterms%3AhasPart+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>saws:isAttributedToAuthor</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Person. http://purl.org/saws/ontology#isAttributedToAuthor <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisAttributedToAuthor+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>dcterms:creator</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Person. http://purl.org/dc/terms/creator <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+dcterms:%3Acreator+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>syriaca:commemorated</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Person. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="http://syriaca.org/documentation/relations.html#commemorated">definition in syriaca.org</a> 
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Acommemorated+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>betmas:wifeOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. Is the wife of ... <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AwifeOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>betmas:husbandOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. Is the husband of.. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AhusbandOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>betmas:motherInLawOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. Is the mother of the legally conjugated partner. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AmotherInLawOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>betmas:fatherInLawOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. Is the father of the legally conjugated partner. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AfatherInLawOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>betmas:sonInLawOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. Is the husband of the daughter. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AsonInLawOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>betmas:daugtherInLawOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. Is the wife of the son. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AdaugtherInLawOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>betmas:isSuccessorOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. The subject of the relation is the successor of... <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AisSuccessorOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>betmas:isPredecessorOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. The subject of the relation is the predecessor of... <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AisPredecessorOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>betmas:ordainedBy</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. Ordained priest, bishop or monk. Same as Consecrated. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AordainedBy+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>betmas:hasOrdained</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. Has ordained to a religious ministry ... <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AhasOrdained+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>betmas:baptizedBy</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. Has been baptized by ... <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AbaptizedBy+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>rel:enemyOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://purl.org/vocab/relationship/enemyOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+rel%3AenemyOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:DaughterOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap# <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ADaughterOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:BrotherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#BrotherOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ABrotherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:AllianceWith</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#AllianceWith <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AAllianceWith+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:EnmityFor</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#EmnityFor <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AEmnityFor+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:FriendshipFor</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#FriendshipFor <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFriendshipFor+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:Group</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#Group <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGroup+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:IntimateRelationshipWith</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#IntimateRelationshipWith <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AIntimateRelationshipWith+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:KinOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#KinOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AKinOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:AncestorOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#AncestorOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AAncestorOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:CousinOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#CousinOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ACousinOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:ClaimedFamilyRelationship</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#ClaimedFamilyRelationship <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AClaimedFamilyRelationship+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:FamilyOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#FamilyOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFamilyOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:FatherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#FatherOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFatherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:FriendshipFor</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#FriendshipFor <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFriendshipFor+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:GrandchildOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#GrandchildOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandchildOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:GranddaughterOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#GranddaughterOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGranddaughterOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:GrandfatherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#GrandfatherOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandfatherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:GrandmotherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#GrandmotherOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandmotherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:GrandsonOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#GrandsonOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandsonOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:GreatGrandfatherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#GreatGrandfatherOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGreatGrandfatherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:HouseholdOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#HouseholdOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AHouseholdOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:InLawFamilyRelationship</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#InLawFamilyRelationship <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AInLawFamilyRelationship+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:IntimateRelationshipWith</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#IntimateRelationshipWith <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AIntimateRelationshipWith+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:KinOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#KinOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AKinOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:FamilyOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#FamilyOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFamilyOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:FatherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#FatherOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFatherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:FriendshipFor</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#FriendshipFor <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFriendshipFor+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:GrandchildOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#GrandchildOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandchildOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:GranddaughterOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#GranddaughterOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGranddaughterOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:GrandfatherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#GrandfatherOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandfatherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:GrandmotherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#GrandmotherOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandmotherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:GrandsonOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#GrandsonOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandsonOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:GreatGrandfatherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#GreatGrandfatherOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGreatGrandfatherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:HouseholdOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#HouseholdOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AHouseholdOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:InLawFamilyRelationship</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#InLawFamilyRelationship <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AcontainsUnits+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:IntimateRelationshipWith</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#IntimateRelationshipWith <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AIntimateRelationshipWith+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:KinOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#KinOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AKinOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:LegallyRecognisedRelationshipWith</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#LegallyRecognisedRelationshipWith <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ALegallyRecognisedRelationshipWith+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:MotherOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#MotherOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AMotherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:NephewOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#NephewOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ANephewOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:NieceOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#NieceOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ANieceOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:ProfessionalRelationship</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#ProfessionalRelationship <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AProfessionalRelationship+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:SiblingOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#SiblingOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ASiblingOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:SisterOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#SisterOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ASisterOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:SonOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#SonOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ASonOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:StepFamilyRelationship</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#StepFamilyRelationship <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AStepFamilyRelationship+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:SiblingOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#SiblingOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ASiblingOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:StepFamilyRelationship</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#StepFamilyRelationship <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AStepFamilyRelationship+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>snap:UncleOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap#UncleOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AUncleOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>agrelon:hasFounder</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: PersonGroup, @passive: Person. ATTENTION! A person Group! This is used for example for monastic groups. http://d-nb.info/standards/elementset/agrelon.owl#hasFounder <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+agrelon%3AhasFounder+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>saws:hasOwned</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Manuscript. If you can, edit the manuscript record with persName[@role='owner'] instead. http://purl.org/saws/ontology#hasOwned <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AhasOwned+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>saws:isCopierOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Manuscript. If you can, edit the manuscript record with persName[@role='scribe'] instead. http://purl.org/saws/ontology#isCopierOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisCopierOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>saws:hasWritten</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Manuscript Part. This is used to state the authorship of a marginal note for example. http://purl.org/saws/ontology#hasWritten <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AhasWritten+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>ecrm:P129i_is_subject_of</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Work. http://erlangen-crm.org/current/P129i_is_subject_of <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3AP129i_is_subject_of+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>saws:isAttributedAuthorOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Work. http://purl.org/saws/ontology#isAttributedAuthorOf <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisAttributedAuthorOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>betmas:isAuthorOfEthiopicTranslation</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Work. The subject of the relation is author of a translation of a work in another language and there is no digital resource enabling us to document the authorship of this work and the fact that the work as such is a translation of another work. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AisAuthorOfEthiopicTranslation+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>gn:nearBy</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Place, @passive: Place. http://www.geonames.org/ontology#nearby <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+gn%3AnearBy+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>gn:locatedIn</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Place, @passive: Place. http://www.geonames.org/ontology#locatedIn <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+gn%3AlocatedIn+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>dcterms:relation</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Place, @passive: Place. A related resource. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/relation">Dublin Core relation</a> Please use only if no other relation fits, and consider searching for a better option and suggesting that relation instead. This is now only suggested for those cases of unspecified relation between two places.</a:documentation>
+               <value>syriaca:share-a-name</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Place, @passive: Place. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="http://syriaca.org/documentation/relations.html#share-a-name">definition in syriaca.org</a> 
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Ashare-a-name+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>syriaca:has-relation-to-place</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Place. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="http://syriaca.org/documentation/relations.html#has-relation-to-place">definition in syriaca.org</a> 
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Ahas-relation-to-place+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>syriaca:has-literary-connection-to-place</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Place. But note the literary specification. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="http://syriaca.org/documentation/relations.html#has-literary-connection-to-place">definition in syriaca.org</a> 
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Ahas-literary-connection-to-place+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>betmas:hasTabot</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Place. This person has a Tābot at the location... <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AhasTabot+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>syriaca:born-at</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Place. <a xmlns="http://www.w3.org/1999/xhtml"
                      href="http://syriaca.org/documentation/relations.html#born-at">definition in syriaca.org</a> 
                   <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Aborn-at+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>saws:isCopierOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isCopierOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisCopierOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               <value>syriaca:died-at</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Place. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="http://syriaca.org/documentation/relations.html#died-at">definition in syriaca.org</a> 
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Adied-at+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>snap:DaughterOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap# <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ADaughterOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:BrotherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#BrotherOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ABrotherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:AllianceWith</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#AllianceWith <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AAllianceWith+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:EnmityFor</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#EmnityFor <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AEmnityFor+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:FriendshipFor</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FriendshipFor <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFriendshipFor+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:Group</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#Group <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGroup+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:IntimateRelationshipWith</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#IntimateRelationshipWith <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AIntimateRelationshipWith+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:KinOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#KinOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AKinOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:AncestorOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#AncestorOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AAncestorOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:CousinOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#CousinOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ACousinOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:ClaimedFamilyRelationship</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#ClaimedFamilyRelationship <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AClaimedFamilyRelationship+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:FamilyOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FamilyOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFamilyOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:FatherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FatherOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFatherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:FriendshipFor</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FriendshipFor <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFriendshipFor+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:GrandchildOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GrandchildOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandchildOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:GranddaughterOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GranddaughterOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGranddaughterOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:GrandfatherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GrandfatherOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandfatherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:GrandmotherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GrandmotherOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandmotherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:GrandsonOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GrandsonOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandsonOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:GreatGrandfatherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GreatGrandfatherOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGreatGrandfatherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:HouseholdOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#HouseholdOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AHouseholdOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:InLawFamilyRelationship</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#InLawFamilyRelationship <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AInLawFamilyRelationship+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:IntimateRelationshipWith</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#IntimateRelationshipWith <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AIntimateRelationshipWith+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:KinOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#KinOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AKinOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:FamilyOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FamilyOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFamilyOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:FatherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FatherOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFatherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:FriendshipFor</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#FriendshipFor <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFriendshipFor+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:GrandchildOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GrandchildOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandchildOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:GranddaughterOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GranddaughterOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGranddaughterOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:GrandfatherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GrandfatherOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandfatherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:GrandmotherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GrandmotherOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandmotherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:GrandsonOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GrandsonOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandsonOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:GreatGrandfatherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#GreatGrandfatherOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGreatGrandfatherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:HouseholdOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#HouseholdOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AHouseholdOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:InLawFamilyRelationship</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#InLawFamilyRelationship <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AcontainsUnits+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:IntimateRelationshipWith</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#IntimateRelationshipWith <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AIntimateRelationshipWith+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:KinOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#KinOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AKinOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:LegallyRecognisedRelationshipWith</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#LegallyRecognisedRelationshipWith <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ALegallyRecognisedRelationshipWith+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:MotherOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#MotherOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AMotherOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:NephewOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#NephewOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ANephewOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:NieceOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#NieceOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ANieceOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:ProfessionalRelationship</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#ProfessionalRelationship <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AProfessionalRelationship+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:SiblingOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#SiblingOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ASiblingOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:SisterOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#SisterOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ASisterOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:SonOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#SonOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ASonOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:StepFamilyRelationship</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#StepFamilyRelationship <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AStepFamilyRelationship+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:SiblingOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#SiblingOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ASiblingOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:SonOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#SonOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ASonOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:StepFamilyRelationship</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#StepFamilyRelationship <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AStepFamilyRelationship+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>snap:UncleOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://data.snapdrgn.net/ontology/snap#UncleOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AUncleOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>ecrm:P129i_is_subject_of</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://erlangen-crm.org/current/P129i_is_subject_of <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3AP129i_is_subject_of+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               <value>lawd:hasAttestation</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Manuscript. or @active: Person, @passive: Work. or @active: Place, @passive: Work. http://lawd.info/ontology/hasAttestation <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+lawd%3AhasAttestation+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>ecrm:P129_is_about</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://erlangen-crm.org/current/P129_is_about <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work ArtTheme, @passive: Work Person Place http://erlangen-crm.org/current/P129_is_about <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3AP129_is_about+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
+               <value>saws:contains</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work ArtTheme, @passive: Work. http://purl.org/saws/ontology#contains <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3Acontains+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>sdc:constituteUnit</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</a> States that one or more identified discontinuities constitute a UniProd, which can be certain or hypothetical. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AconstituteUnit+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>sdc:containsUnits</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</a> States that a UniCirc or a UniProd contains the Units declared in the <code xmlns="http://www.w3.org/1999/xhtml">&lt;object&gt;</code>
+                  <code xmlns="http://www.w3.org/1999/xhtml">@passive</code>. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AcontainsUnits+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>sdc:hasUnitModel</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</a> The Unit has one of the possible model for its class. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasUnitModel+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>sdc:undergoesTransformation</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</a> Something happens to a UniCirc or less often a UniProd. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AundergoesTransformation+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>sdc:hasTransformationModel</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</a> Something happens to a UniCirc or less often a UniProd. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasTransformationModel+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>sdc:hasTransformationPart</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</a> If the model of the transformation is multiple, you can specify which individual parts constitute it. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasTransformationPart+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>sdc:isPartOfTransformation</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</a> If the model of the transformation is simple, you can specify of which individual multiple transformation it is a part. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AisPartOfTransformation+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>sdc:produces</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</a> A transformation produces new UniProds. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3Aproduces+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>sdc:resultsIn</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</a> A transformation results in a new UniProd or a new UniCirc. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AresultsIn+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>sdc:hasCertainty</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</a> Certain or Hypothetique. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasCertainty+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>sdc:hasStratum</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</a> Declares for a UniCirc one or more of the Stratum types in Andrist 2015, 512. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasStratum+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>sdc:isStratumOf</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</a> Declares one or more of the Stratum types in Andrist 2015, 512 and assign them to a UniCirc. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AisStratumOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>betmas:hasLocus</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</a> might be used to locate a unit defined relationally. If stated, a further relation is needed with one of the properties defining the locus. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AhasLocus+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>betmas:locusFrom</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</a> the locus range starts at. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AlocusFrom+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>betmas:locusTo</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</a> the locus range ends at. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AlocusTo+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>betmas:locusTarget</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+                  <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</a> the locus has target. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AlocusTarget+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>skos:exactMatch</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Fine for everything, especially to match with external entities. http://www.w3.org/2004/02/skos/core#exactMatch <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+skos%3AexactMatch+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>skos:broadMatch</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Fine for everything, especially to match with external entities. http://www.w3.org/2004/02/skos/core#broadMatch <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+skos%3AbroadMatch+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>skos:closeMatch</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Fine for everything, especially to match with external entities. http://www.w3.org/2004/02/skos/core#closeMatch <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+skos%3AcloseMatch+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
+               <value>betmas:hasLexiconEntry</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Place Person, @passive: Dillmann lexicon entry. corresponds to the lemma ... (associates a Dillmann Online Lexicon Linguae Aethiopicae person name to the person record in the subject). <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AhasLexiconEntry+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
+               </a:documentation>
                <value>ecrm:CLP57_should_have_number_of_parts</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://erlangen-crm.org/efrbroo/CLP57_should_have_number_of_parts <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for complex descriptions of Manuscripts or Works, passive should be an integer. http://erlangen-crm.org/efrbroo/CLP57_should_have_number_of_parts <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3ACLP57_should_have_number_of_parts+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>ecrm:P57_has_number_of_parts</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://erlangen-crm.org/current/P57_has_number_of_parts <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for complex descriptions of Manuscripts or Works, passive should be an integer. http://erlangen-crm.org/current/P57_has_number_of_parts <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3AP57_has_number_of_parts+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>ecrm:CLP45_should_consist_of</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://erlangen-crm.org/efrbroo/CLP45_should_consist_of <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for complex descriptions of Manuscripts or Works. http://erlangen-crm.org/efrbroo/CLP45_should_consist_of <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3ACLP45_should_consist_of+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>ecrm:CLP45i_should_be_incorporated_in</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://erlangen-crm.org/efrbroo/CLP45i_should_be_incorporated_in <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Use for complex descriptions of Manuscripts or Works. http://erlangen-crm.org/efrbroo/CLP45i_should_be_incorporated_in <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3ACLP45i_should_be_incorporated_in+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>ecrm:CLP46_should_be_composed_of</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://erlangen-crm.org/efrbroo/CLP46_should_be_composed_of <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3ACLP46_should_be_composed_of+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>ecrm:CLP46i_may_form_part_of</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://erlangen-crm.org/efrbroo/CLP46i_may_form_part_of <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3ACLP46i_may_form_part_of+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>ecrm:CLR6_should_carry</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://erlangen-crm.org/efrbroo/CLR6_should_carry <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3ACLR6_should_carry+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>ecrm:CLR6i_should_be_carried_by</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://erlangen-crm.org/efrbroo/CLR6i_should_be_carried_by <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3ACLR6i_should_be_carried_by+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
                <value>saws:commentMadeBy</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#commentMadeBy <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work or Manuscript part, @passive: Person. http://purl.org/saws/ontology#commentMadeBy <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AcommentMadeBy+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>saws:contains</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#contains <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3Acontains+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
                <value>saws:containsTextInLanguage</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#containsTextInLanguage <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Work. http://purl.org/saws/ontology#containsTextInLanguage <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AcontainsTextInLanguage+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>saws:decorationAddedBy</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#decorationAddedBy <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript Decoration, @passive: Person. http://purl.org/saws/ontology#decorationAddedBy <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AdecorationAddedBy+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>saws:fallsWithin</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#fallsWithin <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AfallsWithin+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>saws:follows</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#follows <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3Afollows+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>saws:formsPartOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#formsPartOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AformsPartOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
                <value>saws:hasAncestor</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasAncestor <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Manuscript. http://purl.org/saws/ontology#hasAncestor <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AhasAncestor+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>saws:hasChild</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasChild <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Manuscript. http://purl.org/saws/ontology#hasChild <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AhasChild+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>saws:hasComment</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasComment <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Work. http://purl.org/saws/ontology#hasComment <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AhasComment+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>saws:hasComponent</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasComponent <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AhasComponent+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>saws:hasDescendant</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasDescendant <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AhasDescendant+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
                <value>saws:hasMember</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasMember <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript Family, @passive: Manuscript. http://purl.org/saws/ontology#hasMember <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AhasMember+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>saws:hasOwned</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasOwned <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AhasOwned+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
                <value>saws:hasParent</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasParent <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Manuscript. http://purl.org/saws/ontology#hasParent <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AhasParent+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>saws:hasPart</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasPart <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AhasPart+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>saws:hasUsed</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasUsed <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AhasUsed+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>saws:hasWritten</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#hasWritten <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AhasWritten+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
                <value>saws:isAncestorOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isAncestorOf <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Manuscript. http://purl.org/saws/ontology#isAncestorOf <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisAncestorOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>dcterms:creator</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/dc/terms/creator <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+dcterms:%3Acreator+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>saws:isAttributedAuthorOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isAttributedAuthorOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisAttributedAuthorOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>saws:isAttributedToAuthor</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isAttributedToAuthor <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisAttributedToAuthor+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
                <value>saws:isChildOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isChildOf <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Manuscript. http://purl.org/saws/ontology#isChildOf <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisChildOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>saws:isCloseRenderingOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isCloseRenderingOf <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#isCloseRenderingOf <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisCloseRenderingOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>saws:isCloseTranslationOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isCloseTranslationOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisCloseTranslationOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>saws:isCommentOn</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isCommentOn <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisCommentOn+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
                <value>saws:isComponentOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isComponentOf <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Manuscript. http://purl.org/saws/ontology#isComponentOf <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisComponentOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>saws:isDescendantOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isDescendantOf <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Manuscript. http://purl.org/saws/ontology#isDescendantOf <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisDescendantOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>saws:isDifferentTo</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isDifferentTo <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisDifferentTo+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>saws:isDirectCopyOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isDirectCopyOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisDirectCopyOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
                <value>saws:isDirectTranslationOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isDirectTranslationOf <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Manuscript. http://purl.org/saws/ontology#isDirectTranslationOf <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisDirectTranslationOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>saws:isInSameFamilyAs</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isInSameFamilyAs <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Manuscript. http://purl.org/saws/ontology#isInSameFamilyAs <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisInSameFamilyAs+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>saws:isLongerTranslationOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isLongerTranslationOf <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#isLongerTranslationOf <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisLongerTranslationOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>saws:isLongerVersionOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isLongerVersionOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisLongerVersionOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
                <value>saws:isLooseRenderingOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isLooseRenderingOf <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#isLooseRenderingOf <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisLooseRenderingOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>saws:isLooseTranslationOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isLooseTranslationOf <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#isLooseTranslationOf <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisLooseTranslationOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>saws:isMemberOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isMemberOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisMemberOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>saws:isNotPresentIn</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isNotPresentIn <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisNotPresentIn+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
                <value>saws:isOlderThan</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isOlderThan <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#isOlderThan <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisOlderThan+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>saws:isParentOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isParentOf <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Manuscript. http://purl.org/saws/ontology#isParentOf <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisParentOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>saws:isReferencedBy</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isReferencedBy <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#isReferencedBy <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisReferencedBy+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>saws:isRelatedTo</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isRelatedTo <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisRelatedTo+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
                <value>saws:isSequentiallySameAs</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isSequentiallySameAs <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Manuscript. http://purl.org/saws/ontology#isSequentiallySameAs <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisSequentiallySameAs+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>saws:isSequentiallySimilarTo</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isSequentiallySimilarTo <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Manuscript. http://purl.org/saws/ontology#isSequentiallySimilarTo <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisSequentiallySimilarTo+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>saws:isShorterTranslationOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isShorterTranslationOf <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#isShorterTranslationOf <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisShorterTranslationOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>saws:isShorterVersionOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isShorterVersionOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisShorterVersionOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
                <value>saws:isSiblingOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isSiblingOf <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Manuscript. http://purl.org/saws/ontology#isSiblingOf <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisSiblingOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>saws:isSourceFor</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isSourceFor <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Work. http://purl.org/saws/ontology#isSourceFor <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisSourceFor+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>saws:isSubSequenceOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isSubSequenceOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisSubSequenceOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>saws:isTransliterationOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isTransliterationOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisTransliterationOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>saws:isTwinOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isTwinOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisTwinOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>saws:isUnrelatedTo</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isUnrelatedTo <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisUnrelatedTo+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>saws:isVariantOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isVariantOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisVariantOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>saws:isVariantTranslationOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isVariantTranslationOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisVariantTranslationOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
                <value>saws:isVerbatimOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isVerbatimOf <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#isVerbatimOf <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisVerbatimOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>saws:isVerbatimTranslationOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isVerbatimTranslationOf <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#isVerbatimTranslationOf <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisVerbatimTranslationOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
-               <value>saws:isVersionInAnotherLanguageOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isVersionInAnotherLanguageOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisVersionInAnotherLanguageOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>saws:isVersionOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isVersionOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisVersionOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
                <value>saws:isYoungerThan</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">http://purl.org/saws/ontology#isYoungerThan <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/saws/ontology#isYoungerThan <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisYoungerThan+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
             </choice>
