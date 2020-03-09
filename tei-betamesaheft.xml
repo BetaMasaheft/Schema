@@ -6000,6 +6000,15 @@ End license statement: do not remove -->
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+agrelon%3AhasFounder+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
+                                
+                                <valItem ident="foaf:member">
+                                    <desc>@active: PersonGroup, @passive: Person.
+                                        ATTENTION! A person Group! This is used for example for monastic groups.
+                                        http://xmlns.com/foaf/spec/#term_member
+                                        <ref
+                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+agrelon%3AhasFounder+%3Fy%7D+LIMIT+25"
+                                            >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
+                                </valItem>
                                 <!-- @active: Person, @passive: Manuscript.-->
                                 <valItem ident="saws:hasOwned">
                                     <desc>@active: Person, @passive: Manuscript.
