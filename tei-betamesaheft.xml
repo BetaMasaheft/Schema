@@ -3983,6 +3983,9 @@ End license statement: do not remove -->
                                 </valItem>   
                                 <valItem ident="HA">
                                     <desc>Hagos Abrha</desc>
+                                </valItem>    
+                                <valItem ident="MKr">
+                                    <desc>Marcin Krawczuk</desc>
                                 </valItem>        
                             </valList>
                         </attDef>
@@ -4158,7 +4161,10 @@ End license statement: do not remove -->
                                 
                                 <valItem ident="ABe">
                                     <desc>Ashlee Benson</desc>
-                                </valItem>    
+                                </valItem>       
+                                <valItem ident="MKr">
+                                    <desc>Marcin Krawczuk</desc>
+                                </valItem> 
                             </valList>
                         </attDef>
                         <attDef ident="when" mode="replace" usage="req"/>
