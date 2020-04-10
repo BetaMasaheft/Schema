@@ -3273,8 +3273,8 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="seg">
                         <constraint>
                             <sch:rule context="tei:seg[ancestor::tei:handNote]">
-                                <sch:report test="not(@type or @subtype)">seg in handNote should
-                                    always have a type</sch:report>
+                                <sch:report test="not(@type or @subtype or @rend)">seg in handNote should
+                                    always have a type, subtype or rend attribute</sch:report>
                                 <sch:report test="@type = 'supplication' or @type = 'expanded' or @type = 'inscriptio' or @type = 'subscriptio' or @type = 'embedded'  or @type = 'translation' ">the values
                                     supplication, expanded, inscriptio and subscriptio, embedded and translation are not for use in seg inside handNote which is an ancestor of the current element
                                     you can use here script, ink or rubrication</sch:report>
@@ -3287,7 +3287,7 @@ End license statement: do not remove -->
                         </constraint>
                     </constraintSpec>
                     <attList>
-                        <attDef ident="type" mode="replace" usage="req">
+                        <attDef ident="type" mode="replace" usage="rec">
                             <datatype maxOccurs="6">
                                 <dataRef key="teidata.word"/>
                             </datatype>
@@ -3322,7 +3322,12 @@ End license statement: do not remove -->
                                         Xpath search for //t:seg[contains(@type,'translation')]</ref></desc></valItem>
                             </valList>
                         </attDef>
-
+                        <attDef ident="rend"  mode="replace" usage="opt">
+    <valList type="closed">
+        <valItem ident="above"/>
+        <valItem ident="below"/>
+    </valList>
+                        </attDef>
                     </attList>
                     <exemplum>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="ESdz024">
