@@ -1738,7 +1738,7 @@ End license statement: do not remove -->
                             Guidelines</ref></desc>
                     <attList>
                         <attDef ident="ident" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="closed">
                                 <!--  modified  list of languages coming from myCore-->
                                 <valItem ident="am">
                                     <desc>Amharic</desc>
