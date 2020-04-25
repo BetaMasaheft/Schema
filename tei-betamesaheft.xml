@@ -2074,7 +2074,7 @@ End license statement: do not remove -->
                                 <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27expanded%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:title[contains(@subtype,'expanded')]</ref></desc></valItem>
-                                <valItem ident="inscription"><desc>is used for a title occurring at the beginning of a work.
+                                <valItem ident="inscriptio"><desc>is used for a title occurring at the beginning of a work.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:title[contains(@subtype,'inscriptio')]</ref></desc></valItem>
                                 <valItem ident="subscriptio"><desc>for a title occurring at the end of a work.
