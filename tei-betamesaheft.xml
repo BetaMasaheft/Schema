@@ -279,7 +279,7 @@ End license statement: do not remove -->
                                 <decoNote xml:id="b1">The book has been professionally restored.
                                     During the intervention the book has been rebound thus it has an
                                     occidental binding with wooden boards and a quarter leather
-                                    cover. The book was sewn using a thread of vegetable origin on
+                                    cover. The book was sewn using a thread of vegetal origin on
                                     four sewing supports made of parchment.</decoNote>
                             </binding>
                         </egXML>
@@ -1053,10 +1053,10 @@ End license statement: do not remove -->
                                             target="https://betamasaheft.eu/authority-files/animalThread"
                                             >See animalThread in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
-                                <valItem ident="vegetableThread">
+                                <valItem ident="vegetalThread">
                                     <desc><ref
-                                            target="https://betamasaheft.eu/authority-files/vegetableThread"
-                                            >See vegetableThread in Beta maṣāḥǝft</ref></desc>
+                                        target="https://betamasaheft.eu/authority-files/vegetalThread"
+                                            >See vegetalThread in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
                                 <valItem ident="syntheticThread">
                                     <desc><ref
