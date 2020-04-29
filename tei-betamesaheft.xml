@@ -84,6 +84,7 @@ End license statement: do not remove -->
             <change when="2019-11-18" who="DR">Corrected typos</change>
             <change when="2019-11-20" who="DR">Added ApocalypticLiterature</change>
             <change when="2020-03-07" who="PL">Reorganized closed list for relations by domain and range entity types as in the guidelines .</change>
+            <change when="2020-04-29" who="DE">Added DidacticMaterial</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -1724,6 +1725,11 @@ End license statement: do not remove -->
                                     <desc>Works belonging to apocalyptic literature. <ref
                                             target="https://betamasaheft.eu/authority-files/ApocalypticLiterature"
                                             >See ApocalypticLiterature in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="DidacticMaterial">
+                                    <desc>Works used in the system of traditional education as didactic material. <ref
+                                            target="https://betamasaheft.eu/authority-files/DidacticMaterial"
+                                            >See Didactic Material in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
                             </valList>
                         </attDef>
@@ -3970,7 +3976,7 @@ End license statement: do not remove -->
                                 <valItem ident="HE">
                                     <desc>Hiruie Ermias</desc>
                                 </valItem>
-                                
+
                                 <valItem ident="MA"><desc>Mersha Alehegne</desc></valItem>
                                 <valItem ident="LB"><desc>Leonard Bahr</desc></valItem>
                                 <valItem ident="LM"><desc>Leah Mascia</desc></valItem>
@@ -3985,13 +3991,13 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="SK">
                                     <desc>Sergey Kim</desc>
-                                </valItem>   
+                                </valItem>
                                 <valItem ident="HA">
                                     <desc>Hagos Abrha</desc>
-                                </valItem>    
+                                </valItem>
                                 <valItem ident="MKr">
                                     <desc>Marcin Krawczuk</desc>
-                                </valItem>        
+                                </valItem>
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -4026,7 +4032,7 @@ End license statement: do not remove -->
                     <attList>
                         <attDef ident="who" mode="replace" usage="req">
                             <valList type="closed">
-                                
+
                                 <valItem ident="HA">
                                     <desc>Hagos Abrha</desc>
                                 </valItem>
@@ -4153,7 +4159,7 @@ End license statement: do not remove -->
                                 <valItem ident="MP">
                                     <desc>Michele Petrone</desc>
                                 </valItem>
-                                
+
                                 <valItem ident="MA"><desc>Mersha Alehegne</desc></valItem>
                                 <valItem ident="LB"><desc>Leonard Bahr</desc></valItem>
                                 <valItem ident="LM"><desc>Leah Mascia</desc></valItem>
@@ -4163,13 +4169,13 @@ End license statement: do not remove -->
                                 <valItem ident="HS">
                                     <desc>Hewan Semon</desc>
                                 </valItem>
-                                
+
                                 <valItem ident="ABe">
                                     <desc>Ashlee Benson</desc>
-                                </valItem>       
+                                </valItem>
                                 <valItem ident="MKr">
                                     <desc>Marcin Krawczuk</desc>
-                                </valItem> 
+                                </valItem>
                             </valList>
                         </attDef>
                         <attDef ident="when" mode="replace" usage="req"/>
@@ -4259,7 +4265,7 @@ End license statement: do not remove -->
                                 <valItem ident="other"/>
                             </valList>
                         </attDef>
-                        
+
                         <attDef ident="type" mode="replace" usage="opt">
                             <valList type="closed">
                                 <valItem ident="main">
@@ -4308,7 +4314,7 @@ End license statement: do not remove -->
                                 <valItem ident="alt">
                                     <desc>alternative name</desc>
                                 </valItem>
-                                
+
                                 <valItem ident="tabot">
                                     <desc>the saint to whom the tābot is dedicated</desc>
                                 </valItem>
@@ -5087,29 +5093,29 @@ End license statement: do not remove -->
                             <valList type="closed">
                                 <!-- @active: Manuscript, @passive: Manuscript.-->
                                 <valItem ident="saws:isDirectCopyOf">
-                                    <desc>@active: Manuscript, @passive: Manuscript. 
+                                    <desc>@active: Manuscript, @passive: Manuscript.
                                         http://purl.org/saws/ontology#isDirectCopyOf <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisDirectCopyOf+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
                                 <valItem ident="saws:isCloseTranslationOf">
-                                    <desc>@active: Manuscript, @passive: Manuscript. 
+                                    <desc>@active: Manuscript, @passive: Manuscript.
                                         http://purl.org/saws/ontology#isCloseTranslationOf <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisCloseTranslationOf+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
                                 <valItem ident="betmas:isAntigraphOf">
-                                    <desc>@active: Manuscript, @passive: Manuscript. 
+                                    <desc>@active: Manuscript, @passive: Manuscript.
                                         The relation between a ms and the first printed edition of
                                         a text it contains. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AisAntigraphOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                              
-                                
-                                
+
+
+
                                 <!-- @active: Manuscript, @passive: Place.-->
                                 <valItem ident="betmas:isGoldenGospelof">
                                     <desc>@active: Manuscript, @passive: Place.
@@ -5127,17 +5133,17 @@ End license statement: do not remove -->
                                 <!-- @active: Work, @passive: Work.-->
                                 <valItem ident="saws:formsPartOf">
                                     <desc>
-                                        @active: Work, @passive: Work. 
+                                        @active: Work, @passive: Work.
                                         Also used for
-                                        @active: Work, @passive: Corpus. 
+                                        @active: Work, @passive: Corpus.
                                         http://purl.org/saws/ontology#formsPartOf <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AformsPartOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
+
                                 <valItem ident="ecrm:CLP46i_may_form_part_of">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         http://erlangen-crm.org/efrbroo/CLP46i_may_form_part_of
                                         <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+ecrm%3ACLP46i_may_form_part_of+%3Fy%7D+LIMIT+25"
@@ -5145,14 +5151,14 @@ End license statement: do not remove -->
                                     </desc>
                                 </valItem>
                                 <valItem ident="saws:isVersionOf">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         http://purl.org/saws/ontology#isVersionOf <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisVersionOf+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
                                 <valItem ident="saws:isVersionInAnotherLanguageOf">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         http://purl.org/saws/ontology#isVersionInAnotherLanguageOf
                                         <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisVersionInAnotherLanguageOf+%3Fy%7D+LIMIT+25"
@@ -5160,124 +5166,124 @@ End license statement: do not remove -->
                                     </desc>
                                 </valItem>
                                 <valItem ident="saws:isRelatedTo">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         http://purl.org/saws/ontology#isRelatedTo <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisRelatedTo+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
                                 <valItem ident="saws:follows">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         http://purl.org/saws/ontology#follows <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3Afollows+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
                                 <valItem ident="saws:isCommentOn">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         http://purl.org/saws/ontology#isCommentOn <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisCommentOn+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
                                 <valItem ident="saws:hasUsed">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         http://purl.org/saws/ontology#hasUsed <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AhasUsed+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
                                 <valItem ident="saws:fallsWithin">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         http://purl.org/saws/ontology#fallsWithin <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AfallsWithin+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
                                 <valItem ident="saws:isShorterVersionOf">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         http://purl.org/saws/ontology#isShorterVersionOf <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisShorterVersionOf+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
                                 <valItem ident="saws:isLongerVersionOf">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         http://purl.org/saws/ontology#isLongerVersionOf <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisLongerVersionOf+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
                                 <valItem ident="saws:isVariantOf">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         http://purl.org/saws/ontology#isVariantOf <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisVariantOf+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
                                 <valItem ident="saws:isVariantTranslationOf">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         http://purl.org/saws/ontology#isVariantTranslationOf <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisVariantTranslationOf+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
                                 <valItem ident="saws:hasDescendant">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         http://purl.org/saws/ontology#hasDescendant <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AhasDescendant+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
                                 <valItem ident="syriaca:share-a-title">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         <ref target="http://syriaca.org/documentation/relations.html#share-a-title">definition in syriaca.org</ref>
                                         <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Ashare-a-title+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="syriaca:different-from">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         <ref target="http://syriaca.org/documentation/relations.html#different-from">definition in syriaca.org</ref>
                                         <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Adifferent-from+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="saws:isDifferentTo">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         http://purl.org/saws/ontology#isDifferentTo <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisDifferentTo+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
                                 <valItem ident="syriaca:possibly-identical">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         <ref target="http://syriaca.org/documentation/relations.html#possibly-identical">definition in syriaca.org</ref>
                                         <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Apossibly-identical+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="saws:hasPart">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         http://purl.org/saws/ontology#hasPart <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AhasPart+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
                                 <valItem ident="dcterms:isPartOf">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         http://purl.org/dc/terms/isPartOf <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+dcterms%3AisPartOf+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="dcterms:hasPart">
-                                    <desc>@active: Work, @passive: Work. 
+                                    <desc>@active: Work, @passive: Work.
                                         http://purl.org/dc/terms/hasPart <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+dcterms%3AhasPart+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <!-- @active: Work, @passive: Person.-->
-                                
+
                                 <valItem ident="saws:isAttributedToAuthor">
                                     <desc>@active: Work, @passive: Person.
                                         http://purl.org/saws/ontology#isAttributedToAuthor <ref
@@ -5285,7 +5291,7 @@ End license statement: do not remove -->
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
+
                                 <valItem ident="dcterms:creator">
                                     <desc>@active: Work, @passive: Person.
                                         http://purl.org/dc/terms/creator <ref
@@ -5293,7 +5299,7 @@ End license statement: do not remove -->
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
+
                                 <valItem ident="syriaca:commemorated">
                                     <desc>@active: Work, @passive: Person.
                                         <ref target="http://syriaca.org/documentation/relations.html#commemorated">definition in syriaca.org</ref>
@@ -5302,7 +5308,7 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <!-- @active: Person, @passive: Person.-->
-                                
+
                                 <valItem ident="betmas:wifeOf">
                                     <desc>@active: Person, @passive: Person.
                                         Is the wife of ... <ref
@@ -6014,7 +6020,7 @@ End license statement: do not remove -->
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+agrelon%3AhasFounder+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                
+
                                 <valItem ident="foaf:member">
                                     <desc>@active: PersonGroup, @passive: Person.
                                         ATTENTION! A person Group! This is used for example for monastic groups.
@@ -6032,7 +6038,7 @@ End license statement: do not remove -->
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
+
                                 <valItem ident="saws:isCopierOf">
                                     <desc>@active: Person, @passive: Manuscript.
                                         If you can, edit the manuscript record with persName[@role='scribe'] instead.
@@ -6048,7 +6054,7 @@ End license statement: do not remove -->
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
+
                                 <!-- @active: Person, @passive: Work.-->
                                 <valItem ident="ecrm:P129i_is_subject_of">
                                     <desc>@active: Person, @passive: Work.
@@ -6057,7 +6063,7 @@ End license statement: do not remove -->
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
+
                                 <valItem ident="saws:isAttributedAuthorOf">
                                     <desc>@active: Person, @passive: Work.
                                         http://purl.org/saws/ontology#isAttributedAuthorOf <ref
@@ -6065,7 +6071,7 @@ End license statement: do not remove -->
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
+
                                 <valItem ident="betmas:isAuthorOfEthiopicTranslation">
                                     <desc>@active: Person, @passive: Work.
                                         The subject of the relation is author of a translation of
@@ -6078,23 +6084,23 @@ End license statement: do not remove -->
                                 </valItem>
                                 <!-- @active: Place, @passive: Place.-->
                                 <valItem ident="gn:nearBy">
-                                    <desc>@active: Place, @passive: Place. 
+                                    <desc>@active: Place, @passive: Place.
                                         http://www.geonames.org/ontology#nearby <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+gn%3AnearBy+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="gn:locatedIn">
-                                    <desc>@active: Place, @passive: Place. 
+                                    <desc>@active: Place, @passive: Place.
                                         http://www.geonames.org/ontology#locatedIn <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+gn%3AlocatedIn+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="dcterms:relation">
-                                    <desc>@active: Place, @passive: Place. 
-                                        A related resource. 
+                                    <desc>@active: Place, @passive: Place.
+                                        A related resource.
                                         <ref target="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/relation">Dublin Core relation</ref>
                                         Please use only if no other relation fits, and consider searching for a better option and
-                                        suggesting that relation instead. This is now only suggested for 
+                                        suggesting that relation instead. This is now only suggested for
                                         those cases of unspecified relation between two places.</desc>
                                 </valItem>
                                 <valItem ident="syriaca:share-a-name">
@@ -6121,7 +6127,7 @@ End license statement: do not remove -->
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Ahas-literary-connection-to-place+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                
+
                                 <valItem ident="betmas:hasTabot">
                                     <desc>@active: Person, @passive: Place.
                                         This person has a Tābot at the location... <ref
@@ -6143,7 +6149,7 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <!-- @active: Art Theme, @passive: anything.-->
-                                
+
                                 <!-- @active: many, @passive: many.-->
                                 <valItem ident="lawd:hasAttestation">
                                     <desc>@active: Work, @passive: Manuscript.
@@ -6153,7 +6159,7 @@ End license statement: do not remove -->
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+lawd%3AhasAttestation+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                
+
                                 <valItem ident="ecrm:P129_is_about">
                                     <desc>@active: Work ArtTheme, @passive: Work Person Place
                                         http://erlangen-crm.org/current/P129_is_about <ref
@@ -6161,20 +6167,20 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
-                                
+
+
                                 <valItem ident="saws:contains">
-                                    <desc>@active: Work ArtTheme, @passive: Work. 
+                                    <desc>@active: Work ArtTheme, @passive: Work.
                                         http://purl.org/saws/ontology#contains <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3Acontains+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
+
                                 <!-- @active: sdc entity, @passive: sdc entity.-->
-                                
+
                                  <valItem ident="sdc:constituteUnit">
-                                     <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref> 
+                                     <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref>
                                          States that one or more identified discontinuities
                                         constitute a UniProd, which can be certain or hypothetical.
                                             <ref
@@ -6182,41 +6188,41 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="sdc:containsUnits">
-                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref> 
+                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref>
                                         States that a UniCirc or a UniProd contains the Units
                                         declared in the <gi>object</gi><att>passive</att>. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AcontainsUnits+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="sdc:hasUnitModel">
-                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref> 
+                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref>
                                         The Unit has one of the possible model for its class. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasUnitModel+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="sdc:undergoesTransformation">
-                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref> 
+                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref>
                                         Something happens to a UniCirc or less often a UniProd.
                                             <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AundergoesTransformation+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="sdc:hasTransformationModel">
-                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref> 
+                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref>
                                         Something happens to a UniCirc or less often a UniProd.
                                             <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasTransformationModel+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="sdc:hasTransformationPart">
-                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref> 
+                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref>
                                         If the model of the transformation is multiple, you can
                                         specify which individual parts constitute it. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasTransformationPart+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="sdc:isPartOfTransformation">
-                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref> 
+                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref>
                                         If the model of the transformation is simple, you can
                                         specify of which individual multiple transformation it is a
                                         part. <ref
@@ -6224,42 +6230,42 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="sdc:produces">
-                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref> 
+                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref>
                                         A transformation produces new UniProds. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3Aproduces+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
                                 <valItem ident="sdc:resultsIn">
-                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref> 
+                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref>
                                         A transformation results in a new UniProd or a new
                                         UniCirc. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AresultsIn+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="sdc:hasCertainty">
-                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref> 
+                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref>
                                         Certain or Hypothetique. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasCertainty+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="sdc:hasStratum">
-                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref> 
+                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref>
                                         Declares for a UniCirc one or more of the Stratum types in
                                         Andrist 2015, 512. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AhasStratum+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="sdc:isStratumOf">
-                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref> 
+                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref>
                                         Declares one or more of the Stratum types in Andrist
                                         2015, 512 and assign them to a UniCirc. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+SdC%3AisStratumOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                
+
                                 <valItem ident="betmas:hasLocus">
-                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref> 
+                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref>
                                         might be used to locate a unit defined relationally. If
                                         stated, a further relation is needed with one of the
                                         properties defining the locus. <ref
@@ -6267,28 +6273,28 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="betmas:locusFrom">
-                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref> 
+                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref>
                                         the locus range starts at. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AlocusFrom+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="betmas:locusTo">
-                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref> 
+                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref>
                                         the locus range ends at. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AlocusTo+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="betmas:locusTarget">
-                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref> 
+                                    <desc><ref target="https://betamasaheft.eu/Guidelines/?id=syntaxe">Use for stratigraphic description.</ref>
                                         the locus has target. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AlocusTarget+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                
-                                
+
+
 <!--                                generic skos statements-->
-                                
-                                
+
+
                                 <valItem ident="skos:exactMatch">
                                     <desc>Fine for everything, especially to match with external entities.
                                         http://www.w3.org/2004/02/skos/core#exactMatch <ref
@@ -6307,9 +6313,9 @@ End license statement: do not remove -->
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+skos%3AcloseMatch+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                                
-                                
-                                
+
+
+
                                 <!--
                                 <valItem ident="agrelon:isFounderOf">
                                     <desc>http://d-nb.info/standards/elementset/agrelon.owl#isFounderOf
@@ -6317,9 +6323,9 @@ End license statement: do not remove -->
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+agrelon%3AisFounderOfcontainsUnits+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
--->                                
-                                
-                              
+-->
+
+
                              <!--   <valItem ident="betmas:brotherInLawOf">
                                     <desc>is the brother of the legally conjugated partner. <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AbrotherInLawOf+%3Fy%7D+LIMIT+25"
@@ -6330,16 +6336,16 @@ End license statement: do not remove -->
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AsisterInLawOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>-->
-                                
-                                
+
+
                             <!--    <valItem ident="betmas:hasBaptized">
                                     <desc>has baptized ... <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AhasBaptized+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>-->
-                                
-                                
-                                
+
+
+
                                 <valItem ident="betmas:hasLexiconEntry">
                                     <desc>@active: Place Person, @passive: Dillmann lexicon entry.
                                         corresponds to the lemma ... (associates a Dillmann Online
@@ -6348,10 +6354,10 @@ End license statement: do not remove -->
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AhasLexiconEntry+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                           
+
                                 <!--                          list INCOMPLETE! -->
-                             
-                               
+
+
                                 <valItem ident="ecrm:CLP57_should_have_number_of_parts">
                                     <desc>Use for complex descriptions of Manuscripts or Works, passive should be an integer.
                                         http://erlangen-crm.org/efrbroo/CLP57_should_have_number_of_parts
@@ -6384,8 +6390,8 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
-                               
+
+
                                 <valItem ident="saws:commentMadeBy">
                                     <desc>@active: Work or Manuscript part, @passive: Person.
                                         http://purl.org/saws/ontology#commentMadeBy <ref
@@ -6393,7 +6399,7 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
+
                                 <valItem ident="saws:containsTextInLanguage">
                                     <desc>@active: Manuscript, @passive: Work.
                                         http://purl.org/saws/ontology#containsTextInLanguage <ref
@@ -6408,8 +6414,8 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
-                                
+
+
                                 <valItem ident="saws:hasAncestor">
                                     <desc>@active: Manuscript, @passive: Manuscript.
                                         http://purl.org/saws/ontology#hasAncestor <ref
@@ -6431,7 +6437,7 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
+
                                 <valItem ident="saws:hasMember">
                                     <desc>@active: Manuscript Family, @passive: Manuscript.
                                         http://purl.org/saws/ontology#hasMember <ref
@@ -6439,7 +6445,7 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
+
                                 <valItem ident="saws:hasParent">
                                     <desc>@active: Manuscript, @passive: Manuscript.
                                         http://purl.org/saws/ontology#hasParent <ref
@@ -6447,8 +6453,8 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
-                                
+
+
                                 <valItem ident="saws:isAncestorOf">
                                     <desc>@active: Manuscript, @passive: Manuscript.
                                         http://purl.org/saws/ontology#isAncestorOf <ref
@@ -6470,8 +6476,8 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
-                                
+
+
                                 <valItem ident="saws:isComponentOf">
                                     <desc>@active: Manuscript, @passive: Manuscript.
                                         http://purl.org/saws/ontology#isComponentOf <ref
@@ -6486,8 +6492,8 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
-                                
+
+
                                 <valItem ident="saws:isDirectTranslationOf">
                                     <desc>@active: Work, @passive: Manuscript.
                                         http://purl.org/saws/ontology#isDirectTranslationOf <ref
@@ -6509,7 +6515,7 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
+
                                 <valItem ident="saws:isLooseRenderingOf">
                                     <desc>@active: Work, @passive: Work.
                                         http://purl.org/saws/ontology#isLooseRenderingOf <ref
@@ -6545,7 +6551,7 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
+
                                 <valItem ident="saws:isSequentiallySameAs">
                                     <desc>@active: Manuscript, @passive: Manuscript.
                                         http://purl.org/saws/ontology#isSequentiallySameAs <ref
@@ -6567,7 +6573,7 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
+
                                 <valItem ident="saws:isSiblingOf">
                                     <desc>@active: Manuscript, @passive: Manuscript.
                                         http://purl.org/saws/ontology#isSiblingOf <ref
@@ -6596,8 +6602,8 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                
-                                
+
+
                                 <valItem ident="saws:isYoungerThan">
                                     <desc>@active: Work, @passive: Work.
                                         http://purl.org/saws/ontology#isYoungerThan <ref
