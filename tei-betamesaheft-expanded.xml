@@ -40,7 +40,7 @@
             <schemaSpec ident="tei-betamesaheft" docLang="en" prefix="tei_" start="TEI"
                 xml:lang="en" source="tei:3.0.0">
 
-                <!--       MODULES USED BY THE Beta maṣāḥǝft: Manuscripts of Ethiopia and Eritrea SCHEMA  
+                <!--       MODULES USED BY THE Beta maṣāḥǝft: Manuscripts of Ethiopia and Eritrea SCHEMA
                 the @source ties our current schema to the version 3.0.0 of TEI
                 -->
                 <moduleRef key="core"/>
@@ -67,20 +67,20 @@
                 <moduleRef key="corpus"
                     except="activity channel constitution derivation domain factuality interaction locale
                     preparedness purpose setting textDesc"/>
-                
+
                 <elementSpec ident="antiphon" mode="add">
                     <classes>
                         <memberOf key="model.pPart.transcriptional"/>
                     </classes>
                     <content>
                         <rng:text/>
-                        
+
                     </content>
                 </elementSpec>
 
                 <!--          LISTS OF VALUES FOR ATTRIBUTES-->
                 <!--  adds value partly to del/@rend-->
-               
+
                 <elementSpec ident="del" mode="change" module="core">
                     <attList>
                         <attDef ident="rend" mode="replace">
@@ -105,8 +105,8 @@
                         </attDef>
                     </attList>
                 </elementSpec>
-                
-                
+
+
                 <!--  adds value partly to add/@place-->
                 <elementSpec ident="add" mode="change" module="core">
                     <attList>
@@ -132,8 +132,8 @@
                         </attDef>
                     </attList>
                 </elementSpec>
-                
-                
+
+
                 <elementSpec ident="creation" mode="change" module="header">
                     <content>
                         <rng:zeroOrMore>
@@ -147,7 +147,7 @@
                     </rng:zeroOrMore>
                     </content>
                 </elementSpec>
-                
+
                 <elementSpec ident="date" mode="change" module="header">
                     <content>
                         <rng:zeroOrMore>
@@ -163,7 +163,7 @@
                         </rng:zeroOrMore>
                     </content>
                 </elementSpec>
-                
+
 
                 <elementSpec ident="personGrp" mode="change" module="namesdates">
                     <attList>
@@ -177,8 +177,8 @@
                         </attDef>
                     </attList>
                 </elementSpec>
-                
-                
+
+
 
                 <!--         suggest values for @type in origDate-->
                 <elementSpec ident="origDate" mode="change" module="msdescription">
@@ -294,7 +294,7 @@
                                 <!--                          list coming from myCore-->
                                 <valItem ident="ApocryphaPseudoepigrapha"><desc>works of unknown or doubtful authorship rejected from the set of the canonical scriptures, e.g., the book of Enoch, Jubilees, Herma, the Miracles of Mary, the Miracles of Jesus, Maṣḥafa ṭomār, the apocryphal Acts of the Apostles, etc.</desc></valItem>
                                 <!--mycore-->
-                                
+
                                 <valItem ident="Gon"><desc>Gondarine (1632-1769 CE)</desc></valItem>
                                 <valItem ident="Paks1"><desc>Postaksumite I (1200-1433 CE)</desc></valItem>
                                 <valItem ident="Paks2"><desc>Postaksumite II (1434-1632 CE)</desc></valItem>
@@ -344,6 +344,7 @@
                                 <valItem ident="Commentary"><desc>exegetical works containing the interpretation of biblical texts, e.g, the Tərgʷāme and ʾAndəmtā corpus.</desc></valItem>
                                 <valItem ident="Chronography"><desc>works containing texts for the calculation of the moveable feasts and for other calendrical computes, e.g., ʾAbušākər, Bāḥra ḥassāb.</desc></valItem>
                                 <valItem ident="GoldenGospel"><desc>A particular type of a manuscript - usually a main copy of the Four Gospels of a church - where documents (land charters, foundation charters, etc) concerning the place are collected.</desc></valItem>
+                                <valItem ident="AwardCertificate"><desc>A particular type of a document that certifies that a person has received a specific award.</desc></valItem>
                             </valList>
                         </attDef>
 
@@ -438,7 +439,7 @@
 
                 <!--          allow usage of a closed list of types for ref-->
                 <elementSpec ident="ref" mode="change" module="core">
-                    
+
                     <attList>
                         <attDef ident="type" mode="replace" usage="opt">
                             <valList type="closed">
@@ -487,7 +488,7 @@
                                     should be like t1 t2, etc. and thus in @corresp #t1, #t2,
                                     etc.</sch:report>
                             </sch:rule>
-                           
+
                         </constraint>
                     </constraintSpec>
                     <attList>
@@ -665,7 +666,7 @@
                     </attList>
                 </elementSpec>
 
-              
+
 
                 <!--          test the content of witnesses list to be as described in guidelines and point to mss ids-->
                 <elementSpec ident="witness" mode="change" module="textcrit">
@@ -1082,7 +1083,7 @@
 
                 <elementSpec ident="editor" mode="change" module="core">
                     <attList>
-                        
+
                         <attDef ident="role" mode="replace" usage="opt">
                             <valList type="open">
                                 <valItem ident="generalEditor"/>
@@ -1094,12 +1095,12 @@
                 <elementSpec ident="change" mode="change" module="header">
 
                     <attList>
-                        
+
                         <attDef ident="when" mode="replace" usage="req"/>
                     </attList>
                 </elementSpec>
 
-             
+
                 <elementSpec ident="height" mode="change" module="msdescription">
                     <attList>
                         <attDef ident="unit" mode="replace">
@@ -1153,7 +1154,7 @@
                         </attDef>
                         <attDef ident="type" mode="change">
                             <valList>
-                                <valItem ident="normalized"><desc>the normalized transcription of the name in fidal</desc></valItem> 
+                                <valItem ident="normalized"><desc>the normalized transcription of the name in fidal</desc></valItem>
                                 <valItem ident="given"><desc>name given at birth</desc></valItem>
                                 <valItem ident="birth"><desc>name given at birth</desc></valItem>
                                 <valItem ident="baptismal"><desc>name given at baptism</desc></valItem>
@@ -1325,18 +1326,18 @@
 
                     </attList>
                 </elementSpec>
-                
+
                 <!--          controlled values for material-->
                 <elementSpec ident="explicit" mode="change" module="msdescription">
                     <attList>
                         <attDef ident="type" mode="change" usage="opt">
                             <valList type="closed">
-                                
+
                                 <!--                          list coming from myCore-->
                                 <valItem ident="subscription"><desc>note originally added at the end of the main text concerning its completion. not to be confused with later additions</desc></valItem>
                             </valList>
                         </attDef>
-                        
+
                     </attList>
                 </elementSpec>
 
@@ -1443,7 +1444,7 @@
                                 <valItem ident="syriaca:share-a-name"><desc>http://syriaca.org/documentation/relations.html#share-a-name</desc></valItem>
                                 <valItem ident="syriaca:share-a-title"><desc>http://syriaca.org/documentation/relations.html#share-a-title</desc></valItem>
                                 <valItem ident="syriaca:born-at"><desc>http://syriaca.org/documentation/relations.html#born-at</desc></valItem>
-                                
+
                                 <valItem ident="saws:isCopierOf"><desc>http://purl.org/saws/ontology#isCopierOf</desc></valItem>
 
                                 <valItem ident="snap:DaughterOf"><desc>http://data.snapdrgn.net/ontology/snap#</desc></valItem>
@@ -1677,11 +1678,11 @@
                                     <desc>this container is for a stanza and may contain
                                         verses</desc>
                                 </valItem>
-                                
+
                                 <valItem ident="incipit">
                                     <desc>incipit of the text</desc>
                                 </valItem>
-                                
+
                                 <valItem ident="explicit">
                                     <desc>explicit of the text</desc>
                                 </valItem>
@@ -1880,7 +1881,7 @@
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
-                    
+
                 </elementSpec>
 
                 <elementSpec ident="item" module="msdescription" mode="change">
@@ -1918,7 +1919,7 @@
                         </attDef>
                     </attList>
                 </elementSpec>
-                
+
 
 <!--from EpiDoc schema-->
                 <elementSpec ident="supplied" module="transcr" mode="change">
@@ -1964,7 +1965,7 @@
                         </attDef>
                     </attList>
                 </elementSpec>
-                
+
                 <elementSpec ident="gap" module="core" mode="change">
                     <attList>
                         <attDef ident="reason" mode="replace" usage="req">
@@ -1988,12 +1989,12 @@
                                     <desc>Text omitted from the edition by the editor, for whatever
                                         reason (brevity, context, language, etc.)</desc>
                                 </valItem>
-                                
+
                             </valList>
                         </attDef>
                     </attList>
                 </elementSpec>
-                
+
                 <classSpec type="atts" ident="att.dimensions" mode="change">
                     <attList>
                         <attDef ident="precision" mode="replace">
