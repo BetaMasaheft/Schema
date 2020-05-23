@@ -5106,6 +5106,12 @@ End license statement: do not remove -->
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
+                                <valItem ident="betmas:formerlyAlsoListedAs">
+                                    <desc>@active: any record of the same type as @passive, @passive: any record of the same type as in @active.
+                                        This special relation is used to mark that a deleted record (in @passive) is the same as the one in @active. <ref
+                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AformerlyAlsoListedAs+%3Fy%7D+LIMIT+25"
+                                            >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
+                                </valItem>
                                 <valItem ident="betmas:isAntigraphOf">
                                     <desc>@active: Manuscript, @passive: Manuscript.
                                         The relation between a ms and the first printed edition of
