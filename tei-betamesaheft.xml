@@ -4863,6 +4863,7 @@ End license statement: do not remove -->
                                 <valItem ident="stone"/>
                                 <valItem ident="bronze"/>
                                 <valItem ident="alabaster"/>
+                                <valItem ident="cotton"/>
                             </valList>
                         </attDef>
 
