@@ -3482,7 +3482,27 @@ End license statement: do not remove -->
                                     <desc>A printed image, usually of devotional character, glued to
                                         a manuscript</desc>
                                 </valItem>
-
+                                <valItem ident="overCover">
+                                    <desc>to be used in binding description</desc>
+                                </valItem> 
+                                <valItem ident="overlappingCornerFO">
+                                    <desc>to be used in binding description</desc>
+                                </valItem> 
+                                <valItem ident="overlappingCornerHTO">
+                                    <desc>to be used in binding description</desc>
+                                </valItem>
+                                <valItem ident="toungedCorner">
+                                    <desc>to be used in binding description</desc>
+                                </valItem>
+                                <valItem ident="stitchedCorner">
+                                    <desc>to be used in binding description</desc>
+                                </valItem>
+                                <valItem ident="mitredCorner">
+                                    <desc>to be used in binding description</desc>
+                                </valItem>
+                                <valItem ident="openMitredCorner">
+                                    <desc>to be used in binding description</desc>
+                                </valItem>
                                 <valItem ident="Other">
                                     <desc>to be used in binding description</desc>
                                 </valItem>
