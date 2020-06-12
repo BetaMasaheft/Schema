@@ -254,6 +254,9 @@ End license statement: do not remove -->
                             Guidelines</ref></desc>
                     <attList>
                         <attDef ident="contemporary" mode="replace">
+                            <datatype maxOccurs="2">
+                                <dataRef key="teidata.word"/>
+                            </datatype>
                             <valList type="closed">
                                 <valItem ident="partly">
                                     <desc>See all examples where this value is used <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-rootMS%2F%2Ft%3Abinding%5B%40contemporary%3D%27partly%27%5D">here</ref>.
@@ -270,6 +273,12 @@ End license statement: do not remove -->
                                 <valItem ident="unknown">
                                     <desc>See all examples where this value is used <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-rootMS%2F%2Ft%3Abinding%5B%40contemporary%3D%27unknown%27%5D">here</ref>.
                                     </desc>
+                                </valItem>
+                                <valItem ident="Ethiopian">
+                                    <desc>Ethiopian</desc>
+                                </valItem>
+                                <valItem ident="non-Ethiopian">
+                                    <desc>non-Ethiopian</desc>
                                 </valItem>
                             </valList>
                         </attDef>
