@@ -513,7 +513,9 @@ End license statement: do not remove -->
                                 <valItem ident="julian">
                                     <desc>Julian</desc>
                                 </valItem>
-
+                                <valItem ident="qamar">
+                                    <desc>ʿĀmata qamar (Year of the Moon – variant of ʿĀmata məḥrat according to the 532-year cycle)</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                     </attList>
