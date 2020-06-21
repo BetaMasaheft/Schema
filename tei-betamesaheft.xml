@@ -6951,17 +6951,34 @@ End license statement: do not remove -->
 The structuring elements used in a manuscript transcription are div, pb and cb.
 locus is used to point to values of these elements in the teiHeader.
                                     </sch:report>
-                            </sch:rule>
-
-
-                            <sch:rule context="tei:locus[@from]">
-                                <sch:report test="starts-with(@from, '#')">References to foliation and columns in @from, should NOT use the #, e.g. 6r.</sch:report>
-                                <sch:report test="starts-with(@to, '#')">References to foliation and columns in @to, should NOT use the #, e.g. 6r.</sch:report>
-
+                                <sch:report test="(@from and not(matches(@from, '((^\d+)|(^[xvi]+))')))">
+                                    References to foliation and columns in @from, 
+                                    should NOT use the #, e.g. 6r, 42va, 123ra5.
+                                   The @from attribute should match 
+                                   (\d+)(r|v)?(a-z)?(\d+)? 
+                                   where 
+                                   - group 1 is the folio as an integer, 
+                                   - group 2 the recto r or verso v (optional), 
+                                   - group 3 the column named with a small letter (optional), and 
+                                   - group four the line as an integer (optional).
+                                   you may use also small roman numerals for non foliated leaves.
+                                </sch:report>
+                                <sch:report test="(@to and not(matches(@to, '((^\d+)|(^[xvi]+))')))">
+                                    References to foliation and columns in @to, 
+                                    should NOT use the #, e.g. 6r, 42va, 123ra5.
+                                    The @to attribute should match 
+                                    (\d+)(r|v)?(a-z)?(\d+)? 
+                                    where 
+                                    - group 1 is the folio as an integer, 
+                                    - group 2 the recto r or verso v (optional), 
+                                    - group 3 the column named with a small letter (optional), and 
+                                    - group four the line as an integer (optional).
+                                    you may use also small roman numerals for non foliated leaves.
+                                </sch:report>
                             </sch:rule>
                             <sch:rule context="tei:locus[@target]">
                                 <sch:report test="not(starts-with(@target, '#'))">References to foliation and columns in @target, should use the #, e.g. #6r.</sch:report>
-                            </sch:rule>
+                             </sch:rule>
                         </constraint>
                     </constraintSpec>
 <exemplum>
