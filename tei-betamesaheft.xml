@@ -85,6 +85,7 @@ End license statement: do not remove -->
             <change when="2019-11-20" who="DR">Added ApocalypticLiterature</change>
             <change when="2020-03-07" who="PL">Reorganized closed list for relations by domain and range entity types as in the guidelines .</change>
             <change when="2020-04-29" who="DE">Added DidacticMaterial</change>
+            <change when="2020-07-09" who="DR">Added calendar definitions provided by Denis Nosnitsin</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -489,32 +490,34 @@ End license statement: do not remove -->
                         <attDef ident="calendar" usage="opt" mode="replace">
                             <valList type="open">
                                 <valItem ident="world">
-                                    <desc>ʿĀmata ʿālam/ʿĀmata ʾəm-fəṭrat (Era of the World)</desc>
+                                    <desc>ʿĀmata ʿālam, ʿĀmat ʾəm-fəṭrat, ʿĀmat ʾəm-ʾAddām, ʿĀmata məḥrat  (=Era of the World)</desc>
                                 </valItem>
                                 <valItem ident="ethiopian">
-                                    <desc> ʿĀmata śəggāwe (Era of the Incarnation –
-                                        Ethiopian)</desc>
+                                    <desc> ʿĀmata śəggāwe, ʿĀmata məḥrat (Era of the Incarnation/ 
+                                        Ethiopian contemporary Calendar of the contemporary time, year 1 = 7/8 CE)</desc>
                                 </valItem>
                                 <valItem ident="grace">
-                                    <desc>ʿĀmata məḥrat (Era of Grace)</desc>
+                                    <desc>ʿĀmata məḥrat (= Ethiopian Era of Grace, year 1 = 359/360 CE)</desc>
                                 </valItem>
                                 <valItem ident="diocletian">
-                                    <desc>ʿĀmata samāʿtāt (Era of Martyrs (Diocletian))</desc>
+                                    <desc>ʿĀmata samāʿtāt (Era of Martyrs/ Era of Diocletian, year 1 = 283/284 CE)</desc>
                                 </valItem>
                                 <valItem ident="alexander">
-                                    <desc> Era of Alexander</desc>
+                                    <desc> ʿĀmata ʾƎskəndər (= Era of Alexander of Macedon, year 1 = 319 BC)</desc>
                                 </valItem>
                                 <valItem ident="evangelists">
-                                    <desc>Evangelists' years</desc>
+                                    <desc>Evangelist's name associated with the year (repeated in the canonical order: Matthew, Mark, Luke, John)</desc>
                                 </valItem>
                                 <valItem ident="islamic">
-                                    <desc>Hiǧrī (Islamic)</desc>
+                                    <desc>ʿĀmata ʾagār (= Hiǧrī, Islamic Era)</desc>
                                 </valItem>
                                 <valItem ident="julian">
-                                    <desc>Julian</desc>
+                                    <desc>Julian calendar</desc>
                                 </valItem>
                                 <valItem ident="qamar">
-                                    <desc>ʿĀmata qamar (Year of the Moon – variant of ʿĀmata məḥrat according to the 532-year cycle)</desc>
+                                    <desc>ʿĀmata qamar (= Year of the 532 year cycle, can correspond to the ʿĀmata samāʿtāt with
+                                        year 1 = 283/284 CE or the true ʿĀmata məḥrat, 
+                                        with year 1 = 359/360 CE)</desc>
                                 </valItem>
                             </valList>
                         </attDef>
