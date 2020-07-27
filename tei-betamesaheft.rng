@@ -5,10 +5,10 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2020-07-08T07:54:00Z. .
+Schema generated from ODD source 2020-07-27T11:03:07Z. .
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
-TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
+TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 3.5.0/
   
 --><!--[http://creativecommons.org/licenses/by-sa/4.0/] This file is licensed under the Creative Commons Attribution-ShareAlike 4.0. -->
    <define name="tei_macro.paraContent">
@@ -5665,9 +5665,27 @@ Measures]</a:documentation>
          <ref name="tei_att.typed.attribute.subtype"/>
          <optional>
             <attribute name="calendar">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] world; 2] ethiopian; 3] grace; 4] diocletian; 5] alexander; 6] evangelists; 7] islamic; 8] julian; 9] qamar</a:documentation>
-               <text/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>world</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ʿĀmata ʿālam, ʿĀmat ʾəm-fəṭrat, ʿĀmat ʾəm-ʾAddām, ʿĀmata məḥrat (=Era of the World)</a:documentation>
+                  <value>ethiopian</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ʿĀmata śəggāwe, ʿĀmata məḥrat (Era of the Incarnation/ Ethiopian contemporary Calendar of the contemporary time, year 1 = 7/8 CE)</a:documentation>
+                  <value>grace</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ʿĀmata məḥrat (= Ethiopian Era of Grace, year 1 = 359/360 CE)</a:documentation>
+                  <value>diocletian</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ʿĀmata samāʿtāt (Era of Martyrs/ Era of Diocletian, year 1 = 283/284 CE)</a:documentation>
+                  <value>alexander</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ʿĀmata ʾƎskəndər (= Era of Alexander of Macedon, year 1 = 319 BC)</a:documentation>
+                  <value>evangelists</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Evangelist's name associated with the year (repeated in the canonical order: Matthew, Mark, Luke, John)</a:documentation>
+                  <value>islamic</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ʿĀmata ʾagār (= Hiǧrī, Islamic Era)</a:documentation>
+                  <value>julian</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Julian calendar</a:documentation>
+                  <value>qamar</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ʿĀmata qamar (= Year of the 532 year cycle, can correspond to the ʿĀmata samāʿtāt with year 1 = 283/284 CE or the true ʿĀmata məḥrat, with year 1 = 359/360 CE)</a:documentation>
+               </choice>
             </attribute>
          </optional>
          <optional>

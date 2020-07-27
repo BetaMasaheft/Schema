@@ -488,7 +488,7 @@ End license statement: do not remove -->
                             </valList>
                         </attDef>
                         <attDef ident="calendar" usage="opt" mode="replace">
-                            <valList type="open">
+                            <valList type="closed">
                                 <valItem ident="world">
                                     <desc>ʿĀmata ʿālam, ʿĀmat ʾəm-fəṭrat, ʿĀmat ʾəm-ʾAddām, ʿĀmata məḥrat  (=Era of the World)</desc>
                                 </valItem>
