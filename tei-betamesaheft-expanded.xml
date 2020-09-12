@@ -38,7 +38,7 @@
         </front>
         <body>
             <schemaSpec ident="tei-betamesaheft" docLang="en" prefix="tei_" start="TEI"
-                xml:lang="en" source="tei:3.0.0">
+                xml:lang="en" source="tei:4.1.0">
 
                 <!--       MODULES USED BY THE Beta maṣāḥǝft: Manuscripts of Ethiopia and Eritrea SCHEMA  
                 the @source ties our current schema to the version 3.0.0 of TEI
@@ -1029,11 +1029,9 @@
                 <elementSpec ident="colophon" mode="change" module="msdescription">
                     <content>
                         <macroRef key="macro.phraseSeq"/>
-                        <rng:zeroOrMore>
-                            <rng:choice>
-                                <rng:ref name="tei_model.biblLike"/>
-                            </rng:choice>
-                        </rng:zeroOrMore>
+                        <sequence>
+                            <classRef key="tei_model.biblLike" minOccurs="0" maxOccurs="unbounded"/>
+                        </sequence>
                     </content>
                     <constraintSpec scheme="isoschematron" ident="colophon">
                         <constraint>
@@ -1862,11 +1860,9 @@
                 <elementSpec ident="locus" module="msdescription" mode="change">
                     <content>
                         <macroRef key="macro.xtext"/>
-                        <rng:zeroOrMore>
-                            <rng:choice>
-                                <rng:ref name="tei_model.certLike"/>
-                            </rng:choice>
-                        </rng:zeroOrMore>
+                        <sequence>
+                            <classRef key="tei_model.certLike" minOccurs="0" maxOccurs="unbounded"/>
+                        </sequence>
                     </content>
                     <!--  checks that locus has @target or @from-->
                     <constraintSpec scheme="isoschematron" ident="locus">
