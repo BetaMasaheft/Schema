@@ -2562,7 +2562,7 @@ End license statement: do not remove -->
                             Guidelines</ref></desc>
                     <constraintSpec scheme="isoschematron" ident="bibl">
                         <constraint>
-                            <sch:rule context="tei:bibl[not(ancestor::tei:listBibl[@type='mss'])]">
+                            <sch:rule context="tei:bibl[not(ancestor::tei:listBibl[@type='mss'])][not(ancestor::tei:surrogates)]">
                                 <sch:report test="not(contains(tei:ptr/@target, 'bm:'))">The unique
                                     tag in Zotero to be used in this pointers should be namespaced.
                                     Please make sure that the tag in zotero begins with bm: and copy
