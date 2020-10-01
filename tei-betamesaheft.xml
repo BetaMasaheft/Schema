@@ -4041,6 +4041,9 @@ End license statement: do not remove -->
                                 <valItem ident="HM">
                                     <desc>Hizkiel Mitiku</desc>
                                 </valItem>
+                                <valItem ident="MBä">
+                                    <desc>Matteo Bächtold</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -4225,6 +4228,9 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="HM">
                                     <desc>Hizkiel Mitiku</desc>
+                                </valItem>
+                                <valItem ident="MBä">
+                                    <desc>Matteo Bächtold</desc>
                                 </valItem>
                             </valList>
                         </attDef>
