@@ -226,6 +226,9 @@ End license statement: do not remove -->
                             Guidelines</ref></desc>
                     <attList>
                         <attDef ident="rend" mode="replace">
+                            <datatype maxOccurs="6">
+                                <dataRef key="teidata.word"/>
+                            </datatype>
                             <valList type="closed">
                                 <valItem ident="erasure">
                                     <desc>scratched with a knife or similar</desc>
