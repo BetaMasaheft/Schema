@@ -3808,6 +3808,7 @@ End license statement: do not remove -->
                     <desc>Please note the semantically meaningful structure
                         of the <att>xml:id</att> <ref target="https://betamasaheft.eu/Guidelines/?id=msItem">Beta maṣāḥǝft
                             Guidelines</ref></desc>
+                    
                     <constraintSpec scheme="isoschematron" ident="msItem">
                         <constraint>
                             <sch:rule context="tei:msItem">
@@ -3826,9 +3827,15 @@ End license statement: do not remove -->
                                     you have parts into parts or items into items, please use a full
                                     stop. p1.2_i3.4 is e.g. the subitem 4 of item 3 in subpart 2 of
                                     part 1. </sch:report>
+                                <sch:report 
+                                    test="count(tei:title) gt 1"
+                                    see="https://betamasaheft.eu/Guidelines/?id=manuscriptContents">
+                                    Only one title element is allowed for each msItem.
+                                </sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
+                    
                     <attList>
                         <attDef ident="xml:id" mode="change" usage="req"/>
                     </attList>
