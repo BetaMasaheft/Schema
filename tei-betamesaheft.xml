@@ -6910,7 +6910,20 @@ End license statement: do not remove -->
                                         <valItem ident="translation"><desc>to signal that the title is only of a translation.
                                             Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27translation%27%29%5D">Beta maṣāḥǝft
                                                 Xpath search for //t:div[contains(@subtype,'translation')]</ref></desc></valItem>
-
+                                
+                                <valItem ident="coretext">
+                                    <desc>the main content of a text</desc>
+                                </valItem>
+                                <valItem ident="textsubunit">
+                                    <desc>general way to indicate a specific section of a text that need to be encoded but does not correspond to the
+                                        other specified textpart</desc>
+                                </valItem>
+                                <valItem ident="colophon">
+                                    <desc>colophon of a work (not of a manuscript) that is systematically transmitted (copied) with the text</desc>
+                                </valItem>
+                                <valItem ident="list">
+                                    <desc>a number of connected items or names written consecutively, either one after the other or one below the other</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                     </attList>
