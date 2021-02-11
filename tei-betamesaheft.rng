@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2021-01-11T08:59:37Z. .
+Schema generated from ODD source 2021-02-11T10:11:09Z. .
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 3.5.0/
@@ -13454,6 +13454,14 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A border that surrounds a text or image and may occupy the margins and intercolumnar space. Typically used to mark the beginning of a new text or section of text.</a:documentation>
                   <value>punctuation</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>headpiece</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A decorative border that surrounds a text and may occupy the margins and intercolumnar space. Typically used to mark the beginning of a new text or section of text. With two specifications, for Band (single border) and Frame (border encompassing multiple sides of text)</a:documentation>
+                  <value>headpieceFrame</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Decorative frame encompassing all four sides of the text and may occupy the margins and intercolumnar space. Typically used to mark the beginning of a new text or section of text.</a:documentation>
+                  <value>headpieceBand</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Single decorative border that surrounds a text and may occupy the margins and intercolumnar space. Typically used to mark the beginning of a new text or section of text.</a:documentation>
+                  <value>doodles</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">crude drawings which do not belong to the primary strata of the manuscript (already encoded as “extras”)</a:documentation>
                   <value>drawing</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A monochrome or bichrome image that is not painted.</a:documentation>
                   <value>diagram</value>
