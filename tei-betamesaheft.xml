@@ -1973,6 +1973,9 @@ End license statement: do not remove -->
                                     <desc>Please use this type if <att>corresp</att> is pointing to
                                         the <att>xml:id</att> of an authority file record</desc>
                                 </valItem>
+                                <valItem ident="studies">
+                                    <desc>A record in the Studies repository</desc>
+                                </valItem>
                             </valList>
                         </attDef>
 
@@ -7012,7 +7015,7 @@ End license statement: do not remove -->
                                 number + first world of place name) People = PRS1001AbbaTam (PRS +
                                 incremental number + first world of name) Institutions =
                                 INS0030Addaqaharsi (INS + 4 digit number + first world of
-                                name)</desc>
+                                name) Studies = STU + incremental number + recognizable word</desc>
                         </attDef>
 
                         <attDef ident="type" mode="replace" usage="req">
@@ -7046,9 +7049,11 @@ End license statement: do not remove -->
                                         manuscript.</desc>
                                 </valItem>
                                 <valItem ident="auth">
-
-                                    <desc>Description of a concept used as authority list (faith,
+                                      <desc>Description of a concept used as authority list (faith,
                                         art element)</desc>
+                                </valItem>
+                                <valItem ident="studies">
+                                    <desc>Works of interest to Ethiopian and Eritrean studies</desc>
                                 </valItem>
                             </valList>
                         </attDef>
