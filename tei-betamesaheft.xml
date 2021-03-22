@@ -1854,6 +1854,9 @@ End license statement: do not remove -->
                                 <valItem ident="pl">
                                     <desc>Polish</desc>
                                 </valItem>
+                                <valItem ident="cs">
+                                    <desc>Czech</desc>
+                                </valItem>
                                 <valItem ident="el"><desc>Modern Greek</desc></valItem>
                                 <valItem ident="nl"><desc>Dutch</desc></valItem>
                                 <valItem ident="ji"><desc>Yiddish</desc></valItem>
