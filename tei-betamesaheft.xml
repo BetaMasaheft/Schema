@@ -6534,6 +6534,13 @@ End license statement: do not remove -->
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+skos%3AcloseMatch+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
+                                <valItem ident="skos:broader">
+                                    <desc>Fine for every Authority File, especially to match with external SKOS vocabularies, e.g. Ligatus. 
+                                        Assumes this is a skos:Concept. 
+                                        http://www.w3.org/2004/02/skos/core#broader <ref
+                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+skos%3Abroader+%3Fy%7D+LIMIT+25"
+                                            >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
+                                </valItem>
 
 
 
