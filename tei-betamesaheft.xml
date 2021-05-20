@@ -7458,6 +7458,37 @@ locus is used to point to values of these elements in the teiHeader.
                     </exemplum>
                 </elementSpec>
 
+                <elementSpec ident="damage" module="transc" mode="change">
+                    <constraintSpec scheme="isoschematron" ident="damage">
+                        <constraint>
+                            <sch:rule context="tei:damage[@placeOfDamage]">
+                                <sch:report test="string-length(text()) gt 1"
+                                    see="https://betamasaheft.eu/Guidelines/?id=inscriptions">The usage of the attribute placeOfDamage is relative to one letter, please replicate the element damage with this attribute for each notated letter. </sch:report>
+                            </sch:rule>                        </constraint>
+                    </constraintSpec>
+                    <attList>
+                        <attDef ident="placeOfDamage" 
+                            ns="https://betamasaheft.eu" usage="opt" mode="add">
+                            <desc>Place of the damage of a letter. This has been added to represent the half brackets of RIE, used in the edition to mark <foreign xml:lang="fr">les parties abîmées des lettres</foreign> (RIÉ I, 13).</desc>
+                            <datatype maxOccurs="4">
+                                <dataRef key="teidata.enumerated"/>
+                            </datatype>
+                            <valList type="open">
+                                <valItem ident="upperRight"/>
+                                <valItem ident="upperLeft"/>
+                                <valItem ident="lowerRight"/>
+                                <valItem ident="lowerLeft"/>
+                            </valList>
+                        </attDef>
+                    </attList>
+                    <exemplum>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" 
+                            xmlns:bm="https://betamasaheft.eu" source="RIE7566dasi">
+                        mšrq<damage bm:placeOfDamage="upperLeft lowerLeft">h</damage>    
+                    </egXML>
+                    </exemplum>
+                </elementSpec>
+                
                 <classSpec type="atts" ident="att.dimensions" mode="change">
                     <attList>
                         <attDef ident="precision" mode="replace">
