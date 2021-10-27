@@ -4178,6 +4178,9 @@ End license statement: do not remove -->
                                 <valItem ident="GS">
                                     <desc>Guesh Solomon</desc>
                                 </valItem>
+                                <valItem ident="GA">
+                                    <desc>Getinet Asimare</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -4376,6 +4379,9 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="GS">
                                     <desc>Guesh Solomon</desc>
+                                </valItem>
+                                <valItem ident="GA">
+                                    <desc>Getinet Asimare</desc>
                                 </valItem>
                             </valList>
                         </attDef>
