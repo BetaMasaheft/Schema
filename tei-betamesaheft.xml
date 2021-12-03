@@ -499,7 +499,7 @@ End license statement: do not remove -->
                                     <desc>ʿĀmata ʿālam, ʿĀmat ʾəm-fəṭrat, ʿĀmat ʾəm-ʾAddām, ʿĀmata məḥrat  (=Era of the World)</desc>
                                 </valItem>
                                 <valItem ident="ethiopian">
-                                    <desc> ʿĀmata śəggāwe, ʿĀmata məḥrat (Era of the Incarnation/ 
+                                    <desc> ʿĀmata śəggāwe, ʿĀmata məḥrat (Era of the Incarnation/
                                         Ethiopian contemporary Calendar of the contemporary time, year 1 = 7/8 CE)</desc>
                                 </valItem>
                                 <valItem ident="grace">
@@ -522,7 +522,7 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="qamar">
                                     <desc>ʿĀmata qamar (= Year of the 532 year cycle, can correspond to the ʿĀmata samāʿtāt with
-                                        year 1 = 283/284 CE or the true ʿĀmata məḥrat, 
+                                        year 1 = 283/284 CE or the true ʿĀmata məḥrat,
                                         with year 1 = 359/360 CE)</desc>
                                 </valItem>
                             </valList>
@@ -582,7 +582,7 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="origDate">
                         <constraint>
                             <sch:rule context="tei:origDate">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=origin"
                                     test="@notBefore = @notAfter">For an exact date, please
                                     use @when.</sch:report>
@@ -640,7 +640,7 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="citedRange">
                         <constraint>
                             <sch:rule context="tei:citedRange">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=bibliographic-references"
                                     test="@from or @to">Please, don't use @from and @to in
                                     citedRange, write the range into the element</sch:report>
@@ -1878,15 +1878,15 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="ref">
                         <constraint>
                             <sch:rule context="tei:ref">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=ref"
                                     test="not(@target or @corresp or @cRef)">ref must be
                                     used with either a @corresp pointing to a project xml:id or a
                                     @target pointing to a an internal id or a @cRef pointing to an
                                     external urn, like those in Perseus</sch:report>
-                                <sch:report 
+                                <sch:report
                                     test="not(@type) and @corresp"
-                                    see="https://betamasaheft.eu/Guidelines/?id=ref">Please 
+                                    see="https://betamasaheft.eu/Guidelines/?id=ref">Please
                                     use @corresp only
                                     for external entities, assigning also a @type. if you need to
                                     point to something into the current file or to a resource
@@ -2035,16 +2035,16 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="title">
                         <constraint>
                             <sch:rule context="tei:title[@ref]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=title"
                                     test="matches(@ref, '\s+')">Please remove spaces from the value of attribute ref. Only one value is allowed.</sch:report>
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=entities-id-structure"
                                     test="not(matches(@ref, 'LIT\d+\w+') or matches(@ref, 'NAR\d+\w+'))">The textual or narrative unit ID you have entered is wrong. Textual units IDs must match the pattern LIT\d+\w+, narrative units must match the pattern  NAR\d+\w+.</sch:report>
                             </sch:rule>
                             <sch:rule
                                 context="tei:title[not(@type='short')][ancestor::tei:TEI[@type='work']][ancestor::tei:titleStmt]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=work-teiHeader"
                                     test="not(@xml:id or @corresp)">title in a Work entity
                                     must always have an @xml:id which identifies alternative titles
@@ -2054,7 +2054,7 @@ End license statement: do not remove -->
                             </sch:rule>
                             <sch:rule
                                 context="tei:title[ancestor::tei:TEI[@type='work']][not(ancestor::tei:titleStmt)]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=work-teiHeader"
                                     test="not(@xml:id or @ref)">title in work must always
                                     have an @xml:id which identifies alternative titles and/or a
@@ -2063,7 +2063,7 @@ End license statement: do not remove -->
                             </sch:rule>
                             <sch:rule
                                 context="tei:title[not(parent::tei:ab)][ancestor::tei:TEI[@type='work']][@xml:id]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=work-teiHeader"
                                     test="not(matches(@xml:id,'t\d+'))"> Titles of works
                                     must have ids starting with the letter 't' followed by a
@@ -2520,7 +2520,7 @@ End license statement: do not remove -->
                         <constraint>
                             <sch:rule
                                 context="tei:roleName/@type">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=roles"
                                     test=".='office' and parent::tei:persName">the value office for the attribute type should be used only when this is not in a persName. Use title instead.</sch:report>
                             </sch:rule>
@@ -2610,7 +2610,7 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="bibl">
                         <constraint>
                             <sch:rule context="tei:bibl[not(ancestor::tei:listBibl[@type='mss'])][not(ancestor::tei:surrogates)]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=bibliographic-references"
                                     test="not(contains(tei:ptr/@target, 'bm:'))">The unique
                                     tag in Zotero to be used in this pointers should be namespaced.
@@ -2631,7 +2631,7 @@ End license statement: do not remove -->
                                     @target containing a full uri to the resource</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:bibl">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=bibliographic-references"
                                     test="child::tei:biblScope">we use citedRange, not
                                     biblScope. Please, see guidelines wiki on Beta
@@ -2680,7 +2680,7 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="ptr">
                         <constraint>
                             <sch:rule context="tei:ptr[starts-with(@target, 'bm:')]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=bibliographic-references"
                                     test="not(parent::tei:bibl)">A ptr elements with a
                                     bibliographical reference target should always be inside a bibl
@@ -2715,14 +2715,14 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="witness">
                         <constraint>
                             <sch:rule context="tei:witness">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=work-teiHeader"
                                     test="not(@corresp)">witness must always contain a
                                     @corresp pointing to a project xml:id of a manuscript or to an
                                     external resource (in which case you need to add a
                                     @type="external")</sch:report>
                                 <sch:report
-                                    see="https://betamasaheft.eu/Guidelines/?id=work-teiHeader" 
+                                    see="https://betamasaheft.eu/Guidelines/?id=work-teiHeader"
                                     test="contains(@corresp, 'bm:')">Please, don't point to
                                     bibliography items for witnesses as it is unlikely that the
                                     edition of the text is based on secondary literature. use
@@ -2786,7 +2786,7 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="witness">
                         <constraint>
                             <sch:rule context="tei:dimensions/tei:*">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=objectDescription"
                                     test="contains(.,',')">please, make sure you use a dot
                                     for decimal notation like in 13.5, not a comma 13,5</sch:report>
@@ -3290,7 +3290,7 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="ab">
                         <constraint>
                             <sch:rule context="tei:ab[ancestor::tei:layout]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=layoutDescPage"
                                     test="not(@type or @subtype)">ab in layout should always
                                     have a type and optionally a subtype</sch:report>
@@ -3304,7 +3304,7 @@ End license statement: do not remove -->
                                     list a series of ways in which a place is called. </sch:report>
                             </sch:rule>
                             <sch:rule context="tei:ab[ancestor::tei:note][@type='appellation']">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=ab"
                                     test="not(tei:list/tei:item)">an ab[@type='appellation']
                                     must contain a list.</sch:report>
@@ -3366,18 +3366,18 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="seg">
                         <constraint>
                             <sch:rule context="tei:seg[ancestor::tei:handNote]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=handDescription"
                                     test="not(@type or @subtype or @rend)">seg in handNote should
                                     always have a type, subtype or rend attribute</sch:report>
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=ColophSupplTit"
                                     test="@type = 'supplication' or @type = 'expanded' or @type = 'inscriptio' or @type = 'subscriptio' or @type = 'embedded'  or @type = 'translation' ">the values
                                     supplication, expanded, inscriptio and subscriptio, embedded and translation are not for use in seg inside handNote which is an ancestor of the current element
                                     you can use here script, ink or rubrication</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:seg[not(ancestor::tei:handNote)]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=handDescription"
                                     test="@type = 'script' or @type = 'ink' or @type = 'rubrication' ">the values
                                     script, ink, rubrication and interpretation, are reserved for use in seg inside handNote which is not an ancestor of the current element
@@ -3473,14 +3473,14 @@ End license statement: do not remove -->
                                     locus to indicate the position of the feature</sch:report>
                             </sch:rule>-->
                             <sch:rule context="tei:decoNote[not(ancestor::tei:bindingDesc)]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=decorationDescription"
                                     test="not(matches(@xml:id,'d\d+'))"> DecoNotes must have
                                     ids starting with the letter 'd' followed by a progressive
                                     number, e.g. d1, d2, d3 </sch:report>
                             </sch:rule>
                             <sch:rule context="tei:decoNote[ancestor::tei:bindingDesc]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=bindingDescription"
                                     test="not(matches(@xml:id,'b\d+'))"> DecoNotes in
                                     Binding Description must have ids starting with the letter 'b'
@@ -3494,11 +3494,11 @@ End license statement: do not remove -->
                                     should contain a number.</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:decoNote[ancestor::tei:bindingDesc][@pastedown]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=bindingDescription"
                                     test="not(@type='EndLeaves')">the attribute pastedown is
                                     only allowed on a decoNote with type EndLeaves.</sch:report>
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=bindingDescription"
                                     test="not(matches(@pastedown, '[UOTILR\s]+'))">values of
                                     pastedown might only be a combination of maximum three of the
@@ -3566,19 +3566,19 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="punctuation"/>
                                 <valItem ident="headpiece">
-                                    <desc>A decorative border that surrounds a text and may occupy the margins and 
+                                    <desc>A decorative border that surrounds a text and may occupy the margins and
                                         intercolumnar space. Typically used to mark the beginning of a new text or section of text.
                                         With two specifications, for Band (single border) and Frame (border encompassing multiple sides of text)</desc>
                                 </valItem>
                                 <valItem ident="headpieceFrame">
-                                    <desc>Decorative frame encompassing all four sides of the text and may occupy the margins and 
+                                    <desc>Decorative frame encompassing all four sides of the text and may occupy the margins and
                                         intercolumnar space. Typically used to mark the beginning of a new text or section of text.</desc>
                                 </valItem>
                                 <valItem ident="headpieceBand">
-                                    <desc>Single decorative border that surrounds a text and may occupy the margins and 
+                                    <desc>Single decorative border that surrounds a text and may occupy the margins and
                                         intercolumnar space. Typically used to mark the beginning of a new text or section of text.</desc>
                                 </valItem>
-                                
+
                                 <valItem ident="doodles"><desc>crude drawings which do not belong to the primary strata of the manuscript (already encoded as “extras”)</desc></valItem>
                                 <valItem ident="drawing"><desc>A monochrome or bichrome image that is not painted.</desc></valItem>
                                 <valItem ident="diagram"><desc>A drawing that conveys information or knowledge in schematic form.</desc></valItem>
@@ -3603,10 +3603,10 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="overCover">
                                     <desc>to be used in binding description</desc>
-                                </valItem> 
+                                </valItem>
                                 <valItem ident="overlappingCornerFO">
                                     <desc>to be used in binding description</desc>
-                                </valItem> 
+                                </valItem>
                                 <valItem ident="overlappingCornerHTO">
                                     <desc>to be used in binding description</desc>
                                 </valItem>
@@ -3748,7 +3748,7 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="msPart">
                         <constraint>
                             <sch:rule context="tei:msPart">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=entities-id-structure"
                                     test="not(matches(@xml:id,'p\d+'))"> Manuscript parts
                                     ids must start with the letter 'p' followed by a progressive
@@ -3796,7 +3796,7 @@ End license statement: do not remove -->
                                     test="not(matches(@xml:id,'f\d+'))"> Manuscript fragment
                                     ids must start with the letter 'f' followed by a progressive
                                     number, e.g. p1, p1.3, p1.1_i1.1 </sch:report>
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=entities-id-structure"
                                     test="matches(@xml:id,'(_.*){2}')"> The Underscore is
                                     used in ids to mark a nesting of different ids, especially items
@@ -3834,7 +3834,7 @@ End license statement: do not remove -->
                     <desc>Please note the semantically meaningful structure
                         of the <att>xml:id</att> <ref target="https://betamasaheft.eu/Guidelines/?id=msItem">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    
+
                     <constraintSpec scheme="isoschematron" ident="msItem">
                         <constraint>
                             <sch:rule context="tei:msItem">
@@ -3845,7 +3845,7 @@ End license statement: do not remove -->
                                     the part in which they are contained, then underscore and the
                                     letter 'i' followed by a progressive number, e.g. p1.1_i1.1,
                                     p1.1_i2. </sch:report>
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=entities-id-structure"
                                     test="matches(@xml:id,'(_.*){2}')"> The Underscore is
                                     used in ids to mark a nesting of different ids, especially items
@@ -3853,7 +3853,7 @@ End license statement: do not remove -->
                                     you have parts into parts or items into items, please use a full
                                     stop. p1.2_i3.4 is e.g. the subitem 4 of item 3 in subpart 2 of
                                     part 1. </sch:report>
-                                <sch:report 
+                                <sch:report
                                     test="count(tei:title) gt 1"
                                     see="https://betamasaheft.eu/Guidelines/?id=manuscriptContents">
                                     Only one title element is allowed for each msItem.
@@ -3861,7 +3861,7 @@ End license statement: do not remove -->
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
-                    
+
                     <attList>
                         <attDef ident="xml:id" mode="change" usage="req"/>
                     </attList>
@@ -3892,7 +3892,7 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="colophon">
                         <constraint>
                             <sch:rule context="tei:colophon">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=entities-id-structure"
                                     test="not(matches(@xml:id,'coloph\d+'))"> Colophon in
                                     Manuscript items must have ids starting with coloph.
@@ -4181,6 +4181,9 @@ End license statement: do not remove -->
                                 <valItem ident="GA">
                                     <desc>Getinet Asimare</desc>
                                 </valItem>
+                                <valItem ident="HA">
+                                    <desc>Hagos Abrha</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -4207,7 +4210,7 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="change">
                         <constraint>
                             <sch:rule context="tei:change">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=revisions"
                                     test="not(matches(@when, '20\d{2}-\d{2}-\d{2}$'))">This
                                     is not a correct date.</sch:report>
@@ -4361,7 +4364,7 @@ End license statement: do not remove -->
                                 <valItem ident="MKr">
                                     <desc>Marcin Krawczuk</desc>
                                 </valItem>
-                                
+
                                 <valItem ident="AD">
                                     <desc>Augustine Dickinson</desc>
                                 </valItem>
@@ -4382,6 +4385,9 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="GA">
                                     <desc>Getinet Asimare</desc>
+                                </valItem>
+                                <valItem ident="HA">
+                                    <desc>Hagos Abrha</desc>
                                 </valItem>
                             </valList>
                         </attDef>
@@ -4417,14 +4423,14 @@ End license statement: do not remove -->
                         <constraint>
                             <sch:rule
                                 context="tei:persName[ancestor::tei:TEI[@type='mss' or @type='place' or @type='ins' or @type='work']][not(parent::tei:respStmt)]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=named-entities-and-authority-lists"
                                     test="not(@ref)">A persName in a mss, place or work
                                     description should always contain an attribute @ref pointing to
                                     the relevant record</sch:report>
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=entities-id-structure"
-                                    test="not(matches(@ref, 'PRS\d+\w+') or matches(@ref, 'ETH\d+\w+') or matches(@ref, 'Q\d+') or matches(@ref, '^[A-Za-z]{2,3}$'))">The 
+                                    test="not(matches(@ref, 'PRS\d+\w+') or matches(@ref, 'ETH\d+\w+') or matches(@ref, 'Q\d+') or matches(@ref, '^[A-Za-z]{2,3}$'))">The
                                     person ID you have entered is wrong. Persons IDs must match the pattern PRS\d+\w+ or ETH\d+\w+ or Q\d+ or be one of the two/three letters abbreviations used by editors.</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:persName[not(text())][not(parent::tei:person)]">
@@ -4559,12 +4565,12 @@ End license statement: do not remove -->
                         <constraint>
                             <sch:rule
                                 context="tei:placeName[ancestor::tei:TEI[@type='mss' or @type='pers' or @type='work']]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=named-entities-and-authority-lists"
                                     test="not(@ref)">A placeName in a mss, person or work
                                     description should always contain an attribute @ref pointing to
                                     the relevant record</sch:report>
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=entities-id-structure"
                                     test="not(matches(@ref, 'INS\d+\w+') or
                                     matches(@ref, 'LOC\d+\w+') or
@@ -5198,7 +5204,7 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="objectDesc">
                         <constraint>
                             <sch:rule context="tei:msDesc">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=objectDescription"
                                     test="(//tei:objectDesc)[1][not(@form)]">At least the
                                     first objectDesc of msDesc must have attribute @form specified.
@@ -5300,16 +5306,16 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="relation">
                         <constraint>
                             <sch:rule context="tei:relation">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=relations"
                                     test="not(parent::tei:listRelation)"> a relation element
                                     is only allowed within a listRelation </sch:report>
                             </sch:rule>
                             <sch:rule context="tei:relation">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=relations"
                                     test="starts-with(@active, '#')">The @active element should not use the #.</sch:report>
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=relations"
                                     test="starts-with(@passive, '#')">The @passive element should not use the #.</sch:report>
                             </sch:rule>
@@ -6547,8 +6553,8 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="skos:broader">
-                                    <desc>Fine for every Authority File, especially to match with external SKOS vocabularies, e.g. Ligatus. 
-                                        Assumes this is a skos:Concept. 
+                                    <desc>Fine for every Authority File, especially to match with external SKOS vocabularies, e.g. Ligatus.
+                                        Assumes this is a skos:Concept.
                                         http://www.w3.org/2004/02/skos/core#broader <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+skos%3Abroader+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
@@ -6875,7 +6881,7 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="div">
                         <constraint>
                             <sch:rule context="tei:div[parent::tei:body]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=text-encoding"
                                     test="@type='textpart'">the outermost div must always
                                     have an attribute type edition, bibliography, commentary,
@@ -6967,7 +6973,7 @@ End license statement: do not remove -->
                                         <valItem ident="translation"><desc>to signal that the title is only of a translation.
                                             Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27translation%27%29%5D">Beta maṣāḥǝft
                                                 Xpath search for //t:div[contains(@subtype,'translation')]</ref></desc></valItem>
-                                
+
                                 <valItem ident="coretext">
                                     <desc>the main content of a text</desc>
                                 </valItem>
@@ -7025,7 +7031,7 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="TEI">
                         <constraint>
                             <sch:rule context="tei:TEI">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=TEI"
                                     test="not(@type)"
                                     >Each record must have a type with one
@@ -7095,7 +7101,7 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="origin">
                         <constraint>
                             <sch:rule context="tei:origin">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=origin"
                                     test="not(child::tei:origDate)">At least one date must
                                     be specified, preferably with a type to indicate the origin of
@@ -7125,7 +7131,7 @@ End license statement: do not remove -->
                                 </sch:report>
                             </sch:rule>
                             <sch:rule context="tei:geo[@rend]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=places"
                                     test="matches(.,'\,')">Please use one for line for each
                                     point defining the polygon. Please do not add spaces at the
@@ -7135,7 +7141,7 @@ End license statement: do not remove -->
                                     commas afterwards.. </sch:report>
                             </sch:rule>
                             <sch:rule context="tei:geo[@rend]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=places"
                                     test="matches(.,'ˆ\s')">Please use one for line for each
                                     point defining the polygon. Please do not add spaces at the
@@ -7145,7 +7151,7 @@ End license statement: do not remove -->
                                     commas afterwards.. </sch:report>
                             </sch:rule>
                             <sch:rule context="tei:geo[@rend]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=places"
                                     test="matches(.,'\s$')">Please use one for line for each
                                     point defining the polygon. Please do not add spaces at the
@@ -7173,44 +7179,44 @@ End license statement: do not remove -->
                     <constraintSpec scheme="isoschematron" ident="locus">
                         <constraint>
                             <sch:rule context="tei:locus">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=referencing-the-manuscript"
                                     test="not(@target or @from or @to)">locus must have
                                     either an exact reference to a page with @target or a range
                                     indicated with @from and @to or either of the two if the other
                                     extreme of the range is unknown. Please do not use "unknown" as
                                     value.</sch:report>
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=referencing-the-manuscript"
                                     test="ancestor::tei:div[@type='edition']">
 The structuring elements used in a manuscript transcription are div, pb and cb.
 locus is used to point to values of these elements in the teiHeader.
                                     </sch:report>
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=referencing-the-manuscript"
                                     test="(@from and not(matches(@from, '((^\d+)|(^[xvi]+))')))">
-                                    References to foliation and columns in @from, 
+                                    References to foliation and columns in @from,
                                     should NOT use the #, e.g. 6r, 42va, 123ra5.
-                                   The @from attribute should match 
-                                   (\d+)(r|v)?(a-z)?(\d+)? 
-                                   where 
-                                   - group 1 is the folio as an integer, 
-                                   - group 2 the recto r or verso v (optional), 
-                                   - group 3 the column named with a small letter (optional), and 
+                                   The @from attribute should match
+                                   (\d+)(r|v)?(a-z)?(\d+)?
+                                   where
+                                   - group 1 is the folio as an integer,
+                                   - group 2 the recto r or verso v (optional),
+                                   - group 3 the column named with a small letter (optional), and
                                    - group four the line as an integer (optional).
                                    you may use also small roman numerals for non foliated leaves.
                                 </sch:report>
                                 <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=referencing-the-manuscript"
                                     test="(@to and not(matches(@to, '((^\d+)|(^[xvi]+))')))">
-                                    References to foliation and columns in @to, 
+                                    References to foliation and columns in @to,
                                     should NOT use the #, e.g. 6r, 42va, 123ra5.
-                                    The @to attribute should match 
-                                    (\d+)(r|v)?(a-z)?(\d+)? 
-                                    where 
-                                    - group 1 is the folio as an integer, 
-                                    - group 2 the recto r or verso v (optional), 
-                                    - group 3 the column named with a small letter (optional), and 
+                                    The @to attribute should match
+                                    (\d+)(r|v)?(a-z)?(\d+)?
+                                    where
+                                    - group 1 is the folio as an integer,
+                                    - group 2 the recto r or verso v (optional),
+                                    - group 3 the column named with a small letter (optional), and
                                     - group four the line as an integer (optional).
                                     you may use also small roman numerals for non foliated leaves.
                                 </sch:report>
@@ -7245,30 +7251,30 @@ locus is used to point to values of these elements in the teiHeader.
                     <constraintSpec scheme="isoschematron" ident="item">
                         <constraint>
                             <sch:rule context="tei:item[ancestor::tei:collation]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=collationDesc"
                                     test="not(@xml:id)">items in collation must have an
                                     @xml:id</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:item[ancestor::tei:collation]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=collationDesc"
                                     test="not(matches(@xml:id,'q\d+'))"> Items in Collation
                                     must have ids starting with the letter 'q' followed by a
                                     progressive number, e.g. q1, q2, q3 </sch:report>
                             </sch:rule>
                             <sch:rule context="tei:item[ancestor::tei:collation]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=collationDesc"
                                     test="not(child::tei:dim)">Please always add a dim
                                     element inside your quire descriptions</sch:report>
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=collationDesc"
                                     test="child::tei:dim[not(matches(.,'\d+'))]">Dimensions
                                     of quire should be given as integers.</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:item[ancestor::tei:additions]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=additionsVaria"
                                     test="not(@xml:id)"> items in additions must have an
                                     @xml:id</sch:report>
@@ -7282,7 +7288,7 @@ locus is used to point to values of these elements in the teiHeader.
                                     (varia) use an id starting with 'e. </sch:report>
                             </sch:rule>
                             <sch:rule context="tei:item[ancestor::tei:additions]">
-                                <sch:report 
+                                <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=additionsVaria"
                                     test="tei:desc/tei:locus[@facs]"> The locus of the
                                     addition should be child of the item, not of desc. Please move
@@ -7479,7 +7485,7 @@ locus is used to point to values of these elements in the teiHeader.
                             </sch:rule>                        </constraint>
                     </constraintSpec>
                     <attList>
-                        <attDef ident="placeOfDamage" 
+                        <attDef ident="placeOfDamage"
                             ns="https://betamasaheft.eu" usage="opt" mode="add">
                             <desc>Place of the damage of a letter. This has been added to represent the half brackets of RIE, used in the edition to mark <foreign xml:lang="fr">les parties abîmées des lettres</foreign> (RIÉ I, 13).</desc>
                             <datatype maxOccurs="4">
@@ -7494,13 +7500,13 @@ locus is used to point to values of these elements in the teiHeader.
                         </attDef>
                     </attList>
                     <exemplum>
-                        <egXML xmlns="http://www.tei-c.org/ns/Examples" 
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples"
                             xmlns:bm="https://betamasaheft.eu" source="RIE7566dasi">
-                        mšrq<damage bm:placeOfDamage="upperLeft lowerLeft">h</damage>    
+                        mšrq<damage bm:placeOfDamage="upperLeft lowerLeft">h</damage>
                     </egXML>
                     </exemplum>
                 </elementSpec>
-                
+
                 <classSpec type="atts" ident="att.dimensions" mode="change">
                     <attList>
                         <attDef ident="precision" mode="replace">
