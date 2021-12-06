@@ -1824,6 +1824,9 @@ End license statement: do not remove -->
                                 <valItem ident="ti">
                                     <desc>Tigrinya</desc>
                                 </valItem>
+                                <valItem ident="tig">
+                                    <desc>Tigre</desc>
+                                </valItem>
                                 <valItem ident="en">
                                     <desc>English</desc>
                                 </valItem>

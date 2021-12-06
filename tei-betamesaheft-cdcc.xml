@@ -717,7 +717,7 @@ End license statement: do not remove -->
 	    </alternate>
 	  </content>
 	</elementSpec>
-	
+
 	<!--              attribute class for keywords for binding-->
 	<classSpec type="atts" ident="att.binding.key">
 	  <gloss>Binding keywords</gloss>
@@ -1043,7 +1043,7 @@ End license statement: do not remove -->
 		  <desc><ref
 			    target="https://betamasaheft.eu/authority-files/tannedSkin"
 			    >See tannedSkin in Beta maṣāḥǝft</ref></desc>
-		</valItem>  
+		</valItem>
 	      </valList>
 	    </attDef>
 	  </attList>
@@ -1071,7 +1071,7 @@ End license statement: do not remove -->
 	    </attDef>
 	  </attList>
 	</elementSpec>
-	<!--              attribute class for keywords for art themes and keywords-->        
+	<!--              attribute class for keywords for art themes and keywords-->
 	<classSpec type="atts" ident="att.art.key">
 	  <gloss>Art keywords</gloss>
 	  <desc>art keywords</desc>
@@ -1413,8 +1413,8 @@ End license statement: do not remove -->
 	    </attDef>
 	  </attList>
 	</elementSpec>
-	
-	
+
+
 
 	<!--              attribute class for keywords for periods-->
 	<classSpec type="atts" ident="att.period.key">
@@ -1466,7 +1466,7 @@ End license statement: do not remove -->
 		  target="https://betamasaheft.eu/authority-files/MoPe">See
 		  MoPe in Beta maṣāḥǝft</ref></desc>
 		</valItem>
-	      </valList>  
+	      </valList>
 	    </attDef>
 	  </attList>
 	</classSpec>
@@ -1797,7 +1797,7 @@ End license statement: do not remove -->
 		  target="https://betamasaheft.eu/authority-files/DidacticMaterial"
 		  >See Didactic Material in Beta maṣāḥǝft</ref></desc>
 		</valItem>
-	      </valList>  
+	      </valList>
 	    </attDef>
 	  </attList>
 	</classSpec>
@@ -1846,7 +1846,7 @@ End license statement: do not remove -->
 		  target="https://betamasaheft.eu/authority-files/GeezMode"
 		  >See GeezMode in Beta maṣāḥǝft</ref></desc>
 		</valItem>
-	      </valList>  
+	      </valList>
 	    </attDef>
 	  </attList>
 	</classSpec>
@@ -1870,7 +1870,7 @@ End license statement: do not remove -->
 	    </attDef>
 	  </attList>
 	</elementSpec>
-	
+
 	<!--            general definition of term, with all values-->
 	<elementSpec ident="term" mode="add" module="core">
 	  <desc>A closed list is given for the values of <att>key</att> in <gi>term</gi>,
@@ -2234,7 +2234,7 @@ End license statement: do not remove -->
 		  <desc><ref
 			    target="https://betamasaheft.eu/authority-files/tannedSkin"
 			    >See tannedSkin in Beta maṣāḥǝft</ref></desc>
-		</valItem>  
+		</valItem>
 		<!--                          list coming from myCore-->
 		<valItem ident="animal">
 		  <desc><ref
@@ -2958,6 +2958,9 @@ End license statement: do not remove -->
 		</valItem>
 		<valItem ident="ti">
 		  <desc>Tigrinya</desc>
+		</valItem>
+    <valItem ident="tig">
+		  <desc>Tigre</desc>
 		</valItem>
 		<valItem ident="en">
 		  <desc>English</desc>
