@@ -87,6 +87,7 @@ End license statement: do not remove -->
             <change when="2020-04-29" who="DE">Added DidacticMaterial</change>
             <change when="2020-07-09" who="DR">Added calendar definitions provided by Denis Nosnitsin</change>
             <change who="PL" when="2020-10-27">Added @see attributes to sch:report statements.</change>
+            <change who="ES" when="2022-03-14">Added Addisie, corrected gap/omitted definition</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -7452,8 +7453,7 @@ locus is used to point to values of these elements in the teiHeader.
                                         added</desc>
                                 </valItem>
                                 <valItem ident="omitted">
-                                    <desc>Words or lines skipped in omitted by the editor in
-                                        transcription</desc>
+                                    <desc>Text erroneously omitted from the surface by the scribe</desc>
                                 </valItem>
                                 <valItem ident="ellipsis">
                                     <desc>Text omitted from the edition by the editor, for whatever
