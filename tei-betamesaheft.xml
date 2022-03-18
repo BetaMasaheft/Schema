@@ -4186,7 +4186,10 @@ End license statement: do not remove -->
                                     <desc>Getinet Asimare</desc>
                                 </valItem>
                                 <valItem ident="AY">
-                                    <desc>Addisie Yalew Mengistu</desc>
+                                    <desc>Addisie Yalew</desc>
+                                </valItem>
+                                <valItem ident="GS">
+                                    <desc>Guesh Solomon</desc>
                                 </valItem>
                             </valList>
                         </attDef>
@@ -4224,7 +4227,6 @@ End license statement: do not remove -->
                     <attList>
                         <attDef ident="who" mode="replace" usage="req">
                             <valList type="closed">
-
                                 <valItem ident="HA">
                                     <desc>Hagos Abrha</desc>
                                 </valItem>
@@ -4385,13 +4387,19 @@ End license statement: do not remove -->
                                     <desc>Angela Salerno</desc>
                                 </valItem>
                                 <valItem ident="GS">
-                                    <desc>Guesh Solomon Teklu</desc>
+                                    <desc>Guesh Solomon</desc>
                                 </valItem>
                                 <valItem ident="GA">
                                     <desc>Getinet Asimare</desc>
                                 </valItem>
-                                <valItem ident="HA">
-                                    <desc>Hagos Abrha</desc>
+                                <valItem ident="AY">
+                                    <desc>Addisie Yalew</desc>
+                                </valItem>
+                                <valItem ident="IZ">
+                                    <desc>Ilaria Zorzan</desc>
+                                </valItem>
+                                <valItem ident="DB">
+                                    <desc>Dirbwork Bitsu</desc>
                                 </valItem>
                             </valList>
                         </attDef>
