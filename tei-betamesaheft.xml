@@ -4184,9 +4184,6 @@ End license statement: do not remove -->
                                 <valItem ident="AS">
                                     <desc>Angela Salerno</desc>
                                 </valItem>
-                                <valItem ident="GS">
-                                    <desc>Guesh Solomon</desc>
-                                </valItem>
                                 <valItem ident="GA">
                                     <desc>Getinet Asimare</desc>
                                 </valItem>
@@ -4195,6 +4192,12 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="GS">
                                     <desc>Guesh Solomon</desc>
+                                </valItem>
+                                <valItem ident="IZ">
+                                    <desc>Ilaria Zorzan</desc>
+                                </valItem>
+                                <valItem ident="DB">
+                                    <desc>Dirbwork Bitsu</desc>
                                 </valItem>
                             </valList>
                         </attDef>
