@@ -4199,6 +4199,12 @@ End license statement: do not remove -->
                                 <valItem ident="DB">
                                     <desc>Dirbwork Bitsu</desc>
                                 </valItem>
+                                <valItem ident="CS">
+                                    <desc>Calum Samuelson</desc>
+                                </valItem>
+                                <valItem ident="JE">
+                                    <desc>Jonathan Egid</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -4408,6 +4414,12 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="DB">
                                     <desc>Dirbwork Bitsu</desc>
+                                </valItem>
+                                <valItem ident="CS">
+                                    <desc>Calum Samuelson</desc>
+                                </valItem>
+                                <valItem ident="JE">
+                                    <desc>Jonathan Egid</desc>
                                 </valItem>
                             </valList>
                         </attDef>
