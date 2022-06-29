@@ -1100,6 +1100,26 @@ End license statement: do not remove -->
                                             target="https://betamasaheft.eu/authority-files/tannedSkin"
                                             >See tannedSkin in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
+                                <valItem ident="inlay">
+                                    <desc><ref
+                                        target="https://betamasaheft.eu/authority-files/inlay"
+                                        >See inlay in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="paperInlay">
+                                    <desc><ref
+                                        target="https://betamasaheft.eu/authority-files/paperInlay"
+                                        >See paperInlay in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="parchmentInlay">
+                                    <desc><ref
+                                        target="https://betamasaheft.eu/authority-files/parchmentInlay"
+                                        >See parchmentInlay in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="textileInlay">
+                                    <desc><ref
+                                        target="https://betamasaheft.eu/authority-files/textileInlay"
+                                        >See textileInlay in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
 
                                 <!--                          list coming from myCore-->
                                 <valItem ident="animal">
