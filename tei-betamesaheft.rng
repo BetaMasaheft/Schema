@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2022-06-29T07:25:08Z. .
+Schema generated from ODD source 2022-07-07T12:47:43Z. .
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 3.5.0/
@@ -18636,7 +18636,7 @@ Sample values include: 1] primary; 2] secondary; 3] undergraduate; 4] graduate; 
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Ashare-a-title+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>syriaca:different-from</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Institution Manuscript Narrative Person Place, @passive: Institution Manuscript Narrative Person Place. <a xmlns="http://www.w3.org/1999/xhtml"
                      href="http://syriaca.org/documentation/relations.html#different-from">definition in syriaca.org</a>
                   <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Adifferent-from+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
@@ -18660,7 +18660,7 @@ Sample values include: 1] primary; 2] secondary; 3] undergraduate; 4] graduate; 
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+dcterms%3AisPartOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>dcterms:hasPart</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work. http://purl.org/dc/terms/hasPart <a xmlns="http://www.w3.org/1999/xhtml"
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Manuscript. http://purl.org/dc/terms/hasPart <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+dcterms%3AhasPart+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>saws:isAttributedToAuthor</value>
@@ -18720,10 +18720,6 @@ Sample values include: 1] primary; 2] secondary; 3] undergraduate; 4] graduate; 
                <value>betmas:baptizedBy</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. Has been baptized by ... <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AbaptizedBy+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
-               </a:documentation>
-               <value>rel:enemyOf</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://purl.org/vocab/relationship/enemyOf <a xmlns="http://www.w3.org/1999/xhtml"
-                     href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+rel%3AenemyOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>
                </a:documentation>
                <value>snap:DaughterOf</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Person. http://data.snapdrgn.net/ontology/snap# <a xmlns="http://www.w3.org/1999/xhtml"

@@ -88,6 +88,8 @@ End license statement: do not remove -->
             <change when="2020-07-09" who="DR">Added calendar definitions provided by Denis Nosnitsin</change>
             <change who="PL" when="2020-10-27">Added @see attributes to sch:report statements.</change>
             <change who="ES" when="2022-03-14">Added Addisie, corrected gap/omitted definition</change>
+            <change who="DR" when="2022-07-07">updated use of several relations according to discussion in 
+                https://github.com/BetaMasaheft/Documentation/issues/1920 and https://github.com/BetaMasaheft/Documentation/issues/1350</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -5534,7 +5536,7 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="syriaca:different-from">
-                                    <desc>@active: Work, @passive: Work.
+                                    <desc>@active: Institution Manuscript Narrative Person Place, @passive: Institution Manuscript Narrative Person Place.
                                         <ref target="http://syriaca.org/documentation/relations.html#different-from">definition in syriaca.org</ref>
                                         <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+syriaca%3Adifferent-from+%3Fy%7D+LIMIT+25"
@@ -5568,7 +5570,7 @@ End license statement: do not remove -->
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
                                 <valItem ident="dcterms:hasPart">
-                                    <desc>@active: Work, @passive: Work.
+                                    <desc>@active: Manuscript, @passive: Manuscript.
                                         http://purl.org/dc/terms/hasPart <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+dcterms%3AhasPart+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
@@ -5665,13 +5667,13 @@ End license statement: do not remove -->
                                         Has been baptized by ... <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+bm%3AbaptizedBy+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
-                                </valItem>
+                                </valItem><!--
                                 <valItem ident="rel:enemyOf">
                                     <desc>@active: Person, @passive: Person.
                                         http://purl.org/vocab/relationship/enemyOf <ref
                                         target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+rel%3AenemyOf+%3Fy%7D+LIMIT+25"
                                         >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
-                                </valItem>
+                                </valItem>-->
                                 <valItem ident="snap:DaughterOf">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap# <ref
