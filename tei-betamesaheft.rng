@@ -9055,8 +9055,6 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Jonas Karlsson</a:documentation>
                <value>EDS</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Eliana Dal Sasso</a:documentation>
-               <value>SF</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sara Fani</a:documentation>
                <value>IP</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Irmeli Perho</a:documentation>
                <value>RBO</value>

@@ -4359,10 +4359,7 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="EDS">
                                     <desc>Eliana Dal Sasso</desc>
-                                </valItem>
-                                <valItem ident="SF">
-                                    <desc>Sara Fani</desc>
-                                </valItem>
+                                </valItem>                                
                                 <valItem ident="IP">
                                     <desc>Irmeli Perho</desc>
                                 </valItem>
