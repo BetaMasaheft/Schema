@@ -1713,7 +1713,7 @@ End license statement: do not remove -->
                                         rhymed texts. <ref
                                             target="https://betamasaheft.eu/authority-files/Poetry"
                                             >See Poetry in Beta maṣāḥǝft</ref></desc>
-                                </valItem>
+                                </valItem>                                
                                 <valItem ident="Prayers">
                                     <desc>works containing prayers, supplications and invocations to
                                         God and other revered entities. <ref
@@ -1792,6 +1792,30 @@ End license statement: do not remove -->
                                     <desc>Works used in the system of traditional education as didactic material. <ref
                                             target="https://betamasaheft.eu/authority-files/DidacticMaterial"
                                             >See Didactic Material in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="poetry">
+                                    <desc>Only in IslHornAfr records</desc>
+                                </valItem>
+                                <valItem ident="prose">
+                                    <desc>Only in IslHornAfr records</desc>
+                                </valItem>
+                                <valItem ident="Jurisprudence">
+                                    <desc>Only in IslHornAfr records</desc>
+                                </valItem>
+                                <valItem ident="Ethics">
+                                    <desc>Only in IslHornAfr records</desc>
+                                </valItem>
+                                <valItem ident="Belief">
+                                    <desc>Only in IslHornAfr records</desc>
+                                </valItem>
+                                <valItem ident="Devotional">
+                                    <desc>Only in IslHornAfr records</desc>
+                                </valItem>
+                                <valItem ident="Linguistics">
+                                    <desc>Only in IslHornAfr records</desc>
+                                </valItem>
+                                <valItem ident="Mysticism">
+                                    <desc>Only in IslHornAfr records</desc>
                                 </valItem>
                             </valList>
                         </attDef>
