@@ -5768,6 +5768,10 @@ Measures]</a:documentation>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ʿĀmata ʾƎskəndər (= Era of Alexander of Macedon, year 1 = 319 BC)</a:documentation>
                   <value>evangelists</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Evangelist's name associated with the year (repeated in the canonical order: Matthew, Mark, Luke, John)</a:documentation>
+                  <value>gregorian</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gregorian calendar. Only for use in IslHornAfr project records</a:documentation>
+                  <value>hijri</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Only for use in IslHornAfr project records</a:documentation>
                   <value>islamic</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ʿĀmata ʾagār (= Hiǧrī, Islamic Era)</a:documentation>
                   <value>julian</value>
@@ -18553,6 +18557,18 @@ Sample values include: 1] primary; 2] secondary; 3] undergraduate; 4] graduate; 
          <attribute name="name">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             <choice>
+               <value>dc:relation</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A related resource. <a xmlns="http://www.w3.org/1999/xhtml"
+                  href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/relation">Dublin Core relation</a> Please use only if no other relation fits, and consider searching for a better option and suggesting that relation instead. This is now only suggested for those cases of unspecified relation between two places.</a:documentation>            
+               <value>iha:Quotation_of</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Work 
+                  Only for use in the records of the IslHornAfr project.</a:documentation>    
+               <value>iha:Mentioned</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Work, Person 
+                  Only for use in the records of the IslHornAfr project.</a:documentation>    
+               <value>iha:relation_without_label</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Work 
+                  Only for use in the records of the IslHornAfr project.</a:documentation>  
                <value>saws:isDirectCopyOf</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Manuscript. http://purl.org/saws/ontology#isDirectCopyOf <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+saws%3AisDirectCopyOf+%3Fy%7D+LIMIT+25">Beta maṣāḥǝft SPARQL query for examples.</a>

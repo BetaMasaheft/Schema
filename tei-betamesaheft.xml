@@ -515,6 +515,12 @@ End license statement: do not remove -->
                                 <valItem ident="evangelists">
                                     <desc>Evangelist's name associated with the year (repeated in the canonical order: Matthew, Mark, Luke, John)</desc>
                                 </valItem>
+                                <valItem ident="gregorian">
+                                    <desc>Gregorian calendar. Only for use in IslHornAfr project records</desc>
+                                </valItem>
+                                <valItem ident="hijri">
+                                    <desc>Only for use in IslHornAfr project records</desc>
+                                </valItem>
                                 <valItem ident="islamic">
                                     <desc>ʿĀmata ʾagār (= Hiǧrī, Islamic Era)</desc>
                                 </valItem>
@@ -5376,6 +5382,28 @@ End license statement: do not remove -->
                     <attList>
                         <attDef ident="name" mode="replace" usage="req">
                             <valList type="closed">
+                                <valItem ident="dc:relation">
+                                    <desc>A related resource. <ref target="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/relation">Dublin Core relation</ref>
+                                        Please use only if no other relation fits, and consider searching for a better option and
+                                        suggesting that relation instead. This is now only suggested for 
+                                        those cases of unspecified relation between two places.</desc>
+                                </valItem>
+                                <!-- @active: Manuscript, @passive: Work.-->
+                                <valItem ident="iha:Quotation_of">
+                                    <desc>@active: Manuscript, @passive: Work 
+                                        Only for use in the records of the IslHornAfr project.
+                                    </desc>
+                                </valItem>
+                                <valItem ident="iha:Mentioned">
+                                    <desc>@active: Manuscript, @passive: Work, Person 
+                                        Only for use in the records of the IslHornAfr project.
+                                    </desc>
+                                </valItem>
+                                <valItem ident="iha:relation_without_label">
+                                    <desc>@active: Manuscript, @passive: Work 
+                                        Only for use in the records of the IslHornAfr project.
+                                    </desc>
+                                </valItem>
                                 <!-- @active: Manuscript, @passive: Manuscript.-->
                                 <valItem ident="saws:isDirectCopyOf">
                                     <desc>@active: Manuscript, @passive: Manuscript.
