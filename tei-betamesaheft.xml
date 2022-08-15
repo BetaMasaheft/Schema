@@ -2168,6 +2168,12 @@ End license statement: do not remove -->
                                 <valItem ident="identified">
                                     <desc>Only used by IHA project</desc>
                                 </valItem>
+                                <valItem ident="conceived">
+                                    <desc>Only used by IHA project</desc>
+                                </valItem>
+                                <valItem ident="alt">
+                                    <desc>Only used by IHA project</desc>
+                                </valItem>
                                 <valItem ident="supplied">
                                     <desc>syriaca.org: an existing print catalogue provides a
                                         descriptive title</desc>
