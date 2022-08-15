@@ -2132,6 +2132,12 @@ End license statement: do not remove -->
                                 <valItem ident="normalized">
                                     <desc>Transliteration of the title</desc>
                                 </valItem>
+                                <valItem ident="transliterated">
+                                    <desc>IHA transliteration</desc>
+                                </valItem>
+                                <valItem ident="identified">
+                                    <desc>Only used by IHA project</desc>
+                                </valItem>
                                 <valItem ident="supplied">
                                     <desc>syriaca.org: an existing print catalogue provides a
                                         descriptive title</desc>
@@ -4576,6 +4582,9 @@ End license statement: do not remove -->
                                     <desc>the normalized transcription of the name in fidal or
                                         another script</desc>
                                 </valItem>
+                                <valItem ident="transliterated">
+                                    <desc>IHA transliteration</desc>
+                                </valItem>
                                 <valItem ident="given">
                                     <desc>name received later in life, different from the other
                                         specified types of names</desc>
@@ -5425,6 +5434,31 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="iha:relation_without_label">
                                     <desc>@active: Manuscript, @passive: Work 
+                                        Only for use in the records of the IslHornAfr project.
+                                    </desc>
+                                </valItem>
+                                <valItem ident="iha:Commentary_of">
+                                    <desc>@active: Work, @passive: Work 
+                                        Only for use in the records of the IslHornAfr project.
+                                    </desc>
+                                </valItem>
+                                <valItem ident="iha:Area">
+                                    <desc>@active: Person, @passive: Place 
+                                        Only for use in the records of the IslHornAfr project.
+                                    </desc>
+                                </valItem>
+                                <valItem ident="iha:Place_of_activity">
+                                    <desc>@active: Place, @passive: Person 
+                                        Only for use in the records of the IslHornAfr project.
+                                    </desc>
+                                </valItem>
+                                <valItem ident="iha:Place_of_birth">
+                                    <desc>@active: Person, @passive: Place 
+                                        Only for use in the records of the IslHornAfr project.
+                                    </desc>
+                                </valItem>
+                                <valItem ident="iha:Kinship">
+                                    <desc>@active: Person, @passive: Person 
                                         Only for use in the records of the IslHornAfr project.
                                     </desc>
                                 </valItem>
