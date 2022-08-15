@@ -18601,6 +18601,9 @@ Sample values include: 1] primary; 2] secondary; 3] undergraduate; 4] graduate; 
                <value>iha:Included_in</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work 
                   Only for use in the records of the IslHornAfr project.</a:documentation>  
+               <value>iha:Abridgment_of</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work 
+                  Only for use in the records of the IslHornAfr project.</a:documentation> 
                <value>iha:Area</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Place 
                   Only for use in the records of the IslHornAfr project.</a:documentation> 
@@ -18608,6 +18611,9 @@ Sample values include: 1] primary; 2] secondary; 3] undergraduate; 4] graduate; 
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Place, @passive: Person 
                   Only for use in the records of the IslHornAfr project.</a:documentation> 
                <value>iha:Place_of_birth</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Place 
+                  Only for use in the records of the IslHornAfr project.</a:documentation>
+               <value>iha:Place_of_death</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Place 
                   Only for use in the records of the IslHornAfr project.</a:documentation> 
                <value>iha:Kinship</value>

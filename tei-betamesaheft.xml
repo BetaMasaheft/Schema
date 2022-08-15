@@ -5453,6 +5453,11 @@ End license statement: do not remove -->
                                         Only for use in the records of the IslHornAfr project.
                                     </desc>
                                 </valItem>
+                                <valItem ident="iha:Abridgment_of">
+                                    <desc>@active: Work, @passive: Work 
+                                        Only for use in the records of the IslHornAfr project.
+                                    </desc>
+                                </valItem>
                                 <valItem ident="iha:Area">
                                     <desc>@active: Person, @passive: Place 
                                         Only for use in the records of the IslHornAfr project.
@@ -5464,6 +5469,11 @@ End license statement: do not remove -->
                                     </desc>
                                 </valItem>
                                 <valItem ident="iha:Place_of_birth">
+                                    <desc>@active: Person, @passive: Place 
+                                        Only for use in the records of the IslHornAfr project.
+                                    </desc>
+                                </valItem>
+                                <valItem ident="iha:Place_of_death">
                                     <desc>@active: Person, @passive: Place 
                                         Only for use in the records of the IslHornAfr project.
                                     </desc>
