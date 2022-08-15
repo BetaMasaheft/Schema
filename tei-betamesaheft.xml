@@ -4360,6 +4360,33 @@ End license statement: do not remove -->
                                 <valItem ident="EDS">
                                     <desc>Eliana Dal Sasso</desc>
                                 </valItem>
+                                <valItem ident="SF">
+                                    <desc>Sara Fani</desc>
+                                </valItem>
+                                <valItem ident="IP">
+                                    <desc>Irmeli Perho</desc>
+                                </valItem>
+                                <valItem ident="RBO">
+                                    <desc>Rasmus Bech Olsen</desc>
+                                </valItem>
+                                <valItem ident="AR">
+                                    <desc>Anne Regourd</desc>
+                                </valItem>
+                                <valItem ident="AH">
+                                    <desc>Adday Hernández</desc>
+                                </valItem>
+                                <valItem ident="JS">
+                                    <desc>Joshua Sabih</desc>
+                                </valItem>
+                                <valItem ident="AW">
+                                    <desc>Andreas Wetter'</desc>
+                                </valItem>
+                                <valItem ident="JML">
+                                    <desc>John Møller Larsen</desc>
+                                </valItem>
+                                <valItem ident="AG">
+                                    <desc>Alessandro Gori</desc>
+                                </valItem>
                                 <valItem ident="AWi">
                                     <desc>Anaïs Wion</desc>
                                 </valItem>

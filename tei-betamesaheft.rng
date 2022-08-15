@@ -9055,6 +9055,24 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Jonas Karlsson</a:documentation>
                <value>EDS</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Eliana Dal Sasso</a:documentation>
+               <value>SF</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sara Fani</a:documentation>
+               <value>IP</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Irmeli Perho</a:documentation>
+               <value>RBO</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Rasmus Bech Olsen</a:documentation>
+               <value>AR</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Anne Regourd</a:documentation>
+               <value>AH</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Adday Hernández</a:documentation>
+               <value>JS</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Joshua Sabih</a:documentation>
+               <value>AW</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Andreas Wetter'</a:documentation>
+               <value>JML</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">John Møller Larsen</a:documentation>
+               <value>AG</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Alessandro Gori</a:documentation>
                <value>AWi</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Anaïs Wion</a:documentation>
                <value>SDe</value>
