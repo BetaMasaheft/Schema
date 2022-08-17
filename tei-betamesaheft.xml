@@ -2105,7 +2105,7 @@ End license statement: do not remove -->
                                     test="matches(@ref, '\s+')">Please remove spaces from the value of attribute ref. Only one value is allowed.</sch:report>
                                 <sch:report
                                     see="https://betamasaheft.eu/Guidelines/?id=entities-id-structure"
-                                    test="not(matches(@ref, 'LIT\d+\w+') or matches(@ref, 'NAR\d+\w+')) or matches(@ref, 'STU\d+\w+'))">The textual or narrative unit ID you have entered is wrong. Textual units IDs must match the pattern LIT\d+\w+, narrative units must match the pattern  NAR\d+\w+, studies must match the pattern STU\d+\w+.</sch:report>
+                                    test="not(matches(@ref, 'LIT\d+\w+') or matches(@ref, 'NAR\d+\w+') or matches(@ref, 'STU\d+\w+'))">The textual or narrative unit ID you have entered is wrong. Textual units IDs must match the pattern LIT\d+\w+, narrative units must match the pattern  NAR\d+\w+, studies must match the pattern STU\d+\w+.</sch:report>
                             </sch:rule>
                             <sch:rule
                                 context="tei:title[not(@type='short')][ancestor::tei:TEI[@type='work']][ancestor::tei:titleStmt]">
