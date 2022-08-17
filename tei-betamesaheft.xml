@@ -1793,6 +1793,11 @@ End license statement: do not remove -->
                                             target="https://betamasaheft.eu/authority-files/DidacticMaterial"
                                             >See Didactic Material in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
+                                <valItem ident="Study">
+                                    <desc>Research in Ethiopian and Eritrean studies. <ref
+                                        target="https://betamasaheft.eu/authority-files/Study"
+                                        >See Study in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
                                 <valItem ident="poetry">
                                     <desc>Only in IslHornAfr records</desc>
                                 </valItem>
@@ -1816,6 +1821,36 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="Mysticism">
                                     <desc>Only in IslHornAfr records</desc>
+                                </valItem>
+                                <valItem ident="Adab">
+                                    <desc>Adab in IslHornAfr</desc>
+                                </valItem>
+                                <valItem ident="Documentary">
+                                    <desc>Documentary in IslHornAfr</desc>
+                                </valItem>
+                                <valItem ident="Fadail">
+                                    <desc>Fadail in IslHornAfr</desc>
+                                </valItem>
+                                <valItem ident="Fawaid_Masail">
+                                    <desc>Fawaid_Masail in IslHornAfr</desc>
+                                </valItem>
+                                <valItem ident="Geography">
+                                    <desc>Geography in IslHornAfr</desc>
+                                </valItem>
+                                <valItem ident="Hadit">
+                                    <desc>Hadit in IslHornAfr</desc>
+                                </valItem>
+                                <valItem ident="History">
+                                    <desc>History in IslHornAfr</desc>
+                                </valItem>
+                                <valItem ident="Natural_Sciences">
+                                    <desc>Natural_Sciences in IslHornAfr</desc>
+                                </valItem>
+                                <valItem ident="Preaching">
+                                    <desc>Preaching in IslHornAfr</desc>
+                                </valItem>
+                                <valItem ident="Quran">
+                                    <desc>Quran in IslHornAfr</desc>
                                 </valItem>
                             </valList>
                         </attDef>

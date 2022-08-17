@@ -5223,6 +5223,10 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Works used in the system of traditional education as didactic material. <a xmlns="http://www.w3.org/1999/xhtml"
                         href="https://betamasaheft.eu/authority-files/DidacticMaterial">See Didactic Material in Beta maṣāḥǝft</a>
                   </a:documentation>
+                  <value>Study</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Research in Ethiopian and Eritrean studies. <a xmlns="http://www.w3.org/1999/xhtml"
+                     href="https://betamasaheft.eu/authority-files/Study">See Study in Beta maṣāḥǝft</a>
+                  </a:documentation>
                   <value>poetry</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Only in IslHornAfr records</a:documentation>
                   <value>prose</value>
@@ -5238,6 +5242,26 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <value>Linguistics</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Only in IslHornAfr records</a:documentation>
                   <value>Mysticism</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Only in IslHornAfr records</a:documentation>
+                  <value>Adab</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Only in IslHornAfr records</a:documentation>
+                  <value>Documentary</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Only in IslHornAfr records</a:documentation>
+                  <value>Fadail</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Only in IslHornAfr records</a:documentation>
+                  <value>Fawaid_Masail</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Only in IslHornAfr records</a:documentation>
+                  <value>Geography</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Only in IslHornAfr records</a:documentation>
+                  <value>Hadit</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Only in IslHornAfr records</a:documentation>
+                  <value>History</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Only in IslHornAfr records</a:documentation>
+                  <value>Natural_Sciences</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Only in IslHornAfr records</a:documentation>
+                  <value>Preaching</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Only in IslHornAfr records</a:documentation>
+                  <value>Quran</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Only in IslHornAfr records</a:documentation>
                </choice>
             </attribute>
