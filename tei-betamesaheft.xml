@@ -2397,7 +2397,7 @@ End license statement: do not remove -->
                             target="https://betamasaheft.eu/Guidelines/?id=occupation">Beta maṣāḥǝft
                             Guidelines</ref></desc>
                     <attList>
-                        <attDef ident="type" mode="replace" usage="req">
+                        <attDef ident="type" mode="replace" usage="opt">
                             <valList type="closed">
                                 <valItem ident="ruler">
                                     <desc>Ruler of a country, region or similar</desc>
@@ -4783,7 +4783,7 @@ End license statement: do not remove -->
                             target="https://betamasaheft.eu/Guidelines/?id=place">Beta maṣāḥǝft
                             Guidelines</ref></desc>
                     <attList>
-                        <attDef ident="type" mode="replace" usage="req">
+                        <attDef ident="type" mode="replace" usage="opt">
                             <datatype maxOccurs="6">
                                 <dataRef key="teidata.word"/>
                             </datatype>
