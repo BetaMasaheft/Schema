@@ -527,6 +527,9 @@ End license statement: do not remove -->
                                 <valItem ident="julian">
                                     <desc>Julian calendar</desc>
                                 </valItem>
+                                <valItem ident="creation">
+                                    <desc>Year from the Creation</desc>
+                                </valItem>
                                 <valItem ident="qamar">
                                     <desc>ʿĀmata qamar (= Year of the 532 year cycle, can correspond to the ʿĀmata samāʿtāt with
                                         year 1 = 283/284 CE or the true ʿĀmata məḥrat,

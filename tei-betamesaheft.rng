@@ -5816,6 +5816,8 @@ Measures]</a:documentation>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ʿĀmata ʾagār (= Hiǧrī, Islamic Era)</a:documentation>
                   <value>julian</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Julian calendar</a:documentation>
+                  <value>creation</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Year from the Creation</a:documentation>
                   <value>qamar</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">ʿĀmata qamar (= Year of the 532 year cycle, can correspond to the ʿĀmata samāʿtāt with year 1 = 283/284 CE or the true ʿĀmata məḥrat, with year 1 = 359/360 CE)</a:documentation>
                </choice>
