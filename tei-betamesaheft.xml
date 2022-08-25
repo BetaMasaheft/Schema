@@ -1957,6 +1957,9 @@ End license statement: do not remove -->
                                 <valItem ident="gez-tr">
                                     <desc>Ethiopic transliterated</desc>
                                 </valItem>
+                                <valItem ident="no">
+                                    <desc>Norwegian</desc>
+                                </valItem>
                                 <valItem ident="el"><desc>Modern Greek</desc></valItem>
                                 <valItem ident="nl"><desc>Dutch</desc></valItem>
                                 <valItem ident="ji"><desc>Yiddish</desc></valItem>

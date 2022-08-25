@@ -8795,6 +8795,8 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Old Harari</a:documentation>
                   <value>gez-tr</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ethiopic transliterated</a:documentation>
+                  <value>no</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Norwegian</a:documentation>
                   <value>el</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
                   <value>nl</value>
