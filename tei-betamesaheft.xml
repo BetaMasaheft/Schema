@@ -2370,6 +2370,9 @@ End license statement: do not remove -->
                                 <valItem ident="secondary">
                                     <desc>Secondary bibliography on the subject of the record. <ref target="https://betamasaheft.eu/bibliography?type=secondary&amp;collection=all">See where is this bibliography used and for what entries.</ref></desc>
                                 </valItem>
+                                <valItem ident="relations">
+                                    <desc>Relations between the subject of the record and other entities (persons, related works, manuscript filiation etc.)</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                     </attList>

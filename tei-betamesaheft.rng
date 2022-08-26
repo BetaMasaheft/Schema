@@ -7328,6 +7328,8 @@ Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] par
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Secondary bibliography on the subject of the record. <a xmlns="http://www.w3.org/1999/xhtml"
                      href="https://betamasaheft.eu/bibliography?type=secondary&amp;collection=all">See where is this bibliography used and for what entries.</a>
                </a:documentation>
+               <value>relations</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Relations between the subject of the record and other entities (persons, related works, manuscript filiation etc.) </a:documentation>
             </choice>
          </attribute>
          <empty/>
