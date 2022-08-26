@@ -2580,7 +2580,7 @@
 
                 <elementSpec ident="editor" mode="change" module="core">
                     <attList>
-                        <attDef ident="key" mode="replace" usage="req">
+                        <attDef ident="key" mode="replace" usage="opt">
                             <valList type="open">
                                 <valItem ident="AB">
                                     <desc>Alessandro Bausi</desc>
