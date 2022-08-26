@@ -11552,6 +11552,8 @@ Sample values include: 1] pattern; 2] usage; 3] executed; 4] dividers</a:documen
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <list>
                   <choice>
+                     <value>internal</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>script</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <value>ink</value>
@@ -11603,6 +11605,8 @@ Sample values include: 1] pattern; 2] usage; 3] executed; 4] dividers</a:documen
                   </choice>
                   <optional>
                      <choice>
+                        <value>internal</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>script</value>
                         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                         <value>ink</value>
