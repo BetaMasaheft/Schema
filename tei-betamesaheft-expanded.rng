@@ -14629,12 +14629,12 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
             <zeroOrMore>
                <ref name="tei_desc"/>
             </zeroOrMore>     
-            <oneOrMore>
+            <zeroOrMore>
                <choice>
                   <ref name="tei_witness"/>
                   <ref name="tei_listWit"/>
                </choice>
-            </oneOrMore>
+            </zeroOrMore>
         
       
          </group>
