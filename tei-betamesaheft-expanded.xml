@@ -2146,30 +2146,7 @@
                 </elementSpec>
 
                 <!--          suggests values for ab/@type and ab/@subtype-->
-                <elementSpec ident="ab" mode="change" module="linking">
-                    <constraintSpec scheme="isoschematron" ident="ab">
-                        <constraint>
-                            <sch:rule context="tei:ab[ancestor::tei:layout]">
-                                <sch:report test="not(@type or @subtype)">ab in layout should always
-                                    have a type and optionally a subtype</sch:report>
-                            </sch:rule>
-                            <sch:rule context="tei:ab[ancestor::tei:note]">
-                                <sch:report test="not(@type)">ab in note is used in listPlace for
-                                    institutions and should always have a @type equal to 'history'
-                                    or 'description'. @type equal to 'appellation' can be used to
-                                    list a series of ways in which a place is called. </sch:report>
-                            </sch:rule>
-                            <sch:rule context="tei:ab[@subtype='dividers']/@xml:id">
-                                <sch:report test="not(matches(.,'div\d+'))"> Dividers must have ids
-                                    starting with 'div' followed by a progressive number, e.g. div1,
-                                    div2, div3 </sch:report>
-                            </sch:rule>
-                            <sch:rule context="tei:ab[ancestor::tei:note][@type='appellation']">
-                                <sch:report test="not(tei:list/tei:item)">an ab[@type='appellation']
-                                    must contain a list.</sch:report>
-                            </sch:rule>
-                        </constraint>
-                    </constraintSpec>
+                <elementSpec ident="ab" mode="change" module="linking">                    
                     <attList>
                         <attDef ident="type" mode="replace" usage="opt">
                             <valList type="semi">
