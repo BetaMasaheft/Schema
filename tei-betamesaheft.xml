@@ -2244,6 +2244,9 @@ End license statement: do not remove -->
                                 <valItem ident="Original">
                                     <desc>EMA</desc>
                                 </valItem>
+                                <valItem ident="full">
+                                    <desc>for expanded files</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                         <attDef ident="subtype" mode="change" usage="opt">
