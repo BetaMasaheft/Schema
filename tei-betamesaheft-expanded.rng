@@ -6665,19 +6665,7 @@ Suggested values include: 1] AB; 2] ABr; 3] ES; 4] PL; 5] DN; 6] MV; 7] SG; 8] D
       <element name="title">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a title for any kind of work. [3.11.2.2. Titles, Authors, and Editors 2.2.1. The Title Statement 2.2.5. The Series Statement]</a:documentation>
          <ref name="tei_macro.paraContent"/>
-         <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-title-title-constraint-rule-12">
-            <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
-                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                      xmlns:sch="http://purl.oclc.org/dsdl/schematron"
-                      context="tei:title[not(@type='short')][ancestor::tei:TEI[@type='work']][ancestor::tei:titleStmt]">
-                                <sch:report test="not(@xml:id or @corresp)">title in a Work entity
-                                    must always have an @xml:id which identifies alternative titles
-                                    or a @corresp pointing to one of such xml:ids. Format of the id
-                                    should be like t1 t2, etc. and thus in @corresp #t1, #t2,
-                                    etc.</sch:report>
-                            </sch:rule>
-         </pattern>
+         
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.canonical.attributes"/>
          <ref name="tei_att.datable.attributes"/>

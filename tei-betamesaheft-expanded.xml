@@ -1713,19 +1713,7 @@
 
                 <!--          suggest use in title of type complete, incomplete, normalized or alternative-->
                 <elementSpec ident="title" mode="change" module="core">
-                    <constraintSpec scheme="isoschematron" ident="title">
-                        <constraint>
-                            <sch:rule
-                                context="tei:title[not(@type='short')][ancestor::tei:TEI[@type='work']][ancestor::tei:titleStmt]">
-                                <sch:report test="not(@xml:id or @corresp)">title in a Work entity
-                                    must always have an @xml:id which identifies alternative titles
-                                    or a @corresp pointing to one of such xml:ids. Format of the id
-                                    should be like t1 t2, etc. and thus in @corresp #t1, #t2,
-                                    etc.</sch:report>
-                            </sch:rule>
-
-                        </constraint>
-                    </constraintSpec>
+                    
                     <attList>
                         <attDef ident="evidence" mode="add" usage="opt">
                             <datatype maxOccurs="6">
