@@ -6093,7 +6093,10 @@ Suggested values include: 1] commemoration; 2] liturgical; 3] résumé; 4] scien
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>transcription</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <data type="Name"/>
+                  <data type="token">
+                     <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                  </data>
+                  
                </choice>
             </attribute>
          </optional>
@@ -6459,147 +6462,150 @@ Suggested values include: 1] generalEditor</a:documentation>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
 Suggested values include: 1] AB; 2] ABr; 3] ES; 4] PL; 5] DN; 6] MV; 7] SG; 8] DR; 9] FP; 10] SS; 11] RHC; 12] SJ; 13] JG; 14] SA; 15] SD; 16] VP; 17] IF; 18] SH; 19] FP; 20] DE; 21] MK; 22] VR; 23] AA; 24] EG; 25] IR; 26] MB; 27] NV; 28] MP; 29] JK; 30] EDS; 31] SF; 32] IP; 33] RBO; 34] AR; 35] AH; 36] JS; 37] AW; 38] JML; 39] AG; 40] AWi; 41] SDe; 42] RL; 43] JS; 44] WD; 45] CH; 46] AE; 47] HE; 48] MA; 49] LB; 50] LM; 51] ED; 52] SSe; 53] CD; 54] HS; 55] ABe; 56] SK; 57] HA; 58] MKr; 59] AD; 60] HM; 61] MBä; 62] GC; 63] AS; 64] GA; 65] AY; 66] GS; 67] IZ; 68] DB; 69] CS; 70] JE</a:documentation>
                <choice>
-                  <value>AB</value>
+                  <value>#AB</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Alessandro Bausi</a:documentation>
-                  <value>ABr</value>
+                  <value>#ABr</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Antonella Brita</a:documentation>
-                  <value>ES</value>
+                  <value>#ES</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Eugenia Sokolinski</a:documentation>
-                  <value>PL</value>
+                  <value>#PL</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Pietro Maria Liuzzo</a:documentation>
-                  <value>DN</value>
+                  <value>#DN</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Denis Nosnitsin</a:documentation>
-                  <value>MV</value>
+                  <value>#MV</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Massimo Villa</a:documentation>
-                  <value>SG</value>
+                  <value>#SG</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Solomon Gebreyes Beyene</a:documentation>
-                  <value>DR</value>
+                  <value>#DR</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dorothea Reule</a:documentation>
-                  <value>FP</value>
+                  <value>#FP</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Francesca Panini</a:documentation>
-                  <value>SS</value>
+                  <value>#SS</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sisay Sahile</a:documentation>
-                  <value>RHC</value>
+                  <value>#RHC</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ran HaCohen</a:documentation>
-                  <value>SJ</value>
+                  <value>#SJ</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sybilla Jenner</a:documentation>
-                  <value>JG</value>
+                  <value>#JG</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Jacopo Gnisci</a:documentation>
-                  <value>SA</value>
+                  <value>#SA</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Stéphane Ancel</a:documentation>
-                  <value>SD</value>
+                  <value>#SD</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sophia Dege-Müller</a:documentation>
-                  <value>VP</value>
+                  <value>#VP</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Vitagrazia Pisani</a:documentation>
-                  <value>IF</value>
+                  <value>#IF</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Iosif Fridman</a:documentation>
-                  <value>SH</value>
+                  <value>#SH</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Susanne Hummel</a:documentation>
-                  <value>FP</value>
+                  <value>#FP</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Francesca Panini</a:documentation>
-                  <value>DE</value>
+                  <value>#DE</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Daria Elagina</a:documentation>
-                  <value>MK</value>
+                  <value>#MK</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Magdalena Krzyżanowska</a:documentation>
-                  <value>VR</value>
+                  <value>#VR</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Veronika Roth</a:documentation>
-                  <value>AA</value>
+                  <value>#AA</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Abreham Adugna</a:documentation>
-                  <value>EG</value>
+                  <value>#EG</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ekaterina Gusarova</a:documentation>
-                  <value>IR</value>
+                  <value>#IR</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Irene Roticiani</a:documentation>
-                  <value>MB</value>
+                  <value>#MB</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Maria Bulakh</a:documentation>
-                  <value>NV</value>
+                  <value>#NV</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Nafisa Valieva</a:documentation>
-                  <value>MP</value>
+                  <value>#MP</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Michele Petrone</a:documentation>
-                  <value>JK</value>
+                  <value>#JK</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Jonas Karlsson</a:documentation>
-                  <value>EDS</value>
+                  <value>#EDS</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Eliana Dal Sasso</a:documentation>
-                  <value>SF</value>
+                  <value>#SF</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sara Fani</a:documentation>
-                  <value>IP</value>
+                  <value>#IP</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Irmeli Perho</a:documentation>
-                  <value>RBO</value>
+                  <value>#RBO</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Rasmus Bech Olsen</a:documentation>
-                  <value>AR</value>
+                  <value>#AR</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Anne Regourd</a:documentation>
-                  <value>AH</value>
+                  <value>#AH</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Adday Hernández</a:documentation>
-                  <value>JS</value>
+                  <value>#JS</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Joshua Sabih</a:documentation>
-                  <value>AW</value>
+                  <value>#AW</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Andreas Wetter'</a:documentation>
-                  <value>JML</value>
+                  <value>#JML</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">John Møller Larsen</a:documentation>
-                  <value>AG</value>
+                  <value>#AG</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Alessandro Gori</a:documentation>
-                  <value>AWi</value>
+                  <value>#AWi</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Anaïs Wion</a:documentation>
-                  <value>SDe</value>
+                  <value>#SDe</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Steve Delamarter</a:documentation>
-                  <value>RL</value>
+                  <value>#RL</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ralph Lee</a:documentation>
-                  <value>JS</value>
+                  <value>#JS</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Jonah Sandford</a:documentation>
-                  <value>WD</value>
+                  <value>#WD</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Wolfgang Dickhut</a:documentation>
-                  <value>CH</value>
+                  <value>#CH</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Carsten Hoffmann</a:documentation>
-                  <value>AE</value>
+                  <value>#AE</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Andreas Ellwardt</a:documentation>
-                  <value>HE</value>
+                  <value>#HE</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Hiruie Ermias</a:documentation>
-                  <value>MA</value>
+                  <value>#MA</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Mersha Alehegne</a:documentation>
-                  <value>LB</value>
+                  <value>#LB</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Leonard Bahr</a:documentation>
-                  <value>LM</value>
+                  <value>#LM</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Leah Mascia</a:documentation>
-                  <value>ED</value>
+                  <value>#ED</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Eyob Derillo</a:documentation>
-                  <value>SSe</value>
+                  <value>#SSe</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Simone Seyboldt</a:documentation>
-                  <value>CD</value>
+                  <value>#CD</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Coleman Donaldson</a:documentation>
-                  <value>HS</value>
+                  <value>#HS</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Hewan Semon</a:documentation>
-                  <value>ABe</value>
+                  <value>#ABe</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ashlee Benson</a:documentation>
-                  <value>SK</value>
+                  <value>#SK</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sergey Kim</a:documentation>
-                  <value>HA</value>
+                  <value>#HA</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Hagos Abrha</a:documentation>
-                  <value>MKr</value>
+                  <value>#MKr</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Marcin Krawczuk</a:documentation>
-                  <value>AD</value>
+                  <value>#AD</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Augustine Dickinson</a:documentation>
-                  <value>HM</value>
+                  <value>#HM</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Hizkiel Mitiku</a:documentation>
-                  <value>MBä</value>
+                  <value>#MBä</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Matteo Bächtold</a:documentation>
-                  <value>GC</value>
+                  <value>#GC</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Giulia Casella</a:documentation>
-                  <value>AS</value>
+                  <value>#AS</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Angela Salerno</a:documentation>
-                  <value>GA</value>
+                  <value>#GA</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Getinet Asimare</a:documentation>
-                  <value>AY</value>
+                  <value>#AY</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Addisie Yalew</a:documentation>
-                  <value>GS</value>
+                  <value>#GS</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Guesh Solomon</a:documentation>
-                  <value>IZ</value>
+                  <value>#IZ</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ilaria Zorzan</a:documentation>
-                  <value>DB</value>
+                  <value>#DB</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dirbwork Bitsu</a:documentation>
-                  <value>CS</value>
+                  <value>#CS</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Calum Samuelson</a:documentation>
-                  <value>JE</value>
+                  <value>#JE</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Jonathan Egid</a:documentation>
-                  <data type="Name"/>
+                  <data type="token">
+                     <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                  </data>
+                  
                </choice>
             </attribute>
          </optional>
@@ -6712,7 +6718,10 @@ Suggested values include: 1] complete; 2] incomplete; 3] normalized; 4] translit
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">EMA</a:documentation>
                   <value>full</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for expanded files</a:documentation>
-                  <data type="Name"/>
+                  <data type="token">
+                     <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                  </data>
+                  
                </choice>
             </attribute>
          </optional>
@@ -8847,157 +8856,160 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
 Suggested values include: 1] HA; 2] SK; 3] MGO; 4] EF; 5] BC; 6] MAm; 7] AC; 8] AB; 9] ABr; 10] ES; 11] DN; 12] DR; 13] MV; 14] SG; 15] PL; 16] SH; 17] EG; 18] MK; 19] VP; 20] SA; 21] VR; 22] AA; 23] SD; 24] IR; 25] IF; 26] MB; 27] FP; 28] RHC; 29] SJ; 30] SS; 31] DE; 32] NV; 33] JG; 34] JK; 35] EDS; 36] IP; 37] RBO; 38] AR; 39] AH; 40] JS; 41] AW; 42] JML; 43] AG; 44] AWi; 45] SDe; 46] RL; 47] JS; 48] CH; 49] WD; 50] AE; 51] HE; 52] AM; 53] SF; 54] MP; 55] MA; 56] LB; 57] LM; 58] ED; 59] SSe; 60] CD; 61] HS; 62] ABe; 63] MKr; 64] AD; 65] HM; 66] MBä; 67] GC; 68] AS; 69] GS; 70] GA; 71] AY; 72] IZ; 73] DB; 74] CS; 75] JE</a:documentation>
                <choice>
-                  <value>HA</value>
+                  <value>#HA</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Hagos Abrha</a:documentation>
-                  <value>SK</value>
+                  <value>#SK</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sergey Kim</a:documentation>
-                  <value>MGO</value>
+                  <value>#MGO</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Meseret G. Oldjira</a:documentation>
-                  <value>EF</value>
+                  <value>#EF</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Éloi Ficquet</a:documentation>
-                  <value>BC</value>
+                  <value>#BC</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Brando Carmen</a:documentation>
-                  <value>MAm</value>
+                  <value>#MAm</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Martina Ambu</a:documentation>
-                  <value>AC</value>
+                  <value>#AC</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Amélie Chekroun</a:documentation>
-                  <value>AB</value>
+                  <value>#AB</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Alessandro Bausi</a:documentation>
-                  <value>ABr</value>
+                  <value>#ABr</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Antonella Brita</a:documentation>
-                  <value>ES</value>
+                  <value>#ES</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Eugenia Sokolinski</a:documentation>
-                  <value>DN</value>
+                  <value>#DN</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Denis Nosnitsin</a:documentation>
-                  <value>DR</value>
+                  <value>#DR</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dorothea Reule</a:documentation>
-                  <value>MV</value>
+                  <value>#MV</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Massimo Villa</a:documentation>
-                  <value>SG</value>
+                  <value>#SG</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Solomon Gebreyes Beyene</a:documentation>
-                  <value>PL</value>
+                  <value>#PL</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Pietro Liuzzo</a:documentation>
-                  <value>SH</value>
+                  <value>#SH</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">S. Hummel</a:documentation>
-                  <value>EG</value>
+                  <value>#EG</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">E. Gusarova</a:documentation>
-                  <value>MK</value>
+                  <value>#MK</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">M. Krzyżanowska</a:documentation>
-                  <value>VP</value>
+                  <value>#VP</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">V. Pisani</a:documentation>
-                  <value>SA</value>
+                  <value>#SA</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">S. Ancel</a:documentation>
-                  <value>VR</value>
+                  <value>#VR</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">V. Roth</a:documentation>
-                  <value>AA</value>
+                  <value>#AA</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A. Adugna</a:documentation>
-                  <value>SD</value>
+                  <value>#SD</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sophia Dege-Müller</a:documentation>
-                  <value>IR</value>
+                  <value>#IR</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">I. Roticiani</a:documentation>
-                  <value>IF</value>
+                  <value>#IF</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">I. Fridman</a:documentation>
-                  <value>MB</value>
+                  <value>#MB</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">M. Bulakh</a:documentation>
-                  <value>FP</value>
+                  <value>#FP</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Francesca Panini</a:documentation>
-                  <value>RHC</value>
+                  <value>#RHC</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ran HaCohen</a:documentation>
-                  <value>SJ</value>
+                  <value>#SJ</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sybilla Jenner</a:documentation>
-                  <value>SS</value>
+                  <value>#SS</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sisay Sahile</a:documentation>
-                  <value>DE</value>
+                  <value>#DE</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Daria Elagina</a:documentation>
-                  <value>NV</value>
+                  <value>#NV</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Nafisa Valieva</a:documentation>
-                  <value>JG</value>
+                  <value>#JG</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Jacopo Gnisci</a:documentation>
-                  <value>JK</value>
+                  <value>#JK</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Jonas Karlsson</a:documentation>
-                  <value>EDS</value>
+                  <value>#EDS</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Eliana Dal Sasso</a:documentation>
-                  <value>IP</value>
+                  <value>#IP</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Irmeli Perho</a:documentation>
-                  <value>RBO</value>
+                  <value>#RBO</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Rasmus Bech Olsen</a:documentation>
-                  <value>AR</value>
+                  <value>#AR</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Anne Regourd</a:documentation>
-                  <value>AH</value>
+                  <value>#AH</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Adday Hernández</a:documentation>
-                  <value>JS</value>
+                  <value>#JS</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Joshua Sabih</a:documentation>
-                  <value>AW</value>
+                  <value>#AW</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Andreas Wetter'</a:documentation>
-                  <value>JML</value>
+                  <value>#JML</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">John Møller Larsen</a:documentation>
-                  <value>AG</value>
+                  <value>#AG</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Alessandro Gori</a:documentation>
-                  <value>AWi</value>
+                  <value>#AWi</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Anaïs Wion</a:documentation>
-                  <value>SDe</value>
+                  <value>#SDe</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Steve Delamarter</a:documentation>
-                  <value>RL</value>
+                  <value>#RL</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ralph Lee</a:documentation>
-                  <value>JS</value>
+                  <value>#JS</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Jonah Sandford</a:documentation>
-                  <value>CH</value>
+                  <value>#CH</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Carsten Hoffmann</a:documentation>
-                  <value>WD</value>
+                  <value>#WD</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Wolfgang Dickhut</a:documentation>
-                  <value>AE</value>
+                  <value>#AE</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Andreas Ellwardt</a:documentation>
-                  <value>HE</value>
+                  <value>#HE</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Hiruie Ermias</a:documentation>
-                  <value>AM</value>
+                  <value>#AM</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Angela Müller</a:documentation>
-                  <value>SF</value>
+                  <value>#SF</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sara Fani</a:documentation>
-                  <value>MP</value>
+                  <value>#MP</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Michele Petrone</a:documentation>
-                  <value>MA</value>
+                  <value>#MA</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Mersha Alehegne</a:documentation>
-                  <value>LB</value>
+                  <value>#LB</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Leonard Bahr</a:documentation>
-                  <value>LM</value>
+                  <value>#LM</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Leah Mascia</a:documentation>
-                  <value>ED</value>
+                  <value>#ED</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Eyob Derillo</a:documentation>
-                  <value>SSe</value>
+                  <value>#SSe</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Simone Seyboldt</a:documentation>
-                  <value>CD</value>
+                  <value>#CD</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Coleman Donaldson</a:documentation>
-                  <value>HS</value>
+                  <value>#HS</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Hewan Semon</a:documentation>
-                  <value>ABe</value>
+                  <value>#ABe</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ashlee Benson</a:documentation>
-                  <value>MKr</value>
+                  <value>#MKr</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Marcin Krawczuk</a:documentation>
-                  <value>AD</value>
+                  <value>#AD</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Augustine Dickinson</a:documentation>
-                  <value>HM</value>
+                  <value>#HM</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Hizkiel Mitiku</a:documentation>
-                  <value>MBä</value>
+                  <value>#MBä</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Matteo Bächtold</a:documentation>
-                  <value>GC</value>
+                  <value>#GC</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Giulia Casella</a:documentation>
-                  <value>AS</value>
+                  <value>#AS</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Angela Salerno</a:documentation>
-                  <value>GS</value>
+                  <value>#GS</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Guesh Solomon</a:documentation>
-                  <value>GA</value>
+                  <value>#GA</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Getinet Asimare</a:documentation>
-                  <value>AY</value>
+                  <value>#AY</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Addisie Yalew</a:documentation>
-                  <value>IZ</value>
+                  <value>#IZ</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ilaria Zorzan</a:documentation>
-                  <value>DB</value>
+                  <value>#DB</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dirbwork Bitsu</a:documentation>
-                  <value>CS</value>
+                  <value>#CS</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Calum Samuelson</a:documentation>
-                  <value>JE</value>
+                  <value>#JE</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Jonathan Egid</a:documentation>
-                  <data type="Name"/>
+                  <data type="token">
+                     <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                  </data>
+                  
                </choice>
             </attribute>
          </optional>
@@ -12339,7 +12351,10 @@ Suggested values include: 1] script; 2] ink; 3] rubrication; 4] interpretation; 
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title copied together with the text. </a:documentation>
                   <value>translation</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to signal that the title is only of a translation</a:documentation>
-                  <data type="Name"/>
+                  <data type="token">
+                     <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                  </data>
+                  
                </choice>
             </attribute>
          </optional>
@@ -14395,18 +14410,21 @@ Suggested values include: 1] Y; 2] N</a:documentation>
 Suggested values include: 1] partly; 2] true; 3] false; 4] unknown; 5] Ethiopian; 6] non-Ethiopian</a:documentation>
                <choice>
                   <value>partly</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  
                   <value>true</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  
                   <value>false</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  
                   <value>unknown</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  
                   <value>Ethiopian</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ethiopian</a:documentation>
+                  
                   <value>non-Ethiopian</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">non-Ethiopian</a:documentation>
-                  <data type="Name"/>
+                  
+                  <data type="token">
+                     <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                  </data>
+                  
                </choice>
             </attribute>
          </optional>
