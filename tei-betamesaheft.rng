@@ -13869,27 +13869,7 @@ Suggested values include: 1] UTI; 2] OTI; 3] L; 4] R</a:documentation>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ethiopian</a:documentation>
                      <value>non-Ethiopian</value>
                      <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">non-Ethiopian</a:documentation>
-                  </choice>
-                  <optional>
-                     <choice>
-                        <value>partly</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">See all examples where this value is used <a xmlns="http://www.w3.org/1999/xhtml"
-                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-rootMS%2F%2Ft%3Abinding%5B%40contemporary%3D%27partly%27%5D">here</a>.</a:documentation>
-                        <value>true</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">See all examples where this value is used <a xmlns="http://www.w3.org/1999/xhtml"
-                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-rootMS%2F%2Ft%3Abinding%5B%40contemporary%3D%27true%27%5D">here</a>.</a:documentation>
-                        <value>false</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">See all examples where this value is used <a xmlns="http://www.w3.org/1999/xhtml"
-                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-rootMS%2F%2Ft%3Abinding%5B%40contemporary%3D%27false%27%5D">here</a>.</a:documentation>
-                        <value>unknown</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">See all examples where this value is used <a xmlns="http://www.w3.org/1999/xhtml"
-                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-rootMS%2F%2Ft%3Abinding%5B%40contemporary%3D%27unknown%27%5D">here</a>.</a:documentation>
-                        <value>Ethiopian</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ethiopian</a:documentation>
-                        <value>non-Ethiopian</value>
-                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">non-Ethiopian</a:documentation>
-                     </choice>
-                  </optional>
+                  </choice>                  
                </list>
             </attribute>
          </optional>

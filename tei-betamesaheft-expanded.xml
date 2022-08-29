@@ -84,7 +84,7 @@
                 <elementSpec ident="del" mode="change" module="core">
                     <attList>
                         <attDef ident="rend" mode="replace">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="erasure"><desc>scratched with a knife or similar</desc></valItem>
                                 <valItem ident="strikethrough"><desc>crossed out with red or black ink, a line or dashes</desc></valItem>
                                 <valItem ident="expunctuated"><desc>marked with dots above or below the line</desc></valItem>
@@ -96,7 +96,7 @@
                 <elementSpec ident="binding" mode="change" module="msdescription">
                     <attList>
                         <attDef ident="contemporary" mode="replace">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="partly"/>
                                 <valItem ident="true"/>
                                 <valItem ident="false"/>
@@ -120,7 +120,7 @@
                             >Beta maṣāḥǝft Guidelines</ref></desc>
                     <attList>
                         <attDef ident="place" mode="replace">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="above">
                                     <desc>text written above the line</desc>
                                 </valItem>
@@ -207,7 +207,7 @@
                             <datatype maxOccurs="3">
                                 <dataRef key="teidata.word"/>
                             </datatype>
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="age"><desc>Age, the value should be given in a @dur attribute according to <ref target="https://www.w3.org/TR/xmlschema-2/#duration">W3C datatypes</ref></desc></valItem>
                                 <valItem ident="reign"><desc>Duration of a reign, the value should be given in a @dur attribute according to <ref target="https://www.w3.org/TR/xmlschema-2/#duration">W3C datatypes</ref></desc></valItem>
                                 <valItem ident="life"><desc>Duration of life, the value should be given in a @dur attribute according to <ref target="https://www.w3.org/TR/xmlschema-2/#duration">W3C datatypes</ref></desc></valItem>
@@ -232,7 +232,7 @@
                             </valList>
                         </attDef>
                         <attDef ident="calendar" usage="opt" mode="replace">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="world">
                                     <desc>ʿĀmata ʿālam, ʿĀmat ʾəm-fəṭrat, ʿĀmat ʾəm-ʾAddām, ʿĀmata məḥrat  (=Era of the World)</desc>
                                 </valItem>
@@ -281,7 +281,7 @@
                 <elementSpec ident="personGrp" mode="change" module="namesdates">
                     <attList>
                         <attDef ident="role" mode="change">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="ethnic">
                                     <desc>records with this type represent an ethnic group as a whole and in general</desc>
                                 </valItem>
@@ -306,7 +306,7 @@
                     <attList>
                         <!--    adds list of values to origDate/@type-->
                         <attDef ident="type" mode="replace">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="editor"/>
                                 <valItem ident="mss"/>
                                 <valItem ident="literature"/>
@@ -368,7 +368,7 @@
                     </constraintSpec>
                     <attList>
                         <attDef ident="unit" mode="replace">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="page"><desc>page</desc></valItem>
                                 <valItem ident="chapter"><desc>chapter</desc></valItem>
                                 <valItem ident="column"><desc>column</desc></valItem>
@@ -387,8 +387,8 @@
                 <!--          controlled values for condition-->
                 <elementSpec ident="condition" mode="change" module="msdescription">
                     <attList>
-                        <attDef ident="key" mode="replace" usage="req">
-                            <valList type="open">
+                        <attDef ident="key" mode="replace" usage="opt">
+                            <valList type="semi">
                                 <valItem ident="deficient"><desc>The manuscript is badly preserved and severely damaged.</desc></valItem>
                                 <valItem ident="good"><desc>The manuscript is preserved with minimal damages.</desc></valItem>
                                 <valItem ident="intact"><desc>The manuscript is preserved completely undamaged.</desc></valItem>
@@ -403,7 +403,7 @@
                 <elementSpec ident="term" mode="change" module="msdescription">
                     <attList>
                         <attDef ident="key" mode="replace" usage="rec">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="angel">
                                     <desc><ref target="https://betamasaheft.eu/authority-files/angel"
                                         >See angel in Beta maṣāḥǝft</ref></desc>
@@ -1510,7 +1510,7 @@
                 <elementSpec ident="language" mode="change" module="header">
                     <attList>
                         <attDef ident="ident" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <!--  modified  list of languages coming from myCore-->
                                 <valItem ident="am">
                                     <desc>Amharic</desc>
@@ -1621,7 +1621,7 @@
 
                     <attList>
                         <attDef ident="type" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="mspart">
                                     <desc>Please use this type if <att>corresp</att> is pointing to
                                         the <att>xml:id</att> of a <gi>msPart</gi> in a manuscript
@@ -1734,7 +1734,7 @@
                             
                         </attDef>
                         <attDef ident="type" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="complete">
                                     <desc>the work is contained completely in the manuscript</desc>
                                 </valItem>
@@ -1786,31 +1786,22 @@
                                 <valItem ident="Original">
                                     <desc>EMA</desc>
                                 </valItem>
+                                <valItem ident="full">
+                                    <desc>for expanded files</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                         <attDef ident="subtype" mode="change" usage="opt">
                             <datatype maxOccurs="6">
                                 <dataRef key="teidata.word"/>
                             </datatype>
-                            <valList type="open">
-                                <valItem ident="supplication"><desc>entreat to God for help.
-                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27supplication%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:title[contains(@subtype,'supplication')]</ref></desc></valItem>
-                                <valItem ident="expanded"><desc>contains the title, tafaṣṣama/malʾa and further information.
-                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27expanded%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:title[contains(@subtype,'expanded')]</ref></desc></valItem>
-                                <valItem ident="inscriptio"><desc>is used for a title occurring at the beginning of a work.
-                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:title[contains(@subtype,'inscriptio')]</ref></desc></valItem>
-                                <valItem ident="subscriptio"><desc>for a title occurring at the end of a work.
-                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:title[contains(@subtype,'subscriptio')]</ref></desc></valItem>
-                                <valItem ident="embedded"><desc>for a title copied together with the text.
-                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27embedded%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:title[contains(@subtype,'embedded')]</ref></desc></valItem>
-                                <valItem ident="translation"><desc>to signal that the title is only of a translation.
-                                    Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Atitle%5Bcontains%28%40subtype%2C%27translation%27%29%5D">Beta maṣāḥǝft
-                                        Xpath search for //t:title[contains(@subtype,'translation')]</ref></desc></valItem>
+                            <valList type="semi">
+                                <valItem ident="supplication"></valItem>
+                                <valItem ident="expanded"></valItem>
+                                <valItem ident="inscriptio"></valItem>
+                                <valItem ident="subscriptio"></valItem>
+                                <valItem ident="embedded"></valItem>
+                                <valItem ident="translation"></valItem>
                             </valList>
                         </attDef>
                     </attList>
@@ -1819,17 +1810,17 @@
                 <!--                constrain use of type in listBibl and suggest values-->
                 <elementSpec ident="listBibl" mode="change" module="core">
                     <attList>
-                        <attDef ident="type" mode="replace" usage="req">
-                            <valList type="open">
-                                <valItem ident="mss"><desc></desc></valItem>
-                                <valItem ident="catalogue"><desc>Descriptions in manuscript catalogues of the subject of the record</desc></valItem>
-                                <valItem ident="editions"><desc> Editions of the work</desc></valItem>
-                                <valItem ident="text"><desc></desc></valItem>
-                                <valItem ident="otherLanguages"><desc></desc></valItem>
-                                <valItem ident="clavis"><desc>ID of the work in an external clavis (CC, CPG etc.)</desc></valItem>
-                                <valItem ident="translation"><desc>Modern translations of the work </desc></valItem>
-                                <valItem ident="secondary"><desc>Secondary bibliography on the subject of the record</desc></valItem>
-                                <valItem ident="relations"><desc>Relations between the subject of the record and other entities (persons, related works, manuscript filiation etc.)</desc></valItem>
+                        <attDef ident="type" mode="replace" usage="opt">
+                            <valList type="semi">
+                                <valItem ident="mss"></valItem>
+                                <valItem ident="catalogue"></valItem>
+                                <valItem ident="editions"></valItem>
+                                <valItem ident="text"></valItem>
+                                <valItem ident="otherLanguages"></valItem>
+                                <valItem ident="clavis"></valItem>
+                                <valItem ident="translation"></valItem>
+                                <valItem ident="secondary"></valItem>
+                                <valItem ident="relations"></valItem>
                             </valList>
                         </attDef>
                     </attList>
@@ -1838,8 +1829,8 @@
                 <!--                constrain use of type in occupation and suggest values-->
                 <elementSpec ident="occupation" mode="change" module="namesdates">
                     <attList>
-                        <attDef ident="type" mode="replace" usage="req">
-                            <valList type="open">
+                        <attDef ident="type" mode="replace" usage="opt">
+                            <valList type="semi">
                                 <valItem ident="ruler"><desc>Ruler of a country, region or similar</desc></valItem>
                                 <valItem ident="military"><desc>Military occupation</desc></valItem>
                                 <valItem ident="academic"><desc>Occupation within an academic institution or independently pursuing academic interests</desc></valItem>
@@ -1857,11 +1848,11 @@
                 <!--          specifies values for faith element, limiting number of values to 2 for "further specification"-->
                 <elementSpec ident="faith" mode="change" module="namesdates">
                     <attList>
-                        <attDef ident="type" mode="replace" usage="req">
+                        <attDef ident="type" mode="replace" usage="opt">
                             <datatype maxOccurs="3">
                                 <rng:ref name="data.word"/>
                             </datatype>
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="EOTC"/>
                                 <valItem ident="Christianity"/>
                                 <valItem ident="Catholicism"/>
@@ -1891,11 +1882,11 @@
                 <!--          specifies values for faith element, limiting number of values to 2 for "further specification"-->
                 <elementSpec ident="nationality" mode="change" module="namesdates">
                     <attList>
-                        <attDef ident="type" mode="replace" usage="req">
+                        <attDef ident="type" mode="replace" usage="opt">
                             <datatype maxOccurs="2">
                                 <rng:ref name="data.word"/>
                             </datatype>
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="Ethiopia"/>
                                 <valItem ident="Aksumite"/>
                                 <valItem ident="post-Aksumite"/>
@@ -1949,8 +1940,8 @@
                 <!--                constrain use of type in roleName and suggest values-->
                 <elementSpec ident="roleName" mode="change" module="namesdates">
                     <attList>
-                        <attDef ident="type" mode="replace" usage="req">
-                            <valList type="open">
+                        <attDef ident="type" mode="replace" usage="opt">
+                            <valList type="semi">
                                 <valItem ident="function"/>
                                 <valItem ident="title"/>
                                 <valItem ident="office"/>
@@ -1968,7 +1959,7 @@
                     <!--              this optional value points to a manuscript not in BetMes catalogue-->
                     <attList>
                         <attDef ident="type" mode="add" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="external"/>
                             </valList>
                         </attDef>
@@ -1996,7 +1987,7 @@
                 <elementSpec ident="desc" mode="change" module="msdescription">
                     <attList>
                         <attDef ident="type" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="foundation">
                                     <desc> to be used for places and institutions</desc>
                                 </valItem>
@@ -2145,7 +2136,7 @@
                 <elementSpec ident="dim" mode="change" module="msdescription">
                     <attList>
                         <attDef ident="unit" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="mm"/>
                                 <valItem ident="leaf"/>
                                 <valItem ident="quire"/>
@@ -2153,7 +2144,7 @@
                             </valList>
                         </attDef>
                         <attDef ident="type" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="intercolumn"/>
                                 <valItem ident="top"/>
                                 <valItem ident="bottom"/>
@@ -2193,7 +2184,7 @@
                     </constraintSpec>
                     <attList>
                         <attDef ident="type" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
 
                                 <!--                          list coming from myCore-->
                                 <valItem ident="history"/>
@@ -2209,7 +2200,7 @@
                             </valList>
                         </attDef>
                         <attDef ident="subtype" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="pattern"/>
                                 <valItem ident="usage"/>
                                 <valItem ident="executed"/>
@@ -2230,8 +2221,8 @@
                         </constraint>
                     </constraintSpec>
                     <attList>
-                        <attDef ident="type" mode="replace" usage="req">
-                            <valList type="open">
+                        <attDef ident="type" mode="replace" usage="opt">
+                            <valList type="semi">
 
                                 <valItem ident="script"/>
                                 <valItem ident="ink"/>
@@ -2250,7 +2241,7 @@
                             </valList>
                         </attDef>
                         <attDef ident="rend"  mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="above"/>
                                 <valItem ident="below"/>
                             </valList>
@@ -2279,7 +2270,7 @@
                         </constraint>
                     </constraintSpec>
                     <attList>
-                        <attDef ident="xml:id" mode="change" usage="req"/>
+                        <attDef ident="xml:id" mode="change" usage="opt"/>
                         <attDef ident="color" mode="add" usage="opt"/>
                         <attDef ident="pastedown" mode="add" usage="opt">
                             <datatype maxOccurs="3">
@@ -2306,14 +2297,14 @@
                             <datatype maxOccurs="1">
                                 <dataRef key="teidata.word"/>
                             </datatype>
-                            <valList type="open">
+                            <valList type="semi">
                                 
                                 <valItem ident="Y"/>
                                 <valItem ident="N"/>
                             </valList>
                         </attDef>
                         <attDef ident="type" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 
                                 <!--                                these are classes but no authority file exists. should one? or is it fine without?-->
                                 <valItem ident="frame">
@@ -2445,7 +2436,7 @@
                             </valList>
                         </attDef>
                         <attDef ident="rend" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="damaged"/>
                                 <valItem ident="intact"/>
                             </valList>
@@ -2455,8 +2446,8 @@
 
                 <elementSpec ident="custEvent" mode="change" module="msdescription">
                     <attList>
-                        <attDef ident="subtype" mode="replace" usage="req">
-                            <valList type="open">
+                        <attDef ident="subtype" mode="replace" usage="opt">
+                            <valList type="semi">
                                 <valItem ident="ancient"/>
                                 <valItem ident="modern"/>
                                 <valItem ident="none"/>
@@ -2484,7 +2475,7 @@
                         </constraint>
                     </constraintSpec>
                     <attList>
-                        <attDef ident="xml:id" mode="change" usage="req"/>
+                        <attDef ident="xml:id" mode="change" usage="opt"/>
                     </attList>
                 </elementSpec>
 
@@ -2507,7 +2498,7 @@
                         </constraint>
                     </constraintSpec>
                     <attList>
-                        <attDef ident="xml:id" mode="change" usage="req"/>
+                        <attDef ident="xml:id" mode="change" usage="opt"/>
                     </attList>
                 </elementSpec>
 
@@ -2528,12 +2519,12 @@
                         </constraint>
                     </constraintSpec>
                     <attList>
-                        <attDef ident="xml:id" mode="change" usage="req"/>
+                        <attDef ident="xml:id" mode="change" usage="opt"/>
                         <attDef ident="type" mode="change" usage="opt">
                             <datatype maxOccurs="6">
                                 <dataRef key="teidata.word"/>
                             </datatype>
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="supplication"></valItem>
                                 <valItem ident="expanded"></valItem>
                                 <valItem ident="inscriptio"></valItem>
@@ -2557,9 +2548,9 @@
                         </constraint>
                     </constraintSpec>
                     <attList>
-                        <attDef ident="xml:id" mode="change" usage="req"/>
-                        <attDef ident="script" mode="replace" usage="req">
-                            <valList type="open">
+                        <attDef ident="xml:id" mode="change" usage="opt"/>
+                        <attDef ident="script" mode="replace" usage="opt">
+                            <valList type="semi">
 
                                 <!--                          list coming from myCore-->
                                 <valItem ident="Arabic"/>
@@ -2581,7 +2572,7 @@
                 <elementSpec ident="editor" mode="change" module="core">
                     <attList>
                         <attDef ident="key" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="AB">
                                     <desc>Alessandro Bausi</desc>
                                 </valItem>
@@ -2786,7 +2777,7 @@
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="generalEditor"/>
                             </valList>
                         </attDef>
@@ -2797,7 +2788,7 @@
 
                     <attList>
                         <attDef ident="who" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="HA">
                                     <desc>Hagos Abrha</desc>
                                 </valItem>
@@ -3004,7 +2995,7 @@
                                 </valItem>
                             </valList>
                         </attDef>
-                        <attDef ident="when" mode="replace" usage="req"/>
+                        <attDef ident="when" mode="replace" usage="opt"/>
                     </attList>
                 </elementSpec>
 
@@ -3012,7 +3003,7 @@
                 <elementSpec ident="height" mode="change" module="msdescription">
                     <attList>
                         <attDef ident="unit" mode="replace">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="m"/>
                             </valList>
                         </attDef>
@@ -3035,7 +3026,7 @@
                     <attList>
                         <attDef ident="ref" mode="change" usage="rec"/>
                         <attDef ident="role" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="illustrator">
                                     <desc>the illustrator of the manuscript</desc>
                                 </valItem>
@@ -3119,7 +3110,7 @@
                             <datatype maxOccurs="6">
                                 <dataRef key="teidata.word"/>
                             </datatype>
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="privateHouse">
                                     
                                 </valItem>
@@ -3384,8 +3375,8 @@
                 <!--          controlled values for material-->
                 <elementSpec ident="material" mode="change" module="msdescription">
                     <attList>
-                        <attDef ident="key" mode="replace" usage="req">
-                            <valList type="open">
+                        <attDef ident="key" mode="replace" usage="opt">
+                            <valList type="semi">
 
                                 <!--                          list coming from myCore-->
                                 <valItem ident="wood"/>
@@ -3411,7 +3402,7 @@
                 <elementSpec ident="explicit" mode="change" module="msdescription">
                     <attList>
                         <attDef ident="type" mode="change" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="supplication"></valItem>
                                 <valItem ident="expanded"></valItem>
                                 <valItem ident="inscriptio"></valItem>
@@ -3427,7 +3418,7 @@
                 <elementSpec ident="incipit" mode="change" module="msdescription">
                     <attList>
                         <attDef ident="type" mode="change" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="supplication"></valItem>
                                 <valItem ident="expanded"></valItem>
                                 <valItem ident="inscriptio"></valItem>
@@ -3454,7 +3445,7 @@
                     </constraintSpec>
                     <attList>
                         <attDef ident="form" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
 
                                 
                                 <valItem ident="Codex"><desc>manuscript format consisting of quires bound together to the spine, in their turn made up of a variable number of leaves sewn together and protected by two hard boards.</desc></valItem>
@@ -3482,7 +3473,7 @@
                 <elementSpec ident="note" mode="change" module="core">
                     <attList>
                         <attDef ident="type" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="commemoration"/>
                                 <valItem ident="liturgical"/>
                                 <valItem ident="résumé"/>
@@ -3511,8 +3502,8 @@
                         </constraint>
                     </constraintSpec>
                     <attList>
-                        <attDef ident="name" mode="replace" usage="req">
-                            <valList type="open">
+                        <attDef ident="name" mode="replace" usage="opt">
+                            <valList type="semi">
                                 <valItem ident="dc:relation">
                                     
                                 </valItem>
@@ -4585,8 +4576,8 @@
                         </constraint>
                     </constraintSpec>
                     <attList>
-                        <attDef ident="type" mode="replace" usage="req">
-                            <valList type="open">
+                        <attDef ident="type" mode="replace" usage="opt">
+                            <valList type="semi">
                                 <valItem ident="apparatus">
                                     <desc>to contain apparatus criticus or textual notes</desc>
                                 </valItem>
@@ -4613,7 +4604,7 @@
                             </valList>
                         </attDef>
                         <attDef ident="subtype" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="book">
                                     <desc>this container is for a book and may contain
                                         chapters</desc>
@@ -4656,7 +4647,7 @@
                         </constraint>
                     </constraintSpec>
                     <attList>
-                        <attDef ident="xml:id" mode="change" usage="req">
+                        <attDef ident="xml:id" mode="change" usage="opt">
                             <desc>For Manuscripts e.g. EMML2312 ES15 (Ethio-SPaRe) BLadd100 (British
                                 Library, fondo, numero) BNFabb3 (Bibliotheque nationale de France,
                                 fondo, numero) Works = LIT1001Homili (LIT + incremental number +
@@ -4667,8 +4658,8 @@
                                 name)</desc>
                         </attDef>
 
-                        <attDef ident="type" mode="replace" usage="req">
-                            <valList type="open">
+                        <attDef ident="type" mode="replace" usage="opt">
+                            <valList type="semi">
                                 <valItem ident="mss">
                                     <desc>Description of a Manuscript</desc>
                                 </valItem>
@@ -4764,7 +4755,7 @@
                     
                     <attList>
                         <attDef ident="rend" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="marginal"/>
                                 <valItem ident="guardLeaf"/>
                             </valList>
@@ -4796,7 +4787,7 @@
                             </valList>
                         </attDef>
                         <!-- constrained attribute list for supplied/@reason -->
-                        <attDef ident="reason" mode="replace" usage="req">
+                        <attDef ident="reason" mode="replace" usage="opt">
                             <valList type="closed">
                                 <valItem ident="lost">
                                     <desc>Restoration of text completely lost from the
@@ -4828,13 +4819,11 @@
                             Guidelines</ref></desc>
                     <attList>
                         <attDef ident="reason" mode="add" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="rubrication">
-                                    <desc>space voluntarily left e.g. for later rubrication never
-                                        accomplished </desc>
                                 </valItem>
                                 <valItem ident="owner">
-                                    <desc>space voluntarily left e.g. for a potential owner</desc>
+                                    
                                 </valItem>
                             </valList>
                         </attDef>
@@ -4847,24 +4836,20 @@
                         <ref target="https://betamasaheft.eu/Guidelines/?id=gap">Beta maṣāḥǝft
                             Guidelines</ref></desc>
                     <attList>
-                        <attDef ident="reason" mode="replace" usage="req">
+                        <attDef ident="reason" mode="replace" usage="opt">
                             <valList type="closed">
                                 <valItem ident="lost">
-                                    <desc>used to indicate a material loss or a portion of text that
-                                        is to be hypothesized for material reasons ("it was
-                                        there!"), but which is lost for loss of the material</desc>
+                                    
                                 </valItem>
                                 <!--                                the following definitions have been inherited from EpiDoc schema-->
                                 <valItem ident="illegible">
-                                    <desc>a sign, pointing to the place where the text should be
-                                        added</desc>
+                                    
                                 </valItem>
                                 <valItem ident="omitted">
-                                    <desc>Text erroneously omitted from the surface by the scribe</desc>
+                                    
                                 </valItem>
                                 <valItem ident="ellipsis">
-                                    <desc>Text omitted from the edition by the editor, for whatever
-                                        reason (brevity, context, language, etc.)</desc>
+                                    
                                 </valItem>
                                 
                             </valList>
@@ -4882,7 +4867,7 @@
                             <datatype maxOccurs="4">
                                 <dataRef key="teidata.enumerated"/>
                             </datatype>
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="upperRight"/>
                                 <valItem ident="upperLeft"/>
                                 <valItem ident="lowerRight"/>
@@ -4899,7 +4884,7 @@
                 <classSpec type="atts" ident="att.dimensions" mode="change">
                     <attList>
                         <attDef ident="precision" mode="replace">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="low"/>
                                 <valItem ident="medium"/>
                                 <valItem ident="high"/>
@@ -4912,7 +4897,7 @@
                 <classSpec type="atts" ident="att.responsibility" mode="change">
                     <attList>
                         <attDef ident="cert" mode="replace">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="low"/>
                                 <valItem ident="high"/>
                             </valList>
