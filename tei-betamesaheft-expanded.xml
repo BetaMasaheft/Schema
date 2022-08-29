@@ -2177,14 +2177,7 @@
 
                 <!--              values for seg in handNote  -->
                 <elementSpec ident="seg" mode="change" module="linking">
-                    <constraintSpec scheme="isoschematron" ident="seg">
-                        <constraint>
-                            <sch:rule context="tei:ab[ancestor::tei:handNote]">
-                                <sch:report test="not(@type or @subtype)">seg in layout should
-                                    always have a type</sch:report>
-                            </sch:rule>
-                        </constraint>
-                    </constraintSpec>
+                    
                     <attList>
                         <attDef ident="type" mode="replace" usage="opt">
                             <valList type="semi">
@@ -2216,24 +2209,7 @@
 
                 <!--          suggest values for decoNote/@type-->
                 <elementSpec ident="decoNote" mode="change" module="msdescription">
-                    <constraintSpec scheme="isoschematron" ident="decoNote">
-                        <constraint>
-                            <!--<sch:rule context="tei:decoNote[not(ancestor::tei:bindingDesc)][not(@type='rubrication')]">
-                                <sch:report test="not(child::tei:locus)">decoNote must contain a
-                                    locus to indicate the position of the feature</sch:report>
-                            </sch:rule>-->
-                            <sch:rule context="tei:decoNote[not(ancestor::tei:bindingDesc)]/@xml:id">
-                                <sch:report test="not(matches(.,'d\d+'))"> DecoNotes must have ids
-                                    starting with the letter 'd' followed by a progressive number,
-                                    e.g. d1, d2, d3 </sch:report>
-                            </sch:rule>
-                            <sch:rule context="tei:decoNote[ancestor::tei:bindingDesc]/@xml:id">
-                                <sch:report test="not(matches(.,'b\d+'))"> DecoNotes in Binding
-                                    Description must have ids starting with the letter 'b' followed
-                                    by a progressive number, e.g. b1, b2, b3 </sch:report>
-                            </sch:rule>
-                        </constraint>
-                    </constraintSpec>
+                    
                     <attList>
                         <attDef ident="xml:id" mode="change" usage="opt"/>
                         <attDef ident="color" mode="add" usage="opt"/>
@@ -2424,21 +2400,7 @@
 
                 <!--          require @xml:id-->
                 <elementSpec ident="msPart" mode="change" module="msdescription">
-                    <constraintSpec scheme="isoschematron" ident="msPart">
-                        <constraint>
-                            <sch:rule context="tei:msPart/@xml:id">
-                                <sch:report test="not(matches(.,'p\d+'))"> Manuscript parts ids must
-                                    start with the letter 'p' followed by a progressive number, e.g.
-                                    p1, p1.3, p1.1_i1.1 </sch:report>
-                                <sch:report test="matches(.,'(_.*){2}')"> The Underscore is used in
-                                    ids to mark a nesting of differnt ids, especially items in
-                                    parts. there should thus be only one of them as a maximum. If
-                                    you have parts into parts or items into items, please use a full
-                                    stop. p1.2_i3.4 is e.g. the subitem 4 of item 3 in subpart 2 of
-                                    part 1. </sch:report>
-                            </sch:rule>
-                        </constraint>
-                    </constraintSpec>
+                    
                     <attList>
                         <attDef ident="xml:id" mode="change" usage="opt"/>
                     </attList>
@@ -2474,15 +2436,7 @@
                             <classRef key="tei_model.biblLike" minOccurs="0" maxOccurs="unbounded"/>
                         </sequence>
                     </content>
-                    <constraintSpec scheme="isoschematron" ident="colophon">
-                        <constraint>
-                            <sch:rule context="tei:colophon/@xml:id">
-                                <sch:report test="not(matches(.,'coloph\d+'))"> Colophon in
-                                    Manuscript items must have ids starting with coloph.
-                                </sch:report>
-                            </sch:rule>
-                        </constraint>
-                    </constraintSpec>
+                    
                     <attList>
                         <attDef ident="xml:id" mode="change" usage="opt"/>
                         <attDef ident="type" mode="change" usage="opt">
@@ -2978,16 +2932,7 @@
 
                 <!--          recomend @corresp in persName and test that is always there in mss and work-->
                 <elementSpec ident="persName" mode="change" module="namesdates">
-                    <constraintSpec scheme="isoschematron" ident="persName">
-                        <constraint>
-                            <sch:rule
-                                context="tei:persName[ancestor::tei:TEI[@type='mss' or @type='place' or @type='ins' or @type='work']][not(parent::tei:respStmt)]">
-                                <sch:report test="not(@ref)">A persName in a mss, place or work
-                                    description should always contain an attribute @ref pointing to
-                                    the relevant record</sch:report>
-                            </sch:rule>
-                        </constraint>
-                    </constraintSpec>
+                    
                     <attList>
                         <attDef ident="ref" mode="change" usage="rec"/>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -3041,16 +2986,7 @@
 
 
                 <elementSpec ident="placeName" mode="change" module="msdescription">
-                    <constraintSpec scheme="isoschematron" ident="placeName">
-                        <constraint>
-                            <sch:rule
-                                context="tei:placeName[ancestor::tei:TEI[@type='mss' or @type='pers' or @type='work']]">
-                                <sch:report test="not(@ref)">A placeName in a mss, person or work
-                                    description should always contain an attribute @ref pointing to
-                                    the relevant record</sch:report>
-                            </sch:rule>
-                        </constraint>
-                    </constraintSpec>
+                    
                     <attList>
                         <attDef ident="ref" mode="change" usage="rec"/>
                         <attDef ident="type" mode="change">
@@ -3454,18 +3390,7 @@
                 <!--controlled values for relation
           between people, places, works-->
                 <elementSpec ident="relation" mode="change" module="namesdates">
-                    <constraintSpec scheme="isoschematron" ident="relation">
-                        <constraint>
-                            <sch:rule context="tei:relation">
-                                <sch:report
-                                    test="not(parent::tei:listRelation or parent::tei:listBibl[@type='relations'])"
-                                    > a relation element is only allowed within a listRelation (for
-                                    places, institution, person and groups) or in a
-                                    listBibl[@type='relations'] in manuscripts and works
-                                </sch:report>
-                            </sch:rule>
-                        </constraint>
-                    </constraintSpec>
+                    
                     <attList>
                         <attDef ident="name" mode="replace" usage="opt">
                             <valList type="semi">
