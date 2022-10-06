@@ -238,7 +238,13 @@ End license statement: do not remove -->
                                     <desc>crossed out with red or black ink, a line or dashes</desc>
                                 </valItem>
                                 <valItem ident="expunctuated">
-                                    <desc>marked with dots above or below the line, marked with lines above and below or encircled</desc>
+                                    <desc>marked with dots above or below the line</desc>
+                                </valItem>
+                                <valItem ident="encircled">
+                                    <desc>encircled</desc>
+                                </valItem>
+                                <valItem ident="overUnderlined">
+                                    <desc>marked with lines above and below</desc>
                                 </valItem>
                                 <valItem ident="effaced">
                                     <desc>deleted or washed out, the material is untouched</desc>
