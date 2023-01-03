@@ -1915,6 +1915,9 @@ End license statement: do not remove -->
                                 <valItem ident="fa">
                                     <desc>Persian</desc>
                                 </valItem>
+                                <valItem ident="sr">
+                                    <desc>Serbian</desc>
+                                </valItem>
                                 <valItem ident="syr">
                                     <desc>Syriac</desc>
                                 </valItem>
