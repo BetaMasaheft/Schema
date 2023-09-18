@@ -9229,6 +9229,14 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Calum Samuelson</a:documentation>
                <value>JE</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Jonathan Egid</a:documentation>
+               <value>TE</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ted Erho</a:documentation>
+               <value>AMB</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Aaron Michael Butts</a:documentation>
+               <value>GB</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gay Byron</a:documentation>
+               <value>EES</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Elizaveta Shvarts</a:documentation>
             </choice>
          </attribute>
          <attribute name="when">
