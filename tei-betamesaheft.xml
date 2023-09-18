@@ -4331,6 +4331,18 @@ End license statement: do not remove -->
                                 <valItem ident="JE">
                                     <desc>Jonathan Egid</desc>
                                 </valItem>
+                                <valItem ident="TE">
+                                    <desc>Ted Erho</desc>
+                                </valItem>
+                                <valItem ident="AMB">
+                                    <desc>Aaron Michael Butts</desc>
+                                </valItem>
+                                <valItem ident="GB">
+                                    <desc>Gay Byron</desc>
+                                </valItem>
+                                <valItem ident="EES">
+                                    <desc>Elizaveta Shvarts</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
