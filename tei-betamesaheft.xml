@@ -476,7 +476,7 @@ End license statement: do not remove -->
                             <datatype maxOccurs="3">
                                 <dataRef key="teidata.word"/>
                             </datatype>
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="age"><desc>Age, the value should be given in a @dur attribute according to <ref target="https://www.w3.org/TR/xmlschema-2/#duration">W3C datatypes</ref></desc></valItem>
                                 <valItem ident="reign"><desc>Duration of a reign, the value should be given in a @dur attribute according to <ref target="https://www.w3.org/TR/xmlschema-2/#duration">W3C datatypes</ref></desc></valItem>
                                 <valItem ident="life"><desc>Duration of life, the value should be given in a @dur attribute according to <ref target="https://www.w3.org/TR/xmlschema-2/#duration">W3C datatypes</ref></desc></valItem>
@@ -672,7 +672,7 @@ End license statement: do not remove -->
                     </constraintSpec>
                     <attList>
                         <attDef ident="unit" mode="replace">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="page">
                                     <desc>page</desc>
                                 </valItem>
@@ -3448,7 +3448,7 @@ End license statement: do not remove -->
                     </constraintSpec>
                     <attList>
                         <attDef ident="type" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
 
                                 <!--                          list coming from myCore-->
                                 <valItem ident="history"/>
@@ -3464,7 +3464,7 @@ End license statement: do not remove -->
                             </valList>
                         </attDef>
                         <attDef ident="subtype" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="pattern"/>
                                 <valItem ident="usage"/>
                                 <valItem ident="executed"/>
@@ -7196,7 +7196,7 @@ End license statement: do not remove -->
                             <datatype maxOccurs="6">
                                 <dataRef key="teidata.word"/>
                             </datatype>
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="book">
                                     <desc>this container is for a book and may contain
                                         chapters</desc>
@@ -7573,7 +7573,7 @@ locus is used to point to values of these elements in the teiHeader.
                     </constraintSpec>
                     <attList>
                         <attDef ident="rend" mode="replace" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="marginal"/>
                                 <valItem ident="guardLeaf"/>
                             </valList>
@@ -7682,7 +7682,7 @@ locus is used to point to values of these elements in the teiHeader.
                             Guidelines</ref></desc>
                     <attList>
                         <attDef ident="reason" mode="add" usage="opt">
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="rubrication">
                                     <desc>space voluntarily left e.g. for later rubrication never
                                         accomplished </desc>
@@ -7764,7 +7764,7 @@ locus is used to point to values of these elements in the teiHeader.
                             <datatype maxOccurs="4">
                                 <dataRef key="teidata.enumerated"/>
                             </datatype>
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="upperRight"/>
                                 <valItem ident="upperLeft"/>
                                 <valItem ident="lowerRight"/>
