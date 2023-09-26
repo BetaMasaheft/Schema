@@ -111,24 +111,6 @@
                         </attDef>
                     </attList>
                 </elementSpec>
-
-                <!--         suggest values for @type in origDate-->
-                <elementSpec ident="origDate" mode="change" module="msdescription">
-                    <attList>
-                        <!--    adds list of values to origDate/@type-->
-                        <attDef ident="type" mode="change">
-                            <valList type="semi">
-                                <valItem ident="editor"/>
-                                <valItem ident="mss"/>
-                                <valItem ident="literature"/>
-                                <valItem ident="foundation"/>
-                                <valItem ident="composition"/>
-                                <valItem ident="translation"/>
-                                <valItem ident="revision"/>
-                            </valList>
-                        </attDef>
-                    </attList>
-                </elementSpec>
                         
                 <!--          controlled values for condition-->
                 <elementSpec ident="condition" mode="change" module="msdescription">

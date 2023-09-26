@@ -591,7 +591,7 @@ End license statement: do not remove -->
                     </exemplum>
                 </elementSpec>
 
-                <!--         suggest values for @type in origDate-->
+                <!--         suggest values for @evidence in origDate-->
                 <elementSpec ident="origDate" mode="change" module="msdescription">
                     <desc>The constraint suggests to use when instead of repeating the same date in
                             <att>notBefore</att> and <att>notAfter</att>. A list of values for
