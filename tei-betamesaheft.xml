@@ -3455,7 +3455,7 @@ End license statement: do not remove -->
                     <attList>
                         <attDef ident="type" mode="replace" usage="opt">
                             <datatype>
-                                <dataRef key="teidata.enumeraded"></dataRef>
+                                <dataRef key="teidata.enumerated"></dataRef>
                             </datatype>
                             <valList type="semi">
 
@@ -3474,7 +3474,7 @@ End license statement: do not remove -->
                         </attDef>
                         <attDef ident="subtype" mode="replace" usage="opt">
                             <datatype>
-                                <dataRef key="teidata.enumeraded"></dataRef>
+                                <dataRef key="teidata.enumerated"></dataRef>
                             </datatype>
                             <valList type="semi">
                                 <valItem ident="pattern"/>
