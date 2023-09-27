@@ -233,7 +233,7 @@
           more values can be added, and up to 6 can be entered in the attribute
           -->
                  <elementSpec ident="dimensions" mode="change" module="msdescription">
-                     <constraintSpec scheme="schematron" ident="witness" mode="delete"/>                    
+                     <constraintSpec scheme="schematron" ident="dimensions" mode="delete"/>                    
                 </elementSpec>
 
                 <!-- desc typologies -->

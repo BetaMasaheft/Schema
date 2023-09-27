@@ -2924,7 +2924,7 @@ End license statement: do not remove -->
                         commas in the numeric values for dimensions <ref
                             target="https://betamasaheft.eu/Guidelines/?id=dimensions">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <constraintSpec scheme="schematron" ident="witness">
+                    <constraintSpec scheme="schematron" ident="dimensions">
                         <constraint>
                             <sch:rule context="tei:dimensions/tei:*">
                                 <sch:report
@@ -4037,9 +4037,9 @@ End license statement: do not remove -->
                         See also, on how to encode titles, supplications and colophons in general,
                         <ref target="https://betamasaheft.eu/Guidelines/?id=ColophSupplTit">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <content>
-                        <macroRef key="macro.phraseSeq"/>
+                    <content>                        
                         <sequence>
+                            <macroRef key="macro.phraseSeq"/>
                             <classRef key="tei_model.biblLike" minOccurs="0" maxOccurs="unbounded"/>
                         </sequence>
                     </content>
@@ -7463,12 +7463,10 @@ End license statement: do not remove -->
                 <elementSpec ident="locus" module="msdescription" mode="change">
                     <desc>locus must have placement attributes, either <att>target</att> or <att>to</att> and <att>from</att><ref target="https://betamasaheft.eu/Guidelines/?id=locus">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <content>
-                        <macroRef key="macro.xtext"/>
+                    <content>                        
                         <sequence>
-
+                            <macroRef key="macro.xtext"/>
                             <classRef key="tei_model.certLike" minOccurs="0" maxOccurs="unbounded"/>
-
                         </sequence>
                     </content>
                     <!--  checks that locus has @target or @from-->
