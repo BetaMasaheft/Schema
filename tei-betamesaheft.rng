@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2023-09-27T17:23:17Z. .
+Schema generated from ODD source 2023-09-27T21:18:01Z. .
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 3.5.0/
@@ -12592,7 +12592,7 @@ You must supply at least two values for @target on <name/>
             </choice>
          </zeroOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
-                  id="tei-betamesaheft-dimensions-witness-constraint-rule-50">
+                  id="tei-betamesaheft-dimensions-dimensions-constraint-rule-50">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
                       xmlns:bm="https://betamasaheft.eu"
                       xmlns:rng="http://relaxng.org/ns/structure/1.0"
@@ -12831,10 +12831,12 @@ Sample values include: 1] leaves; 2] ruled; 3] pricked; 4] written; 5] miniature
             <a xmlns="http://www.w3.org/1999/xhtml"
                href="https://betamasaheft.eu/Guidelines/?id=locus">Beta maṣāḥǝft
                             Guidelines</a> [10.3.5. References to Locations within a Manuscript]</a:documentation>
-         <ref name="tei_macro.xtext"/>
-         <zeroOrMore>
-            <ref name="tei_model.certLike"/>
-         </zeroOrMore>
+         <group>
+            <ref name="tei_macro.xtext"/>
+            <zeroOrMore>
+               <ref name="tei_model.certLike"/>
+            </zeroOrMore>
+         </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-locus-locus-constraint-rule-51">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
@@ -13374,10 +13376,12 @@ Suggested values include: 1] lettering; 2] nomenclature; 3] prosopography; 4] re
                         Guidelines</a>. See also, on how to encode titles, supplications and colophons in general, <a xmlns="http://www.w3.org/1999/xhtml"
                href="https://betamasaheft.eu/Guidelines/?id=ColophSupplTit">Beta maṣāḥǝft
                             Guidelines</a> [10.6.1. The msItem and msItemStruct Elements]</a:documentation>
-         <ref name="tei_macro.phraseSeq"/>
-         <zeroOrMore>
-            <ref name="tei_model.biblLike"/>
-         </zeroOrMore>
+         <group>
+            <ref name="tei_macro.phraseSeq"/>
+            <zeroOrMore>
+               <ref name="tei_model.biblLike"/>
+            </zeroOrMore>
+         </group>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron"
                   id="tei-betamesaheft-colophon-colophon-constraint-rule-54">
             <sch:rule xmlns="http://www.tei-c.org/ns/1.0"
