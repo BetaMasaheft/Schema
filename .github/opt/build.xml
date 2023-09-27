@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="all" basedir="../../" name="schema">
+    <description>Creation of schemas for Beta maṣāḥǝft: Manuscripts of Ethiopia and Eritrea</description>
+    <property name="output.dir" value="."/>
+    <property name="transform.dir" value=".github/opt/transform"/>
+    <property name="bin" value="${transform.dir}/bin"/>
+    <property name="localsource" value="${transform.dir}/source/p5subset.xml"/>    
+    <property name="saxonJar" value="${transform.dir}/lib/saxon10he.jar"/>
+    <property name="source.name" value="tei-betamesaheft"/>
+    <property name="jingJar" value=".github/opt/lib/jing.jar"/>
+    <taskdef name="jing" classpath="${jingJar}" classname="com.thaiopensource.relaxng.util.JingTask"/>
+    <target name="validate">
+        <description>Validate source ODD against tei_odds schema</description>
+    	<get src="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" dest="."/>
+    	<jing rngfile="tei_odds.rng" file="${source.name}.xml"/>
+        <echo message="ODD is valid against RELAXNG schema (without Schematron testing)"></echo>
+    </target>
+    <target name="compile" depends="validate">
+        <description>Create compiled ODD from source schemas so it can be chained</description>
+        <java fork="true" classname="net.sf.saxon.Transform" classpath="${saxonJar}" failonerror="true">            
+            <arg value="-s:${source.name}.xml"/>
+            <arg value="-xsl:${transform.dir}/odds/odd2odd.xsl"/>
+            <arg value="-o:./${source.name}_compiled.xml"/>
+            <arg value="--suppressXsltNamespaceCheck:on"/>
+            <arg value="-versionmsg:off"/>
+        </java>
+        <echo message="create compiled version of ${source.name}.xml"></echo>
+    </target>
+    <target name="schema" depends="compile"> 
+        <description>Create RELAXNG schemas from source ODD and expanded ODD</description>
+        <exec executable="${bin}/teitorelaxng" failonerror="true">
+            <arg line="--localsource=${localsource}"/>
+            <arg file="${source.name}.xml"/>
+            <arg file="${output.dir}/${source.name}.rng"/>
+        </exec>
+        <exec executable="${bin}/teitorelaxng" failonerror="true">
+            <arg line="--localsource=${localsource}"/>
+            <arg file="${source.name}-expanded.xml"/>
+            <arg file="${output.dir}/${source.name}-expanded.rng"/>
+        </exec>
+    </target>
+    <target name="clean">
+        <description>Delete files added to the main repository</description>
+        <delete file="${source.name}_compiled.xml"/>
+        <delete file="tei_odds.rng"/>
+    </target>
+    <target name="all" depends="schema">
+        <antcall target="clean"/>
+    </target>
+</project>
