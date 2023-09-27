@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2023-01-02T14:09:43Z. .
+Schema generated from ODD source 2023-09-27T17:23:17Z. .
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
 TEI Edition Location: https://www.tei-c.org/Vault/P5/Version 3.5.0/
@@ -6246,8 +6246,20 @@ Suggested values include: 1] gloss; 2] index; 3] instructions; 4] litany; 5] syl
          <optional>
             <attribute name="rend">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] marginal; 2] guardLeaf</a:documentation>
-               <text/>
+Suggested values include: 1] marginal; 2] guardLeaf</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <choice>
+                        <value>marginal</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>guardLeaf</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <data type="token">
+                           <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                        </data>
+                     </choice>
+                  </oneOrMore>
+               </list>
             </attribute>
          </optional>
          <empty/>
@@ -6658,8 +6670,18 @@ Elements]</a:documentation>
          <optional>
             <attribute name="role">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] generalEditor</a:documentation>
-               <text/>
+Suggested values include: 1] generalEditor</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <choice>
+                        <value>generalEditor</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <data type="token">
+                           <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                        </data>
+                     </choice>
+                  </oneOrMore>
+               </list>
             </attribute>
          </optional>
          <attribute name="key">
@@ -7144,8 +7166,32 @@ Sample values include: 1] generalEditor</a:documentation>
          <optional>
             <attribute name="unit">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] part; 7] volume; 8] item; 9] fol; 10] note</a:documentation>
-               <text/>
+Suggested values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] part; 7] volume; 8] item; 9] fol; 10] note</a:documentation>
+               <choice>
+                  <value>page</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">page</a:documentation>
+                  <value>chapter</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">chapter</a:documentation>
+                  <value>column</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">column</a:documentation>
+                  <value>issue</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">issue</a:documentation>
+                  <value>line</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">line</a:documentation>
+                  <value>part</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">part</a:documentation>
+                  <value>volume</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">volume</a:documentation>
+                  <value>item</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">item number</a:documentation>
+                  <value>fol</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">folio</a:documentation>
+                  <value>note</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">numbered note (footnote, sidenote, endnote)</a:documentation>
+                  <data type="token">
+                     <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                  </data>
+               </choice>
             </attribute>
          </optional>
          <empty/>
@@ -9240,8 +9286,17 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
             </choice>
          </attribute>
          <attribute name="when">
-            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-            <text/>
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">supplies the value of the date or time in a standard form, e.g. yyyy-mm-dd.</a:documentation>
+            <choice>
+               <data type="date"/>
+               <data type="gYear"/>
+               <data type="gMonth"/>
+               <data type="gDay"/>
+               <data type="gYearMonth"/>
+               <data type="gMonthDay"/>
+               <data type="time"/>
+               <data type="dateTime"/>
+            </choice>
          </attribute>
          <optional>
             <attribute name="target">
@@ -9716,35 +9771,419 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
          <optional>
             <attribute name="subtype">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] book; 2] chapter; 3] stanza; 4] commemoration; 5] incipit; 6] explicit; 7] canon; 8] title; 9] desinit; 10] supplication; 11] expanded; 12] inscriptio; 13] subscriptio; 14] embedded; 15] translation; 16] coretext; 17] textsubunit; 18] colophon; 19] list</a:documentation>
+Suggested values include: 1] book; 2] chapter; 3] stanza; 4] commemoration; 5] incipit; 6] explicit; 7] canon; 8] title; 9] desinit; 10] supplication; 11] expanded; 12] inscriptio; 13] subscriptio; 14] embedded; 15] translation; 16] coretext; 17] textsubunit; 18] colophon; 19] list</a:documentation>
                <list>
-                  <data type="token">
-                     <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-                  </data>
-                  <optional>
+                  <choice>
+                     <value>book</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a book and may contain chapters</a:documentation>
+                     <value>chapter</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a chapter and may contain sections</a:documentation>
+                     <value>stanza</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a stanza and may contain verses</a:documentation>
+                     <value>commemoration</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">texts commemorating a saint or event, usually linked for liturgical reading to a precise date, such as entries in the Sǝnkǝssār</a:documentation>
+                     <value>incipit</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">incipit of the text</a:documentation>
+                     <value>explicit</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">explicit of the text</a:documentation>
+                     <value>canon</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to be used for canonical texts like LIT2688CanonsNicaea2</a:documentation>
+                     <value>title</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the title as well as tafaṣṣama/malʾa or similar expression. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27title%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:div[contains(@subtype,'title')]</a>
+                     </a:documentation>
+                     <value>desinit</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to qualify expressions as tafaṣṣama/malʾa. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27desinit%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:div[contains(@subtype,'desinit')]</a>
+                     </a:documentation>
+                     <value>supplication</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">entreat to God for help. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27supplication%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'supplication')]</a>
+                     </a:documentation>
+                     <value>expanded</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the title, tafaṣṣama/malʾa and further information. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27expanded%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'expanded')]</a>
+                     </a:documentation>
+                     <value>inscriptio</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is used for a title occurring at the beginning of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'inscriptio')]</a>
+                     </a:documentation>
+                     <value>subscriptio</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title occurring at the end of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'subscriptio')]</a>
+                     </a:documentation>
+                     <value>embedded</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title copied together with the text. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27embedded%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'embedded')]</a>
+                     </a:documentation>
+                     <value>translation</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to signal that the title is only of a translation. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                           href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27translation%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'translation')]</a>
+                     </a:documentation>
+                     <value>coretext</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the main content of a text</a:documentation>
+                     <value>textsubunit</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">general way to indicate a specific section of a text that need to be encoded but does not correspond to the other specified textpart</a:documentation>
+                     <value>colophon</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">colophon of a work (not of a manuscript) that is systematically transmitted (copied) with the text</a:documentation>
+                     <value>list</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a number of connected items or names written consecutively, either one after the other or one below the other</a:documentation>
                      <data type="token">
                         <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
                      </data>
+                  </choice>
+                  <optional>
+                     <choice>
+                        <value>book</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a book and may contain chapters</a:documentation>
+                        <value>chapter</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a chapter and may contain sections</a:documentation>
+                        <value>stanza</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a stanza and may contain verses</a:documentation>
+                        <value>commemoration</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">texts commemorating a saint or event, usually linked for liturgical reading to a precise date, such as entries in the Sǝnkǝssār</a:documentation>
+                        <value>incipit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">incipit of the text</a:documentation>
+                        <value>explicit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">explicit of the text</a:documentation>
+                        <value>canon</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to be used for canonical texts like LIT2688CanonsNicaea2</a:documentation>
+                        <value>title</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the title as well as tafaṣṣama/malʾa or similar expression. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27title%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:div[contains(@subtype,'title')]</a>
+                        </a:documentation>
+                        <value>desinit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to qualify expressions as tafaṣṣama/malʾa. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27desinit%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:div[contains(@subtype,'desinit')]</a>
+                        </a:documentation>
+                        <value>supplication</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">entreat to God for help. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27supplication%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'supplication')]</a>
+                        </a:documentation>
+                        <value>expanded</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the title, tafaṣṣama/malʾa and further information. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27expanded%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'expanded')]</a>
+                        </a:documentation>
+                        <value>inscriptio</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is used for a title occurring at the beginning of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'inscriptio')]</a>
+                        </a:documentation>
+                        <value>subscriptio</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title occurring at the end of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'subscriptio')]</a>
+                        </a:documentation>
+                        <value>embedded</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title copied together with the text. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27embedded%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'embedded')]</a>
+                        </a:documentation>
+                        <value>translation</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to signal that the title is only of a translation. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27translation%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'translation')]</a>
+                        </a:documentation>
+                        <value>coretext</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the main content of a text</a:documentation>
+                        <value>textsubunit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">general way to indicate a specific section of a text that need to be encoded but does not correspond to the other specified textpart</a:documentation>
+                        <value>colophon</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">colophon of a work (not of a manuscript) that is systematically transmitted (copied) with the text</a:documentation>
+                        <value>list</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a number of connected items or names written consecutively, either one after the other or one below the other</a:documentation>
+                        <data type="token">
+                           <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                        </data>
+                     </choice>
                   </optional>
                   <optional>
-                     <data type="token">
-                        <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-                     </data>
+                     <choice>
+                        <value>book</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a book and may contain chapters</a:documentation>
+                        <value>chapter</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a chapter and may contain sections</a:documentation>
+                        <value>stanza</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a stanza and may contain verses</a:documentation>
+                        <value>commemoration</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">texts commemorating a saint or event, usually linked for liturgical reading to a precise date, such as entries in the Sǝnkǝssār</a:documentation>
+                        <value>incipit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">incipit of the text</a:documentation>
+                        <value>explicit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">explicit of the text</a:documentation>
+                        <value>canon</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to be used for canonical texts like LIT2688CanonsNicaea2</a:documentation>
+                        <value>title</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the title as well as tafaṣṣama/malʾa or similar expression. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27title%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:div[contains(@subtype,'title')]</a>
+                        </a:documentation>
+                        <value>desinit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to qualify expressions as tafaṣṣama/malʾa. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27desinit%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:div[contains(@subtype,'desinit')]</a>
+                        </a:documentation>
+                        <value>supplication</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">entreat to God for help. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27supplication%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'supplication')]</a>
+                        </a:documentation>
+                        <value>expanded</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the title, tafaṣṣama/malʾa and further information. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27expanded%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'expanded')]</a>
+                        </a:documentation>
+                        <value>inscriptio</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is used for a title occurring at the beginning of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'inscriptio')]</a>
+                        </a:documentation>
+                        <value>subscriptio</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title occurring at the end of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'subscriptio')]</a>
+                        </a:documentation>
+                        <value>embedded</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title copied together with the text. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27embedded%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'embedded')]</a>
+                        </a:documentation>
+                        <value>translation</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to signal that the title is only of a translation. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27translation%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'translation')]</a>
+                        </a:documentation>
+                        <value>coretext</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the main content of a text</a:documentation>
+                        <value>textsubunit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">general way to indicate a specific section of a text that need to be encoded but does not correspond to the other specified textpart</a:documentation>
+                        <value>colophon</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">colophon of a work (not of a manuscript) that is systematically transmitted (copied) with the text</a:documentation>
+                        <value>list</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a number of connected items or names written consecutively, either one after the other or one below the other</a:documentation>
+                        <data type="token">
+                           <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                        </data>
+                     </choice>
                   </optional>
                   <optional>
-                     <data type="token">
-                        <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-                     </data>
+                     <choice>
+                        <value>book</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a book and may contain chapters</a:documentation>
+                        <value>chapter</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a chapter and may contain sections</a:documentation>
+                        <value>stanza</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a stanza and may contain verses</a:documentation>
+                        <value>commemoration</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">texts commemorating a saint or event, usually linked for liturgical reading to a precise date, such as entries in the Sǝnkǝssār</a:documentation>
+                        <value>incipit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">incipit of the text</a:documentation>
+                        <value>explicit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">explicit of the text</a:documentation>
+                        <value>canon</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to be used for canonical texts like LIT2688CanonsNicaea2</a:documentation>
+                        <value>title</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the title as well as tafaṣṣama/malʾa or similar expression. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27title%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:div[contains(@subtype,'title')]</a>
+                        </a:documentation>
+                        <value>desinit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to qualify expressions as tafaṣṣama/malʾa. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27desinit%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:div[contains(@subtype,'desinit')]</a>
+                        </a:documentation>
+                        <value>supplication</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">entreat to God for help. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27supplication%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'supplication')]</a>
+                        </a:documentation>
+                        <value>expanded</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the title, tafaṣṣama/malʾa and further information. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27expanded%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'expanded')]</a>
+                        </a:documentation>
+                        <value>inscriptio</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is used for a title occurring at the beginning of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'inscriptio')]</a>
+                        </a:documentation>
+                        <value>subscriptio</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title occurring at the end of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'subscriptio')]</a>
+                        </a:documentation>
+                        <value>embedded</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title copied together with the text. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27embedded%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'embedded')]</a>
+                        </a:documentation>
+                        <value>translation</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to signal that the title is only of a translation. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27translation%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'translation')]</a>
+                        </a:documentation>
+                        <value>coretext</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the main content of a text</a:documentation>
+                        <value>textsubunit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">general way to indicate a specific section of a text that need to be encoded but does not correspond to the other specified textpart</a:documentation>
+                        <value>colophon</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">colophon of a work (not of a manuscript) that is systematically transmitted (copied) with the text</a:documentation>
+                        <value>list</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a number of connected items or names written consecutively, either one after the other or one below the other</a:documentation>
+                        <data type="token">
+                           <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                        </data>
+                     </choice>
                   </optional>
                   <optional>
-                     <data type="token">
-                        <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-                     </data>
+                     <choice>
+                        <value>book</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a book and may contain chapters</a:documentation>
+                        <value>chapter</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a chapter and may contain sections</a:documentation>
+                        <value>stanza</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a stanza and may contain verses</a:documentation>
+                        <value>commemoration</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">texts commemorating a saint or event, usually linked for liturgical reading to a precise date, such as entries in the Sǝnkǝssār</a:documentation>
+                        <value>incipit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">incipit of the text</a:documentation>
+                        <value>explicit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">explicit of the text</a:documentation>
+                        <value>canon</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to be used for canonical texts like LIT2688CanonsNicaea2</a:documentation>
+                        <value>title</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the title as well as tafaṣṣama/malʾa or similar expression. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27title%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:div[contains(@subtype,'title')]</a>
+                        </a:documentation>
+                        <value>desinit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to qualify expressions as tafaṣṣama/malʾa. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27desinit%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:div[contains(@subtype,'desinit')]</a>
+                        </a:documentation>
+                        <value>supplication</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">entreat to God for help. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27supplication%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'supplication')]</a>
+                        </a:documentation>
+                        <value>expanded</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the title, tafaṣṣama/malʾa and further information. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27expanded%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'expanded')]</a>
+                        </a:documentation>
+                        <value>inscriptio</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is used for a title occurring at the beginning of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'inscriptio')]</a>
+                        </a:documentation>
+                        <value>subscriptio</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title occurring at the end of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'subscriptio')]</a>
+                        </a:documentation>
+                        <value>embedded</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title copied together with the text. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27embedded%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'embedded')]</a>
+                        </a:documentation>
+                        <value>translation</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to signal that the title is only of a translation. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27translation%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'translation')]</a>
+                        </a:documentation>
+                        <value>coretext</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the main content of a text</a:documentation>
+                        <value>textsubunit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">general way to indicate a specific section of a text that need to be encoded but does not correspond to the other specified textpart</a:documentation>
+                        <value>colophon</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">colophon of a work (not of a manuscript) that is systematically transmitted (copied) with the text</a:documentation>
+                        <value>list</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a number of connected items or names written consecutively, either one after the other or one below the other</a:documentation>
+                        <data type="token">
+                           <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                        </data>
+                     </choice>
                   </optional>
                   <optional>
-                     <data type="token">
-                        <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-                     </data>
+                     <choice>
+                        <value>book</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a book and may contain chapters</a:documentation>
+                        <value>chapter</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a chapter and may contain sections</a:documentation>
+                        <value>stanza</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">this container is for a stanza and may contain verses</a:documentation>
+                        <value>commemoration</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">texts commemorating a saint or event, usually linked for liturgical reading to a precise date, such as entries in the Sǝnkǝssār</a:documentation>
+                        <value>incipit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">incipit of the text</a:documentation>
+                        <value>explicit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">explicit of the text</a:documentation>
+                        <value>canon</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to be used for canonical texts like LIT2688CanonsNicaea2</a:documentation>
+                        <value>title</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the title as well as tafaṣṣama/malʾa or similar expression. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27title%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:div[contains(@subtype,'title')]</a>
+                        </a:documentation>
+                        <value>desinit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to qualify expressions as tafaṣṣama/malʾa. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27desinit%27%29%5D">Beta maṣāḥǝft
+                                        Xpath search for //t:div[contains(@subtype,'desinit')]</a>
+                        </a:documentation>
+                        <value>supplication</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">entreat to God for help. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27supplication%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'supplication')]</a>
+                        </a:documentation>
+                        <value>expanded</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains the title, tafaṣṣama/malʾa and further information. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27expanded%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'expanded')]</a>
+                        </a:documentation>
+                        <value>inscriptio</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is used for a title occurring at the beginning of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27inscriptio%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'inscriptio')]</a>
+                        </a:documentation>
+                        <value>subscriptio</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title occurring at the end of a work. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27subscriptio%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'subscriptio')]</a>
+                        </a:documentation>
+                        <value>embedded</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">for a title copied together with the text. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27embedded%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'embedded')]</a>
+                        </a:documentation>
+                        <value>translation</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">to signal that the title is only of a translation. Examples: <a xmlns="http://www.w3.org/1999/xhtml"
+                              href="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Adiv%5Bcontains%28%40subtype%2C%27translation%27%29%5D">Beta maṣāḥǝft
+                                                Xpath search for //t:div[contains(@subtype,'translation')]</a>
+                        </a:documentation>
+                        <value>coretext</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">the main content of a text</a:documentation>
+                        <value>textsubunit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">general way to indicate a specific section of a text that need to be encoded but does not correspond to the other specified textpart</a:documentation>
+                        <value>colophon</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">colophon of a work (not of a manuscript) that is systematically transmitted (copied) with the text</a:documentation>
+                        <value>list</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a number of connected items or names written consecutively, either one after the other or one below the other</a:documentation>
+                        <data type="token">
+                           <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                        </data>
+                     </choice>
                   </optional>
                </list>
             </attribute>
@@ -10322,25 +10761,65 @@ Sample values include: 1] glued; 2] pinned; 3] sewn</a:documentation>
          <optional>
             <attribute name="placeOfDamage" ns="https://betamasaheft.eu">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Place of the damage of a letter. This has been added to represent the half brackets of RIE, used in the edition to mark les parties abîmées des lettres (RIÉ I, 13).
-Sample values include: 1] upperRight; 2] upperLeft; 3] lowerRight; 4] lowerLeft</a:documentation>
+Suggested values include: 1] upperRight; 2] upperLeft; 3] lowerRight; 4] lowerLeft</a:documentation>
                <list>
-                  <data type="token">
-                     <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-                  </data>
-                  <optional>
+                  <choice>
+                     <value>upperRight</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     <value>upperLeft</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     <value>lowerRight</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                     <value>lowerLeft</value>
+                     <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      <data type="token">
                         <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
                      </data>
+                  </choice>
+                  <optional>
+                     <choice>
+                        <value>upperRight</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>upperLeft</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>lowerRight</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>lowerLeft</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <data type="token">
+                           <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                        </data>
+                     </choice>
                   </optional>
                   <optional>
-                     <data type="token">
-                        <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-                     </data>
+                     <choice>
+                        <value>upperRight</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>upperLeft</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>lowerRight</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>lowerLeft</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <data type="token">
+                           <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                        </data>
+                     </choice>
                   </optional>
                   <optional>
-                     <data type="token">
-                        <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-                     </data>
+                     <choice>
+                        <value>upperRight</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>upperLeft</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>lowerRight</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>lowerLeft</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <data type="token">
+                           <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                        </data>
+                     </choice>
                   </optional>
                </list>
             </attribute>
@@ -10495,8 +10974,20 @@ Sample values include: 1] header; 2] footer; 3] pageNum (page number); 4] lineNu
          <optional>
             <attribute name="reason">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] rubrication; 2] owner</a:documentation>
-               <text/>
+Suggested values include: 1] rubrication; 2] owner</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <choice>
+                        <value>rubrication</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">space voluntarily left e.g. for later rubrication never accomplished </a:documentation>
+                        <value>owner</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">space voluntarily left e.g. for a potential owner</a:documentation>
+                        <data type="token">
+                           <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                        </data>
+                     </choice>
+                  </oneOrMore>
+               </list>
             </attribute>
          </optional>
          <optional>
@@ -11500,15 +11991,51 @@ Sample values include: 1] no; 2] yes; 3] weak; 4] strong</a:documentation>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] history; 2] description; 3] appellation; 4] ruling; 5] pricking; 6] punctuation; 7] cruces; 8] CruxAnsata; 9] ChiRho; 10] coronis</a:documentation>
-               <text/>
+Suggested values include: 1] history; 2] description; 3] appellation; 4] ruling; 5] pricking; 6] punctuation; 7] cruces; 8] CruxAnsata; 9] ChiRho; 10] coronis</a:documentation>
+               <choice>
+                  <value>history</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>description</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>appellation</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>ruling</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>pricking</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>punctuation</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>cruces</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>CruxAnsata</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>ChiRho</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>coronis</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <data type="token">
+                     <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                  </data>
+               </choice>
             </attribute>
          </optional>
          <optional>
             <attribute name="subtype">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] pattern; 2] usage; 3] executed; 4] dividers</a:documentation>
-               <text/>
+Suggested values include: 1] pattern; 2] usage; 3] executed; 4] dividers</a:documentation>
+               <choice>
+                  <value>pattern</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>usage</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>executed</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <value>dividers</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                  <data type="token">
+                     <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                  </data>
+               </choice>
             </attribute>
          </optional>
          <empty/>
@@ -13675,8 +14202,20 @@ Suggested values include: 1] paper; 2] parch (parchment); 3] mixed</a:documentat
          <optional>
             <attribute name="rend">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Sample values include: 1] damaged; 2] intact</a:documentation>
-               <text/>
+Suggested values include: 1] damaged; 2] intact</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <choice>
+                        <value>damaged</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>intact</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <data type="token">
+                           <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                        </data>
+                     </choice>
+                  </oneOrMore>
+               </list>
             </attribute>
          </optional>
          <optional>
@@ -13779,7 +14318,9 @@ Sample values include: 1] damaged; 2] intact</a:documentation>
          <optional>
             <attribute name="color">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-               <text/>
+               <data type="token">
+                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+               </data>
             </attribute>
          </optional>
          <optional>
@@ -14816,19 +15357,17 @@ Suggested values include: 1] UTI; 2] OTI; 3] L; 4] R</a:documentation>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.personal.attributes"/>
          <ref name="tei_att.typed.attribute.subtype"/>
-         <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
-                    name="type"
-                    a:defaultValue="title">
-            <a:documentation>These are fuzzy categories, inherited from the EAe. In volume 5, pages 580–590 a list of titles, ranks and functions can be found.</a:documentation>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">These are fuzzy categories, inherited from the EAe. In volume 5, pages 580–590 a list of titles, ranks and functions can be found.</a:documentation>
             <choice>
                <value>title</value>
-               <a:documentation>title is used when addressing a person, particularly an office holder (e.g. ʾabbā, wayzaro, daǧǧāzmačč, ʾabuna), and is to be used only within a persName, since names of offices and office holders can overlap.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">title is used when addressing a person, particularly an office holder (e.g. ʾabbā, wayzaro, daǧǧāzmačč, ʾabuna), and is to be used only within a persName, since names of offices and office holders can overlap.</a:documentation>
                <value>office</value>
-               <a:documentation>name of an office within an institution (e.g. Metropolitan, daǧǧāzmāčč, king, governor ), to be used only when not inside a persName, since names of offices and office holders can overlap</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">name of an office within an institution (e.g. Metropolitan, daǧǧāzmāčč, king, governor ), to be used only when not inside a persName, since names of offices and office holders can overlap</a:documentation>
                <value>function</value>
-               <a:documentation>is the task that a particular office holder is assigned to accomplish or a word referring to its duties which is not a title assigned by some authority</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">is the task that a particular office holder is assigned to accomplish or a word referring to its duties which is not a title assigned by some authority</a:documentation>
                <value>rank</value>
-               <a:documentation>a position in a hierarchy, particularly military, e.g. colonel</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">a position in a hierarchy, particularly military, e.g. colonel</a:documentation>
             </choice>
          </attribute>
          <empty/>
@@ -15957,10 +16496,23 @@ Sample values include: 1] primary; 2] secondary; 3] undergraduate; 4] graduate; 
          <ref name="tei_att.sortable.attributes"/>
          <optional>
             <attribute name="role">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies the role of this group of participants in the interaction.</a:documentation>
-               <data type="token">
-                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-               </data>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+Suggested values include: 1] ethnic; 2] congregation; 3] militaryUnit</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <choice>
+                        <value>ethnic</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">records with this type represent an ethnic group as a whole and in general</a:documentation>
+                        <value>congregation</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <value>militaryUnit</value>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+                        <data type="token">
+                           <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                        </data>
+                     </choice>
+                  </oneOrMore>
+               </list>
             </attribute>
          </optional>
          <optional>
