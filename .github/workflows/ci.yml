@@ -6,9 +6,7 @@ name: Schema generation
 on:
   # Triggers the workflow on push or pull request events but only for the "odd-chaining" branch
   push:
-    branches: [ "odd-chaining" ]
   pull_request:
-    branches: [ "odd-chaining" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -19,17 +17,76 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    strategy:
+      fail-fast: false      
+    # Tasks to be executed
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      # Checks-out your repository under $GITHUB_WORKSPACE, so the job can access it
       - uses: actions/checkout@v4
+     
+      # SET UP AND DEPENDENCIES
+      # Specifying the Java version and architecture
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3
+        with:
+            java-version: '11'
+            distribution: 'temurin'
+      - name: Install Build Dependencies
+        run: | 
+            sudo apt-get update 
+            sudo apt-get install -y jing
+            mkdir lib
+            wget "https://github.com/Saxonica/Saxon-HE/releases/download/SaxonHE11-6/SaxonHE11-6J.zip"
+            unzip SaxonHE11-6J.zip -d lib
+            rm SaxonHE11-6J.zip
+            cd lib
+            wget "https://github.com/schxslt/schxslt/releases/download/v1.9.5/schxslt-cli.jar"
+            wget "https://raw.githubusercontent.com/TEIC/atop/dev/XSLT/extract-schematron.xslt"  
+   
+      # VALIDATION
+      - name: Download schema from TEI release
+        run: wget "https://tei-c.org/Vault/P5/current/xml/tei/custom/schema/relaxng/tei_odds.rng"
+      - name: Validate main ODD against the tei_odds.rng schema
+        run: jing tei_odds.rng tei-betamesaheft.xml  
+      # Validate Schematron from the main ODD. 
+      # We first retrieved the schematron rules of the tei_odds.rng schema using Saxon
+      - name: Extract Schematron rules from tei_odds.rng
+        run: java -jar lib/saxon-he-11.6.jar -s:tei_odds.rng -xsl:lib/extract-schematron.xslt -o:tei_odds.sch
+      # We use schxslt to validate the main ODD against the schematron rules from tei_odds.rng
+      - name: Generation of Schematron report
+        run: java -jar lib/schxslt-cli.jar -d tei-betamesaheft.xml -s tei_odds.sch -o report.xml
+      - name: Schematron validation of main ODD
+        run: grep -vq 'svrl:text' report.xml
+      # The schemas are generated using the TEIGarare API. Documentation can be found at https://teigarage.tei-c.org/ege-webservice/
+      - name: Generate a compiled ODD of the main ODD
+        run: |
+           curl -X 'POST' \
+             'https://teigarage.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml' \
+             -H 'Content-Type: multipart/form-data' \
+             -F 'fileToConvert=@tei-betamesaheft.xml;type=text/xml' > tei-betamesaheft_compiled.xml
+      - name: Generate a compiled ODD of the expanded version
+        run: |
+           curl -X 'POST' \
+             'https://teigarage.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml' \
+             -H 'Content-Type: multipart/form-data' \
+             -F 'fileToConvert=@tei-betamesaheft-expanded.xml;type=text/xml' > tei-betamesaheft-expanded_compiled.xml
+      - name: Generate RELAXNG schema of the main ODD 
+        run: |
+            curl -X 'POST' \
+                'https://teigarage.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml/relaxng%3Aapplication%3Axml-relaxng/' \
+                -H 'Content-Type: multipart/form-data' \
+                -F 'fileToConvert=@tei-betamesaheft_compiled.xml;type=text/xml' > tei-betamesaheft.rng
+      - name: Generate RELAXNG schema of the expanded version 
+        run: |
+             curl -X 'POST' \
+               'https://teigarage.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml/relaxng%3Aapplication%3Axml-relaxng/' \
+               -H 'Content-Type: multipart/form-data' \
+               -F 'fileToConvert=@tei-betamesaheft-expanded_compiled.xml;type=text/xml' > tei-betamesaheft-expanded.rng 
       - name: Build with Ant      
-        working-directory: .github/opt
         run: ant 
       - name: Check Git Status 
         run: git status  
       - name: Commit and Push
         uses: actions-x/commit@v6
         with:
-          message: "schema update"
+          message: "[ci] schema update"
