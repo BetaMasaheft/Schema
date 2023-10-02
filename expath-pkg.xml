@@ -1,0 +1,12 @@
+<package xmlns="http://expath.org/ns/pkg" spec="1.0" version="0.1"
+    name="https://betamasaheft.eu/schemas" abbrev="betamas-schemas">
+    <title>Schemas for Beta maṣāḥǝft</title>
+    <rng>
+        <import-uri>https://betamasaheft.eu/tei-betamesaheft.rng</import-uri>
+        <file>tei-betamesaheft.rng</file>              
+    </rng>
+    <rng>
+        <import-uri>https://betamasaheft.eu/tei-betamesaheft-expanded.rng</import-uri>
+        <file>tei-betamesaheft-expanded.rng</file>        
+    </rng>
+</package>
