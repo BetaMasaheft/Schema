@@ -1,3 +1,5 @@
 
 *.processedodd
 .DS_Store
+build/
+lib/
