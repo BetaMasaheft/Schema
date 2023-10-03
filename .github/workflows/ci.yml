@@ -34,7 +34,7 @@ jobs:
       - name: Install Build Dependencies
         run: | 
             sudo apt-get update 
-            sudo apt-get install -y jing
+            sudo apt-get install -y jing libbatik-java libavalon-framework-java
             mkdir lib
             wget "https://github.com/Saxonica/Saxon-HE/releases/download/SaxonHE11-6/SaxonHE11-6J.zip"
             unzip SaxonHE11-6J.zip -d lib
