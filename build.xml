@@ -17,7 +17,7 @@
         <delete file="${plainFileName}-expanded_compiled.xml"/>
         <delete file="tei_odds.rng"/>
         <delete file="tei_odds.sch"/>
-        <delete file="report.xml"/>
+        <delete file="report-main.xml"/>
         <delete file="report-expanded.xml"/>
     </target>
     <target name="xar" depends="clean">
