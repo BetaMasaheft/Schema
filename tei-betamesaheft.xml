@@ -36,7 +36,7 @@ End license statement: do not remove -->
                 <author xml:id="ES">Eugenia Sokolinski</author>
                 <author xml:id="DR">Dorothea Reule</author>
             </titleStmt>
-      <!--      <publicationStmt>
+            <publicationStmt>
 
                 <authority>Hiob-Ludolf-Zentrum für Äthiopistik</authority>
                 <publisher>Die Schriftkultur des christlichen Äthiopiens und Eritreas: Eine
@@ -47,7 +47,7 @@ End license statement: do not remove -->
                         licensed under the Creative Commons Attribution-ShareAlike 4.0. </licence>
                 </availability>
 
-            </publicationStmt>-->
+            </publicationStmt>
             <sourceDesc>
                 <p>created electronically</p>
             </sourceDesc>
