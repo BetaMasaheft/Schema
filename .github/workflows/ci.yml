@@ -60,7 +60,7 @@ jobs:
             java -jar lib/schxslt-cli.jar -d tei-betamesaheft.xml -s tei_odds.sch -o report-main.xml
             java -jar lib/schxslt-cli.jar -d tei-betamesaheft-expanded.xml -s tei_odds.sch -o report-expanded.xml
       - name: Schematron validation of main ODD
-        run: grep -vq 'svrl:text' report.xml
+        run: grep -vq 'svrl:text' report-main.xml
       - name: Schematron validation of the expanded ODD
         run: grep -vq 'svrl:text' report-expanded.xml  
       # The schemas are generated using the TEIGarare API. Documentation can be found at https://teigarage.tei-c.org/ege-webservice/
