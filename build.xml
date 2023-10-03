@@ -18,6 +18,7 @@
         <delete file="tei_odds.rng"/>
         <delete file="tei_odds.sch"/>
         <delete file="report.xml"/>
+        <delete file="report-expanded.xml"/>
     </target>
     <target name="xar" depends="clean">
         <description>Generate xar file</description>

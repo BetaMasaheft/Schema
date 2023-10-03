@@ -4,7 +4,7 @@ name: Schema generation
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "odd-chaining" branch
+  # Triggers the workflow on push or pull request events
   push:
   pull_request:
 
@@ -42,21 +42,27 @@ jobs:
             cd lib
             wget "https://github.com/schxslt/schxslt/releases/download/v1.9.5/schxslt-cli.jar"
             wget "https://raw.githubusercontent.com/TEIC/atop/dev/XSLT/extract-schematron.xslt"  
-   
+           # TODO: atop will do a partial released soon: at that moment the link to extract-schematron.xslt will be updated
       # VALIDATION
       - name: Download schema from TEI release
         run: wget "https://tei-c.org/Vault/P5/current/xml/tei/custom/schema/relaxng/tei_odds.rng"
-      - name: Validate main ODD against the tei_odds.rng schema
-        run: jing tei_odds.rng tei-betamesaheft.xml  
+      - name: Validate ODDs against the tei_odds.rng schema
+        run: |
+            jing tei_odds.rng tei-betamesaheft.xml
+            jing tei_odds.rng tei-betamesaheft-expanded.xml  
       # Validate Schematron from the main ODD. 
       # We first retrieved the schematron rules of the tei_odds.rng schema using Saxon
       - name: Extract Schematron rules from tei_odds.rng
         run: java -jar lib/saxon-he-11.6.jar -s:tei_odds.rng -xsl:lib/extract-schematron.xslt -o:tei_odds.sch
       # We use schxslt to validate the main ODD against the schematron rules from tei_odds.rng
-      - name: Generation of Schematron report
-        run: java -jar lib/schxslt-cli.jar -d tei-betamesaheft.xml -s tei_odds.sch -o report.xml
+      - name: Generation of Schematron reports from both ODDs
+        run: |
+            java -jar lib/schxslt-cli.jar -d tei-betamesaheft.xml -s tei_odds.sch -o report-main.xml
+            java -jar lib/schxslt-cli.jar -d tei-betamesaheft-expanded.xml -s tei_odds.sch -o report-expanded.xml
       - name: Schematron validation of main ODD
         run: grep -vq 'svrl:text' report.xml
+      - name: Schematron validation of the expanded ODD
+        run: grep -vq 'svrl:text' report-expanded.xml  
       # The schemas are generated using the TEIGarare API. Documentation can be found at https://teigarage.tei-c.org/ege-webservice/
       - name: Generate a compiled ODD of the main ODD
         run: |
@@ -83,9 +89,7 @@ jobs:
                -H 'Content-Type: multipart/form-data' \
                -F 'fileToConvert=@tei-betamesaheft-expanded_compiled.xml;type=text/xml' > tei-betamesaheft-expanded.rng 
       - name: Build with Ant      
-        run: ant 
-      - name: Check Git Status 
-        run: git status  
+        run: ant  
       - name: Commit and Push
         uses: actions-x/commit@v6
         with:
