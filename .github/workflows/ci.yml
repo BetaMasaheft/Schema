@@ -32,7 +32,7 @@ jobs:
       - name: Install Build Dependencies
         run: | 
             sudo apt-get update 
-            sudo apt-get install -y jing libbatik-java libavalon-framework-java
+            sudo apt-get install -y jing libbatik-java libavalon-framework-java libxml2-utils
             mkdir lib
             wget "https://github.com/Saxonica/Saxon-HE/releases/download/SaxonHE11-6/SaxonHE11-6J.zip"
             unzip SaxonHE11-6J.zip -d lib
@@ -85,7 +85,12 @@ jobs:
              curl -X 'POST' \
                'https://teigarage.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml/relaxng%3Aapplication%3Axml-relaxng/' \
                -H 'Content-Type: multipart/form-data' \
-               -F 'fileToConvert=@tei-betamesaheft-expanded_compiled.xml;type=text/xml' > tei-betamesaheft-expanded.rng 
+               -F 'fileToConvert=@tei-betamesaheft-expanded_compiled.xml;type=text/xml' > tei-betamesaheft-expanded.rng
+      # exclude unused cdcc file 
+      - name: Check well-formedness of ODD files
+        run: xmllint --noout tei-*[^cdcc].xml
+      - name: Check well-formedness of RNG files
+        run: xmllint --noout *.rng             
       - name: Build with Ant      
         run: ant  
       - name: Commit and Push
