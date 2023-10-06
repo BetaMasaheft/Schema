@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Schema generation
 
 # Controls when the workflow will run
@@ -93,4 +91,4 @@ jobs:
       - name: Commit and Push
         uses: actions-x/commit@v6
         with:
-          message: "[ci] schema update"
+          message: "[skip ci] schema update"
