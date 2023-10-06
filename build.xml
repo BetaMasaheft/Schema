@@ -17,17 +17,13 @@
         <delete file="${plainFileName}-expanded_compiled.xml"/>
         <delete file="tei_odds.rng"/>
         <delete file="tei_odds.sch"/>
-        <delete file="report-main.xml"/>
-        <delete file="report-expanded.xml"/>
+        <!-- <delete file="report-main.xml"/>
+        <delete file="report-expanded.xml"/> -->
     </target>
     <target name="xar" depends="clean">
         <description>Generate xar file</description>
         <mkdir dir="${build.dir}"/>
         <echo>Making ${ant.project.name}.xar...</echo>       
-        <zip basedir="." destfile="${build.dir}/${ant.project.name}-${project.version}.xar">
-            <fileset dir="${basedir}">
-                <include name="*.rng"/>
-            </fileset>
-        </zip>
+        <zip basedir="." destfile="${build.dir}/${ant.project.name}-${project.version}.xar" excludes="**/${build.dir}/**, .github/**, lib/**, .gitinore, report-*.xml"/>
     </target>  
 </project>
