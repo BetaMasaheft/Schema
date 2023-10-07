@@ -29,21 +29,31 @@ jobs:
         with:
             java-version: '11'
             distribution: 'temurin'
-      - name: Install Build Dependencies
+      - name: Install packaged dependencies
         run: | 
             sudo apt-get update 
             sudo apt-get install -y jing libbatik-java libavalon-framework-java libxml2-utils
-            mkdir lib
+            mkdir lib   
+
+      - name: Install 3rd party Dependencies
+        working-directory: lib
+        run: |
             wget "https://github.com/Saxonica/Saxon-HE/releases/download/SaxonHE11-6/SaxonHE11-6J.zip"
-            unzip SaxonHE11-6J.zip -d lib
+            unzip SaxonHE11-6J.zip
             rm SaxonHE11-6J.zip
-            cd lib
             wget "https://github.com/schxslt/schxslt/releases/download/v1.9.5/schxslt-cli.jar"
             wget "https://raw.githubusercontent.com/TEIC/atop/dev/XSLT/extract-schematron.xslt"  
-           # TODO: atop will do a partial released soon: at that moment the link to extract-schematron.xslt will be updated
+      # TODO: atop will do a partial released soon: at that moment the link to extract-schematron.xslt will be updated
+
       # VALIDATION
       - name: Download schema from TEI release
         run: wget "https://tei-c.org/Vault/P5/current/xml/tei/custom/schema/relaxng/tei_odds.rng"
+      # Validates but exit code 1, disable for now
+      # - name: Validate ODDs against the tei_odds.rng schema
+      #   run: |
+      #       xmllint --noout --nowarning --relaxng tei_odds.rng tei-betamesaheft.xml
+      #       xmllint --noout --nowarning --relaxng tei_odds.rng tei-betamesaheft-epanded.xml
+
       - name: Validate ODDs against the tei_odds.rng schema
         run: |
             jing tei_odds.rng tei-betamesaheft.xml
@@ -60,39 +70,54 @@ jobs:
       - name: Schematron validation of main ODD
         run: grep -vq 'svrl:text' report-main.xml
       - name: Schematron validation of the expanded ODD
-        run: grep -vq 'svrl:text' report-expanded.xml  
+        run: grep -vq 'svrl:text' report-expanded.xml 
+
       # The schemas are generated using the TEIGarare API. Documentation can be found at https://teigarage.tei-c.org/ege-webservice/
+      # Compile ODD
       - name: Generate a compiled ODD of the main ODD
         run: |
            curl -X 'POST' \
              'https://teigarage.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml' \
              -H 'Content-Type: multipart/form-data' \
              -F 'fileToConvert=@tei-betamesaheft.xml;type=text/xml' > tei-betamesaheft_compiled.xml
+      - name: Ensure Result is well-formed
+        run: xmllint --noout tei-betamesaheft_compiled.xml           
       - name: Generate a compiled ODD of the expanded version
         run: |
            curl -X 'POST' \
              'https://teigarage.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml' \
              -H 'Content-Type: multipart/form-data' \
              -F 'fileToConvert=@tei-betamesaheft-expanded.xml;type=text/xml' > tei-betamesaheft-expanded_compiled.xml
+      # see https://github.com/TEIC/romajs/issues/122 
+      - name: Ensure Result is well-formed
+        run: xmllint --noout tei-betamesaheft-expanded_compiled.xml 
+      # Generate Relaxng schema from compiled ODDS
       - name: Generate RELAXNG schema of the main ODD 
         run: |
             curl -X 'POST' \
                 'https://teigarage.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml/relaxng%3Aapplication%3Axml-relaxng/' \
                 -H 'Content-Type: multipart/form-data' \
                 -F 'fileToConvert=@tei-betamesaheft_compiled.xml;type=text/xml' > tei-betamesaheft.rng
+      - name: Ensure Result is well-formed
+        run: xmllint --noout tei-betamesaheft.rng          
       - name: Generate RELAXNG schema of the expanded version 
         run: |
              curl -X 'POST' \
                'https://teigarage.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml/relaxng%3Aapplication%3Axml-relaxng/' \
                -H 'Content-Type: multipart/form-data' \
-               -F 'fileToConvert=@tei-betamesaheft-expanded_compiled.xml;type=text/xml' > tei-betamesaheft-expanded.rng
+               -F 'fileToConvert=@tei-betamesaheft-expanded_compiled.xml;type=text/xml' > tei-betamesaheft-expanded.rng 
+      - name: Ensure Result is well-formed
+        run: xmllint --noout tei-betamesaheft-expanded.rng 
+      # Final checks before packaging  
       # exclude unused cdcc file 
-      - name: Check well-formedness of ODD files
+      - name: Check well-formedness of all ODD files
         run: xmllint --noout tei-*[^cdcc].xml
-      - name: Check well-formedness of RNG files
-        run: xmllint --noout *.rng             
+      - name: Check well-formedness of all RNG files
+        run: xmllint --noout *.rng
+      # Cleanup and creat xar 
       - name: Build with Ant      
-        run: ant  
+        run: ant
+      # Commit updated files to repo
       - name: Commit and Push
         uses: actions-x/commit@v6
         with:
