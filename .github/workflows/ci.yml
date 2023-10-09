@@ -42,6 +42,7 @@ jobs:
             unzip SaxonHE11-6J.zip
             rm SaxonHE11-6J.zip
             wget "https://github.com/schxslt/schxslt/releases/download/v1.9.5/schxslt-cli.jar"
+            wget "https://tei-c.org/Vault/Stylesheets/current/xml/tei/stylesheet/odds/odd2odd.xsl"
             wget "https://raw.githubusercontent.com/TEIC/atop/dev/XSLT/extract-schematron.xslt"  
       # TODO: atop will do a partial released soon: at that moment the link to extract-schematron.xslt will be updated
 
@@ -81,14 +82,13 @@ jobs:
              -H 'Content-Type: multipart/form-data' \
              -F 'fileToConvert=@tei-betamesaheft.xml;type=text/xml' > tei-betamesaheft_compiled.xml
       - name: Ensure Result is well-formed
-        run: xmllint --noout tei-betamesaheft_compiled.xml           
+        run: xmllint --noout tei-betamesaheft_compiled.xml
+      # To handle ODD chaining, we use TEI Stylesheets odd2odd.xsl to compile the expanded version
       - name: Generate a compiled ODD of the expanded version
-        run: |
-           curl -X 'POST' \
-             'https://teigarage.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml' \
-             -H 'Content-Type: multipart/form-data' \
-             -F 'fileToConvert=@tei-betamesaheft-expanded.xml;type=text/xml' > tei-betamesaheft-expanded_compiled.xml
-      # see https://github.com/TEIC/romajs/issues/122 
+        run: java -jar lib/saxon-he-11.6.jar -s:tei-betamesaheft-expanded.xml -xsl:lib/odd2odd.xsl -o:tei-betamesaheft-expanded_compiled.xml
+      # TEI Garage cannot resolve the @source attribute, so we delete it with sed
+      - name: Preprocessing of ODD for TEI Garage
+        run: sed -i 's/ source="tei-betamesaheft_compiled.xml"//' tei-betamesaheft-expanded_compiled.xml  
       - name: Ensure Result is well-formed
         run: xmllint --noout tei-betamesaheft-expanded_compiled.xml 
       # Generate Relaxng schema from compiled ODDS
