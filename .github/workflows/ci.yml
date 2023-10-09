@@ -68,11 +68,11 @@ jobs:
         run: |
             java -jar lib/schxslt-cli.jar -d tei-betamesaheft.xml -s tei_odds.sch -o report-main.xml
             java -jar lib/schxslt-cli.jar -d tei-betamesaheft-expanded.xml -s tei_odds.sch -o report-expanded.xml
-      - name: Commit Schematron reports to the repo so they can be downloaded if validation fails
-        uses: actions-x/commit@v6
-        with:
-          files: report-main.xml report-expanded.xml
-          message: "[ci skip] schematron reports"
+      # - name: Commit Schematron reports to the repo so they can be downloaded if validation fails
+      #   uses: actions-x/commit@v6
+      #   with:
+      #     files: report-main.xml report-expanded.xml
+      #     message: "[ci skip] schematron reports"
       - name: Schematron validation of main ODD
         run: grep -vq 'svrl:text' report-main.xml
       - name: Schematron validation of the expanded ODD
