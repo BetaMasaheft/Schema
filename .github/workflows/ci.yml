@@ -72,7 +72,7 @@ jobs:
         uses: actions-x/commit@v6
         with:
           files: report-main.xml report-expanded.xml
-          message: "[ci skip] adds schematron reports"
+          message: "[skip ci] adds schematron reports"
       - name: Schematron validation of main ODD
         run: grep -vq 'svrl:text' report-main.xml
       - name: Schematron validation of the expanded ODD
