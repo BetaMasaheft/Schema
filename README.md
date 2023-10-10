@@ -37,16 +37,17 @@ While the workflow is automated to run on CI, should you wish to process the ODD
 
 ### Generating the Schema files with oXygen
 
-If you have the XML editor oXygen, you can configure a transformation scenario. If the ODD files have the `.odd` extension (instead of `.xml`), oXygen already offers an associated scenario to this extension that converts the ODD to RELAXNG, so you only need to select this option. 
+If you have the XML editor oXygen, you can configure a transformation scenario (`Ctrl + Shift + C`). If the ODD files have the `.odd` extension (instead of `.xml`), oXygen already offers an associated scenario to this extension that converts the ODD to RELAXNG, so you only need to select this option. 
 
 From a file with the `.xml` extension, you need to create a new scenario, or even easier, modify one of the TEI existing scenarios to create the
 the ODD to RELAXNG one. To do so:
+1. Press `Ctrl + Shift + C` to open the `Configure transformation scenario(s)` window.
 1. Select one of ANT scenarios that appear, e.g. `TEI P5 DOCX`. 
 2. Then click on `Edit` and a dialogue will offer you to create a copy instead and edit that copy. Accept. 
 3. In the window that opens, you can change the name of the scenario (to `ODD to RELAXNG` for example). 
 4. Update the build configuration. You can leave all the default options as they are, except for: 
-- In the field `Build file` paste the following path: `${frameworksDir}/tei/xml/tei/stylesheet/relaxng/build-to.xml`
-- Click on the `Output` tab and change in the field `Open` (at least) the extension of the output file. You can also define here the output folder (as default, oXygen creates a `out` folder but you can change that behaviour by having in the field `Open` the following path: `${cfd}/${cfn}.rng`).
+    - In the field `Build file` paste the following path: `${frameworksDir}/tei/xml/tei/stylesheet/relaxng/build-to.xml`
+    - Click on the `Output` tab and change in the field `Open` (at least) the extension of the output file. You can also define here the output folder (as default, oXygen creates a `out` folder but you can change that behaviour by having in the field `Open` the following path: `${cfd}/${cfn}.rng`).
 
 ### Generating the Schema files with the TEI toolkit
 
