@@ -5,3 +5,4 @@ build/
 lib/
 tei_odds.*
 *_compiled.xml
+report-*.xml

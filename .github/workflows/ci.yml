@@ -68,15 +68,17 @@ jobs:
         run: |
             java -jar lib/schxslt-cli.jar -d tei-betamesaheft.xml -s tei_odds.sch -o report-main.xml
             java -jar lib/schxslt-cli.jar -d tei-betamesaheft-expanded.xml -s tei_odds.sch -o report-expanded.xml
-      - name: Commit Schematron reports to the repo so they can be downloaded if validation fails
-        uses: actions-x/commit@v6
-        with:
-          files: report-main.xml report-expanded.xml
-          message: "[skip ci] adds schematron reports"
       - name: Schematron validation of main ODD
         run: grep -vq 'svrl:text' report-main.xml
       - name: Schematron validation of the expanded ODD
-        run: grep -vq 'svrl:text' report-expanded.xml 
+        run: grep -vq 'svrl:text' report-expanded.xml
+
+      - name: Upload Schematron reports as artifact if validation fails
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: schematron-report
+          path: report-*.xml  
 
       # The schemas are generated using the TEIGarare API. Documentation can be found at https://teigarage.tei-c.org/ege-webservice/
       # Compile ODD
@@ -120,7 +122,7 @@ jobs:
       - name: Check well-formedness of all RNG files
         run: xmllint --noout *.rng
       # Cleanup and creat xar 
-      - name: Build with Ant      
+      - name: Build with Ant (cleanup schematron reports)
         run: ant
       # Commit updated files to repo
       - name: Commit and Push
