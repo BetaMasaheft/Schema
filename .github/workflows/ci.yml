@@ -127,5 +127,6 @@ jobs:
       # Commit updated files to repo
       - name: Commit and Push
         uses: actions-x/commit@v6
+        if: github.ref == 'refs/heads/master'
         with:
           message: "[skip ci] schema update"
