@@ -130,3 +130,4 @@ jobs:
         if: github.ref == 'refs/heads/master'
         with:
           message: "[skip ci] schema update"
+          token: ${{ secrets.GITHUB_TOKEN }}s
