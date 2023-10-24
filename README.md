@@ -4,6 +4,8 @@ TEI schemas for project documents.
 
 This repo contains the schema and annotated template files to be used to enter new data while a proper form is prepared.
 
+Project members can find more documentation as part of the [project guidelines](https://betamasaheft.eu/Guidelines/?q=schema&id=editingSchema).
+
 ## Contents
 
 - The main ODD specification is `tei-betamesaheft.xml`. This entails a customization of version 3.5.0 of the TEI Guidelines. Files created by the team in the framework of this project must be valid against this TEI customisation.
