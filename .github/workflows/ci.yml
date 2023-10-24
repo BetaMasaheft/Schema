@@ -1,0 +1,132 @@
+name: Schema generation
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events
+  push:
+  pull_request:
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false      
+    # Tasks to be executed
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so the job can access it
+      - uses: actions/checkout@v4
+     
+      # SET UP AND DEPENDENCIES
+      # Specifying the Java version and architecture
+      - name: Set up JDK 11
+        uses: actions/setup-java@v3
+        with:
+            java-version: '11'
+            distribution: 'temurin'
+      - name: Install packaged dependencies
+        run: | 
+            sudo apt-get update 
+            sudo apt-get install -y jing libbatik-java libavalon-framework-java libxml2-utils
+            mkdir lib   
+
+      - name: Install 3rd party Dependencies
+        working-directory: lib
+        run: |
+            wget "https://github.com/Saxonica/Saxon-HE/releases/download/SaxonHE11-6/SaxonHE11-6J.zip"
+            unzip SaxonHE11-6J.zip
+            rm SaxonHE11-6J.zip
+            wget "https://github.com/schxslt/schxslt/releases/download/v1.9.5/schxslt-cli.jar"
+            wget "https://tei-c.org/Vault/Stylesheets/current/xml/tei/stylesheet/odds/odd2odd.xsl"
+            wget "https://raw.githubusercontent.com/TEIC/atop/dev/XSLT/extract-schematron.xslt"  
+      # TODO: atop will do a partial released soon: at that moment the link to extract-schematron.xslt will be updated
+
+      # VALIDATION
+      - name: Download schema from TEI release
+        run: wget "https://tei-c.org/Vault/P5/current/xml/tei/custom/schema/relaxng/tei_odds.rng"
+      # Validates but exit code 1, disable for now
+      # - name: Validate ODDs against the tei_odds.rng schema
+      #   run: |
+      #       xmllint --noout --nowarning --relaxng tei_odds.rng tei-betamesaheft.xml
+      #       xmllint --noout --nowarning --relaxng tei_odds.rng tei-betamesaheft-epanded.xml
+
+      - name: Validate ODDs against the tei_odds.rng schema
+        run: |
+            jing tei_odds.rng tei-betamesaheft.xml
+            jing tei_odds.rng tei-betamesaheft-expanded.xml  
+      # Validate Schematron from the main ODD. 
+      # We first retrieved the schematron rules of the tei_odds.rng schema using Saxon
+      - name: Extract Schematron rules from tei_odds.rng
+        run: java -jar lib/saxon-he-11.6.jar -s:tei_odds.rng -xsl:lib/extract-schematron.xslt -o:tei_odds.sch
+      # We use schxslt to validate the main ODD against the schematron rules from tei_odds.rng
+      - name: Generation of Schematron reports from both ODDs
+        run: |
+            java -jar lib/schxslt-cli.jar -d tei-betamesaheft.xml -s tei_odds.sch -o report-main.xml
+            java -jar lib/schxslt-cli.jar -d tei-betamesaheft-expanded.xml -s tei_odds.sch -o report-expanded.xml
+      - name: Schematron validation of main ODD
+        run: grep -vq 'svrl:text' report-main.xml
+      - name: Schematron validation of the expanded ODD
+        run: grep -vq 'svrl:text' report-expanded.xml
+
+      - name: Upload Schematron reports as artifact if validation fails
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: schematron-report
+          path: report-*.xml  
+
+      # The schemas are generated using the TEIGarare API. Documentation can be found at https://teigarage.tei-c.org/ege-webservice/
+      # Compile ODD
+      - name: Generate a compiled ODD of the main ODD
+        run: |
+           curl -X 'POST' \
+             'https://teigarage.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml' \
+             -H 'Content-Type: multipart/form-data' \
+             -F 'fileToConvert=@tei-betamesaheft.xml;type=text/xml' > tei-betamesaheft_compiled.xml
+      - name: Ensure Result is well-formed
+        run: xmllint --noout tei-betamesaheft_compiled.xml
+      # To handle ODD chaining, we use TEI Stylesheets odd2odd.xsl to compile the expanded version
+      - name: Generate a compiled ODD of the expanded version
+        run: java -jar lib/saxon-he-11.6.jar -s:tei-betamesaheft-expanded.xml -xsl:lib/odd2odd.xsl -o:tei-betamesaheft-expanded_compiled.xml
+      # TEI Garage cannot resolve the @source attribute, so we delete it with sed
+      - name: Preprocessing of ODD for TEI Garage
+        run: sed -i 's/ source="tei-betamesaheft_compiled.xml"//' tei-betamesaheft-expanded_compiled.xml  
+      - name: Ensure Result is well-formed
+        run: xmllint --noout tei-betamesaheft-expanded_compiled.xml 
+      # Generate Relaxng schema from compiled ODDS
+      - name: Generate RELAXNG schema of the main ODD 
+        run: |
+            curl -X 'POST' \
+                'https://teigarage.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml/relaxng%3Aapplication%3Axml-relaxng/' \
+                -H 'Content-Type: multipart/form-data' \
+                -F 'fileToConvert=@tei-betamesaheft_compiled.xml;type=text/xml' > tei-betamesaheft.rng
+      - name: Ensure Result is well-formed
+        run: xmllint --noout tei-betamesaheft.rng          
+      - name: Generate RELAXNG schema of the expanded version 
+        run: |
+             curl -X 'POST' \
+               'https://teigarage.tei-c.org/ege-webservice/Conversions/ODD%3Atext%3Axml/ODDC%3Atext%3Axml/relaxng%3Aapplication%3Axml-relaxng/' \
+               -H 'Content-Type: multipart/form-data' \
+               -F 'fileToConvert=@tei-betamesaheft-expanded_compiled.xml;type=text/xml' > tei-betamesaheft-expanded.rng 
+      - name: Ensure Result is well-formed
+        run: xmllint --noout tei-betamesaheft-expanded.rng 
+      # Final checks before packaging  
+      # exclude unused cdcc file 
+      - name: Check well-formedness of all ODD files
+        run: xmllint --noout tei-*[^cdcc].xml
+      - name: Check well-formedness of all RNG files
+        run: xmllint --noout *.rng
+      # Cleanup and creat xar 
+      - name: Build with Ant (cleanup schematron reports)
+        run: ant
+      # Commit updated files to repo
+      - name: Commit and Push
+        uses: actions-x/commit@v6
+        if: github.ref == 'refs/heads/master'
+        with:
+          message: "[skip ci] schema update"

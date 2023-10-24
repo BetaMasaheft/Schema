@@ -23,6 +23,8 @@ The Beta maṣāḥǝft Guidelines, which integrate the latest version of this s
 https://betamasaheft.eu/Guidelines/
 
 End license statement: do not remove -->
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_odds.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:rng="http://relaxng.org/ns/structure/1.0" xmlns:sch="http://purl.oclc.org/dsdl/schematron"
     xmlns:bm="https://betamasaheft.eu" xml:lang="en">
@@ -453,8 +455,7 @@ End license statement: do not remove -->
                             <elementRef key="bibl"/>
                         </alternate>
                     </content>
-                    <constraintSpec scheme="isoschematron" ident="date">
-
+                    <constraintSpec scheme="schematron" ident="date">
                         <constraint>
                             <sch:rule context="tei:date[ancestor::place[@subtype='institution']]">
                                 <sch:report test="not(@type='foundation')"
@@ -476,7 +477,7 @@ End license statement: do not remove -->
                             <datatype maxOccurs="3">
                                 <dataRef key="teidata.word"/>
                             </datatype>
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="age"><desc>Age, the value should be given in a @dur attribute according to <ref target="https://www.w3.org/TR/xmlschema-2/#duration">W3C datatypes</ref></desc></valItem>
                                 <valItem ident="reign"><desc>Duration of a reign, the value should be given in a @dur attribute according to <ref target="https://www.w3.org/TR/xmlschema-2/#duration">W3C datatypes</ref></desc></valItem>
                                 <valItem ident="life"><desc>Duration of life, the value should be given in a @dur attribute according to <ref target="https://www.w3.org/TR/xmlschema-2/#duration">W3C datatypes</ref></desc></valItem>
@@ -563,8 +564,11 @@ End license statement: do not remove -->
                             target="https://betamasaheft.eu/Guidelines/?id=personGrp">Beta maṣāḥǝft
                             Guidelines</ref></desc>
                     <attList>
-                        <attDef ident="role" mode="change">
-                            <valList type="open">
+                        <attDef ident="role" mode="replace">
+                            <datatype minOccurs="1" maxOccurs="unbounded">
+                                <dataRef key="teidata.enumerated"/>
+                            </datatype>
+                            <valList type="semi">
                                 <valItem ident="ethnic">
                                     <desc>records with this type represent an ethnic group as a
                                         whole and in general</desc>
@@ -587,7 +591,7 @@ End license statement: do not remove -->
                     </exemplum>
                 </elementSpec>
 
-                <!--         suggest values for @type in origDate-->
+                <!--         suggest values for @evidence in origDate-->
                 <elementSpec ident="origDate" mode="change" module="msdescription">
                     <desc>The constraint suggests to use when instead of repeating the same date in
                             <att>notBefore</att> and <att>notAfter</att>. A list of values for
@@ -595,7 +599,7 @@ End license statement: do not remove -->
                         a list of values. <ref
                             target="https://betamasaheft.eu/Guidelines/?id=origDate">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <constraintSpec scheme="isoschematron" ident="origDate">
+                    <constraintSpec scheme="schematron" ident="origDate">
                         <constraint>
                             <sch:rule context="tei:origDate">
                                 <sch:report
@@ -653,7 +657,7 @@ End license statement: do not remove -->
                             target="https://betamasaheft.eu/Guidelines/?id=citedRange">Beta maṣāḥǝft
                             Guidelines</ref>
                     </desc>
-                    <constraintSpec scheme="isoschematron" ident="citedRange">
+                    <constraintSpec scheme="schematron" ident="citedRange">
                         <constraint>
                             <sch:rule context="tei:citedRange">
                                 <sch:report
@@ -672,7 +676,10 @@ End license statement: do not remove -->
                     </constraintSpec>
                     <attList>
                         <attDef ident="unit" mode="replace">
-                            <valList type="open">
+                            <datatype>
+                                <dataRef key="teidata.enumerated"/>
+                            </datatype>
+                            <valList type="semi">
                                 <valItem ident="page">
                                     <desc>page</desc>
                                 </valItem>
@@ -1990,7 +1997,7 @@ End license statement: do not remove -->
                         is only used with URLs; that there is a space before and after the element.
                             <ref target="https://betamasaheft.eu/Guidelines/?id=ref">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <constraintSpec scheme="isoschematron" ident="ref">
+                    <constraintSpec scheme="schematron" ident="ref">
                         <constraint>
                             <sch:rule context="tei:ref">
                                 <sch:report
@@ -2147,7 +2154,7 @@ End license statement: do not remove -->
                             target="https://betamasaheft.eu/Guidelines/?id=title">Beta maṣāḥǝft
                             Guidelines</ref>
                     </desc>
-                    <constraintSpec scheme="isoschematron" ident="title">
+                    <constraintSpec scheme="schematron" ident="title">
                         <constraint>
                             <sch:rule context="tei:title[@ref]">
                                 <sch:report
@@ -2323,7 +2330,7 @@ End license statement: do not remove -->
                         <att>type</att>. <ref
                             target="https://betamasaheft.eu/Guidelines/?id=listBibl">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <constraintSpec  scheme="isoschematron" ident="listBibl">
+                    <constraintSpec  scheme="schematron" ident="listBibl">
                               <constraint>
                               <sch:rule context="tei:listBibl[@type='catalogue']">
                                   <sch:report
@@ -2567,7 +2574,7 @@ End license statement: do not remove -->
                     </exemplum>
                 </elementSpec>
 
-                <!--          specifies values for faith element, limiting number of values to 2 for "further specification"-->
+                <!--          specifies values for nationality element, limiting number of values to 2 for "further specification"-->
                 <elementSpec ident="nationality" mode="change" module="namesdates">
                     <desc><gi>nationality</gi> can only have a set number of values for
                             <att>type</att>. You can use as many of this as you want, one for each
@@ -2651,7 +2658,7 @@ End license statement: do not remove -->
                         identification, unless the identification is not possible. <ref
                             target="https://betamasaheft.eu/Guidelines/?id=roleName">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                     <constraintSpec scheme="isoschematron" ident="roleName">
+                     <constraintSpec scheme="schematron" ident="roleName">
                         <constraint>
                             <sch:rule
                                 context="tei:roleName/@type">
@@ -2665,7 +2672,6 @@ End license statement: do not remove -->
                         <attDef ident="type" mode="replace" usage="req">
                             <desc>These are fuzzy categories, inherited from the EAe.
                                 In volume 5, pages 580–590 a list of titles, ranks and functions can be found.</desc>
-                            <defaultVal>title</defaultVal>
                             <valList type="closed">
                                 <valItem ident="title"><desc>title is  used when addressing a person,
                                     particularly an office holder (e.g. ʾabbā, wayzaro, daǧǧāzmačč, ʾabuna), and is
@@ -2742,7 +2748,7 @@ End license statement: do not remove -->
                         Clavis identifier type <ref
                             target="https://betamasaheft.eu/Guidelines/?id=bibl">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <constraintSpec scheme="isoschematron" ident="bibl">
+                    <constraintSpec scheme="schematron" ident="bibl">
                         <constraint>
                             <sch:rule context="tei:bibl[not(ancestor::tei:listBibl[@type='mss'])][not(ancestor::tei:surrogates)]">
                                 <sch:report
@@ -2812,7 +2818,7 @@ End license statement: do not remove -->
                             available here</ref>. <ref
                             target="https://betamasaheft.eu/Guidelines/?id=ptr">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <constraintSpec scheme="isoschematron" ident="ptr">
+                    <constraintSpec scheme="schematron" ident="ptr">
                         <constraint>
                             <sch:rule context="tei:ptr[starts-with(@target, 'bm:')]">
                                 <sch:report
@@ -2847,7 +2853,7 @@ End license statement: do not remove -->
                         others, please use additionally <att>type</att> with value external. <ref
                             target="https://betamasaheft.eu/Guidelines/?id=witness">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <constraintSpec scheme="isoschematron" ident="witness">
+                    <constraintSpec scheme="schematron" ident="witness">
                         <constraint>
                             <sch:rule context="tei:witness">
                                 <sch:report
@@ -2918,7 +2924,7 @@ End license statement: do not remove -->
                         commas in the numeric values for dimensions <ref
                             target="https://betamasaheft.eu/Guidelines/?id=dimensions">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <constraintSpec scheme="isoschematron" ident="witness">
+                    <constraintSpec scheme="schematron" ident="dimensions">
                         <constraint>
                             <sch:rule context="tei:dimensions/tei:*">
                                 <sch:report
@@ -3422,7 +3428,7 @@ End license statement: do not remove -->
                         regulated for the use of this element in <ref
                             target="https://betamasaheft.eu/Guidelines/?id=layoutDesc">layout
                             descriptions Beta maṣāḥǝft Guidelines</ref></desc>
-                    <constraintSpec scheme="isoschematron" ident="ab">
+                    <constraintSpec scheme="schematron" ident="ab">
                         <constraint>
                             <sch:rule context="tei:ab[ancestor::tei:layout]">
                                 <sch:report
@@ -3448,7 +3454,10 @@ End license statement: do not remove -->
                     </constraintSpec>
                     <attList>
                         <attDef ident="type" mode="replace" usage="opt">
-                            <valList type="open">
+                            <datatype>
+                                <dataRef key="teidata.enumerated"></dataRef>
+                            </datatype>
+                            <valList type="semi">
 
                                 <!--                          list coming from myCore-->
                                 <valItem ident="history"/>
@@ -3464,7 +3473,10 @@ End license statement: do not remove -->
                             </valList>
                         </attDef>
                         <attDef ident="subtype" mode="replace" usage="opt">
-                            <valList type="open">
+                            <datatype>
+                                <dataRef key="teidata.enumerated"></dataRef>
+                            </datatype>
+                            <valList type="semi">
                                 <valItem ident="pattern"/>
                                 <valItem ident="usage"/>
                                 <valItem ident="executed"/>
@@ -3498,7 +3510,7 @@ End license statement: do not remove -->
                         places where it is allowed. <ref
                             target="https://betamasaheft.eu/Guidelines/?id=seg">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <constraintSpec scheme="isoschematron" ident="seg">
+                    <constraintSpec scheme="schematron" ident="seg">
                         <constraint>
                             <sch:rule context="tei:seg[ancestor::tei:handNote]">
                                 <sch:report
@@ -3601,7 +3613,7 @@ End license statement: do not remove -->
                         one of the two attributes <att>pastedown</att> or <att>color</att>
                         <ref target="https://betamasaheft.eu/Guidelines/?id=decoNote">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <constraintSpec scheme="isoschematron" ident="decoNote">
+                    <constraintSpec scheme="schematron" ident="decoNote">
                         <constraint>
                             <!--<sch:rule context="tei:decoNote[not(ancestor::tei:bindingDesc)][not(@type='rubrication')]">
                                 <sch:report test="not(child::tei:locus)">decoNote must contain a
@@ -3651,7 +3663,11 @@ End license statement: do not remove -->
                     </constraintSpec>
                     <attList>
                         <attDef ident="xml:id" mode="change" usage="req"/>
-                        <attDef ident="color" mode="add" usage="opt"/>
+                        <attDef ident="color" mode="add" usage="opt">
+                            <datatype>
+                                <dataRef key="teidata.word"/>
+                            </datatype>
+                        </attDef>
                         <attDef ident="pastedown" mode="add" usage="opt">
                             <datatype maxOccurs="3">
                                 <dataRef key="teidata.word"/>
@@ -3816,7 +3832,10 @@ End license statement: do not remove -->
                             </valList>
                         </attDef>
                         <attDef ident="rend" mode="replace" usage="opt">
-                            <valList type="open">
+                            <datatype minOccurs="1" maxOccurs="unbounded">
+                                <dataRef key="teidata.word"/>
+                            </datatype>
+                            <valList type="semi">
                                 <valItem ident="damaged"/>
                                 <valItem ident="intact"/>
                             </valList>
@@ -3880,7 +3899,7 @@ End license statement: do not remove -->
                 <elementSpec ident="msPart" mode="change" module="msdescription">
                     <desc><ref target="https://betamasaheft.eu/Guidelines/?id=msPart">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <constraintSpec scheme="isoschematron" ident="msPart">
+                    <constraintSpec scheme="schematron" ident="msPart">
                         <constraint>
                             <sch:rule context="tei:msPart">
                                 <sch:report
@@ -3923,7 +3942,7 @@ End license statement: do not remove -->
                 <elementSpec ident="msFrag" mode="change" module="msdescription">
                     <desc><ref target="https://betamasaheft.eu/Guidelines/?id=msFrag">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <constraintSpec scheme="isoschematron" ident="msfrag">
+                    <constraintSpec scheme="schematron" ident="msfrag">
                         <constraint>
                             <sch:rule context="tei:msFrag">
                                 <sch:report
@@ -3970,7 +3989,7 @@ End license statement: do not remove -->
                         of the <att>xml:id</att> <ref target="https://betamasaheft.eu/Guidelines/?id=msItem">Beta maṣāḥǝft
                             Guidelines</ref></desc>
 
-                    <constraintSpec scheme="isoschematron" ident="msItem">
+                    <constraintSpec scheme="schematron" ident="msItem">
                         <constraint>
                             <sch:rule context="tei:msItem">
                                 <sch:report
@@ -4018,13 +4037,13 @@ End license statement: do not remove -->
                         See also, on how to encode titles, supplications and colophons in general,
                         <ref target="https://betamasaheft.eu/Guidelines/?id=ColophSupplTit">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <content>
-                        <macroRef key="macro.phraseSeq"/>
+                    <content>                        
                         <sequence>
+                            <macroRef key="macro.phraseSeq"/>
                             <classRef key="tei_model.biblLike" minOccurs="0" maxOccurs="unbounded"/>
                         </sequence>
                     </content>
-                    <constraintSpec scheme="isoschematron" ident="colophon">
+                    <constraintSpec scheme="schematron" ident="colophon">
                         <constraint>
                             <sch:rule context="tei:colophon">
                                 <sch:report
@@ -4082,7 +4101,7 @@ End license statement: do not remove -->
                         value for <att>script</att> is limited to the values in the list.<ref
                             target="https://betamasaheft.eu/Guidelines/?id=handNote">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <constraintSpec scheme="isoschematron" ident="handNote">
+                    <constraintSpec scheme="schematron" ident="handNote">
                         <constraint>
                             <sch:rule context="tei:handNote">
                                 <sch:report
@@ -4346,7 +4365,10 @@ End license statement: do not remove -->
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
-                            <valList type="open">
+                            <datatype minOccurs="1" maxOccurs="unbounded">
+                                <dataRef key="teidata.enumerated"></dataRef>
+                            </datatype>
+                            <valList type="semi">
                                 <valItem ident="generalEditor"/>
                             </valList>
                         </attDef>
@@ -4366,7 +4388,7 @@ End license statement: do not remove -->
                         <ref target="https://betamasaheft.eu/Guidelines/?id=change">Beta maṣāḥǝft
                             Guidelines</ref>
                     </desc>
-                    <constraintSpec scheme="isoschematron" ident="change">
+                    <constraintSpec scheme="schematron" ident="change">
                         <constraint>
                             <sch:rule context="tei:change">
                                 <sch:report
@@ -4597,7 +4619,7 @@ End license statement: do not remove -->
                                 </valItem>
                             </valList>
                         </attDef>
-                        <attDef ident="when" mode="replace" usage="req"/>
+                        <attDef ident="when" mode="change" usage="req"/>                        
                     </attList>
                 </elementSpec>
 
@@ -4625,7 +4647,7 @@ End license statement: do not remove -->
                         persName. for use in person records, a list of values for <att>type</att> is
                         also provided. <ref target="https://betamasaheft.eu/Guidelines/?id=persName"
                             >Beta maṣāḥǝft Guidelines</ref></desc>
-                    <constraintSpec scheme="isoschematron" ident="persName">
+                    <constraintSpec scheme="schematron" ident="persName">
                         <constraint>
                             <sch:rule
                                 context="tei:persName[ancestor::tei:TEI[@type='mss' or @type='place' or @type='ins' or @type='work']][not(parent::tei:respStmt)]">
@@ -4770,7 +4792,7 @@ End license statement: do not remove -->
                         list of values for <att>type</att> is also provided. <ref
                             target="https://betamasaheft.eu/Guidelines/?id=placeName">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <constraintSpec scheme="isoschematron" ident="placeName">
+                    <constraintSpec scheme="schematron" ident="placeName">
                         <constraint>
                             <sch:rule
                                 context="tei:placeName[ancestor::tei:TEI[@type='mss' or @type='pers' or @type='work']]">
@@ -5410,7 +5432,7 @@ End license statement: do not remove -->
                         point to the <ref target="https://www.eagle-network.eu/voc/objtyp.html">Eagle Vocabularies</ref>, especially if the material can be
                         specified further.<ref target="https://betamasaheft.eu/Guidelines/?id=objectDesc">Beta
                             maṣāḥǝft Guidelines</ref></desc>
-                    <constraintSpec scheme="isoschematron" ident="objectDesc">
+                    <constraintSpec scheme="schematron" ident="objectDesc">
                         <constraint>
                             <sch:rule context="tei:msDesc">
                                 <sch:report
@@ -5512,7 +5534,7 @@ End license statement: do not remove -->
                         which will give you up to 25 examples. <ref
                             target="https://betamasaheft.eu/Guidelines/?id=relation">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <constraintSpec scheme="isoschematron" ident="relation">
+                    <constraintSpec scheme="schematron" ident="relation">
                         <constraint>
                             <sch:rule context="tei:relation">
                                 <sch:report
@@ -7152,7 +7174,7 @@ End license statement: do not remove -->
                 <elementSpec ident="div" mode="change" module="textstructure">
                     <desc>Types are inherited from the EpiDoc schema. The subtype values determine the additional semantic value of the textpart for example.<ref target="https://betamasaheft.eu/Guidelines/?id=div">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <constraintSpec scheme="isoschematron" ident="div">
+                    <constraintSpec scheme="schematron" ident="div">
                         <constraint>
                             <sch:rule context="tei:div[parent::tei:body]">
                                 <sch:report
@@ -7196,7 +7218,7 @@ End license statement: do not remove -->
                             <datatype maxOccurs="6">
                                 <dataRef key="teidata.word"/>
                             </datatype>
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="book">
                                     <desc>this container is for a book and may contain
                                         chapters</desc>
@@ -7302,7 +7324,7 @@ End license statement: do not remove -->
                         indexes of the Encyclopaedia Aethiopica. <ref target="https://betamasaheft.eu/Guidelines/?id=TEI">Beta maṣāḥǝft
                             Guidelines</ref></desc>
                     <!--             testing for origDate in origin-->
-                    <constraintSpec scheme="isoschematron" ident="TEI">
+                    <constraintSpec scheme="schematron" ident="TEI">
                         <constraint>
                             <sch:rule context="tei:TEI">
                                 <sch:report
@@ -7372,7 +7394,7 @@ End license statement: do not remove -->
                     <desc>There should always be a date of some kind. <ref target="https://betamasaheft.eu/Guidelines/?id=origin">Beta maṣāḥǝft
                             Guidelines</ref></desc>
                     <!--             testing for origDate in origin-->
-                    <constraintSpec scheme="isoschematron" ident="origin">
+                    <constraintSpec scheme="schematron" ident="origin">
                         <constraint>
                             <sch:rule context="tei:origin">
                                 <sch:report
@@ -7394,7 +7416,7 @@ End license statement: do not remove -->
                         <ref target="https://betamasaheft.eu/Guidelines/?id=geo">Beta maṣāḥǝft
                             Guidelines</ref></desc>
                     <!--             testing for origDate in origin-->
-                    <constraintSpec scheme="isoschematron" ident="geo">
+                    <constraintSpec scheme="schematron" ident="geo">
                         <constraint>
                             <sch:rule context="tei:geo[not(@rend)]">
                                 <sch:report
@@ -7441,16 +7463,14 @@ End license statement: do not remove -->
                 <elementSpec ident="locus" module="msdescription" mode="change">
                     <desc>locus must have placement attributes, either <att>target</att> or <att>to</att> and <att>from</att><ref target="https://betamasaheft.eu/Guidelines/?id=locus">Beta maṣāḥǝft
                             Guidelines</ref></desc>
-                    <content>
-                        <macroRef key="macro.xtext"/>
+                    <content>                        
                         <sequence>
-
+                            <macroRef key="macro.xtext"/>
                             <classRef key="tei_model.certLike" minOccurs="0" maxOccurs="unbounded"/>
-
                         </sequence>
                     </content>
                     <!--  checks that locus has @target or @from-->
-                    <constraintSpec scheme="isoschematron" ident="locus">
+                    <constraintSpec scheme="schematron" ident="locus">
                         <constraint>
                             <sch:rule context="tei:locus">
                                 <sch:report
@@ -7522,7 +7542,7 @@ locus is used to point to values of these elements in the teiHeader.
                         is <gi>collation</gi>. <ref target="https://betamasaheft.eu/Guidelines/?id=item">Beta maṣāḥǝft
                             Guidelines</ref></desc>
                     <!--  checks that item in collation has @xml:id-->
-                    <constraintSpec scheme="isoschematron" ident="item">
+                    <constraintSpec scheme="schematron" ident="item">
                         <constraint>
                             <sch:rule context="tei:item[ancestor::tei:collation]">
                                 <sch:report
@@ -7573,7 +7593,10 @@ locus is used to point to values of these elements in the teiHeader.
                     </constraintSpec>
                     <attList>
                         <attDef ident="rend" mode="replace" usage="opt">
-                            <valList type="open">
+                            <datatype minOccurs="1" maxOccurs="unbounded">
+                                <dataRef key="teidata.word"/>
+                            </datatype>
+                            <valList type="semi">
                                 <valItem ident="marginal"/>
                                 <valItem ident="guardLeaf"/>
                             </valList>
@@ -7682,7 +7705,10 @@ locus is used to point to values of these elements in the teiHeader.
                             Guidelines</ref></desc>
                     <attList>
                         <attDef ident="reason" mode="add" usage="opt">
-                            <valList type="open">
+                            <datatype minOccurs="1" maxOccurs="unbounded">
+                                <dataRef key="teidata.word"></dataRef>
+                            </datatype>
+                            <valList type="semi">
                                 <valItem ident="rubrication">
                                     <desc>space voluntarily left e.g. for later rubrication never
                                         accomplished </desc>
@@ -7749,8 +7775,8 @@ locus is used to point to values of these elements in the teiHeader.
                     </exemplum>
                 </elementSpec>
 
-                <elementSpec ident="damage" module="transc" mode="change">
-                    <constraintSpec scheme="isoschematron" ident="damage">
+                <elementSpec ident="damage" module="transcr" mode="change">
+                    <constraintSpec scheme="schematron" ident="damage">
                         <constraint>
                             <sch:rule context="tei:damage[@placeOfDamage]">
                                 <sch:report test="string-length(text()) gt 1"
@@ -7764,7 +7790,7 @@ locus is used to point to values of these elements in the teiHeader.
                             <datatype maxOccurs="4">
                                 <dataRef key="teidata.enumerated"/>
                             </datatype>
-                            <valList type="open">
+                            <valList type="semi">
                                 <valItem ident="upperRight"/>
                                 <valItem ident="upperLeft"/>
                                 <valItem ident="lowerRight"/>
