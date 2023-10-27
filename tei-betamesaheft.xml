@@ -3663,8 +3663,8 @@ End license statement: do not remove -->
                     </constraintSpec>
                     <attList>
                         <attDef ident="xml:id" mode="change" usage="req"/>
-                        <attDef ident="color" mode="add" usage="opt">
-                            <datatype>
+                        <attDef ident="color" mode="replace" usage="opt">
+                            <datatype maxOccurs="unbounded">
                                 <dataRef key="teidata.word"/>
                             </datatype>
                         </attDef>
