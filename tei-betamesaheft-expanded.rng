@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2024-01-11T11:21:52Z. . 
+Schema generated from ODD source 2024-01-19T11:37:25Z. . 
 TEI Edition: P5 Version 4.7.0. Last updated on 16th November 2023, revision e5dd73ed0 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.7.0/ 
   
@@ -8537,80 +8537,114 @@ Suggested values include: 1] WGS84 (World Geodetic System); 2] MGRS (Military Gr
             <attribute name="ident">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <choice>
+                  <value>af</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Afar</a:documentation>
                   <value>am</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Amharic</a:documentation>
-                  <value>om</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Afaan Oromoo</a:documentation>
+                  <value>am-Arab</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Amharic in Arabic script</a:documentation>
                   <value>ar</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Arabic</a:documentation>
+                  <value>ar-Ethi</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Arabic in Ethiopic script</a:documentation>
+                  <value>awn</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Awngi</a:documentation>
                   <value>hy</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Armenian</a:documentation>
+                  <value>cu</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Church Slavonic</a:documentation>
+                  <value>cu-Cyrs</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Church Slavonic in Cyrillic</a:documentation>
+                  <value>cu-Glag</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Church Slavonic in Glagolitic</a:documentation>
                   <value>cop</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Coptic</a:documentation>
-                  <value>geo</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Georgian</a:documentation>
-                  <value>la</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
-                  <value>fr</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
-                  <value>grc</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Greek</a:documentation>
-                  <value>gez</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gǝʿǝz</a:documentation>
-                  <value>he</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Hebrew</a:documentation>
-                  <value>it</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
-                  <value>fa</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Persian</a:documentation>
-                  <value>sr</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Serbian</a:documentation>
-                  <value>syr</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Syriac</a:documentation>
-                  <value>tu</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Turkish</a:documentation>
-                  <value>ti</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Tigrinya</a:documentation>
-                  <value>tig</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Tigre</a:documentation>
+                  <value>cs</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Czech</a:documentation>
+                  <value>nl</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
                   <value>en</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">English</a:documentation>
-                  <value>sv</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
-                  <value>ru</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Russian</a:documentation>
+                  <value>egy</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Egyptian (ancient)</a:documentation>
+                  <value>egy-Egyd</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Egyptian Demotic</a:documentation>
+                  <value>egy-Egyh</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Egyptian Hieratic</a:documentation>
+                  <value>egy-Egyp</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Egyptian Hieroglyphs</a:documentation>
+                  <value>fr</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">French</a:documentation>
+                  <value>gft</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gāfāt</a:documentation>
+                  <value>ka</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Georgian</a:documentation>
                   <value>de</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">German</a:documentation>
+                  <value>gez</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gǝʿǝz</a:documentation>
+                  <value>gez-Sarb</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gǝʿǝz in South Arabian characters</a:documentation>
+                  <value>gez-tr</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gǝʿǝz transliterated</a:documentation>
+                  <value>grc</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Greek</a:documentation>
+                  <value>el</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Greek (modern)</a:documentation>
+                  <value>ha</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Harari</a:documentation>
+                  <value>ha-Ethi</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Harari in fidel</a:documentation>
+                  <value>ha-Arab</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Harari in Arabic script</a:documentation>
+                  <value>x-oh</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Old Harari</a:documentation>
+                  <value>he</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Hebrew</a:documentation>
+                  <value>la</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Latin</a:documentation>
+                  <value>it</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Italian</a:documentation>
+                  <value>no</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Norwegian</a:documentation>
+                  <value>om</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Oromo</a:documentation>
+                  <value>fa</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Persian</a:documentation>
+                  <value>ru</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Russian</a:documentation>
+                  <value>sr</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Serbian</a:documentation>
                   <value>es</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Spanish</a:documentation>
                   <value>pal</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Pahlavi</a:documentation>
-                  <value>gft</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Gāfāt</a:documentation>
-                  <value>awn</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Awngi</a:documentation>
-                  <value>pt</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Portuguese</a:documentation>
                   <value>pl</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Polish</a:documentation>
-                  <value>cs</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Czech</a:documentation>
-                  <value>x-oh</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Old Harari</a:documentation>
-                  <value>gez-tr</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ethiopic transliterated</a:documentation>
-                  <value>no</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Norwegian</a:documentation>
-                  <value>el</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Modern Greek</a:documentation>
-                  <value>nl</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Dutch</a:documentation>
+                  <value>pt</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Portuguese</a:documentation>
+                  <value>sv</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Swedish</a:documentation>
+                  <value>syr</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Syriac</a:documentation>
+                  <value>syr-Syre</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Syriac ʾEsṭrangēlā</a:documentation>
+                  <value>syr-Syrj</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Syriac Serṭā</a:documentation>
+                  <value>syr-Syrn</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Syriac Eastern</a:documentation>
+                  <value>tu</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Turkish</a:documentation>
+                  <value>ota</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ottoman Turkish</a:documentation>
+                  <value>ti</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Tigrinya</a:documentation>
+                  <value>tig</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Tigre</a:documentation>
                   <value>ji</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Yiddish</a:documentation>
                   <value>rmo</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Sinte Romani</a:documentation>
-                  <value>cu</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Church Slavic</a:documentation>
                </choice>
             </attribute>
          </optional>
