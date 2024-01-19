@@ -91,6 +91,7 @@ End license statement: do not remove -->
             <change who="PL" when="2020-10-27">Added @see attributes to sch:report statements.</change>
             <change who="ES" when="2022-03-14">Added Addisie, corrected gap/omitted definition</change>
             <change who="ES" when="2024-01-11">Added Janet, removed Gay</change>
+            <change who="ES" when="2024-01-19">Arranged languages alphabetically, replaced "geo" with "ka", added subtags for scripts</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -1883,72 +1884,113 @@ End license statement: do not remove -->
                     <attList>
                         <attDef ident="ident" mode="replace" usage="opt">
                             <valList type="closed">
-                                <!--  modified  list of languages coming from myCore-->
+                                <!--  reference:  IANA Language Subtag Registry -->
+                                <valItem ident="af">
+                                    <desc>Afar</desc>
+                                </valItem>
                                 <valItem ident="am">
                                     <desc>Amharic</desc>
                                 </valItem>
-                                <valItem ident="om">
-                                    <desc>Afaan Oromoo</desc>
-                                </valItem>
+                                <valItem ident="am-Arab">
+                                    <desc>Amharic in Arabic script</desc>
+                                </valItem>                                
                                 <valItem ident="ar">
                                     <desc>Arabic</desc>
+                                </valItem>
+                                <valItem ident="ar-Ethi">
+                                    <desc>Arabic in Ethiopic script</desc>
+                                </valItem>
+                                <valItem ident="awn">
+                                    <desc>Awngi</desc>
                                 </valItem>
                                 <valItem ident="hy">
                                     <desc>Armenian</desc>
                                 </valItem>
+                                <valItem ident="cu"><desc>Church Slavonic</desc></valItem>
+                                <valItem ident="cu-Cyrs"><desc>Church Slavonic in Cyrillic</desc></valItem>
+                                <valItem ident="cu-Glag"><desc>Church Slavonic in Glagolitic</desc></valItem>
                                 <valItem ident="cop">
                                     <desc>Coptic</desc>
                                 </valItem>
-                                <valItem ident="geo">
-                                    <desc>Georgian</desc>
+                                <valItem ident="cs">
+                                    <desc>Czech</desc>
                                 </valItem>
-                                <valItem ident="la">
-                                    <desc>Latin</desc>
+                                <valItem ident="nl"><desc>Dutch</desc></valItem>
+                                <valItem ident="en">
+                                    <desc>English</desc>
+                                </valItem>        
+                                <valItem ident="egy">
+                                    <desc>Egyptian (ancient)</desc>
+                                </valItem>
+                                <valItem ident="egy-Egyd">
+                                    <desc>Egyptian Demotic</desc>
+                                </valItem>
+                                <valItem ident="egy-Egyh">
+                                    <desc>Egyptian Hieratic</desc>
+                                </valItem>
+                                <valItem ident="egy-Egyp">
+                                    <desc>Egyptian Hieroglyphs</desc>
                                 </valItem>
                                 <valItem ident="fr">
                                     <desc>French</desc>
                                 </valItem>
-                                <valItem ident="grc">
-                                    <desc>Greek</desc>
+                                <valItem ident="gft">
+                                    <desc>Gāfāt</desc>
+                                </valItem>
+                                <valItem ident="ka">
+                                    <desc>Georgian</desc>
+                                </valItem>
+                                <valItem ident="de">
+                                    <desc>German</desc>
                                 </valItem>
                                 <valItem ident="gez">
                                     <desc>Gǝʿǝz</desc>
+                                </valItem>                                
+                                <valItem ident="gez-Sarb">
+                                    <desc>Gǝʿǝz in South Arabian characters</desc>
+                                </valItem>
+                                <valItem ident="gez-tr">
+                                    <desc>Gǝʿǝz transliterated</desc>
+                                </valItem>
+                                <valItem ident="grc">
+                                    <desc>Greek</desc>
+                                </valItem>
+                                <valItem ident="el"><desc>Greek (modern)</desc></valItem>
+                                <valItem ident="ha">
+                                    <desc>Harari</desc>
+                                </valItem>
+                                <valItem ident="ha-Ethi">
+                                    <desc>Harari in fidel</desc>
+                                </valItem>
+                                <valItem ident="ha-Arab">
+                                    <desc>Harari in Arabic script</desc>
+                                </valItem>
+                                <valItem ident="x-oh">
+                                    <desc>Old Harari</desc>
                                 </valItem>
                                 <valItem ident="he">
                                     <desc>Hebrew</desc>
                                 </valItem>
+                                <valItem ident="la">
+                                    <desc>Latin</desc>
+                                </valItem>
                                 <valItem ident="it">
                                     <desc>Italian</desc>
+                                </valItem>
+                                <valItem ident="no">
+                                    <desc>Norwegian</desc>
+                                </valItem>
+                                <valItem ident="om">
+                                    <desc>Oromo</desc>
                                 </valItem>
                                 <valItem ident="fa">
                                     <desc>Persian</desc>
                                 </valItem>
-                                <valItem ident="sr">
-                                    <desc>Serbian</desc>
-                                </valItem>
-                                <valItem ident="syr">
-                                    <desc>Syriac</desc>
-                                </valItem>
-                                <valItem ident="tu">
-                                    <desc>Turkish</desc>
-                                </valItem>
-                                <valItem ident="ti">
-                                    <desc>Tigrinya</desc>
-                                </valItem>
-                                <valItem ident="tig">
-                                    <desc>Tigre</desc>
-                                </valItem>
-                                <valItem ident="en">
-                                    <desc>English</desc>
-                                </valItem>
-                                <valItem ident="sv">
-                                    <desc>Swedish</desc>
-                                </valItem>
                                 <valItem ident="ru">
                                     <desc>Russian</desc>
                                 </valItem>
-                                <valItem ident="de">
-                                    <desc>German</desc>
+                                <valItem ident="sr">
+                                    <desc>Serbian</desc>
                                 </valItem>
                                 <valItem ident="es">
                                     <desc>Spanish</desc>
@@ -1956,35 +1998,43 @@ End license statement: do not remove -->
                                 <valItem ident="pal">
                                     <desc>Pahlavi</desc>
                                 </valItem>
-                                <valItem ident="gft">
-                                    <desc>Gāfāt</desc>
-                                </valItem>
-                                <valItem ident="awn">
-                                    <desc>Awngi</desc>
+                                <valItem ident="pl">
+                                    <desc>Polish</desc>
                                 </valItem>
                                 <valItem ident="pt">
                                     <desc>Portuguese</desc>
                                 </valItem>
-                                <valItem ident="pl">
-                                    <desc>Polish</desc>
+                                <valItem ident="sv">
+                                    <desc>Swedish</desc>
                                 </valItem>
-                                <valItem ident="cs">
-                                    <desc>Czech</desc>
+                                <valItem ident="syr">
+                                    <desc>Syriac</desc>
                                 </valItem>
-                                <valItem ident="x-oh">
-                                    <desc>Old Harari</desc>
+                                <valItem ident="syr-Syre">
+                                    <desc>Syriac ʾEsṭrangēlā</desc>
                                 </valItem>
-                                <valItem ident="gez-tr">
-                                    <desc>Ethiopic transliterated</desc>
+                                <valItem ident="syr-Syrj">
+                                    <desc>Syriac Serṭā</desc>
                                 </valItem>
-                                <valItem ident="no">
-                                    <desc>Norwegian</desc>
+                                <valItem ident="syr-Syrn">
+                                    <desc>Syriac Eastern</desc>
                                 </valItem>
-                                <valItem ident="el"><desc>Modern Greek</desc></valItem>
-                                <valItem ident="nl"><desc>Dutch</desc></valItem>
+                                <valItem ident="tu">
+                                    <desc>Turkish</desc>
+                                </valItem>
+                                <valItem ident="ota">
+                                    <desc>Ottoman Turkish</desc>
+                                </valItem>
+                                <valItem ident="ti">
+                                    <desc>Tigrinya</desc>
+                                </valItem>
+                                <valItem ident="tig">
+                                    <desc>Tigre</desc>
+                                </valItem>                                
+                                
                                 <valItem ident="ji"><desc>Yiddish</desc></valItem>
                                 <valItem ident="rmo"><desc>Sinte Romani</desc></valItem>
-                                <valItem ident="cu"><desc>Church Slavic</desc></valItem>
+                                
                             </valList>
                         </attDef>
 
