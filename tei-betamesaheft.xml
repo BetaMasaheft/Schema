@@ -1888,6 +1888,9 @@ End license statement: do not remove -->
                                 <valItem ident="af">
                                     <desc>Afar</desc>
                                 </valItem>
+                                <valItem ident="ahg">
+                                    <desc>Agaw (Kemant)</desc>
+                                </valItem>
                                 <valItem ident="am">
                                     <desc>Amharic</desc>
                                 </valItem>
