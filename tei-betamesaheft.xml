@@ -2317,6 +2317,9 @@ End license statement: do not remove -->
                                 <valItem ident="full">
                                     <desc>for expanded files</desc>
                                 </valItem>
+                                <valItem ident="gmd">
+                                    <desc>general material designation</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                         <attDef ident="subtype" mode="change" usage="opt">
