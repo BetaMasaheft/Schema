@@ -4452,6 +4452,21 @@ End license statement: do not remove -->
                                 <valItem ident="AmAb">
                                     <desc>Amanuel Abraha</desc>
                                 </valItem>
+                                <valItem ident="JRB">
+                                    <desc>Jeremy R. Brown</desc>
+                                </valItem>
+                                <valItem ident="WLB">
+                                    <desc>Wendy L. Belcher</desc>
+                                </valItem>
+                                <valItem ident="TEg">
+                                    <desc>Taylor Eggan</desc>
+                                </valItem>
+                                <valItem ident="EP">
+                                    <desc>Ekaterina Pukhovaia</desc>
+                                </valItem>
+                                <valItem ident="BW">
+                                    <desc>Bret Windhauser</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -4709,6 +4724,21 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="AmAb">
                                     <desc>Amanuel Abraha</desc>
+                                </valItem>
+                                <valItem ident="JRB">
+                                    <desc>Jeremy R. Brown</desc>
+                                </valItem>
+                                <valItem ident="WLB">
+                                    <desc>Wendy L. Belcher</desc>
+                                </valItem>
+                                <valItem ident="TEg">
+                                    <desc>Taylor Eggan</desc>
+                                </valItem>
+                                <valItem ident="EP">
+                                    <desc>Ekaterina Pukhovaia</desc>
+                                </valItem>
+                                <valItem ident="BW">
+                                    <desc>Bret Windhauser</desc>
                                 </valItem>
                             </valList>
                         </attDef>
