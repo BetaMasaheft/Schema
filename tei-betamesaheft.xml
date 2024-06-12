@@ -3906,6 +3906,9 @@ End license statement: do not remove -->
                                         created by passing a thread through a spine fold when sewing
                                         a book.</desc>
                                 </valItem>
+                                <valItem ident="Sewing">
+                                    <desc>for use in binding description. For the general description of the sewing.</desc>
+                                </valItem>
                                 <valItem ident="EndLeaves">
                                     <desc>for use in binding description. All the leaves found at
                                         each side of a bookblock, intended to give protection to the
