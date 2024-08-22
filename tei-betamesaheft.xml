@@ -733,7 +733,7 @@ End license statement: do not remove -->
                             target="https://betamasaheft.eu/Guidelines/?id=condition">Beta maṣāḥǝft
                             Guidelines</ref></desc>
                     <classes mode="change">
-                        <memberOf key="att.canonical " mode="add"/>
+                        <memberOf key="att.canonical"/>
                     </classes>
                     <attList>
                         <attDef ident="key" mode="replace" usage="rec">
