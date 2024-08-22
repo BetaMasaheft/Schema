@@ -2355,6 +2355,15 @@ End license statement: do not remove -->
                                 <valItem ident="gmd">
                                     <desc>general material designation</desc>
                                 </valItem>
+                                <valItem ident="acephalous">
+                                    <desc>incomplete - lacking beginning</desc>
+                                </valItem>
+                                <valItem ident="apodous">
+                                    <desc>incomplete - lacking ending</desc>
+                                </valItem>
+                                <valItem ident="lacunous">
+                                    <desc>incomplete - with lacunae</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                         <attDef ident="subtype" mode="change" usage="opt">
