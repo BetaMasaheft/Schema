@@ -5,7 +5,7 @@
          xmlns="http://relaxng.org/ns/structure/1.0"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2024-08-23T08:31:57Z. . 
+Schema generated from ODD source 2024-08-23T10:15:48Z. . 
 TEI Edition: P5 Version 4.8.0. Last updated on 8th July 2024, revision 1f9891a87 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.8.0/ 
   
@@ -19867,6 +19867,14 @@ Suggested values include: 1] ethnic; 2] congregation; 3] militaryUnit</a:documen
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: MS, @passive: Person Only for use in the records of the IslHornAfr project. </a:documentation>
                   <value>iha:Similar_note</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: MS, @passive: MS Only for use in the records of the IslHornAfr project. </a:documentation>
+                  <value>iha:Mawqūf_ʻalayhi</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: MS item Only for use in the records of the IslHornAfr project. </a:documentation>
+                  <value>iha:Wāqif</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: MS item, @passive: Person Only for use in the records of the IslHornAfr project. </a:documentation>
+                  <value>iha:Recipient</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: MS, @passive: Person Only for use in the records of the IslHornAfr project. </a:documentation>
+                  <value>iha:Sender</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: MS, @passive: Person Only for use in the records of the IslHornAfr project. </a:documentation>
                   <value>saws:isDirectCopyOf</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Manuscript. http://purl.org/saws/ontology#isDirectCopyOf <a xmlns="http://www.w3.org/1999/xhtml"
                         xmlns:rng="http://relaxng.org/ns/structure/1.0"
