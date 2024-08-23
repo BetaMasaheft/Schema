@@ -5810,6 +5810,24 @@ End license statement: do not remove -->
                                 <valItem ident="iha:Dedicated_to"><desc>@active: MS, @passive: Person
                                     Dedicated to. Only for use in the records of the IslHornAfr project.
                                 </desc></valItem>
+                                <valItem ident="iha:Borrower"><desc>@active: MS, @passive: Person
+                                    Borrower. Only for use in the records of the IslHornAfr project.
+                                </desc></valItem>
+                                <valItem ident="iha:Marked"><desc>@active: MS, @passive: Person
+                                    Marked. Only for use in the records of the IslHornAfr project.
+                                </desc></valItem>
+                                <valItem ident="iha:Discussed_in"><desc>@active: MS, @passive: Biblio
+                                    Discussed. Only for use in the records of the IslHornAfr project.
+                                </desc></valItem>
+                                <valItem ident="iha:Photocopy"><desc>@active: MS, @passive: MS
+                                    Photocopy. Only for use in the records of the IslHornAfr project.
+                                </desc></valItem>
+                                <valItem ident="iha:Printing_place"><desc>@active: MS, @passive: Place
+                                    Printing place. Only for use in the records of the IslHornAfr project.
+                                </desc></valItem>
+                                <valItem ident="iha:Original_manuscript"><desc>@active: MS, @passive: MS
+                                    Original. Only for use in the records of the IslHornAfr project.
+                                </desc></valItem>
                                 <!-- @active: Manuscript, @passive: Manuscript.-->
                                 <valItem ident="saws:isDirectCopyOf">
                                     <desc>@active: Manuscript, @passive: Manuscript.
