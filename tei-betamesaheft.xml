@@ -5739,6 +5739,11 @@ End license statement: do not remove -->
                                         Only for use in the records of the IslHornAfr project.
                                     </desc>
                                 </valItem>
+                                <valItem ident="iha:Includes">
+                                    <desc>@active: Work, @passive: Work 
+                                        Only for use in the records of the IslHornAfr project.
+                                    </desc>
+                                </valItem>
                                 <valItem ident="iha:Abridgment_of">
                                     <desc>@active: Work, @passive: Work 
                                         Only for use in the records of the IslHornAfr project.
