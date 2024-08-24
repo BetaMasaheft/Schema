@@ -5801,8 +5801,7 @@ End license statement: do not remove -->
                                 <valItem ident="iha:Witness"><desc>@active: MS, @passive: Person
                                     Witness. Only for use in the records of the IslHornAfr project.
                                 </desc></valItem>
-                                <valItem ident="iha:َQuotation_of"><desc>@active: MS, @passive: Work
-                                    َQuotation. Only for use in the records of the IslHornAfr project.
+                                <valItem ident="iha:Continuation_of"><desc>@active: MS item or Work, @passive: Work. Continuation. Only for use in the records of the IslHornAfr project.
                                 </desc></valItem>
                                 <valItem ident="iha:Author"><desc>@active: MS, @passive: Person
                                     Author. Only for use in the records of the IslHornAfr project.
