@@ -1781,6 +1781,11 @@ End license statement: do not remove -->
                                         target="https://betamasaheft.eu/authority-files/Wazema"
                                         >See wāzemā in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
+                                <valItem ident="GubaeQana">
+                                    <desc>qǝne poems of Gubāʿe Qānā type<ref
+                                        target="https://betamasaheft.eu/authority-files/GubaeQana"
+                                        >See Gubāʿe Qānā in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
                                 <valItem ident="Religion">
                                     <desc>
                                         <ref
@@ -6440,13 +6445,6 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                                <valItem ident="snap:KinOf">
-                                    <desc>@active: Person, @passive: Person.
-                                        http://data.snapdrgn.net/ontology/snap#KinOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AKinOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
                         <!--        <valItem
                                     ident="snap:LegallyRecognisedRelationshipWithExtendedFamilyOf">
                                     <desc>http://data.snapdrgn.net/ontology/snap#LegallyRecognisedRelationshipWithExtendedFamilyOf
@@ -6612,13 +6610,6 @@ End license statement: do not remove -->
                                         http://data.snapdrgn.net/ontology/snap#IntimateRelationshipWith
                                             <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AIntimateRelationshipWith+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                                <valItem ident="snap:KinOf">
-                                    <desc>@active: Person, @passive: Person.
-                                        http://data.snapdrgn.net/ontology/snap#KinOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AKinOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
