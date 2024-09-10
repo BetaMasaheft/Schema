@@ -41,10 +41,11 @@ jobs:
             wget "https://github.com/Saxonica/Saxon-HE/releases/download/SaxonHE11-6/SaxonHE11-6J.zip"
             unzip SaxonHE11-6J.zip
             rm SaxonHE11-6J.zip
+            wget "https://github.com/TEIC/atop/releases/download/v0.1.0a/atop_0_1_0a_2023-10-11.zip"
+            unzip atop_0_1_0a_2023-10-11.zip
+            rm atop_0_1_0a_2023-10-11.zip
             wget "https://github.com/schxslt/schxslt/releases/download/v1.9.5/schxslt-cli.jar"
             wget "https://tei-c.org/Vault/Stylesheets/current/xml/tei/stylesheet/odds/odd2odd.xsl"
-            wget "https://raw.githubusercontent.com/TEIC/atop/dev/XSLT/extract-schematron.xslt"  
-      # TODO: atop will do a partial released soon: at that moment the link to extract-schematron.xslt will be updated
 
       # VALIDATION
       - name: Download schema from TEI release
@@ -53,7 +54,7 @@ jobs:
       # - name: Validate ODDs against the tei_odds.rng schema
       #   run: |
       #       xmllint --noout --nowarning --relaxng tei_odds.rng tei-betamesaheft.xml
-      #       xmllint --noout --nowarning --relaxng tei_odds.rng tei-betamesaheft-epanded.xml
+      #       xmllint --noout --nowarning --relaxng tei_odds.rng tei-betamesaheft-expanded.xml
 
       - name: Validate ODDs against the tei_odds.rng schema
         run: |
@@ -62,7 +63,7 @@ jobs:
       # Validate Schematron from the main ODD. 
       # We first retrieved the schematron rules of the tei_odds.rng schema using Saxon
       - name: Extract Schematron rules from tei_odds.rng
-        run: java -jar lib/saxon-he-11.6.jar -s:tei_odds.rng -xsl:lib/extract-schematron.xslt -o:tei_odds.sch
+        run: java -jar lib/saxon-he-11.6.jar -s:tei_odds.rng -xsl:lib/XSLT/extract-schematron.xslt -o:tei_odds.sch
       # We use schxslt to validate the main ODD against the schematron rules from tei_odds.rng
       - name: Generation of Schematron reports from both ODDs
         run: |
