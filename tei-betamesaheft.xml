@@ -1965,6 +1965,9 @@ End license statement: do not remove -->
                                 <valItem ident="Quran">
                                     <desc>Quran in IslHornAfr</desc>
                                 </valItem>
+                                <valItem ident="rhymedprose">
+                                    <desc>Rhymed prose in IslHornAfr</desc>
+                                </valItem>
                             </valList>
                         </attDef>
 
@@ -2054,6 +2057,9 @@ End license statement: do not remove -->
                                     <desc>Greek</desc>
                                 </valItem>
                                 <valItem ident="el"><desc>Greek (modern)</desc></valItem>
+                                <valItem ident="gu">
+                                    <desc>Gujarati</desc>
+                                </valItem>
                                 <valItem ident="ha">
                                     <desc>Harari</desc>
                                 </valItem>
@@ -2075,11 +2081,17 @@ End license statement: do not remove -->
                                 <valItem ident="it">
                                     <desc>Italian</desc>
                                 </valItem>
+                                <valItem ident="ml">
+                                    <desc>Malay</desc>
+                                </valItem>
                                 <valItem ident="no">
                                     <desc>Norwegian</desc>
                                 </valItem>
                                 <valItem ident="om">
                                     <desc>Oromo</desc>
+                                </valItem>
+                                <valItem ident="om-Arab">
+                                    <desc>Oromo in Arabic script</desc>
                                 </valItem>
                                 <valItem ident="fa">
                                     <desc>Persian</desc>
@@ -2101,6 +2113,9 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="pt">
                                     <desc>Portuguese</desc>
+                                </valItem>
+                                <valItem ident="so">
+                                    <desc>Somali</desc>
                                 </valItem>
                                 <valItem ident="sv">
                                     <desc>Swedish</desc>
@@ -2132,7 +2147,7 @@ End license statement: do not remove -->
                                 
                                 <valItem ident="ji"><desc>Yiddish</desc></valItem>
                                 <valItem ident="rmo"><desc>Sinte Romani</desc></valItem>
-                                
+                                <valItem ident="und"><desc>Undetermined</desc></valItem>
                             </valList>
                         </attDef>
 
