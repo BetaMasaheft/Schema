@@ -20558,6 +20558,8 @@ Suggested values include: 1] ethnic; 2] congregation; 3] militaryUnit</a:documen
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work Only for use in the records of the IslHornAfr project. </a:documentation>
                <value>iha:Taḫmīs_of</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work Only for use in the records of the IslHornAfr project. </a:documentation>
+               <value>iha:Versification_of</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work Only for use in the records of the IslHornAfr project. </a:documentation>
                <value>iha:Included_in</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work Only for use in the records of the IslHornAfr project. </a:documentation>
                <value>iha:Includes</value>
