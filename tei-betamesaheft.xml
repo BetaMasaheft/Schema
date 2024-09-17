@@ -1938,6 +1938,9 @@ End license statement: do not remove -->
                                 <valItem ident="Adab">
                                     <desc>Adab in IslHornAfr</desc>
                                 </valItem>
+                                <valItem ident="Genealogy">
+                                    <desc>Genealogy in IslHornAfr</desc>
+                                </valItem>
                                 <valItem ident="Documentary">
                                     <desc>Documentary in IslHornAfr</desc>
                                 </valItem>
@@ -5816,6 +5819,11 @@ End license statement: do not remove -->
                                         Only for use in the records of the IslHornAfr project.
                                     </desc>
                                 </valItem>
+                                <valItem ident="iha:Discusses">
+                                    <desc>@active: Work, @passive: Work 
+                                        Only for use in the records of the IslHornAfr project.
+                                    </desc>
+                                </valItem>
                                 <valItem ident="iha:Versification_of">
                                     <desc>@active: Work, @passive: Work 
                                         Only for use in the records of the IslHornAfr project.
@@ -5833,6 +5841,16 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="iha:Abridgment_of">
                                     <desc>@active: Work, @passive: Work 
+                                        Only for use in the records of the IslHornAfr project.
+                                    </desc>
+                                </valItem>
+                                <valItem ident="iha:Glosses_of">
+                                    <desc>@active: Work, @passive: Work 
+                                        Only for use in the records of the IslHornAfr project.
+                                    </desc>
+                                </valItem>
+                                <valItem ident="iha:Margins">
+                                    <desc>@active: Work, @passive: Bibl 
                                         Only for use in the records of the IslHornAfr project.
                                     </desc>
                                 </valItem>

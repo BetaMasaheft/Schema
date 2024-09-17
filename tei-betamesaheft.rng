@@ -5653,6 +5653,8 @@ Suggested values include: 1] spoken; 2] thought; 3] written; 4] soCalled; 5] for
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Only in IslHornAfr records</a:documentation>
                   <value>Adab</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Adab in IslHornAfr</a:documentation>
+                  <value>Genealogy</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Genealogy in IslHornAfr</a:documentation>
                   <value>Documentary</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Documentary in IslHornAfr</a:documentation>
                   <value>Fadail</value>
@@ -20560,6 +20562,8 @@ Suggested values include: 1] ethnic; 2] congregation; 3] militaryUnit</a:documen
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work Only for use in the records of the IslHornAfr project. </a:documentation>
                <value>iha:Muqaddima</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work Only for use in the records of the IslHornAfr project. </a:documentation>
+               <value>iha:Discusses</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work Only for use in the records of the IslHornAfr project. </a:documentation>
                <value>iha:Versification_of</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work Only for use in the records of the IslHornAfr project. </a:documentation>
                <value>iha:Included_in</value>
@@ -20568,6 +20572,10 @@ Suggested values include: 1] ethnic; 2] congregation; 3] militaryUnit</a:documen
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work Only for use in the records of the IslHornAfr project. </a:documentation>
                <value>iha:Abridgment_of</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work Only for use in the records of the IslHornAfr project. </a:documentation>
+               <value>iha:Glosses_of</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Work Only for use in the records of the IslHornAfr project. </a:documentation>
+               <value>iha:Margins</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Work, @passive: Bibl Only for use in the records of the IslHornAfr project. </a:documentation>
                <value>iha:Area</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Person, @passive: Place Only for use in the records of the IslHornAfr project. </a:documentation>
                <value>iha:Place_of_activity</value>
