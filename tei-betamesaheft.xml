@@ -5357,7 +5357,12 @@ End license statement: do not remove -->
                                 <valItem ident="zoba">
                                     <desc><ref
                                             target="https://betamasaheft.eu/authority-files/zoba/main"
-                                            >See zoba in Beta maṣāḥǝft</ref></desc>
+                                        >See zobā in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="neuszoba">
+                                    <desc><ref
+                                        target="https://betamasaheft.eu/authority-files/neuszoba/main"
+                                        >See nǝʾus zobā in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
                                 <valItem ident="wadi">
                                     <desc><ref
