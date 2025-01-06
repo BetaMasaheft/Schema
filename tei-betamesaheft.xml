@@ -1786,57 +1786,38 @@ End license statement: do not remove -->
                                         target="https://betamasaheft.eu/authority-files/GubaeQana"
                                         >See Gubāʿe Qānā in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
-                                <valItem ident="Barya">
-                                    <desc><ref target="https://betamasaheft.eu/authority-files/Barya/main">See Bāryā in Beta maṣāḥǝft</ref></desc>
+                                <valItem ident="Mibazhu">
+                                    <desc>qǝne poems of Mi-bazḫu type<ref
+                                        target="https://betamasaheft.eu/authority-files/Mibazhu"
+                                        >See Mi-bazḫu in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="EvilSpirit">
+                                    <desc><ref target="https://betamasaheft.eu/authority-files/EvilSpirit/main">See Evil Spirit in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
                                 <valItem ident="EvilEye">
                                     <desc><ref target="https://betamasaheft.eu/authority-files/EvilEye/main">See Evil Eye in Beta maṣāḥǝft</ref></desc>
                                 </valItem>         
-                                <valItem ident="Fever">
-                                    <desc><ref target="https://betamasaheft.eu/authority-files/Fever/main">See fever in Beta maṣāḥǝft</ref></desc>
+                                <valItem ident="MagicDrawing">
+                                    <desc><ref target="https://betamasaheft.eu/authority-files/MagicDrawing/main">See Magic Drawing in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
-                                <valItem ident="Colic" >
-                                    <desc><ref target="https://betamasaheft.eu/authority-files/Colic/main">See colic in Beta maṣāḥǝft</ref></desc>
+                                <valItem ident="MagicSymbols" >
+                                    <desc><ref target="https://betamasaheft.eu/authority-files/MagicSymbols/main">See Magic Symbols  in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
-                                <valItem ident="Legewon" >
-                                    <desc><ref target="https://betamasaheft.eu/authority-files/Legewon/main">See legewon in Beta maṣāḥǝft</ref></desc>
+                                <valItem ident="Disease" >
+                                    <desc><ref target="https://betamasaheft.eu/authority-files/Disease/main">See Disease in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
-                                <valItem ident="Buda">
-                                    <desc><ref target="https://betamasaheft.eu/authority-files/Buda/main">See budā in Beta maṣāḥǝft</ref></desc>
+                                <valItem ident="DiseaseFever">
+                                    <desc><ref target="https://betamasaheft.eu/authority-files/DiseaseFever/main">See Disease Fever in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
-                                <valItem ident="Falasa">
-                                    <desc><ref target="https://betamasaheft.eu/authority-files/Falasa/main">See falašā in Beta maṣāḥǝft</ref></desc>
+                                <valItem ident="DiseaseMental">
+                                    <desc><ref target="https://betamasaheft.eu/authority-files/DiseaseMental/main">See Disease Mental in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
-                                <valItem ident="Gudale">
-                                    <desc><ref target="https://betamasaheft.eu/authority-files/Gudale/main">See gudale in Beta maṣāḥǝft</ref></desc>
+                                <valItem ident="DiseasePain">
+                                    <desc><ref target="https://betamasaheft.eu/authority-files/DiseasePain/main">See Pain in Beta maṣāḥǝft</ref></desc>
                                 </valItem>         
-                                <valItem ident="Dabbas">
-                                    <desc><ref target="https://betamasaheft.eu/authority-files/Dabbas/main">See dabbās in Beta maṣāḥǝft</ref></desc>
-                                </valItem>
-                                <valItem ident="Dask">
-                                    <desc><ref target="https://betamasaheft.eu/authority-files/Dask/main">See Dask in Beta maṣāḥǝft</ref></desc>
-                                </valItem>
-                                <valItem ident="Aqweyasat" >
-                                    <desc><ref target="https://betamasaheft.eu/authority-files/Aqweyasat/main">See ʾaqʷǝyāṣāt in Beta maṣāḥǝft</ref></desc>
-                                </valItem>
-                                <valItem ident="Bleeding" >
-                                    <desc><ref target="https://betamasaheft.eu/authority-files/Bleeding/main">See Bleeding in Beta maṣāḥǝft</ref></desc>
-                                </valItem>
-                                <valItem ident="Malaria" >
-                                    <desc><ref target="https://betamasaheft.eu/authority-files/Malaria/main">See Malaria in Beta maṣāḥǝft</ref></desc>
-                                </valItem>
-                                <valItem ident="Epilepsy" >
-                                    <desc><ref target="https://betamasaheft.eu/authority-files/Epilepsy/main">See Epilepsy in Beta maṣāḥǝft</ref></desc>
-                                </valItem>
-                                <valItem ident="ChestPain" >
-                                    <desc><ref target="https://betamasaheft.eu/authority-files/ChestPain/main">See Chest Pain in Beta maṣāḥǝft</ref></desc>
-                                </valItem>
-                                <valItem ident="BindingDemons" >
-                                    <desc><ref target="https://betamasaheft.eu/authority-files/BindingDemons/main">See Binding Demons in Beta maṣāḥǝft</ref></desc>
-                                </valItem>
-                                <valItem ident="DrowningDemons" >
-                                    <desc><ref target="https://betamasaheft.eu/authority-files/DrowningDemons/main">See Drowning Demons in Beta maṣāḥǝft</ref></desc>
-                                </valItem>
+                                <valItem ident="DiseaseWomen">
+                                    <desc><ref target="https://betamasaheft.eu/authority-files/DiseaseWomen/main">See Female Disease in Beta maṣāḥǝft</ref></desc>
+                                </valItem>                                
                                 
                                 <valItem ident="Religion">
                                     <desc>
