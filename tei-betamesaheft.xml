@@ -1791,6 +1791,16 @@ End license statement: do not remove -->
                                         target="https://betamasaheft.eu/authority-files/Mibazhu"
                                         >See Mi-bazḫu in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
+                                <valItem ident="Zaamlakiya">
+                                    <desc>qǝne poems of Za-ʾamlākiya type<ref
+                                        target="https://betamasaheft.eu/authority-files/Zaamlakiya"
+                                        >See Za-ʾamlākiya in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
+                                <valItem ident="Sahleka">
+                                    <desc>qǝne poems of Śāhlǝka type<ref
+                                        target="https://betamasaheft.eu/authority-files/Sahleka"
+                                        >See Śāhlǝka in Beta maṣāḥǝft</ref></desc>
+                                </valItem>
                                 <valItem ident="EvilSpirit">
                                     <desc><ref target="https://betamasaheft.eu/authority-files/EvilSpirit/main">See Evil Spirit in Beta maṣāḥǝft</ref></desc>
                                 </valItem>
