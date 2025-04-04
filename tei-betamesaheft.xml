@@ -3651,9 +3651,9 @@ End license statement: do not remove -->
                             </datatype>
                             <valList type="semi">
                                 <valItem ident="pattern"/>
-                                <valItem ident="usage"/>
-                                <valItem ident="executed"/>
-                                <valItem ident="dividers"/>
+                                <valItem ident="Usage"/>
+                                <valItem ident="Executed"/>
+                                <valItem ident="Dividers"/>
                             </valList>
                         </attDef>
                     </attList>
