@@ -3920,7 +3920,6 @@ End license statement: do not remove -->
                                 <valItem ident="publishmark"/>
                                 <valItem ident="rubrication"/>
                                 <valItem ident="secondary"/>
-                                <valItem ident="tooling"/>
                                 <valItem ident="unspecified"/>
                                 <valItem ident="unwan"/>
                                 <valItem ident="engraving"><desc>An image on paper created with a printing plate.</desc></valItem>
