@@ -117,7 +117,7 @@ End license statement: do not remove -->
                     except="argument byline closer div1 div2 div3 div4 div5 div6 div7 imprimatur
                                           opener postscript salute signed titlePage titlePart trailer"/>
                 <moduleRef key="transcr" except="damageSpan restore"/>
-                <moduleRef key="verse" except="caesura metDecl metSym rhyme"/>
+                <moduleRef key="verse" except="caesura metDecl metSym"/>
                 <moduleRef key="analysis" except="cl span spanGrp"/>
                 <moduleRef key="certainty" except="respons"/>
                 <moduleRef key="gaiji" except="char charName unicodeName"/>
@@ -127,7 +127,7 @@ End license statement: do not remove -->
                     except="climate geoFeat langKnowledge
                                           langKnown nameLink population socecStatus terrain trait"/>
                 <moduleRef key="textcrit" except="lacunaEnd lacunaStart witDetail witEnd witStart"/>
-                <moduleRef key="figures" except="cell formula row table"/>
+                <moduleRef key="figures"/>
                 <moduleRef key="spoken"
                     except="broadcast equipment incident kinesic pause recording recordingStmt
                                         scriptStmt shift u vocal writing"/>
