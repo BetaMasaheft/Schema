@@ -1623,6 +1623,12 @@ End license statement: do not remove -->
                                             >See Chronicles in Beta maṣāḥǝft</ref>
                                     </desc>
                                 </valItem>
+                                <valItem ident="generalRecord">
+                                    <desc>entity used to describe not further definable content<ref
+                                            target="https://betamasaheft.eu/authority-files/generalRecord"
+                                            >See generalRecord in Beta maṣāḥǝft</ref>
+                                    </desc>
+                                </valItem>
                                 <valItem ident="Homily">
                                     <desc>works and collections of works containing homiletic texts
                                         to be read on the occasion of specific commemorative days,
