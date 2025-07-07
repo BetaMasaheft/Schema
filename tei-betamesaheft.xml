@@ -6274,55 +6274,18 @@ End license statement: do not remove -->
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ADaughterOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                    <!--            <valItem ident="snap:ChildOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#ChildOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AChildOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
-                                </valItem>-->
                                 <valItem ident="snap:BrotherOf">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#BrotherOf <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ABrotherOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                       <!--         <valItem ident="snap:SeriousIntimateRelationshipWith">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#SeriousIntimateRelationshipWith
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ASeriousIntimateRelationshipWith+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
-                                </valItem>-->
-                           <!--     <valItem ident="snap:SiblingOfParentOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#SiblingOfParentOf
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ASiblingOfParentOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
-                                </valItem>-->
-                       <!--         <valItem ident="snap:SeriousIntimateRelationshipWith">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#SeriousIntimateRelationshipWith
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ASeriousIntimateRelationshipWith+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
-                                </valItem>-->
                                 <valItem ident="snap:AllianceWith">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#AllianceWith <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AAllianceWith+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref></desc>
                                 </valItem>
-                        <!--        <valItem ident="snap:CasualIntimateRelationshipWith">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#CasualIntimateRelationshipWith
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ACasualIntimateRelationshipWith+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                     <!--           <valItem ident="snap:ChildOfSiblingOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#ChildOfSiblingOf
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AChildOfSiblingOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
                                 <valItem ident="snap:EnmityFor">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#EmnityFor <ref
@@ -6344,17 +6307,10 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                         <!--       <valItem ident="snap:HereditaryFamilyOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#HereditaryFamilyOf
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AHereditaryFamilyOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
                                 <valItem ident="snap:IntimateRelationshipWith">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#IntimateRelationshipWith
-                                            <ref
+                                        <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AIntimateRelationshipWith+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
@@ -6373,12 +6329,6 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                             <!--   <valItem ident="snap:AuntOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#AuntOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AAuntOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
                                 <valItem ident="snap:CousinOf">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#CousinOf <ref
@@ -6389,25 +6339,11 @@ End license statement: do not remove -->
                                 <valItem ident="snap:ClaimedFamilyRelationship">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#ClaimedFamilyRelationship
-                                            <ref
+                                        <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AClaimedFamilyRelationship+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                         <!--       <valItem ident="snap:ExtendedFamilyOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#ExtendedFamilyOf
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AcontainsUnits+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                              <!--  <valItem ident="snap:ExtendedHouseholdOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#ExtendedHouseholdOf
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AExtendedHouseholdOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
                                 <valItem ident="snap:FamilyOf">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#FamilyOf <ref
@@ -6421,39 +6357,7 @@ End license statement: do not remove -->
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFatherOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
-                                </valItem>
-                              <!--  <valItem ident="snap:FosterFamilyRelationship">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#FosterFamilyRelationship
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFosterFamilyRelationship+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                            <!--    <valItem ident="snap:FreedmanOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#FreedmanOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFreedmanOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                            <!--    <valItem ident="snap:FreedSlaveOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#FreedSlaveOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFreedSlaveOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                          <!--      <valItem ident="snap:FreedwomanOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#FreedwomanOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFreedwomanOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                                <valItem ident="snap:FriendshipFor">
-                                    <desc>@active: Person, @passive: Person.
-                                        http://data.snapdrgn.net/ontology/snap#FriendshipFor <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFriendshipFor+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
+                                </valItem>                                
                                 <valItem ident="snap:GrandchildOf">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#GrandchildOf <ref
@@ -6464,7 +6368,7 @@ End license statement: do not remove -->
                                 <valItem ident="snap:GranddaughterOf">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#GranddaughterOf
-                                            <ref
+                                        <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGranddaughterOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
@@ -6483,12 +6387,6 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                             <!--   <valItem ident="snap:GrandparentOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#GrandparentOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandparentOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
                                 <valItem ident="snap:GrandsonOf">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#GrandsonOf <ref
@@ -6499,39 +6397,11 @@ End license statement: do not remove -->
                                 <valItem ident="snap:GreatGrandfatherOf">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#GreatGrandfatherOf
-                                            <ref
+                                        <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGreatGrandfatherOf+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                       <!--         <valItem ident="snap:GreatGrandmotherOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#GreatGrandmotherOf
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGreatGrandmotherOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                                <!--<valItem ident="snap:GreatGrandparentOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#GreatGrandparentOf
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGreatGrandparentOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                     <!--           <valItem ident="snap:HalfFamilyRelationship">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#HalfFamilyRelationship
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AHalfFamilyRelationship+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                                <!--<valItem ident="snap:HereditaryFamilyOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#HereditaryFamilyOf
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AHereditaryFamilyOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
                                 <valItem ident="snap:HouseholdOf">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#HouseholdOf <ref
@@ -6539,219 +6409,22 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                             <!--   <valItem ident="snap:HouseSlaveOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#HouseSlaveOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AHouseSlaveOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
                                 <valItem ident="snap:InLawFamilyRelationship">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#InLawFamilyRelationship
-                                            <ref
+                                        <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AInLawFamilyRelationship+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                                <valItem ident="snap:IntimateRelationshipWith">
-                                    <desc>@active: Person, @passive: Person.
-                                        http://data.snapdrgn.net/ontology/snap#IntimateRelationshipWith
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AIntimateRelationshipWith+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                        <!--        <valItem
-                                    ident="snap:LegallyRecognisedRelationshipWithExtendedFamilyOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#LegallyRecognisedRelationshipWithExtendedFamilyOf
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ALegallyRecognisedRelationshipWithExtendedFamilyOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                              <!--  <valItem ident="snap:ExtendedHouseholdOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#ExtendedHouseholdOf
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AExtendedHouseholdOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                                <valItem ident="snap:FamilyOf">
-                                    <desc>@active: Person, @passive: Person.
-                                        http://data.snapdrgn.net/ontology/snap#FamilyOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFamilyOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                                <valItem ident="snap:FatherOf">
-                                    <desc>@active: Person, @passive: Person.
-                                        http://data.snapdrgn.net/ontology/snap#FatherOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFatherOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                <!--                <valItem ident="snap:FosterFamilyRelationship">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#FosterFamilyRelationship
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFosterFamilyRelationship+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                       <!--         <valItem ident="snap:FreedmanOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#FreedmanOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFreedmanOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                                <valItem ident="snap:FreedSlaveOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#FreedSlaveOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFreedSlaveOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                                <valItem ident="snap:FreedwomanOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#FreedwomanOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFreedwomanOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                                <valItem ident="snap:FriendshipFor">
-                                    <desc>@active: Person, @passive: Person.
-                                        http://data.snapdrgn.net/ontology/snap#FriendshipFor <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AFriendshipFor+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                                <valItem ident="snap:GrandchildOf">
-                                    <desc>@active: Person, @passive: Person.
-                                        http://data.snapdrgn.net/ontology/snap#GrandchildOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandchildOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                                <valItem ident="snap:GranddaughterOf">
-                                    <desc>@active: Person, @passive: Person.
-                                        http://data.snapdrgn.net/ontology/snap#GranddaughterOf
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGranddaughterOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                                <valItem ident="snap:GrandfatherOf">
-                                    <desc>@active: Person, @passive: Person.
-                                        http://data.snapdrgn.net/ontology/snap#GrandfatherOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandfatherOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                                <valItem ident="snap:GrandmotherOf">
-                                    <desc>@active: Person, @passive: Person.
-                                        http://data.snapdrgn.net/ontology/snap#GrandmotherOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandmotherOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                             <!--   <valItem ident="snap:GrandparentOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#GrandparentOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandparentOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                                <valItem ident="snap:GrandsonOf">
-                                    <desc>@active: Person, @passive: Person.
-                                        http://data.snapdrgn.net/ontology/snap#GrandsonOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGrandsonOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                                <valItem ident="snap:GreatGrandfatherOf">
-                                    <desc>@active: Person, @passive: Person.
-                                        http://data.snapdrgn.net/ontology/snap#GreatGrandfatherOf
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGreatGrandfatherOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                       <!--         <valItem ident="snap:GreatGrandmotherOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#GreatGrandmotherOf
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGreatGrandmotherOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                                <valItem ident="snap:GreatGrandparentOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#GreatGrandparentOf
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AGreatGrandparentOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                            <!--    <valItem ident="snap:HalfFamilyRelationship">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#HalfFamilyRelationship
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AHalfFamilyRelationship+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-              <!--                  <valItem ident="snap:HereditaryFamilyOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#HereditaryFamilyOf
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AHereditaryFamilyOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                                <valItem ident="snap:HouseholdOf">
-                                    <desc>@active: Person, @passive: Person.
-                                        http://data.snapdrgn.net/ontology/snap#HouseholdOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AHouseholdOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                      <!--          <valItem ident="snap:HouseSlaveOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#HouseSlaveOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AHouseSlaveOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                                <valItem ident="snap:InLawFamilyRelationship">
-                                    <desc>@active: Person, @passive: Person.
-                                        http://data.snapdrgn.net/ontology/snap#InLawFamilyRelationship
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AcontainsUnits+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                                <valItem ident="snap:IntimateRelationshipWith">
-                                    <desc>@active: Person, @passive: Person.
-                                        http://data.snapdrgn.net/ontology/snap#IntimateRelationshipWith
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AIntimateRelationshipWith+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
                                 <valItem ident="snap:LegallyRecognisedRelationshipWith">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#LegallyRecognisedRelationshipWith
-                                            <ref
+                                        <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ALegallyRecognisedRelationshipWith+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                       <!--         <valItem ident="snap:MaternalFamilyRelationship">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#MaternalFamilyRelationship
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AMaternalFamilyRelationship+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                        <!--        <valItem
-                                    ident="snap:ProfessionalRelationshipMaternalFamilyRelationship">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#ProfessionalRelationshipMaternalFamilyRelationship
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AProfessionalRelationshipMaternalFamilyRelationship+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
                                 <valItem ident="snap:MotherOf">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#MotherOf <ref
@@ -6773,34 +6446,14 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                       <!--         <valItem ident="snap:ParentOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#ParentOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AParentOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                          <!--      <valItem ident="snap:PaternalFamilyRelationship">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#PaternalFamilyRelationship
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3APaternalFamilyRelationship+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
                                 <valItem ident="snap:ProfessionalRelationship">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#ProfessionalRelationship
-                                            <ref
+                                        <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AProfessionalRelationship+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                       <!--         <valItem ident="snap:SeriousIntimateRelationshipWith">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#SeriousIntimateRelationshipWith
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ASeriousIntimateRelationshipWith+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
                                 <valItem ident="snap:SiblingOf">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#SiblingOf <ref
@@ -6808,13 +6461,6 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                     <!--           <valItem ident="snap:SiblingOfParentOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#SiblingOfParentOf
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ASiblingOfParentOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
                                 <valItem ident="snap:SisterOf">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#SisterOf <ref
@@ -6822,12 +6468,6 @@ End license statement: do not remove -->
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
                                 </valItem>
-                               <!-- <valItem ident="snap:SlaveOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#SlaveOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ASlaveOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
                                 <valItem ident="snap:SonOf">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#SonOf <ref
@@ -6838,42 +6478,7 @@ End license statement: do not remove -->
                                 <valItem ident="snap:StepFamilyRelationship">
                                     <desc>@active: Person, @passive: Person.
                                         http://data.snapdrgn.net/ontology/snap#StepFamilyRelationship
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AStepFamilyRelationship+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                          <!--      <valItem ident="snap:UncleOfSeriousIntimateRelationshipWith">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#UncleOfSeriousIntimateRelationshipWith
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AUncleOfSeriousIntimateRelationshipWith+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                                <valItem ident="snap:SiblingOf">
-                                    <desc>@active: Person, @passive: Person.
-                                        http://data.snapdrgn.net/ontology/snap#SiblingOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ASiblingOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>
-                              <!--  <valItem ident="snap:SiblingOfParentOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#SiblingOfParentOf
-                                            <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ASiblingOfParentOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                            <!--    <valItem ident="snap:SlaveOf">
-                                    <desc>http://data.snapdrgn.net/ontology/snap#SlaveOf <ref
-                                            target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3ASlaveOf+%3Fy%7D+LIMIT+25"
-                                            >Beta maṣāḥǝft SPARQL query for examples.</ref>
-                                    </desc>
-                                </valItem>-->
-                                <valItem ident="snap:StepFamilyRelationship">
-                                    <desc>@active: Person, @passive: Person.
-                                        http://data.snapdrgn.net/ontology/snap#StepFamilyRelationship
-                                            <ref
+                                        <ref
                                             target="https://betamasaheft.eu/sparql?query=SELECT+*+WHERE+%7B%3Fx+snap%3AStepFamilyRelationship+%3Fy%7D+LIMIT+25"
                                             >Beta maṣāḥǝft SPARQL query for examples.</ref>
                                     </desc>
