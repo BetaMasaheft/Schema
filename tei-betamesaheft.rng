@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2025-07-07T06:47:29Z. . 
+Schema generated from ODD source 2025-07-08T07:11:28Z. . 
 TEI Edition: Version 3.5.0. Last updated on 29th January 2019, revision 3c0c64ec4 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/3.5.0/ 
   
@@ -21396,7 +21396,7 @@ Suggested values include: 1] ethnic; 2] congregation; 3] militaryUnit</a:documen
                <value>dc:relation</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">A related resource. <a xmlns="http://www.w3.org/1999/xhtml"
                      xmlns:rng="http://relaxng.org/ns/structure/1.0"
-                     href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/relation">Dublin Core relation</a> Please use only if no other relation fits, and consider searching for a better option and suggesting that relation instead. This is now only suggested for those cases of unspecified relation between two places.</a:documentation>
+                     href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/relation">Dublin Core relation</a> Please use only if no other relation fits, and consider searching for a better option and suggesting that relation instead. Primarily for unspecified relation between two places.</a:documentation>
                <value>iha:Quotation_of</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">@active: Manuscript, @passive: Work Only for use in the records of the IslHornAfr project. </a:documentation>
                <value>iha:Mentioned</value>
