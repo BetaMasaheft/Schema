@@ -1,4 +1,4 @@
-<package xmlns="http://expath.org/ns/pkg" spec="1.0" version="1.0.0"
+<package xmlns="http://expath.org/ns/pkg" spec="1.0" version="@version@"
     name="https://betamasaheft.eu/schemas" abbrev="betamas-schemas">
     <title>Schemas for Beta maṣāḥǝft</title>
     <dependency processor="http://exist-db.org" semver-min="2.2.0"/>

@@ -1,29 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." name="betamas-schemas" default="xar">
-    <xmlproperty file="expath-pkg.xml"/>
-    <property name="project.version" value="${package(version)}"/>
-    
-    <!-- Directories-->
-    <property name="build.dir" value="build"/>
-    
+    <xmlproperty file="expath-pkg.xml" />
+    <property name="app.name" value="betamas-schemas" />
+    <property name="build.dir" value="build" />
+    <property name="app.version" value="1.1.0" />
+    <property name="app.version" value="${app.version}" />
     <!-- Base file name (for convenience) -->
-    <basename file="tei-betamesaheft.xml" property="plainFileName" suffix=".xml"/>  
-    
+    <basename file="tei-betamesaheft.xml" property="plainFileName" suffix=".xml" />
+
+    <property name="git.repo.path" value="${basedir}/.git" />
+    <available file="${git.repo.path}" type="dir" property="git.present" />
+
+
     <target name="clean">
         <description>Delete files added to the main repository</description>
-        <delete dir="lib"/>
-        <delete dir="build"/>
-        <delete file="${plainFileName}_compiled.xml"/>
-        <delete file="${plainFileName}-expanded_compiled.xml"/>
-        <delete file="tei_odds.rng"/>
-        <delete file="tei_odds.sch"/>
-        <delete file="report-main.xml"/>
-        <delete file="report-expanded.xml"/>
+        <delete dir="lib" failonerror="false" />
+        <delete dir="${build.dir}" failonerror="false" />
+        <delete file="${plainFileName}_compiled.xml" />
+        <delete file="${plainFileName}-expanded_compiled.xml" />
+        <delete file="tei_odds.rng" />
+        <delete file="tei_odds.sch" />
+        <delete file="report-main.xml" />
+        <delete file="report-expanded.xml" />
     </target>
-    <target name="xar" depends="clean">
-        <description>Generate xar file</description>
-        <mkdir dir="${build.dir}"/>
-        <echo>Making ${ant.project.name}.xar...</echo>       
-        <zip basedir="." destfile="${build.dir}/${ant.project.name}-${project.version}.xar" excludes="**/${build.dir}/**, .github/**, lib/**, .gitignore, report-*.xml"/>
-    </target>  
+
+    <target name="templates" description="process template files" depends="clean,git.revision">
+        <echo message="Creating build folder..." />
+        <mkdir dir="${build.dir}" />
+        <echo>Update Version with: ${app.version}</echo>
+        <copy todir="${build.dir}" verbose="true">
+            <fileset file="repo.xml" />
+            <fileset file="expath-pkg.xml" />
+            <filterchain>
+                <replacetokens>
+                    <token key="version" value="${app.version}" />
+                    <token key="commit-id" value="${git.revision}" />
+                    <token key="commit-time" value="${git.time}" />
+                </replacetokens>
+            </filterchain>
+        </copy>
+    </target>
+
+    <target name="xar" depends="clean,templates" description="create xar file">
+        <echo message="------------------------------------------------------------" />
+        <echo message="Creating xar file..." />
+        <echo message="------------------------------------------------------------" />
+        <!-- Create the xar archive -->
+        <echo>Creating xar file...</echo>
+        <zip destfile="${build.dir}/${app.name}.xar">
+            <fileset dir=".">
+                <exclude name="${build.dir}/**" />
+                <exclude name=".github/**" />
+                <exclude name="node_modules/**" />
+                <exclude name=".gitignore" />
+                <exclude name=".vscode/**" />
+                <exclude name="expath-pkg.xml" />
+                <exclude name="repo.xml" />
+                <exclude name="lib/**" />
+                <exclude name="report-*.xml" />
+            </fileset>
+            <zipfileset dir="${build.dir}" includes="expath-pkg.xml" fullpath="expath-pkg.xml" />
+            <zipfileset dir="${build.dir}" includes="repo.xml" fullpath="repo.xml" />
+        </zip>
+    </target>
+
+    <target name="git.revision" description="Store git revision in ${repository.version}">
+        <exec executable="git" outputproperty="git.revision" failifexecutionfails="false"
+            errorproperty="">
+            <arg value="--git-dir=${git.repo.path}" />
+            <arg value="rev-parse" />
+            <arg value="HEAD" />
+        </exec>
+        <condition property="repository.version" value="${git.revision}" else="unknown">
+            <and>
+                <isset property="git.revision" />
+                <length string="${git.revision}" trim="yes" length="0" when="greater" />
+            </and>
+        </condition>
+        <echo>Git repo: ${repository.version}</echo>
+
+        <exec executable="git" outputproperty="git.time" failifexecutionfails="false"
+            errorproperty="">
+            <arg value="--git-dir=${git.repo.path}" />
+            <arg value="show" />
+            <arg value="-s" />
+            <arg value="--format=%ct" />
+            <arg value="${git.revision}" />
+        </exec>
+        <echo>Git time: ${git.time}</echo>
+
+    </target>
 </project>
