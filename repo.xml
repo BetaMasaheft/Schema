@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<meta xmlns="http://exist-db.org/xquery/repo">
+<meta xmlns="http://exist-db.org/xquery/repo" commit-id="@commit-id@" commit-time="@commit-time@">
   <description>Schemas for Beta maṣāḥǝft</description>
   <author>Beta maṣāḥǝft</author>
   <website>https://betamasaheft.eu</website>
   <type>library</type>
+  <target>guidelines/schema</target>
 </meta>
