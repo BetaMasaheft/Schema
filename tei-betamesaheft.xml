@@ -2785,6 +2785,7 @@ End license statement: do not remove -->
                                 <valItem ident="Adal"/>
                                 <valItem ident="Afar"/>
                                 <valItem ident="Arabia"/>
+                                <valItem ident="Australia"/>
                                 <valItem ident="ByzantineEmpire"/>
                                 <valItem ident="OttomanEmpire"/>
                                 <valItem ident="Turkey"/>
@@ -4573,6 +4574,7 @@ End license statement: do not remove -->
                                 <valItem ident="DM">
                                     <desc>Dawit Muluneh</desc>
                                 </valItem>
+                                <valItem ident="YL"><desc>Yiqing Li</desc></valItem>
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -4849,6 +4851,7 @@ End license statement: do not remove -->
                                 <valItem ident="DM">
                                     <desc>Dawit Muluneh</desc>
                                 </valItem>
+                                <valItem ident="YL"><desc>Yiqing Li</desc></valItem>
                             </valList>
                         </attDef>
                         <attDef ident="when" mode="change" usage="req"/>                        
