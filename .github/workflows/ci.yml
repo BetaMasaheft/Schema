@@ -32,8 +32,7 @@ jobs:
       - name: Install packaged dependencies
         run: | 
             sudo apt-get update 
-            sudo apt-get install -y jing libbatik-java libavalon-framework-java libxml2-utils
-            mkdir lib   
+            sudo apt-get install -y jing libbatik-java libavalon-framework-java libxml2-utils  
 
       - name: Install 3rd party Dependencies
         working-directory: lib
@@ -44,7 +43,6 @@ jobs:
             wget "https://github.com/TEIC/atop/releases/download/v0.1.0a/atop_0_1_0a_2023-10-11.zip"
             unzip atop_0_1_0a_2023-10-11.zip
             rm atop_0_1_0a_2023-10-11.zip
-            wget "https://github.com/schxslt/schxslt/releases/download/v1.9.5/schxslt-cli.jar"
             wget "https://tei-c.org/Vault/Stylesheets/current/xml/tei/stylesheet/odds/odd2odd.xsl"
 
       # VALIDATION
