@@ -2,7 +2,9 @@
 *.processedodd
 .DS_Store
 build/
-lib/
+lib/*
 tei_odds.*
 *_compiled.xml
 report-*.xml
+
+!lib/schxslt-cli.jar
