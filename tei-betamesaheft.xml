@@ -4576,6 +4576,7 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="YL"><desc>Yiqing Li</desc></valItem>
                                 <valItem ident="AkAm"><desc>Aklilu Amanuel</desc></valItem>
+                                <valItem ident="HG"><desc>Hagos Gebremariam Hailu</desc></valItem>
                             </valList>
                         </attDef>
                         <attDef ident="role" mode="replace" usage="opt">
@@ -4854,6 +4855,7 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="YL"><desc>Yiqing Li</desc></valItem>
                                 <valItem ident="AkAm"><desc>Aklilu Amanuel</desc></valItem>
+                                <valItem ident="HG"><desc>Hagos Gebremariam Hailu</desc></valItem>
                             </valList>
                         </attDef>
                         <attDef ident="when" mode="change" usage="req"/>                        
