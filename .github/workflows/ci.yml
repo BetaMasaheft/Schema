@@ -20,7 +20,7 @@ jobs:
     # Tasks to be executed
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so the job can access it
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
      
       # SET UP AND DEPENDENCIES
       # Specifying the Java version and architecture
