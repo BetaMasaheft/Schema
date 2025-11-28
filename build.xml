@@ -14,7 +14,9 @@
 
     <target name="clean">
         <description>Delete files added to the main repository</description>
-        <delete dir="lib" failonerror="false" />
+        <delete includeemptydirs="true">
+            <fileset dir="lib" includes="**/*" excludes="schxslt-cli.jar"/>
+        </delete>
         <delete dir="${build.dir}" failonerror="false" />
         <delete file="${plainFileName}_compiled.xml" />
         <delete file="${plainFileName}-expanded_compiled.xml" />
