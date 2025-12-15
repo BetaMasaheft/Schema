@@ -73,7 +73,7 @@ jobs:
         run: grep -vq 'svrl:text' report-expanded.xml
 
       - name: Upload Schematron reports as artifact if validation fails
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         if: failure()
         with:
           name: schematron-report
