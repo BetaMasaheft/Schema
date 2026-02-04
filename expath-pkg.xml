@@ -1,13 +1,13 @@
-<package xmlns="http://expath.org/ns/pkg" spec="1.0" version="@version@"
+<package xmlns="http://expath.org/ns/pkg" spec="1.0" version="1.0.0"
     name="https://betamasaheft.eu/schemas" abbrev="betamas-schemas">
     <title>Schemas for Beta maṣāḥǝft</title>
     <dependency processor="http://exist-db.org" semver-min="2.2.0"/>
     <rng>
         <import-uri>https://betamasaheft.eu/tei-betamesaheft.rng</import-uri>
-        <file>tei-betamesaheft.rng</file>              
+        <file>tei-betamesaheft.rng</file>
     </rng>
     <rng>
         <import-uri>https://betamasaheft.eu/tei-betamesaheft-expanded.rng</import-uri>
-        <file>tei-betamesaheft-expanded.rng</file>        
+        <file>tei-betamesaheft-expanded.rng</file>
     </rng>
 </package>
