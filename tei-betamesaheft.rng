@@ -7339,12 +7339,16 @@ Suggested values include: 1] generalEditor</a:documentation>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Alessandro Gori</a:documentation>
                <value>AmAb</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Amanuel Abraha</a:documentation>
+               <value>AC</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Amélie Chekroun</a:documentation>
                <value>AWi</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Anaïs Wion</a:documentation>
                <value>AE</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Andreas Ellwardt</a:documentation>
                <value>AW</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Andreas Wetter'</a:documentation>
+               <value>AM</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Angela Müller</a:documentation>
                <value>AS</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Angela Salerno</a:documentation>
                <value>AR</value>
@@ -7388,9 +7392,7 @@ Suggested values include: 1] generalEditor</a:documentation>
                <value>ED</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Eyob Derillo</a:documentation>
                <value>FP</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Francesca Panini</a:documentation>
-               <value>FP</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Francesca Panini</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Francesca Panini</a:documentation>               
                <value>GA</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Getinet Asimare</a:documentation>
                <value>GC</value>
@@ -7435,6 +7437,8 @@ Suggested values include: 1] generalEditor</a:documentation>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Leah Mascia</a:documentation>
                <value>LB</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Leonard Bahr</a:documentation>
+               <value>MGO</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Meseret G. Oldjira</a:documentation>
                <value>MK</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Magdalena Krzyżanowska</a:documentation>
                <value>MKr</value>
@@ -10093,12 +10097,16 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Alessandro Gori</a:documentation>
                <value>AmAb</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Amanuel Abraha</a:documentation>
+               <value>AC</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Amélie Chekroun</a:documentation>
                <value>AWi</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Anaïs Wion</a:documentation>
                <value>AE</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Andreas Ellwardt</a:documentation>
                <value>AW</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Andreas Wetter'</a:documentation>
+               <value>AM</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Angela Müller</a:documentation>
                <value>AS</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Angela Salerno</a:documentation>
                <value>AR</value>
@@ -10111,6 +10119,8 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Augustine Dickinson</a:documentation>
                <value>AynMul</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Ayinekulu Mulugeta</a:documentation>
+               <value>BC</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Brando Carmen</a:documentation>
                <value>BW</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Bret Windhauser</a:documentation>
                <value>CS</value>
@@ -10137,14 +10147,14 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Eliana Dal Sasso</a:documentation>
                <value>ESh</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Elizaveta Shvarts</a:documentation>
+               <value>EF</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Éloi Ficquet</a:documentation>
                <value>ES</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Eugenia Sokolinski</a:documentation>
                <value>ED</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Eyob Derillo</a:documentation>
                <value>FP</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Francesca Panini</a:documentation>
-               <value>FP</value>
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Francesca Panini</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Francesca Panini</a:documentation>              
                <value>GA</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Getinet Asimare</a:documentation>
                <value>GC</value>
@@ -10189,6 +10199,10 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Leah Mascia</a:documentation>
                <value>LB</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Leonard Bahr</a:documentation>
+               <value>MAm</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Martina Ambu</a:documentation>
+               <value>MGO</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Meseret G. Oldjira</a:documentation>
                <value>MK</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Magdalena Krzyżanowska</a:documentation>
                <value>MKr</value>

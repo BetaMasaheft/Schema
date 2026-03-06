@@ -4364,6 +4364,9 @@ End license statement: do not remove -->
                                 <valItem ident="AmAb">
                                     <desc>Amanuel Abraha</desc>
                                 </valItem>
+                                <valItem ident="AC">
+                                    <desc>Amélie Chekroun</desc>
+                                </valItem>
                                 <valItem ident="AWi">
                                     <desc>Anaïs Wion</desc>
                                 </valItem>
@@ -4371,7 +4374,10 @@ End license statement: do not remove -->
                                     <desc>Andreas Ellwardt</desc>
                                 </valItem>
                                 <valItem ident="AW">
-                                    <desc>Andreas Wetter'</desc>
+                                    <desc>Andreas Wetter</desc>
+                                </valItem>
+                                <valItem ident="AM">
+                                    <desc>Angela Müller</desc>
                                 </valItem>
                                 <valItem ident="AS">
                                     <desc>Angela Salerno</desc>
@@ -4390,6 +4396,9 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="AynMul">
                                     <desc>Ayinekulu Mulugeta</desc>
+                                </valItem>
+                                <valItem ident="BC" >
+                                    <desc>Brando Carmen</desc>
                                 </valItem>
                                 <valItem ident="BW">
                                     <desc>Bret Windhauser</desc>
@@ -4430,6 +4439,9 @@ End license statement: do not remove -->
                                 <valItem ident="ESh">
                                     <desc>Elizaveta Shvarts</desc>
                                 </valItem>
+                                <valItem ident="EF" >
+                                    <desc>Éloi Ficquet</desc>
+                                </valItem>
                                 <valItem ident="ES">
                                     <desc>Eugenia Sokolinski</desc>
                                 </valItem>
@@ -4438,10 +4450,7 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="FP">
                                     <desc>Francesca Panini</desc>
-                                </valItem>
-                                <valItem ident="FP">
-                                    <desc>Francesca Panini</desc>
-                                </valItem>
+                                </valItem>                                
                                 <valItem ident="GA">
                                     <desc>Getinet Asimare</desc>
                                 </valItem>
@@ -4508,6 +4517,9 @@ End license statement: do not remove -->
                                 <valItem ident="LB">
                                     <desc>Leonard Bahr</desc>
                                 </valItem>
+                                <valItem ident="MGO">
+                                    <desc>Meseret G. Oldjira</desc>
+                                </valItem>                                
                                 <valItem ident="MK">
                                     <desc>Magdalena Krzyżanowska</desc>
                                 </valItem>
@@ -4516,6 +4528,9 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="MB">
                                     <desc>Maria Bulakh</desc>
+                                </valItem>
+                                <valItem ident="MAm" >
+                                    <desc>Martina Ambu</desc>
                                 </valItem>
                                 <valItem ident="MV">
                                     <desc>Massimo Villa</desc>
@@ -4662,6 +4677,9 @@ End license statement: do not remove -->
                                 <valItem ident="AmAb">
                                     <desc>Amanuel Abraha</desc>
                                 </valItem>
+                                <valItem ident="AC">
+                                    <desc>Amélie Chekroun</desc>
+                                </valItem>
                                 <valItem ident="AWi">
                                     <desc>Anaïs Wion</desc>
                                 </valItem>
@@ -4669,7 +4687,10 @@ End license statement: do not remove -->
                                     <desc>Andreas Ellwardt</desc>
                                 </valItem>
                                 <valItem ident="AW">
-                                    <desc>Andreas Wetter'</desc>
+                                    <desc>Andreas Wetter</desc>
+                                </valItem>
+                                <valItem ident="AM">
+                                    <desc>Angela Müller</desc>
                                 </valItem>
                                 <valItem ident="AS">
                                     <desc>Angela Salerno</desc>
@@ -4688,6 +4709,9 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="AynMul">
                                     <desc>Ayinekulu Mulugeta</desc>
+                                </valItem>
+                                <valItem ident="BC" >
+                                    <desc>Brando Carmen</desc>
                                 </valItem>
                                 <valItem ident="BW">
                                     <desc>Bret Windhauser</desc>
@@ -4728,6 +4752,9 @@ End license statement: do not remove -->
                                 <valItem ident="ESh">
                                     <desc>Elizaveta Shvarts</desc>
                                 </valItem>
+                                <valItem ident="EF" >
+                                    <desc>Éloi Ficquet</desc>
+                                </valItem>
                                 <valItem ident="ES">
                                     <desc>Eugenia Sokolinski</desc>
                                 </valItem>
@@ -4736,10 +4763,7 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="FP">
                                     <desc>Francesca Panini</desc>
-                                </valItem>
-                                <valItem ident="FP">
-                                    <desc>Francesca Panini</desc>
-                                </valItem>
+                                </valItem>                                
                                 <valItem ident="GA">
                                     <desc>Getinet Asimare</desc>
                                 </valItem>
@@ -4806,6 +4830,9 @@ End license statement: do not remove -->
                                 <valItem ident="LB">
                                     <desc>Leonard Bahr</desc>
                                 </valItem>
+                                <valItem ident="MGO">
+                                    <desc>Meseret G. Oldjira</desc>
+                                </valItem>
                                 <valItem ident="MK">
                                     <desc>Magdalena Krzyżanowska</desc>
                                 </valItem>
@@ -4814,6 +4841,9 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="MB">
                                     <desc>Maria Bulakh</desc>
+                                </valItem>
+                                <valItem ident="MAm" >
+                                    <desc>Martina Ambu</desc>
                                 </valItem>
                                 <valItem ident="MV">
                                     <desc>Massimo Villa</desc>
