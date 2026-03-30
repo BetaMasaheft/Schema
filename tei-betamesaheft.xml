@@ -92,6 +92,7 @@ End license statement: do not remove -->
             <change who="ES" when="2022-03-14">Added Addisie, corrected gap/omitted definition</change>
             <change who="ES" when="2024-01-11">Added Janet, removed Gay</change>
             <change who="ES" when="2024-01-19">Arranged languages alphabetically, replaced "geo" with "ka", added subtags for scripts</change>
+            <change who="CH" when="2026-03-30">Add Kunama</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -2088,6 +2089,9 @@ End license statement: do not remove -->
                                 </valItem>
                                 <valItem ident="it">
                                     <desc>Italian</desc>
+                                </valItem>
+                                <valItem ident="kun">
+                                    <desc>Kunama</desc>
                                 </valItem>
                                 <valItem ident="ml">
                                     <desc>Malay</desc>
