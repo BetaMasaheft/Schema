@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2026-03-30T11:11:15Z. . 
+Schema generated from ODD source 2026-04-24T11:58:15Z. . 
 TEI Edition: P5 Version 4.11.0. Last updated on 18th February 2026, revision 358d2e48e 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.11.0/ 
   
@@ -7842,7 +7842,7 @@ Sample values include: 1] main; 2] sub (subordinate); 3] alt (alternate); 4] sho
          <optional>
             <attribute name="unit">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
-Suggested values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] part; 7] volume; 8] item; 9] fol; 10] note</a:documentation>
+Suggested values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] part; 7] volume; 8] item; 9] fol; 10] note; 11] plate</a:documentation>
                <choice>
                   <value>page</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">page</a:documentation>
@@ -7864,6 +7864,8 @@ Suggested values include: 1] page; 2] chapter; 3] column; 4] issue; 5] line; 6] 
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">folio</a:documentation>
                   <value>note</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">numbered note (footnote, sidenote, endnote)</a:documentation>
+                  <value>plate</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">plate(s)</a:documentation>
                   <data type="token">
                      <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
                   </data>
