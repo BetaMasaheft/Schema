@@ -713,6 +713,9 @@ End license statement: do not remove -->
                                 <valItem ident="note">
                                     <desc>numbered note (footnote, sidenote, endnote)</desc>
                                 </valItem>
+                                <valItem ident="plate">
+                                    <desc>plate(s)</desc>
+                                </valItem>
                             </valList>
                         </attDef>
                     </attList>
