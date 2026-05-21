@@ -3762,6 +3762,7 @@ End license statement: do not remove -->
                                 <valItem ident="translation"><desc>to signal that the title is only of a translation.
                                     Examples: <ref target="https://betamasaheft.eu/xpath?xpath=%24config%3Acollection-root%2F%2Ft%3Aseg%5Bcontains%28%40type%2C%27translation%27%29%5D">Beta maṣāḥǝft
                                         Xpath search for //t:seg[contains(@type,'translation')]</ref></desc></valItem>
+                                <valItem ident="direction"><desc>for liturgical indications for the clergy/congregation</desc></valItem>
                             </valList>
                         </attDef>
                         <attDef ident="rend"  mode="replace" usage="opt">
