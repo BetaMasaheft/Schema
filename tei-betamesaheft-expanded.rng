@@ -9055,12 +9055,50 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
          <empty/>
       </element>
    </define>
+   <define name="tei_citeStructure">
+      <element name="citeStructure">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(citation structure) declares a structure and method for citing the current document. Used by BetMasWeb expand / DTS. [BetMasWeb#87]</a:documentation>
+         <zeroOrMore>
+            <choice>
+               <ref name="tei_citeStructure"/>
+               <ref name="tei_model.descLike"/>
+            </choice>
+         </zeroOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <optional>
+            <attribute name="unit">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes the structural unit indicated by the citeStructure.</a:documentation>
+               <text/>
+            </attribute>
+         </optional>
+         <attribute name="match">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">XPath selection pattern identifying citable structural components.</a:documentation>
+            <text/>
+         </attribute>
+         <optional>
+            <attribute name="use">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">indicates how citation labels are constructed for this unit.</a:documentation>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="delim">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">delimiting string preceding the structural component.</a:documentation>
+               <text/>
+            </attribute>
+         </optional>
+         <empty/>
+      </element>
+   </define>
    <define name="tei_refsDecl">
       <element name="refsDecl">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(references declaration) specifies how canonical references are constructed for this text. [2.3.6.3. Milestone Method 2.3. The Encoding Description 2.3.6. The Reference System Declaration]</a:documentation>
          <choice>
             <oneOrMore>
                <ref name="tei_model.pLike"/>
+            </oneOrMore>
+            <oneOrMore>
+               <ref name="tei_citeStructure"/>
             </oneOrMore>
             <oneOrMore>
                <ref name="tei_cRefPattern"/>
