@@ -9057,12 +9057,12 @@ Sample values include: 1] first-line; 2] first-letter; 3] before; 4] after</a:do
    </define>
    <define name="tei_citeStructure">
       <element name="citeStructure">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(citation structure) declares a structure and method for citing the current document. Used by BetMasWeb expand / DTS. [BetMasWeb#87]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(citation structure) declares a structure and method for citing the current document. [TEI; BetMasWeb expand / DTS]</a:documentation>
          <zeroOrMore>
-            <choice>
-               <ref name="tei_citeStructure"/>
-               <ref name="tei_model.descLike"/>
-            </choice>
+            <ref name="tei_citeStructure"/>
+         </zeroOrMore>
+         <zeroOrMore>
+            <ref name="tei_model.descLike"/>
          </zeroOrMore>
          <ref name="tei_att.global.attributes"/>
          <optional>

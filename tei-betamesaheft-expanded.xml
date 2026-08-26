@@ -33,8 +33,8 @@
             <change who="DR" when="2017-04-21">Added keyword</change>
             <change who="DR" when="2017-05-02">Added value definitions @place</change>
             <change who="jinntec" when="2023-09-25">Chained with tei-betamesaheft ODD</change>
-            <change who="#DP" when="2026-08-25">Allow TEI citeStructure under refsDecl for expanded
-                TEI (BetMasWeb expand / DTS; expanded#6 / BetMasWeb#87).</change>
+            <change who="jinntec" when="2026-08-25">Allow TEI citeStructure under refsDecl for expanded
+                TEI (expand / DTS). Content model follows TEI sequence (nested then desc).</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -563,10 +563,8 @@
                     </attList>
                 </classSpec>
 
-                <!-- citeStructure: TEI header element used by BetMasWeb expand.xqm / DTS.
-                     Base tei-betamesaheft (TEI 3.5-era) does not include it; add for expanded
-                     validation. Content is slightly looser than current TEI sequence so that
-                     expand’s desc-then-nested-citeStructure order validates. -->
+                <!-- citeStructure: not in TEI 3.5.0 base; add for expanded TEI (BetMasWeb expand / DTS).
+                     Content follows current TEI: nested citeStructure*, then model.descLike*. -->
                 <elementSpec ident="citeStructure" mode="add" module="header">
                     <gloss>citation structure</gloss>
                     <desc>declares a structure and method for citing the current document.</desc>
@@ -574,10 +572,10 @@
                         <memberOf key="att.global"/>
                     </classes>
                     <content>
-                        <alternate minOccurs="0" maxOccurs="unbounded">
-                            <elementRef key="citeStructure"/>
-                            <classRef key="model.descLike"/>
-                        </alternate>
+                        <sequence>
+                            <elementRef key="citeStructure" minOccurs="0" maxOccurs="unbounded"/>
+                            <classRef key="model.descLike" minOccurs="0" maxOccurs="unbounded"/>
+                        </sequence>
                     </content>
                     <attList>
                         <attDef ident="unit" usage="opt">
