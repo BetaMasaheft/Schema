@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2026-08-26T10:33:25Z. . 
+Schema generated from ODD source 2026-08-27T12:22:40Z. . 
 TEI Edition: P5 Version 4.12.0. Last updated on 28th July 2026, revision 113e933e2 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.12.0/ 
   
@@ -9806,11 +9806,7 @@ Suggested values include: 1] sent; 2] received; 3] transmitted; 4] redirected; 5
          <optional>
             <attribute name="who">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">In expanded TEI, expand rewrites revision credits to same-document pointers (e.g. #AW) rather than the bare editor ids required for source encoding. Datatype is TEI teidata.pointer.</a:documentation>
-               <list>
-                  <oneOrMore>
-                     <data type="anyURI"/>
-                  </oneOrMore>
-               </list>
+               <data type="anyURI"/>
             </attribute>
          </optional>
          <optional>
