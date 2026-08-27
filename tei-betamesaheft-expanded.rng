@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2026-08-27T12:22:40Z. . 
+Schema generated from ODD source 2026-08-27T15:35:33Z. . 
 TEI Edition: P5 Version 4.12.0. Last updated on 28th July 2026, revision 113e933e2 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.12.0/ 
   
@@ -6807,8 +6807,13 @@ Suggested values include: 1] marginal; 2] guardLeaf</a:documentation>
          <ref name="tei_att.written.attributes"/>
          <optional>
             <attribute name="type">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">In expanded TEI, note/@type may carry EMA values or Zotero TEI note types inlined into bibl by expand. Open teidata.enumerated.</a:documentation>
-               <data type="token"/>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">In expanded TEI, <code xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;note&gt;</code>/<code xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0">@type</code> may carry EMA values or Zotero TEI note types inlined into <code xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;bibl&gt;</code> by expand. Open teidata.enumerated.</a:documentation>
+               <data type="token">
+                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+               </data>
             </attribute>
          </optional>
          <optional>
@@ -12638,11 +12643,39 @@ Suggested values include: 1] pattern; 2] Usage; 3] Executed; 4] Dividers</a:docu
          </optional>
          <optional>
             <attribute name="type">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">In expanded TEI, seg/@type may carry authoring values (handNote / title markup) or Zotero item types inlined into bibl by expand. Open teidata.enumerated.</a:documentation>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">In expanded TEI, <code xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;seg&gt;</code>/<code xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0">@type</code> may carry authoring values (handNote / title markup) or Zotero item types inlined into <code xmlns="http://www.w3.org/1999/xhtml"
+                        xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;bibl&gt;</code> by expand. Open teidata.enumerated.</a:documentation>
                <list>
-                  <oneOrMore>
-                     <data type="token"/>
-                  </oneOrMore>
+                  <data type="token">
+                     <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                  </data>
+                  <optional>
+                     <data type="token">
+                        <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                     </data>
+                  </optional>
+                  <optional>
+                     <data type="token">
+                        <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                     </data>
+                  </optional>
+                  <optional>
+                     <data type="token">
+                        <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                     </data>
+                  </optional>
+                  <optional>
+                     <data type="token">
+                        <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                     </data>
+                  </optional>
+                  <optional>
+                     <data type="token">
+                        <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
+                     </data>
+                  </optional>
                </list>
             </attribute>
          </optional>
@@ -21955,17 +21988,6 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
          <empty/>
       </element>
    </define>
-   <define name="tei_standOff">
-      <element name="standOff">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(stand-off) Container for linked data and contextual information. In Beta maṣāḥǝft expanded TEI, holds the consolidated listRelation harvested from the source document. [TEI 4+; BetMasWeb expand]</a:documentation>
-         <oneOrMore>
-            <ref name="tei_listRelation"/>
-         </oneOrMore>
-         <ref name="tei_att.global.attributes"/>
-         <ref name="tei_att.typed.attributes"/>
-         <empty/>
-      </element>
-   </define>
    <define name="tei_citeStructure">
       <element name="citeStructure">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(citation structure) declares a structure and method for citing the current document.</a:documentation>
@@ -22002,6 +22024,18 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
                <data type="string"/>
             </attribute>
          </optional>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_standOff">
+      <element name="standOff">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(stand-off) Container for linked data and contextual information. In Beta maṣāḥǝft expanded TEI, holds the consolidated <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;listRelation&gt;</code> harvested from the source document.</a:documentation>
+         <oneOrMore>
+            <ref name="tei_listRelation"/>
+         </oneOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
          <empty/>
       </element>
    </define>
