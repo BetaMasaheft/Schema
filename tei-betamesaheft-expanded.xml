@@ -35,6 +35,8 @@
             <change who="jinntec" when="2023-09-25">Chained with tei-betamesaheft ODD</change>
             <change who="jinntec" when="2026-08-25">Allow TEI citeStructure under refsDecl for expanded
                 TEI (expand / DTS). Content model follows TEI sequence (nested then desc).</change>
+            <change who="jinntec" when="2026-08-27">Restore teidata.pointer for change/@who in expanded
+                TEI (expand rewrites editor tokens to same-document pointers).</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -368,8 +370,19 @@
                 <elementSpec ident="change" mode="change" module="header">
                     <constraintSpec scheme="schematron" ident="change" mode="delete"/>
                     <attList>
-                        <attDef ident="who" mode="change" usage="opt">
-                            <valList type="semi"/>
+                        <!-- Authoring ODD replaces @who with a closed editor token list.
+                             That replace survives chaining unless we replace again here.
+                             Expanded TEI from BetMasWeb expand uses same-document pointers
+                             (e.g. who="#AW") targeting injected respStmt/@xml:id — restore
+                             vanilla TEI teidata.pointer. -->
+                        <attDef ident="who" mode="replace" usage="opt">
+                            <desc>In expanded TEI, expand rewrites revision credits to
+                                same-document pointers (e.g. <val>#AW</val>) rather than the
+                                bare editor ids required for source encoding. Datatype is TEI
+                                <ident>teidata.pointer</ident>.</desc>
+                            <datatype>
+                                <dataRef key="teidata.pointer"/>
+                            </datatype>
                         </attDef>
                         <attDef ident="when" mode="change" usage="opt"/>
                     </attList>
