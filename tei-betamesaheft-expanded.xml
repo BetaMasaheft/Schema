@@ -39,6 +39,8 @@
                 TEI (expand rewrites editor tokens to same-document pointers).</change>
             <change who="jinntec" when="2026-08-27">Add standOff to expanded TEI (expand hoists
                 listRelation into TEI/standOff; not in TEI 3.5.0 base).</change>
+            <change who="jinntec" when="2026-08-27">Open seg/@type and note/@type in expanded TEI
+                (expand inlines Zotero TEI item/note types; authoring closed lists were still winning).</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -268,12 +270,19 @@
                     <constraintSpec scheme="schematron" ident="ab" mode="delete"/>
                 </elementSpec>
 
-                <!--              values for seg in handNote  -->
+                <!-- seg/@type: authoring keeps a closed handNote/title list. Expand also emits
+                     Zotero TEI item types on bibl/seg (book, webpage, dataset, …). mode="change"
+                     + empty semi does not undo the source mode="replace" closed list. -->
                 <elementSpec ident="seg" mode="change" module="linking">
                     <constraintSpec scheme="schematron" ident="seg" mode="delete"/>
                     <attList>
-                        <attDef ident="type" mode="change" usage="opt">
-                            <valList type="semi"/>
+                        <attDef ident="type" mode="replace" usage="opt">
+                            <desc>In expanded TEI, <gi>seg</gi>/<att>type</att> may carry authoring
+                                values (handNote / title markup) or Zotero item types inlined into
+                                <gi>bibl</gi> by expand. Open <ident>teidata.enumerated</ident>.</desc>
+                            <datatype maxOccurs="6">
+                                <dataRef key="teidata.enumerated"/>
+                            </datatype>
                         </attDef>
                         <attDef ident="rend"  mode="change" usage="opt">
                             <valList type="semi"/>
@@ -452,10 +461,17 @@
                 </elementSpec>
 
                 <!--          controlled values for note type commemoration in person records of Saints-->
+                <!-- note/@type: authoring closed EMA list. Expand copies Zotero TEI notes
+                     (tags, tag, url, accessed) into bibl. Same ODD-chaining fix as change/@who. -->
                 <elementSpec ident="note" mode="change" module="core">
                     <attList>
-                        <attDef ident="type" mode="change" usage="opt">
-                            <valList type="semi"/>
+                        <attDef ident="type" mode="replace" usage="opt">
+                            <desc>In expanded TEI, <gi>note</gi>/<att>type</att> may carry EMA
+                                values or Zotero TEI note types inlined into <gi>bibl</gi> by
+                                expand. Open <ident>teidata.enumerated</ident>.</desc>
+                            <datatype>
+                                <dataRef key="teidata.enumerated"/>
+                            </datatype>
                         </attDef>
                     </attList>
                 </elementSpec>
