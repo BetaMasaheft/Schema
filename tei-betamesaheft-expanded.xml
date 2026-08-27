@@ -37,6 +37,8 @@
                 TEI (expand / DTS). Content model follows TEI sequence (nested then desc).</change>
             <change who="jinntec" when="2026-08-27">Restore teidata.pointer for change/@who in expanded
                 TEI (expand rewrites editor tokens to same-document pointers).</change>
+            <change who="jinntec" when="2026-08-27">Add standOff to expanded TEI (expand hoists
+                listRelation into TEI/standOff; not in TEI 3.5.0 base).</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -626,6 +628,25 @@
                             <elementRef key="cRefPattern" minOccurs="1" maxOccurs="unbounded"/>
                             <elementRef key="refState" minOccurs="1" maxOccurs="unbounded"/>
                         </alternate>
+                    </content>
+                </elementSpec>
+
+                <!-- standOff: not in TEI 3.5.0 base (added in TEI 4.0 as model.resource).
+                     BetMasWeb expand hoists all listRelation into TEI/standOff before text.
+                     Authoring keeps listRelation in situ via model.global; expanded validates
+                     the machine-output placement. -->
+                <elementSpec ident="standOff" mode="add" module="linking">
+                    <gloss>stand-off</gloss>
+                    <desc>Container for linked data and contextual information. In Beta maṣāḥǝft
+                        expanded TEI, holds the consolidated <gi>listRelation</gi> harvested from
+                        the source document.</desc>
+                    <classes>
+                        <memberOf key="model.resourceLike"/>
+                        <memberOf key="att.global"/>
+                        <memberOf key="att.typed"/>
+                    </classes>
+                    <content>
+                        <elementRef key="listRelation" minOccurs="1" maxOccurs="unbounded"/>
                     </content>
                 </elementSpec>
 

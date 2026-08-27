@@ -3702,6 +3702,7 @@ Suggested values include: 1] volume; 2] issue; 3] page; 4] line; 5] chapter; 6] 
          <ref name="tei_text"/>
          <ref name="tei_facsimile"/>
          <ref name="tei_sourceDoc"/>
+         <ref name="tei_standOff"/>
       </choice>
    </define>
    <define name="tei_model.objectLike">
@@ -22329,6 +22330,17 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
          </choice>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.declarable.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_standOff">
+      <element name="standOff">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(stand-off) Container for linked data and contextual information. In Beta maṣāḥǝft expanded TEI, holds the consolidated listRelation harvested from the source document. [TEI 4+; BetMasWeb expand]</a:documentation>
+         <oneOrMore>
+            <ref name="tei_listRelation"/>
+         </oneOrMore>
+         <ref name="tei_att.global.attributes"/>
+         <ref name="tei_att.typed.attributes"/>
          <empty/>
       </element>
    </define>
