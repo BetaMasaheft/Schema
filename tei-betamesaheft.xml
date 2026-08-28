@@ -5038,6 +5038,12 @@ End license statement: do not remove -->
                                     <desc>the person paying for a ms (possibly not the same as
                                         donor/commissioner)</desc>
                                 </valItem>
+                                <valItem ident="presentCustodian">
+                                    <desc>current custorian (used in IHA records)</desc>
+                                </valItem>
+                                <valItem ident="mainCollector">
+                                    <desc>main collector (used in IHA records)</desc>
+                                </valItem>
                                 <valItem ident="other"/>
                             </valList>
                         </attDef>
