@@ -41,6 +41,8 @@
                 listRelation into TEI/standOff; not in TEI 3.5.0 base).</change>
             <change who="jinntec" when="2026-08-27">Open seg/@type and note/@type in expanded TEI
                 (expand inlines Zotero TEI item/note types; authoring closed lists were still winning).</change>
+            <change who="jinntec" when="2026-08-31">Computed dimensions/layout via @subtype for expand
+                indexing (GitHub issue #45); authoring ODD warns only.</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -240,8 +242,72 @@
                 <!--          allow use in dimension of rend pricked and ruled
           more values can be added, and up to 6 can be entered in the attribute
           -->
-                 <elementSpec ident="dimensions" mode="change" module="msdescription">
-                     <constraintSpec scheme="schematron" ident="dimensions" mode="delete"/>                    
+                <elementSpec ident="dimensions" mode="change" module="msdescription">
+                    <desc>For search indexing, expand may add a parallel <gi>dimensions</gi> sibling
+                        with the same <att>type</att> and <att>subtype</att> equal to
+                        <val>computed</val>, carrying machine-readable <att>quantity</att> and
+                        <att>unit</att> (typically mm) on empty
+                        <gi>height</gi>/<gi>width</gi>/<gi>depth</gi>/<gi>dim</gi> children; the
+                        cataloguer block is unchanged. See GitHub issue #45.</desc>
+                    <constraintSpec scheme="schematron" ident="dimensions" mode="delete"/>
+                    <attList>
+                        <attDef ident="subtype" mode="replace" usage="opt">
+                            <valList type="closed">
+                                <valItem ident="computed">
+                                    <desc>expand-derived parallel block with machine-readable
+                                        measurements for indexing; pairs with the preceding cataloguer
+                                        <gi>dimensions</gi> block of the same <att>type</att></desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                    <exemplum>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="design-computed-dimensions">
+                            <dimensions type="outer" unit="cm">
+                                <height>22,0</height>
+                                <width>17,2</width>
+                            </dimensions>
+                            <dimensions type="outer" subtype="computed" unit="mm">
+                                <height quantity="220" unit="mm"/>
+                                <width quantity="172" unit="mm"/>
+                            </dimensions>
+                        </egXML>
+                    </exemplum>
+                </elementSpec>
+
+                <elementSpec ident="layout" mode="change" module="msdescription">
+                    <desc>For search indexing, expand may add a parallel <gi>layout</gi> sibling with
+                        <att>type</att> equal to <val>catalogue</val> and <att>subtype</att> equal to
+                        <val>computed</val>, carrying machine-readable attribute values (e.g.
+                        <att>writtenLines</att>); the cataloguer <gi>layout</gi> is unchanged. See
+                        GitHub issue #45.</desc>
+                    <classes>
+                        <memberOf key="att.typed"/>
+                    </classes>
+                    <attList>
+                        <attDef ident="type" mode="replace" usage="opt">
+                            <valList type="closed">
+                                <valItem ident="catalogue">
+                                    <desc>cataloguer-authored or expand-derived layout description;
+                                        required when <att>subtype</att> is present</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <attDef ident="subtype" mode="replace" usage="opt">
+                            <valList type="closed">
+                                <valItem ident="computed">
+                                    <desc>expand-derived parallel block with machine-readable layout
+                                        values for indexing</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                    <exemplum>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="design-computed-layout">
+                            <layout columns="2" writtenLines="17 18"/>
+                            <layout type="catalogue" subtype="computed" columns="2" writtenLines="18"/>
+                        </egXML>
+                    </exemplum>
                 </elementSpec>
 
                 <!-- desc typologies -->
