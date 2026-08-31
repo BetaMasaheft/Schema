@@ -65,6 +65,11 @@
                 <exclude name="node_modules/**" />
                 <exclude name=".gitignore" />
                 <exclude name=".vscode/**" />
+                <exclude name=".worktrees/**" />
+                <exclude name=".cursor/**" />
+                <exclude name=".zed/**" />
+                <exclude name=".codacy/**" />
+                <exclude name="*.code-workspace" />
                 <exclude name="expath-pkg.xml" />
                 <exclude name="repo.xml" />
                 <exclude name="lib/**" />

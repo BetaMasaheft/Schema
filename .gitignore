@@ -8,3 +8,9 @@ tei_odds.*
 report-*.xml
 
 !lib/schxslt-cli.jar
+.codacy/
+.cursor/
+.zed/
+.worktrees/
+.vscode/
+*.code-workspace

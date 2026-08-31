@@ -3119,7 +3119,8 @@ End license statement: do not remove -->
                     <desc>A rule enforces for computation purposes the use of full stop instead of
                         commas in the numeric values for dimensions <ref
                             target="https://betamasaheft.eu/Guidelines/?id=dimensions">Beta maṣāḥǝft
-                            Guidelines</ref></desc>
+                            Guidelines</ref>. Machine-readable computed siblings are defined in the
+                        expanded schema only (GitHub issue #45).</desc>
                     <constraintSpec scheme="schematron" ident="dimensions">
                         <constraint>
                             <sch:rule context="tei:dimensions/tei:*">
@@ -3127,6 +3128,11 @@ End license statement: do not remove -->
                                     see="https://betamasaheft.eu/Guidelines/?id=objectDescription"
                                     test="contains(.,',')">please, make sure you use a dot
                                     for decimal notation like in 13.5, not a comma 13,5</sch:report>
+                            </sch:rule>
+                            <sch:rule context="tei:dimensions[@subtype]">
+                                <sch:report role="nonfatal" test="true()">@subtype on dimensions
+                                    marks expand-derived output; do not add in source encoding
+                                    (GitHub issue #45).</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
@@ -3139,6 +3145,13 @@ End license statement: do not remove -->
                                 <valItem ident="pricked"/>
                                 <valItem ident="ruled"/>
                             </valList>
+                        </attDef>
+                        <attDef ident="subtype" mode="add" usage="opt">
+                            <desc>Not for source encoding. Expand adds <val>computed</val> blocks in
+                                expanded output only.</desc>
+                            <datatype>
+                                <dataRef key="teidata.enumerated"/>
+                            </datatype>
                         </attDef>
                     </attList>
                     <exemplum>
