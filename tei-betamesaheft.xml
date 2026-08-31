@@ -3130,9 +3130,9 @@ End license statement: do not remove -->
                                     for decimal notation like in 13.5, not a comma 13,5</sch:report>
                             </sch:rule>
                             <sch:rule context="tei:dimensions[@subtype]">
-                                <sch:report role="nonfatal" test="true()"><att>subtype</att> on
-                                    <gi>dimensions</gi> marks expand-derived output; do not add in
-                                    source encoding (GitHub issue #45).</sch:report>
+                                <sch:report role="nonfatal" test="true()">@subtype on dimensions
+                                    marks expand-derived output; do not add in source encoding
+                                    (GitHub issue #45).</sch:report>
                             </sch:rule>
                         </constraint>
                     </constraintSpec>
