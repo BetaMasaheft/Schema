@@ -1,0 +1,22 @@
+tei-betamesaheft.xml
+  s_bfac4543151ff7::t_ebcb24f902518f 3159-3168,3170
+  s_bfac4543151ff7::t_e3c1735f7fa947 3122-3125
+  s_bfac4543151ff7::t_095aedb001bb10 3126
+  s_bfac4543151ff7::t_7c90042512378e 3169
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "96b2fc66eda99e9b4aa94fc38fca4501824b94d5",
+  "prompts": {},
+  "sessions": {
+    "s_bfac4543151ff7": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "86f79926-bf74-4660-badb-9dd045efa2ca",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
