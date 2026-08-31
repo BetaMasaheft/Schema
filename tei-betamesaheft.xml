@@ -3119,7 +3119,12 @@ End license statement: do not remove -->
                     <desc>A rule enforces for computation purposes the use of full stop instead of
                         commas in the numeric values for dimensions <ref
                             target="https://betamasaheft.eu/Guidelines/?id=dimensions">Beta maṣāḥǝft
-                            Guidelines</ref></desc>
+                            Guidelines</ref>. For search indexing, expand may add a parallel
+                        <gi>dimensions</gi> sibling with the same <att>type</att> and
+                        <att>subtype</att> equal to <val>normalized</val>, carrying
+                        machine-readable <att>quantity</att> and <att>unit</att> (typically mm) on
+                        empty <gi>height</gi>/<gi>width</gi>/<gi>depth</gi>/<gi>dim</gi> children;
+                        the cataloguer block is unchanged. See GitHub issue #45.</desc>
                     <constraintSpec scheme="schematron" ident="dimensions">
                         <constraint>
                             <sch:rule context="tei:dimensions/tei:*">
@@ -3140,6 +3145,15 @@ End license statement: do not remove -->
                                 <valItem ident="ruled"/>
                             </valList>
                         </attDef>
+                        <attDef ident="subtype" mode="replace" usage="opt">
+                            <valList type="closed">
+                                <valItem ident="normalized">
+                                    <desc>expand-derived parallel block with machine-readable
+                                        measurements for indexing; pairs with the preceding cataloguer
+                                        <gi>dimensions</gi> block of the same <att>type</att></desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
                     </attList>
                     <exemplum>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="FSUffhludolfII22">
@@ -3150,6 +3164,53 @@ End license statement: do not remove -->
                                     <width>16</width>
                                 </dimensions>
                             </extent>
+                        </egXML>
+                    </exemplum>
+                    <exemplum>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="design-normalized-dimensions">
+                            <dimensions type="outer" unit="cm">
+                                <height>22,0</height>
+                                <width>17,2</width>
+                            </dimensions>
+                            <dimensions type="outer" subtype="normalized" unit="mm">
+                                <height quantity="220" unit="mm"/>
+                                <width quantity="172" unit="mm"/>
+                            </dimensions>
+                        </egXML>
+                    </exemplum>
+                </elementSpec>
+
+                <elementSpec ident="layout" mode="change" module="msdescription">
+                    <desc>For search indexing, expand may add a parallel <gi>layout</gi> sibling
+                        with <att>type</att> equal to <val>catalogue</val> and <att>subtype</att>
+                        equal to <val>normalized</val>, carrying machine-readable attribute values
+                        (e.g. <att>writtenLines</att>); the cataloguer <gi>layout</gi> is unchanged.
+                        See GitHub issue #45.</desc>
+                    <classes>
+                        <memberOf key="att.typed"/>
+                    </classes>
+                    <attList>
+                        <attDef ident="type" mode="replace" usage="opt">
+                            <valList type="closed">
+                                <valItem ident="catalogue">
+                                    <desc>cataloguer-authored or expand-derived layout description;
+                                        required when <att>subtype</att> is present</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                        <attDef ident="subtype" mode="replace" usage="opt">
+                            <valList type="closed">
+                                <valItem ident="normalized">
+                                    <desc>expand-derived parallel block with machine-readable layout
+                                        values for indexing</desc>
+                                </valItem>
+                            </valList>
+                        </attDef>
+                    </attList>
+                    <exemplum>
+                        <egXML xmlns="http://www.tei-c.org/ns/Examples" source="design-normalized-layout">
+                            <layout columns="2" writtenLines="17 18"/>
+                            <layout type="catalogue" subtype="normalized" columns="2" writtenLines="18"/>
                         </egXML>
                     </exemplum>
                 </elementSpec>
