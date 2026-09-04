@@ -43,6 +43,11 @@
                 (expand inlines Zotero TEI item/note types; authoring closed lists were still winning).</change>
             <change who="jinntec" when="2026-08-31">Computed dimensions/layout via @subtype for expand
                 indexing (GitHub issue #45); authoring ODD warns only.</change>
+            <change who="jinntec" when="2026-09-04">Expanded TEI: allow expand-only empty
+                <gi>writtenLines</gi> (@quantity) under computed <gi>layout</gi>, and
+                <gi>msPartsCount</gi> (@quantity) as last child of <gi>msDesc</gi>. Aligns
+                schema with BetMasWeb expand-normalize encoding (range indexes); #45 first
+                draft used layout/@writtenLines and left msPartsCount as a live count.</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -278,12 +283,22 @@
                 <elementSpec ident="layout" mode="change" module="msdescription">
                     <desc>For search indexing, expand may add a parallel <gi>layout</gi> sibling with
                         <att>type</att> equal to <val>catalogue</val> and <att>subtype</att> equal to
-                        <val>computed</val>, carrying machine-readable attribute values (e.g.
-                        <att>writtenLines</att>); the cataloguer <gi>layout</gi> is unchanged. See
-                        GitHub issue #45.</desc>
+                        <val>computed</val>, carrying an empty <gi>writtenLines</gi> child with
+                        <att>quantity</att> (integer upper bound / sole value). The cataloguer
+                        <gi>layout</gi> (including <att>writtenLines</att>) is unchanged. See
+                        GitHub issue #45 (encoding updated from attribute to element for range
+                        indexing parity with computed <gi>height</gi>/<gi>width</gi>).</desc>
                     <classes>
                         <memberOf key="att.typed"/>
                     </classes>
+                    <!-- macroRef must not carry minOccurs/maxOccurs (tei_odds); specialPara
+                         already allows empty, so computed layout may be writtenLines-only. -->
+                    <content>
+                        <sequence>
+                            <elementRef key="writtenLines" minOccurs="0" maxOccurs="1"/>
+                            <macroRef key="macro.specialPara"/>
+                        </sequence>
+                    </content>
                     <attList>
                         <attDef ident="type" mode="replace" usage="opt">
                             <valList type="closed">
@@ -305,9 +320,85 @@
                     <exemplum>
                         <egXML xmlns="http://www.tei-c.org/ns/Examples" source="design-computed-layout">
                             <layout columns="2" writtenLines="17 18"/>
-                            <layout type="catalogue" subtype="computed" columns="2" writtenLines="18"/>
+                            <layout type="catalogue" subtype="computed" columns="2">
+                                <writtenLines quantity="18"/>
+                            </layout>
                         </egXML>
                     </exemplum>
+                </elementSpec>
+
+                <!-- Expand-only: empty writtenLines/@quantity under layout[@subtype='computed'].
+                     Not a TEI element; added so expanded RNG matches BetMasWeb expandnorm. -->
+                <elementSpec ident="writtenLines" mode="add" module="msdescription">
+                    <gloss>written lines (computed)</gloss>
+                    <desc>Empty expand-derived carrier for a single integer <att>quantity</att>
+                        used by range indexes / MS filters. Appears only under
+                        <gi>layout</gi>[@subtype='computed']; pairs with cataloguer
+                        <gi>layout</gi>/<att>writtenLines</att> (which may be a packed pair such as
+                        <val>17 18</val>). Quantity is the upper bound of a pair, or the sole
+                        value.</desc>
+                    <classes>
+                        <memberOf key="att.global"/>
+                    </classes>
+                    <content>
+                        <empty/>
+                    </content>
+                    <attList>
+                        <attDef ident="quantity" usage="req">
+                            <desc>Non-negative integer written-lines value for indexing.</desc>
+                            <datatype>
+                                <dataRef name="nonNegativeInteger"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+
+                <!-- Expand-only: msPartsCount/@quantity as last child of msDesc (part-count facet).
+                     #45 originally kept a live count(msPart); expand materializes the count. -->
+                <elementSpec ident="msPartsCount" mode="add" module="msdescription">
+                    <gloss>manuscript parts count (computed)</gloss>
+                    <desc>Empty expand-derived carrier for <att>quantity</att> equal to
+                        <code>count(msPart)</code> on the parent <gi>msDesc</gi>. Used by the
+                        number-of-parts range facet. Omitted when the manuscript has no
+                        <gi>msPart</gi> children. Idempotent on re-expand.</desc>
+                    <classes>
+                        <memberOf key="att.global"/>
+                    </classes>
+                    <content>
+                        <empty/>
+                    </content>
+                    <attList>
+                        <attDef ident="quantity" usage="req">
+                            <desc>Count of <gi>msPart</gi> children of the enclosing
+                                <gi>msDesc</gi>.</desc>
+                            <datatype>
+                                <dataRef name="nonNegativeInteger"/>
+                            </datatype>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+
+                <elementSpec ident="msDesc" mode="change" module="msdescription">
+                    <desc>Expanded TEI allows an optional trailing <gi>msPartsCount</gi> after
+                        <gi>msPart</gi>/<gi>msFrag</gi> for expand-materialized part counts.</desc>
+                    <content>
+                        <sequence>
+                            <elementRef key="msIdentifier"/>
+                            <classRef key="model.headLike" minOccurs="0" maxOccurs="unbounded"/>
+                            <alternate>
+                                <classRef key="model.pLike" minOccurs="1" maxOccurs="unbounded"/>
+                                <sequence>
+                                    <elementRef key="msContents" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="physDesc" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="history" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="additional" minOccurs="0" maxOccurs="1"/>
+                                    <elementRef key="msPart" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="msFrag" minOccurs="0" maxOccurs="unbounded"/>
+                                    <elementRef key="msPartsCount" minOccurs="0" maxOccurs="1"/>
+                                </sequence>
+                            </alternate>
+                        </sequence>
+                    </content>
                 </elementSpec>
 
                 <!-- desc typologies -->
