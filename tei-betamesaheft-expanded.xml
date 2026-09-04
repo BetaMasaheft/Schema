@@ -48,9 +48,10 @@
                 <gi>msPartsCount</gi> (@quantity) as last child of <gi>msDesc</gi>. Aligns
                 schema with BetMasWeb expand-normalize encoding (range indexes); #45 first
                 draft used layout/@writtenLines and left msPartsCount as a live count.</change>
-            <change who="jinntec" when="2026-09-04">layout: re-list att.global + att.typed under
-                classes (odd2odd replaces the class list on mode="change"; memberOf mode="add"
-                alone still dropped att.global / @cert / @corresp after #44).</change>
+            <change who="jinntec" when="2026-09-04">layout: add att.typed via classes
+                mode="change" + memberOf mode="add" so odd2odd merges and keeps stock
+                att.global (@cert / @corresp). A bare classes element after #44 replaced
+                the list and dropped att.global.</change>
             <change who="jinntec" when="2026-09-04">figures: allow table, row, and cell in
                 expanded TEI (authoring already includes them; Institutions place/note/ab
                 tables are displayed via viewItem:table). Keep formula excluded.</change>
@@ -294,12 +295,11 @@
                         <gi>layout</gi> (including <att>writtenLines</att>) is unchanged. See
                         GitHub issue #45 (encoding updated from attribute to element for range
                         indexing parity with computed <gi>height</gi>/<gi>width</gi>).</desc>
-                    <!-- odd2odd replaces <classes> wholesale on elementSpec mode="change".
-                         Re-list every needed membership: att.global (cert, corresp, …) plus
-                         att.typed for catalogue/computed. Bare att.typed (PR #44) wiped global. -->
-                    <classes>
-                        <memberOf key="att.global"/>
-                        <memberOf key="att.typed"/>
+                    <!-- odd2odd: bare <classes> replaces the class list; classes/@mode="change"
+                         merges with the original (stock layout = att.global). Add att.typed
+                         for catalogue/computed @type/@subtype; do not re-list att.global. -->
+                    <classes mode="change">
+                        <memberOf key="att.typed" mode="add"/>
                     </classes>
                     <!-- macroRef must not carry minOccurs/maxOccurs (tei_odds); specialPara
                          already allows empty, so computed layout may be writtenLines-only. -->
