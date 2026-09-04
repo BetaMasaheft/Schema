@@ -48,6 +48,9 @@
                 <gi>msPartsCount</gi> (@quantity) as last child of <gi>msDesc</gi>. Aligns
                 schema with BetMasWeb expand-normalize encoding (range indexes); #45 first
                 draft used layout/@writtenLines and left msPartsCount as a live count.</change>
+            <change who="jinntec" when="2026-09-04">layout: re-list att.global + att.typed under
+                classes (odd2odd replaces the class list on mode="change"; memberOf mode="add"
+                alone still dropped att.global / @cert / @corresp after #44).</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -288,7 +291,11 @@
                         <gi>layout</gi> (including <att>writtenLines</att>) is unchanged. See
                         GitHub issue #45 (encoding updated from attribute to element for range
                         indexing parity with computed <gi>height</gi>/<gi>width</gi>).</desc>
+                    <!-- odd2odd replaces <classes> wholesale on elementSpec mode="change".
+                         Re-list every needed membership: att.global (cert, corresp, …) plus
+                         att.typed for catalogue/computed. Bare att.typed (PR #44) wiped global. -->
                     <classes>
+                        <memberOf key="att.global"/>
                         <memberOf key="att.typed"/>
                     </classes>
                     <!-- macroRef must not carry minOccurs/maxOccurs (tei_odds); specialPara
