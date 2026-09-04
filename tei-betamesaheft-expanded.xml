@@ -51,6 +51,9 @@
             <change who="jinntec" when="2026-09-04">layout: re-list att.global + att.typed under
                 classes (odd2odd replaces the class list on mode="change"; memberOf mode="add"
                 alone still dropped att.global / @cert / @corresp after #44).</change>
+            <change who="jinntec" when="2026-09-04">figures: allow table, row, and cell in
+                expanded TEI (authoring already includes them; Institutions place/note/ab
+                tables are displayed via viewItem:table). Keep formula excluded.</change>
         </revisionDesc>
     </teiHeader>
     <text>
@@ -81,7 +84,7 @@
                     except="climate education geoFeat langKnowledge
                     langKnown nameLink population socecStatus terrain trait"/>
                 <moduleRef key="textcrit" except="lacunaEnd lacunaStart witDetail witEnd witStart"/>
-                <moduleRef key="figures" except="cell formula row table"/>
+                <moduleRef key="figures" except="formula"/>
                 <moduleRef key="spoken"
                     except="broadcast equipment incident kinesic pause recording recordingStmt
                     scriptStmt shift u vocal writing"/>
