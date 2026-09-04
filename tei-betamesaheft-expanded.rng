@@ -5,7 +5,7 @@
          xmlns:xlink="http://www.w3.org/1999/xlink"
          datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes"
          ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2026-09-03T20:25:10Z. . 
+Schema generated from ODD source 2026-09-04T09:45:14Z. . 
 TEI Edition: P5 Version 4.12.0. Last updated on 28th July 2026, revision 113e933e2 
 TEI Edition Location: https://www.tei-c.org/Vault/P5/4.12.0/ 
   
@@ -12765,15 +12765,10 @@ You must supply at least two values for @target on <name/>
    </define>
    <define name="tei_msDesc">
       <element name="msDesc">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(manuscript description) Sometimes we know of manuscripts which have a part which has been moved to another manuscript. In this case we know of a fragment of this manuscript inside another manuscript so we need to use both <code xmlns="http://www.w3.org/1999/xhtml"
-                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;msPart&gt;</code> and <code xmlns="http://www.w3.org/1999/xhtml"
-                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;msFrag&gt;</code> in <code xmlns="http://www.w3.org/1999/xhtml"
-                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;msDesc&gt;</code>. This was discussed in <a xmlns="http://www.w3.org/1999/xhtml"
-               xmlns:rng="http://relaxng.org/ns/structure/1.0"
-               href="https://github.com/TEIC/TEI/issues/1747">issue 1747 of
-                            TEI-C</a>. <a xmlns="http://www.w3.org/1999/xhtml"
-               xmlns:rng="http://relaxng.org/ns/structure/1.0"
-               href="https://betamasaheft.eu/Guidelines/?id=msDesc">Beta maṣāḥǝft Guidelines</a> [10.1. Overview]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(manuscript description) Expanded TEI allows an optional trailing <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;msPartsCount&gt;</code> after <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;msPart&gt;</code>/<code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;msFrag&gt;</code> for expand-materialized part counts. [10.1. Overview]</a:documentation>
          <group>
             <ref name="tei_msIdentifier"/>
             <zeroOrMore>
@@ -12802,6 +12797,9 @@ You must supply at least two values for @target on <name/>
                   <zeroOrMore>
                      <ref name="tei_msFrag"/>
                   </zeroOrMore>
+                  <optional>
+                     <ref name="tei_msPartsCount"/>
+                  </optional>
                </group>
             </choice>
          </group>
@@ -14623,10 +14621,19 @@ Suggested values include: 1] paper; 2] parch (parchment); 3] mixed</a:documentat
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">For search indexing, expand may add a parallel <code xmlns="http://www.w3.org/1999/xhtml"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;layout&gt;</code> sibling with <code xmlns="http://www.w3.org/1999/xhtml"
                   xmlns:rng="http://relaxng.org/ns/structure/1.0">@type</code> equal to catalogue and <code xmlns="http://www.w3.org/1999/xhtml"
-                  xmlns:rng="http://relaxng.org/ns/structure/1.0">@subtype</code> equal to computed, carrying machine-readable attribute values (e.g. <code xmlns="http://www.w3.org/1999/xhtml"
-                  xmlns:rng="http://relaxng.org/ns/structure/1.0">@writtenLines</code>); the cataloguer <code xmlns="http://www.w3.org/1999/xhtml"
-                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;layout&gt;</code> is unchanged. See GitHub issue #45. [10.7.2. Writing, Decoration, and Other Notations]</a:documentation>
-         <ref name="tei_macro.specialPara"/>
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">@subtype</code> equal to computed, carrying an empty <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;writtenLines&gt;</code> child with <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">@quantity</code> (integer upper bound / sole value). The cataloguer <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;layout&gt;</code> (including <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">@writtenLines</code>) is unchanged. See GitHub issue #45 (encoding updated from attribute to element for range indexing parity with computed <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;height&gt;</code>/<code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;width&gt;</code>). [10.7.2. Writing, Decoration, and Other Notations]</a:documentation>
+         <group>
+            <optional>
+               <ref name="tei_writtenLines"/>
+            </optional>
+            <ref name="tei_macro.specialPara"/>
+         </group>
          <optional>
             <attribute name="type">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
@@ -22030,6 +22037,39 @@ Sample values include: 1] homeoteleuton; 2] homeoarchy; 3] paleographicConfusion
          </choice>
          <ref name="tei_att.global.attributes"/>
          <ref name="tei_att.declarable.attributes"/>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_writtenLines">
+      <element name="writtenLines">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(written lines (computed)) Empty expand-derived carrier for a single integer <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">@quantity</code> used by range indexes / MS filters. Appears only under <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;layout&gt;</code>[@subtype='computed']; pairs with cataloguer <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;layout&gt;</code>/<code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">@writtenLines</code> (which may be a packed pair such as 17 18). Quantity is the upper bound of a pair, or the sole value.</a:documentation>
+         <empty/>
+         <ref name="tei_att.global.attributes"/>
+         <attribute name="quantity">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Non-negative integer written-lines value for indexing.</a:documentation>
+            <data type="nonNegativeInteger"/>
+         </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="tei_msPartsCount">
+      <element name="msPartsCount">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(manuscript parts count (computed)) Empty expand-derived carrier for <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">@quantity</code> equal to `count(msPart)` on the parent <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;msDesc&gt;</code>. Used by the number-of-parts range facet. Omitted when the manuscript has no <code xmlns="http://www.w3.org/1999/xhtml"
+                  xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;msPart&gt;</code> children. Idempotent on re-expand.</a:documentation>
+         <empty/>
+         <ref name="tei_att.global.attributes"/>
+         <attribute name="quantity">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Count of <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;msPart&gt;</code> children of the enclosing <code xmlns="http://www.w3.org/1999/xhtml"
+                     xmlns:rng="http://relaxng.org/ns/structure/1.0">&lt;msDesc&gt;</code>.</a:documentation>
+            <data type="nonNegativeInteger"/>
+         </attribute>
          <empty/>
       </element>
    </define>
