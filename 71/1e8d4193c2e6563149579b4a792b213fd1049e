@@ -1,0 +1,19 @@
+tei-betamesaheft-expanded.xml
+  s_bfac4543151ff7::t_ef40fe8841a658 294-295,299
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.0",
+  "base_commit_sha": "711e8d4193c2e6563149579b4a792b213fd1049e",
+  "prompts": {},
+  "sessions": {
+    "s_bfac4543151ff7": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "86f79926-bf74-4660-badb-9dd045efa2ca",
+        "model": "default"
+      },
+      "human_author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
