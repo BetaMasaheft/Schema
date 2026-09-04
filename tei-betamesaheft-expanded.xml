@@ -291,10 +291,12 @@
                     <classes>
                         <memberOf key="att.typed"/>
                     </classes>
+                    <!-- macroRef must not carry minOccurs/maxOccurs (tei_odds); specialPara
+                         already allows empty, so computed layout may be writtenLines-only. -->
                     <content>
                         <sequence>
                             <elementRef key="writtenLines" minOccurs="0" maxOccurs="1"/>
-                            <macroRef key="macro.specialPara" minOccurs="0" maxOccurs="1"/>
+                            <macroRef key="macro.specialPara"/>
                         </sequence>
                     </content>
                     <attList>
