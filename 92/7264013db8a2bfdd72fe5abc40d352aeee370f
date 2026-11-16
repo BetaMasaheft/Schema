@@ -1,0 +1,14 @@
+.github/workflows/ci.yml
+  h_ff0005bef58c9d 17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "927264013db8a2bfdd72fe5abc40d352aeee370f",
+  "prompts": {},
+  "humans": {
+    "h_ff0005bef58c9d": {
+      "author": "duncdrum <d.paterson@me.com>"
+    }
+  }
+}
